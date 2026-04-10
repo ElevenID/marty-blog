@@ -6,15 +6,26 @@
  * Includes related articles based on matching category, and concept tags.
  */
 
-import { Box, Typography, Paper, Chip, Button, Divider, Avatar, Grid, Card, CardContent, CardActionArea } from '@mui/material';
+import { Box, Typography, Paper, Chip, Button, Divider, Avatar, Grid, Card, CardContent, CardActionArea, useMediaQuery, useTheme } from '@mui/material';
 import { SEOHead } from '../seo';
 import { articleSchema } from '../seo/structuredData';
 import { useParams, useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
-import { GUIDE_ARTICLE_MAP, BLOG_POST_CONCEPT_TAGS } from '../data';
+import { GUIDE_ARTICLE_MAP, BLOG_POST_CONCEPT_TAGS, BLOG_POST_STANDARDS_TAGS } from '../data';
+import { SERIES_BY_POST_SLUG } from '../data';
 import ProtocolGuidePage from './ProtocolGuidePage';
+import SeriesNav from './SeriesNav';
+import ProtocolContextHeader from './ProtocolContextHeader';
+import ArticleTableOfContents from './ArticleTableOfContents';
+import ContinueLearning from './ContinueLearning';
+import ArticleContent from './ArticleContent';
+import Breadcrumbs from './Breadcrumbs';
+import ReadingProgressBar from './ReadingProgressBar';
+import AIDisclosureBanner from './AIDisclosureBanner';
+import ProductBridgeCTA from './ProductBridgeCTA';
+import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta';
 
 const TODAY = new Date().toISOString().split('T')[0];
 
@@ -29,6 +40,8 @@ const CATEGORY_COLORS = {
 function BlogPostPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   // Delegate to ProtocolGuidePage for guide articles
   if (GUIDE_ARTICLE_MAP[slug]) {
@@ -36,13 +49,20 @@ function BlogPostPage() {
   }
 
   const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const legacyMeta = getLegacyArticleMeta(slug);
+  const canonicalSlug = getCanonicalArticleSlug(slug);
+  const canonicalPost = canonicalSlug !== slug
+    ? BLOG_POSTS.find((p) => p.slug === canonicalSlug)
+    : null;
   const author = post ? (BLOG_AUTHORS[post.authorId] || {}) : {};
   const conceptTags = (BLOG_POST_CONCEPT_TAGS[slug] || []);
+  const standardsTags = (BLOG_POST_STANDARDS_TAGS[slug] || []);
+  const seriesInfo = SERIES_BY_POST_SLUG[slug] || null;
 
   // Related: same category, already published, not this post, up to 3
   const relatedPosts = post
-    ? BLOG_POSTS.filter(
-        (p) => p.slug !== post.slug && p.category === post.category && p.date <= TODAY,
+    ? getBrowseVisiblePosts(BLOG_POSTS).filter(
+        (p) => p.slug !== post.slug && p.category === post.category,
       )
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .slice(0, 3)
@@ -60,13 +80,17 @@ function BlogPostPage() {
   }
 
   const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const updatedStr = post.updatedDate
+    ? new Date(post.updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+    : null;
 
   return (
     <Box>
+      <ReadingProgressBar />
       <SEOHead
         title={post.title}
         description={post.summary}
-        canonicalPath={`/blog/${post.slug}`}
+        canonicalPath={`/blog/${canonicalSlug}`}
         keywords={['MIP', 'identity protocol', post.category.toLowerCase(), 'verifiable credentials']}
         ogType="article"
         ogMeta={{
@@ -84,15 +108,65 @@ function BlogPostPage() {
       />
 
       {/* Back link */}
-      <Button startIcon={<ArrowBackIcon />} onClick={() => navigate('/blog')} sx={{ mb: 3 }}>
+      <Button startIcon={<ArrowBackIcon />} onClick={() => navigate('/blog')} sx={{ mb: 1 }}>
         All Posts
       </Button>
+
+      {/* Breadcrumb navigation */}
+      <Breadcrumbs slug={slug} title={post.title} />
+
+      {/* Canonical handoff for legacy merge surfaces */}
+      {legacyMeta && canonicalPost && (
+        <Paper
+          variant="outlined"
+          sx={{
+            p: { xs: 2.5, md: 3 },
+            mb: 3,
+            borderRadius: 2,
+            borderColor: 'warning.light',
+            borderLeft: '4px solid',
+            borderLeftColor: 'warning.main',
+            bgcolor: 'warning.50',
+          }}
+        >
+          <Typography
+            variant="overline"
+            sx={{ display: 'block', fontWeight: 800, letterSpacing: 1.5, fontSize: '0.65rem', color: 'warning.dark', mb: 0.75 }}
+          >
+            Legacy explainer
+          </Typography>
+          <Typography variant="h6" fontWeight={800} gutterBottom>
+            Start with {canonicalPost.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.7 }}>
+            {legacyMeta.legacyNotice}
+          </Typography>
+          <Button
+            variant="contained"
+            color="warning"
+            endIcon={<ArrowForwardIcon />}
+            onClick={() => navigate(`/blog/${canonicalSlug}`)}
+            sx={{ fontWeight: 700 }}
+          >
+            Read {canonicalPost.title}
+          </Button>
+        </Paper>
+      )}
 
       {/* Post header */}
       <Paper elevation={0} sx={{ p: { xs: 3, md: 5 }, mb: 4, bgcolor: 'grey.50', borderRadius: 2 }}>
         <Box sx={{ display: 'flex', gap: 1, mb: 2, flexWrap: 'wrap' }}>
           <Chip label={post.category} size="small" color={CATEGORY_COLORS[post.category] || 'primary'} sx={{ fontWeight: 600 }} />
           <Chip label={post.readTime} size="small" variant="outlined" />
+          {standardsTags.map((tag) => (
+            <Chip
+              key={tag}
+              label={tag}
+              size="small"
+              variant="outlined"
+              sx={{ fontFamily: 'monospace', fontSize: '0.75rem', fontWeight: 700, borderColor: 'info.main', color: 'info.main' }}
+            />
+          ))}
           {conceptTags.map((tag) => (
             <Chip
               key={tag}
@@ -112,7 +186,7 @@ function BlogPostPage() {
           {post.summary}
         </Typography>
         {/* Author + date metadata row */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+        <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
           <Avatar
             src={author.avatarImage}
             sx={{ width: 40, height: 40, bgcolor: 'primary.main', fontSize: '0.85rem', cursor: 'pointer' }}
@@ -130,31 +204,46 @@ function BlogPostPage() {
               {author.name || post.authorId}{author.title ? ` · ${author.title}` : ''}{author.subtitle ? ` — ${author.subtitle}` : ''}
             </Typography>
             <Typography variant="caption" color="text.secondary">
-              {dateStr} · {post.readTime} · {post.category}
+              {dateStr}{updatedStr && ` · Updated ${updatedStr}`} · {post.readTime} · {post.category}
             </Typography>
+            {author.expertise && author.expertise.length > 0 && (
+              <Box sx={{ display: 'flex', gap: 0.5, flexWrap: 'wrap', mt: 0.75 }}>
+                {author.expertise.slice(0, 4).map((tag) => (
+                  <Chip key={tag} label={tag} size="small" variant="outlined" sx={{ fontSize: '0.65rem', height: 20, fontWeight: 600, color: 'text.secondary' }} />
+                ))}
+              </Box>
+            )}
           </Box>
         </Box>
       </Paper>
 
+      {/* Series navigation (top) */}
+      {seriesInfo && (
+        <Box sx={{ mb: 3 }}>
+          <SeriesNav seriesInfo={seriesInfo} navigate={navigate} />
+        </Box>
+      )}
+
+      {/* Protocol context header */}
+      <ProtocolContextHeader slug={slug} />
+
       <Divider sx={{ mb: 4 }} />
 
-      {/* Post body */}
-      <Box sx={{ maxWidth: 780, mx: 'auto' }}>
-        {post.content.map((block, idx) => {
-          if (block.type === 'heading') {
-            return (
-              <Typography key={idx} variant="h5" fontWeight={700} sx={{ mt: 4, mb: 2 }}>
-                {block.text}
-              </Typography>
-            );
-          }
-          return (
-            <Typography key={idx} variant="body1" paragraph sx={{ lineHeight: 1.85, fontSize: '1.05rem' }}>
-              {block.text}
-            </Typography>
-          );
-        })}
+      {/* Post body + ToC sidebar */}
+      <Box sx={{ display: 'flex', gap: 0 }}>
+        <Box sx={{ maxWidth: 780, flexGrow: 1, minWidth: 0 }}>
+          <ArticleContent content={post.content} currentSlug={slug} />
+        </Box>
+
+        {/* Sticky table of contents (desktop only) */}
+        {isDesktop && <ArticleTableOfContents content={post.content} />}
       </Box>
+
+      {/* AI authorship disclosure */}
+      <AIDisclosureBanner />
+
+      {/* Continue Learning — protocol-aware next-step guidance */}
+      <ContinueLearning slug={slug} />
 
       {/* Author bio */}
       {author.bio && (
@@ -195,6 +284,13 @@ function BlogPostPage() {
             </Box>
           </Box>
         </Paper>
+      )}
+
+      {/* Series navigation (bottom) */}
+      {seriesInfo && (
+        <Box sx={{ mt: 6 }}>
+          <SeriesNav seriesInfo={seriesInfo} navigate={navigate} />
+        </Box>
       )}
 
       {/* Related Articles */}
@@ -247,6 +343,9 @@ function BlogPostPage() {
           </Grid>
         </Box>
       )}
+
+      {/* Context-aware product CTA */}
+      <ProductBridgeCTA slug={slug} />
 
       <Divider sx={{ my: 6 }} />
 

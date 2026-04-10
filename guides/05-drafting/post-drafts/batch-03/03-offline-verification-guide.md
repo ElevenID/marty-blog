@@ -96,7 +96,19 @@ Offline verification is not effortless. It asks you to pre-position trust, defin
 ## Draft metadata
 
 - **Slug:** `offline-verification-guide`
+- **Date:** `2025-06-23`
+- **Updated date:** `2026-09-20`
+- **Category:** `Technical`
+- **Topic:** `Offline Verification`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `implementation`
+- **Related:** `deployment-profiles-in-practice`, `deploy-airline-boarding`, `deploy-enterprise-access`
+- **Concept tags:** `deployment`, `offline`, `verification`
+- **Standards tags:** `ICAO 9303`, `StatusList2021`
 - **Lead narrator:** Sofia Rahman
 - **Primary reader:** operator, implementer
 - **Likely CTA:** `deploy-airline-boarding` or `deployment-profiles-in-practice`
+- **Status:** `live`
 - **Batch:** `batch-03`

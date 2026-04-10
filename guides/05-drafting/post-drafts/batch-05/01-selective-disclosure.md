@@ -56,7 +56,19 @@ That is the discipline in one sentence: choose the mechanism that matches the po
 ## Draft metadata
 
 - **Slug:** `selective-disclosure`
+- **Date:** `2025-07-16`
+- **Updated date:** `2026-10-13`
+- **Category:** `Cryptography`
+- **Topic:** `Selective Disclosure`
+- **Topic cluster:** `Privacy & Disclosure`
+- **Layer:** `Present`
+- **Difficulty:** `Intermediate`
+- **Section:** `cryptography`
+- **Related:** `sd-jwt-selective-disclosure-deep-dive`, `minimum-disclosure-is-a-policy-problem`, `data-minimization-in-identity`
+- **Concept tags:** `privacy`, `selective-disclosure`, `cryptography`
+- **Standards tags:** `SD-JWT`
 - **Lead narrator:** Nora Patel (support from Marcus Vale)
 - **Primary reader:** architect, privacy reader, implementer
 - **Likely CTA:** `deploy-age-verification`
+- **Status:** `live`
 - **Batch:** `batch-05`

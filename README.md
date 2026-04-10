@@ -52,3 +52,8 @@ running), then restart the marty-ui dev server so it picks up the rebuilt `dist/
 - **New author**: Add an entry to `src/data/blogAuthors.js`
 - **New guide article**: Add to `src/data/guideContent.js` `GUIDE_ARTICLES` array
 - **Roadmap update**: Edit `src/data/blogRoadmap.js`
+
+## Documentation
+
+- `BLOG_CREATION_AND_MAINTENANCE.md` — how this package was assembled, where the source of truth lives, and how to edit or extend it safely
+- `guides/README.md` — how the editorial workspace is organized

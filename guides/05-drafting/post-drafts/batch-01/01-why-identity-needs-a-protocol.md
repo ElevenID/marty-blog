@@ -110,7 +110,19 @@ If that category shift makes sense, the next step is not another vendor comparis
 ## Draft metadata
 
 - **Slug:** `why-identity-needs-a-protocol`
+- **Date:** `2025-01-06`
+- **Updated date:** `2026-04-05`
+- **Category:** `Business`
+- **Topic:** `Protocol Vision`
+- **Topic cluster:** `Protocol Vision`
+- **Layer:** `Foundations`
+- **Difficulty:** `Beginner`
+- **Section:** `featured`
+- **Related:** `five-primitives-in-one-picture`, `the-marty-identity-model`, `what-is-digital-identity`
+- **Concept tags:** `foundation`, `business`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Daniel Ortega
 - **Primary reader:** Sponsor + architect
 - **Likely CTA:** `five-primitives-in-one-picture`
+- **Status:** `live`
 - **Batch:** `batch-01`

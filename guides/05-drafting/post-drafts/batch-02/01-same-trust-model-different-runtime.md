@@ -73,7 +73,19 @@ If you are evaluating Marty in your own environment, start with your runtime rea
 ## Draft metadata
 
 - **Slug:** `same-trust-model-different-runtime`
+- **Date:** `2025-05-25`
+- **Updated date:** `2026-08-22`
+- **Category:** `Technical`
+- **Topic:** `Runtime Architecture`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `implementation`
+- **Related:** `deployment-profiles-from-design-to-production`, `deployment-profiles-in-practice`, `offline-verification-guide`
+- **Concept tags:** `deployment`, `runtime`, `trust-model`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Sofia Rahman
 - **Primary reader:** operator, architect, commercial evaluator
 - **Likely CTA:** `one-protocol-many-ecosystems` or evaluate which deployment model fits your environment
+- **Status:** `live`
 - **Batch:** `batch-02`

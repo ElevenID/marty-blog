@@ -81,7 +81,19 @@ If that is the lens you want to use, the next useful step is straightforward: **
 ## Draft metadata
 
 - **Slug:** `infrastructure-economics-migration`
+- **Date:** `2025-06-11`
+- **Updated date:** `2026-09-08`
+- **Category:** `Business`
+- **Topic:** `Infrastructure Economics`
+- **Topic cluster:** `Industry`
+- **Layer:** `Foundations`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `business-case-for-credential-portability`, `why-identity-needs-a-protocol`, `compliance-profiles-bridging-regulation`
+- **Concept tags:** `business`, `deployment`, `economics`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Daniel Ortega *(support from Sofia Rahman)*
 - **Primary reader:** Executive buyer, architectural sponsor, budget owner
 - **Likely CTA:** Compare deployment and control-plane tiers
+- **Status:** `live`
 - **Batch:** `batch-03`

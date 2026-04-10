@@ -67,7 +67,19 @@ If you are evaluating Marty for a travel environment, start where the pressure i
 ## Draft metadata
 
 - **Slug:** `deploy-airline-boarding`
+- **Date:** `2025-07-05`
+- **Updated date:** `2026-10-01`
+- **Category:** `Technical`
+- **Topic:** `Airline Boarding`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `deploy-enterprise-access`, `deployment-profiles-in-practice`, `offline-verification-guide`
+- **Concept tags:** `deployment`, `travel`, `offline`
+- **Standards tags:** `ICAO 9303`
 - **Lead narrator:** Sofia Rahman (support from Aiko Tanaka)
 - **Primary reader:** operator, travel architect, regulated buyer
 - **Likely CTA:** `offline-verification-guide` or deployment package evaluation
+- **Status:** `live`
 - **Batch:** `batch-04`

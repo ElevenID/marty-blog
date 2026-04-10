@@ -11,6 +11,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useParams, useNavigate } from 'react-router-dom';
 import { SEOHead } from '../seo';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
+import { isBrowseVisibleArticleSlug } from '../data/articleMeta';
 
 const TODAY = new Date().toISOString().split('T')[0];
 
@@ -40,7 +41,7 @@ function AuthorPage() {
   }
 
   const authorPosts = BLOG_POSTS
-    .filter((p) => p.authorId === authorId && p.date <= TODAY)
+    .filter((p) => p.authorId === authorId && p.date <= TODAY && isBrowseVisibleArticleSlug(p.slug))
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   const characterProfile = author.characterProfile;
   const handoffAuthors = (characterProfile?.handoffAuthors || [])

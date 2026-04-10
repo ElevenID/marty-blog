@@ -42,9 +42,22 @@ If you want the next implementation step, continue to `mip-json-schemas-walkthro
 ## Draft metadata
 
 - **Slug:** `impl-oid4vp`
+- **Date:** `2025-08-14`
+- **Updated date:** `2026-11-11`
+- **Category:** `Technical`
+- **Topic:** `OID4VP`
+- **Topic cluster:** `Implementation`
+- **Primitive:** `Presentation Policies`
+- **Layer:** `Present`
+- **Difficulty:** `Advanced`
+- **Section:** `implementation`
+- **Related:** `impl-oid4vci`, `presentation-policies-minimum-disclosure`, `conformance-testing-for-implementers`
+- **Concept tags:** `implementation`, `credential-presentation`, `transport`
+- **Standards tags:** `OID4VP`
 - **Lead narrator:** Daniel Ortega
 - **Primary reader:** implementer
 - **Reader shift:** `evaluative -> design_ready`
 - **Gravity well:** Artifact and Adoption Proof
 - **Likely CTA:** `mip-json-schemas-walkthrough`
+- **Status:** `live`
 - **Batch:** `batch-06`

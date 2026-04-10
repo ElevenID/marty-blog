@@ -95,7 +95,19 @@ If you are following the clearest opening path through the publication, continue
 ## Draft metadata
 
 - **Slug:** `five-primitives-in-one-picture`
+- **Date:** `2025-05-13`
+- **Updated date:** `2026-08-10`
+- **Category:** `Technical`
+- **Topic:** `Protocol Overview`
+- **Topic cluster:** `Protocol Overview`
+- **Layer:** `Foundations`
+- **Difficulty:** `Beginner`
+- **Section:** `featured`
+- **Related:** `trust-profiles-explained`, `credential-templates-designing-what-gets-issued`, `flows-orchestrating-identity-lifecycle`
+- **Concept tags:** `foundation`, `protocol-overview`, `five-primitives`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Daniel Ortega
 - **Primary reader:** Architect, implementer, sponsor
 - **Likely CTA:** `minimum-disclosure-is-a-policy-problem` for the opening path, or the primitive most relevant to the reader's environment
+- **Status:** `live`
 - **Batch:** `batch-01`

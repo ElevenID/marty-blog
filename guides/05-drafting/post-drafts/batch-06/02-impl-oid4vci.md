@@ -44,7 +44,20 @@ So the practical implementation rule is simple. Use OID4VCI to move the issuance
 ## Draft metadata
 
 - **Slug:** `impl-oid4vci`
+- **Date:** `2025-08-08`
+- **Updated date:** `2026-11-05`
+- **Category:** `Technical`
+- **Topic:** `OID4VCI`
+- **Topic cluster:** `Implementation`
+- **Primitive:** `Credential Templates`
+- **Layer:** `Issue`
+- **Difficulty:** `Advanced`
+- **Section:** `implementation`
+- **Related:** `impl-oid4vp`, `credential-templates-designing-what-gets-issued`, `mip-json-schemas-walkthrough`
+- **Concept tags:** `implementation`, `credential-issuance`, `transport`
+- **Standards tags:** `OID4VCI`
 - **Lead narrator:** Daniel Ortega
 - **Primary reader:** implementer
 - **Likely CTA:** `mip-json-schemas-walkthrough`
+- **Status:** `live`
 - **Batch:** `batch-06`

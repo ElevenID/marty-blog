@@ -11,6 +11,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useNavigate } from 'react-router-dom';
 import { SEOHead } from '../seo';
 import { BLOG_AUTHORS, BLOG_POSTS, BLOG_ROADMAP } from '../data';
+import { isBrowseVisibleArticleSlug } from '../data/articleMeta';
 
 const TODAY = new Date().toISOString().split('T')[0];
 
@@ -18,11 +19,11 @@ function AuthorsPage() {
   const navigate = useNavigate();
   const authorEntries = Object.entries(BLOG_AUTHORS);
 
-  // Count total roadmap posts per author
-  const roadmapCountByAuthor = {};
+  // Count total publication-map entries per author.
+  const publicationMapCountByAuthor = {};
   BLOG_ROADMAP.forEach((phase) => {
     phase.posts.forEach((p) => {
-      roadmapCountByAuthor[p.authorId] = (roadmapCountByAuthor[p.authorId] || 0) + 1;
+      publicationMapCountByAuthor[p.authorId] = (publicationMapCountByAuthor[p.authorId] || 0) + 1;
     });
   });
 
@@ -70,11 +71,35 @@ function AuthorsPage() {
         </Typography>
       </Paper>
 
+      {/* AI disclosure */}
+      <Paper
+        variant="outlined"
+        sx={{
+          p: 2.5,
+          mb: 4,
+          borderRadius: 2,
+          borderColor: 'info.light',
+          bgcolor: 'info.50',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 1.5,
+        }}
+      >
+        <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.65 }}>
+          <strong>About Our Authors:</strong> Articles are written by AI research personas trained
+          on the Marty Identity Protocol specification and identity architecture literature.
+          Each persona specializes in a domain — from cryptography and governance to wallet
+          systems and privacy research — to provide focused, technically grounded analysis.
+        </Typography>
+      </Paper>
+
       {/* Author grid */}
       <Grid container spacing={3}>
         {authorEntries.map(([authorId, author]) => {
-          const publishedCount = BLOG_POSTS.filter((p) => p.authorId === authorId && p.date <= TODAY).length;
-          const plannedCount = roadmapCountByAuthor[authorId] || 0;
+          const publishedCount = BLOG_POSTS.filter(
+            (p) => p.authorId === authorId && p.date <= TODAY && isBrowseVisibleArticleSlug(p.slug),
+          ).length;
+          const roadmapCount = publicationMapCountByAuthor[authorId] || 0;
 
           return (
             <Grid item xs={12} sm={6} md={4} key={authorId}>
@@ -171,7 +196,7 @@ function AuthorsPage() {
 
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography variant="caption" color="text.secondary">
-                        {publishedCount} published · {plannedCount} planned
+                        {publishedCount} published · {roadmapCount} on roadmap
                       </Typography>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: 'primary.main' }}>
                         <Typography variant="caption" fontWeight={700} color="primary">

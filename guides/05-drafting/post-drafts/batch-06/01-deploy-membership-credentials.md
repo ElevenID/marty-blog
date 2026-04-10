@@ -43,7 +43,19 @@ If Lufthansa can validate a United-issued `Gold Status` credential locally becau
 ## Draft metadata
 
 - **Slug:** `deploy-membership-credentials`
+- **Date:** `2025-08-03`
+- **Updated date:** `2026-10-30`
+- **Category:** `Business`
+- **Topic:** `Membership Credentials`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `deploy-age-verification`, `deploy-enterprise-access`, `credential-templates-designing-what-gets-issued`
+- **Concept tags:** `deployment`, `trust-registry`, `ecosystem`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Victor Leclerc (support from Nora Patel)
 - **Primary reader:** product owner, ecosystem architect
 - **Likely CTA:** `one-protocol-many-ecosystems`
+- **Status:** `live`
 - **Batch:** `batch-06`

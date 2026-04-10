@@ -84,7 +84,19 @@ If your next question is how to manage those rule surfaces across multiple regul
 ## Draft metadata
 
 - **Slug:** `deploy-enterprise-access`
+- **Date:** `2025-07-10`
+- **Updated date:** `2026-10-07`
+- **Category:** `Technical`
+- **Topic:** `Enterprise Access`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `deploy-airline-boarding`, `deploy-age-verification`, `deployment-profiles-in-practice`
+- **Concept tags:** `deployment`, `enterprise`, `policy-engine`
+- **Standards tags:** `SD-JWT`, `Cedar`
 - **Lead narrator:** Sofia Rahman *(support from Elena Kovacs where governance clarity matters)*
 - **Primary reader:** enterprise architect, security lead
 - **Likely CTA:** `compliance-profiles-in-practice`
+- **Status:** `live`
 - **Batch:** `batch-04`

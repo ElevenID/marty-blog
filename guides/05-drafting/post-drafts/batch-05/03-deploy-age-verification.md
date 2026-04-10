@@ -42,12 +42,24 @@ If you want the broader argument for why this boundary must be governed as polic
 - `minimum-disclosure-is-a-policy-problem`
 - `selective-disclosure`
 - `presentation-policies-minimum-disclosure`
-- `privacy-data-minimization`
+- `data-minimization-in-identity`
 
 ## Draft metadata
 
 - **Slug:** `deploy-age-verification`
+- **Date:** `2025-07-28`
+- **Updated date:** `2026-10-24`
+- **Category:** `Technical`
+- **Topic:** `Age Verification`
+- **Topic cluster:** `Deployment Patterns`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `deploy-membership-credentials`, `deploy-enterprise-access`, `selective-disclosure`
+- **Concept tags:** `deployment`, `privacy`, `retail`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Nora Patel (support from Sofia Rahman)
 - **Primary reader:** privacy-conscious buyer, retail architect
 - **Likely CTA:** `minimum-disclosure-is-a-policy-problem`
+- **Status:** `live`
 - **Batch:** `batch-05`

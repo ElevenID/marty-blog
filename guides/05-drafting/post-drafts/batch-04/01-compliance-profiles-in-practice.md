@@ -79,7 +79,19 @@ If you want to see how the same profile-driven approach stretches across travel,
 ## Draft metadata
 
 - **Slug:** `compliance-profiles-in-practice`
+- **Date:** `2025-06-29`
+- **Updated date:** `2026-09-25`
+- **Category:** `Business`
+- **Topic:** `Compliance Profiles`
+- **Topic cluster:** `Governance`
+- **Layer:** `Govern`
+- **Difficulty:** `Advanced`
+- **Section:** `business`
+- **Related:** `compliance-profiles-bridging-regulation`, `cedar-policies-for-identity-governance`, `building-trust-registries-at-scale`
+- **Concept tags:** `compliance`, `governance`, `policy`
+- **Standards tags:** `ICAO 9303`, `eIDAS 2.0`, `Open Badges v3`
 - **Lead narrator:** Elena Kovacs (support from Aiko Tanaka)
 - **Primary reader:** Compliance lead, regulated architect
 - **Likely CTA:** Continue to `one-protocol-many-ecosystems` or move into evaluation materials (`marty-protocol/README.md`, `SPECIFICATION.md`, Cedar artifacts)
+- **Status:** `live`
 - **Batch:** `batch-04`

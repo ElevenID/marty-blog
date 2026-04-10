@@ -37,7 +37,19 @@ If you want the broader argument for why this request boundary has to be governe
 ## Draft metadata
 
 - **Slug:** `privacy-data-minimization`
+- **Date:** `2025-07-22`
+- **Updated date:** `2026-10-19`
+- **Category:** `Cryptography`
+- **Topic:** `Data Minimization`
+- **Topic cluster:** `Privacy & Disclosure`
+- **Layer:** `Present`
+- **Difficulty:** `Intermediate`
+- **Section:** `cryptography`
+- **Related:** `selective-disclosure`, `minimum-disclosure-is-a-policy-problem`, `zero-knowledge-predicates-identity`
+- **Concept tags:** `privacy`, `data-minimization`, `selective-disclosure`
+- **Standards tags:** `SD-JWT`
 - **Lead narrator:** Nora Patel
 - **Primary reader:** privacy and governance readers
 - **Likely CTA:** `minimum-disclosure-is-a-policy-problem`
+- **Status:** `retired`
 - **Batch:** `batch-05`

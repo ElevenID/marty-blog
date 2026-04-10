@@ -1,7 +1,7 @@
 /**
  * Protocol Guide Content
  *
- * Structured learning curriculum for the Marty Identity Protocol.
+        text: 'MIP v0.1.0 currently includes eleven compliance-profile definitions across seven families: ICAO 9303 (travel documents including ePassports and eNIDs), AAMVA mDL (ISO 18013-5 driver\'s licences in North America), EUDI/eIDAS 2.0 (European digital identity wallets), Open Badges 3.0 (education credentials), DIF Presentation Exchange (cross-ecosystem interoperability), enterprise credentials, and a generic OID4VC profile. Each profile is versioned alongside the relevant specification.',
  * Six chapters, 22 guide articles, ordered for progressive learning.
  */
 
@@ -89,10 +89,10 @@ export const GUIDE_ARTICLES = [
         type: 'paragraph',
         text: 'The issuer DID (Decentralized Identifier) identifies who signed the credential. The credentialSubject block contains the claims being asserted. The proof block contains the cryptographic signature. Validity is bounded by issuanceDate and expirationDate. Optional status information points to a revocation mechanism.',
       },
-      { type: 'heading', text: 'Three Major Formats' },
+      { type: 'heading', text: 'Four Common Credential Formats in MIP' },
       {
         type: 'paragraph',
-        text: 'W3C VC is JSON-LD with JSON Web Signatures (JWS) or Data Integrity proofs — the most widely implemented format on the web. SD-JWT (Selective Disclosure JWT) is a compact format that lets the holder choose which individual claims to reveal. ISO mDoc (used in driver\'s licences and passports) is a CBOR-encoded format with device binding and proximity support.',
+        text: 'MIP distinguishes four common credential formats. VC-JWT is the JWS-signed W3C VC form used in many web stacks. JSON-LD with Data Integrity proofs is the linked-data W3C VC form. SD-JWT (Selective Disclosure JWT) is a compact format that lets the holder choose which individual claims to reveal. ISO mDoc (used in driver\'s licences and passports) is a CBOR-encoded format with device binding and proximity support.',
       },
       {
         type: 'code',
@@ -370,18 +370,18 @@ export const GUIDE_ARTICLES = [
     order: 4,
     title: 'Deployment Profiles',
     summary:
-      'Deployment Profiles are the fourth MIP primitive. They specify how verification runs in a real environment: online or offline, what cache TTLs apply, how trust updates are delivered.',
+      'Deployment Profiles are the fourth MIP primitive. They specify how verification runs in a real environment: online, offline, or hybrid, what cache TTLs apply, and how trust updates are delivered.',
     readTime: '7 min read',
     conceptTags: ['core-object', 'deployment-profile'],
     content: [
       {
         type: 'paragraph',
-        text: 'A Deployment Profile binds a set of Trust Profiles and Presentation Policies to a real operational environment. It says: this device at this location runs verification in online or offline mode, uses these cache TTLs for trust anchors and revocation data, and receives trust updates on this schedule. It is the operational envelope around the trust decisions.',
+        text: 'A Deployment Profile binds a set of Trust Profiles and Presentation Policies to a real operational environment. It says: this device at this location runs verification in online, offline, or hybrid mode, uses these cache TTLs for trust anchors and revocation data, and receives trust updates on this schedule. It is the operational envelope around the trust decisions.',
       },
-      { type: 'heading', text: 'Online vs Offline' },
+      { type: 'heading', text: 'Online, Offline, and Hybrid' },
       {
         type: 'paragraph',
-        text: 'Online deployments check revocation in real time and receive trust updates immediately. They handle high-assurance use cases where freshness matters. Offline deployments pre-cache everything and operate air-gapped for hours or days. Border control kiosks, maritime vessels, and field terminals use offline mode — but apply the same Trust Profiles and Presentation Policies as online deployments. Same trust logic, different operational envelope.',
+        text: 'Online deployments check revocation in real time and receive trust updates immediately. They handle high-assurance use cases where freshness matters. Offline deployments pre-cache everything and operate air-gapped for hours or days. Hybrid deployments use live services when available but continue operating from bounded caches when links degrade. Border control kiosks, maritime vessels, and field terminals often use offline or hybrid mode — but apply the same Trust Profiles and Presentation Policies as online deployments. Same trust logic, different operational envelope.',
       },
       {
         type: 'code',
@@ -639,7 +639,7 @@ permit(
     content: [
       {
         type: 'paragraph',
-        text: 'Issuance is the process by which an issuer creates and delivers a signed credential to a holder. In MIP, this is orchestrated by a Flow — a configured sequence of states (Submitted → Under Review → Approved → Issued) that models the real-world credential application process. Flows are what users actually interact with; the four primitives are what Flows are built from.',
+        text: 'Issuance is the process by which an issuer creates and delivers a signed credential to a holder. In MIP, this is orchestrated by a Flow — a configured sequence of states (Submitted → Under Review → Approved → Issued) that models the real-world credential application process. Flows are the fifth MIP primitive and the user-facing orchestration layer: they compose the other four primitives into a real credential journey.',
       },
       { type: 'heading', text: 'OID4VCI: The Standard Protocol' },
       {
@@ -735,7 +735,7 @@ permit(
     order: 3,
     title: 'Revocation',
     summary:
-      'Credentials must be revocable before they expire. MIP supports four revocation strategies, each with different privacy, latency, and offline trade-offs.',
+      'Credentials must be revocable before they expire. MIP supports five standardized revocation methods, each with different privacy, latency, and offline trade-offs.',
     readTime: '7 min read',
     conceptTags: ['flow', 'revocation'],
     content: [
@@ -743,10 +743,10 @@ permit(
         type: 'paragraph',
         text: 'Revocation is the ability to invalidate a credential before its natural expiry date. An employee who leaves the company should not keep using their employee badge credential. A driver\'s licence that is suspended should fail verification. A professional licence that is stripped should be immediately unusable. Revocation mechanisms make this enforceable.',
       },
-      { type: 'heading', text: 'The Four Strategies' },
+      { type: 'heading', text: 'The Five Standardized Methods' },
       {
         type: 'paragraph',
-        text: 'CRLs (Certificate Revocation Lists) are batch files listing revoked credential IDs — good offline support, preserves holder privacy, but updated in batches with inherent latency. OCSP (Online Certificate Status Protocol) checks individual credential status in real time — low latency but requires connectivity and can leak usage patterns to the status server. StatusList2021 is a W3C bitstring-based approach — compact, privacy-preserving, and cacheable. Cryptographic accumulators provide zero-knowledge revocation proofs — maximum privacy but highest computational cost.',
+        text: 'CRLs (Certificate Revocation Lists) are batch files listing revoked credential IDs — strong offline support, but updated in batches with inherent latency. OCSP (Online Certificate Status Protocol) checks individual credential status in real time — low latency but requires connectivity and can leak usage patterns to the status server. StatusList2021 is the W3C status-list format — compact, privacy-preserving, and cacheable. Bitstring Status List is a generalized bitstring-based status format with similar compact, cache-friendly properties. Token Status List distributes signed status state as token-style artifacts for ecosystems that prefer that model.',
       },
       { type: 'heading', text: 'Choosing a Strategy in MIP' },
       {
@@ -813,12 +813,12 @@ Presentation = [compact-sd-jwt]
     content: [
       {
         type: 'paragraph',
-        text: 'A Deployment Profile is the operational envelope for a verification instance. It bundles the Trust Profiles and Presentation Policies that apply in this environment, specifies online or offline mode, configures cache TTLs and update schedules, and defines failure behavior when connectivity is unavailable.',
+        text: 'A Deployment Profile is the operational envelope for a verification instance. It bundles the Trust Profiles and Presentation Policies that apply in this environment, specifies online, offline, or hybrid mode, configures cache TTLs and update schedules, and defines failure behavior when connectivity is unavailable.',
       },
       { type: 'heading', text: 'Key Configuration Decisions' },
       {
         type: 'paragraph',
-        text: 'Online or offline: choose based on connectivity guarantees and assurance requirements. Cache TTLs: balance freshness against offline resilience — 72-hour trust anchor caches are common for airport deployments. Update channel: signed bundles for air-gapped terminals, real-time API polling for cloud services. Failure behavior: deny-on-stale for high-assurance scenarios, allow-on-stale for convenience-first contexts.',
+        text: 'Online, offline, or hybrid: choose based on connectivity guarantees and assurance requirements. Hybrid deployments use live services when available but keep operating from bounded caches when links degrade. Cache TTLs: balance freshness against offline resilience — 72-hour trust anchor caches are common for airport deployments. Update channel: signed bundles for air-gapped terminals, real-time API polling for cloud services. Failure behavior: deny-on-stale for high-assurance scenarios, allow-on-stale for convenience-first contexts.',
       },
       { type: 'heading', text: 'Multi-Profile Deployments' },
       {
@@ -850,7 +850,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'What Must Be Pre-Cached' },
       {
         type: 'paragraph',
-        text: 'For offline verification to work correctly, the following must be pre-cached and kept fresh: trust anchor certificates or keys (from CSCA roots, trust lists, or DID documents), revocation data (CRLs, StatusList bitstrings, or accumulator witnesses), and the active Presentation Policy definitions. MIP\'s Deployment Profile specifies what to cache, how often to refresh, and from what source.',
+        text: 'For offline verification to work correctly, the following must be pre-cached and kept fresh: trust anchor certificates or keys (from CSCA roots, trust lists, or DID documents), revocation data (CRLs, StatusList2021 or Bitstring Status List snapshots, Token Status List artifacts, or other approved status material), and the active Presentation Policy definitions. MIP\'s Deployment Profile specifies what to cache, how often to refresh, and from what source.',
       },
       { type: 'heading', text: 'Grace Periods and Failure Modes' },
       {
@@ -877,7 +877,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Compliance as Configuration' },
       {
         type: 'paragraph',
-        text: 'MIP v0.1.0 ships compliance profiles for ICAO 9303 (travel documents including ePassports and eNIDs), AAMVA mDL (ISO 18013-5 driver\'s licences in North America), EUDI/eIDAS 2.0 (European digital identity wallets), Open Badges 3.0 (education credentials), and DIF Presentation Exchange (cross-ecosystem interoperability). Each profile is versioned alongside the relevant specification.',
+        text: 'MIP v0.1.0 currently includes eleven compliance-profile definitions across seven families: ICAO 9303 (travel documents including ePassports and eNIDs), AAMVA mDL (ISO 18013-5 driver\'s licences in North America), EUDI/eIDAS 2.0 (European digital identity wallets), Open Badges 3.0 (education credentials), DIF Presentation Exchange (cross-ecosystem interoperability), enterprise credentials, and a generic OID4VC profile. Each profile is versioned alongside the relevant specification.',
       },
       { type: 'heading', text: 'Regulatory Updates as Protocol Updates' },
       {
@@ -1020,7 +1020,7 @@ Presentation = [compact-sd-jwt]
     content: [
       {
         type: 'paragraph',
-        text: 'Verifiable credentials are moving from pilot to production. The EU mandates digital identity wallets by 2026. Apple and Google integrate mDL support into their wallet platforms. ICAO is standardizing Digital Travel Credentials for passports. The next five years will see verifiable credentials become the default model for digital identity — not the alternative.',
+        text: 'Verifiable credentials are moving from pilot to production. The EU requires digital identity wallets under eIDAS 2.0, with member state rollout phased from late 2026. Apple and Google integrate mDL support into their wallet platforms. ICAO is standardizing Digital Travel Credentials for passports. The next five years will see verifiable credentials become the default model for digital identity — not the alternative.',
       },
       { type: 'heading', text: 'Digital Wallet Convergence' },
       {
@@ -1030,7 +1030,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Post-Quantum Transition' },
       {
         type: 'paragraph',
-        text: 'Quantum computers capable of breaking RSA and ECDSA signatures will exist within the next decade. MIP\'s Trust Profiles specify accepted algorithms as configuration, so adding post-quantum algorithms (ML-DSA, SPHINCS+) is a Trust Profile update — not an application rewrite. Credential Templates can specify hybrid signatures (classical + PQC) during the transition period.',
+        text: 'Cryptographically relevant quantum computers may eventually break RSA and ECDSA signatures — and because identity credentials have long lifetimes, the \"harvest now, decrypt later\" threat makes migration urgent even before such computers arrive. MIP\'s Trust Profiles specify accepted algorithms as configuration, so adding post-quantum algorithms (ML-DSA, SLH-DSA) is a Trust Profile update — not an application rewrite. Credential Templates can specify hybrid signatures (classical + PQC) during the transition period.',
       },
       { type: 'heading', text: 'Global Interoperability' },
       {
@@ -1317,4 +1317,138 @@ export const BLOG_POST_CONCEPT_TAGS = {
   'mip-and-open-badges-education-credentials': ['implementation', 'open-badges'],
   'conformance-testing-for-implementers': ['implementation'],
   'revocation-strategies-compared': ['cryptography', 'revocation'],
+  'mobile-wallet-architectures': ['wallets', 'implementation'],
+  'secure-enclave-credential-storage': ['wallets', 'cryptography'],
+  'credential-portability-across-wallets': ['wallets', 'deployment'],
+  'eudi-wallet-model-explained': ['wallets', 'compliance'],
+  'five-primitives-in-one-picture': ['foundation', 'protocol-overview', 'five-primitives'],
+  'minimum-disclosure-is-a-policy-problem': ['privacy', 'policy', 'selective-disclosure'],
+  'same-trust-model-different-runtime': ['deployment', 'runtime', 'trust-model'],
+  'one-protocol-many-ecosystems': ['protocol-overview', 'interoperability', 'compliance'],
+  'why-marty-is-ready-for-evaluation': ['protocol-overview', 'evaluation', 'implementation'],
+  'infrastructure-economics-migration': ['business', 'deployment', 'economics'],
+  'deployment-profiles-in-practice': ['deployment', 'runtime', 'implementation'],
+  'offline-verification-guide': ['deployment', 'offline', 'verification'],
+  'compliance-profiles-in-practice': ['compliance', 'governance', 'policy'],
+  'deploy-airline-boarding': ['deployment', 'travel', 'offline'],
+  'deploy-enterprise-access': ['deployment', 'enterprise', 'policy-engine'],
+  'selective-disclosure': ['privacy', 'selective-disclosure', 'cryptography'],
+  'privacy-data-minimization': ['privacy', 'data-minimization', 'selective-disclosure'],
+  'deploy-age-verification': ['deployment', 'privacy', 'retail'],
+  'deploy-membership-credentials': ['deployment', 'trust-registry', 'ecosystem'],
+  'impl-oid4vci': ['implementation', 'credential-issuance', 'transport'],
+  'impl-oid4vp': ['implementation', 'credential-presentation', 'transport'],
+  'what-is-digital-identity': ['foundation', 'identity-concepts'],
+  'four-actors-of-identity-systems': ['foundation', 'identity-concepts', 'governance'],
+  'issuers-holders-verifiers-explained': ['foundation', 'identity-concepts', 'trust-model'],
+  'credential-lifecycle': ['foundation', 'credential-lifecycle', 'flow'],
+  'why-identity-depends-on-cryptography': ['foundation', 'cryptography', 'trust-anchor'],
+  'public-key-infrastructure-explained': ['cryptography', 'pki', 'trust-anchor'],
+  'understanding-trust-anchors': ['cryptography', 'trust-anchor', 'pki'],
+  'certificate-chains-and-validation': ['cryptography', 'pki', 'verification'],
+  'how-passport-pki-works': ['passport-pki', 'travel', 'trust-anchor'],
+  'understanding-csca-certificates': ['passport-pki', 'trust-anchor', 'travel'],
+  'what-icao-9303-specifies': ['travel', 'icao', 'passport-pki'],
+  'mobile-driving-licenses-iso-18013-5': ['wallets', 'mdoc', 'travel'],
+  'how-governments-build-identity-pki': ['governance', 'pki', 'government'],
+  'how-credential-issuance-works': ['credential-issuance', 'implementation', 'flow'],
+  'verifiable-credentials-explained': ['foundation', 'credential-format', 'verifiable-credentials'],
+  'presentation-protocols': ['credential-presentation', 'implementation', 'interoperability'],
+  'interoperability-between-credential-formats': ['interoperability', 'credential-format', 'implementation'],
+  'what-is-a-digital-identity-wallet': ['wallets', 'identity-concepts', 'wallet-architecture'],
+  'device-binding-and-credential-security': ['wallets', 'device-security', 'holder-binding'],
+  'selective-disclosure-in-wallets': ['wallets', 'selective-disclosure', 'privacy'],
+  'wallet-ux-design-for-identity': ['wallets', 'wallet-ux', 'privacy'],
+  'why-identity-systems-must-protect-privacy': ['privacy', 'foundation', 'compliance'],
+  'data-minimization-in-identity': ['privacy', 'data-minimization', 'policy'],
+  'selective-disclosure-explained': ['cryptography', 'selective-disclosure', 'privacy'],
+  'privacy-vs-compliance': ['privacy', 'compliance', 'governance'],
+  'identity-governance-models': ['governance', 'ecosystem', 'policy'],
+  'rbac-vs-abac': ['governance', 'access-control', 'policy-engine'],
+  'policy-engines-for-identity-systems': ['governance', 'policy-engine', 'implementation'],
+  'governing-credential-ecosystems': ['governance', 'ecosystem', 'trust-registry'],
+  'trust-registries-explained': ['trust-registry', 'governance', 'verification'],
+  'federation-in-identity-systems': ['federation', 'interoperability', 'trust-registry'],
+  'verifier-infrastructure': ['verification', 'implementation', 'deployment'],
+  'discovering-trusted-issuers': ['trust-discovery', 'trust-registry', 'verification'],
+  'why-the-marty-protocol-exists': ['protocol-overview', 'foundation', 'announcement'],
+  'the-marty-identity-model': ['protocol-overview', 'five-primitives', 'foundation'],
+  'trust-profile-evaluation-and-failure-handling': ['trust-profile', 'core-object', 'implementation'],
+  'credential-templates-explained-deep': ['credential-template', 'core-object', 'implementation'],
+  'presentation-policies-explained-deep': ['presentation-policy', 'core-object', 'implementation'],
+  'deployment-profiles-explained-deep': ['deployment-profile', 'core-object', 'deployment'],
+  'how-everything-works-together': ['protocol-overview', 'five-primitives', 'flow'],
+};
+
+/**
+ * Standards metadata tags — maps post slugs to referenced standards/protocols.
+ * Displayed on article cards for scannability and SEO.
+ */
+export const BLOG_POST_STANDARDS_TAGS = {
+  'impl-oid4vci': ['OID4VCI'],
+  'impl-oid4vp': ['OID4VP'],
+  'sd-jwt-selective-disclosure-deep-dive': ['SD-JWT'],
+  'how-passport-pki-works': ['ICAO 9303'],
+  'understanding-csca-certificates': ['ICAO 9303'],
+  'eudi-wallet-readiness': ['eIDAS 2.0', 'EUDI ARF'],
+  'eudi-wallet-model-explained': ['eIDAS 2.0', 'EUDI ARF'],
+  'deploy-airline-boarding': ['ICAO 9303'],
+  'mip-and-open-badges-education-credentials': ['Open Badges v3'],
+  'offline-verification-design-patterns': ['ISO 18013-5'],
+  'conformance-testing-for-implementers': ['OID4VCI', 'OID4VP'],
+  'zero-knowledge-predicates-identity': ['SD-JWT', 'BBS+'],
+  'selective-disclosure': ['SD-JWT'],
+  'privacy-data-minimization': ['SD-JWT'],
+  'certificate-chains-and-validation': ['X.509'],
+  'public-key-infrastructure-explained': ['X.509'],
+  'understanding-trust-anchors': ['X.509', 'ICAO 9303'],
+  'cryptographic-trust-anchors-primer': ['X.509'],
+  'credential-templates-designing-what-gets-issued': ['W3C VC'],
+  'presentation-policies-minimum-disclosure': ['OID4VP'],
+  'post-quantum-readiness-in-identity': ['NIST PQC'],
+  'revocation-strategies-compared': ['StatusList2021'],
+  'mobile-wallet-architectures': ['ISO 18013-5', 'OID4VP'],
+  'secure-enclave-credential-storage': ['FIDO2', 'WebAuthn'],
+  'trust-profiles-explained': ['X.509', 'ICAO 9303'],
+  'compliance-profiles-bridging-regulation': ['ICAO 9303', 'eIDAS 2.0', 'Open Badges v3'],
+  'cedar-policies-for-identity-governance': ['Cedar'],
+  'introducing-mip': ['JSON Schema', 'Cedar'],
+  'mip-json-schemas-walkthrough': ['JSON Schema'],
+  'building-trust-registries-at-scale': ['ICAO 9303', 'eIDAS 2.0'],
+  'holder-binding-beyond-biometrics': ['FIDO2', 'WebAuthn'],
+  'minimum-disclosure-is-a-policy-problem': ['Cedar', 'SD-JWT'],
+  'one-protocol-many-ecosystems': ['ICAO 9303', 'eIDAS 2.0', 'Open Badges v3'],
+  'why-marty-is-ready-for-evaluation': ['JSON Schema', 'Cedar'],
+  'offline-verification-guide': ['ICAO 9303', 'StatusList2021'],
+  'compliance-profiles-in-practice': ['ICAO 9303', 'eIDAS 2.0', 'Open Badges v3'],
+  'deploy-enterprise-access': ['SD-JWT', 'Cedar'],
+  'why-identity-depends-on-cryptography': ['X.509'],
+  'what-icao-9303-specifies': ['ICAO 9303'],
+  'mobile-driving-licenses-iso-18013-5': ['ISO 18013-5', 'mDoc'],
+  'how-governments-build-identity-pki': ['ICAO 9303', 'ISO 18013-5'],
+  'how-credential-issuance-works': ['OID4VCI'],
+  'verifiable-credentials-explained': ['W3C VC'],
+  'presentation-protocols': ['OID4VP', 'Presentation Exchange'],
+  'interoperability-between-credential-formats': ['W3C VC', 'SD-JWT', 'ISO 18013-5'],
+  'what-is-a-digital-identity-wallet': ['OID4VCI', 'OID4VP'],
+  'device-binding-and-credential-security': ['FIDO2', 'WebAuthn'],
+  'selective-disclosure-in-wallets': ['SD-JWT', 'ISO 18013-5', 'BBS+'],
+  'why-identity-systems-must-protect-privacy': ['GDPR'],
+  'data-minimization-in-identity': ['GDPR', 'SD-JWT'],
+  'selective-disclosure-explained': ['SD-JWT', 'BBS+'],
+  'privacy-vs-compliance': ['GDPR'],
+  'rbac-vs-abac': ['Cedar'],
+  'policy-engines-for-identity-systems': ['Cedar', 'OPA'],
+  'governing-credential-ecosystems': ['eIDAS 2.0', 'Open Badges v3'],
+  'trust-registries-explained': ['eIDAS 2.0', 'ICAO 9303'],
+  'federation-in-identity-systems': ['SAML', 'OIDC'],
+  'verifier-infrastructure': ['OID4VP', 'StatusList2021'],
+  'discovering-trusted-issuers': ['DID', 'eIDAS 2.0'],
+  'why-the-marty-protocol-exists': ['OID4VCI', 'OID4VP'],
+  'trust-profile-evaluation-and-failure-handling': ['X.509', 'ICAO 9303'],
+  'credential-templates-explained-deep': ['W3C VC', 'Open Badges v3'],
+  'presentation-policies-explained-deep': ['OID4VP', 'SD-JWT'],
+  'deployment-profiles-explained-deep': ['OID4VP', 'ICAO 9303'],
+  'how-everything-works-together': ['OID4VCI', 'OID4VP', 'W3C VC'],
+  'credential-portability-across-wallets': ['OID4VCI', 'OID4VP'],
 };

@@ -1,32 +1,166 @@
 /**
  * Blog Page
  *
- * "Learn the Marty Protocol" structured guide section at top, followed by
- * featured post + filterable article grid with search.
+ * Section-per-nav-item layout with sticky sub-navigation.
+ * Sections: Overview → Start Here → Five Primitives → Implementation
+ *           → Trust & PKI → Privacy & Disclosure → Deployment Patterns
+ *           → Governance & Trust Infrastructure → Latest
+ * Each curated section draws from distinct series — no duplicate exposure.
  */
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useCallback, useEffect, useMemo } from 'react';
 import {
   Box, Typography, Card, CardContent, CardActionArea, Grid, Chip,
-  Avatar, TextField, InputAdornment, Button, Divider, Paper,
+  Avatar, Button, Divider, useMediaQuery, useTheme,
 } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SchoolIcon from '@mui/icons-material/School';
-import GroupsIcon from '@mui/icons-material/Groups';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { SEOHead } from '../seo';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
 import {
+  GUIDE_ARTICLES,
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES_BY_CHAPTER,
 } from '../data';
+import { SERIES_BY_POST_SLUG, BLOG_SERIES, SECTION_BY_SLUG } from '../data';
+import { BLOG_POST_STANDARDS_TAGS } from '../data';
+import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta';
+import HeroSection from './HeroSection';
+import StartHereSection from './StartHereSection';
+import ProtocolDiagramSection from './ProtocolDiagramSection';
+import BlogSubNav from './BlogSubNav';
+import SystemMap from './SystemMap';
 
 const TODAY = new Date().toISOString().split('T')[0];
+const SCROLL_MT = { scrollMarginTop: '56px' };
 
-const CATEGORIES = ['All', 'Business', 'Technical', 'Cryptography', 'Guide', 'Announcement'];
+// Section spacing — generous breathing room between sections (Stripe / Vercel pattern)
+const SECTION_SPACING = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
+
+/**
+ * Determine card type label based on section assignment and series.
+ * Returns: 'Core Primitive' | 'Guide' | 'Concept' | null
+ */
+function getCardType(slug, sectionBySlug, seriesByPostSlug) {
+  const section = sectionBySlug[slug];
+  const series = seriesByPostSlug[slug];
+  if (section === 'core-protocol' || series?.seriesId === 'five-primitives') return 'Core Primitive';
+  if (section === 'implementation' || series?.seriesId === 'implementations') return 'Guide';
+  if (section === 'start-learning') return 'Concept';
+  if (series?.seriesId === 'deployments') return 'Guide';
+  if (series?.seriesId === 'pki-for-identity') return 'Guide';
+  if (series?.seriesId === 'privacy-and-disclosure') return 'Guide';
+  if (series?.seriesId === 'governance' || series?.seriesId === 'wallets') return 'Guide';
+  return null;
+}
+
+const CARD_TYPE_STYLES = {
+  'Core Primitive': {
+    borderLeft: '4px solid',
+    borderLeftColor: '#1565c0',
+    bgcolor: 'rgba(21, 101, 192, 0.03)',
+    chipColor: 'primary',
+  },
+  Guide: {
+    borderLeft: '4px solid',
+    borderLeftColor: '#7b1fa2',
+    bgcolor: 'transparent',
+    chipColor: 'secondary',
+  },
+  Concept: {
+    borderLeft: '4px solid',
+    borderLeftColor: '#2e7d32',
+    bgcolor: 'transparent',
+    chipColor: 'success',
+  },
+};
+
+/**
+ * Compute total reading minutes from an array of posts.
+ */
+function computeReadingTime(posts) {
+  return posts.reduce((sum, p) => {
+    const match = p.readTime?.match(/(\d+)/);
+    return sum + (match ? parseInt(match[1], 10) : 0);
+  }, 0);
+}
+
+function matchesSearchFields(query, fields) {
+  return fields.some((field) => field?.toLowerCase().includes(query));
+}
+
+export function buildSearchResults(query, posts, guideArticles, guideChapters) {
+  if (!query.trim()) return null;
+
+  const normalizedQuery = query.toLowerCase();
+  const chapterById = Object.fromEntries(guideChapters.map((chapter) => [chapter.id, chapter]));
+
+  const postResults = posts
+    .filter((post) => matchesSearchFields(normalizedQuery, [post.title, post.summary, post.category]))
+    .map((post) => ({
+      kind: 'post',
+      slug: post.slug,
+      item: post,
+    }));
+
+  const visiblePostSlugs = new Set(postResults.map((result) => result.slug));
+
+  const guideResults = guideArticles
+    .filter((article) => !visiblePostSlugs.has(article.slug))
+    .filter((article) => {
+      const chapter = chapterById[article.chapterId];
+      return matchesSearchFields(normalizedQuery, [
+        article.title,
+        article.summary,
+        chapter?.title,
+        ...(article.conceptTags || []),
+      ]);
+    })
+    .map((article) => ({
+      kind: 'guide',
+      slug: article.slug,
+      item: article,
+      chapterTitle: chapterById[article.chapterId]?.title || null,
+    }));
+
+  return [...postResults, ...guideResults];
+}
+
+// Sidebar rail items for sticky left navigation
+const RAIL_ITEMS = [
+  { id: 'start-here', verb: 'Learn', label: 'Start Here' },
+  { id: 'system-map', verb: 'Map', label: 'System Map' },
+  { id: 'five-primitives', verb: 'Protocol', label: 'Five Primitives' },
+  { id: 'implementation', verb: 'Build', label: 'Implementation' },
+  { id: 'trust-pki', verb: 'Security', label: 'Trust & PKI' },
+  { id: 'deployment', verb: 'Deploy', label: 'Deployment Patterns' },
+  { id: 'governance', verb: 'Govern', label: 'Governance' },
+  { id: 'latest', verb: 'Archive', label: 'Latest' },
+];
+
+/**
+ * Map each nav section to the series it displays.
+ * No series appears in two sections → no duplicate articles.
+ */
+const SECTION_SERIES = {
+  'five-primitives': ['five-primitives'],
+  implementation: ['implementations'],
+  'trust-pki': ['pki-for-identity'],
+  'privacy-disclosure': ['privacy-and-disclosure'],
+  deployment: ['deployments'],
+  governance: ['governance', 'wallets'],
+};
+
+const SECTION_INDEX_ITEMS = [
+  { verb: 'Learn', label: 'Start Here', target: 'start-here' },
+  { verb: 'Map', label: 'System Map', target: 'system-map' },
+  { verb: 'Understand', label: 'Five Primitives', target: 'five-primitives' },
+  { verb: 'Build', label: 'Implementation', target: 'implementation' },
+  { verb: 'Secure', label: 'PKI & Trust', target: 'trust-pki' },
+  { verb: 'Deploy', label: 'Deployment Patterns', target: 'deployment' },
+  { verb: 'Govern', label: 'Governance', target: 'governance' },
+];
 
 const CATEGORY_COLORS = {
   Announcement: 'primary',
@@ -36,7 +170,7 @@ const CATEGORY_COLORS = {
   Guide: 'secondary',
 };
 
-// ── Protocol Guide Section ─────────────────────────────────────────────────────
+// ── Guide Article Card ─────────────────────────────────────────────────────────
 
 function GuideArticleCard({ article, navigate }) {
   return (
@@ -62,21 +196,58 @@ function GuideArticleCard({ article, navigate }) {
           <Typography
             variant="body2"
             color="text.secondary"
-            sx={{ mb: 2, lineHeight: 1.55, fontSize: '0.8rem' }}
+            sx={{ lineHeight: 1.55, fontSize: '0.8rem' }}
           >
             {article.summary}
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: 'primary.main' }}>
-            <Typography variant="caption" fontWeight={700} color="primary">
-              Read Guide
-            </Typography>
-            <ArrowForwardIcon sx={{ fontSize: 13 }} />
-          </Box>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 }
+
+function GuideSearchCard({ article, chapterTitle, navigate }) {
+  return (
+    <Card
+      elevation={1}
+      sx={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: 2,
+        border: '1px solid',
+        borderColor: 'grey.200',
+        borderLeft: '4px solid',
+        borderLeftColor: '#7b1fa2',
+        transition: 'all 0.18s ease',
+        '&:hover': { transform: 'translateY(-3px)', boxShadow: 5 },
+      }}
+    >
+      <CardActionArea
+        onClick={() => navigate(`/blog/${article.slug}`)}
+        sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
+      >
+        <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
+          <Box sx={{ display: 'flex', gap: 0.75, mb: 2, flexWrap: 'wrap' }}>
+            <Chip label="Guide" size="small" color="secondary" sx={{ fontWeight: 700, fontSize: '0.68rem' }} />
+            {chapterTitle && (
+              <Chip label={chapterTitle} size="small" variant="outlined" sx={{ fontWeight: 600, fontSize: '0.68rem' }} />
+            )}
+            <Chip label={article.readTime} size="small" variant="outlined" sx={{ fontWeight: 600, fontSize: '0.68rem' }} />
+          </Box>
+          <Typography variant="h6" fontWeight={700} gutterBottom sx={{ lineHeight: 1.35, fontSize: '1.05rem' }}>
+            {article.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6, fontSize: '0.84rem' }}>
+            {article.summary}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  );
+}
+
+// ── Protocol Guide Section ─────────────────────────────────────────────────────
 
 function ProtocolGuideSection({ navigate }) {
   const [activeChapter, setActiveChapter] = useState(1);
@@ -85,7 +256,7 @@ function ProtocolGuideSection({ navigate }) {
   return (
     <Box
       sx={{
-        mb: 8,
+        mb: 4,
         p: { xs: 3, md: 4 },
         borderRadius: 3,
         background: 'linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%)',
@@ -93,15 +264,14 @@ function ProtocolGuideSection({ navigate }) {
         borderColor: 'primary.100',
       }}
     >
-      {/* Section header */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
         <SchoolIcon color="primary" />
-        <Typography variant="h5" fontWeight={800} color="primary.dark">
-          Learn the Marty Protocol
+        <Typography variant="h6" fontWeight={800} color="primary.dark">
+          Structured Guide
         </Typography>
       </Box>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, ml: 4.5 }}>
-        A structured guide to verifiable identity — six chapters, ordered for progressive learning.
+        Six chapters of progressive learning — pick up where your series knowledge leaves off.
       </Typography>
 
       {/* Chapter selector chips */}
@@ -130,129 +300,160 @@ function ProtocolGuideSection({ navigate }) {
           </Grid>
         ))}
       </Grid>
-
-      {/* Footer link */}
-      <Box sx={{ mt: 3, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-        <Button
-          size="small"
-          startIcon={<MenuBookIcon />}
-          onClick={() => navigate(`/blog/${(GUIDE_ARTICLES_BY_CHAPTER[1] || [])[0]?.slug}`)}
-          variant="outlined"
-          sx={{ bgcolor: 'background.paper' }}
-        >
-          Start from the beginning
-        </Button>
-      </Box>
     </Box>
   );
 }
+
+// ── Post Card ──────────────────────────────────────────────────────────────────
 
 function PostCard({ post, featured = false, onClick }) {
   const author = BLOG_AUTHORS[post.authorId] || {};
   const isFuture = post.date > TODAY;
   const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const updatedStr = post.updatedDate
+    ? new Date(post.updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+    : null;
+  const seriesInfo = SERIES_BY_POST_SLUG[post.slug];
+  const standardsTags = BLOG_POST_STANDARDS_TAGS[post.slug] || [];
+  const cardType = getCardType(post.slug, SECTION_BY_SLUG, SERIES_BY_POST_SLUG);
+  const typeStyle = cardType ? CARD_TYPE_STYLES[cardType] : null;
 
+  // ── Featured: editorial spotlight treatment ──
   if (featured) {
     return (
-      <Card
-        elevation={3}
+      <Box
         sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          mb: 5,
-          borderRadius: 2,
-          overflow: 'hidden',
-          transition: 'box-shadow 0.2s',
-          '&:hover': { boxShadow: 8 },
+          mb: 6,
+          p: { xs: 4, md: 6 },
+          borderRadius: 3,
+          background: 'linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #1a237e 100%)',
+          color: 'common.white',
+          cursor: 'pointer',
+          transition: 'transform 0.2s, box-shadow 0.2s',
+          '&:hover': { transform: 'translateY(-2px)', boxShadow: 12 },
         }}
+        onClick={onClick}
       >
-        {/* Colour accent panel */}
-        <Box
+        <Typography
+          variant="overline"
           sx={{
-            width: { md: 280 },
-            minHeight: { xs: 140, md: 'auto' },
-            flexShrink: 0,
-            background: 'linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            display: 'block',
+            mb: 2,
+            fontWeight: 800,
+            letterSpacing: 2,
+            fontSize: '0.7rem',
+            color: 'rgba(255,255,255,0.6)',
           }}
         >
-          <Typography variant="h2" sx={{ color: 'rgba(255,255,255,0.15)', fontWeight: 900, userSelect: 'none', fontSize: { xs: '4rem', md: '6rem' } }}>
-            {author.avatar || 'MIP'}
-          </Typography>
+          Featured
+        </Typography>
+        <Typography
+          variant="h3"
+          fontWeight={900}
+          sx={{
+            fontSize: { xs: '1.75rem', md: '2.5rem' },
+            lineHeight: 1.2,
+            mb: 2,
+          }}
+        >
+          {post.title}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            maxWidth: 640,
+            lineHeight: 1.8,
+            mb: 4,
+            opacity: 0.85,
+            fontSize: { xs: '1rem', md: '1.1rem' },
+          }}
+        >
+          {post.summary}
+        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+            <Avatar src={author.avatarImage} sx={{ width: 36, height: 36, bgcolor: 'primary.light', fontSize: '0.8rem' }}>{author.avatar}</Avatar>
+            <Box>
+              <Typography variant="body2" fontWeight={600} sx={{ color: 'common.white' }}>{author.name}</Typography>
+              <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
+                {dateStr} · {post.readTime}
+              </Typography>
+            </Box>
+          </Box>
+          <Button
+            variant="outlined"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              ml: 'auto',
+              color: 'common.white',
+              borderColor: 'rgba(255,255,255,0.3)',
+              fontWeight: 700,
+              '&:hover': { borderColor: 'common.white', bgcolor: 'rgba(255,255,255,0.08)' },
+            }}
+          >
+            Read article
+          </Button>
         </Box>
-        <CardActionArea onClick={onClick} sx={{ flexGrow: 1 }}>
-          <CardContent sx={{ p: { xs: 3, md: 4 } }}>
-            <Box sx={{ display: 'flex', gap: 1, mb: 2, flexWrap: 'wrap', alignItems: 'center' }}>
-              <Chip label="Featured" size="small" color="primary" sx={{ fontWeight: 700 }} />
-              <Chip label={post.category} size="small" color={CATEGORY_COLORS[post.category] || 'default'} variant="outlined" />
-              <Chip label={post.readTime} size="small" variant="outlined" />
-            </Box>
-            <Typography variant="h4" fontWeight={800} gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, lineHeight: 1.3 }}>
-              {post.title}
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 3, lineHeight: 1.7 }}>
-              {post.summary}
-            </Typography>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <Avatar src={author.avatarImage} sx={{ width: 36, height: 36, bgcolor: 'primary.main', fontSize: '0.8rem' }}>{author.avatar}</Avatar>
-                <Box>
-                  <Typography variant="body2" fontWeight={600}>{author.name} · {author.title}</Typography>
-                  <Typography variant="caption" color="text.secondary">{dateStr}</Typography>
-                </Box>
-              </Box>
-              <Button variant="contained" endIcon={<ArrowForwardIcon />} size="small">
-                Read Article
-              </Button>
-            </Box>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+      </Box>
     );
   }
 
+  // ── Standard card with card-type differentiation ──
   return (
     <Card
-      elevation={isFuture ? 0 : 2}
+      elevation={1}
       sx={{
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         borderRadius: 2,
-        opacity: isFuture ? 0.65 : 1,
-        border: isFuture ? '1px dashed' : 'none',
-        borderColor: 'grey.300',
+        border: '1px solid',
+        borderColor: 'grey.200',
         transition: 'all 0.2s',
-        '&:hover': isFuture ? {} : { transform: 'translateY(-4px)', boxShadow: 6 },
+        '&:hover': { transform: 'translateY(-4px)', boxShadow: 6 },
+        ...(typeStyle ? {
+          borderLeft: typeStyle.borderLeft,
+          borderLeftColor: typeStyle.borderLeftColor,
+          bgcolor: typeStyle.bgcolor,
+        } : {}),
       }}
     >
       <CardActionArea
-        disabled={isFuture}
         onClick={onClick}
         sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
       >
         <CardContent sx={{ flexGrow: 1, p: 3 }}>
           <Box sx={{ display: 'flex', gap: 0.75, mb: 2, flexWrap: 'wrap' }}>
-            <Chip label={post.category} size="small" color={CATEGORY_COLORS[post.category] || 'default'} sx={{ fontWeight: 600 }} />
-            {isFuture && <Chip label="Coming Soon" size="small" sx={{ bgcolor: 'grey.200', fontWeight: 600 }} />}
+            {cardType && (
+              <Chip
+                label={cardType}
+                size="small"
+                color={typeStyle?.chipColor || 'default'}
+                sx={{ fontWeight: 700, fontSize: '0.68rem' }}
+              />
+            )}
+            <Chip label={post.category} size="small" color={CATEGORY_COLORS[post.category] || 'default'} variant="outlined" sx={{ fontWeight: 600 }} />
+            {seriesInfo && <Chip label={seriesInfo.seriesTitle} size="small" variant="outlined" sx={{ fontSize: '0.7rem', fontWeight: 600 }} />}
+            {standardsTags.map((tag) => (
+              <Chip key={tag} label={tag} size="small" variant="outlined" sx={{ fontFamily: 'monospace', fontSize: '0.65rem', fontWeight: 600, borderColor: 'info.main', color: 'info.main' }} />
+            ))}
+            {isFuture && <Chip label="Update Pending" size="small" sx={{ bgcolor: 'warning.50', color: 'warning.dark', fontWeight: 600, fontSize: '0.68rem' }} />}
           </Box>
-          <Typography variant="h6" fontWeight={700} gutterBottom sx={{ lineHeight: 1.35 }}>
+          <Typography variant="h6" fontWeight={700} gutterBottom sx={{ lineHeight: 1.35, fontSize: '1.15rem' }}>
             {post.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 2.5, lineHeight: 1.65 }}>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2.5, lineHeight: 1.65, fontSize: '0.875rem' }}>
             {post.summary}
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <Avatar src={author.avatarImage} sx={{ width: 26, height: 26, fontSize: '0.7rem', bgcolor: 'primary.main' }}>{author.avatar || '?'}</Avatar>
-              <Typography variant="caption" color="text.secondary" noWrap>
-                {author.name || post.authorId} · {dateStr}
+              <Typography variant="caption" color="text.secondary" noWrap sx={{ fontSize: '0.75rem' }}>
+                {author.name || post.authorId} · {dateStr}{updatedStr ? ` · Upd. ${updatedStr}` : ''}
               </Typography>
             </Box>
-            <Typography variant="caption" color="text.secondary" sx={{ flexShrink: 0, fontStyle: 'italic' }}>
+            <Typography variant="caption" color="text.secondary" sx={{ flexShrink: 0, fontStyle: 'italic', fontSize: '0.75rem' }}>
               {post.readTime}
             </Typography>
           </Box>
@@ -262,165 +463,446 @@ function PostCard({ post, featured = false, onClick }) {
   );
 }
 
+// ── Section Article Grid ───────────────────────────────────────────────────────
+
+function SectionArticleGrid({ title, description, posts, navigate }) {
+  if (!posts.length) return null;
+  const totalMinutes = computeReadingTime(posts);
+  return (
+    <Box sx={{ mb: 5 }}>
+      {title && (
+        <Box sx={{ mb: 3 }}>
+          <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 2, flexWrap: 'wrap' }}>
+            <Typography
+              variant="h4"
+              fontWeight={800}
+              sx={{ fontSize: { xs: '1.5rem', md: '1.85rem' }, lineHeight: 1.3 }}
+            >
+              {title}
+            </Typography>
+            <Chip
+              label={`${posts.length} article${posts.length !== 1 ? 's' : ''} · ~${totalMinutes} min`}
+              size="small"
+              variant="outlined"
+              sx={{ fontWeight: 700, fontSize: '0.72rem', borderColor: 'grey.400' }}
+            />
+          </Box>
+          {description && (
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: '1rem' }}>
+              {description}
+            </Typography>
+          )}
+        </Box>
+      )}
+      <Grid container spacing={2.5}>
+        {posts.map((post) => (
+          <Grid item xs={12} sm={6} md={4} key={post.slug}>
+            <PostCard post={post} onClick={() => navigate(`/blog/${post.slug}`)} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+}
+
+// ── Latest Feed ────────────────────────────────────────────────────────────────
+
+function LatestFeed({ articles, navigate }) {
+  const [count, setCount] = useState(9);
+  return (
+    <Box sx={{ mb: 6 }}>
+      <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 2, mb: 1 }}>
+        <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: '1.5rem', md: '1.85rem' } }}>
+          Latest
+        </Typography>
+        <Chip
+          label={`${articles.length} articles`}
+          size="small"
+          variant="outlined"
+          sx={{ fontWeight: 700, fontSize: '0.72rem', borderColor: 'grey.400' }}
+        />
+      </Box>
+      <Typography variant="body1" color="text.secondary" sx={{ mb: 4, fontSize: '1rem' }}>
+        All articles in reverse-chronological order.
+      </Typography>
+      <Grid container spacing={2.5}>
+        {articles.slice(0, count).map((post) => (
+          <Grid item xs={12} sm={6} md={4} key={post.slug}>
+            <PostCard post={post} onClick={() => navigate(`/blog/${post.slug}`)} />
+          </Grid>
+        ))}
+      </Grid>
+      {articles.length > count && (
+        <Box sx={{ textAlign: 'center', mt: 5 }}>
+          <Button variant="outlined" onClick={() => setCount((c) => c + 9)}>
+            Load More
+          </Button>
+        </Box>
+      )}
+    </Box>
+  );
+}
+
+// ── Blog Page ──────────────────────────────────────────────────────────────────
+
+// Sticky sidebar rail — appears on desktop, hidden on mobile
+function SectionRail({ activeSection }) {
+  const scrollTo = useCallback((id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+  return (
+    <Box
+      component="nav"
+      aria-label="Section navigation"
+      sx={{
+        display: { xs: 'none', lg: 'block' },
+        position: 'sticky',
+        top: 72,
+        alignSelf: 'flex-start',
+        width: 200,
+        flexShrink: 0,
+        pr: 3,
+      }}
+    >
+      {RAIL_ITEMS.map((item) => {
+        const isActive = activeSection === item.id;
+        return (
+          <Box
+            key={item.id}
+            onClick={() => scrollTo(item.id)}
+            sx={{
+              cursor: 'pointer',
+              py: 1,
+              pl: 2,
+              borderLeft: '2px solid',
+              borderColor: isActive ? 'primary.main' : 'grey.200',
+              transition: 'all 0.15s',
+              '&:hover': { borderColor: 'primary.light' },
+            }}
+          >
+            <Typography
+              variant="caption"
+              sx={{
+                display: 'block',
+                fontWeight: 800,
+                textTransform: 'uppercase',
+                letterSpacing: 1,
+                fontSize: '0.6rem',
+                color: isActive ? 'primary.main' : 'text.disabled',
+                mb: 0.25,
+              }}
+            >
+              {item.verb}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: isActive ? 700 : 500,
+                fontSize: '0.82rem',
+                color: isActive ? 'text.primary' : 'text.secondary',
+                lineHeight: 1.3,
+              }}
+            >
+              {item.label}
+            </Typography>
+          </Box>
+        );
+      })}
+    </Box>
+  );
+}
+
 function BlogPage() {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const categoryParam = searchParams.get('category') || 'All';
   const [search, setSearch] = useState('');
+  const [activeRailSection, setActiveRailSection] = useState('start-here');
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
-  const publishedPosts = useMemo(
-    () => [...BLOG_POSTS].sort((a, b) => new Date(b.date) - new Date(a.date)),
+  // Rail scroll-spy observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveRailSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: '-80px 0px -70% 0px' },
+    );
+    const timer = setTimeout(() => {
+      RAIL_ITEMS.forEach(({ id }) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    }, 200);
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Resolve series slugs → post objects
+  const getSeriesArticles = useCallback((seriesIds) => {
+    return seriesIds.flatMap((id) => {
+      const series = BLOG_SERIES.find((s) => s.id === id);
+      return series
+        ? series.slugs
+          .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+          .filter((post) => post && isBrowseVisibleArticleSlug(post.slug))
+        : [];
+    });
+  }, []);
+
+  const featuredPost = useMemo(
+    () => getBrowseVisiblePosts(BLOG_POSTS).find((p) => SECTION_BY_SLUG[p.slug] === 'featured'),
     [],
   );
 
-  const featuredPost = useMemo(
-    () => publishedPosts.find((p) => p.date <= TODAY) || publishedPosts[0],
-    [publishedPosts],
+  const fivePrimitivesArticles = useMemo(() => getSeriesArticles(SECTION_SERIES['five-primitives']), [getSeriesArticles]);
+  const implementationArticles = useMemo(() => getSeriesArticles(SECTION_SERIES.implementation), [getSeriesArticles]);
+  const trustPkiArticles = useMemo(() => getSeriesArticles(SECTION_SERIES['trust-pki']), [getSeriesArticles]);
+  const privacyDisclosureArticles = useMemo(() => getSeriesArticles(SECTION_SERIES['privacy-disclosure']), [getSeriesArticles]);
+  const deploymentArticles = useMemo(() => getSeriesArticles(SECTION_SERIES.deployment), [getSeriesArticles]);
+  const governanceArticles = useMemo(() => getSeriesArticles(SECTION_SERIES.governance), [getSeriesArticles]);
+
+  const latestArticles = useMemo(
+    () => [...getBrowseVisiblePosts(BLOG_POSTS)].sort((a, b) => new Date(b.date) - new Date(a.date)),
+    [],
   );
 
-  const setCategory = useCallback(
-    (cat) => {
-      setSearchParams(cat === 'All' ? {} : { category: cat });
-    },
-    [setSearchParams],
-  );
+  // Search mode: flat filtered results
+  const searchResults = useMemo(() => {
+    return buildSearchResults(search, latestArticles, GUIDE_ARTICLES, GUIDE_CHAPTERS);
+  }, [search, latestArticles]);
 
-  const gridPosts = useMemo(() => {
-    let posts = publishedPosts.filter((p) => p.slug !== featuredPost?.slug);
-    if (categoryParam !== 'All') {
-      posts = posts.filter((p) => {
-        const author = BLOG_AUTHORS[p.authorId];
-        return p.category === categoryParam || author?.persona === categoryParam;
-      });
-    }
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      posts = posts.filter(
-        (p) =>
-          p.title.toLowerCase().includes(q) ||
-          p.summary.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q),
-      );
-    }
-    return posts;
-  }, [publishedPosts, featuredPost, categoryParam, search]);
+  // Publishable implementation articles for reading time
+  const implPublished = implementationArticles;
+  const implMinutes = computeReadingTime(implPublished);
 
   return (
     <Box>
       <SEOHead
         title="Blog — Marty Identity Protocol"
-        description="Technical insights, identity standards, and implementation guides from the MIP team."
+        description="Concepts, standards, and implementation guides for verifiable identity systems."
         canonicalPath="/blog"
         keywords={['MIP blog', 'identity protocol', 'open standard', 'verifiable credentials', 'digital identity']}
       />
 
-      {/* Header */}
-      <Box sx={{ mb: 5 }}>
-        <Box sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
-          <Box>
-            <Typography variant="h3" component="h1" fontWeight={900} gutterBottom>
-              Blog
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 560 }}>
-              Technical insights, identity standards, and implementation guides.
-            </Typography>
-          </Box>
-          <Button
-            component="a"
-            href="/blog/rss.xml"
-            startIcon={<RssFeedIcon />}
-            variant="outlined"
-            size="small"
-            sx={{ flexShrink: 0 }}
-          >
-            RSS Feed
-          </Button>
-          <Button
-            onClick={() => navigate('/authors')}
-            startIcon={<GroupsIcon />}
-            variant="outlined"
-            size="small"
-            sx={{ flexShrink: 0 }}
-          >
-            Authors
-          </Button>
-        </Box>
-      </Box>
+      <BlogSubNav
+        searchValue={search}
+        onSearch={setSearch}
+        onNavigateAuthors={() => navigate('/authors')}
+      />
 
-      {/* Protocol Guide Section */}
-      <ProtocolGuideSection navigate={navigate} />
-
-      <Divider sx={{ mb: 6 }}>
-        <Chip label="Recent Articles" size="small" sx={{ fontWeight: 600 }} />
-      </Divider>
-
-      {/* Featured Post */}
-      {featuredPost && (
-        <PostCard
-          post={featuredPost}
-          featured
-          onClick={() => navigate(`/blog/${featuredPost.slug}`)}
-        />
-      )}
-
-      {/* Category Tabs + Search row */}
-      <Box
-        sx={{
-          display: 'flex',
-          gap: 2,
-          mb: 4,
-          alignItems: 'center',
-          flexWrap: 'wrap',
-        }}
-      >
-        <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', flexGrow: 1 }}>
-          {CATEGORIES.map((cat) => (
-            <Chip
-              key={cat}
-              label={cat}
-              clickable
-              color={categoryParam === cat ? 'primary' : 'default'}
-              variant={categoryParam === cat ? 'filled' : 'outlined'}
-              onClick={() => setCategory(cat)}
-              sx={{ fontWeight: categoryParam === cat ? 700 : 400 }}
-            />
-          ))}
-        </Box>
-        <TextField
-          size="small"
-          placeholder="Search articles…"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          sx={{ minWidth: 220 }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon fontSize="small" />
-              </InputAdornment>
-            ),
-          }}
-        />
-      </Box>
-
-      {/* Post Grid */}
-      <Grid container spacing={3}>
-        {gridPosts.map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.slug}>
-            <PostCard
-              post={post}
-              onClick={() => post.date <= TODAY && navigate(`/blog/${post.slug}`)}
-            />
-          </Grid>
-        ))}
-      </Grid>
-
-      {gridPosts.length === 0 && (
-        <Paper elevation={0} sx={{ p: 6, textAlign: 'center', bgcolor: 'grey.50', borderRadius: 2, mt: 2 }}>
-          <Typography variant="h6" color="text.secondary" gutterBottom>
-            No articles match your search.
+      {/* ─── Search Results Mode ─────────────────────────────────── */}
+      {searchResults ? (
+        <Box sx={{ mb: 4 }}>
+          <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+            {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &ldquo;{search}&rdquo;
           </Typography>
-          <Button onClick={() => { setSearch(''); setCategory('All'); }}>Clear filters</Button>
-        </Paper>
+          {searchResults.length > 0 ? (
+            <Grid container spacing={2}>
+              {searchResults.map((result) => (
+                <Grid item xs={12} sm={6} md={4} key={`${result.kind}:${result.slug}`}>
+                  {result.kind === 'guide' ? (
+                    <GuideSearchCard
+                      article={result.item}
+                      chapterTitle={result.chapterTitle}
+                      navigate={navigate}
+                    />
+                  ) : (
+                    <PostCard post={result.item} onClick={() => navigate(`/blog/${result.slug}`)} />
+                  )}
+                </Grid>
+              ))}
+            </Grid>
+          ) : (
+            <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center', py: 6 }}>
+              No articles or guide chapters match your search. Try &ldquo;trust profiles&rdquo;, &ldquo;OID4VCI&rdquo;, or &ldquo;deployment&rdquo;.
+            </Typography>
+          )}
+        </Box>
+      ) : (
+        <>
+          {/* ─── Overview ─────────────────────────────────────────── */}
+          <Box id="overview" sx={SCROLL_MT}>
+            <HeroSection
+              onStartLearning={() => document.getElementById('start-here')?.scrollIntoView({ behavior: 'smooth' })}
+              onImplement={() => document.getElementById('implementation')?.scrollIntoView({ behavior: 'smooth' })}
+            />
+
+            {/* Section index — orient readers on the long page */}
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: { xs: 1.5, md: 3 },
+                flexWrap: 'wrap',
+                my: 3,
+                py: 2,
+                px: 2,
+                borderRadius: 2,
+                bgcolor: 'grey.50',
+                border: '1px solid',
+                borderColor: 'grey.200',
+              }}
+            >
+              {SECTION_INDEX_ITEMS.map((item, idx) => (
+                <Box
+                  key={item.target}
+                  onClick={() => document.getElementById(item.target)?.scrollIntoView({ behavior: 'smooth' })}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 0.75,
+                    cursor: 'pointer',
+                    '&:hover .section-label': { color: 'primary.main' },
+                  }}
+                >
+                  <Typography
+                    variant="caption"
+                    fontWeight={800}
+                    color="primary.main"
+                    sx={{ textTransform: 'uppercase', fontSize: '0.7rem' }}
+                  >
+                    {item.verb}
+                  </Typography>
+                  <Typography
+                    className="section-label"
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{ fontWeight: 600, fontSize: '0.75rem', transition: 'color 0.15s' }}
+                  >
+                    {item.label}
+                  </Typography>
+                  {idx < SECTION_INDEX_ITEMS.length - 1 && (
+                    <Typography variant="caption" color="grey.400" sx={{ ml: { xs: 0.5, md: 1 } }}>→</Typography>
+                  )}
+                </Box>
+              ))}
+            </Box>
+          </Box>
+
+          {/* ─── Content with sidebar rail ─────────────────────────── */}
+          <Box sx={{ display: 'flex', gap: 0 }}>
+            {/* Sticky sidebar rail (desktop only) */}
+            {isDesktop && <SectionRail activeSection={activeRailSection} />}
+
+            {/* Main content column */}
+            <Box sx={{ flexGrow: 1, minWidth: 0 }}>
+
+              {/* ─── Start Here ──────────────────────────────────── */}
+              <Box id="start-here" sx={{ ...SCROLL_MT, ...SECTION_SPACING }}>
+                <StartHereSection navigate={navigate} />
+              </Box>
+
+              {/* ─── System Map ─────────────────────────────────── */}
+              <Box id="system-map" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <SystemMap />
+                {featuredPost && (
+                  <Box sx={{ mt: 6 }}>
+                    <PostCard post={featuredPost} featured onClick={() => navigate(`/blog/${featuredPost.slug}`)} />
+                  </Box>
+                )}
+              </Box>
+
+              {/* ─── Five Primitives ─────────────────────────────── */}
+              <Box id="five-primitives" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <ProtocolDiagramSection />
+                <SectionArticleGrid
+                  title="Five Primitives"
+                  description="The protocol model behind every identity system. Trust → Issue → Present → Deploy → Execute."
+                  posts={fivePrimitivesArticles}
+                  navigate={navigate}
+                />
+              </Box>
+
+              {/* ─── Implementation ──────────────────────────────── */}
+              <Box id="implementation" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <Box sx={{ mb: 4 }}>
+                  <Typography
+                    variant="h4"
+                    fontWeight={800}
+                    sx={{ fontSize: { xs: '1.5rem', md: '1.85rem' }, lineHeight: 1.3, mb: 1 }}
+                  >
+                    Identity Foundations
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, lineHeight: 1.7, fontSize: '1rem' }}>
+                    Core concepts — digital identity basics, credential models, and verification.
+                  </Typography>
+                </Box>
+                <ProtocolGuideSection navigate={navigate} />
+
+                <Box sx={{ mb: 3, mt: 6 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 2, flexWrap: 'wrap' }}>
+                    <Typography
+                      variant="h4"
+                      fontWeight={800}
+                      sx={{ fontSize: { xs: '1.5rem', md: '1.85rem' }, lineHeight: 1.3 }}
+                    >
+                      Implementation Guides
+                    </Typography>
+                    <Chip
+                      label={`${implPublished.length} article${implPublished.length !== 1 ? 's' : ''} · ~${implMinutes} min`}
+                      size="small"
+                      variant="outlined"
+                      sx={{ fontWeight: 700, fontSize: '0.72rem', borderColor: 'grey.400' }}
+                    />
+                  </Box>
+                  <Typography variant="body1" color="text.secondary" sx={{ mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: '1rem' }}>
+                    Transport protocols, schemas, and integration patterns for building systems with Marty.
+                  </Typography>
+                </Box>
+                <SectionArticleGrid posts={implementationArticles} navigate={navigate} />
+              </Box>
+
+              {/* ─── Trust & PKI ─────────────────────────────────── */}
+              <Box id="trust-pki" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <SectionArticleGrid
+                  title="Trust & PKI"
+                  description="Cryptographic foundations of verifiable identity: trust anchors, certificate chains, and validation."
+                  posts={trustPkiArticles}
+                  navigate={navigate}
+                />
+                <SectionArticleGrid
+                  title="Privacy & Disclosure"
+                  description="Selective disclosure, data minimization, and zero-knowledge proofs."
+                  posts={privacyDisclosureArticles}
+                  navigate={navigate}
+                />
+              </Box>
+
+              {/* ─── Deployment ──────────────────────────────────── */}
+              <Box id="deployment" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <SectionArticleGrid
+                  title="Deployment Patterns"
+                  description="How verifiable identity runs in real environments: airports, enterprises, kiosks, and edge devices."
+                  posts={deploymentArticles}
+                  navigate={navigate}
+                />
+              </Box>
+
+              {/* ─── Governance & Trust Infrastructure ────────────── */}
+              <Box id="governance" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <SectionArticleGrid
+                  title="Governance & Trust Infrastructure"
+                  description="Compliance frameworks, policy engines, and trust registries."
+                  posts={governanceArticles}
+                  navigate={navigate}
+                />
+              </Box>
+
+              {/* ─── Latest ─────────────────────────────────────── */}
+              <Box id="latest" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
+                <LatestFeed articles={latestArticles} navigate={navigate} />
+              </Box>
+
+            </Box>
+          </Box>
+        </>
       )}
     </Box>
   );

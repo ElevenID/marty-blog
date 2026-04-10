@@ -107,7 +107,19 @@ Start where serious teams should start: inspect the spec, inspect the schemas, a
 ## Draft metadata
 
 - **Slug:** `why-marty-is-ready-for-evaluation`
+- **Date:** `2025-06-06`
+- **Updated date:** `2026-09-02`
+- **Category:** `Technical`
+- **Topic:** `Protocol Evaluation`
+- **Topic cluster:** `Protocol Vision`
+- **Layer:** `Foundations`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `why-the-marty-protocol-exists`, `mip-json-schemas-walkthrough`, `conformance-testing-for-implementers`
+- **Concept tags:** `protocol-overview`, `evaluation`, `implementation`
+- **Standards tags:** `JSON Schema`, `Cedar`
 - **Lead narrator:** Daniel Ortega
 - **Primary reader:** Evaluation-ready architect or buyer
 - **Likely CTA:** Inspect the spec, schemas, deployment choices, and implementation notes
+- **Status:** `live`
 - **Batch:** `batch-02`

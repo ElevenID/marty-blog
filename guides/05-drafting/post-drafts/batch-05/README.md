@@ -35,7 +35,7 @@ A clean publication path through this cluster is:
 
 1. `minimum-disclosure-is-a-policy-problem`
 2. `selective-disclosure`
-3. `privacy-data-minimization`
+3. `data-minimization-in-identity`
 4. `deploy-age-verification`
 
 ## Inputs used

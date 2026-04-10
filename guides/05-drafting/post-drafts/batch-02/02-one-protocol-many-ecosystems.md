@@ -73,7 +73,19 @@ If you want the cleanest bounded proof before moving into evaluation, continue t
 ## Draft metadata
 
 - **Slug:** `one-protocol-many-ecosystems`
+- **Date:** `2025-05-31`
+- **Updated date:** `2026-08-28`
+- **Category:** `Technical`
+- **Topic:** `Protocol Vision`
+- **Topic cluster:** `Protocol Vision`
+- **Layer:** `Foundations`
+- **Difficulty:** `Intermediate`
+- **Section:** `business`
+- **Related:** `same-trust-model-different-runtime`, `compliance-profiles-in-practice`, `deploy-membership-credentials`
+- **Concept tags:** `protocol-overview`, `interoperability`, `compliance`
+- **Standards tags:** `ICAO 9303`, `eIDAS 2.0`, `Open Badges v3`
 - **Lead narrator:** Aiko Tanaka
 - **Primary reader:** Standards-minded architect, regulated buyer, skeptical sponsor
 - **Likely CTA:** `deploy-membership-credentials` or `why-marty-is-ready-for-evaluation`
+- **Status:** `live`
 - **Batch:** `batch-02`

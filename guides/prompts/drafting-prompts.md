@@ -1,12 +1,13 @@
 # Drafting Prompts
 
-Reusable prompt templates for AI-assisted drafting, critique, and revision of Marty Protocol editorial content.
+Reusable prompt templates for AI-assisted drafting, critique, and revision of Marty Identity Protocol (MIP) editorial content.
 
 ## How To Use
 
 Each prompt template below is designed to be pasted into an AI session along with the relevant guide documents. Replace `[bracketed placeholders]` with the specific topic, draft, or context.
 
 Always include `course-brief.md` as baseline context. Add additional guide files as indicated per template.
+Before using any prompt below, apply the publication-checklist guardrails: use `Marty Identity Protocol (MIP)` on first reference, verify repo-state and regulatory timing claims against current sources, and avoid speculative post-quantum timelines unless a citation is attached.
 
 ---
 
@@ -17,7 +18,7 @@ Always include `course-brief.md` as baseline context. Add additional guide files
 **Context files to include:** `course-brief.md`, `module-map.md`
 
 ```
-I'm considering writing a Marty Protocol blog post about [topic].
+I'm considering writing a Marty Identity Protocol (MIP) blog post about [topic].
 
 Based on the course brief and module map, answer:
 1. Which editorial cluster does this topic serve?
@@ -39,7 +40,7 @@ If this topic is off-strategy, explain why and suggest a sharper alternative.
 **Context files to include:** `course-brief.md`, `author-character-profiles.md`, source material
 
 ```
-Draft a Marty Protocol blog post on [topic].
+Draft a Marty Identity Protocol (MIP) blog post on [topic].
 
 Lead author persona: [persona name]
 Target reader: [stakeholder role]
@@ -65,7 +66,7 @@ Do not overclaim compliance or production readiness. Do not use unexplained jarg
 **Context files to include:** `course-brief.md`, `transformation-promise.md`, `publication-checklist.md`, the draft
 
 ```
-Here is a draft Marty Protocol blog post:
+Here is a draft Marty Identity Protocol (MIP) blog post:
 
 [paste draft]
 
@@ -94,7 +95,7 @@ Then suggest up to 3 specific improvements.
 **Context files to include:** `course-brief.md`, `narrative-hook.md`
 
 ```
-Generate 5 opening frames for a Marty Protocol blog post about [topic].
+Generate 5 opening frames for a Marty Identity Protocol (MIP) blog post about [topic].
 
 Vary across these dimensions:
 - Version A: High urgency (regulatory deadlines, market pressure)
@@ -115,7 +116,7 @@ Each opening should be 2–4 sentences. Each should make the reader want to cont
 **Context files to include:** `publishing-strategy.md`, the final draft
 
 ```
-Here is a finalized Marty Protocol blog post:
+Here is a finalized Marty Identity Protocol (MIP) blog post:
 
 [paste draft]
 

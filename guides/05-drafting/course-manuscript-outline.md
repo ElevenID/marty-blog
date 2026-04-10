@@ -72,7 +72,7 @@ This outline treats the publication as a set of reusable topical collections.
 - `pki-certificate-chains`
 - `policy-engines`
 - `trust-registries`
-- `privacy-data-minimization`
+- `data-minimization-in-identity`
 - `zero-knowledge-predicates-identity`
 - `sd-jwt-selective-disclosure-deep-dive`
 - `cedar-policies-for-identity-governance`

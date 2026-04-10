@@ -72,7 +72,20 @@ That is the real confidence shift. Hosted, self-hosted, and edge are not three d
 ## Draft metadata
 
 - **Slug:** `deployment-profiles-in-practice`
+- **Date:** `2025-06-17`
+- **Updated date:** `2026-09-14`
+- **Category:** `Technical`
+- **Topic:** `Deployment Profiles`
+- **Topic cluster:** `Deployment Patterns`
+- **Primitive:** `Deployment Profiles`
+- **Layer:** `Deploy`
+- **Difficulty:** `Intermediate`
+- **Section:** `implementation`
+- **Related:** `deployment-profiles-from-design-to-production`, `offline-verification-guide`, `deploy-airline-boarding`
+- **Concept tags:** `deployment`, `runtime`, `implementation`
+- **Standards tags:** `(none)`
 - **Lead narrator:** Sofia Rahman
 - **Primary reader:** operator, platform architect
 - **Likely CTA:** compare deployment packages and continue into infrastructure economics / evaluation
+- **Status:** `live`
 - **Batch:** `batch-03`

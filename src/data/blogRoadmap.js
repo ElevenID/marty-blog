@@ -1,9 +1,11 @@
 /**
- * Blog Roadmap and Author Avatar Prompts
+ * Editorial Publication Map and Author Avatar Prompts
  *
- * Planned content roadmap and avatar generation prompts.
+ * Historical publication map and avatar generation prompts.
+ * `BLOG_ROADMAP` keeps its legacy export name for compatibility.
  */
 
+// Legacy export name retained for compatibility with existing consumers.
 export const BLOG_ROADMAP = [
   {
     phase: 1,
@@ -89,12 +91,12 @@ export const BLOG_ROADMAP = [
   },
   {
     phase: 8,
-    title: 'Marty Protocol',
+    title: 'MIP',
     description: 'The Marty Identity Protocol itself — primitives, architecture, and how everything connects.',
     posts: [
       { order: 34, slug: 'why-the-marty-protocol-exists', title: 'Why the Marty Protocol Exists', authorId: 'daniel-ortega', category: 'Announcement', topic: 'Protocol Overview' },
       { order: 35, slug: 'the-marty-identity-model', title: 'The Marty Identity Model', authorId: 'daniel-ortega', category: 'Technical', topic: 'Protocol Architecture' },
-      { order: 36, slug: 'trust-profiles-explained-deep', title: 'Trust Profiles Explained', authorId: 'daniel-ortega', category: 'Technical', topic: 'Trust Profiles' },
+      { order: 36, slug: 'trust-profile-evaluation-and-failure-handling', title: 'Trust Profile Evaluation and Failure Handling', authorId: 'daniel-ortega', category: 'Technical', topic: 'Trust Profiles' },
       { order: 37, slug: 'credential-templates-explained-deep', title: 'Credential Templates Explained', authorId: 'daniel-ortega', category: 'Technical', topic: 'Credential Templates' },
       { order: 38, slug: 'presentation-policies-explained-deep', title: 'Presentation Policies Explained', authorId: 'daniel-ortega', category: 'Technical', topic: 'Presentation Policies' },
       { order: 39, slug: 'deployment-profiles-explained-deep', title: 'Deployment Profiles Explained', authorId: 'daniel-ortega', category: 'Technical', topic: 'Deployment Profiles' },

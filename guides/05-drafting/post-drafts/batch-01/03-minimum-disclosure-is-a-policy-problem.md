@@ -76,7 +76,19 @@ If your next question is how to choose among those mechanisms without getting lo
 ## Draft metadata
 
 - **Slug:** `minimum-disclosure-is-a-policy-problem`
+- **Date:** `2025-05-19`
+- **Updated date:** `2026-08-16`
+- **Category:** `Cryptography`
+- **Topic:** `Minimum Disclosure`
+- **Topic cluster:** `Privacy & Disclosure`
+- **Layer:** `Present`
+- **Difficulty:** `Intermediate`
+- **Section:** `cryptography`
+- **Related:** `selective-disclosure`, `presentation-policies-minimum-disclosure`, `data-minimization-in-identity`
+- **Concept tags:** `privacy`, `policy`, `selective-disclosure`
+- **Standards tags:** `Cedar`, `SD-JWT`
 - **Lead narrator:** Nora Patel
 - **Primary reader:** privacy, compliance, skeptical technical buyer
 - **Likely CTA:** `same-trust-model-different-runtime` for the main spine, or `selective-disclosure` for the privacy branch
+- **Status:** `live`
 - **Batch:** `batch-01`
