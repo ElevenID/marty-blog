@@ -14,7 +14,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { SEOHead } from '../seo';
 import { useNavigate } from 'react-router-dom';
-import { BLOG_POSTS, GUIDE_ARTICLE_MAP } from '../data';
+import { BLOG_POSTS, GUIDE_ARTICLE_MAP, GUIDE_CHAPTERS } from '../data';
 import { ARTICLE_META, LAYER_COLORS } from '../data/articleMeta';
 
 /**
@@ -121,20 +121,32 @@ const HANDBOOK_PARTS = [
   },
 ];
 
+const GUIDE_CHAPTERS_BY_ID = Object.fromEntries(
+  GUIDE_CHAPTERS.map((chapter) => [chapter.id, chapter]),
+);
+
 function computePartTime(slugs) {
   return slugs.reduce((sum, slug) => {
-    const article = getHandbookArticle(slug);
+    const article = getHandbookEntry(slug)?.article;
     const match = article?.readTime?.match(/(\d+)/);
     return sum + (match ? parseInt(match[1], 10) : 0);
   }, 0);
 }
 
-function getHandbookArticle(slug) {
-  if (ARTICLE_META[slug]?.browseHidden && GUIDE_ARTICLE_MAP[slug]) {
-    return GUIDE_ARTICLE_MAP[slug];
-  }
+export function getHandbookEntry(slug) {
+  const guideArticle = GUIDE_ARTICLE_MAP[slug];
+  const isGuide = Boolean(ARTICLE_META[slug]?.browseHidden && guideArticle);
+  const article = isGuide
+    ? guideArticle
+    : BLOG_POSTS.find((post) => post.slug === slug);
 
-  return BLOG_POSTS.find((post) => post.slug === slug);
+  if (!article) return null;
+
+  return {
+    article,
+    isGuide,
+    chapterTitle: isGuide ? GUIDE_CHAPTERS_BY_ID[guideArticle.chapterId]?.title || null : null,
+  };
 }
 
 function FoundationsPage() {
@@ -282,7 +294,8 @@ function FoundationsPage() {
             >
               {part.slugs.map((slug) => {
                 articleCounter++;
-                const article = getHandbookArticle(slug);
+                const entry = getHandbookEntry(slug);
+                const article = entry?.article;
                 const meta = ARTICLE_META[slug];
                 if (!article) return null;
 
@@ -323,6 +336,24 @@ function FoundationsPage() {
 
                     {/* Title + meta */}
                     <Box sx={{ flexGrow: 1, minWidth: 0 }}>
+                      {entry?.isGuide && (
+                        <Box sx={{ display: 'flex', gap: 0.75, mb: 0.75, flexWrap: 'wrap' }}>
+                          <Chip
+                            label="Guide"
+                            size="small"
+                            color="secondary"
+                            sx={{ fontWeight: 700, fontSize: '0.62rem', height: 20 }}
+                          />
+                          {entry.chapterTitle && (
+                            <Chip
+                              label={entry.chapterTitle}
+                              size="small"
+                              variant="outlined"
+                              sx={{ fontWeight: 600, fontSize: '0.62rem', height: 20 }}
+                            />
+                          )}
+                        </Box>
+                      )}
                       <Typography
                         className="article-title"
                         variant="body1"

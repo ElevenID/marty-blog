@@ -498,7 +498,7 @@ No posts are currently missing `SECTION_BY_SLUG` ownership. Wave 3 assigned the 
 
 ### Guide Content Slug Collisions with Blog Posts
 
-10 guide article slugs are still identical to live blog post slugs. This may cause routing conflicts or confuse navigation:
+10 guide article slugs still overlap a live or still-carried blog slug. Runtime routing is already guide-first for these collisions. Live mitigations shipped April 10, 2026: guide-first operational slugs are hidden from browse-visible blog surfaces, handbook entries badge them as guide articles, and blog search surfaces them as guide results. The remaining cleanup is long-term slug retirement / rename:
 
 - `selective-disclosure`, `deployment-profiles-in-practice`, `offline-verification-guide`, `compliance-profiles-in-practice`, `deploy-airline-boarding`, `deploy-age-verification`, `deploy-enterprise-access`, `deploy-membership-credentials`, `impl-oid4vci`, `impl-oid4vp`
 
@@ -508,11 +508,13 @@ No posts are currently missing `SECTION_BY_SLUG` ownership. Wave 3 assigned the 
 #### How to address this
 
 - [x] Split the collisions into two buckets before making slug changes: `guide-first operational content` vs `conceptual duplicate topic`.
+- [x] In the live package, hide guide-first operational collisions from browse-visible blog surfaces, badge them as guide entries in the handbook, and surface them as guide results in search until the slug inventory is cleaned up.
 - [ ] For guide-first operational content, keep the guide as the canonical destination and rename the blog counterpart into a bridge/overview slug if the blog still adds value.
 - [ ] For conceptual duplicate topics, choose one canonical owner and retire or rename the second piece rather than keeping two identical slugs with similar jobs.
 - [x] Reflect that decision upstream in `published-content-source-map.md`, `priority-draft-briefs.md`, and `publication-post-packets.md` so future drafts do not recreate collisions.
 - [ ] If both versions stay, adopt a deterministic naming rule (for example, guide-first canonical slugs plus distinct blog slugs) and add redirects/cross-links.
 - [x] During regeneration, rename drafts before merging, not after publication.
+
 
 ---
 
