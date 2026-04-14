@@ -1,3 +1,9 @@
+// Code block
+// Content block
+// Sidebar
+// Main page
+  {/* Sticky sidebar (md+) */}
+  {/* Main content */}
 /**
  * Protocol Guide Page
  *
@@ -9,7 +15,7 @@
  */
 
 import { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -19,6 +25,7 @@ import {
   Divider,
   Stepper,
   Step,
+  StepButton,
   StepLabel,
   Collapse,
   Accordion,
@@ -37,12 +44,16 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SchoolIcon from '@mui/icons-material/School';
 import { SEOHead } from '../seo';
+import { articleSchema } from '../seo/structuredData';
+import { buildBlogTagPath } from '../utils/blogTagRoutes';
+import ContinueLearning from './ContinueLearning';
 import {
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES,
   GUIDE_ARTICLE_MAP,
   GUIDE_ARTICLE_SLUGS,
   GUIDE_ARTICLES_BY_CHAPTER,
+  getHandbookArticleNavigation,
 } from '../data';
 
 const SIDEBAR_WIDTH = 256;
@@ -81,7 +92,7 @@ const TAG_COLORS = {
   business: 'success',
 };
 
-// ── Code Block ─────────────────────────────────────────────────────────────────
+// Code block
 
 function CodeBlock({ label, lang, code }) {
   const [open, setOpen] = useState(false);
@@ -149,7 +160,7 @@ function CodeBlock({ label, lang, code }) {
   );
 }
 
-// ── Content Block ──────────────────────────────────────────────────────────────
+// Content block
 
 function ContentBlock({ block }) {
   if (block.type === 'heading') {
@@ -169,9 +180,9 @@ function ContentBlock({ block }) {
   );
 }
 
-// ── Sidebar ────────────────────────────────────────────────────────────────────
+// Sidebar
 
-function GuideSidebar({ currentSlug, navigate }) {
+function GuideSidebar({ currentSlug }) {
   return (
     <Box sx={{ pt: 2, pb: 4 }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, px: 2, mb: 2 }}>
@@ -210,7 +221,8 @@ function GuideSidebar({ currentSlug, navigate }) {
               <ListItemButton
                 key={article.slug}
                 selected={isActive}
-                onClick={() => navigate(`/blog/${article.slug}`)}
+                component={Link}
+                to={`/blog/${article.slug}`}
                 sx={{
                   py: 0.55,
                   px: 2,
@@ -241,16 +253,16 @@ function GuideSidebar({ currentSlug, navigate }) {
   );
 }
 
-// ── Main Page ──────────────────────────────────────────────────────────────────
+// Main page
 
 function ProtocolGuidePage() {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'));
 
   const article = GUIDE_ARTICLE_MAP[slug];
   const currentIdx = GUIDE_ARTICLE_SLUGS.indexOf(slug);
+  const handbookInfo = getHandbookArticleNavigation(slug);
   const prevArticle =
     currentIdx > 0 ? GUIDE_ARTICLE_MAP[GUIDE_ARTICLE_SLUGS[currentIdx - 1]] : null;
   const nextArticle =
@@ -266,7 +278,8 @@ function ProtocolGuidePage() {
         </Typography>
         <Button
           variant="outlined"
-          onClick={() => navigate('/blog')}
+          component={Link}
+          to="/blog"
           startIcon={<ArrowBackIcon />}
         >
           Back to Blog
@@ -281,7 +294,7 @@ function ProtocolGuidePage() {
   return (
     <Box sx={{ display: 'flex', gap: { md: 4 }, alignItems: 'flex-start' }}>
       <SEOHead
-        title={`${article.title} — Marty Protocol Guide`}
+        title={`${article.title} - Marty Protocol Guide`}
         description={article.summary}
         canonicalPath={`/blog/${slug}`}
         keywords={['MIP guide', 'Marty Protocol', ...article.conceptTags]}
@@ -289,9 +302,16 @@ function ProtocolGuidePage() {
         ogMeta={{
           'article:section': `Chapter ${article.chapterId}: ${chapter?.title}`,
         }}
+        structuredData={articleSchema({
+          headline: article.title,
+          description: article.summary,
+          authorName: 'The MIP Authors',
+          authorType: 'Organization',
+          url: `https://elevenidllc.com/blog/${slug}`,
+        })}
       />
 
-      {/* ── Sticky sidebar (md+) */}
+      {/* Sticky sidebar (md+) */}
       {isMd && (
         <Box
           sx={{
@@ -307,16 +327,17 @@ function ProtocolGuidePage() {
             bgcolor: 'background.paper',
           }}
         >
-          <GuideSidebar currentSlug={slug} navigate={navigate} />
+          <GuideSidebar currentSlug={slug} />
         </Box>
       )}
 
-      {/* ── Main content */}
+      {/* Main content */}
       <Box sx={{ flexGrow: 1, minWidth: 0 }}>
         {/* Back to blog */}
         <Button
           startIcon={<ArrowBackIcon />}
-          onClick={() => navigate('/blog')}
+          component={Link}
+          to="/blog"
           sx={{ mb: 2, color: 'text.secondary' }}
           size="small"
         >
@@ -359,10 +380,14 @@ function ProtocolGuidePage() {
               return (
                 <Step
                   key={ch.id}
-                  onClick={() => firstInChapter && navigate(`/blog/${firstInChapter.slug}`)}
-                  sx={{ cursor: 'pointer' }}
                 >
-                  <StepLabel>{ch.title}</StepLabel>
+                  {firstInChapter ? (
+                    <StepButton component={Link} to={`/blog/${firstInChapter.slug}`}>
+                      <StepLabel>{ch.title}</StepLabel>
+                    </StepButton>
+                  ) : (
+                    <StepLabel>{ch.title}</StepLabel>
+                  )}
                 </Step>
               );
             })}
@@ -413,7 +438,9 @@ function ProtocolGuidePage() {
                   size="small"
                   variant="outlined"
                   color={TAG_COLORS[tag] || 'default'}
-                  onClick={() => navigate(`/blog?tag=${encodeURIComponent(tag)}`)}
+                  clickable
+                  component={Link}
+                  to={buildBlogTagPath(tag)}
                   sx={{ fontFamily: 'monospace', fontSize: '0.75rem' }}
                 />
               ))}
@@ -443,84 +470,93 @@ function ProtocolGuidePage() {
                 </Box>
               </AccordionSummary>
               <AccordionDetails sx={{ p: 0 }}>
-                <GuideSidebar currentSlug={slug} navigate={navigate} />
+                <GuideSidebar currentSlug={slug} />
               </AccordionDetails>
             </Accordion>
           </Box>
         )}
 
-        {/* Prev / Next navigation */}
-        <Divider sx={{ mt: 6, mb: 3 }} />
-        <Box
-          sx={{
-            display: 'flex',
-            gap: 2,
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-          }}
-        >
-          {prevArticle ? (
-            <Button
-              variant="outlined"
-              onClick={() => navigate(`/blog/${prevArticle.slug}`)}
+        {handbookInfo ? (
+          <ContinueLearning slug={slug} />
+        ) : (
+          <>
+            {/* Prev / Next navigation */}
+            <Divider sx={{ mt: 6, mb: 3 }} />
+            <Box
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
+                gap: 2,
+                justifyContent: 'space-between',
                 alignItems: 'flex-start',
-                py: 1.5,
-                px: 2.5,
-                textAlign: 'left',
-                maxWidth: 280,
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 0.25 }}>
-                <ArrowBackIcon sx={{ fontSize: 14 }} />
-                <Typography variant="caption" color="text.secondary">
-                  Previous
-                </Typography>
-              </Box>
-              <Typography variant="body2" fontWeight={700} sx={{ whiteSpace: 'normal' }}>
-                {prevArticle.title}
-              </Typography>
-            </Button>
-          ) : (
-            <Box />
-          )}
+              {prevArticle ? (
+                <Button
+                  variant="outlined"
+                  component={Link}
+                  to={`/blog/${prevArticle.slug}`}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    py: 1.5,
+                    px: 2.5,
+                    textAlign: 'left',
+                    maxWidth: 280,
+                  }}
+                >
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 0.25 }}>
+                    <ArrowBackIcon sx={{ fontSize: 14 }} />
+                    <Typography variant="caption" color="text.secondary">
+                      Previous
+                    </Typography>
+                  </Box>
+                  <Typography variant="body2" fontWeight={700} sx={{ whiteSpace: 'normal' }}>
+                    {prevArticle.title}
+                  </Typography>
+                </Button>
+              ) : (
+                <Box />
+              )}
 
-          {nextArticle && (
-            <Button
-              variant="contained"
-              onClick={() => navigate(`/blog/${nextArticle.slug}`)}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-end',
-                py: 1.5,
-                px: 2.5,
-                textAlign: 'right',
-                ml: 'auto',
-                maxWidth: 280,
-              }}
-            >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 0.25 }}>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                  Next
-                </Typography>
-                <ArrowForwardIcon sx={{ fontSize: 14 }} />
-              </Box>
-              <Typography variant="body2" fontWeight={700} sx={{ whiteSpace: 'normal' }}>
-                {nextArticle.title}
-              </Typography>
-            </Button>
-          )}
-        </Box>
+              {nextArticle && (
+                <Button
+                  variant="contained"
+                  component={Link}
+                  to={`/blog/${nextArticle.slug}`}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-end',
+                    py: 1.5,
+                    px: 2.5,
+                    textAlign: 'right',
+                    ml: 'auto',
+                    maxWidth: 280,
+                  }}
+                >
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 0.25 }}>
+                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.8)' }}>
+                      Next
+                    </Typography>
+                    <ArrowForwardIcon sx={{ fontSize: 14 }} />
+                  </Box>
+                  <Typography variant="body2" fontWeight={700} sx={{ whiteSpace: 'normal' }}>
+                    {nextArticle.title}
+                  </Typography>
+                </Button>
+              )}
+            </Box>
+          </>
+        )}
 
         {/* Footer actions */}
         <Divider sx={{ my: 4 }} />
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
           <Button
             variant="outlined"
-            onClick={() => navigate('/blog')}
+            component={Link}
+            to="/blog"
             startIcon={<ArrowBackIcon />}
           >
             All Posts
@@ -528,14 +564,16 @@ function ProtocolGuidePage() {
           <Button
             variant="outlined"
             startIcon={<AccountTreeIcon />}
-            onClick={() => navigate(`/protocol#${article.slug}`)}
+            component={Link}
+            to={`/protocol#${article.slug}`}
           >
             View in Protocol Map
           </Button>
           <Button
             variant="outlined"
             endIcon={<ArrowForwardIcon />}
-            onClick={() => navigate('/protocol')}
+            component={Link}
+            to="/protocol"
           >
             Explore the Protocol
           </Button>

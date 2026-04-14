@@ -6,9 +6,9 @@
  * Utility area: expandable search, Authors link, RSS link.
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import {
-  Box, Button, IconButton, TextField, InputAdornment,
+  Box, Button, IconButton, TextField, InputAdornment, Typography,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
@@ -26,12 +26,17 @@ const NAV_ITEMS = [
   { id: 'latest', label: 'Latest' },
 ];
 
-function BlogSubNav({ searchValue, onSearch, onNavigateAuthors }) {
+function BlogSubNav({ searchValue, onSearch, onNavigateAuthors, sectionNavEnabled = true }) {
   const [activeSection, setActiveSection] = useState('overview');
   const [showSearch, setShowSearch] = useState(false);
 
   // Scroll-spy: highlight the nav item whose section is near the viewport top
   useEffect(() => {
+    if (!sectionNavEnabled) {
+      setActiveSection('overview');
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -54,11 +59,7 @@ function BlogSubNav({ searchValue, onSearch, onNavigateAuthors }) {
       clearTimeout(timer);
       observer.disconnect();
     };
-  }, []);
-
-  const scrollTo = useCallback((id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+  }, [sectionNavEnabled]);
 
   return (
     <Box
@@ -75,7 +76,7 @@ function BlogSubNav({ searchValue, onSearch, onNavigateAuthors }) {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        {/* Nav items — horizontally scrollable on mobile */}
+        {/* Nav items - horizontally scrollable on mobile */}
         <Box
           sx={{
             display: 'flex',
@@ -86,32 +87,43 @@ function BlogSubNav({ searchValue, onSearch, onNavigateAuthors }) {
             scrollbarWidth: 'none',
           }}
         >
-          {NAV_ITEMS.map((item) => (
-            <Button
-              key={item.id}
-              size="small"
-              onClick={() => scrollTo(item.id)}
-              sx={{
-                minWidth: 'auto',
-                px: 1.5,
-                py: 0.5,
-                borderRadius: 1,
-                fontWeight: activeSection === item.id ? 700 : 500,
-                color: activeSection === item.id ? 'primary.main' : 'text.secondary',
-                bgcolor: activeSection === item.id ? 'primary.50' : 'transparent',
-                borderBottom: '2px solid',
-                borderColor: activeSection === item.id ? 'primary.main' : 'transparent',
-                whiteSpace: 'nowrap',
-                fontSize: '0.8rem',
-                textTransform: 'none',
-                '&:hover': {
-                  bgcolor: activeSection === item.id ? 'primary.50' : 'grey.50',
-                },
-              }}
-            >
-              {item.label}
-            </Button>
-          ))}
+          {sectionNavEnabled ? (
+            NAV_ITEMS.map((item) => (
+              <Button
+                key={item.id}
+                size="small"
+                component="a"
+                href={`#${item.id}`}
+                aria-current={activeSection === item.id ? 'location' : undefined}
+                sx={{
+                  minWidth: 'auto',
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: 1,
+                  fontWeight: activeSection === item.id ? 700 : 500,
+                  color: activeSection === item.id ? 'primary.main' : 'text.secondary',
+                  bgcolor: activeSection === item.id ? 'primary.50' : 'transparent',
+                  borderBottom: '2px solid',
+                  borderColor: activeSection === item.id ? 'primary.main' : 'transparent',
+                  whiteSpace: 'nowrap',
+                  fontSize: '0.8rem',
+                  textTransform: 'none',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    bgcolor: activeSection === item.id ? 'primary.50' : 'grey.50',
+                  },
+                }}
+              >
+                {item.label}
+              </Button>
+            ))
+          ) : (
+            <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, px: 1.5, minHeight: 32 }}>
+              <Typography variant="caption" sx={{ fontWeight: 700, color: 'text.secondary', letterSpacing: 0.3 }}>
+                {searchValue ? 'Search results' : 'Filtered archive'}
+              </Typography>
+            </Box>
+          )}
         </Box>
 
         {/* Utility area */}
@@ -120,7 +132,7 @@ function BlogSubNav({ searchValue, onSearch, onNavigateAuthors }) {
             <TextField
               size="small"
               autoFocus
-              placeholder="Search trust profiles, OID4VCI, offline verification…"
+              placeholder="Search trust profiles, OID4VCI, offline verification..."
               value={searchValue}
               onChange={(e) => onSearch(e.target.value)}
               sx={{ width: { xs: 200, md: 320 } }}

@@ -10,10 +10,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useNavigate } from 'react-router-dom';
 import { SEOHead } from '../seo';
-import { BLOG_AUTHORS, BLOG_POSTS, BLOG_ROADMAP } from '../data';
-import { isBrowseVisibleArticleSlug } from '../data/articleMeta';
-
-const TODAY = new Date().toISOString().split('T')[0];
+import { collectionPageSchema } from '../seo/structuredData';
+import { BLOG_AUTHORS } from '../data/blogAuthors';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { BLOG_ROADMAP } from '../data/blogRoadmap';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
 
 function AuthorsPage() {
   const navigate = useNavigate();
@@ -27,13 +28,27 @@ function AuthorsPage() {
     });
   });
 
+  const publishedCountByAuthor = getBrowseVisiblePosts(BLOG_POST_SUMMARIES).reduce((counts, post) => {
+    counts[post.authorId] = (counts[post.authorId] || 0) + 1;
+    return counts;
+  }, {});
+
   return (
     <Box>
       <SEOHead
-        title="Research Authors — Marty Identity Protocol"
+        title="Research Authors - Marty Identity Protocol"
         description="Meet the AI research personas analyzing verifiable identity standards, cryptography, governance, and protocol design."
         canonicalPath="/authors"
         keywords={['MIP authors', 'identity research', 'protocol analysts', 'verifiable credentials']}
+        structuredData={collectionPageSchema({
+          name: 'Research Authors',
+          description: 'Meet the AI research personas analyzing verifiable identity standards, cryptography, governance, and protocol design.',
+          url: 'https://elevenidllc.com/authors',
+          items: authorEntries.map(([authorId, author]) => ({
+            name: author.name,
+            url: `https://elevenidllc.com/authors/${authorId}`,
+          })),
+        })}
       />
 
       {/* Header */}
@@ -63,7 +78,7 @@ function AuthorsPage() {
         <Typography variant="body1" sx={{ maxWidth: 720, lineHeight: 1.8 }}>
           The ElevenID research personas analyze standards, cryptography, governance, and
           protocol design that power modern verifiable identity systems. Each persona specializes
-          in a domain of the Marty Identity Protocol — from passport PKI and wallet architecture
+          in a domain of the Marty Identity Protocol - from passport PKI and wallet architecture
           to privacy research and trust infrastructure.
         </Typography>
         <Typography variant="caption" sx={{ mt: 2, display: 'block', opacity: 0.7 }}>
@@ -88,17 +103,15 @@ function AuthorsPage() {
         <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.65 }}>
           <strong>About Our Authors:</strong> Articles are written by AI research personas trained
           on the Marty Identity Protocol specification and identity architecture literature.
-          Each persona specializes in a domain — from cryptography and governance to wallet
-          systems and privacy research — to provide focused, technically grounded analysis.
+          Each persona specializes in a domain - from cryptography and governance to wallet
+          systems and privacy research - to provide focused, technically grounded analysis.
         </Typography>
       </Paper>
 
       {/* Author grid */}
       <Grid container spacing={3}>
         {authorEntries.map(([authorId, author]) => {
-          const publishedCount = BLOG_POSTS.filter(
-            (p) => p.authorId === authorId && p.date <= TODAY && isBrowseVisibleArticleSlug(p.slug),
-          ).length;
+          const publishedCount = publishedCountByAuthor[authorId] || 0;
           const roadmapCount = publicationMapCountByAuthor[authorId] || 0;
 
           return (
@@ -196,7 +209,7 @@ function AuthorsPage() {
 
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography variant="caption" color="text.secondary">
-                        {publishedCount} published · {roadmapCount} on roadmap
+                        {publishedCount} published | {roadmapCount} on roadmap
                       </Typography>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: 'primary.main' }}>
                         <Typography variant="caption" fontWeight={700} color="primary">

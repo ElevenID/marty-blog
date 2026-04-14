@@ -9,7 +9,8 @@ import PropTypes from 'prop-types';
  * @param {string} canonicalPath - Path for canonical URL (e.g., "/product")
  * @param {string} ogImage - Open Graph image URL (absolute URL)
  * @param {string} ogType - Open Graph type (default: "website")
- * @param {object} structuredData - JSON-LD structured data object
+ * @param {object} ogMeta - Additional Open Graph meta tags keyed by property name
+ * @param {object|object[]} structuredData - JSON-LD structured data payload
  * @param {string[]} keywords - Array of keywords for meta keywords tag
  */
 const SEOHead = ({
@@ -18,6 +19,7 @@ const SEOHead = ({
   canonicalPath,
   ogImage = 'https://elevenidllc.com/logo512.png',
   ogType = 'website',
+  ogMeta = {},
   structuredData = null,
   keywords = [],
 }) => {
@@ -27,6 +29,10 @@ const SEOHead = ({
 
   useEffect(() => {
     document.title = fullTitle;
+
+    const removeMatches = (selector) => {
+      document.head.querySelectorAll(selector).forEach((el) => el.remove());
+    };
 
     const upsertMeta = (selector, attrs = {}, content = null) => {
       let el = document.head.querySelector(selector);
@@ -55,6 +61,8 @@ const SEOHead = ({
     upsertMeta('meta[name="description"]', { name: 'description' }, description);
     if (keywords.length > 0) {
       upsertMeta('meta[name="keywords"]', { name: 'keywords' }, keywords.join(', '));
+    } else {
+      document.head.querySelector('meta[name="keywords"]')?.remove();
     }
 
     upsertLink('link[rel="canonical"]', 'canonical', canonicalUrl);
@@ -66,6 +74,19 @@ const SEOHead = ({
     upsertMeta('meta[property="og:url"]', { property: 'og:url' }, canonicalUrl);
     upsertMeta('meta[property="og:image"]', { property: 'og:image' }, ogImage);
     upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt' }, title);
+
+    removeMatches('meta[data-seo-og-extra="true"]');
+    Object.entries(ogMeta).forEach(([property, value]) => {
+      if (value === null || value === undefined || value === '') {
+        return;
+      }
+
+      const el = document.createElement('meta');
+      el.setAttribute('property', property);
+      el.setAttribute('content', String(value));
+      el.setAttribute('data-seo-og-extra', 'true');
+      document.head.appendChild(el);
+    });
 
     upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card' }, 'summary_large_image');
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title' }, fullTitle);
@@ -84,7 +105,11 @@ const SEOHead = ({
     } else if (scriptEl) {
       scriptEl.remove();
     }
-  }, [fullTitle, description, canonicalUrl, ogType, ogImage, title, structuredData, keywords]);
+
+    return () => {
+      removeMatches('meta[data-seo-og-extra="true"]');
+    };
+  }, [fullTitle, description, canonicalUrl, ogType, ogImage, ogMeta, title, structuredData, keywords]);
 
   return null;
 };
@@ -95,7 +120,13 @@ SEOHead.propTypes = {
   canonicalPath: PropTypes.string.isRequired,
   ogImage: PropTypes.string,
   ogType: PropTypes.string,
-  structuredData: PropTypes.object,
+  ogMeta: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ),
+  structuredData: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.arrayOf(PropTypes.object),
+  ]),
   keywords: PropTypes.arrayOf(PropTypes.string),
 };
 

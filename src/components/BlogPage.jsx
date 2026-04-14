@@ -1,11 +1,14 @@
+// Guide article card
+// Protocol guide section
+// Post card
 /**
  * Blog Page
  *
  * Section-per-nav-item layout with sticky sub-navigation.
- * Sections: Overview → Start Here → Five Primitives → Implementation
- *           → Trust & PKI → Privacy & Disclosure → Deployment Patterns
- *           → Governance & Trust Infrastructure → Latest
- * Each curated section draws from distinct series — no duplicate exposure.
+ * Sections: Overview -> Start Here -> Five Primitives -> Implementation
+ *           -> Trust & PKI -> Privacy & Disclosure -> Deployment Patterns
+ *           -> Governance & Trust Infrastructure -> Latest
+ * Each curated section draws from distinct series - no duplicate exposure.
  */
 
 import { useState, useCallback, useEffect, useMemo } from 'react';
@@ -16,16 +19,30 @@ import {
 import SchoolIcon from '@mui/icons-material/School';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { SEOHead } from '../seo';
-import { useNavigate } from 'react-router-dom';
-import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
+import { collectionPageSchema } from '../seo/structuredData';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { BLOG_AUTHORS } from '../data';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
 import {
   GUIDE_ARTICLES,
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES_BY_CHAPTER,
 } from '../data';
-import { SERIES_BY_POST_SLUG, BLOG_SERIES, SECTION_BY_SLUG } from '../data';
-import { BLOG_POST_STANDARDS_TAGS } from '../data';
+import {
+  BLOG_POST_CONCEPT_TAGS,
+  BLOG_POST_STANDARDS_TAGS,
+  SERIES_BY_POST_SLUG,
+  BLOG_SERIES,
+  SECTION_BY_SLUG,
+} from '../data';
+import { ARTICLE_BROWSE_TOPICS_BY_SLUG } from '../data/articleBrowseContext';
 import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta';
+import {
+  buildBlogTagPath,
+  decodeBlogTagParam,
+  findMatchingTagLabel,
+  normalizeTag,
+} from '../utils/blogTagRoutes';
 import HeroSection from './HeroSection';
 import StartHereSection from './StartHereSection';
 import ProtocolDiagramSection from './ProtocolDiagramSection';
@@ -35,7 +52,7 @@ import SystemMap from './SystemMap';
 const TODAY = new Date().toISOString().split('T')[0];
 const SCROLL_MT = { scrollMarginTop: '56px' };
 
-// Section spacing — generous breathing room between sections (Stripe / Vercel pattern)
+// Section spacing - generous breathing room between sections (Stripe / Vercel pattern)
 const SECTION_SPACING = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
 
 /**
@@ -90,6 +107,42 @@ function matchesSearchFields(query, fields) {
   return fields.some((field) => field?.toLowerCase().includes(query));
 }
 
+function matchesTag(tag, values) {
+  const normalizedTag = normalizeTag(tag);
+  return values.some((value) => normalizeTag(value) === normalizedTag);
+}
+
+function getPostTagValues(post) {
+  const topic = ARTICLE_BROWSE_TOPICS_BY_SLUG[post.slug];
+
+  return [
+    ...new Set([
+      ...(BLOG_POST_STANDARDS_TAGS[post.slug] || []),
+      ...(BLOG_POST_CONCEPT_TAGS[post.slug] || []),
+      ...(topic ? [topic] : []),
+    ]),
+  ];
+}
+
+function getGuideTagValues(article, chapterById) {
+  const chapterTitle = chapterById[article.chapterId]?.title || null;
+
+  return [
+    ...new Set([
+      ...(article.conceptTags || []),
+      ...(chapterTitle ? [chapterTitle] : []),
+    ]),
+  ];
+}
+
+function postMatchesTag(post, tag) {
+  return matchesTag(tag, getPostTagValues(post));
+}
+
+function guideMatchesTag(article, chapterById, tag) {
+  return matchesTag(tag, getGuideTagValues(article, chapterById));
+}
+
 export function buildSearchResults(query, posts, guideArticles, guideChapters) {
   if (!query.trim()) return null;
 
@@ -127,6 +180,64 @@ export function buildSearchResults(query, posts, guideArticles, guideChapters) {
   return [...postResults, ...guideResults];
 }
 
+export function buildTagResults(tag, posts, guideArticles, guideChapters) {
+  if (!tag.trim()) return null;
+
+  const chapterById = Object.fromEntries(guideChapters.map((chapter) => [chapter.id, chapter]));
+
+  const postResults = posts
+    .filter((post) => postMatchesTag(post, tag))
+    .map((post) => ({
+      kind: 'post',
+      slug: post.slug,
+      item: post,
+    }));
+
+  const visiblePostSlugs = new Set(postResults.map((result) => result.slug));
+
+  const guideResults = guideArticles
+    .filter((article) => !visiblePostSlugs.has(article.slug))
+    .filter((article) => guideMatchesTag(article, chapterById, tag))
+    .map((article) => ({
+      kind: 'guide',
+      slug: article.slug,
+      item: article,
+      chapterTitle: chapterById[article.chapterId]?.title || null,
+    }));
+
+  return [...postResults, ...guideResults];
+}
+
+function buildBrowseTagOptions(posts, guideArticles, guideChapters) {
+  const chapterById = Object.fromEntries(guideChapters.map((chapter) => [chapter.id, chapter]));
+  const counts = new Map();
+
+  const addTag = (tag) => {
+    if (!tag) return;
+    counts.set(tag, (counts.get(tag) || 0) + 1);
+  };
+
+  posts.forEach((post) => {
+    getPostTagValues(post).forEach(addTag);
+  });
+
+  guideArticles.forEach((article) => {
+    getGuideTagValues(article, chapterById).forEach(addTag);
+  });
+
+  return [...counts.entries()]
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+}
+
+function resultMatchesTag(result, tag, chapterById) {
+  if (result.kind === 'post') {
+    return postMatchesTag(result.item, tag);
+  }
+
+  return guideMatchesTag(result.item, chapterById, tag);
+}
+
 // Sidebar rail items for sticky left navigation
 const RAIL_ITEMS = [
   { id: 'start-here', verb: 'Learn', label: 'Start Here' },
@@ -141,7 +252,7 @@ const RAIL_ITEMS = [
 
 /**
  * Map each nav section to the series it displays.
- * No series appears in two sections → no duplicate articles.
+ * No series appears in two sections -> no duplicate articles.
  */
 const SECTION_SERIES = {
   'five-primitives': ['five-primitives'],
@@ -170,9 +281,9 @@ const CATEGORY_COLORS = {
   Guide: 'secondary',
 };
 
-// ── Guide Article Card ─────────────────────────────────────────────────────────
+// Guide article card
 
-function GuideArticleCard({ article, navigate }) {
+function GuideArticleCard({ article }) {
   return (
     <Card
       elevation={1}
@@ -186,7 +297,8 @@ function GuideArticleCard({ article, navigate }) {
       }}
     >
       <CardActionArea
-        onClick={() => navigate(`/blog/${article.slug}`)}
+        component={Link}
+        to={`/blog/${article.slug}`}
         sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
       >
         <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
@@ -206,7 +318,7 @@ function GuideArticleCard({ article, navigate }) {
   );
 }
 
-function GuideSearchCard({ article, chapterTitle, navigate }) {
+function GuideSearchCard({ article, chapterTitle }) {
   return (
     <Card
       elevation={1}
@@ -224,7 +336,8 @@ function GuideSearchCard({ article, chapterTitle, navigate }) {
       }}
     >
       <CardActionArea
-        onClick={() => navigate(`/blog/${article.slug}`)}
+        component={Link}
+        to={`/blog/${article.slug}`}
         sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
       >
         <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
@@ -247,9 +360,71 @@ function GuideSearchCard({ article, chapterTitle, navigate }) {
   );
 }
 
-// ── Protocol Guide Section ─────────────────────────────────────────────────────
+function TagFilterBar({ availableTags, activeTag }) {
+  if (!availableTags.length && !activeTag) return null;
 
-function ProtocolGuideSection({ navigate }) {
+  const normalizedActiveTag = normalizeTag(activeTag);
+  const visibleTags = normalizedActiveTag && !availableTags.some(({ tag }) => normalizeTag(tag) === normalizedActiveTag)
+    ? [{ tag: activeTag, count: 0 }, ...availableTags]
+    : availableTags;
+
+  return (
+    <Box
+      sx={{
+        mb: 3,
+        p: 2.5,
+        borderRadius: 2,
+        border: '1px solid',
+        borderColor: 'grey.200',
+        bgcolor: 'grey.50',
+      }}
+    >
+      <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 2, flexWrap: 'wrap', mb: 1 }}>
+        <Typography
+          variant="overline"
+          sx={{ fontWeight: 800, letterSpacing: 1.5, fontSize: '0.65rem', color: 'text.disabled' }}
+        >
+          Filter by Tag
+        </Typography>
+        {activeTag && (
+          <Button component={Link} to="/blog" size="small" sx={{ ml: 'auto', fontWeight: 700 }}>
+            Clear filter
+          </Button>
+        )}
+      </Box>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.6 }}>
+        Jump straight to a protocol, standard, or topic without paging through the full archive.
+      </Typography>
+      <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap' }}>
+        <Chip
+          label="All topics"
+          clickable
+          component={Link}
+          to="/blog"
+          color={!activeTag ? 'primary' : 'default'}
+          variant={!activeTag ? 'filled' : 'outlined'}
+          sx={{ fontWeight: 700 }}
+        />
+        {visibleTags.map(({ tag, count }) => (
+          <Chip
+            key={tag}
+            label={count ? `${tag} (${count})` : tag}
+            clickable
+            component={Link}
+            to={buildBlogTagPath(tag)}
+            color={normalizeTag(tag) === normalizedActiveTag ? 'primary' : 'default'}
+            variant={normalizeTag(tag) === normalizedActiveTag ? 'filled' : 'outlined'}
+            sx={{ fontWeight: 600 }}
+          />
+        ))}
+      </Box>
+    </Box>
+  );
+}
+
+// Protocol guide section
+
+function ProtocolGuideSection() {
   const [activeChapter, setActiveChapter] = useState(1);
   const chapterArticles = GUIDE_ARTICLES_BY_CHAPTER[activeChapter] || [];
 
@@ -271,7 +446,7 @@ function ProtocolGuideSection({ navigate }) {
         </Typography>
       </Box>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, ml: 4.5 }}>
-        Six chapters of progressive learning — pick up where your series knowledge leaves off.
+        Six chapters of progressive learning - pick up where your series knowledge leaves off.
       </Typography>
 
       {/* Chapter selector chips */}
@@ -296,7 +471,7 @@ function ProtocolGuideSection({ navigate }) {
       <Grid container spacing={2}>
         {chapterArticles.map((article) => (
           <Grid item xs={12} sm={6} md={3} key={article.slug}>
-            <GuideArticleCard article={article} navigate={navigate} />
+            <GuideArticleCard article={article} />
           </Grid>
         ))}
       </Grid>
@@ -304,9 +479,9 @@ function ProtocolGuideSection({ navigate }) {
   );
 }
 
-// ── Post Card ──────────────────────────────────────────────────────────────────
+// Post card
 
-function PostCard({ post, featured = false, onClick }) {
+function PostCard({ post, featured = false }) {
   const author = BLOG_AUTHORS[post.authorId] || {};
   const isFuture = post.date > TODAY;
   const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -317,11 +492,13 @@ function PostCard({ post, featured = false, onClick }) {
   const standardsTags = BLOG_POST_STANDARDS_TAGS[post.slug] || [];
   const cardType = getCardType(post.slug, SECTION_BY_SLUG, SERIES_BY_POST_SLUG);
   const typeStyle = cardType ? CARD_TYPE_STYLES[cardType] : null;
-
-  // ── Featured: editorial spotlight treatment ──
+  // Featured: editorial spotlight treatment
+  // Featured: editorial spotlight treatment
   if (featured) {
     return (
       <Box
+        component={Link}
+        to={`/blog/${post.slug}`}
         sx={{
           mb: 6,
           p: { xs: 4, md: 6 },
@@ -329,10 +506,11 @@ function PostCard({ post, featured = false, onClick }) {
           background: 'linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #1a237e 100%)',
           color: 'common.white',
           cursor: 'pointer',
+          display: 'block',
+          textDecoration: 'none',
           transition: 'transform 0.2s, box-shadow 0.2s',
           '&:hover': { transform: 'translateY(-2px)', boxShadow: 12 },
         }}
-        onClick={onClick}
       >
         <Typography
           variant="overline"
@@ -376,29 +554,37 @@ function PostCard({ post, featured = false, onClick }) {
             <Box>
               <Typography variant="body2" fontWeight={600} sx={{ color: 'common.white' }}>{author.name}</Typography>
               <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
-                {dateStr} · {post.readTime}
+                {dateStr} | {post.readTime}
               </Typography>
             </Box>
           </Box>
-          <Button
-            variant="outlined"
-            endIcon={<ArrowForwardIcon />}
+          <Box
+            component="span"
             sx={{
               ml: 'auto',
-              color: 'common.white',
-              borderColor: 'rgba(255,255,255,0.3)',
+              px: 2,
+              py: 1,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1,
+              border: '1px solid rgba(255,255,255,0.3)',
+              borderRadius: 999,
               fontWeight: 700,
-              '&:hover': { borderColor: 'common.white', bgcolor: 'rgba(255,255,255,0.08)' },
+              color: 'common.white',
             }}
           >
-            Read article
-          </Button>
+            <Typography component="span" variant="body2" sx={{ color: 'inherit', fontWeight: 700 }}>
+              Read article
+            </Typography>
+            <ArrowForwardIcon sx={{ fontSize: '1rem' }} />
+          </Box>
         </Box>
       </Box>
     );
   }
-
-  // ── Standard card with card-type differentiation ──
+  // Standard card with card-type differentiation
+  // Standard card with card-type differentiation
+  // Section article grid
   return (
     <Card
       elevation={1}
@@ -419,7 +605,8 @@ function PostCard({ post, featured = false, onClick }) {
       }}
     >
       <CardActionArea
-        onClick={onClick}
+        component={Link}
+        to={`/blog/${post.slug}`}
         sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
       >
         <CardContent sx={{ flexGrow: 1, p: 3 }}>
@@ -450,7 +637,7 @@ function PostCard({ post, featured = false, onClick }) {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <Avatar src={author.avatarImage} sx={{ width: 26, height: 26, fontSize: '0.7rem', bgcolor: 'primary.main' }}>{author.avatar || '?'}</Avatar>
               <Typography variant="caption" color="text.secondary" noWrap sx={{ fontSize: '0.75rem' }}>
-                {author.name || post.authorId} · {dateStr}{updatedStr ? ` · Upd. ${updatedStr}` : ''}
+                {author.name || post.authorId} | {dateStr}{updatedStr ? ` | Upd. ${updatedStr}` : ''}
               </Typography>
             </Box>
             <Typography variant="caption" color="text.secondary" sx={{ flexShrink: 0, fontStyle: 'italic', fontSize: '0.75rem' }}>
@@ -463,9 +650,9 @@ function PostCard({ post, featured = false, onClick }) {
   );
 }
 
-// ── Section Article Grid ───────────────────────────────────────────────────────
+// Section article grid
 
-function SectionArticleGrid({ title, description, posts, navigate }) {
+function SectionArticleGrid({ title, description, posts }) {
   if (!posts.length) return null;
   const totalMinutes = computeReadingTime(posts);
   return (
@@ -481,7 +668,7 @@ function SectionArticleGrid({ title, description, posts, navigate }) {
               {title}
             </Typography>
             <Chip
-              label={`${posts.length} article${posts.length !== 1 ? 's' : ''} · ~${totalMinutes} min`}
+              label={`${posts.length} article${posts.length !== 1 ? 's' : ''} | ~${totalMinutes} min`}
               size="small"
               variant="outlined"
               sx={{ fontWeight: 700, fontSize: '0.72rem', borderColor: 'grey.400' }}
@@ -497,7 +684,7 @@ function SectionArticleGrid({ title, description, posts, navigate }) {
       <Grid container spacing={2.5}>
         {posts.map((post) => (
           <Grid item xs={12} sm={6} md={4} key={post.slug}>
-            <PostCard post={post} onClick={() => navigate(`/blog/${post.slug}`)} />
+            <PostCard post={post} />
           </Grid>
         ))}
       </Grid>
@@ -505,9 +692,10 @@ function SectionArticleGrid({ title, description, posts, navigate }) {
   );
 }
 
-// ── Latest Feed ────────────────────────────────────────────────────────────────
+// Latest feed
+// Latest feed
 
-function LatestFeed({ articles, navigate }) {
+function LatestFeed({ articles }) {
   const [count, setCount] = useState(9);
   return (
     <Box sx={{ mb: 6 }}>
@@ -528,7 +716,7 @@ function LatestFeed({ articles, navigate }) {
       <Grid container spacing={2.5}>
         {articles.slice(0, count).map((post) => (
           <Grid item xs={12} sm={6} md={4} key={post.slug}>
-            <PostCard post={post} onClick={() => navigate(`/blog/${post.slug}`)} />
+            <PostCard post={post} />
           </Grid>
         ))}
       </Grid>
@@ -543,14 +731,10 @@ function LatestFeed({ articles, navigate }) {
   );
 }
 
-// ── Blog Page ──────────────────────────────────────────────────────────────────
+// Blog page
 
-// Sticky sidebar rail — appears on desktop, hidden on mobile
+// Sticky sidebar rail - appears on desktop, hidden on mobile
 function SectionRail({ activeSection }) {
-  const scrollTo = useCallback((id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
-
   return (
     <Box
       component="nav"
@@ -570,13 +754,18 @@ function SectionRail({ activeSection }) {
         return (
           <Box
             key={item.id}
-            onClick={() => scrollTo(item.id)}
+            component="a"
+            href={`#${item.id}`}
+            aria-current={isActive ? 'location' : undefined}
             sx={{
+              display: 'block',
               cursor: 'pointer',
               py: 1,
               pl: 2,
+              color: 'inherit',
               borderLeft: '2px solid',
               borderColor: isActive ? 'primary.main' : 'grey.200',
+              textDecoration: 'none',
               transition: 'all 0.15s',
               '&:hover': { borderColor: 'primary.light' },
             }}
@@ -615,10 +804,17 @@ function SectionRail({ activeSection }) {
 
 function BlogPage() {
   const navigate = useNavigate();
+  const { tag: tagParam } = useParams();
+  const [searchParams] = useSearchParams();
   const [search, setSearch] = useState('');
   const [activeRailSection, setActiveRailSection] = useState('start-here');
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const rawActiveTag = decodeBlogTagParam(tagParam) || normalizeTag(searchParams.get('tag') || '');
+  const guideChapterById = useMemo(
+    () => Object.fromEntries(GUIDE_CHAPTERS.map((chapter) => [chapter.id, chapter])),
+    [],
+  );
 
   // Rail scroll-spy observer
   useEffect(() => {
@@ -644,20 +840,20 @@ function BlogPage() {
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Resolve series slugs → post objects
+  // Resolve series slugs -> post objects
   const getSeriesArticles = useCallback((seriesIds) => {
     return seriesIds.flatMap((id) => {
       const series = BLOG_SERIES.find((s) => s.id === id);
       return series
         ? series.slugs
-          .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+          .map((slug) => BLOG_POST_SUMMARIES.find((p) => p.slug === slug))
           .filter((post) => post && isBrowseVisibleArticleSlug(post.slug))
         : [];
     });
   }, []);
 
   const featuredPost = useMemo(
-    () => getBrowseVisiblePosts(BLOG_POSTS).find((p) => SECTION_BY_SLUG[p.slug] === 'featured'),
+    () => getBrowseVisiblePosts(BLOG_POST_SUMMARIES).find((p) => SECTION_BY_SLUG[p.slug] === 'featured'),
     [],
   );
 
@@ -669,7 +865,7 @@ function BlogPage() {
   const governanceArticles = useMemo(() => getSeriesArticles(SECTION_SERIES.governance), [getSeriesArticles]);
 
   const latestArticles = useMemo(
-    () => [...getBrowseVisiblePosts(BLOG_POSTS)].sort((a, b) => new Date(b.date) - new Date(a.date)),
+    () => [...getBrowseVisiblePosts(BLOG_POST_SUMMARIES)].sort((a, b) => new Date(b.date) - new Date(a.date)),
     [],
   );
 
@@ -678,63 +874,135 @@ function BlogPage() {
     return buildSearchResults(search, latestArticles, GUIDE_ARTICLES, GUIDE_CHAPTERS);
   }, [search, latestArticles]);
 
+  const tagResults = useMemo(() => {
+    return rawActiveTag ? buildTagResults(rawActiveTag, latestArticles, GUIDE_ARTICLES, GUIDE_CHAPTERS) : null;
+  }, [rawActiveTag, latestArticles]);
+
+  const allTagOptions = useMemo(() => {
+    return buildBrowseTagOptions(latestArticles, GUIDE_ARTICLES, GUIDE_CHAPTERS);
+  }, [latestArticles]);
+
+  const browseTagOptions = useMemo(() => allTagOptions.slice(0, 14), [allTagOptions]);
+
+  const activeTag = useMemo(() => {
+    return findMatchingTagLabel(rawActiveTag, allTagOptions.map(({ tag }) => tag)) || rawActiveTag;
+  }, [allTagOptions, rawActiveTag]);
+
+  const flatResults = useMemo(() => {
+    if (searchResults) {
+      return activeTag
+        ? searchResults.filter((result) => resultMatchesTag(result, activeTag, guideChapterById))
+        : searchResults;
+    }
+
+    return tagResults;
+  }, [activeTag, guideChapterById, searchResults, tagResults]);
+
   // Publishable implementation articles for reading time
   const implPublished = implementationArticles;
   const implMinutes = computeReadingTime(implPublished);
+  const isSearchMode = Boolean(searchResults);
+  const seoTitle = !isSearchMode && activeTag
+    ? `${activeTag} Articles - Marty Identity Protocol Blog`
+    : 'Blog - Marty Identity Protocol';
+  const seoDescription = !isSearchMode && activeTag
+    ? `${flatResults?.length || 0} Marty Identity Protocol articles and guide chapters tagged ${activeTag}.`
+    : 'Concepts, standards, and implementation guides for verifiable identity systems.';
+  const seoCanonicalPath = !isSearchMode && activeTag ? buildBlogTagPath(activeTag) : '/blog';
+  const seoStructuredData = useMemo(() => {
+    if (!isSearchMode && activeTag) {
+      return collectionPageSchema({
+        name: `${activeTag} Articles`,
+        description: seoDescription,
+        url: `https://elevenidllc.com${buildBlogTagPath(activeTag)}`,
+        items: (flatResults || []).slice(0, 24).map((result) => ({
+          name: result.item.title,
+          url: `https://elevenidllc.com/blog/${result.slug}`,
+        })),
+      });
+    }
+
+    return collectionPageSchema({
+      name: 'Marty Identity Protocol Blog',
+      description: 'Concepts, standards, and implementation guides for verifiable identity systems.',
+      url: 'https://elevenidllc.com/blog',
+      items: latestArticles.slice(0, 24).map((post) => ({
+        name: post.title,
+        url: `https://elevenidllc.com/blog/${post.slug}`,
+      })),
+    });
+  }, [activeTag, flatResults, isSearchMode, latestArticles, seoDescription]);
 
   return (
     <Box>
       <SEOHead
-        title="Blog — Marty Identity Protocol"
-        description="Concepts, standards, and implementation guides for verifiable identity systems."
-        canonicalPath="/blog"
-        keywords={['MIP blog', 'identity protocol', 'open standard', 'verifiable credentials', 'digital identity']}
+        title={seoTitle}
+        description={seoDescription}
+        canonicalPath={seoCanonicalPath}
+        keywords={activeTag
+          ? ['MIP blog', activeTag, 'identity protocol', 'verifiable credentials']
+          : ['MIP blog', 'identity protocol', 'open standard', 'verifiable credentials', 'digital identity']}
+        structuredData={seoStructuredData}
       />
 
       <BlogSubNav
         searchValue={search}
         onSearch={setSearch}
         onNavigateAuthors={() => navigate('/authors')}
+        sectionNavEnabled={!flatResults}
       />
 
-      {/* ─── Search Results Mode ─────────────────────────────────── */}
-      {searchResults ? (
+      <TagFilterBar
+        availableTags={browseTagOptions}
+        activeTag={activeTag}
+      />
+
+      {/* Search results mode */}
+      {flatResults ? (
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
-            {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &ldquo;{search}&rdquo;
+          <Typography variant="overline" sx={{ display: 'block', mb: 0.5, fontWeight: 800, letterSpacing: 1.5, fontSize: '0.65rem', color: 'text.disabled' }}>
+            {searchResults ? 'Search results' : 'Filtered archive'}
           </Typography>
-          {searchResults.length > 0 ? (
+          <Typography variant="h6" fontWeight={700} sx={{ mb: 0.75 }}>
+            {searchResults
+              ? `${flatResults.length} result${flatResults.length !== 1 ? 's' : ''} for "${search}"${activeTag ? ` in ${activeTag}` : ''}`
+              : `Results for "${activeTag}"`}
+          </Typography>
+          {!searchResults && (
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+              {flatResults.length} published article{flatResults.length !== 1 ? 's and guide chapters' : ''} currently match this tag.
+            </Typography>
+          )}
+          {flatResults.length > 0 ? (
             <Grid container spacing={2}>
-              {searchResults.map((result) => (
+              {flatResults.map((result) => (
                 <Grid item xs={12} sm={6} md={4} key={`${result.kind}:${result.slug}`}>
                   {result.kind === 'guide' ? (
                     <GuideSearchCard
                       article={result.item}
                       chapterTitle={result.chapterTitle}
-                      navigate={navigate}
                     />
                   ) : (
-                    <PostCard post={result.item} onClick={() => navigate(`/blog/${result.slug}`)} />
+                    <PostCard post={result.item} />
                   )}
                 </Grid>
               ))}
             </Grid>
           ) : (
             <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center', py: 6 }}>
-              No articles or guide chapters match your search. Try &ldquo;trust profiles&rdquo;, &ldquo;OID4VCI&rdquo;, or &ldquo;deployment&rdquo;.
+              {searchResults
+                ? 'No articles or guide chapters match the current search and tag filter. Try "trust profiles", "OID4VCI", or "deployment".'
+                : `No published articles or guide chapters match the "${activeTag}" tag yet.`}
             </Typography>
           )}
         </Box>
       ) : (
         <>
-          {/* ─── Overview ─────────────────────────────────────────── */}
+          {/* Overview */}
           <Box id="overview" sx={SCROLL_MT}>
-            <HeroSection
-              onStartLearning={() => document.getElementById('start-here')?.scrollIntoView({ behavior: 'smooth' })}
-              onImplement={() => document.getElementById('implementation')?.scrollIntoView({ behavior: 'smooth' })}
-            />
+            <HeroSection />
 
-            {/* Section index — orient readers on the long page */}
+            {/* Section index - orient readers on the long page */}
             <Box
               sx={{
                 display: 'flex',
@@ -753,12 +1021,15 @@ function BlogPage() {
               {SECTION_INDEX_ITEMS.map((item, idx) => (
                 <Box
                   key={item.target}
-                  onClick={() => document.getElementById(item.target)?.scrollIntoView({ behavior: 'smooth' })}
+                  component="a"
+                  href={`#${item.target}`}
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: 0.75,
                     cursor: 'pointer',
+                    color: 'inherit',
+                    textDecoration: 'none',
                     '&:hover .section-label': { color: 'primary.main' },
                   }}
                 >
@@ -779,14 +1050,14 @@ function BlogPage() {
                     {item.label}
                   </Typography>
                   {idx < SECTION_INDEX_ITEMS.length - 1 && (
-                    <Typography variant="caption" color="grey.400" sx={{ ml: { xs: 0.5, md: 1 } }}>→</Typography>
+                    <Typography variant="caption" color="grey.400" sx={{ ml: { xs: 0.5, md: 1 } }}>-&gt;</Typography>
                   )}
                 </Box>
               ))}
             </Box>
           </Box>
 
-          {/* ─── Content with sidebar rail ─────────────────────────── */}
+          {/* Content with sidebar rail */}
           <Box sx={{ display: 'flex', gap: 0 }}>
             {/* Sticky sidebar rail (desktop only) */}
             {isDesktop && <SectionRail activeSection={activeRailSection} />}
@@ -794,33 +1065,32 @@ function BlogPage() {
             {/* Main content column */}
             <Box sx={{ flexGrow: 1, minWidth: 0 }}>
 
-              {/* ─── Start Here ──────────────────────────────────── */}
+              {/* Start Here */}
               <Box id="start-here" sx={{ ...SCROLL_MT, ...SECTION_SPACING }}>
-                <StartHereSection navigate={navigate} />
+                <StartHereSection />
               </Box>
 
-              {/* ─── System Map ─────────────────────────────────── */}
+              {/* System map */}
               <Box id="system-map" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <SystemMap />
                 {featuredPost && (
                   <Box sx={{ mt: 6 }}>
-                    <PostCard post={featuredPost} featured onClick={() => navigate(`/blog/${featuredPost.slug}`)} />
+                    <PostCard post={featuredPost} featured />
                   </Box>
                 )}
               </Box>
 
-              {/* ─── Five Primitives ─────────────────────────────── */}
+              {/* Five primitives */}
               <Box id="five-primitives" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <ProtocolDiagramSection />
                 <SectionArticleGrid
                   title="Five Primitives"
-                  description="The protocol model behind every identity system. Trust → Issue → Present → Deploy → Execute."
+                  description="The protocol layer contains five primitives: Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows."
                   posts={fivePrimitivesArticles}
-                  navigate={navigate}
                 />
               </Box>
 
-              {/* ─── Implementation ──────────────────────────────── */}
+              {/* Implementation */}
               <Box id="implementation" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <Box sx={{ mb: 4 }}>
                   <Typography
@@ -831,10 +1101,10 @@ function BlogPage() {
                     Identity Foundations
                   </Typography>
                   <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, lineHeight: 1.7, fontSize: '1rem' }}>
-                    Core concepts — digital identity basics, credential models, and verification.
+                    Core concepts - digital identity basics, credential models, and verification.
                   </Typography>
                 </Box>
-                <ProtocolGuideSection navigate={navigate} />
+                <ProtocolGuideSection />
 
                 <Box sx={{ mb: 3, mt: 6 }}>
                   <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 2, flexWrap: 'wrap' }}>
@@ -846,7 +1116,7 @@ function BlogPage() {
                       Implementation Guides
                     </Typography>
                     <Chip
-                      label={`${implPublished.length} article${implPublished.length !== 1 ? 's' : ''} · ~${implMinutes} min`}
+                      label={`${implPublished.length} article${implPublished.length !== 1 ? 's' : ''} | ~${implMinutes} min`}
                       size="small"
                       variant="outlined"
                       sx={{ fontWeight: 700, fontSize: '0.72rem', borderColor: 'grey.400' }}
@@ -856,48 +1126,44 @@ function BlogPage() {
                     Transport protocols, schemas, and integration patterns for building systems with Marty.
                   </Typography>
                 </Box>
-                <SectionArticleGrid posts={implementationArticles} navigate={navigate} />
+                <SectionArticleGrid posts={implementationArticles} />
               </Box>
 
-              {/* ─── Trust & PKI ─────────────────────────────────── */}
+              {/* Trust and PKI */}
               <Box id="trust-pki" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <SectionArticleGrid
                   title="Trust & PKI"
                   description="Cryptographic foundations of verifiable identity: trust anchors, certificate chains, and validation."
                   posts={trustPkiArticles}
-                  navigate={navigate}
                 />
                 <SectionArticleGrid
                   title="Privacy & Disclosure"
                   description="Selective disclosure, data minimization, and zero-knowledge proofs."
                   posts={privacyDisclosureArticles}
-                  navigate={navigate}
                 />
               </Box>
 
-              {/* ─── Deployment ──────────────────────────────────── */}
+              {/* Deployment */}
               <Box id="deployment" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <SectionArticleGrid
                   title="Deployment Patterns"
                   description="How verifiable identity runs in real environments: airports, enterprises, kiosks, and edge devices."
                   posts={deploymentArticles}
-                  navigate={navigate}
                 />
               </Box>
 
-              {/* ─── Governance & Trust Infrastructure ────────────── */}
+              {/* Governance and trust infrastructure */}
               <Box id="governance" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
                 <SectionArticleGrid
                   title="Governance & Trust Infrastructure"
                   description="Compliance frameworks, policy engines, and trust registries."
                   posts={governanceArticles}
-                  navigate={navigate}
                 />
               </Box>
 
-              {/* ─── Latest ─────────────────────────────────────── */}
+              {/* Latest */}
               <Box id="latest" sx={{ ...SCROLL_MT, ...SECTION_SPACING, borderTop: '1px solid', borderColor: 'grey.100' }}>
-                <LatestFeed articles={latestArticles} navigate={navigate} />
+                <LatestFeed articles={latestArticles} />
               </Box>
 
             </Box>
@@ -909,4 +1175,3 @@ function BlogPage() {
 }
 
 export default BlogPage;
-

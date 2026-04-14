@@ -6,7 +6,7 @@
  * using IntersectionObserver scroll-spy.
  */
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Box, Typography } from '@mui/material';
 
 /**
@@ -62,10 +62,6 @@ function ArticleTableOfContents({ content }) {
     };
   }, [headings]);
 
-  const scrollTo = useCallback((id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
-
   if (headings.length < 2) return null;
 
   return (
@@ -103,7 +99,9 @@ function ArticleTableOfContents({ content }) {
         return (
           <Typography
             key={h.id}
-            onClick={() => scrollTo(h.id)}
+            component="a"
+            href={`#${h.id}`}
+            aria-current={isActive ? 'location' : undefined}
             variant="body2"
             sx={{
               display: 'block',
@@ -112,6 +110,7 @@ function ArticleTableOfContents({ content }) {
               lineHeight: 1.4,
               fontWeight: isActive ? 700 : 400,
               color: isActive ? 'primary.main' : 'text.secondary',
+              textDecoration: 'none',
               cursor: 'pointer',
               transition: 'color 0.15s',
               '&:hover': { color: 'primary.main' },

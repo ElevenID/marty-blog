@@ -44,8 +44,8 @@ const PRIMITIVES = [
   {
     icon: AccountTreeIcon,
     title: 'Flows',
-    description: 'How it all executes',
-    verb: 'Execute',
+    description: 'How journeys are orchestrated',
+    verb: 'Flows',
     color: '#00695c',
   },
 ];
@@ -68,7 +68,10 @@ function ProtocolDiagramSection() {
         How the Marty Identity Protocol Works
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 560 }}>
-        Five primitives define every identity system — from who is trusted to how verification runs.
+        Five primitives define the protocol layer - from who is trusted to how credential journeys are orchestrated.
+      </Typography>
+      <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 3, maxWidth: 620, lineHeight: 1.6 }}>
+        The system map groups the handbook into reader-facing layers. This diagram names the five protocol primitives inside that layer.
       </Typography>
 
       {/* Visual architecture diagram with connecting arrows */}
@@ -141,7 +144,7 @@ function ProtocolDiagramSection() {
                       transform: { xs: 'rotate(90deg)', md: 'none' },
                     }}
                   >
-                    →
+                    -&gt;
                   </Typography>
                 </Box>
               )}

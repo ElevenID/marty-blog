@@ -1,7 +1,7 @@
 {
   "name": "@marty/blog",
   "version": "0.1.0",
-  "description": "Marty Identity Protocol blog — posts, authors, and protocol guide",
+  "description": "Marty Identity Protocol blog - posts, authors, and protocol guide",
   "type": "module",
   "main": "./src/index.js",
   "module": "./src/index.js",
@@ -9,6 +9,26 @@
     ".": {
       "import": "./src/index.js",
       "default": "./src/index.js"
+    },
+    "./blog-page": {
+      "import": "./src/components/BlogPage.jsx",
+      "default": "./src/components/BlogPage.jsx"
+    },
+    "./blog-post-page": {
+      "import": "./src/components/BlogPostPage.jsx",
+      "default": "./src/components/BlogPostPage.jsx"
+    },
+    "./authors-page": {
+      "import": "./src/components/AuthorsPage.jsx",
+      "default": "./src/components/AuthorsPage.jsx"
+    },
+    "./author-page": {
+      "import": "./src/components/AuthorPage.jsx",
+      "default": "./src/components/AuthorPage.jsx"
+    },
+    "./foundations-page": {
+      "import": "./src/components/FoundationsPage.jsx",
+      "default": "./src/components/FoundationsPage.jsx"
     }
   },
   "files": [

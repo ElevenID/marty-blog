@@ -8,9 +8,11 @@
 import { Box, Typography, Button, Chip, Paper } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../data';
+import { truncateAtWord } from '../utils/blogText';
 
-function SeriesNav({ seriesInfo, navigate }) {
+function SeriesNav({ seriesInfo }) {
   if (!seriesInfo) return null;
 
   const { seriesTitle, order, total, slugs } = seriesInfo;
@@ -50,22 +52,24 @@ function SeriesNav({ seriesInfo, navigate }) {
         {prevPost && (
           <Button
             size="small"
+            component={Link}
+            to={`/blog/${prevSlug}`}
             startIcon={<ArrowBackIcon />}
-            onClick={() => navigate(`/blog/${prevSlug}`)}
             sx={{ textTransform: 'none', fontSize: '0.78rem' }}
           >
-            {prevPost.title.length > 35 ? prevPost.title.slice(0, 35) + '…' : prevPost.title}
+            {truncateAtWord(prevPost.title, 35)}
           </Button>
         )}
         {nextPost && (
           <Button
             size="small"
             variant="contained"
+            component={Link}
+            to={`/blog/${nextSlug}`}
             endIcon={<ArrowForwardIcon />}
-            onClick={() => navigate(`/blog/${nextSlug}`)}
             sx={{ textTransform: 'none', fontSize: '0.78rem' }}
           >
-            {nextPost.title.length > 35 ? nextPost.title.slice(0, 35) + '…' : nextPost.title}
+            {truncateAtWord(nextPost.title, 35)}
           </Button>
         )}
       </Box>

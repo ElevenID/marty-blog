@@ -10,13 +10,14 @@ import { useState } from 'react';
 import { Box, Typography, Tooltip, Collapse, useMediaQuery, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { normalizeBlogData } from '../utils/blogText';
 
-const LAYERS = [
+const LAYERS = normalizeBlogData([
   {
     label: 'Foundations',
     color: '#546e7a',
-    description: 'Core concepts every identity system builds on — what credentials are, who uses them, and how they move through a lifecycle.',
+    description: 'Core concepts every identity system builds on - what credentials are, who uses them, and how they move through a lifecycle.',
     nodes: [
       { text: 'Digital Identity', slug: 'what-is-digital-identity', tip: 'What digital identity means and why it matters' },
       { text: 'Verifiable Credentials', slug: 'verifiable-credentials-explained', tip: 'The building block of trust: tamper-evident digital claims' },
@@ -27,11 +28,11 @@ const LAYERS = [
   {
     label: 'Protocol Model',
     color: '#1565c0',
-    description: 'The five primitives that define every Marty identity system — from trust establishment to orchestrated flows.',
+    description: 'The five primitives that define every Marty identity system - from trust establishment to orchestrated flows.',
     nodes: [
       { text: 'Trust Profiles', slug: 'trust-profiles-explained', tip: 'Define who is trusted and under what conditions' },
       { text: 'Credential Templates', slug: 'credential-templates-designing-what-gets-issued', tip: 'Schema + rules for what gets issued' },
-      { text: 'Presentation Policies', slug: 'presentation-policies-minimum-disclosure', tip: 'What verifiers can ask for — and nothing more' },
+      { text: 'Presentation Policies', slug: 'presentation-policies-minimum-disclosure', tip: 'What verifiers can ask for - and nothing more' },
       { text: 'Deployment Profiles', slug: 'deployment-profiles-from-design-to-production', tip: 'Runtime configurations for real environments' },
       { text: 'Flows', slug: 'flows-orchestrating-identity-lifecycle', tip: 'Multi-step sequences that coordinate the primitives' },
     ],
@@ -50,19 +51,19 @@ const LAYERS = [
   {
     label: 'Trust & Cryptography',
     color: '#00838f',
-    description: 'Cryptographic foundations — PKI, trust anchors, and privacy-preserving disclosure mechanisms.',
+    description: 'Cryptographic foundations - PKI, trust anchors, and privacy-preserving disclosure mechanisms.',
     nodes: [
       { text: 'PKI', slug: 'public-key-infrastructure-explained', tip: 'Public key infrastructure for identity systems' },
       { text: 'Trust Anchors', slug: 'understanding-trust-anchors', tip: 'Root certificates that establish chains of trust' },
       { text: 'Certificate Chains', slug: 'certificate-chains-and-validation', tip: 'How certificates validate back to a trust root' },
-      { text: 'Selective Disclosure', slug: 'selective-disclosure', tip: 'Reveal only what is needed — nothing more' },
+      { text: 'Selective Disclosure', slug: 'selective-disclosure', tip: 'Reveal only what is needed - nothing more' },
       { text: 'Zero-Knowledge Proofs', slug: 'zero-knowledge-predicates-identity', tip: 'Prove a fact without revealing the underlying data' },
     ],
   },
   {
     label: 'Deployment',
     color: '#e65100',
-    description: 'Real-world deployment patterns — airports, enterprises, kiosks, and edge devices.',
+    description: 'Real-world deployment patterns - airports, enterprises, kiosks, and edge devices.',
     nodes: [
       { text: 'Offline Verification', slug: 'offline-verification-guide', tip: 'Verify credentials without network connectivity' },
       { text: 'Airline Boarding', slug: 'deploy-airline-boarding', tip: 'Gate-to-gate identity verification flow' },
@@ -82,10 +83,9 @@ const LAYERS = [
       { text: 'Wallet Architectures', slug: 'mobile-wallet-architectures', tip: 'How mobile wallets store and present credentials' },
     ],
   },
-];
+]);
 
 function SystemMap() {
-  const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [collapsed, setCollapsed] = useState({});
@@ -125,8 +125,8 @@ function SystemMap() {
         color="text.secondary"
         sx={{ maxWidth: 580, lineHeight: 1.7, fontSize: '1rem', mb: 4 }}
       >
-        Six layers, from foundational concepts to production governance.
-        Click any node to read the article.
+        Six reader-facing layers organize the handbook from foundations to governance.
+        The five protocol primitives live inside the Protocol Model layer.
       </Typography>
 
       {/* Map grid */}
@@ -249,15 +249,16 @@ function SystemMap() {
                         leaveDelay={0}
                       >
                         <Typography
-                          component="span"
-                          onClick={() => navigate(`/blog/${node.slug}`)}
+                          component={Link}
+                          to={`/blog/${node.slug}`}
                           sx={{
+                            display: 'block',
                             py: 0.6,
                             fontSize: '0.84rem',
                             fontWeight: 500,
                             color: 'text.primary',
-                            cursor: 'pointer',
                             lineHeight: 1.4,
+                            textDecoration: 'none',
                             transition: 'color 0.12s',
                             '&:hover': { color: layer.color, textDecoration: 'underline' },
                           }}

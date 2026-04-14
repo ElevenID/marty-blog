@@ -9,13 +9,12 @@ import { Box, Typography, Button, Paper } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { useNavigate } from 'react-router-dom';
-import { BLOG_POSTS } from '../data';
-import { getBrowseVisiblePosts } from '../data/articleMeta';
+import { Link } from 'react-router-dom';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
 
-function HeroSection({ onStartLearning, onImplement }) {
-  const navigate = useNavigate();
-  const articleCount = getBrowseVisiblePosts(BLOG_POSTS).length;
+function HeroSection() {
+  const articleCount = getBrowseVisiblePosts(BLOG_POST_SUMMARIES).length;
   const now = new Date();
   const monthYear = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
@@ -69,14 +68,15 @@ function HeroSection({ onStartLearning, onImplement }) {
           letterSpacing: 0.3,
         }}
       >
-        {articleCount} articles across foundations, PKI, deployment, and governance · Updated {monthYear}
+        {articleCount} articles across foundations, PKI, deployment, and governance | Updated {monthYear}
       </Typography>
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
         <Button
           variant="contained"
           size="large"
           startIcon={<SchoolIcon />}
-          onClick={onStartLearning}
+          component="a"
+          href="#start-here"
           sx={{ bgcolor: 'primary.main', fontWeight: 700, px: 3 }}
         >
           Start Learning
@@ -85,7 +85,8 @@ function HeroSection({ onStartLearning, onImplement }) {
           variant="outlined"
           size="large"
           startIcon={<CodeIcon />}
-          onClick={onImplement}
+          component="a"
+          href="#implementation"
           sx={{
             color: 'common.white',
             borderColor: 'rgba(255,255,255,0.4)',
@@ -100,7 +101,8 @@ function HeroSection({ onStartLearning, onImplement }) {
           variant="outlined"
           size="large"
           startIcon={<MenuBookIcon />}
-          onClick={() => navigate('/blog/foundations')}
+          component={Link}
+          to="/blog/foundations"
           sx={{
             color: 'common.white',
             borderColor: 'rgba(255,255,255,0.4)',

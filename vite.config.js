@@ -1,41 +1,37 @@
-import { defineConfig } from 'vite';
+import { fileURLToPath } from 'url';
+
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { defineConfig } from 'vite';
+
+const LIBRARY_ENTRY = fileURLToPath(new URL('./src/index.js', import.meta.url));
+
+const EXTERNAL_PACKAGES = [
+  'react',
+  'react-dom',
+  'react-router',
+  'react-router-dom',
+  '@mui/material',
+  '@mui/icons-material',
+  '@emotion/react',
+  '@emotion/styled',
+];
+
+function isExternalPackage(id) {
+  return EXTERNAL_PACKAGES.some((pkg) => id === pkg || id.startsWith(`${pkg}/`));
+}
 
 export default defineConfig({
   plugins: [react()],
   build: {
+    outDir: 'dist',
+    emptyOutDir: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.js'),
-      name: 'MartyBlog',
-      fileName: 'index',
+      entry: LIBRARY_ENTRY,
       formats: ['es'],
+      fileName: () => 'index.js',
     },
     rollupOptions: {
-      // Externalize ALL peer dependencies and their sub-paths.
-      // Using regex ensures sub-path imports (e.g. @mui/icons-material/ArrowBack,
-      // @mui/material/colors) are also excluded from the bundle.  Without this,
-      // Vite inlines sub-path modules and pulls in their transitive deps (MUI
-      // internals, a second copy of react-router-dom via the local node_modules,
-      // etc.), which causes duplicate-instance errors in the consuming app.
-      external: [
-        'react',
-        'react-dom',
-        /^react\//, // react/jsx-runtime, react/jsx-dev-runtime, etc.
-        'react-router-dom',
-        'react-router',
-        /^@mui\//, // @mui/material, @mui/icons-material, @mui/material/colors …
-        /^@emotion\//, // @emotion/react, @emotion/styled …
-      ],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          'react-router-dom': 'ReactRouterDom',
-        },
-      },
+      external: isExternalPackage,
     },
-    // Emit source maps for better debugging in the consuming app
-    sourcemap: true,
   },
 });

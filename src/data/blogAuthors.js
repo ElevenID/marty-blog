@@ -1,3 +1,5 @@
+import { normalizeBlogData } from '../utils/blogText';
+
 /**
  * Blog Authors
  *
@@ -5,7 +7,7 @@
  * Marty Identity Protocol blog.
  */
 
-export const BLOG_AUTHOR_CHARACTER_PROFILES = {
+export const BLOG_AUTHOR_CHARACTER_PROFILES = normalizeBlogData({
   'aiko-tanaka': {
     archetype: 'Standards Cartographer',
     coreQuestion: 'What do the actual standards and regulations require, and what do those requirements mean for system design?',
@@ -237,9 +239,9 @@ export const BLOG_AUTHOR_CHARACTER_PROFILES = {
     commercialFunction: 'Makes Marty feel safer, more modern, and better aligned with buyer privacy obligations.',
     useWhen: 'Use Nora when the reader needs minimum-disclosure logic, privacy framing, or a holder-control perspective.',
   },
-};
+});
 
-export const BLOG_AUTHORS = {
+export const BLOG_AUTHORS = normalizeBlogData({
   'aiko-tanaka': {
     name: 'Aiko Tanaka',
     title: 'Standards Analyst',
@@ -324,6 +326,6 @@ export const BLOG_AUTHORS = {
     characterProfile: BLOG_AUTHOR_CHARACTER_PROFILES['nora-patel'],
     disclosure: 'AI research persona representing curated protocol analysis.',
   },
-};
+});
 
-// Blog posts — biweekly cadence from Sep 2025 through Jul 2026
+// Blog posts - biweekly cadence from Sep 2025 through Jul 2026

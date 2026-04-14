@@ -1,3 +1,5 @@
+import { normalizeBlogData } from '../utils/blogText';
+
 /**
  * Protocol Guide Content
  *
@@ -5,17 +7,17 @@
  * Six chapters, 22 guide articles, ordered for progressive learning.
  */
 
-export const GUIDE_CHAPTERS = [
+export const GUIDE_CHAPTERS = normalizeBlogData([
   { id: 1, slug: 'foundations', title: 'Foundations', color: '#1565c0', icon: 'School' },
   { id: 2, slug: 'core-objects', title: 'Core Objects', color: '#7b1fa2', icon: 'Category' },
   { id: 3, slug: 'trust-governance', title: 'Trust & Governance', color: '#2e7d32', icon: 'Security' },
   { id: 4, slug: 'flows', title: 'Flows', color: '#e65100', icon: 'AccountTree' },
   { id: 5, slug: 'deployments', title: 'Deployments', color: '#00695c', icon: 'CloudUpload' },
   { id: 6, slug: 'implementations', title: 'Implementations', color: '#c62828', icon: 'Code' },
-];
+]);
 
-export const GUIDE_ARTICLES = [
-  // ──────────── Chapter 1: Foundations ──────────────────────────────────────
+export const GUIDE_ARTICLES = normalizeBlogData([
+  // Chapter 1: Foundations
 
   {
     slug: 'foundations-identity',
@@ -23,13 +25,13 @@ export const GUIDE_ARTICLES = [
     order: 1,
     title: 'What is Digital Identity?',
     summary:
-      'Identity is the set of machine-readable claims about an entity — cryptographically signed, holder-controlled, and verifiable without calling home.',
+      'Identity is the set of machine-readable claims about an entity - cryptographically signed, holder-controlled, and verifiable without calling home.',
     readTime: '6 min read',
     conceptTags: ['foundation', 'identity'],
     content: [
       {
         type: 'paragraph',
-        text: 'Digital identity is the set of machine-readable claims that describe an entity: a person, an organization, a device, or even a software service. In the physical world, identity is carried in passports, driver\'s licences, and employee badges. Digital identity solves the same problem — but without the physical document, and without requiring the issuer to be online every time you use it.',
+        text: 'Digital identity is the set of machine-readable claims that describe an entity: a person, an organization, a device, or even a software service. In the physical world, identity is carried in passports, driver\'s licences, and employee badges. Digital identity solves the same problem - but without the physical document, and without requiring the issuer to be online every time you use it.',
       },
       { type: 'heading', text: 'The Three Parties' },
       {
@@ -76,7 +78,7 @@ export const GUIDE_ARTICLES = [
     order: 2,
     title: 'What is a Verifiable Credential?',
     summary:
-      'A Verifiable Credential is a cryptographically signed, holder-controlled document that proves something about its subject — without requiring the issuer to be online.',
+      'A Verifiable Credential is a cryptographically signed, holder-controlled document that proves something about its subject - without requiring the issuer to be online.',
     readTime: '7 min read',
     conceptTags: ['foundation', 'credential'],
     content: [
@@ -96,7 +98,7 @@ export const GUIDE_ARTICLES = [
       },
       {
         type: 'code',
-        label: 'SD-JWT structure — hash-per-claim enables selective disclosure',
+        label: 'SD-JWT structure - hash-per-claim enables selective disclosure',
         lang: 'json',
         code: `{
   // JWT payload after selective disclosure
@@ -117,7 +119,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Holder Binding' },
       {
         type: 'paragraph',
-        text: 'A credential without holder binding can be copied and misused by anyone who obtains it. Holder binding ties the credential to a specific key pair controlled by the holder. During presentation, the holder signs a nonce from the verifier with their private key, proving they possess the credential and are its rightful owner — not just someone who found a copy.',
+        text: 'A credential without holder binding can be copied and misused by anyone who obtains it. Holder binding ties the credential to a specific key pair controlled by the holder. During presentation, the holder signs a nonce from the verifier with their private key, proving they possess the credential and are its rightful owner - not just someone who found a copy.',
       },
     ],
   },
@@ -128,7 +130,7 @@ export const GUIDE_ARTICLES = [
     order: 3,
     title: 'What is Verification?',
     summary:
-      'Verification is the process of confirming a credential is valid, was issued by a trusted authority, and belongs to the presenter — without calling home to the issuer.',
+      'Verification is the process of confirming a credential is valid, was issued by a trusted authority, and belongs to the presenter - without calling home to the issuer.',
     readTime: '6 min read',
     conceptTags: ['foundation', 'verification'],
     content: [
@@ -139,12 +141,12 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'The Four Checks' },
       {
         type: 'paragraph',
-        text: 'Every verification involves four checks: (1) Cryptographic validity — is the proof signature mathematically correct and has the credential been modified since signing? (2) Trust chain — is the issuer present in an accepted Trust Profile for this credential type? (3) Revocation — is this specific credential still valid, or has it been revoked? (4) Policy compliance — does the presentation satisfy all requirements in the active Presentation Policy?',
+        text: 'Every verification involves four checks: (1) Cryptographic validity - is the proof signature mathematically correct and has the credential been modified since signing? (2) Trust chain - is the issuer present in an accepted Trust Profile for this credential type? (3) Revocation - is this specific credential still valid, or has it been revoked? (4) Policy compliance - does the presentation satisfy all requirements in the active Presentation Policy?',
       },
       { type: 'heading', text: 'Online vs Offline' },
       {
         type: 'paragraph',
-        text: 'Online verification performs all four checks in real time. Offline verification pre-caches trust anchors and revocation data (up to a configurable TTL, e.g. 72 hours) and performs the same four checks without network connectivity. MIP\'s Deployment Profiles configure which mode applies to each environment — and what happens when cached data becomes stale.',
+        text: 'Online verification performs all four checks in real time. Offline verification pre-caches trust anchors and revocation data (up to a configurable TTL, e.g. 72 hours) and performs the same four checks without network connectivity. MIP\'s Deployment Profiles configure which mode applies to each environment - and what happens when cached data becomes stale.',
       },
       {
         type: 'code',
@@ -175,13 +177,13 @@ export const GUIDE_ARTICLES = [
     order: 4,
     title: 'Centralized vs Verifiable Identity',
     summary:
-      'Traditional IDV calls home on every check. Verifiable credentials embed the proof inside the credential — changing the architecture, the privacy model, and the business model.',
+      'Traditional IDV calls home on every check. Verifiable credentials embed the proof inside the credential - changing the architecture, the privacy model, and the business model.',
     readTime: '7 min read',
     conceptTags: ['foundation', 'identity'],
     content: [
       {
         type: 'paragraph',
-        text: 'There are two fundamentally different ways to verify someone\'s identity digitally. The centralized model — used by every traditional IDV vendor — stores identity data in a central database and checks it by calling the issuer\'s API. The verifiable model — used by verifiable credentials — embeds a cryptographic proof inside the credential itself, so verification never requires contacting the issuer.',
+        text: 'There are two fundamentally different ways to verify someone\'s identity digitally. The centralized model - used by every traditional IDV vendor - stores identity data in a central database and checks it by calling the issuer\'s API. The verifiable model - used by verifiable credentials - embeds a cryptographic proof inside the credential itself, so verification never requires contacting the issuer.',
       },
       { type: 'heading', text: 'The Centralized Model' },
       {
@@ -191,23 +193,22 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'The Verifiable Model' },
       {
         type: 'paragraph',
-        text: 'Verifiable credentials flip this model. The issuer signs the credential once, at issuance time. The holder stores it in their wallet. The verifier checks the signature, trust chain, and revocation status — all without contacting the issuer. The issuer never learns when or where the credential is used. The verifier doesn\'t need an API relationship with the issuer. The credential works offline.',
+        text: 'Verifiable credentials flip this model. The issuer signs the credential once, at issuance time. The holder stores it in their wallet. The verifier checks the signature, trust chain, and revocation status - all without contacting the issuer. The issuer never learns when or where the credential is used. The verifier doesn\'t need an API relationship with the issuer. The credential works offline.',
       },
       { type: 'heading', text: 'Wallet Ecosystems' },
       {
         type: 'paragraph',
-        text: 'Digital wallets are the user-facing component of the verifiable model. Apple Wallet, Google Wallet, and EU Digital Identity Wallets store credentials issued by governments, employers, and institutions. The wallet holder controls which credentials to share, with whom, and which specific claims to disclose. This is the holder-controlled model — the person decides, not the platform.',
+        text: 'Digital wallets are the user-facing component of the verifiable model. Apple Wallet, Google Wallet, and EU Digital Identity Wallets store credentials issued by governments, employers, and institutions. The wallet holder controls which credentials to share, with whom, and which specific claims to disclose. This is the holder-controlled model - the person decides, not the platform.',
       },
       {
         type: 'code',
-        label: 'Centralized vs Verifiable — architectural comparison',
+        label: 'Centralized vs Verifiable - architectural comparison',
         lang: 'text',
-        code: `Centralized IDV:\n  Verifier → API call → Issuer DB → Response\n  • Issuer sees every verification\n  • Requires connectivity\n  • Per-check pricing\n\nVerifiable Credentials:\n  Issuer → signs credential → Holder wallet\n  Holder → presents proof → Verifier\n  Verifier → checks signature + trust locally\n  • Issuer blind to usage\n  • Works offline\n  • Infrastructure pricing`,
+        code: `Centralized IDV:\n  Verifier -> API call -> Issuer DB -> Response\n  - Issuer sees every verification\n  - Requires connectivity\n  - Per-check pricing\n\nVerifiable Credentials:\n  Issuer -> signs credential -> Holder wallet\n  Holder -> presents proof -> Verifier\n  Verifier -> checks signature + trust locally\n  - Issuer blind to usage\n  - Works offline\n  - Infrastructure pricing`,
       },
     ],
   },
-
-  // ──────────── Chapter 2: Core Objects ─────────────────────────────────────
+  // Chapter 2: Core Objects
 
   {
     slug: 'trust-profiles',
@@ -221,7 +222,7 @@ export const GUIDE_ARTICLES = [
     content: [
       {
         type: 'paragraph',
-        text: 'A Trust Profile is a configuration object that defines who an organization trusts to issue credentials and how to validate their cryptographic proofs. Without a Trust Profile, a verifier has no basis for accepting any credential — it\'s the foundation of the entire trust model. Every verification decision begins by selecting the matching Trust Profile.',
+        text: 'A Trust Profile is a configuration object that defines who an organization trusts to issue credentials and how to validate their cryptographic proofs. Without a Trust Profile, a verifier has no basis for accepting any credential - it\'s the foundation of the entire trust model. Every verification decision begins by selecting the matching Trust Profile.',
       },
       { type: 'heading', text: 'What a Trust Profile Contains' },
       {
@@ -231,7 +232,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Algorithm Agnosticism' },
       {
         type: 'paragraph',
-        text: 'Trust Profiles separate trust configuration from cryptographic implementation. Adding support for a new algorithm — including post-quantum algorithms like ML-DSA — requires a Trust Profile update, not an application code change. This is essential for long-lived systems that must evolve alongside cryptographic standards without rewriting business logic.',
+        text: 'Trust Profiles separate trust configuration from cryptographic implementation. Adding support for a new algorithm - including post-quantum algorithms like ML-DSA - requires a Trust Profile update, not an application code change. This is essential for long-lived systems that must evolve alongside cryptographic standards without rewriting business logic.',
       },
       {
         type: 'code',
@@ -258,7 +259,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Multiple Trust Profiles in One Deployment' },
       {
         type: 'paragraph',
-        text: 'A single verification service can hold dozens of Trust Profiles simultaneously — one for each issuer domain it accepts: government passports, corporate employee badges, university degrees. When a credential arrives, MIP selects the matching Trust Profile by credential type and issuer, then applies its specific rules. Compliance decisions live in data, not code.',
+        text: 'A single verification service can hold dozens of Trust Profiles simultaneously - one for each issuer domain it accepts: government passports, corporate employee badges, university degrees. When a credential arrives, MIP selects the matching Trust Profile by credential type and issuer, then applies its specific rules. Compliance decisions live in data, not code.',
       },
     ],
   },
@@ -311,7 +312,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Privacy by Design' },
       {
         type: 'paragraph',
-        text: 'Credential Templates treat privacy as a design constraint, not an afterthought. By declaring which claims are always disclosed, which can be revealed selectively, and which support zero-knowledge predicates, the template author makes privacy decisions at design time — before a single credential is ever issued. This makes data minimization auditable and systematic.',
+        text: 'Credential Templates treat privacy as a design constraint, not an afterthought. By declaring which claims are always disclosed, which can be revealed selectively, and which support zero-knowledge predicates, the template author makes privacy decisions at design time - before a single credential is ever issued. This makes data minimization auditable and systematic.',
       },
     ],
   },
@@ -322,7 +323,7 @@ export const GUIDE_ARTICLES = [
     order: 3,
     title: 'Presentation Policies',
     summary:
-      'Presentation Policies define what a verifier needs to see — and nothing more. They encode minimum disclosure requirements as machine-readable configuration, not hardcoded logic.',
+      'Presentation Policies define what a verifier needs to see - and nothing more. They encode minimum disclosure requirements as machine-readable configuration, not hardcoded logic.',
     readTime: '7 min read',
     conceptTags: ['core-object', 'presentation-policy'],
     content: [
@@ -359,7 +360,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Policies Decouple Verification from Code' },
       {
         type: 'paragraph',
-        text: 'When access requirements change — a new accreditation is added, a credential type is updated, or a policy is tightened — you update the Presentation Policy. The verification code that evaluates it does not change. This makes compliance evolution safe and makes each policy change visible as a data diff rather than a code diff.',
+        text: 'When access requirements change - a new accreditation is added, a credential type is updated, or a policy is tightened - you update the Presentation Policy. The verification code that evaluates it does not change. This makes compliance evolution safe and makes each policy change visible as a data diff rather than a code diff.',
       },
     ],
   },
@@ -381,7 +382,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Online, Offline, and Hybrid' },
       {
         type: 'paragraph',
-        text: 'Online deployments check revocation in real time and receive trust updates immediately. They handle high-assurance use cases where freshness matters. Offline deployments pre-cache everything and operate air-gapped for hours or days. Hybrid deployments use live services when available but continue operating from bounded caches when links degrade. Border control kiosks, maritime vessels, and field terminals often use offline or hybrid mode — but apply the same Trust Profiles and Presentation Policies as online deployments. Same trust logic, different operational envelope.',
+        text: 'Online deployments check revocation in real time and receive trust updates immediately. They handle high-assurance use cases where freshness matters. Offline deployments pre-cache everything and operate air-gapped for hours or days. Hybrid deployments use live services when available but continue operating from bounded caches when links degrade. Border control kiosks, maritime vessels, and field terminals often use offline or hybrid mode - but apply the same Trust Profiles and Presentation Policies as online deployments. Same trust logic, different operational envelope.',
       },
       {
         type: 'code',
@@ -408,12 +409,11 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'One Protocol, Many Environments' },
       {
         type: 'paragraph',
-        text: 'The same Trust Profiles and Presentation Policies power web portals, mobile apps, physical kiosks, and API integrations. What differs between these environments is their Deployment Profile. This is what MIP means by "deploy once, run anywhere" — the trust decisions are identical, only the operational constraints change.',
+        text: 'The same Trust Profiles and Presentation Policies power web portals, mobile apps, physical kiosks, and API integrations. What differs between these environments is their Deployment Profile. This is what MIP means by "deploy once, run anywhere" - the trust decisions are identical, only the operational constraints change.',
       },
     ],
   },
-
-  // ──────────── Chapter 3: Trust & Governance ───────────────────────────────
+  // Chapter 3: Trust & Governance
 
   {
     slug: 'trust-anchors',
@@ -437,12 +437,12 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'DID-Based Trust' },
       {
         type: 'paragraph',
-        text: 'Decentralized Identifiers (DIDs) use a different root: a DID document published to a verifiable data registry — a blockchain, a DNS record via did:web, or a key reference via did:key. The trust anchor is the verification key listed in the DID document at the time of issuance. MIP Trust Profiles support did:web and did:key out of the box.',
+        text: 'Decentralized Identifiers (DIDs) use a different root: a DID document published to a verifiable data registry - a blockchain, a DNS record via did:web, or a key reference via did:key. The trust anchor is the verification key listed in the DID document at the time of issuance. MIP Trust Profiles support did:web and did:key out of the box.',
       },
       { type: 'heading', text: 'EU Trust Lists' },
       {
         type: 'paragraph',
-        text: 'The EUDI model introduces trust lists: signed XML documents that enumerate all authorized issuers by type. The European LOTL (List of Trusted Lists) is the root. MIP Trust Profiles with type "trust_list" periodically fetch, verify, and cache these lists. When the EU adds a new authorized wallet issuer, no code changes are needed — the trust list update propagates automatically.',
+        text: 'The EUDI model introduces trust lists: signed XML documents that enumerate all authorized issuers by type. The European LOTL (List of Trusted Lists) is the root. MIP Trust Profiles with type "trust_list" periodically fetch, verify, and cache these lists. When the EU adds a new authorized wallet issuer, no code changes are needed - the trust list update propagates automatically.',
       },
       {
         type: 'code',
@@ -511,7 +511,7 @@ export const GUIDE_ARTICLES = [
     order: 3,
     title: 'Policy Engines with Cedar',
     summary:
-      'MIP uses AWS Cedar for authorization decisions. Cedar policies are deny-by-default, human-readable, and designed to be auditable — not just by engineers, but by compliance teams.',
+      'MIP uses AWS Cedar for authorization decisions. Cedar policies are deny-by-default, human-readable, and designed to be auditable - not just by engineers, but by compliance teams.',
     readTime: '9 min read',
     conceptTags: ['governance', 'policy-engine', 'cedar'],
     content: [
@@ -522,7 +522,7 @@ export const GUIDE_ARTICLES = [
       { type: 'heading', text: 'Deny by Default' },
       {
         type: 'paragraph',
-        text: 'Cedar policies are deny-by-default. Unless an explicit permit policy matches an action, it is denied. This is the correct security posture for any authorization system — you enumerate what is allowed, not what is forbidden. Missing a deny doesn\'t create a vulnerability; missing a permit simply means the action cannot be performed.',
+        text: 'Cedar policies are deny-by-default. Unless an explicit permit policy matches an action, it is denied. This is the correct security posture for any authorization system - you enumerate what is allowed, not what is forbidden. Missing a deny doesn\'t create a vulnerability; missing a permit simply means the action cannot be performed.',
       },
       {
         type: 'code',
@@ -573,12 +573,12 @@ permit(
     content: [
       {
         type: 'paragraph',
-        text: 'A trust registry answers a simple but critical question: is this issuer authorized to issue this type of credential? Without a trust registry, any party can claim to issue anything — the cryptographic proof tells you the credential wasn\'t tampered with, but not whether the issuer had the authority to create it. Trust registries provide the governance layer.',
+        text: 'A trust registry answers a simple but critical question: is this issuer authorized to issue this type of credential? Without a trust registry, any party can claim to issue anything - the cryptographic proof tells you the credential wasn\'t tampered with, but not whether the issuer had the authority to create it. Trust registries provide the governance layer.',
       },
       { type: 'heading', text: 'Real-World Trust Registries' },
       {
         type: 'paragraph',
-        text: 'ICAO\'s PKD (Public Key Directory) is a trust registry for passport issuers — it lists every country\'s CSCA root certificate. The European LOTL (List of Trusted Lists) governs EUDI wallet issuers across all EU member states. AAMVA maintains a registry of authorized mDL issuers in North America. Each of these is a different format, but all solve the same governance problem.',
+        text: 'ICAO\'s PKD (Public Key Directory) is a trust registry for passport issuers - it lists every country\'s CSCA root certificate. The European LOTL (List of Trusted Lists) governs EUDI wallet issuers across all EU member states. AAMVA maintains a registry of authorized mDL issuers in North America. Each of these is a different format, but all solve the same governance problem.',
       },
       { type: 'heading', text: 'Enterprise Trust Registries' },
       {
@@ -588,7 +588,7 @@ permit(
       { type: 'heading', text: 'Registry Integration in MIP' },
       {
         type: 'paragraph',
-        text: 'MIP Trust Profiles reference external trust registries through their trust_anchor configuration. The registry data is fetched, verified, and cached according to the Deployment Profile\'s update schedule. If a credential\'s issuer is not present in the registry at the required assurance level, the credential fails the trust check — even if its cryptographic signature is mathematically valid.',
+        text: 'MIP Trust Profiles reference external trust registries through their trust_anchor configuration. The registry data is fetched, verified, and cached according to the Deployment Profile\'s update schedule. If a credential\'s issuer is not present in the registry at the required assurance level, the credential fails the trust check - even if its cryptographic signature is mathematically valid.',
       },
     ],
   },
@@ -599,7 +599,7 @@ permit(
     order: 5,
     title: 'Privacy & Data Minimization',
     summary:
-      'Privacy is a design constraint, not a feature flag. MIP\'s architecture enforces data minimization at every layer — from Credential Templates to Presentation Policies.',
+      'Privacy is a design constraint, not a feature flag. MIP\'s architecture enforces data minimization at every layer - from Credential Templates to Presentation Policies.',
     readTime: '7 min read',
     conceptTags: ['governance', 'selective-disclosure'],
     content: [
@@ -610,22 +610,21 @@ permit(
       { type: 'heading', text: 'Privacy by Design in MIP' },
       {
         type: 'paragraph',
-        text: 'Credential Templates declare which claims support selective disclosure and which support zero-knowledge predicates — at design time, before any credential is issued. Presentation Policies specify the minimum set of claims or predicates required — verifiers cannot ask for more than what the policy permits. Together, these two primitives create a formal, auditable data minimization boundary.',
+        text: 'Credential Templates declare which claims support selective disclosure and which support zero-knowledge predicates - at design time, before any credential is issued. Presentation Policies specify the minimum set of claims or predicates required - verifiers cannot ask for more than what the policy permits. Together, these two primitives create a formal, auditable data minimization boundary.',
       },
       { type: 'heading', text: 'Unlinkability' },
       {
         type: 'paragraph',
-        text: 'Unlinkability means a verifier cannot correlate two presentations from the same holder unless the holder explicitly discloses identifying information. SD-JWT achieves this through per-disclosure salts. Zero-knowledge proofs achieve it by design — the verifier learns only whether a predicate is satisfied, not any value that could identify the holder across sessions.',
+        text: 'Unlinkability means a verifier cannot correlate two presentations from the same holder unless the holder explicitly discloses identifying information. SD-JWT achieves this through per-disclosure salts. Zero-knowledge proofs achieve it by design - the verifier learns only whether a predicate is satisfied, not any value that could identify the holder across sessions.',
       },
       { type: 'heading', text: 'The Issuer Blind Spot' },
       {
         type: 'paragraph',
-        text: 'In the verifiable credential model, the issuer does not learn when, where, or to whom a credential is presented. This is a fundamental privacy improvement over centralized IDV, where the issuer sees every verification event. MIP\'s architecture preserves this property — no telemetry, no callbacks, no usage analytics flow back to the issuer.',
+        text: 'In the verifiable credential model, the issuer does not learn when, where, or to whom a credential is presented. This is a fundamental privacy improvement over centralized IDV, where the issuer sees every verification event. MIP\'s architecture preserves this property - no telemetry, no callbacks, no usage analytics flow back to the issuer.',
       },
     ],
   },
-
-  // ──────────── Chapter 4: Flows ────────────────────────────────────────────
+  // Chapter 4: Flows
 
   {
     slug: 'issuance-flows',
@@ -639,7 +638,7 @@ permit(
     content: [
       {
         type: 'paragraph',
-        text: 'Issuance is the process by which an issuer creates and delivers a signed credential to a holder. In MIP, this is orchestrated by a Flow — a configured sequence of states (Submitted → Under Review → Approved → Issued) that models the real-world credential application process. Flows are the fifth MIP primitive and the user-facing orchestration layer: they compose the other four primitives into a real credential journey.',
+        text: 'Issuance is the process by which an issuer creates and delivers a signed credential to a holder. In MIP, this is orchestrated by a Flow - a configured sequence of states (Submitted -> Under Review -> Approved -> Issued) that models the real-world credential application process. Flows are the fifth MIP primitive and the user-facing orchestration layer: they compose the other four primitives into a real credential journey.',
       },
       { type: 'heading', text: 'OID4VCI: The Standard Protocol' },
       {
@@ -668,7 +667,7 @@ permit(
       { type: 'heading', text: 'Flow States and Human Approval' },
       {
         type: 'paragraph',
-        text: 'Complex credential types require human review before issuance. A professional licence credential might require a completed application, document uploads, and a reviewer\'s sign-off. MIP Flows model this with named states and transition rules. Cedar policies govern who can approve each state transition — so the same flow definition works for self-service issuance and human-reviewed issuance by simply changing the policy that guards the Approved transition.',
+        text: 'Complex credential types require human review before issuance. A professional licence credential might require a completed application, document uploads, and a reviewer\'s sign-off. MIP Flows model this with named states and transition rules. Cedar policies govern who can approve each state transition - so the same flow definition works for self-service issuance and human-reviewed issuance by simply changing the policy that guards the Approved transition.',
       },
     ],
   },
@@ -679,13 +678,13 @@ permit(
     order: 2,
     title: 'Presentation Flows',
     summary:
-      'Presentation is how a holder shares credentials with a verifier. OID4VP is MIP\'s standard protocol — with support for selective disclosure, ZK predicates, and both same-device and cross-device flows.',
+      'Presentation is how a holder shares credentials with a verifier. OID4VP is MIP\'s standard protocol - with support for selective disclosure, ZK predicates, and both same-device and cross-device flows.',
     readTime: '7 min read',
     conceptTags: ['flow', 'presentation'],
     content: [
       {
         type: 'paragraph',
-        text: 'A presentation flow is the sequence of steps by which a holder selects credentials from their wallet and presents them to a verifier in response to a presentation request. The verifier\'s Presentation Policy describes what is needed; the wallet constructs a Verifiable Presentation that satisfies it — disclosing only the required claims.',
+        text: 'A presentation flow is the sequence of steps by which a holder selects credentials from their wallet and presents them to a verifier in response to a presentation request. The verifier\'s Presentation Policy describes what is needed; the wallet constructs a Verifiable Presentation that satisfies it - disclosing only the required claims.',
       },
       { type: 'heading', text: 'OID4VP: The Standard Protocol' },
       {
@@ -724,7 +723,7 @@ permit(
       { type: 'heading', text: 'Response Binding' },
       {
         type: 'paragraph',
-        text: 'In MIP\'s OID4VP implementation, presentations are bound to a nonce provided by the verifier. The holder\'s wallet signs a proof-of-possession using the holder\'s key along with the nonce. This prevents replay attacks — a captured presentation from yesterday cannot be reused today because the nonce has changed.',
+        text: 'In MIP\'s OID4VP implementation, presentations are bound to a nonce provided by the verifier. The holder\'s wallet signs a proof-of-possession using the holder\'s key along with the nonce. This prevents replay attacks - a captured presentation from yesterday cannot be reused today because the nonce has changed.',
       },
     ],
   },
@@ -746,12 +745,12 @@ permit(
       { type: 'heading', text: 'The Five Standardized Methods' },
       {
         type: 'paragraph',
-        text: 'CRLs (Certificate Revocation Lists) are batch files listing revoked credential IDs — strong offline support, but updated in batches with inherent latency. OCSP (Online Certificate Status Protocol) checks individual credential status in real time — low latency but requires connectivity and can leak usage patterns to the status server. StatusList2021 is the W3C status-list format — compact, privacy-preserving, and cacheable. Bitstring Status List is a generalized bitstring-based status format with similar compact, cache-friendly properties. Token Status List distributes signed status state as token-style artifacts for ecosystems that prefer that model.',
+        text: 'CRLs (Certificate Revocation Lists) are batch files listing revoked credential IDs - strong offline support, but updated in batches with inherent latency. OCSP (Online Certificate Status Protocol) checks individual credential status in real time - low latency but requires connectivity and can leak usage patterns to the status server. StatusList2021 is the W3C status-list format - compact, privacy-preserving, and cacheable. Bitstring Status List is a generalized bitstring-based status format with similar compact, cache-friendly properties. Token Status List distributes signed status state as token-style artifacts for ecosystems that prefer that model.',
       },
       { type: 'heading', text: 'Choosing a Strategy in MIP' },
       {
         type: 'paragraph',
-        text: 'Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support high-privacy offline verification at a border crossing and real-time online checking at a web portal — using the same credential type.',
+        text: 'Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support high-privacy offline verification at a border crossing and real-time online checking at a web portal - using the same credential type.',
       },
     ],
   },
@@ -762,7 +761,7 @@ permit(
     order: 4,
     title: 'Selective Disclosure',
     summary:
-      'Selective disclosure lets a holder share only the claims a verifier needs — without leaking the rest. SD-JWT and zero-knowledge predicates are the two primary mechanisms in MIP.',
+      'Selective disclosure lets a holder share only the claims a verifier needs - without leaking the rest. SD-JWT and zero-knowledge predicates are the two primary mechanisms in MIP.',
     readTime: '8 min read',
     conceptTags: ['flow', 'selective-disclosure', 'cryptography'],
     content: [
@@ -773,16 +772,16 @@ permit(
       { type: 'heading', text: 'SD-JWT: Selective Disclosure Without ZK' },
       {
         type: 'paragraph',
-        text: 'SD-JWT hashes each claim individually with a random salt and embeds the hashes in the JWT payload. At presentation time, the holder includes only the salt+value pairs for the claims they choose to disclose. The verifier checks that the disclosed value hashes match the committed hash in the payload — but unrevealed claims leave no trace in the presentation.',
+        text: 'SD-JWT hashes each claim individually with a random salt and embeds the hashes in the JWT payload. At presentation time, the holder includes only the salt+value pairs for the claims they choose to disclose. The verifier checks that the disclosed value hashes match the committed hash in the payload - but unrevealed claims leave no trace in the presentation.',
       },
       { type: 'heading', text: 'Zero-Knowledge Predicates' },
       {
         type: 'paragraph',
-        text: 'Zero-knowledge predicates go further: they let a holder prove a logical statement about a claim without revealing the claim\'s value at all. "My birth_date satisfies age >= 18" can be proven cryptographically — the verifier learns only whether the predicate is satisfied, not the actual birth date. MIP Credential Templates declare which claims support ZK predicates; Presentation Policies can require them.',
+        text: 'Zero-knowledge predicates go further: they let a holder prove a logical statement about a claim without revealing the claim\'s value at all. "My birth_date satisfies age >= 18" can be proven cryptographically - the verifier learns only whether the predicate is satisfied, not the actual birth date. MIP Credential Templates declare which claims support ZK predicates; Presentation Policies can require them.',
       },
       {
         type: 'code',
-        label: 'SD-JWT disclosure — only selected claims are revealed',
+        label: 'SD-JWT disclosure - only selected claims are revealed',
         lang: 'text',
         code: `// Credential has: given_name, family_name, birth_date, department, employment_status
 // Verifier needs: employment_status = active, department = Engineering (as predicates)
@@ -798,8 +797,7 @@ Presentation = [compact-sd-jwt]
       },
     ],
   },
-
-  // ──────────── Chapter 5: Deployments ─────────────────────────────────────
+  // Chapter 5: Deployments
 
   {
     slug: 'deployment-profiles-in-practice',
@@ -818,7 +816,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Key Configuration Decisions' },
       {
         type: 'paragraph',
-        text: 'Online, offline, or hybrid: choose based on connectivity guarantees and assurance requirements. Hybrid deployments use live services when available but keep operating from bounded caches when links degrade. Cache TTLs: balance freshness against offline resilience — 72-hour trust anchor caches are common for airport deployments. Update channel: signed bundles for air-gapped terminals, real-time API polling for cloud services. Failure behavior: deny-on-stale for high-assurance scenarios, allow-on-stale for convenience-first contexts.',
+        text: 'Online, offline, or hybrid: choose based on connectivity guarantees and assurance requirements. Hybrid deployments use live services when available but keep operating from bounded caches when links degrade. Cache TTLs: balance freshness against offline resilience - 72-hour trust anchor caches are common for airport deployments. Update channel: signed bundles for air-gapped terminals, real-time API polling for cloud services. Failure behavior: deny-on-stale for high-assurance scenarios, allow-on-stale for convenience-first contexts.',
       },
       { type: 'heading', text: 'Multi-Profile Deployments' },
       {
@@ -828,7 +826,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Staging and Production Profiles' },
       {
         type: 'paragraph',
-        text: 'Deployment Profiles support environment-specific configuration. A staging profile points to test issuer roots and accepts test credentials. A production profile restricts to audited issuers and requires full revocation checking. Promoting from staging to production means updating a single Deployment Profile field — the Trust Profiles and Presentation Policies are shared between environments.',
+        text: 'Deployment Profiles support environment-specific configuration. A staging profile points to test issuer roots and accepts test credentials. A production profile restricts to audited issuers and requires full revocation checking. Promoting from staging to production means updating a single Deployment Profile field - the Trust Profiles and Presentation Policies are shared between environments.',
       },
     ],
   },
@@ -845,7 +843,7 @@ Presentation = [compact-sd-jwt]
     content: [
       {
         type: 'paragraph',
-        text: 'Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require that verification work offline for hours or days at a time — with no degradation in security posture.',
+        text: 'Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require that verification work offline for hours or days at a time - with no degradation in security posture.',
       },
       { type: 'heading', text: 'What Must Be Pre-Cached' },
       {
@@ -866,7 +864,7 @@ Presentation = [compact-sd-jwt]
     order: 3,
     title: 'Compliance Profiles',
     summary:
-      'Compliance Profiles map specific regulated standards (ICAO 9303, eIDAS 2.0, AAMVA) to MIP primitives — adopt entire credential ecosystems as code, not custom integrations.',
+      'Compliance Profiles map specific regulated standards (ICAO 9303, eIDAS 2.0, AAMVA) to MIP primitives - adopt entire credential ecosystems as code, not custom integrations.',
     readTime: '6 min read',
     conceptTags: ['deployment', 'compliance'],
     content: [
@@ -882,7 +880,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Regulatory Updates as Protocol Updates' },
       {
         type: 'paragraph',
-        text: 'When eIDAS 2.0 adds a new credential format or AAMVA updates its mDL schema, the corresponding Compliance Profile is updated in the MIP protocol repository. Deployments using that profile automatically adopt the updated rules on their next synchronization cycle. Compliance evolution becomes a data update, not an engineering sprint — and the entire ecosystem moves together.',
+        text: 'When eIDAS 2.0 adds a new credential format or AAMVA updates its mDL schema, the corresponding Compliance Profile is updated in the MIP protocol repository. Deployments using that profile automatically adopt the updated rules on their next synchronization cycle. Compliance evolution becomes a data update, not an engineering sprint - and the entire ecosystem moves together.',
       },
     ],
   },
@@ -893,29 +891,29 @@ Presentation = [compact-sd-jwt]
     order: 4,
     title: 'Airline Pre-Boarding Credentials',
     summary:
-      'From ticket purchase to gate scan — how MIP orchestrates passport verification, pre-boarding credential issuance, and offline gate verification.',
+      'From ticket purchase to gate scan - how MIP orchestrates passport verification, pre-boarding credential issuance, and offline gate verification.',
     readTime: '7 min read',
     conceptTags: ['deployment', 'flow'],
     content: [
       {
         type: 'paragraph',
-        text: 'Airline boarding is one of the highest-throughput identity verification scenarios in the world. Passengers present passports, boarding passes, and sometimes visas — at check-in counters, bag drops, security checkpoints, and gates. Each touchpoint today requires a different verification system. MIP unifies this with a single issuance-and-verification flow built from standard primitives.',
+        text: 'Airline boarding is one of the highest-throughput identity verification scenarios in the world. Passengers present passports, boarding passes, and sometimes visas - at check-in counters, bag drops, security checkpoints, and gates. Each touchpoint today requires a different verification system. MIP unifies this with a single issuance-and-verification flow built from standard primitives.',
       },
       { type: 'heading', text: 'The Flow' },
       {
         type: 'paragraph',
-        text: 'At ticket purchase, the airline captures basic booking data. At check-in, the passenger\'s passport is scanned and verified against ICAO Trust Profiles. Upon successful verification, a Pre-Boarding Credential is issued to the passenger\'s wallet — a lightweight signed attestation that the airline has verified their identity and travel authorization. At the gate, the Pre-Boarding Credential is presented and verified offline in under one second.',
+        text: 'At ticket purchase, the airline captures basic booking data. At check-in, the passenger\'s passport is scanned and verified against ICAO Trust Profiles. Upon successful verification, a Pre-Boarding Credential is issued to the passenger\'s wallet - a lightweight signed attestation that the airline has verified their identity and travel authorization. At the gate, the Pre-Boarding Credential is presented and verified offline in under one second.',
       },
       {
         type: 'code',
         label: 'Pre-boarding flow',
         lang: 'text',
-        code: `1. Ticket Purchase → Booking reference\n2. Check-in → Passport scan → ICAO Trust Profile verification\n3. Issuance → Pre-Boarding Credential → Passenger wallet\n4. Gate → Offline verification → Board`,
+        code: `1. Ticket Purchase -> Booking reference\n2. Check-in -> Passport scan -> ICAO Trust Profile verification\n3. Issuance -> Pre-Boarding Credential -> Passenger wallet\n4. Gate -> Offline verification -> Board`,
       },
       { type: 'heading', text: 'Why MIP' },
       {
         type: 'paragraph',
-        text: 'The gate verification uses a Deployment Profile configured for offline mode with a 6-hour trust anchor cache. The Presentation Policy requires only the Pre-Boarding Credential — not the passport itself. The gate device never handles PII. The entire verification takes under one second, even without connectivity.',
+        text: 'The gate verification uses a Deployment Profile configured for offline mode with a 6-hour trust anchor cache. The Presentation Policy requires only the Pre-Boarding Credential - not the passport itself. The gate device never handles PII. The entire verification takes under one second, even without connectivity.',
       },
     ],
   },
@@ -932,7 +930,7 @@ Presentation = [compact-sd-jwt]
     content: [
       {
         type: 'paragraph',
-        text: 'Retail age verification today requires a cashier to look at a driver\'s licence — exposing the customer\'s full name, home address, date of birth, and licence number just to confirm they are over 21. Verifiable credentials with zero-knowledge predicates eliminate this entirely. The customer proves age >= 21 without revealing any other personal information.',
+        text: 'Retail age verification today requires a cashier to look at a driver\'s licence - exposing the customer\'s full name, home address, date of birth, and licence number just to confirm they are over 21. Verifiable credentials with zero-knowledge predicates eliminate this entirely. The customer proves age >= 21 without revealing any other personal information.',
       },
       { type: 'heading', text: 'The Setup' },
       {
@@ -948,7 +946,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'No PII Transmitted' },
       {
         type: 'paragraph',
-        text: 'The verifier receives a cryptographic proof that the predicate is true — and nothing else. No name, no address, no birth date, no licence number. The proof is bound to a one-time nonce, so it cannot be replayed. The entire interaction takes less than two seconds on a phone tap.',
+        text: 'The verifier receives a cryptographic proof that the predicate is true - and nothing else. No name, no address, no birth date, no licence number. The proof is bound to a one-time nonce, so it cannot be replayed. The entire interaction takes less than two seconds on a phone tap.',
       },
     ],
   },
@@ -965,7 +963,7 @@ Presentation = [compact-sd-jwt]
     content: [
       {
         type: 'paragraph',
-        text: 'Enterprise identity today is fragmented: badge readers check physical cards, VPNs check LDAP, and applications check SAML or OIDC tokens — three separate identity systems for the same employee. Verifiable employee credentials unify all three. The employee holds a single credential that works at doors, on VPNs, and in applications.',
+        text: 'Enterprise identity today is fragmented: badge readers check physical cards, VPNs check LDAP, and applications check SAML or OIDC tokens - three separate identity systems for the same employee. Verifiable employee credentials unify all three. The employee holds a single credential that works at doors, on VPNs, and in applications.',
       },
       { type: 'heading', text: 'Issuance' },
       {
@@ -986,18 +984,18 @@ Presentation = [compact-sd-jwt]
     order: 7,
     title: 'Membership Credentials',
     summary:
-      'Gym memberships, professional associations, and conference badges — lightweight credential types that demonstrate MIP\'s flexibility beyond government identity.',
+      'Gym memberships, professional associations, and conference badges - lightweight credential types that demonstrate MIP\'s flexibility beyond government identity.',
     readTime: '5 min read',
     conceptTags: ['deployment', 'credential-template'],
     content: [
       {
         type: 'paragraph',
-        text: 'Not every credential needs the assurance level of a passport. Memberships — gym passes, professional association cards, conference badges, library cards — are lightweight identity assertions that benefit from verifiability without requiring PKI infrastructure. MIP handles these with the same primitives used for government credentials, just with simpler Trust Profiles.',
+        text: 'Not every credential needs the assurance level of a passport. Memberships - gym passes, professional association cards, conference badges, library cards - are lightweight identity assertions that benefit from verifiability without requiring PKI infrastructure. MIP handles these with the same primitives used for government credentials, just with simpler Trust Profiles.',
       },
       { type: 'heading', text: 'Example: Conference Badge' },
       {
         type: 'paragraph',
-        text: 'A conference organizer issues a ConferenceBadgeCredential with attendee name, ticket type, and session access. The Credential Template uses a short TTL matching the conference duration. Presentation Policies at session entrances require only the ticket type claim. The verifier is a smartphone app scanning a QR code — no custom hardware, no badge printers, no lost-badge desk.',
+        text: 'A conference organizer issues a ConferenceBadgeCredential with attendee name, ticket type, and session access. The Credential Template uses a short TTL matching the conference duration. Presentation Policies at session entrances require only the ticket type claim. The verifier is a smartphone app scanning a QR code - no custom hardware, no badge printers, no lost-badge desk.',
       },
       {
         type: 'code',
@@ -1014,13 +1012,13 @@ Presentation = [compact-sd-jwt]
     order: 8,
     title: 'The Future of Digital Identity',
     summary:
-      'Digital wallets, post-quantum cryptography, and global interoperability — where verifiable identity is headed and how MIP is designed to evolve with it.',
+      'Digital wallets, post-quantum cryptography, and global interoperability - where verifiable identity is headed and how MIP is designed to evolve with it.',
     readTime: '6 min read',
     conceptTags: ['deployment', 'foundation'],
     content: [
       {
         type: 'paragraph',
-        text: 'Verifiable credentials are moving from pilot to production. The EU requires digital identity wallets under eIDAS 2.0, with member state rollout phased from late 2026. Apple and Google integrate mDL support into their wallet platforms. ICAO is standardizing Digital Travel Credentials for passports. The next five years will see verifiable credentials become the default model for digital identity — not the alternative.',
+        text: 'Verifiable credentials are moving from pilot to production. The EU requires digital identity wallets under eIDAS 2.0, with member state rollout phased from late 2026. Apple and Google integrate mDL support into their wallet platforms. ICAO is standardizing Digital Travel Credentials for passports. The next five years will see verifiable credentials become the default model for digital identity - not the alternative.',
       },
       { type: 'heading', text: 'Digital Wallet Convergence' },
       {
@@ -1030,7 +1028,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Post-Quantum Transition' },
       {
         type: 'paragraph',
-        text: 'Cryptographically relevant quantum computers may eventually break RSA and ECDSA signatures — and because identity credentials have long lifetimes, the \"harvest now, decrypt later\" threat makes migration urgent even before such computers arrive. MIP\'s Trust Profiles specify accepted algorithms as configuration, so adding post-quantum algorithms (ML-DSA, SLH-DSA) is a Trust Profile update — not an application rewrite. Credential Templates can specify hybrid signatures (classical + PQC) during the transition period.',
+        text: 'Cryptographically relevant quantum computers may eventually break RSA and ECDSA signatures - and because identity credentials have long lifetimes, the \"harvest now, decrypt later\" threat makes migration urgent even before such computers arrive. MIP\'s Trust Profiles specify accepted algorithms as configuration, so adding post-quantum algorithms (ML-DSA, SLH-DSA) is a Trust Profile update - not an application rewrite. Credential Templates can specify hybrid signatures (classical + PQC) during the transition period.',
       },
       { type: 'heading', text: 'Global Interoperability' },
       {
@@ -1039,8 +1037,7 @@ Presentation = [compact-sd-jwt]
       },
     ],
   },
-
-  // ──────────── Chapter 6: Implementations ──────────────────────────────────
+  // Chapter 6: Implementations
 
   {
     slug: 'impl-oid4vci',
@@ -1059,7 +1056,7 @@ Presentation = [compact-sd-jwt]
       { type: 'heading', text: 'Two Grant Types' },
       {
         type: 'paragraph',
-        text: 'The authorization code flow provides the highest security: the user authenticates with the issuer\'s OAuth authorization server before the credential is generated. This is the correct flow for online issuance scenarios. The pre-authorized code flow is used when the user has already been authenticated out-of-band — for example, during in-person onboarding where the issuer generates a PIN-protected offer code.',
+        text: 'The authorization code flow provides the highest security: the user authenticates with the issuer\'s OAuth authorization server before the credential is generated. This is the correct flow for online issuance scenarios. The pre-authorized code flow is used when the user has already been authenticated out-of-band - for example, during in-person onboarding where the issuer generates a PIN-protected offer code.',
       },
       {
         type: 'code',
@@ -1088,7 +1085,7 @@ Content-Type: application/json
       { type: 'heading', text: 'Credential Format Negotiation' },
       {
         type: 'paragraph',
-        text: 'OID4VCI supports format negotiation — the wallet requests its preferred format (SD-JWT-VC, mDoc, or W3C VC) and the issuer delivers accordingly. MIP\'s Credential Template system supports multiple output formats from the same template definition, so a single template can issue an SD-JWT for web use cases and an mDoc for proximity use cases.',
+        text: 'OID4VCI supports format negotiation - the wallet requests its preferred format (SD-JWT-VC, mDoc, or W3C VC) and the issuer delivers accordingly. MIP\'s Credential Template system supports multiple output formats from the same template definition, so a single template can issue an SD-JWT for web use cases and an mDoc for proximity use cases.',
       },
     ],
   },
@@ -1099,7 +1096,7 @@ Content-Type: application/json
     order: 2,
     title: 'OID4VP: The Presentation Standard',
     summary:
-      'OpenID for Verifiable Presentations (OID4VP) is the standard for presenting credentials to a verifier — supporting selective disclosure, ZK predicates, and both same-device and cross-device flows.',
+      'OpenID for Verifiable Presentations (OID4VP) is the standard for presenting credentials to a verifier - supporting selective disclosure, ZK predicates, and both same-device and cross-device flows.',
     readTime: '8 min read',
     conceptTags: ['implementation', 'oid4vp'],
     content: [
@@ -1110,7 +1107,7 @@ Content-Type: application/json
       { type: 'heading', text: 'Same-Device vs Cross-Device' },
       {
         type: 'paragraph',
-        text: 'In same-device flows, the wallet is on the same device as the verifier\'s browser or app. The request is delivered via a custom URI scheme or redirect. In cross-device flows — a verifier website on a desktop computer, wallet on a phone — the request is delivered as a QR code encoded as an OID4VP authorization request URI. The wallet scans, processes the request, and the response is sent directly to the verifier\'s redirect_uri.',
+        text: 'In same-device flows, the wallet is on the same device as the verifier\'s browser or app. The request is delivered via a custom URI scheme or redirect. In cross-device flows - a verifier website on a desktop computer, wallet on a phone - the request is delivered as a QR code encoded as an OID4VP authorization request URI. The wallet scans, processes the request, and the response is sent directly to the verifier\'s redirect_uri.',
       },
       {
         type: 'code',
@@ -1145,13 +1142,13 @@ Content-Type: application/json
     order: 3,
     title: 'mDoc / ISO 18013-5',
     summary:
-      'ISO 18013-5 defines the mDoc format for government credentials. CBOR-encoded, device-bound, and built for proximity — here\'s how mDocs work and how MIP supports them.',
+      'ISO 18013-5 defines the mDoc format for government credentials. CBOR-encoded, device-bound, and built for proximity - here\'s how mDocs work and how MIP supports them.',
     readTime: '8 min read',
     conceptTags: ['implementation', 'mdoc', 'iso-18013'],
     content: [
       {
         type: 'paragraph',
-        text: 'ISO 18013-5 defines the mDoc (mobile Document) format, the global standard for mobile driver\'s licences (mDLs) and, increasingly, other government credentials. Unlike W3C VCs, mDocs use CBOR binary encoding (not JSON), are specifically designed for device-held use cases, and include built-in proximity presentation via NFC or BLE — enabling in-person verification without internet connectivity.',
+        text: 'ISO 18013-5 defines the mDoc (mobile Document) format, the global standard for mobile driver\'s licences (mDLs) and, increasingly, other government credentials. Unlike W3C VCs, mDocs use CBOR binary encoding (not JSON), are specifically designed for device-held use cases, and include built-in proximity presentation via NFC or BLE - enabling in-person verification without internet connectivity.',
       },
       { type: 'heading', text: 'CBOR and Namespaced Data Elements' },
       {
@@ -1193,7 +1190,7 @@ Content-Type: application/json
     order: 4,
     title: 'Open Badges 3.0',
     summary:
-      'Open Badges 3.0 aligns the education credential standard with W3C VCs. MIP adds trust governance to Open Badges — enabling verifier-side validation of issuing institutions.',
+      'Open Badges 3.0 aligns the education credential standard with W3C VCs. MIP adds trust governance to Open Badges - enabling verifier-side validation of issuing institutions.',
     readTime: '7 min read',
     conceptTags: ['implementation', 'open-badges'],
     content: [
@@ -1204,7 +1201,7 @@ Content-Type: application/json
       { type: 'heading', text: 'What Open Badges Does Not Solve' },
       {
         type: 'paragraph',
-        text: 'Open Badges defines the credential format but not the trust governance framework. Anyone can issue an "MIT Certified Kubernetes Administrator" badge — the format provides no mechanism for a verifier to confirm whether an issuer is actually accredited by MIT or any other institution. MIP\'s Trust Profiles fill this gap with configurable trust registries for educational institutions and accreditation bodies.',
+        text: 'Open Badges defines the credential format but not the trust governance framework. Anyone can issue an "MIT Certified Kubernetes Administrator" badge - the format provides no mechanism for a verifier to confirm whether an issuer is actually accredited by MIT or any other institution. MIP\'s Trust Profiles fill this gap with configurable trust registries for educational institutions and accreditation bodies.',
       },
       {
         type: 'code',
@@ -1252,16 +1249,16 @@ Content-Type: application/json
     content: [
       {
         type: 'paragraph',
-        text: 'The International Civil Aviation Organization (ICAO) is extending its 9303 standard to support digital travel credentials stored on smartphones — not just physical passport chips. There are three variants: Type 1 (Virtual DTC, a signed copy of the passport data), Type 2 (cloud-attested DTC with issuing-state attestation), and Type 3 (hardware-bound DTC using secure element or TEE). Each variant has different security and privacy properties.',
+        text: 'The International Civil Aviation Organization (ICAO) is extending its 9303 standard to support digital travel credentials stored on smartphones - not just physical passport chips. There are three variants: Type 1 (Virtual DTC, a signed copy of the passport data), Type 2 (cloud-attested DTC with issuing-state attestation), and Type 3 (hardware-bound DTC using secure element or TEE). Each variant has different security and privacy properties.',
       },
       { type: 'heading', text: 'How MIP Models DTCs' },
       {
         type: 'paragraph',
-        text: 'MIP\'s ICAO 9303 Compliance Profile maps all three DTC types to MIP primitives. The Trust Profile specifies accepted CSCA roots from ICAO\'s PKD. Credential Templates define the data group structure (DG1–DG16) and which fields support selective disclosure. Presentation Policies for border control specify which data groups are required versus optional. Deployment Profiles configure offline verification with appropriate cache TTLs.',
+        text: 'MIP\'s ICAO 9303 Compliance Profile maps all three DTC types to MIP primitives. The Trust Profile specifies accepted CSCA roots from ICAO\'s PKD. Credential Templates define the data group structure (DG1-DG16) and which fields support selective disclosure. Presentation Policies for border control specify which data groups are required versus optional. Deployment Profiles configure offline verification with appropriate cache TTLs.',
       },
       {
         type: 'code',
-        label: 'DTC types — security properties comparison',
+        label: 'DTC types - security properties comparison',
         lang: 'text',
         code: `Type 1 (Virtual):\n  Signed copy of MRZ + photo + fingerprint data\n  Verification: signature check against CSCA\n  Offline: yes (with cached CSCA roots)\n  Device binding: none\n\nType 2 (Cloud-Attested):\n  Issuing-state attestation via backchannel\n  Verification: online attestation + signature check\n  Offline: partial (signature only)\n  Device binding: weak (app-level)\n\nType 3 (Hardware-Bound):\n  Secure element or TEE key storage\n  Verification: device authentication + signature check\n  Offline: yes (full)\n  Device binding: strong (hardware)`,
       },
@@ -1272,14 +1269,14 @@ Content-Type: application/json
       },
     ],
   },
-];
+]);
 
-// ── Derived lookups ────────────────────────────────────────────────────────────
+// Derived lookups
 
 /** Flat ordered list for prev/next navigation */
 export const GUIDE_ARTICLE_SLUGS = GUIDE_ARTICLES.map((a) => a.slug);
 
-/** O(1) slug → article lookup */
+/** O(1) slug -> article lookup */
 export const GUIDE_ARTICLE_MAP = Object.fromEntries(
   GUIDE_ARTICLES.map((a) => [a.slug, a]),
 );
@@ -1292,7 +1289,7 @@ export const GUIDE_ARTICLES_BY_CHAPTER = Object.fromEntries(
   ]),
 );
 
-// ── Blog post concept tags (separate from guide articles) ─────────────────────
+// Blog post concept tags (separate from guide articles)
 
 export const BLOG_POST_CONCEPT_TAGS = {
   'why-identity-needs-a-protocol': ['foundation', 'business'],
@@ -1381,7 +1378,7 @@ export const BLOG_POST_CONCEPT_TAGS = {
 };
 
 /**
- * Standards metadata tags — maps post slugs to referenced standards/protocols.
+ * Standards metadata tags - maps post slugs to referenced standards/protocols.
  * Displayed on article cards for scannability and SEO.
  */
 export const BLOG_POST_STANDARDS_TAGS = {

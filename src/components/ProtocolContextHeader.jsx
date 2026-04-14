@@ -7,13 +7,13 @@
  */
 
 import { Box, Typography, Chip } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../data';
 import { ARTICLE_META, LAYER_COLORS, LAYER_LABELS, DIFFICULTY_COLORS, isBrowseVisibleArticleSlug } from '../data/articleMeta';
 import { SERIES_BY_POST_SLUG, START_HERE_SLUGS } from '../data';
+import { truncateAtWord } from '../utils/blogText';
 
 function ProtocolContextHeader({ slug }) {
-  const navigate = useNavigate();
   const meta = ARTICLE_META[slug];
   const seriesInfo = SERIES_BY_POST_SLUG[slug];
   const startHereIdx = START_HERE_SLUGS.indexOf(slug);
@@ -68,7 +68,7 @@ function ProtocolContextHeader({ slug }) {
         {startHereIdx >= 0 && (
           <MetaField
             label="Series"
-            value={`Start Here — Step ${startHereIdx + 1} of ${START_HERE_SLUGS.length}`}
+            value={`Start Here - Step ${startHereIdx + 1} of ${START_HERE_SLUGS.length}`}
           />
         )}
         {seriesInfo && startHereIdx < 0 && (
@@ -120,11 +120,12 @@ function ProtocolContextHeader({ slug }) {
             {relatedPosts.map((rp) => (
               <Chip
                 key={rp.slug}
-                label={rp.title.length > 40 ? rp.title.slice(0, 38) + '…' : rp.title}
+                label={truncateAtWord(rp.title, 40)}
                 size="small"
                 variant="outlined"
                 clickable
-                onClick={() => navigate(`/blog/${rp.slug}`)}
+                component={Link}
+                to={`/blog/${rp.slug}`}
                 sx={{ fontSize: '0.72rem', fontWeight: 600 }}
               />
             ))}

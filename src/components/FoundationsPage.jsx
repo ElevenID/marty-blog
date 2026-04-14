@@ -14,112 +14,12 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { SEOHead } from '../seo';
 import { useNavigate } from 'react-router-dom';
-import { BLOG_POSTS, GUIDE_ARTICLE_MAP } from '../data';
-import { ARTICLE_META, LAYER_COLORS } from '../data/articleMeta';
-
-/**
- * The handbook structure — seven parts covering the full identity stack.
- * Each part has a number, title, description, layer color, and ordered slugs.
- */
-const HANDBOOK_PARTS = [
-  {
-    part: 'I',
-    title: 'Foundations',
-    description: 'Core concepts of digital identity — what it is, who participates, and how credentials work.',
-    layer: 'Foundations',
-    slugs: [
-      'what-is-digital-identity',
-      'verifiable-credentials-explained',
-      'issuers-holders-verifiers-explained',
-      'credential-lifecycle',
-    ],
-  },
-  {
-    part: 'II',
-    title: 'The Marty Protocol Model',
-    description: 'The five primitives that define every identity system — from trust to execution.',
-    layer: 'Trust',
-    slugs: [
-      'five-primitives-in-one-picture',
-      'the-marty-identity-model',
-      'trust-profiles-explained',
-      'credential-templates-designing-what-gets-issued',
-      'presentation-policies-minimum-disclosure',
-      'deployment-profiles-from-design-to-production',
-      'flows-orchestrating-identity-lifecycle',
-    ],
-  },
-  {
-    part: 'III',
-    title: 'Trust & PKI',
-    description: 'Cryptographic foundations — public key infrastructure, trust anchors, and certificate chains.',
-    layer: 'Trust',
-    slugs: [
-      'why-identity-depends-on-cryptography',
-      'public-key-infrastructure-explained',
-      'understanding-trust-anchors',
-      'cryptographic-trust-anchors-primer',
-      'certificate-chains-and-validation',
-      'how-passport-pki-works',
-      'understanding-csca-certificates',
-    ],
-  },
-  {
-    part: 'IV',
-    title: 'Privacy & Disclosure',
-    description: 'Data minimization, selective disclosure, and zero-knowledge proofs.',
-    layer: 'Present',
-    slugs: [
-      'minimum-disclosure-is-a-policy-problem',
-      'selective-disclosure',
-      'data-minimization-in-identity',
-      'sd-jwt-selective-disclosure-deep-dive',
-      'zero-knowledge-predicates-identity',
-    ],
-  },
-  {
-    part: 'V',
-    title: 'Implementation',
-    description: 'Transport protocols, schemas, and integration patterns for building with Marty.',
-    layer: 'Issue',
-    slugs: [
-      'impl-oid4vci',
-      'impl-oid4vp',
-      'mip-json-schemas-walkthrough',
-      'conformance-testing-for-implementers',
-    ],
-  },
-  {
-    part: 'VI',
-    title: 'Deployment Patterns',
-    description: 'How verifiable identity runs in real environments — airports, enterprises, kiosks, and edge devices.',
-    layer: 'Deploy',
-    slugs: [
-      'deployment-profiles-in-practice',
-      'offline-verification-guide',
-      'deploy-airline-boarding',
-      'deploy-enterprise-access',
-      'deploy-age-verification',
-      'deploy-membership-credentials',
-    ],
-  },
-  {
-    part: 'VII',
-    title: 'Governance & Trust Infrastructure',
-    description: 'Compliance frameworks, policy engines, trust registries, and wallet architecture.',
-    layer: 'Govern',
-    slugs: [
-      'compliance-profiles-bridging-regulation',
-      'compliance-profiles-in-practice',
-      'cedar-policies-for-identity-governance',
-      'building-trust-registries-at-scale',
-      'mobile-wallet-architectures',
-      'secure-enclave-credential-storage',
-      'credential-portability-across-wallets',
-      'eudi-wallet-model-explained',
-    ],
-  },
-];
+import { GUIDE_ARTICLE_MAP, HANDBOOK_PARTS } from '../data';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { ARTICLE_BROWSE_PRIMITIVES_BY_SLUG } from '../data/articleBrowseContext';
+import { LAYER_COLORS } from '../data/articleMeta';
+import { isBrowseHiddenArticleSlug } from '../data/articleBrowseVisibility';
+import { truncateAtWord } from '../utils/blogText';
 
 function computePartTime(slugs) {
   return slugs.reduce((sum, slug) => {
@@ -130,11 +30,11 @@ function computePartTime(slugs) {
 }
 
 function getHandbookArticle(slug) {
-  if (ARTICLE_META[slug]?.browseHidden && GUIDE_ARTICLE_MAP[slug]) {
+  if (isBrowseHiddenArticleSlug(slug) && GUIDE_ARTICLE_MAP[slug]) {
     return GUIDE_ARTICLE_MAP[slug];
   }
 
-  return BLOG_POSTS.find((post) => post.slug === slug);
+  return BLOG_POST_SUMMARIES.find((post) => post.slug === slug);
 }
 
 function FoundationsPage() {
@@ -149,7 +49,7 @@ function FoundationsPage() {
   return (
     <Box>
       <SEOHead
-        title="Identity Infrastructure Foundations — Marty Identity Protocol"
+        title="Identity Infrastructure Foundations - Marty Identity Protocol"
         description="A structured introduction to verifiable identity infrastructure. Foundations, protocols, cryptography, deployment patterns, and governance."
         canonicalPath="/blog/foundations"
         keywords={['digital identity', 'verifiable credentials', 'identity infrastructure', 'PKI', 'OID4VCI', 'selective disclosure', 'trust profiles']}
@@ -199,7 +99,7 @@ function FoundationsPage() {
           component="p"
           sx={{ maxWidth: 640, lineHeight: 1.7, mb: 3, opacity: 0.85, fontWeight: 400, fontSize: { xs: '1rem', md: '1.15rem' } }}
         >
-          A structured introduction to digital identity infrastructure — from foundational concepts to production deployment patterns.
+          A structured introduction to digital identity infrastructure - from foundational concepts to production deployment patterns.
         </Typography>
         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
           <Chip
@@ -247,7 +147,7 @@ function FoundationsPage() {
                 Part {part.part}
               </Typography>
               <Chip
-                label={`${part.slugs.length} articles · ~${partMinutes} min`}
+                label={`${part.slugs.length} articles | ~${partMinutes} min`}
                 size="small"
                 variant="outlined"
                 sx={{ fontWeight: 700, fontSize: '0.68rem', borderColor: 'grey.400' }}
@@ -283,7 +183,7 @@ function FoundationsPage() {
               {part.slugs.map((slug) => {
                 articleCounter++;
                 const article = getHandbookArticle(slug);
-                const meta = ARTICLE_META[slug];
+                const primitive = ARTICLE_BROWSE_PRIMITIVES_BY_SLUG[slug];
                 if (!article) return null;
 
                 return (
@@ -341,16 +241,16 @@ function FoundationsPage() {
                           color="text.secondary"
                           sx={{ fontSize: '0.8rem', lineHeight: 1.5, mt: 0.25 }}
                         >
-                          {article.summary.length > 120 ? article.summary.slice(0, 118) + '…' : article.summary}
+                          {truncateAtWord(article.summary, 120)}
                         </Typography>
                       )}
                     </Box>
 
                     {/* Reading time + difficulty */}
                     <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', flexShrink: 0 }}>
-                      {meta?.primitive && (
+                      {primitive && (
                         <Chip
-                          label={meta.primitive}
+                          label={primitive}
                           size="small"
                           variant="outlined"
                           sx={{ fontSize: '0.62rem', fontWeight: 600, height: 20, display: { xs: 'none', md: 'flex' } }}

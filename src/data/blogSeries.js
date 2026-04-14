@@ -1,3 +1,5 @@
+import { normalizeBlogData } from '../utils/blogText';
+
 /**
  * Blog Series
  *
@@ -5,7 +7,7 @@
  * Each series has an id, title, description, and an ordered array of post slugs.
  */
 
-export const BLOG_SERIES = [
+export const BLOG_SERIES = normalizeBlogData([
   {
     id: 'foundations',
     title: 'Foundations',
@@ -68,7 +70,7 @@ export const BLOG_SERIES = [
   {
     id: 'deployments',
     title: 'Deployment Patterns',
-    description: 'Real-world deployment guides — from airline boarding to enterprise access.',
+    description: 'Real-world deployment guides - from airline boarding to enterprise access.',
     slugs: [
       'deployment-profiles-in-practice',
       'offline-verification-guide',
@@ -100,10 +102,10 @@ export const BLOG_SERIES = [
       'eudi-wallet-model-explained',
     ],
   },
-];
+]);
 
 /**
- * Derived: series lookup by post slug → { seriesId, seriesTitle, order, total, slugs }
+ * Derived: series lookup by post slug -> { seriesId, seriesTitle, order, total, slugs }
  */
 export const SERIES_BY_POST_SLUG = (() => {
   const map = {};
@@ -129,10 +131,10 @@ export const SERIES_BY_ID = Object.fromEntries(
 );
 
 /**
- * Section assignments — maps post slugs to structured zones on the blog page.
+ * Section assignments - maps post slugs to structured zones on the blog page.
  *
  * Sections: featured, start-learning, core-protocol, implementation,
- *           cryptography, business (default: unassigned → archive/recent)
+ *           cryptography, business (default: unassigned -> archive/recent)
  */
 export const SECTION_BY_SLUG = {
   // Featured (manually pinned flagship posts)
@@ -233,8 +235,8 @@ export const SECTION_BY_SLUG = {
 };
 
 /**
- * Start Here reading list — the ordered entry path for new readers.
- * Progression: general identity → credentials → verification → architecture.
+ * Start Here reading list - the ordered entry path for new readers.
+ * Progression: general identity -> credentials -> verification -> architecture.
  */
 export const START_HERE_SLUGS = [
   'what-is-digital-identity',

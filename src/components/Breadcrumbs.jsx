@@ -8,9 +8,10 @@
 import { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ARTICLE_META, LAYER_LABELS } from '../data/articleMeta';
 import { SECTION_BY_SLUG } from '../data';
+import { buildBlogTagPath } from '../utils/blogTagRoutes';
 
 const SECTION_LABELS = {
   featured: 'Featured',
@@ -31,11 +32,14 @@ const SECTION_ANCHORS = {
 };
 
 function Breadcrumbs({ slug, title }) {
-  const navigate = useNavigate();
   const section = SECTION_BY_SLUG[slug];
   const meta = ARTICLE_META[slug];
-  const sectionLabel = SECTION_LABELS[section] || (meta ? (LAYER_LABELS[meta.layer] || meta.layer) : null);
+  const topicLabel = meta?.topic || null;
+  const sectionLabel = topicLabel || SECTION_LABELS[section] || (meta ? (LAYER_LABELS[meta.layer] || meta.layer) : null);
   const sectionAnchor = SECTION_ANCHORS[section] || null;
+  const sectionPath = topicLabel
+    ? buildBlogTagPath(topicLabel)
+    : (sectionAnchor ? `/blog#${sectionAnchor}` : '/blog');
 
   const crumbs = [
     { label: 'Blog', path: '/blog' },
@@ -44,7 +48,7 @@ function Breadcrumbs({ slug, title }) {
   if (sectionLabel) {
     crumbs.push({
       label: sectionLabel,
-      path: sectionAnchor ? `/blog#${sectionAnchor}` : '/blog',
+      path: sectionPath,
     });
   }
 
@@ -100,7 +104,8 @@ function Breadcrumbs({ slug, title }) {
             )}
             <Typography
               variant="caption"
-              onClick={crumb.path ? () => navigate(crumb.path) : undefined}
+              component={crumb.path ? Link : 'span'}
+              to={crumb.path || undefined}
               sx={{
                 fontSize: '0.75rem',
                 fontWeight: isLast ? 600 : 500,
@@ -110,6 +115,7 @@ function Breadcrumbs({ slug, title }) {
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
+                textDecoration: 'none',
                 '&:hover': crumb.path ? { color: 'primary.main', textDecoration: 'underline' } : {},
               }}
             >

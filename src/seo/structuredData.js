@@ -66,35 +66,120 @@ export const softwareApplicationSchema = ({
 export const articleSchema = ({
   headline,
   description,
-  datePublished,
+  datePublished = null,
   dateModified = null,
   authorName = 'ElevenID LLC',
+  authorType = null,
   url,
-}) => ({
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline,
-  description,
-  datePublished,
-  dateModified: dateModified || datePublished,
-  author: {
-    '@type': 'Organization',
-    name: authorName,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'ElevenID LLC',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://elevenidllc.com/logo512.png',
+}) => {
+  const resolvedAuthorType = authorType || (authorName === 'ElevenID LLC' ? 'Organization' : 'Person');
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    author: {
+      '@type': resolvedAuthorType,
+      name: authorName,
     },
-  },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ElevenID LLC',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://elevenidllc.com/logo512.png',
+      },
+    },
+    url,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+  };
+
+  if (datePublished) {
+    schema.datePublished = datePublished;
+  }
+
+  if (dateModified || datePublished) {
+    schema.dateModified = dateModified || datePublished;
+  }
+
+  return schema;
+};
+
+/**
+ * Person schema for author/profile pages
+ * @param {object} params - Person parameters
+ */
+export const personSchema = ({
+  name,
+  description,
   url,
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': url,
-  },
-});
+  jobTitle = null,
+  image = null,
+  knowsAbout = [],
+}) => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+    description,
+    url,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'ElevenID LLC',
+      url: 'https://elevenidllc.com',
+    },
+  };
+
+  if (jobTitle) {
+    schema.jobTitle = jobTitle;
+  }
+
+  if (image) {
+    schema.image = image;
+  }
+
+  if (knowsAbout.length > 0) {
+    schema.knowsAbout = knowsAbout;
+  }
+
+  return schema;
+};
+
+/**
+ * CollectionPage schema for archive/listing pages
+ * @param {object} params - Collection parameters
+ */
+export const collectionPageSchema = ({
+  name,
+  description,
+  url,
+  items = [],
+}) => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name,
+    description,
+    url,
+  };
+
+  if (items.length > 0) {
+    schema.mainEntity = {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: item.url,
+        name: item.name,
+      })),
+    };
+  }
+
+  return schema;
+};
 
 /**
  * BreadcrumbList schema for navigation hierarchy

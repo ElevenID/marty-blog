@@ -1,7 +1,7 @@
 /**
  * Sectioned Article Feed
  *
- * Structured zones: Recent → Series → Topic grids.
+ * Structured zones: Recent -> Series -> Topic grids.
  * Supports topic-based filtering by user intent.
  */
 
@@ -10,9 +10,9 @@ import {
   Box, Typography, Grid, Chip, Button, Divider,
 } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
 import { BLOG_SERIES, SECTION_BY_SLUG } from '../data';
-import { getBrowseVisiblePosts } from '../data/articleMeta';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
 import SeriesBlock from './SeriesBlock';
 
 const TODAY = new Date().toISOString().split('T')[0];
@@ -67,7 +67,7 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
   const [recentCount, setRecentCount] = useState(INITIAL_RECENT_COUNT);
 
   const allPosts = useMemo(
-    () => [...getBrowseVisiblePosts(BLOG_POSTS)].sort((a, b) => new Date(b.date) - new Date(a.date)),
+    () => [...getBrowseVisiblePosts(BLOG_POST_SUMMARIES)].sort((a, b) => new Date(b.date) - new Date(a.date)),
     [],
   );
 

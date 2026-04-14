@@ -1,3 +1,10 @@
+export {
+  BROWSE_HIDDEN_ARTICLE_SLUGS,
+  LEGACY_ARTICLE_SLUGS,
+  getBrowseVisiblePosts,
+  isBrowseVisibleArticleSlug,
+} from './articleBrowseVisibility';
+
 /**
  * Article Metadata
  *
@@ -8,12 +15,12 @@
  */
 
 /**
- * ARTICLE_META[slug] → { primitive?, layer, topic, difficulty, related[] }
+ * ARTICLE_META[slug] -> { primitive?, layer, topic, difficulty, related[] }
  *
  * Internal layer keys map to the protocol lifecycle.
  * Reader-facing labels should use LAYER_LABELS:
- *   Foundations → Trust → Issue (Issuance) → Present (Presentation)
- *   → Deploy (Deployment) → Execute (Execution) → Govern (Governance)
+ *   Foundations -> Trust -> Issue (Issuance) -> Present (Presentation)
+ *   -> Deploy (Deployment) -> Execute (Execution) -> Govern (Governance)
  *
  * Difficulty: Beginner | Intermediate | Advanced
  * Optional status fields:
@@ -29,12 +36,12 @@ export const LAYER_LABELS = {
   Issue: 'Issuance',
   Present: 'Presentation',
   Deploy: 'Deployment',
-  Execute: 'Execution',
+  Execute: 'Flow Orchestration',
   Govern: 'Governance',
 };
 
 export const ARTICLE_META = {
-  // ── Start Here / Foundations ──────────────────────────────────────────────────
+  // Start Here / Foundations
   'what-is-digital-identity': {
     topic: 'Foundations',
     layer: 'Foundations',
@@ -84,7 +91,7 @@ export const ARTICLE_META = {
     related: ['five-primitives-in-one-picture', 'the-marty-identity-model', 'what-is-digital-identity'],
   },
 
-  // ── Five Primitives (Core Protocol) ──────────────────────────────────────────
+  // Five Primitives (Core Protocol)
   'trust-profiles-explained': {
     primitive: 'Trust Profiles',
     layer: 'Trust',
@@ -121,7 +128,7 @@ export const ARTICLE_META = {
     related: ['credential-lifecycle', 'impl-oid4vci', 'impl-oid4vp'],
   },
 
-  // ── PKI for Identity ─────────────────────────────────────────────────────────
+  // PKI for Identity
   'public-key-infrastructure-explained': {
     layer: 'Trust',
     topic: 'PKI for Identity',
@@ -159,7 +166,7 @@ export const ARTICLE_META = {
     related: ['how-passport-pki-works', 'certificate-chains-and-validation', 'public-key-infrastructure-explained'],
   },
 
-  // ── Privacy & Disclosure ─────────────────────────────────────────────────────
+  // Privacy & Disclosure
   'minimum-disclosure-is-a-policy-problem': {
     layer: 'Present',
     topic: 'Privacy & Disclosure',
@@ -185,7 +192,7 @@ export const ARTICLE_META = {
     related: ['sd-jwt-selective-disclosure-deep-dive', 'selective-disclosure', 'data-minimization-in-identity'],
   },
 
-  // ── Implementation Guides ────────────────────────────────────────────────────
+  // Implementation Guides
   'impl-oid4vci': {
     primitive: 'Credential Templates',
     layer: 'Issue',
@@ -215,7 +222,7 @@ export const ARTICLE_META = {
     related: ['impl-oid4vci', 'impl-oid4vp', 'mip-json-schemas-walkthrough'],
   },
 
-  // ── Governance & Policy ──────────────────────────────────────────────────────
+  // Governance & Policy
   'compliance-profiles-bridging-regulation': {
     layer: 'Govern',
     topic: 'Governance',
@@ -242,7 +249,7 @@ export const ARTICLE_META = {
     related: ['trust-profiles-explained', 'compliance-profiles-in-practice', 'cedar-policies-for-identity-governance'],
   },
 
-  // ── Deployment Patterns ──────────────────────────────────────────────────────
+  // Deployment Patterns
   'deployment-profiles-in-practice': {
     primitive: 'Deployment Profiles',
     layer: 'Deploy',
@@ -287,7 +294,7 @@ export const ARTICLE_META = {
     related: ['deploy-age-verification', 'deploy-enterprise-access', 'credential-templates-designing-what-gets-issued'],
   },
 
-  // ── Wallets ──────────────────────────────────────────────────────────────────
+  // Wallets
   'mobile-wallet-architectures': {
     layer: 'Deploy',
     topic: 'Wallets',
@@ -313,7 +320,7 @@ export const ARTICLE_META = {
     related: ['mobile-wallet-architectures', 'credential-portability-across-wallets', 'compliance-profiles-bridging-regulation'],
   },
 
-  // ── Business / Industry ──────────────────────────────────────────────────────
+  // Business / Industry
   'business-case-for-credential-portability': {
     layer: 'Foundations',
     topic: 'Industry',
@@ -339,7 +346,7 @@ export const ARTICLE_META = {
     related: ['credential-templates-designing-what-gets-issued', 'credential-lifecycle', 'impl-oid4vci'],
   },
 
-  // ── Standalone / Advanced ────────────────────────────────────────────────────
+  // Standalone / Advanced
   'why-identity-depends-on-cryptography': {
     layer: 'Trust',
     topic: 'Foundations',
@@ -377,7 +384,7 @@ export const ARTICLE_META = {
     related: ['why-identity-needs-a-protocol', 'five-primitives-in-one-picture', 'the-marty-identity-model'],
   },
 
-  // ── Runtime, Evaluation & Strategy ─────────────────────────────────────────
+  // Runtime, Evaluation & Strategy
   'same-trust-model-different-runtime': {
     layer: 'Deploy',
     topic: 'Deployment Patterns',
@@ -397,7 +404,7 @@ export const ARTICLE_META = {
     related: ['why-the-marty-protocol-exists', 'mip-json-schemas-walkthrough', 'conformance-testing-for-implementers'],
   },
 
-  // ── Standards & PKI ────────────────────────────────────────────────────────
+  // Standards & PKI
   'what-icao-9303-specifies': {
     layer: 'Trust',
     topic: 'Passport PKI',
@@ -417,7 +424,7 @@ export const ARTICLE_META = {
     related: ['how-passport-pki-works', 'mobile-driving-licenses-iso-18013-5', 'understanding-trust-anchors'],
   },
 
-  // ── Issuance, Presentation & Interoperability ─────────────────────────────
+  // Issuance, Presentation & Interoperability
   'how-credential-issuance-works': {
     layer: 'Issue',
     topic: 'Credential Issuance',
@@ -437,7 +444,7 @@ export const ARTICLE_META = {
     related: ['verifiable-credentials-explained', 'presentation-protocols', 'mobile-driving-licenses-iso-18013-5'],
   },
 
-  // ── Wallets & Holder Experience ────────────────────────────────────────────
+  // Wallets & Holder Experience
   'what-is-a-digital-identity-wallet': {
     layer: 'Deploy',
     topic: 'Wallets',
@@ -463,7 +470,7 @@ export const ARTICLE_META = {
     related: ['what-is-a-digital-identity-wallet', 'selective-disclosure-in-wallets', 'eudi-wallet-model-explained'],
   },
 
-  // ── Privacy, Governance & Trust Infrastructure ─────────────────────────────
+  // Privacy, Governance & Trust Infrastructure
   'why-identity-systems-must-protect-privacy': {
     layer: 'Present',
     topic: 'Privacy & Disclosure',
@@ -540,7 +547,7 @@ export const ARTICLE_META = {
     related: ['trust-registries-explained', 'building-trust-registries-at-scale', 'understanding-trust-anchors'],
   },
 
-  // ── Protocol Deep Dives & Synthesis ────────────────────────────────────────
+  // Protocol Deep Dives & Synthesis
   'why-the-marty-protocol-exists': {
     layer: 'Foundations',
     topic: 'Protocol Vision',
@@ -584,7 +591,7 @@ export const ARTICLE_META = {
 };
 
 /**
- * Layer display colors — keyed by the internal protocol layer codes.
+ * Layer display colors - keyed by the internal protocol layer codes.
  */
 export const LAYER_COLORS = {
   Foundations: '#546e7a',
@@ -612,12 +619,4 @@ export function getCanonicalArticleSlug(slug) {
 export function getLegacyArticleMeta(slug) {
   const meta = ARTICLE_META[slug];
   return meta?.status === 'legacy' ? meta : null;
-}
-
-export function isBrowseVisibleArticleSlug(slug) {
-  return ARTICLE_META[slug]?.status !== 'legacy' && ARTICLE_META[slug]?.browseHidden !== true;
-}
-
-export function getBrowseVisiblePosts(posts) {
-  return posts.filter((post) => isBrowseVisibleArticleSlug(post.slug));
 }

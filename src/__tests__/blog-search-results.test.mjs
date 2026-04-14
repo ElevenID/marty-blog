@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { buildSearchResults } from '../components/BlogPage';
+import { buildSearchResults, buildTagResults } from '../components/BlogPage';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { GUIDE_ARTICLES, GUIDE_CHAPTERS } from '../data/guideContent';
 import { getBrowseVisiblePosts } from '../data/articleMeta';
@@ -34,5 +34,28 @@ describe('blog search results', () => {
 
     expect(slugMatches).toHaveLength(1);
     expect(slugMatches[0]).toMatchObject({ kind: 'post', slug: 'selective-disclosure' });
+  });
+
+  it('builds topic tag results from browse-visible posts', () => {
+    const results = buildTagResults(
+      'Privacy & Disclosure',
+      browseVisiblePosts,
+      GUIDE_ARTICLES,
+      GUIDE_CHAPTERS,
+    );
+
+    expect(results.some((result) => result.kind === 'post' && result.slug === 'selective-disclosure')).toBe(true);
+    expect(results.some((result) => result.kind === 'post' && result.slug === 'minimum-disclosure-is-a-policy-problem')).toBe(true);
+  });
+
+  it('builds guide tag results from chapter titles', () => {
+    const results = buildTagResults(
+      'Implementations',
+      browseVisiblePosts,
+      GUIDE_ARTICLES,
+      GUIDE_CHAPTERS,
+    );
+
+    expect(results.some((result) => result.kind === 'guide' && result.slug === 'impl-oid4vci')).toBe(true);
   });
 });

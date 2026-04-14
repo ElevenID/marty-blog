@@ -1,18 +1,21 @@
 /**
  * Start Here Section
  *
- * Numbered reading ladder for new readers — the first thing they should see
+ * Numbered reading ladder for new readers - the first thing they should see
  * after the hero. Links to foundational posts in reading order.
  */
 
 import { Box, Typography, Paper, List, ListItem, ListItemIcon, ListItemText, ListItemButton } from '@mui/material';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import { BLOG_POSTS } from '../data';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 import { START_HERE_SLUGS } from '../data';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { truncateAtWord } from '../utils/blogText';
 
-function StartHereSection({ navigate }) {
+function StartHereSection() {
   const posts = START_HERE_SLUGS
-    .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+    .map((slug) => BLOG_POST_SUMMARIES.find((p) => p.slug === slug))
     .filter(Boolean);
 
   // Compute total reading time from readTime strings like "7 min read"
@@ -65,7 +68,7 @@ function StartHereSection({ navigate }) {
             whiteSpace: 'nowrap',
           }}
         >
-          {posts.length} articles · ~{totalMinutes} min total
+          {posts.length} articles | ~{totalMinutes} min total
         </Typography>
       </Box>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2, ml: 5.5 }}>
@@ -76,7 +79,8 @@ function StartHereSection({ navigate }) {
         {posts.map((post, idx) => (
           <ListItem key={post.slug} disablePadding sx={{ mb: 0.5 }}>
             <ListItemButton
-              onClick={() => navigate(`/blog/${post.slug}`)}
+              component={Link}
+              to={`/blog/${post.slug}`}
               sx={{
                 borderRadius: 2,
                 py: 1.5,
@@ -97,15 +101,21 @@ function StartHereSection({ navigate }) {
                 primary={post.title}
                 secondary={
                   <>
-                    {post.summary?.slice(0, 120) + (post.summary?.length > 120 ? '…' : '')}
+                    {truncateAtWord(post.summary, 220)}
                     <Typography component="span" variant="caption" sx={{ display: 'block', mt: 0.5, fontWeight: 600, color: 'text.secondary' }}>
-                      Step {idx + 1} of {posts.length} · {post.readTime}
+                      Step {idx + 1} of {posts.length} | {post.readTime}
                     </Typography>
                   </>
                 }
                 primaryTypographyProps={{ fontWeight: 700, fontSize: '0.95rem' }}
                 secondaryTypographyProps={{ component: 'div', fontSize: '0.8rem', lineHeight: 1.5 }}
               />
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ml: 2, color: 'primary.main', flexShrink: 0 }}>
+                <Typography variant="caption" sx={{ fontWeight: 800, letterSpacing: 0.2 }}>
+                  Read article
+                </Typography>
+                <ArrowForwardIcon sx={{ fontSize: 16 }} />
+              </Box>
             </ListItemButton>
           </ListItem>
         ))}

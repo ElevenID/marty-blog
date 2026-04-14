@@ -7,14 +7,16 @@
 
 import { Box, Typography, Card, CardActionArea, CardContent, Chip, IconButton } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
-import { isBrowseVisibleArticleSlug } from '../data/articleMeta';
+import { BLOG_AUTHORS } from '../data/blogAuthors';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { isBrowseVisibleArticleSlug } from '../data/articleBrowseVisibility';
+import { truncateAtWord } from '../utils/blogText';
 
 const TODAY = new Date().toISOString().split('T')[0];
 
 function SeriesBlock({ series, navigate }) {
   const posts = series.slugs
-    .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+    .map((slug) => BLOG_POST_SUMMARIES.find((p) => p.slug === slug))
     .filter((post) => post && isBrowseVisibleArticleSlug(post.slug));
 
   if (posts.length === 0) return null;
@@ -37,7 +39,7 @@ function SeriesBlock({ series, navigate }) {
           </Typography>
         </Box>
         <Chip
-          label={`${posts.length} articles · ~${totalMinutes} min`}
+          label={`${posts.length} articles | ~${totalMinutes} min`}
           size="small"
           variant="outlined"
           sx={{ flexShrink: 0, fontWeight: 600 }}
@@ -109,7 +111,7 @@ function SeriesBlock({ series, navigate }) {
                     color="text.secondary"
                     sx={{ fontSize: '0.78rem', lineHeight: 1.5, mb: 1.5 }}
                   >
-                    {post.summary?.slice(0, 100)}{post.summary?.length > 100 ? '…' : ''}
+                    {truncateAtWord(post.summary, 100)}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography variant="caption" color="text.secondary">

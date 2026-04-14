@@ -9,7 +9,7 @@
 import { Box, Typography, Paper, Chip, Button, Divider, Avatar, Grid, Card, CardContent, CardActionArea, useMediaQuery, useTheme } from '@mui/material';
 import { SEOHead } from '../seo';
 import { articleSchema } from '../seo/structuredData';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
@@ -26,6 +26,7 @@ import ReadingProgressBar from './ReadingProgressBar';
 import AIDisclosureBanner from './AIDisclosureBanner';
 import ProductBridgeCTA from './ProductBridgeCTA';
 import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta';
+import { buildBlogTagPath } from '../utils/blogTagRoutes';
 
 const TODAY = new Date().toISOString().split('T')[0];
 
@@ -39,7 +40,6 @@ const CATEGORY_COLORS = {
 
 function BlogPostPage() {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
@@ -72,7 +72,7 @@ function BlogPostPage() {
     return (
       <Box sx={{ textAlign: 'center', py: 10 }}>
         <Typography variant="h4" gutterBottom>Post not found</Typography>
-        <Button variant="outlined" onClick={() => navigate('/blog')} startIcon={<ArrowBackIcon />}>
+        <Button variant="outlined" component={Link} to="/blog" startIcon={<ArrowBackIcon />}>
           Back to Blog
         </Button>
       </Box>
@@ -102,13 +102,15 @@ function BlogPostPage() {
           headline: post.title,
           description: post.summary,
           datePublished: post.date,
+          dateModified: post.updatedDate || post.date,
           authorName: author.name || 'The MIP Authors',
-          url: `https://elevenidllc.com/blog/${post.slug}`,
+          authorType: author.name ? 'Person' : 'Organization',
+          url: `https://elevenidllc.com/blog/${canonicalSlug}`,
         })}
       />
 
       {/* Back link */}
-      <Button startIcon={<ArrowBackIcon />} onClick={() => navigate('/blog')} sx={{ mb: 1 }}>
+      <Button component={Link} to="/blog" startIcon={<ArrowBackIcon />} sx={{ mb: 1 }}>
         All Posts
       </Button>
 
@@ -144,8 +146,9 @@ function BlogPostPage() {
           <Button
             variant="contained"
             color="warning"
+            component={Link}
+            to={`/blog/${canonicalSlug}`}
             endIcon={<ArrowForwardIcon />}
-            onClick={() => navigate(`/blog/${canonicalSlug}`)}
             sx={{ fontWeight: 700 }}
           >
             Read {canonicalPost.title}
@@ -174,7 +177,9 @@ function BlogPostPage() {
               size="small"
               variant="outlined"
               color="default"
-              onClick={() => navigate(`/blog?tag=${encodeURIComponent(tag)}`)}
+              clickable
+              component={Link}
+              to={buildBlogTagPath(tag)}
               sx={{ fontFamily: 'monospace', fontSize: '0.75rem' }}
             />
           ))}
@@ -188,9 +193,10 @@ function BlogPostPage() {
         {/* Author + date metadata row */}
         <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
           <Avatar
+            component={Link}
+            to={`/authors/${post.authorId}`}
             src={author.avatarImage}
-            sx={{ width: 40, height: 40, bgcolor: 'primary.main', fontSize: '0.85rem', cursor: 'pointer' }}
-            onClick={() => navigate(`/authors/${post.authorId}`)}
+            sx={{ width: 40, height: 40, bgcolor: 'primary.main', fontSize: '0.85rem', textDecoration: 'none' }}
           >
             {author.avatar || '?'}
           </Avatar>
@@ -198,13 +204,14 @@ function BlogPostPage() {
             <Typography
               variant="body2"
               fontWeight={600}
-              sx={{ cursor: 'pointer', '&:hover': { color: 'primary.main', textDecoration: 'underline' } }}
-              onClick={() => navigate(`/authors/${post.authorId}`)}
+              component={Link}
+              to={`/authors/${post.authorId}`}
+              sx={{ color: 'inherit', textDecoration: 'none', '&:hover': { color: 'primary.main', textDecoration: 'underline' } }}
             >
-              {author.name || post.authorId}{author.title ? ` · ${author.title}` : ''}{author.subtitle ? ` — ${author.subtitle}` : ''}
+              {author.name || post.authorId}{author.title ? ` | ${author.title}` : ''}{author.subtitle ? ` - ${author.subtitle}` : ''}
             </Typography>
             <Typography variant="caption" color="text.secondary">
-              {dateStr}{updatedStr && ` · Updated ${updatedStr}`} · {post.readTime} · {post.category}
+              {dateStr}{updatedStr && ` | Updated ${updatedStr}`} | {post.readTime} | {post.category}
             </Typography>
             {author.expertise && author.expertise.length > 0 && (
               <Box sx={{ display: 'flex', gap: 0.5, flexWrap: 'wrap', mt: 0.75 }}>
@@ -220,7 +227,7 @@ function BlogPostPage() {
       {/* Series navigation (top) */}
       {seriesInfo && (
         <Box sx={{ mb: 3 }}>
-          <SeriesNav seriesInfo={seriesInfo} navigate={navigate} />
+          <SeriesNav seriesInfo={seriesInfo} />
         </Box>
       )}
 
@@ -242,7 +249,7 @@ function BlogPostPage() {
       {/* AI authorship disclosure */}
       <AIDisclosureBanner />
 
-      {/* Continue Learning — protocol-aware next-step guidance */}
+      {/* Continue Learning - protocol-aware next-step guidance */}
       <ContinueLearning slug={slug} />
 
       {/* Author bio */}
@@ -250,9 +257,10 @@ function BlogPostPage() {
         <Paper variant="outlined" sx={{ p: 3, mt: 6, borderRadius: 2 }}>
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
             <Avatar
+              component={Link}
+              to={`/authors/${post.authorId}`}
               src={author.avatarImage}
-              sx={{ width: 48, height: 48, bgcolor: 'primary.main', fontSize: '1rem', flexShrink: 0, cursor: 'pointer' }}
-              onClick={() => navigate(`/authors/${post.authorId}`)}
+              sx={{ width: 48, height: 48, bgcolor: 'primary.main', fontSize: '1rem', flexShrink: 0, textDecoration: 'none' }}
             >
               {author.avatar}
             </Avatar>
@@ -260,13 +268,14 @@ function BlogPostPage() {
               <Typography
                 variant="subtitle1"
                 fontWeight={700}
-                sx={{ cursor: 'pointer', '&:hover': { color: 'primary.main' } }}
-                onClick={() => navigate(`/authors/${post.authorId}`)}
+                component={Link}
+                to={`/authors/${post.authorId}`}
+                sx={{ color: 'inherit', textDecoration: 'none', '&:hover': { color: 'primary.main' } }}
               >
                 {author.name}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                {author.title}{author.subtitle ? ` — ${author.subtitle}` : ''}
+                {author.title}{author.subtitle ? ` - ${author.subtitle}` : ''}
               </Typography>
               <Typography variant="body2" sx={{ mb: 1.5 }}>{author.bio}</Typography>
               {author.expertise && author.expertise.length > 0 && (
@@ -289,7 +298,7 @@ function BlogPostPage() {
       {/* Series navigation (bottom) */}
       {seriesInfo && (
         <Box sx={{ mt: 6 }}>
-          <SeriesNav seriesInfo={seriesInfo} navigate={navigate} />
+          <SeriesNav seriesInfo={seriesInfo} />
         </Box>
       )}
 
@@ -315,7 +324,8 @@ function BlogPostPage() {
                     }}
                   >
                     <CardActionArea
-                      onClick={() => navigate(`/blog/${related.slug}`)}
+                      component={Link}
+                      to={`/blog/${related.slug}`}
                       sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}
                     >
                       <CardContent sx={{ flexGrow: 1 }}>
@@ -332,7 +342,7 @@ function BlogPostPage() {
                           {related.summary}
                         </Typography>
                         <Typography variant="caption" color="text.secondary">
-                          {relatedAuthor.name || related.authorId} · {related.readTime}
+                          {relatedAuthor.name || related.authorId} | {related.readTime}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -351,10 +361,10 @@ function BlogPostPage() {
 
       {/* Footer nav */}
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
-        <Button variant="outlined" onClick={() => navigate('/blog')} startIcon={<ArrowBackIcon />}>
+        <Button variant="outlined" component={Link} to="/blog" startIcon={<ArrowBackIcon />}>
           All Posts
         </Button>
-        <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={() => navigate('/protocol')}>
+        <Button variant="contained" component={Link} to="/protocol" endIcon={<ArrowForwardIcon />}>
           Explore the Protocol
         </Button>
       </Box>
@@ -363,4 +373,3 @@ function BlogPostPage() {
 }
 
 export default BlogPostPage;
-

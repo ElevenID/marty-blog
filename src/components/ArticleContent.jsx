@@ -5,6 +5,7 @@
  *   - heading (with anchor ids)
  *   - paragraph (with inline protocol cross-links)
  *   - code (syntax-highlighted code blocks)
+ *   - resources (repo-backed external links)
  *
  * Protocol cross-links automatically detect references to protocol primitives,
  * series titles, and key concepts, turning them into clickable links to
@@ -13,11 +14,11 @@
 
 import { Fragment } from 'react';
 import { Box, Typography, Paper } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { headingToId } from './ArticleTableOfContents';
 
 /**
- * Protocol terms → canonical article slugs.
+ * Protocol terms -> canonical article slugs.
  * Ordered longest-first so "Presentation Policies" matches before "Policies".
  */
 const PROTOCOL_TERMS = [
@@ -95,7 +96,7 @@ function splitWithLinks(text, currentSlug) {
 /**
  * Renders a paragraph with protocol cross-links.
  */
-function LinkedParagraph({ text, currentSlug, navigate }) {
+function LinkedParagraph({ text, currentSlug }) {
   const parts = splitWithLinks(text, currentSlug);
 
   return (
@@ -105,22 +106,23 @@ function LinkedParagraph({ text, currentSlug, navigate }) {
           return <Fragment key={i}>{part}</Fragment>;
         }
         return (
-          <Typography
+          <Box
             key={i}
-            component="span"
-            onClick={() => navigate(`/blog/${part.slug}`)}
+            component={Link}
+            to={`/blog/${part.slug}`}
             sx={{
+              display: 'inline',
               color: 'primary.main',
               fontWeight: 600,
-              cursor: 'pointer',
+              textDecoration: 'none',
               borderBottom: '1px dotted',
               borderColor: 'primary.light',
-              transition: 'color 0.15s',
-              '&:hover': { color: 'primary.dark' },
+              transition: 'color 0.15s, border-color 0.15s',
+              '&:hover': { color: 'primary.dark', borderColor: 'primary.main' },
             }}
           >
             {part.term}
-          </Typography>
+          </Box>
         );
       })}
     </Typography>
@@ -200,12 +202,68 @@ function CodeBlock({ block }) {
   );
 }
 
+function ResourceList({ block }) {
+  return (
+    <Paper
+      elevation={0}
+      sx={{
+        my: 3,
+        p: 2.5,
+        borderRadius: 2,
+        border: '1px solid',
+        borderColor: 'primary.100',
+        bgcolor: 'grey.50',
+      }}
+    >
+      {block.title && (
+        <Typography
+          variant="overline"
+          sx={{ display: 'block', mb: 1, fontWeight: 800, letterSpacing: 1.4, fontSize: '0.65rem', color: 'primary.main' }}
+        >
+          {block.title}
+        </Typography>
+      )}
+      {block.intro && (
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.7 }}>
+          {block.intro}
+        </Typography>
+      )}
+      <Box sx={{ display: 'grid', gap: 1.5 }}>
+        {block.items.map((item) => (
+          <Box key={item.href}>
+            <Typography
+              component="a"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 0.75,
+                color: 'primary.main',
+                fontWeight: 700,
+                textDecoration: 'none',
+                '&:hover': { textDecoration: 'underline' },
+              }}
+            >
+              {item.label}
+            </Typography>
+            {item.note && (
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 0.35, lineHeight: 1.6 }}>
+                {item.note}
+              </Typography>
+            )}
+          </Box>
+        ))}
+      </Box>
+    </Paper>
+  );
+}
+
 /**
- * Main content renderer — replaces inline rendering in BlogPostPage.
+ * Main content renderer - replaces inline rendering in BlogPostPage.
  */
 function ArticleContent({ content, currentSlug }) {
-  const navigate = useNavigate();
-
   return (
     <>
       {content.map((block, idx) => {
@@ -227,13 +285,16 @@ function ArticleContent({ content, currentSlug }) {
           return <CodeBlock key={idx} block={block} />;
         }
 
+        if (block.type === 'resources') {
+          return <ResourceList key={idx} block={block} />;
+        }
+
         // Default: paragraph with protocol cross-links
         return (
           <LinkedParagraph
             key={idx}
             text={block.text}
             currentSlug={currentSlug}
-            navigate={navigate}
           />
         );
       })}

@@ -10,10 +10,10 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useParams, useNavigate } from 'react-router-dom';
 import { SEOHead } from '../seo';
-import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
-import { isBrowseVisibleArticleSlug } from '../data/articleMeta';
-
-const TODAY = new Date().toISOString().split('T')[0];
+import { personSchema } from '../seo/structuredData';
+import { BLOG_AUTHORS } from '../data/blogAuthors';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
 
 const CATEGORY_COLORS = {
   Announcement: 'primary',
@@ -40,8 +40,8 @@ function AuthorPage() {
     );
   }
 
-  const authorPosts = BLOG_POSTS
-    .filter((p) => p.authorId === authorId && p.date <= TODAY && isBrowseVisibleArticleSlug(p.slug))
+  const authorPosts = getBrowseVisiblePosts(BLOG_POST_SUMMARIES)
+    .filter((p) => p.authorId === authorId)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   const characterProfile = author.characterProfile;
   const handoffAuthors = (characterProfile?.handoffAuthors || [])
@@ -51,10 +51,19 @@ function AuthorPage() {
   return (
     <Box>
       <SEOHead
-        title={`${author.name} — ${author.title}`}
+        title={`${author.name} - ${author.title}`}
         description={author.bio}
         canonicalPath={`/authors/${authorId}`}
         keywords={[author.name, author.title, 'MIP', 'identity protocol']}
+        ogType="profile"
+        structuredData={personSchema({
+          name: author.name,
+          description: author.bio,
+          url: `https://elevenidllc.com/authors/${authorId}`,
+          jobTitle: `${author.title}${author.subtitle ? ` - ${author.subtitle}` : ''}`,
+          image: author.avatarImage ? `https://elevenidllc.com${author.avatarImage}` : null,
+          knowsAbout: author.expertise || [],
+        })}
       />
 
       <Button startIcon={<ArrowBackIcon />} onClick={() => navigate('/authors')} sx={{ mb: 3 }}>
@@ -92,7 +101,7 @@ function AuthorPage() {
               {author.name}
             </Typography>
             <Typography variant="h6" color="primary.dark" gutterBottom sx={{ fontWeight: 600 }}>
-              {author.title}{author.subtitle ? ` — ${author.subtitle}` : ''}
+              {author.title}{author.subtitle ? ` - ${author.subtitle}` : ''}
             </Typography>
             {characterProfile?.archetype && (
               <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', mb: 1.5 }}>
@@ -153,7 +162,7 @@ function AuthorPage() {
                 variant="h6"
                 sx={{ lineHeight: 1.5, fontStyle: 'italic', fontWeight: 700, mb: 2.5, maxWidth: 760 }}
               >
-                “{characterProfile.coreQuestion}”
+                "{characterProfile.coreQuestion}"
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8, mb: 2 }}>
                 {characterProfile.worldview}
@@ -307,7 +316,7 @@ function AuthorPage() {
                       </Typography>
                       <Divider sx={{ mb: 1.5 }} />
                       <Typography variant="caption" color="text.secondary">
-                        {dateStr} · {post.readTime}
+                        {dateStr} | {post.readTime}
                       </Typography>
                     </CardContent>
                   </CardActionArea>

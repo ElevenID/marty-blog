@@ -9,6 +9,13 @@ export { BLOG_AUTHORS, BLOG_AUTHOR_CHARACTER_PROFILES } from './blogAuthors';
 export { BLOG_POSTS } from './blogPosts';
 export { BLOG_ROADMAP, AUTHOR_AVATAR_PROMPTS } from './blogRoadmap';
 export {
+  HANDBOOK_PARTS,
+  HANDBOOK_ARTICLE_SLUGS,
+  HANDBOOK_ARTICLE_CONTEXT_BY_SLUG,
+  isHandbookArticleSlug,
+  getHandbookArticleNavigation,
+} from './handbookContent';
+export {
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES,
   GUIDE_ARTICLE_MAP,

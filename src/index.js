@@ -1,5 +1,5 @@
 /**
- * @marty/blog — package entry point
+ * @marty/blog - package entry point
  *
  * Exports all blog components and data for use in marty-ui (or any host app).
  *
@@ -9,7 +9,7 @@
  *   import { BLOG_POSTS, BLOG_AUTHORS, GUIDE_CHAPTERS } from '@marty/blog/data';
  */
 
-// ── Page components ────────────────────────────────────────────────────────────
+// Page components
 export { default as BlogPage } from './components/BlogPage';
 export { default as BlogPostPage } from './components/BlogPostPage';
 export { default as AuthorsPage } from './components/AuthorsPage';
@@ -17,13 +17,13 @@ export { default as AuthorPage } from './components/AuthorPage';
 export { default as ProtocolGuidePage } from './components/ProtocolGuidePage';
 export { default as FoundationsPage } from './components/FoundationsPage';
 
-// ── Shared components ──────────────────────────────────────────────────────────
+// Shared components
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as ReadingProgressBar } from './components/ReadingProgressBar';
 export { default as AIDisclosureBanner } from './components/AIDisclosureBanner';
 export { default as ProductBridgeCTA } from './components/ProductBridgeCTA';
 
-// ── Data ───────────────────────────────────────────────────────────────────────
+// Data
 export {
   BLOG_AUTHORS,
   BLOG_POSTS,
@@ -46,6 +46,12 @@ export {
   DIFFICULTY_COLORS,
 } from './data';
 
-// ── SEO utilities (available for the host app if needed) ──────────────────────
+// SEO utilities (available for the host app if needed)
 export { default as SEOHead } from './seo/SEOHead';
-export { articleSchema, organizationSchema, softwareApplicationSchema } from './seo/structuredData';
+export {
+  articleSchema,
+  collectionPageSchema,
+  organizationSchema,
+  personSchema,
+  softwareApplicationSchema,
+} from './seo/structuredData';

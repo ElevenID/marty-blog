@@ -1,3 +1,5 @@
+import { normalizeBlogData } from '../utils/blogText';
+
 /**
  * Editorial Publication Map and Author Avatar Prompts
  *
@@ -6,7 +8,7 @@
  */
 
 // Legacy export name retained for compatibility with existing consumers.
-export const BLOG_ROADMAP = [
+export const BLOG_ROADMAP = normalizeBlogData([
   {
     phase: 1,
     title: 'Foundations',
@@ -25,7 +27,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 2,
     title: 'Standards',
-    description: 'International identity standards that MIP builds upon — passports, driving licenses, and government PKI.',
+    description: 'International identity standards that MIP builds upon - passports, driving licenses, and government PKI.',
     posts: [
       { order: 9, slug: 'how-passport-pki-works', title: 'How Passport PKI Works', authorId: 'aiko-tanaka', category: 'Technical', topic: 'Passport PKI' },
       { order: 10, slug: 'understanding-csca-certificates', title: 'Understanding CSCA Certificates', authorId: 'aiko-tanaka', category: 'Technical', topic: 'Passport PKI' },
@@ -48,7 +50,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 4,
     title: 'Wallets',
-    description: 'Digital identity wallets — how users store, manage, and present credentials from their devices.',
+    description: 'Digital identity wallets - how users store, manage, and present credentials from their devices.',
     posts: [
       { order: 18, slug: 'what-is-a-digital-identity-wallet', title: 'What Is a Digital Identity Wallet', authorId: 'sofia-rahman', category: 'Technical', topic: 'Wallet Architecture' },
       { order: 19, slug: 'device-binding-and-credential-security', title: 'Device Binding and Credential Security', authorId: 'sofia-rahman', category: 'Technical', topic: 'Device Security' },
@@ -59,7 +61,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 5,
     title: 'Privacy',
-    description: 'Privacy-preserving identity — data minimization, selective disclosure, and regulatory alignment.',
+    description: 'Privacy-preserving identity - data minimization, selective disclosure, and regulatory alignment.',
     posts: [
       { order: 22, slug: 'why-identity-systems-must-protect-privacy', title: 'Why Identity Systems Must Protect Privacy', authorId: 'nora-patel', category: 'Business', topic: 'Privacy Principles' },
       { order: 23, slug: 'data-minimization-in-identity', title: 'Data Minimization in Identity', authorId: 'nora-patel', category: 'Technical', topic: 'Data Minimization' },
@@ -70,7 +72,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 6,
     title: 'Governance',
-    description: 'Identity governance — how organizations define rules, permissions, and trust policies.',
+    description: 'Identity governance - how organizations define rules, permissions, and trust policies.',
     posts: [
       { order: 26, slug: 'identity-governance-models', title: 'Identity Governance Models', authorId: 'elena-kovacs', category: 'Business', topic: 'Governance' },
       { order: 27, slug: 'rbac-vs-abac', title: 'RBAC vs ABAC', authorId: 'elena-kovacs', category: 'Technical', topic: 'Access Control' },
@@ -81,7 +83,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 7,
     title: 'Trust Infrastructure',
-    description: 'Large-scale trust systems — registries, federation, and verifier infrastructure.',
+    description: 'Large-scale trust systems - registries, federation, and verifier infrastructure.',
     posts: [
       { order: 30, slug: 'trust-registries-explained', title: 'Trust Registries Explained', authorId: 'victor-leclerc', category: 'Technical', topic: 'Trust Registries' },
       { order: 31, slug: 'federation-in-identity-systems', title: 'Federation in Identity Systems', authorId: 'victor-leclerc', category: 'Technical', topic: 'Federation' },
@@ -92,7 +94,7 @@ export const BLOG_ROADMAP = [
   {
     phase: 8,
     title: 'MIP',
-    description: 'The Marty Identity Protocol itself — primitives, architecture, and how everything connects.',
+    description: 'The Marty Identity Protocol itself - primitives, architecture, and how everything connects.',
     posts: [
       { order: 34, slug: 'why-the-marty-protocol-exists', title: 'Why the Marty Protocol Exists', authorId: 'daniel-ortega', category: 'Announcement', topic: 'Protocol Overview' },
       { order: 35, slug: 'the-marty-identity-model', title: 'The Marty Identity Model', authorId: 'daniel-ortega', category: 'Technical', topic: 'Protocol Architecture' },
@@ -103,7 +105,7 @@ export const BLOG_ROADMAP = [
       { order: 40, slug: 'how-everything-works-together', title: 'How Everything Works Together', authorId: 'daniel-ortega', category: 'Technical', topic: 'Protocol Synthesis' },
     ],
   },
-];
+]);
 
 // Persona avatar prompt descriptions for generating consistent illustrated portraits
 export const AUTHOR_AVATAR_PROMPTS = {

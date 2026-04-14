@@ -47,7 +47,7 @@ const EXPECTED_IMPORTS = [
   'react-router-dom',
   'react/jsx-runtime',
   '@mui/material',
-  '@mui/icons-material/ArrowBack',   // sub-path icon import — must be external not inlined
+  '@mui/icons-material/ArrowBack',   // sub-path icon import ΓÇö must be external not inlined
   '@mui/icons-material/ArrowForward',
 ];
 
