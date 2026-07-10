@@ -1,4 +1,4 @@
-import { normalizeBlogData } from '../utils/blogText';
+import { normalizeBlogData } from '../utils/blogText.js';
 
 // Lightweight browse-card fields for author routes.
 const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
@@ -6,10 +6,10 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "why-identity-needs-a-protocol",
     "title": "Why Identity Needs a Protocol",
-    "summary": "Identity is still being sold as a platform problem. That framing makes lock-in, repeated verification, and rising costs look normal. A protocol changes the category by turning identity into reusable infrastructure instead of a metered dependency.",
+    "summary": "Identity is still being sold as a platform problem. Cryptography proves facts, but protocol placement determines whether verified state can move across implementations instead of staying trapped inside one vendor boundary.",
     "authorId": "daniel-ortega",
     "date": "2025-01-06",
-    "updatedDate": "2026-04-05",
+    "updatedDate": "2026-06-28",
     "category": "Business",
     "readTime": "7 min read"
   },
@@ -21,27 +21,27 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-01-12",
     "updatedDate": "2026-04-11",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "business-case-for-credential-portability",
     "title": "The Business Case for Credential Portability",
-    "summary": "Vendor lock-in costs enterprises millions in re-verification. Portable credentials built on open standards eliminate that waste.",
+    "summary": "Vendor lock-in can turn identity verification into repeated spend. Portable credentials built on open standards help reduce duplicate checks across systems.",
     "authorId": "aiko-tanaka",
     "date": "2025-01-18",
     "updatedDate": "2026-04-17",
     "category": "Business",
-    "readTime": "6 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "cryptographic-trust-anchors-primer",
     "title": "Cryptographic Trust Anchors: A Primer for Identity Systems",
-    "summary": "X.509 chains, CSCA/DS certificates, and DID documents - the cryptographic foundations that make verifiable credentials actually verifiable.",
+    "summary": "X.509 chains, CSCA/DS certificates, and DID documents are cryptographic foundations that help make verifiable credentials actually verifiable.",
     "authorId": "marcus-vale",
     "date": "2025-01-23",
     "updatedDate": "2026-04-22",
     "category": "Cryptography",
-    "readTime": "9 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "credential-templates-designing-what-gets-issued",
@@ -51,27 +51,27 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-01-29",
     "updatedDate": "2026-04-28",
     "category": "Technical",
-    "readTime": "8 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "presentation-policies-minimum-disclosure",
     "title": "Presentation Policies and the Art of Minimum Disclosure",
-    "summary": "Verifiers shouldn't ask for everything. Presentation Policies formalize exactly what's needed - and nothing more.",
+    "summary": "Verifiers should not ask for everything. Presentation Policies define exactly what is needed, and nothing more.",
     "authorId": "nora-patel",
     "date": "2025-02-04",
     "updatedDate": "2026-05-04",
     "category": "Cryptography",
-    "readTime": "7 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "eudi-wallet-readiness",
     "title": "EUDI Wallet Readiness: What the Regulation Actually Requires",
-    "summary": "The EU Digital Identity Wallet regulation is coming. Here's what it means for your identity infrastructure - and how protocol-first design helps.",
+    "summary": "The EU Digital Identity Wallet rollout is moving toward the end-of-2026 deadline. What it means for identity infrastructure and protocol-first design.",
     "authorId": "aiko-tanaka",
     "date": "2025-02-10",
     "updatedDate": "2026-05-10",
     "category": "Business",
-    "readTime": "6 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "deployment-profiles-from-design-to-production",
@@ -81,37 +81,37 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-02-16",
     "updatedDate": "2026-05-15",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "zero-knowledge-predicates-identity",
     "title": "Zero-Knowledge Predicates in Identity: What, Why, and How",
-    "summary": "Proving you're over 21 without revealing your birthday. ZK predicates in MIP enable privacy-preserving identity verification at protocol level.",
+    "summary": "Proving you're over 21 without revealing your birthday. MIP's predicate-aware policies keep identity verification focused on the bounded question.",
     "authorId": "nora-patel",
     "date": "2025-02-21",
     "updatedDate": "2026-05-21",
     "category": "Cryptography",
-    "readTime": "10 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "flows-orchestrating-identity-lifecycle",
     "title": "Flows: Orchestrating the Identity Lifecycle",
-    "summary": "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive - the user-facing product that ties everything together.",
+    "summary": "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive: the user-visible lifecycle that ties trust, credential, presentation, and deployment rules together.",
     "authorId": "daniel-ortega",
     "date": "2025-02-27",
     "updatedDate": "2026-05-27",
     "category": "Technical",
-    "readTime": "8 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "compliance-profiles-bridging-regulation",
     "title": "Compliance Profiles: Bridging Standards and Regulation",
-    "summary": "ICAO, AAMVA, EUDI, Open Badges - every standard has its own rules. Compliance Profiles map them to MIP primitives so you configure once and comply everywhere.",
+    "summary": "ICAO, AAMVA, EUDI, Open Badges - every framework brings its own rules. Compliance Profiles map those requirements to MIP primitives so teams can review, configure, and update them deliberately.",
     "authorId": "elena-kovacs",
     "date": "2025-03-05",
     "updatedDate": "2026-06-02",
     "category": "Business",
-    "readTime": "6 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "sd-jwt-selective-disclosure-deep-dive",
@@ -121,27 +121,27 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-03-11",
     "updatedDate": "2026-06-08",
     "category": "Cryptography",
-    "readTime": "9 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "cedar-policies-for-identity-governance",
     "title": "Writing Cedar Policies for Identity Governance",
-    "summary": "A practical guide to writing Cedar authorization policies for MIP - from basic access control to complex approval workflows.",
+    "summary": "MIP uses Cedar PolicySets to keep access control, credential verification, and approval rules inspectable, validated, and governed before they reach production.",
     "authorId": "elena-kovacs",
     "date": "2025-03-17",
     "updatedDate": "2026-06-13",
     "category": "Technical",
-    "readTime": "10 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "introducing-mip",
     "title": "Introducing the Marty Identity Protocol",
-    "summary": "Today we open-source MIP - a vendor-neutral specification for cryptographically verifiable digital identity management. Five primitives, one protocol, zero lock-in.",
+    "summary": "MIP is a draft, open-source specification for cryptographically verifiable digital identity management: five core primitives, explicit governance, and portable implementation surfaces.",
     "authorId": "daniel-ortega",
     "date": "2025-03-22",
-    "updatedDate": "2026-06-19",
+    "updatedDate": "2026-07-10",
     "category": "Announcement",
-    "readTime": "5 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "mip-json-schemas-walkthrough",
@@ -151,7 +151,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-03-28",
     "updatedDate": "2026-06-25",
     "category": "Technical",
-    "readTime": "8 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "post-quantum-readiness-in-identity",
@@ -161,7 +161,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-04-03",
     "updatedDate": "2026-07-01",
     "category": "Cryptography",
-    "readTime": "8 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "building-trust-registries-at-scale",
@@ -171,17 +171,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-04-09",
     "updatedDate": "2026-07-07",
     "category": "Business",
-    "readTime": "6 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "offline-verification-design-patterns",
     "title": "Offline Verification: Design Patterns for Disconnected Environments",
-    "summary": "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns maintain security without connectivity.",
+    "summary": "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns make cache freshness, revocation posture, and failure behavior explicit when connectivity drops.",
     "authorId": "sofia-rahman",
     "date": "2025-04-15",
     "updatedDate": "2026-07-12",
     "category": "Technical",
-    "readTime": "8 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "holder-binding-beyond-biometrics",
@@ -191,7 +191,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-04-20",
     "updatedDate": "2026-07-18",
     "category": "Cryptography",
-    "readTime": "7 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "mip-and-open-badges-education-credentials",
@@ -201,7 +201,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-04-26",
     "updatedDate": "2026-07-24",
     "category": "Business",
-    "readTime": "5 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "conformance-testing-for-implementers",
@@ -211,7 +211,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-05-02",
     "updatedDate": "2026-07-30",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "revocation-strategies-compared",
@@ -221,7 +221,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-05-08",
     "updatedDate": "2026-08-04",
     "category": "Cryptography",
-    "readTime": "9 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "five-primitives-in-one-picture",

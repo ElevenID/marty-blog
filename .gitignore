@@ -1,0 +1,13 @@
+node_modules/
+.vite/
+.env
+.env.*
+!.env.example
+
+# Local test and build noise
+coverage/
+.nyc_output/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

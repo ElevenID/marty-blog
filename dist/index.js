@@ -1,31 +1,31 @@
-import { jsxs as n, jsx as e, Fragment as He } from "react/jsx-runtime";
-import { useEffect as Pe, useState as ne, useMemo as Y, useCallback as aa, Fragment as ra, useRef as ia } from "react";
-import { Paper as V, Typography as o, Box as l, Button as _, List as sa, ListItem as na, ListItemButton as _t, ListItemIcon as oa, ListItemText as Rt, TextField as la, InputAdornment as ut, IconButton as _e, useTheme as Ne, useMediaQuery as Ge, Collapse as zt, Tooltip as ca, Grid as U, Chip as T, Card as Ae, CardActionArea as Ce, CardContent as Se, Avatar as ke, Divider as ee, Stepper as ha, Step as da, StepButton as pa, StepLabel as mt, Accordion as ua, AccordionSummary as ma, AccordionDetails as ya, LinearProgress as yt } from "@mui/material";
-import st from "@mui/icons-material/School";
+import { jsxs as o, jsx as e, Fragment as Le } from "react/jsx-runtime";
+import { useEffect as Oe, useState as ce, useMemo as J, useCallback as ya, Fragment as ga, useRef as fa } from "react";
+import { Paper as F, Typography as l, Box as c, Button as z, List as va, ListItem as ba, ListItemButton as Ft, ListItemIcon as wa, ListItemText as Ut, TextField as xa, InputAdornment as wt, IconButton as Ue, useTheme as Xe, useMediaQuery as Qe, Collapse as Ht, Tooltip as Ta, Grid as G, Chip as T, Card as Me, CardActionArea as qe, CardContent as Ee, Avatar as Ce, Divider as se, LinearProgress as xt, Stepper as ka, Step as Ia, StepButton as Pa, StepLabel as Tt, Accordion as Aa, AccordionSummary as Ca, AccordionDetails as Da } from "@mui/material";
+import ut from "@mui/icons-material/School";
 import Q from "@mui/icons-material/ArrowForward";
-import { Link as k, useNavigate as Ke, useSearchParams as ga, useParams as nt } from "react-router-dom";
-import jt from "@mui/icons-material/Code";
-import Je from "@mui/icons-material/MenuBook";
-import fa from "@mui/icons-material/PlayCircleOutline";
-import va from "@mui/icons-material/Security";
-import ba from "@mui/icons-material/Description";
-import wa from "@mui/icons-material/Policy";
-import xa from "@mui/icons-material/CloudUpload";
-import Bt from "@mui/icons-material/AccountTree";
-import gt from "@mui/icons-material/Search";
-import Ta from "@mui/icons-material/Close";
-import ka from "@mui/icons-material/RssFeed";
-import Ia from "@mui/icons-material/Groups";
-import ot from "@mui/icons-material/ExpandMore";
-import Pa from "@mui/icons-material/ExpandLess";
+import { Link as k, useNavigate as Ze, useParams as et, useSearchParams as Sa } from "react-router-dom";
+import Gt from "@mui/icons-material/Code";
+import Ve from "@mui/icons-material/MenuBook";
+import Wa from "@mui/icons-material/PlayCircleOutline";
+import Oa from "@mui/icons-material/Security";
+import Ma from "@mui/icons-material/Description";
+import qa from "@mui/icons-material/Policy";
+import Ea from "@mui/icons-material/CloudUpload";
+import Nt from "@mui/icons-material/AccountTree";
+import kt from "@mui/icons-material/Search";
+import za from "@mui/icons-material/Close";
+import _a from "@mui/icons-material/RssFeed";
+import Ra from "@mui/icons-material/Groups";
+import mt from "@mui/icons-material/ExpandMore";
+import ja from "@mui/icons-material/ExpandLess";
 import X from "@mui/icons-material/ArrowBack";
-import Aa from "@mui/icons-material/CheckCircle";
-import Ca from "@mui/icons-material/NavigateNext";
-import Sa from "@mui/icons-material/SmartToyOutlined";
-function Da(t) {
+import Ba from "@mui/icons-material/CheckCircle";
+import La from "@mui/icons-material/NavigateNext";
+import Va from "@mui/icons-material/SmartToyOutlined";
+function Fa(t) {
   return t && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") ? t.default : t;
 }
-var it = { exports: {} }, Re = { exports: {} }, R = {};
+var ht = { exports: {} }, He = { exports: {} }, B = {};
 /** @license React v16.13.1
  * react-is.production.min.js
  *
@@ -34,73 +34,73 @@ var it = { exports: {} }, Re = { exports: {} }, R = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var ft;
-function Oa() {
-  if (ft) return R;
-  ft = 1;
-  var t = typeof Symbol == "function" && Symbol.for, i = t ? Symbol.for("react.element") : 60103, r = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, c = t ? Symbol.for("react.profiler") : 60114, u = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, d = t ? Symbol.for("react.async_mode") : 60111, p = t ? Symbol.for("react.concurrent_mode") : 60111, y = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, w = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, x = t ? Symbol.for("react.lazy") : 60116, D = t ? Symbol.for("react.block") : 60121, M = t ? Symbol.for("react.fundamental") : 60117, N = t ? Symbol.for("react.responder") : 60118, J = t ? Symbol.for("react.scope") : 60119;
-  function L(v) {
-    if (typeof v == "object" && v !== null) {
-      var G = v.$$typeof;
-      switch (G) {
-        case i:
-          switch (v = v.type, v) {
-            case d:
+var It;
+function Ua() {
+  if (It) return B;
+  It = 1;
+  var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, v = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, U = t ? Symbol.for("react.responder") : 60118, N = t ? Symbol.for("react.scope") : 60119;
+  function I(f) {
+    if (typeof f == "object" && f !== null) {
+      var ee = f.$$typeof;
+      switch (ee) {
+        case r:
+          switch (f = f.type, f) {
             case p:
+            case u:
             case a:
-            case c:
+            case n:
             case s:
             case m:
-              return v;
+              return f;
             default:
-              switch (v = v && v.$$typeof, v) {
+              switch (f = f && f.$$typeof, f) {
                 case h:
-                case y:
-                case x:
+                case g:
+                case _:
                 case O:
-                case u:
-                  return v;
+                case d:
+                  return f;
                 default:
-                  return G;
+                  return ee;
               }
           }
-        case r:
-          return G;
+        case i:
+          return ee;
       }
     }
   }
-  function F(v) {
-    return L(v) === p;
+  function j(f) {
+    return I(f) === u;
   }
-  return R.AsyncMode = d, R.ConcurrentMode = p, R.ContextConsumer = h, R.ContextProvider = u, R.Element = i, R.ForwardRef = y, R.Fragment = a, R.Lazy = x, R.Memo = O, R.Portal = r, R.Profiler = c, R.StrictMode = s, R.Suspense = m, R.isAsyncMode = function(v) {
-    return F(v) || L(v) === d;
-  }, R.isConcurrentMode = F, R.isContextConsumer = function(v) {
-    return L(v) === h;
-  }, R.isContextProvider = function(v) {
-    return L(v) === u;
-  }, R.isElement = function(v) {
-    return typeof v == "object" && v !== null && v.$$typeof === i;
-  }, R.isForwardRef = function(v) {
-    return L(v) === y;
-  }, R.isFragment = function(v) {
-    return L(v) === a;
-  }, R.isLazy = function(v) {
-    return L(v) === x;
-  }, R.isMemo = function(v) {
-    return L(v) === O;
-  }, R.isPortal = function(v) {
-    return L(v) === r;
-  }, R.isProfiler = function(v) {
-    return L(v) === c;
-  }, R.isStrictMode = function(v) {
-    return L(v) === s;
-  }, R.isSuspense = function(v) {
-    return L(v) === m;
-  }, R.isValidElementType = function(v) {
-    return typeof v == "string" || typeof v == "function" || v === a || v === p || v === c || v === s || v === m || v === w || typeof v == "object" && v !== null && (v.$$typeof === x || v.$$typeof === O || v.$$typeof === u || v.$$typeof === h || v.$$typeof === y || v.$$typeof === M || v.$$typeof === N || v.$$typeof === J || v.$$typeof === D);
-  }, R.typeOf = L, R;
+  return B.AsyncMode = p, B.ConcurrentMode = u, B.ContextConsumer = h, B.ContextProvider = d, B.Element = r, B.ForwardRef = g, B.Fragment = a, B.Lazy = _, B.Memo = O, B.Portal = i, B.Profiler = n, B.StrictMode = s, B.Suspense = m, B.isAsyncMode = function(f) {
+    return j(f) || I(f) === p;
+  }, B.isConcurrentMode = j, B.isContextConsumer = function(f) {
+    return I(f) === h;
+  }, B.isContextProvider = function(f) {
+    return I(f) === d;
+  }, B.isElement = function(f) {
+    return typeof f == "object" && f !== null && f.$$typeof === r;
+  }, B.isForwardRef = function(f) {
+    return I(f) === g;
+  }, B.isFragment = function(f) {
+    return I(f) === a;
+  }, B.isLazy = function(f) {
+    return I(f) === _;
+  }, B.isMemo = function(f) {
+    return I(f) === O;
+  }, B.isPortal = function(f) {
+    return I(f) === i;
+  }, B.isProfiler = function(f) {
+    return I(f) === n;
+  }, B.isStrictMode = function(f) {
+    return I(f) === s;
+  }, B.isSuspense = function(f) {
+    return I(f) === m;
+  }, B.isValidElementType = function(f) {
+    return typeof f == "string" || typeof f == "function" || f === a || f === u || f === n || f === s || f === m || f === v || typeof f == "object" && f !== null && (f.$$typeof === _ || f.$$typeof === O || f.$$typeof === d || f.$$typeof === h || f.$$typeof === g || f.$$typeof === R || f.$$typeof === U || f.$$typeof === N || f.$$typeof === x);
+  }, B.typeOf = I, B;
 }
-var z = {};
+var L = {};
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -109,193 +109,193 @@ var z = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var vt;
-function Ma() {
-  return vt || (vt = 1, process.env.NODE_ENV !== "production" && function() {
-    var t = typeof Symbol == "function" && Symbol.for, i = t ? Symbol.for("react.element") : 60103, r = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, c = t ? Symbol.for("react.profiler") : 60114, u = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, d = t ? Symbol.for("react.async_mode") : 60111, p = t ? Symbol.for("react.concurrent_mode") : 60111, y = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, w = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, x = t ? Symbol.for("react.lazy") : 60116, D = t ? Symbol.for("react.block") : 60121, M = t ? Symbol.for("react.fundamental") : 60117, N = t ? Symbol.for("react.responder") : 60118, J = t ? Symbol.for("react.scope") : 60119;
-    function L(f) {
-      return typeof f == "string" || typeof f == "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      f === a || f === p || f === c || f === s || f === m || f === w || typeof f == "object" && f !== null && (f.$$typeof === x || f.$$typeof === O || f.$$typeof === u || f.$$typeof === h || f.$$typeof === y || f.$$typeof === M || f.$$typeof === N || f.$$typeof === J || f.$$typeof === D);
+var Pt;
+function Ha() {
+  return Pt || (Pt = 1, process.env.NODE_ENV !== "production" && function() {
+    var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, v = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, U = t ? Symbol.for("react.responder") : 60118, N = t ? Symbol.for("react.scope") : 60119;
+    function I(b) {
+      return typeof b == "string" || typeof b == "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+      b === a || b === u || b === n || b === s || b === m || b === v || typeof b == "object" && b !== null && (b.$$typeof === _ || b.$$typeof === O || b.$$typeof === d || b.$$typeof === h || b.$$typeof === g || b.$$typeof === R || b.$$typeof === U || b.$$typeof === N || b.$$typeof === x);
     }
-    function F(f) {
-      if (typeof f == "object" && f !== null) {
-        var se = f.$$typeof;
-        switch (se) {
-          case i:
-            var Ee = f.type;
-            switch (Ee) {
-              case d:
+    function j(b) {
+      if (typeof b == "object" && b !== null) {
+        var le = b.$$typeof;
+        switch (le) {
+          case r:
+            var Fe = b.type;
+            switch (Fe) {
               case p:
+              case u:
               case a:
-              case c:
+              case n:
               case s:
               case m:
-                return Ee;
+                return Fe;
               default:
-                var pt = Ee && Ee.$$typeof;
-                switch (pt) {
+                var bt = Fe && Fe.$$typeof;
+                switch (bt) {
                   case h:
-                  case y:
-                  case x:
+                  case g:
+                  case _:
                   case O:
-                  case u:
-                    return pt;
+                  case d:
+                    return bt;
                   default:
-                    return se;
+                    return le;
                 }
             }
-          case r:
-            return se;
+          case i:
+            return le;
         }
       }
     }
-    var v = d, G = p, pe = h, Oe = u, j = i, te = y, ae = a, K = x, Me = O, fe = r, $e = c, ie = s, ue = m, qe = !1;
-    function Ye(f) {
-      return qe || (qe = !0, console.warn("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")), g(f) || F(f) === d;
+    var f = p, ee = u, _e = h, H = d, K = r, ge = g, xe = a, he = _, Re = O, ne = i, je = n, te = s, P = m, ae = !1;
+    function oe(b) {
+      return ae || (ae = !0, console.warn("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")), y(b) || j(b) === p;
     }
-    function g(f) {
-      return F(f) === p;
+    function y(b) {
+      return j(b) === u;
     }
-    function b(f) {
-      return F(f) === h;
+    function w(b) {
+      return j(b) === h;
     }
-    function S(f) {
-      return F(f) === u;
+    function W(b) {
+      return j(b) === d;
     }
-    function A(f) {
-      return typeof f == "object" && f !== null && f.$$typeof === i;
+    function D(b) {
+      return typeof b == "object" && b !== null && b.$$typeof === r;
     }
-    function I(f) {
-      return F(f) === y;
+    function A(b) {
+      return j(b) === g;
     }
-    function W(f) {
-      return F(f) === a;
+    function M(b) {
+      return j(b) === a;
     }
-    function P(f) {
-      return F(f) === x;
+    function C(b) {
+      return j(b) === _;
     }
-    function C(f) {
-      return F(f) === O;
+    function S(b) {
+      return j(b) === O;
     }
-    function q(f) {
-      return F(f) === r;
+    function q(b) {
+      return j(b) === i;
     }
-    function B(f) {
-      return F(f) === c;
+    function V(b) {
+      return j(b) === n;
     }
-    function E(f) {
-      return F(f) === s;
+    function E(b) {
+      return j(b) === s;
     }
-    function $(f) {
-      return F(f) === m;
+    function Y(b) {
+      return j(b) === m;
     }
-    z.AsyncMode = v, z.ConcurrentMode = G, z.ContextConsumer = pe, z.ContextProvider = Oe, z.Element = j, z.ForwardRef = te, z.Fragment = ae, z.Lazy = K, z.Memo = Me, z.Portal = fe, z.Profiler = $e, z.StrictMode = ie, z.Suspense = ue, z.isAsyncMode = Ye, z.isConcurrentMode = g, z.isContextConsumer = b, z.isContextProvider = S, z.isElement = A, z.isForwardRef = I, z.isFragment = W, z.isLazy = P, z.isMemo = C, z.isPortal = q, z.isProfiler = B, z.isStrictMode = E, z.isSuspense = $, z.isValidElementType = L, z.typeOf = F;
-  }()), z;
+    L.AsyncMode = f, L.ConcurrentMode = ee, L.ContextConsumer = _e, L.ContextProvider = H, L.Element = K, L.ForwardRef = ge, L.Fragment = xe, L.Lazy = he, L.Memo = Re, L.Portal = ne, L.Profiler = je, L.StrictMode = te, L.Suspense = P, L.isAsyncMode = oe, L.isConcurrentMode = y, L.isContextConsumer = w, L.isContextProvider = W, L.isElement = D, L.isForwardRef = A, L.isFragment = M, L.isLazy = C, L.isMemo = S, L.isPortal = q, L.isProfiler = V, L.isStrictMode = E, L.isSuspense = Y, L.isValidElementType = I, L.typeOf = j;
+  }()), L;
 }
-var bt;
-function Lt() {
-  return bt || (bt = 1, process.env.NODE_ENV === "production" ? Re.exports = Oa() : Re.exports = Ma()), Re.exports;
+var At;
+function Kt() {
+  return At || (At = 1, process.env.NODE_ENV === "production" ? He.exports = Ua() : He.exports = Ha()), He.exports;
 }
 /*
 object-assign
 (c) Sindre Sorhus
 @license MIT
 */
-var Xe, wt;
-function Wa() {
-  if (wt) return Xe;
-  wt = 1;
-  var t = Object.getOwnPropertySymbols, i = Object.prototype.hasOwnProperty, r = Object.prototype.propertyIsEnumerable;
-  function a(c) {
-    if (c == null)
+var at, Ct;
+function Ga() {
+  if (Ct) return at;
+  Ct = 1;
+  var t = Object.getOwnPropertySymbols, r = Object.prototype.hasOwnProperty, i = Object.prototype.propertyIsEnumerable;
+  function a(n) {
+    if (n == null)
       throw new TypeError("Object.assign cannot be called with null or undefined");
-    return Object(c);
+    return Object(n);
   }
   function s() {
     try {
       if (!Object.assign)
         return !1;
-      var c = new String("abc");
-      if (c[5] = "de", Object.getOwnPropertyNames(c)[0] === "5")
+      var n = new String("abc");
+      if (n[5] = "de", Object.getOwnPropertyNames(n)[0] === "5")
         return !1;
-      for (var u = {}, h = 0; h < 10; h++)
-        u["_" + String.fromCharCode(h)] = h;
-      var d = Object.getOwnPropertyNames(u).map(function(y) {
-        return u[y];
+      for (var d = {}, h = 0; h < 10; h++)
+        d["_" + String.fromCharCode(h)] = h;
+      var p = Object.getOwnPropertyNames(d).map(function(g) {
+        return d[g];
       });
-      if (d.join("") !== "0123456789")
+      if (p.join("") !== "0123456789")
         return !1;
-      var p = {};
-      return "abcdefghijklmnopqrst".split("").forEach(function(y) {
-        p[y] = y;
-      }), Object.keys(Object.assign({}, p)).join("") === "abcdefghijklmnopqrst";
+      var u = {};
+      return "abcdefghijklmnopqrst".split("").forEach(function(g) {
+        u[g] = g;
+      }), Object.keys(Object.assign({}, u)).join("") === "abcdefghijklmnopqrst";
     } catch {
       return !1;
     }
   }
-  return Xe = s() ? Object.assign : function(c, u) {
-    for (var h, d = a(c), p, y = 1; y < arguments.length; y++) {
-      h = Object(arguments[y]);
+  return at = s() ? Object.assign : function(n, d) {
+    for (var h, p = a(n), u, g = 1; g < arguments.length; g++) {
+      h = Object(arguments[g]);
       for (var m in h)
-        i.call(h, m) && (d[m] = h[m]);
+        r.call(h, m) && (p[m] = h[m]);
       if (t) {
-        p = t(h);
-        for (var w = 0; w < p.length; w++)
-          r.call(h, p[w]) && (d[p[w]] = h[p[w]]);
+        u = t(h);
+        for (var v = 0; v < u.length; v++)
+          i.call(h, u[v]) && (p[u[v]] = h[u[v]]);
       }
     }
-    return d;
-  }, Xe;
+    return p;
+  }, at;
 }
-var Qe, xt;
-function lt() {
-  if (xt) return Qe;
-  xt = 1;
+var it, Dt;
+function yt() {
+  if (Dt) return it;
+  Dt = 1;
   var t = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
-  return Qe = t, Qe;
+  return it = t, it;
 }
-var Ze, Tt;
-function Vt() {
-  return Tt || (Tt = 1, Ze = Function.call.bind(Object.prototype.hasOwnProperty)), Ze;
+var rt, St;
+function Jt() {
+  return St || (St = 1, rt = Function.call.bind(Object.prototype.hasOwnProperty)), rt;
 }
-var et, kt;
-function qa() {
-  if (kt) return et;
-  kt = 1;
+var st, Wt;
+function Na() {
+  if (Wt) return st;
+  Wt = 1;
   var t = function() {
   };
   if (process.env.NODE_ENV !== "production") {
-    var i = lt(), r = {}, a = Vt();
-    t = function(c) {
-      var u = "Warning: " + c;
-      typeof console < "u" && console.error(u);
+    var r = yt(), i = {}, a = Jt();
+    t = function(n) {
+      var d = "Warning: " + n;
+      typeof console < "u" && console.error(d);
       try {
-        throw new Error(u);
+        throw new Error(d);
       } catch {
       }
     };
   }
-  function s(c, u, h, d, p) {
+  function s(n, d, h, p, u) {
     if (process.env.NODE_ENV !== "production") {
-      for (var y in c)
-        if (a(c, y)) {
+      for (var g in n)
+        if (a(n, g)) {
           var m;
           try {
-            if (typeof c[y] != "function") {
-              var w = Error(
-                (d || "React class") + ": " + h + " type `" + y + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof c[y] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`."
+            if (typeof n[g] != "function") {
+              var v = Error(
+                (p || "React class") + ": " + h + " type `" + g + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof n[g] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`."
               );
-              throw w.name = "Invariant Violation", w;
+              throw v.name = "Invariant Violation", v;
             }
-            m = c[y](u, y, d, h, null, i);
-          } catch (x) {
-            m = x;
+            m = n[g](d, g, p, h, null, r);
+          } catch (_) {
+            m = _;
           }
           if (m && !(m instanceof Error) && t(
-            (d || "React class") + ": type specification of " + h + " `" + y + "` is invalid; the type checker function must return `null` or an `Error` but returned a " + typeof m + ". You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument)."
-          ), m instanceof Error && !(m.message in r)) {
-            r[m.message] = !0;
-            var O = p ? p() : "";
+            (p || "React class") + ": type specification of " + h + " `" + g + "` is invalid; the type checker function must return `null` or an `Error` but returned a " + typeof m + ". You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument)."
+          ), m instanceof Error && !(m.message in i)) {
+            i[m.message] = !0;
+            var O = u ? u() : "";
             t(
               "Failed " + h + " type: " + m.message + (O ?? "")
             );
@@ -304,282 +304,282 @@ function qa() {
     }
   }
   return s.resetWarningCache = function() {
-    process.env.NODE_ENV !== "production" && (r = {});
-  }, et = s, et;
+    process.env.NODE_ENV !== "production" && (i = {});
+  }, st = s, st;
 }
-var tt, It;
-function Ea() {
-  if (It) return tt;
-  It = 1;
-  var t = Lt(), i = Wa(), r = lt(), a = Vt(), s = qa(), c = function() {
+var nt, Ot;
+function Ka() {
+  if (Ot) return nt;
+  Ot = 1;
+  var t = Kt(), r = Ga(), i = yt(), a = Jt(), s = Na(), n = function() {
   };
-  process.env.NODE_ENV !== "production" && (c = function(h) {
-    var d = "Warning: " + h;
-    typeof console < "u" && console.error(d);
+  process.env.NODE_ENV !== "production" && (n = function(h) {
+    var p = "Warning: " + h;
+    typeof console < "u" && console.error(p);
     try {
-      throw new Error(d);
+      throw new Error(p);
     } catch {
     }
   });
-  function u() {
+  function d() {
     return null;
   }
-  return tt = function(h, d) {
-    var p = typeof Symbol == "function" && Symbol.iterator, y = "@@iterator";
-    function m(g) {
-      var b = g && (p && g[p] || g[y]);
-      if (typeof b == "function")
-        return b;
+  return nt = function(h, p) {
+    var u = typeof Symbol == "function" && Symbol.iterator, g = "@@iterator";
+    function m(y) {
+      var w = y && (u && y[u] || y[g]);
+      if (typeof w == "function")
+        return w;
     }
-    var w = "<<anonymous>>", O = {
-      array: N("array"),
-      bigint: N("bigint"),
-      bool: N("boolean"),
-      func: N("function"),
-      number: N("number"),
-      object: N("object"),
-      string: N("string"),
-      symbol: N("symbol"),
-      any: J(),
-      arrayOf: L,
-      element: F(),
-      elementType: v(),
-      instanceOf: G,
-      node: te(),
-      objectOf: Oe,
-      oneOf: pe,
-      oneOfType: j,
-      shape: K,
-      exact: Me
+    var v = "<<anonymous>>", O = {
+      array: U("array"),
+      bigint: U("bigint"),
+      bool: U("boolean"),
+      func: U("function"),
+      number: U("number"),
+      object: U("object"),
+      string: U("string"),
+      symbol: U("symbol"),
+      any: N(),
+      arrayOf: I,
+      element: j(),
+      elementType: f(),
+      instanceOf: ee,
+      node: ge(),
+      objectOf: H,
+      oneOf: _e,
+      oneOfType: K,
+      shape: he,
+      exact: Re
     };
-    function x(g, b) {
-      return g === b ? g !== 0 || 1 / g === 1 / b : g !== g && b !== b;
+    function _(y, w) {
+      return y === w ? y !== 0 || 1 / y === 1 / w : y !== y && w !== w;
     }
-    function D(g, b) {
-      this.message = g, this.data = b && typeof b == "object" ? b : {}, this.stack = "";
+    function x(y, w) {
+      this.message = y, this.data = w && typeof w == "object" ? w : {}, this.stack = "";
     }
-    D.prototype = Error.prototype;
-    function M(g) {
+    x.prototype = Error.prototype;
+    function R(y) {
       if (process.env.NODE_ENV !== "production")
-        var b = {}, S = 0;
-      function A(W, P, C, q, B, E, $) {
-        if (q = q || w, E = E || C, $ !== r) {
-          if (d) {
-            var f = new Error(
+        var w = {}, W = 0;
+      function D(M, C, S, q, V, E, Y) {
+        if (q = q || v, E = E || S, Y !== i) {
+          if (p) {
+            var b = new Error(
               "Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types"
             );
-            throw f.name = "Invariant Violation", f;
+            throw b.name = "Invariant Violation", b;
           } else if (process.env.NODE_ENV !== "production" && typeof console < "u") {
-            var se = q + ":" + C;
-            !b[se] && // Avoid spamming the console because they are often not actionable except for lib authors
-            S < 3 && (c(
+            var le = q + ":" + S;
+            !w[le] && // Avoid spamming the console because they are often not actionable except for lib authors
+            W < 3 && (n(
               "You are manually calling a React.PropTypes validation function for the `" + E + "` prop on `" + q + "`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details."
-            ), b[se] = !0, S++);
+            ), w[le] = !0, W++);
           }
         }
-        return P[C] == null ? W ? P[C] === null ? new D("The " + B + " `" + E + "` is marked as required " + ("in `" + q + "`, but its value is `null`.")) : new D("The " + B + " `" + E + "` is marked as required in " + ("`" + q + "`, but its value is `undefined`.")) : null : g(P, C, q, B, E);
+        return C[S] == null ? M ? C[S] === null ? new x("The " + V + " `" + E + "` is marked as required " + ("in `" + q + "`, but its value is `null`.")) : new x("The " + V + " `" + E + "` is marked as required in " + ("`" + q + "`, but its value is `undefined`.")) : null : y(C, S, q, V, E);
       }
-      var I = A.bind(null, !1);
-      return I.isRequired = A.bind(null, !0), I;
+      var A = D.bind(null, !1);
+      return A.isRequired = D.bind(null, !0), A;
     }
-    function N(g) {
-      function b(S, A, I, W, P, C) {
-        var q = S[A], B = ie(q);
-        if (B !== g) {
-          var E = ue(q);
-          return new D(
-            "Invalid " + W + " `" + P + "` of type " + ("`" + E + "` supplied to `" + I + "`, expected ") + ("`" + g + "`."),
-            { expectedType: g }
+    function U(y) {
+      function w(W, D, A, M, C, S) {
+        var q = W[D], V = te(q);
+        if (V !== y) {
+          var E = P(q);
+          return new x(
+            "Invalid " + M + " `" + C + "` of type " + ("`" + E + "` supplied to `" + A + "`, expected ") + ("`" + y + "`."),
+            { expectedType: y }
           );
         }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function J() {
-      return M(u);
+    function N() {
+      return R(d);
     }
-    function L(g) {
-      function b(S, A, I, W, P) {
-        if (typeof g != "function")
-          return new D("Property `" + P + "` of component `" + I + "` has invalid PropType notation inside arrayOf.");
-        var C = S[A];
-        if (!Array.isArray(C)) {
-          var q = ie(C);
-          return new D("Invalid " + W + " `" + P + "` of type " + ("`" + q + "` supplied to `" + I + "`, expected an array."));
+    function I(y) {
+      function w(W, D, A, M, C) {
+        if (typeof y != "function")
+          return new x("Property `" + C + "` of component `" + A + "` has invalid PropType notation inside arrayOf.");
+        var S = W[D];
+        if (!Array.isArray(S)) {
+          var q = te(S);
+          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an array."));
         }
-        for (var B = 0; B < C.length; B++) {
-          var E = g(C, B, I, W, P + "[" + B + "]", r);
+        for (var V = 0; V < S.length; V++) {
+          var E = y(S, V, A, M, C + "[" + V + "]", i);
           if (E instanceof Error)
             return E;
         }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function F() {
-      function g(b, S, A, I, W) {
-        var P = b[S];
-        if (!h(P)) {
-          var C = ie(P);
-          return new D("Invalid " + I + " `" + W + "` of type " + ("`" + C + "` supplied to `" + A + "`, expected a single ReactElement."));
+    function j() {
+      function y(w, W, D, A, M) {
+        var C = w[W];
+        if (!h(C)) {
+          var S = te(C);
+          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + S + "` supplied to `" + D + "`, expected a single ReactElement."));
         }
         return null;
       }
-      return M(g);
+      return R(y);
     }
-    function v() {
-      function g(b, S, A, I, W) {
-        var P = b[S];
-        if (!t.isValidElementType(P)) {
-          var C = ie(P);
-          return new D("Invalid " + I + " `" + W + "` of type " + ("`" + C + "` supplied to `" + A + "`, expected a single ReactElement type."));
+    function f() {
+      function y(w, W, D, A, M) {
+        var C = w[W];
+        if (!t.isValidElementType(C)) {
+          var S = te(C);
+          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + S + "` supplied to `" + D + "`, expected a single ReactElement type."));
         }
         return null;
       }
-      return M(g);
+      return R(y);
     }
-    function G(g) {
-      function b(S, A, I, W, P) {
-        if (!(S[A] instanceof g)) {
-          var C = g.name || w, q = Ye(S[A]);
-          return new D("Invalid " + W + " `" + P + "` of type " + ("`" + q + "` supplied to `" + I + "`, expected ") + ("instance of `" + C + "`."));
+    function ee(y) {
+      function w(W, D, A, M, C) {
+        if (!(W[D] instanceof y)) {
+          var S = y.name || v, q = oe(W[D]);
+          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected ") + ("instance of `" + S + "`."));
         }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function pe(g) {
-      if (!Array.isArray(g))
-        return process.env.NODE_ENV !== "production" && (arguments.length > 1 ? c(
+    function _e(y) {
+      if (!Array.isArray(y))
+        return process.env.NODE_ENV !== "production" && (arguments.length > 1 ? n(
           "Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z])."
-        ) : c("Invalid argument supplied to oneOf, expected an array.")), u;
-      function b(S, A, I, W, P) {
-        for (var C = S[A], q = 0; q < g.length; q++)
-          if (x(C, g[q]))
+        ) : n("Invalid argument supplied to oneOf, expected an array.")), d;
+      function w(W, D, A, M, C) {
+        for (var S = W[D], q = 0; q < y.length; q++)
+          if (_(S, y[q]))
             return null;
-        var B = JSON.stringify(g, function($, f) {
-          var se = ue(f);
-          return se === "symbol" ? String(f) : f;
+        var V = JSON.stringify(y, function(Y, b) {
+          var le = P(b);
+          return le === "symbol" ? String(b) : b;
         });
-        return new D("Invalid " + W + " `" + P + "` of value `" + String(C) + "` " + ("supplied to `" + I + "`, expected one of " + B + "."));
+        return new x("Invalid " + M + " `" + C + "` of value `" + String(S) + "` " + ("supplied to `" + A + "`, expected one of " + V + "."));
       }
-      return M(b);
+      return R(w);
     }
-    function Oe(g) {
-      function b(S, A, I, W, P) {
-        if (typeof g != "function")
-          return new D("Property `" + P + "` of component `" + I + "` has invalid PropType notation inside objectOf.");
-        var C = S[A], q = ie(C);
+    function H(y) {
+      function w(W, D, A, M, C) {
+        if (typeof y != "function")
+          return new x("Property `" + C + "` of component `" + A + "` has invalid PropType notation inside objectOf.");
+        var S = W[D], q = te(S);
         if (q !== "object")
-          return new D("Invalid " + W + " `" + P + "` of type " + ("`" + q + "` supplied to `" + I + "`, expected an object."));
-        for (var B in C)
-          if (a(C, B)) {
-            var E = g(C, B, I, W, P + "." + B, r);
+          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an object."));
+        for (var V in S)
+          if (a(S, V)) {
+            var E = y(S, V, A, M, C + "." + V, i);
             if (E instanceof Error)
               return E;
           }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function j(g) {
-      if (!Array.isArray(g))
-        return process.env.NODE_ENV !== "production" && c("Invalid argument supplied to oneOfType, expected an instance of array."), u;
-      for (var b = 0; b < g.length; b++) {
-        var S = g[b];
-        if (typeof S != "function")
-          return c(
-            "Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + qe(S) + " at index " + b + "."
-          ), u;
+    function K(y) {
+      if (!Array.isArray(y))
+        return process.env.NODE_ENV !== "production" && n("Invalid argument supplied to oneOfType, expected an instance of array."), d;
+      for (var w = 0; w < y.length; w++) {
+        var W = y[w];
+        if (typeof W != "function")
+          return n(
+            "Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + ae(W) + " at index " + w + "."
+          ), d;
       }
-      function A(I, W, P, C, q) {
-        for (var B = [], E = 0; E < g.length; E++) {
-          var $ = g[E], f = $(I, W, P, C, q, r);
-          if (f == null)
+      function D(A, M, C, S, q) {
+        for (var V = [], E = 0; E < y.length; E++) {
+          var Y = y[E], b = Y(A, M, C, S, q, i);
+          if (b == null)
             return null;
-          f.data && a(f.data, "expectedType") && B.push(f.data.expectedType);
+          b.data && a(b.data, "expectedType") && V.push(b.data.expectedType);
         }
-        var se = B.length > 0 ? ", expected one of type [" + B.join(", ") + "]" : "";
-        return new D("Invalid " + C + " `" + q + "` supplied to " + ("`" + P + "`" + se + "."));
+        var le = V.length > 0 ? ", expected one of type [" + V.join(", ") + "]" : "";
+        return new x("Invalid " + S + " `" + q + "` supplied to " + ("`" + C + "`" + le + "."));
       }
-      return M(A);
+      return R(D);
     }
-    function te() {
-      function g(b, S, A, I, W) {
-        return fe(b[S]) ? null : new D("Invalid " + I + " `" + W + "` supplied to " + ("`" + A + "`, expected a ReactNode."));
+    function ge() {
+      function y(w, W, D, A, M) {
+        return ne(w[W]) ? null : new x("Invalid " + A + " `" + M + "` supplied to " + ("`" + D + "`, expected a ReactNode."));
       }
-      return M(g);
+      return R(y);
     }
-    function ae(g, b, S, A, I) {
-      return new D(
-        (g || "React class") + ": " + b + " type `" + S + "." + A + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + I + "`."
+    function xe(y, w, W, D, A) {
+      return new x(
+        (y || "React class") + ": " + w + " type `" + W + "." + D + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + A + "`."
       );
     }
-    function K(g) {
-      function b(S, A, I, W, P) {
-        var C = S[A], q = ie(C);
+    function he(y) {
+      function w(W, D, A, M, C) {
+        var S = W[D], q = te(S);
         if (q !== "object")
-          return new D("Invalid " + W + " `" + P + "` of type `" + q + "` " + ("supplied to `" + I + "`, expected `object`."));
-        for (var B in g) {
-          var E = g[B];
+          return new x("Invalid " + M + " `" + C + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
+        for (var V in y) {
+          var E = y[V];
           if (typeof E != "function")
-            return ae(I, W, P, B, ue(E));
-          var $ = E(C, B, I, W, P + "." + B, r);
-          if ($)
-            return $;
+            return xe(A, M, C, V, P(E));
+          var Y = E(S, V, A, M, C + "." + V, i);
+          if (Y)
+            return Y;
         }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function Me(g) {
-      function b(S, A, I, W, P) {
-        var C = S[A], q = ie(C);
+    function Re(y) {
+      function w(W, D, A, M, C) {
+        var S = W[D], q = te(S);
         if (q !== "object")
-          return new D("Invalid " + W + " `" + P + "` of type `" + q + "` " + ("supplied to `" + I + "`, expected `object`."));
-        var B = i({}, S[A], g);
-        for (var E in B) {
-          var $ = g[E];
-          if (a(g, E) && typeof $ != "function")
-            return ae(I, W, P, E, ue($));
-          if (!$)
-            return new D(
-              "Invalid " + W + " `" + P + "` key `" + E + "` supplied to `" + I + "`.\nBad object: " + JSON.stringify(S[A], null, "  ") + `
-Valid keys: ` + JSON.stringify(Object.keys(g), null, "  ")
+          return new x("Invalid " + M + " `" + C + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
+        var V = r({}, W[D], y);
+        for (var E in V) {
+          var Y = y[E];
+          if (a(y, E) && typeof Y != "function")
+            return xe(A, M, C, E, P(Y));
+          if (!Y)
+            return new x(
+              "Invalid " + M + " `" + C + "` key `" + E + "` supplied to `" + A + "`.\nBad object: " + JSON.stringify(W[D], null, "  ") + `
+Valid keys: ` + JSON.stringify(Object.keys(y), null, "  ")
             );
-          var f = $(C, E, I, W, P + "." + E, r);
-          if (f)
-            return f;
+          var b = Y(S, E, A, M, C + "." + E, i);
+          if (b)
+            return b;
         }
         return null;
       }
-      return M(b);
+      return R(w);
     }
-    function fe(g) {
-      switch (typeof g) {
+    function ne(y) {
+      switch (typeof y) {
         case "number":
         case "string":
         case "undefined":
           return !0;
         case "boolean":
-          return !g;
+          return !y;
         case "object":
-          if (Array.isArray(g))
-            return g.every(fe);
-          if (g === null || h(g))
+          if (Array.isArray(y))
+            return y.every(ne);
+          if (y === null || h(y))
             return !0;
-          var b = m(g);
-          if (b) {
-            var S = b.call(g), A;
-            if (b !== g.entries) {
-              for (; !(A = S.next()).done; )
-                if (!fe(A.value))
+          var w = m(y);
+          if (w) {
+            var W = w.call(y), D;
+            if (w !== y.entries) {
+              for (; !(D = W.next()).done; )
+                if (!ne(D.value))
                   return !1;
             } else
-              for (; !(A = S.next()).done; ) {
-                var I = A.value;
-                if (I && !fe(I[1]))
+              for (; !(D = W.next()).done; ) {
+                var A = D.value;
+                if (A && !ne(A[1]))
                   return !1;
               }
           } else
@@ -589,68 +589,68 @@ Valid keys: ` + JSON.stringify(Object.keys(g), null, "  ")
           return !1;
       }
     }
-    function $e(g, b) {
-      return g === "symbol" ? !0 : b ? b["@@toStringTag"] === "Symbol" || typeof Symbol == "function" && b instanceof Symbol : !1;
+    function je(y, w) {
+      return y === "symbol" ? !0 : w ? w["@@toStringTag"] === "Symbol" || typeof Symbol == "function" && w instanceof Symbol : !1;
     }
-    function ie(g) {
-      var b = typeof g;
-      return Array.isArray(g) ? "array" : g instanceof RegExp ? "object" : $e(b, g) ? "symbol" : b;
+    function te(y) {
+      var w = typeof y;
+      return Array.isArray(y) ? "array" : y instanceof RegExp ? "object" : je(w, y) ? "symbol" : w;
     }
-    function ue(g) {
-      if (typeof g > "u" || g === null)
-        return "" + g;
-      var b = ie(g);
-      if (b === "object") {
-        if (g instanceof Date)
+    function P(y) {
+      if (typeof y > "u" || y === null)
+        return "" + y;
+      var w = te(y);
+      if (w === "object") {
+        if (y instanceof Date)
           return "date";
-        if (g instanceof RegExp)
+        if (y instanceof RegExp)
           return "regexp";
       }
-      return b;
+      return w;
     }
-    function qe(g) {
-      var b = ue(g);
-      switch (b) {
+    function ae(y) {
+      var w = P(y);
+      switch (w) {
         case "array":
         case "object":
-          return "an " + b;
+          return "an " + w;
         case "boolean":
         case "date":
         case "regexp":
-          return "a " + b;
+          return "a " + w;
         default:
-          return b;
+          return w;
       }
     }
-    function Ye(g) {
-      return !g.constructor || !g.constructor.name ? w : g.constructor.name;
+    function oe(y) {
+      return !y.constructor || !y.constructor.name ? v : y.constructor.name;
     }
     return O.checkPropTypes = s, O.resetWarningCache = s.resetWarningCache, O.PropTypes = O, O;
-  }, tt;
+  }, nt;
 }
-var at, Pt;
-function _a() {
-  if (Pt) return at;
-  Pt = 1;
-  var t = lt();
-  function i() {
-  }
+var ot, Mt;
+function Ja() {
+  if (Mt) return ot;
+  Mt = 1;
+  var t = yt();
   function r() {
   }
-  return r.resetWarningCache = i, at = function() {
-    function a(u, h, d, p, y, m) {
+  function i() {
+  }
+  return i.resetWarningCache = r, ot = function() {
+    function a(d, h, p, u, g, m) {
       if (m !== t) {
-        var w = new Error(
+        var v = new Error(
           "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types"
         );
-        throw w.name = "Invariant Violation", w;
+        throw v.name = "Invariant Violation", v;
       }
     }
     a.isRequired = a;
     function s() {
       return a;
     }
-    var c = {
+    var n = {
       array: a,
       bigint: a,
       bool: a,
@@ -670,52 +670,69 @@ function _a() {
       oneOfType: s,
       shape: s,
       exact: s,
-      checkPropTypes: r,
-      resetWarningCache: i
+      checkPropTypes: i,
+      resetWarningCache: r
     };
-    return c.PropTypes = c, c;
-  }, at;
+    return n.PropTypes = n, n;
+  }, ot;
 }
 if (process.env.NODE_ENV !== "production") {
-  var Ra = Lt(), za = !0;
-  it.exports = Ea()(Ra.isElement, za);
+  var $a = Kt(), Ya = !0;
+  ht.exports = Ka()($a.isElement, Ya);
 } else
-  it.exports = _a()();
-var ja = it.exports;
-const he = /* @__PURE__ */ Da(ja), ge = ({
+  ht.exports = Ja()();
+var Xa = ht.exports;
+const $ = /* @__PURE__ */ Fa(Xa), we = ({
   title: t,
-  description: i,
-  canonicalPath: r,
+  description: r,
+  canonicalPath: i,
   ogImage: a = "https://elevenidllc.com/logo512.png",
   ogType: s = "website",
-  structuredData: c = null,
-  keywords: u = []
+  ogMeta: n = {},
+  structuredData: d = null,
+  keywords: h = []
 }) => {
-  const h = "https://elevenidllc.com", d = t.includes("ElevenID LLC") ? t : `${t} | ElevenID LLC`, p = `${h}${r}`;
-  return Pe(() => {
-    document.title = d;
-    const y = (O, x = {}, D = null) => {
-      let M = document.head.querySelector(O);
-      return M || (M = document.createElement("meta"), Object.entries(x).forEach(([N, J]) => M.setAttribute(N, J)), document.head.appendChild(M)), D !== null && M.setAttribute("content", D), M;
-    }, m = (O, x, D) => {
-      let M = document.head.querySelector(O);
-      return M || (M = document.createElement("link"), M.setAttribute("rel", x), document.head.appendChild(M)), M.setAttribute("href", D), M;
+  const p = "https://elevenidllc.com", u = t.includes("ElevenID LLC") ? t : `${t} | ElevenID LLC`, g = `${p}${i}`;
+  return Oe(() => {
+    var x;
+    document.title = u;
+    const m = (R) => {
+      document.head.querySelectorAll(R).forEach((U) => U.remove());
+    }, v = (R, U = {}, N = null) => {
+      let I = document.head.querySelector(R);
+      return I || (I = document.createElement("meta"), Object.entries(U).forEach(([j, f]) => I.setAttribute(j, f)), document.head.appendChild(I)), N !== null && I.setAttribute("content", N), I;
+    }, O = (R, U, N) => {
+      let I = document.head.querySelector(R);
+      return I || (I = document.createElement("link"), I.setAttribute("rel", U), document.head.appendChild(I)), I.setAttribute("href", N), I;
     };
-    y('meta[name="description"]', { name: "description" }, i), u.length > 0 && y('meta[name="keywords"]', { name: "keywords" }, u.join(", ")), m('link[rel="canonical"]', "canonical", p), y('meta[property="og:site_name"]', { property: "og:site_name" }, "ElevenID LLC"), y('meta[property="og:type"]', { property: "og:type" }, s), y('meta[property="og:title"]', { property: "og:title" }, d), y('meta[property="og:description"]', { property: "og:description" }, i), y('meta[property="og:url"]', { property: "og:url" }, p), y('meta[property="og:image"]', { property: "og:image" }, a), y('meta[property="og:image:alt"]', { property: "og:image:alt" }, t), y('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image"), y('meta[name="twitter:title"]', { name: "twitter:title" }, d), y('meta[name="twitter:description"]', { name: "twitter:description" }, i), y('meta[name="twitter:image"]', { name: "twitter:image" }, a);
-    let w = document.head.querySelector('script[data-seo-jsonld="true"]');
-    c ? (w || (w = document.createElement("script"), w.type = "application/ld+json", w.setAttribute("data-seo-jsonld", "true"), document.head.appendChild(w)), w.textContent = JSON.stringify(c)) : w && w.remove();
-  }, [d, i, p, s, a, t, c, u]), null;
+    v('meta[name="description"]', { name: "description" }, r), h.length > 0 ? v('meta[name="keywords"]', { name: "keywords" }, h.join(", ")) : (x = document.head.querySelector('meta[name="keywords"]')) == null || x.remove(), O('link[rel="canonical"]', "canonical", g), v('meta[property="og:site_name"]', { property: "og:site_name" }, "ElevenID LLC"), v('meta[property="og:type"]', { property: "og:type" }, s), v('meta[property="og:title"]', { property: "og:title" }, u), v('meta[property="og:description"]', { property: "og:description" }, r), v('meta[property="og:url"]', { property: "og:url" }, g), v('meta[property="og:image"]', { property: "og:image" }, a), v('meta[property="og:image:alt"]', { property: "og:image:alt" }, t), m('meta[data-seo-og-extra="true"]'), Object.entries(n).forEach(([R, U]) => {
+      if (U == null || U === "")
+        return;
+      const N = document.createElement("meta");
+      N.setAttribute("property", R), N.setAttribute("content", String(U)), N.setAttribute("data-seo-og-extra", "true"), document.head.appendChild(N);
+    }), v('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image"), v('meta[name="twitter:title"]', { name: "twitter:title" }, u), v('meta[name="twitter:description"]', { name: "twitter:description" }, r), v('meta[name="twitter:image"]', { name: "twitter:image" }, a), v('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, t);
+    let _ = document.head.querySelector('script[data-seo-jsonld="true"]');
+    return d ? (_ || (_ = document.createElement("script"), _.type = "application/ld+json", _.setAttribute("data-seo-jsonld", "true"), document.head.appendChild(_)), _.textContent = JSON.stringify(d)) : _ && _.remove(), () => {
+      m('meta[data-seo-og-extra="true"]');
+    };
+  }, [u, r, g, s, a, n, t, d, h]), null;
 };
-ge.propTypes = {
-  title: he.string.isRequired,
-  description: he.string.isRequired,
-  canonicalPath: he.string.isRequired,
-  ogImage: he.string,
-  ogType: he.string,
-  structuredData: he.object,
-  keywords: he.arrayOf(he.string)
+we.propTypes = {
+  title: $.string.isRequired,
+  description: $.string.isRequired,
+  canonicalPath: $.string.isRequired,
+  ogImage: $.string,
+  ogType: $.string,
+  ogMeta: $.objectOf(
+    $.oneOfType([$.string, $.number])
+  ),
+  structuredData: $.oneOfType([
+    $.object,
+    $.arrayOf($.object)
+  ]),
+  keywords: $.arrayOf($.string)
 };
-const ci = () => ({
+const _r = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ElevenID LLC",
@@ -731,19 +748,19 @@ const ci = () => ({
     contactType: "Sales",
     email: "sales@elevenidllc.com"
   }
-}), hi = ({
+}), Rr = ({
   name: t,
-  description: i,
-  applicationCategory: r = "SecurityApplication",
+  description: r,
+  applicationCategory: i = "SecurityApplication",
   operatingSystem: a = "Cross-platform",
   offers: s = null
 }) => {
-  const c = {
+  const n = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: t,
-    description: i,
-    applicationCategory: r,
+    description: r,
+    applicationCategory: i,
     operatingSystem: a,
     provider: {
       "@type": "Organization",
@@ -751,42 +768,88 @@ const ci = () => ({
       url: "https://elevenidllc.com"
     }
   };
-  return s && (c.offers = {
+  return s && (n.offers = {
     "@type": "Offer",
     ...s
-  }), c;
-}, Ba = ({
+  }), n;
+}, $t = ({
   headline: t,
-  description: i,
-  datePublished: r,
+  description: r,
+  datePublished: i = null,
   dateModified: a = null,
   authorName: s = "ElevenID LLC",
-  url: c
-}) => ({
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: t,
-  description: i,
-  datePublished: r,
-  dateModified: a || r,
-  author: {
-    "@type": "Organization",
-    name: s
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "ElevenID LLC",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://elevenidllc.com/logo512.png"
+  authorType: n = null,
+  url: d,
+  image: h = null
+}) => {
+  const u = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t,
+    description: r,
+    author: {
+      "@type": n || (s === "ElevenID LLC" ? "Organization" : "Person"),
+      name: s
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ElevenID LLC",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://elevenidllc.com/logo512.png"
+      }
+    },
+    url: d,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": d
     }
-  },
-  url: c,
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": c
-  }
-}), La = [
+  };
+  return i && (u.datePublished = i), (a || i) && (u.dateModified = a || i), h && (u.image = h), u;
+}, Qa = ({
+  name: t,
+  description: r,
+  url: i,
+  jobTitle: a = null,
+  image: s = null,
+  knowsAbout: n = []
+}) => {
+  const d = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: t,
+    description: r,
+    url: i,
+    worksFor: {
+      "@type": "Organization",
+      name: "ElevenID LLC",
+      url: "https://elevenidllc.com"
+    }
+  };
+  return a && (d.jobTitle = a), s && (d.image = s), n.length > 0 && (d.knowsAbout = n), d;
+}, dt = ({
+  name: t,
+  description: r,
+  url: i,
+  items: a = []
+}) => {
+  const s = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: t,
+    description: r,
+    url: i
+  };
+  return a.length > 0 && (s.mainEntity = {
+    "@type": "ItemList",
+    itemListElement: a.map((n, d) => ({
+      "@type": "ListItem",
+      position: d + 1,
+      url: n.url,
+      name: n.name
+    }))
+  }), s;
+}, Za = [
   ["ΓÇÖ", "'"],
   ["ΓÇÿ", "'"],
   ["ΓÇ£", '"'],
@@ -805,27 +868,27 @@ const ci = () => ({
   ["â€¦", "..."],
   ["Â·", "|"]
 ];
-function Ft(t) {
+function Yt(t) {
   if (typeof t != "string")
     return t;
-  let i = t;
-  for (const [r, a] of La)
-    i = i.split(r).join(a);
-  return i;
+  let r = t;
+  for (const [i, a] of Za)
+    r = r.split(i).join(a);
+  return r;
 }
 function Z(t) {
-  return typeof t == "string" ? Ft(t) : Array.isArray(t) ? t.map((i) => Z(i)) : t && typeof t == "object" ? Object.fromEntries(
-    Object.entries(t).map(([i, r]) => [i, Z(r)])
+  return typeof t == "string" ? Yt(t) : Array.isArray(t) ? t.map((r) => Z(r)) : t && typeof t == "object" ? Object.fromEntries(
+    Object.entries(t).map(([r, i]) => [r, Z(i)])
   ) : t;
 }
-function ye(t, i) {
-  const r = Ft(t || "");
-  if (r.length <= i)
-    return r;
-  const a = r.slice(0, i + 1), s = a.lastIndexOf(" "), c = s > Math.floor(i * 0.6) ? s : i;
-  return `${a.slice(0, c).trim()}...`;
+function be(t, r) {
+  const i = Yt(t || "");
+  if (i.length <= r)
+    return i;
+  const a = i.slice(0, r + 1), s = a.lastIndexOf(" "), n = s > Math.floor(r * 0.6) ? s : r;
+  return `${a.slice(0, n).trim()}...`;
 }
-const me = Z({
+const fe = Z({
   "aiko-tanaka": {
     archetype: "Standards Cartographer",
     coreQuestion: "What do the actual standards and regulations require, and what do those requirements mean for system design?",
@@ -1050,7 +1113,7 @@ const me = Z({
     commercialFunction: "Makes Marty feel safer, more modern, and better aligned with buyer privacy obligations.",
     useWhen: "Use Nora when the reader needs minimum-disclosure logic, privacy framing, or a holder-control perspective."
   }
-}), Ie = Z({
+}), De = Z({
   "aiko-tanaka": {
     name: "Aiko Tanaka",
     title: "Standards Analyst",
@@ -1060,7 +1123,7 @@ const me = Z({
     avatarImage: "/images/authors/aiko-tanaka.png",
     bio: "Aiko analyzes international identity standards and their practical implementation in digital systems. Her work focuses on ICAO Doc 9303, ISO 18013-5 mobile driving licenses, and emerging global digital identity interoperability frameworks.",
     expertise: ["ICAO 9303", "ISO 18013-5 mDoc", "EUDI Wallet Architecture", "Trust Registries", "Cross-Border Trust Frameworks"],
-    characterProfile: me["aiko-tanaka"],
+    characterProfile: fe["aiko-tanaka"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "marcus-vale": {
@@ -1072,7 +1135,7 @@ const me = Z({
     avatarImage: "/images/authors/marcus-vale.png",
     bio: "Marcus studies cryptographic trust systems used to issue and verify credentials. His work centers on X.509 infrastructure, revocation models, and how cryptography enables privacy-preserving identity.",
     expertise: ["PKI Architecture", "Certificate Chains", "CRL & OCSP", "Selective Disclosure", "Revocation Strategies"],
-    characterProfile: me["marcus-vale"],
+    characterProfile: fe["marcus-vale"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "elena-kovacs": {
@@ -1084,7 +1147,7 @@ const me = Z({
     avatarImage: "/images/authors/elena-kovacs.png",
     bio: "Elena focuses on the governance layer of identity systems: how organizations define rules, permissions, and trust policies for credential ecosystems.",
     expertise: ["RBAC & ABAC", "Policy Engines", "Identity Governance", "Enterprise Identity Frameworks", "Trust Registries"],
-    characterProfile: me["elena-kovacs"],
+    characterProfile: fe["elena-kovacs"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "daniel-ortega": {
@@ -1096,7 +1159,7 @@ const me = Z({
     avatarImage: "/images/authors/daniel-ortega.png",
     bio: "Daniel studies the design of identity protocols and how systems exchange verifiable claims between issuers, holders, and verifiers. His work explains the underlying mechanics of decentralized identity protocols.",
     expertise: ["OID4VCI Issuance", "OID4VP Presentation", "Protocol Architecture", "Interoperability Design", "Protocol Flows"],
-    characterProfile: me["daniel-ortega"],
+    characterProfile: fe["daniel-ortega"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "sofia-rahman": {
@@ -1108,7 +1171,7 @@ const me = Z({
     avatarImage: "/images/authors/sofia-rahman.png",
     bio: "Sofia studies wallet technology and how users interact with credentials stored on devices. Her research focuses on mobile wallets, device security, and user-controlled identity.",
     expertise: ["Wallet Architecture", "Credential Storage", "Device Binding", "Mobile Credential UX", "Selective Disclosure"],
-    characterProfile: me["sofia-rahman"],
+    characterProfile: fe["sofia-rahman"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "victor-leclerc": {
@@ -1120,7 +1183,7 @@ const me = Z({
     avatarImage: "/images/authors/victor-leclerc.png",
     bio: "Victor analyzes large-scale trust infrastructures used by governments and enterprises. His work focuses on trust registries, federation models, and the infrastructure required to verify credentials across organizations.",
     expertise: ["Trust Registries", "Federation Models", "EUDI Trust Frameworks", "Credential Ecosystems", "Verifier Infrastructure"],
-    characterProfile: me["victor-leclerc"],
+    characterProfile: fe["victor-leclerc"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "nora-patel": {
@@ -1132,18 +1195,18 @@ const me = Z({
     avatarImage: "/images/authors/nora-patel.png",
     bio: "Nora researches privacy-preserving identity systems and how selective disclosure allows individuals to prove facts about themselves without revealing unnecessary information.",
     expertise: ["Selective Disclosure", "Privacy-Preserving Credentials", "Data Minimization", "Anonymous Credentials", "Regulatory Implications"],
-    characterProfile: me["nora-patel"],
+    characterProfile: fe["nora-patel"],
     disclosure: "AI research persona representing curated protocol analysis."
   }
-}), Va = [
-  // ΓöÇΓöÇΓöÇ Publication Arc 1: Foundations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+}), ei = [
+  // Publication Arc 1: Foundations
   {
     slug: "why-identity-needs-a-protocol",
     title: "Why Identity Needs a Protocol",
-    summary: "Identity is still being sold as a platform problem. That framing makes lock-in, repeated verification, and rising costs look normal. A protocol changes the category by turning identity into reusable infrastructure instead of a metered dependency.",
+    summary: "Identity is still being sold as a platform problem. Cryptography proves facts, but protocol placement determines whether verified state can move across implementations instead of staying trapped inside one vendor boundary.",
     authorId: "daniel-ortega",
     date: "2025-01-06",
-    updatedDate: "2026-04-05",
+    updatedDate: "2026-06-28",
     category: "Business",
     readTime: "7 min read",
     content: [
@@ -1161,19 +1224,20 @@ const me = Z({
       { type: "paragraph", text: "This is the tension sponsors and architects need to see clearly: platform vs protocol is not a branding preference. It determines whether identity behaves like a reusable layer or a recurring tollbooth." },
       { type: "heading", text: "The real cost is not verification. It is re-verification" },
       { type: "paragraph", text: "Once identity is sold as a platform, a predictable cost pattern follows. Verification becomes a metered event, and re-verification becomes structural. A user is verified in one place, then asked to go through materially the same process in another. A partner may even use the same vendor, but the proof still does not travel. Without a reusable artifact a second party can trust independently, the system buys the same answer again." },
-      { type: "paragraph", text: "Consider a simple healthcare referral journey. A regional healthcare system pays $0.30 for a KYC or document-scan check when a patient is onboarded. The patient is then referred into an affiliate specialist network that uses the same centralized identity verification vendor. The specialist network pays another $0.30 for the exact same check. The total identity verification cost for that user journey is now $0.60." },
+      { type: "paragraph", text: "Consider a simple healthcare referral journey. A regional healthcare system pays for a KYC or document-scan check when a patient is onboarded. The patient is then referred into an affiliate specialist network that uses the same centralized identity verification vendor. The specialist network pays again for materially the same check. The identity verification cost for that user journey has now been duplicated." },
       { type: "paragraph", text: "Nothing materially new was learned about the patient in the second step. The system simply had no portable, policy-governed way to reuse the verified state. So it paid twice." },
-      { type: "paragraph", text: "Under a protocol model, the first verified outcome can be issued as a credential. The specialist network can then verify that credential cryptographically under its own acceptance policy. The marginal vendor charge for that second check is $0.00 because the specialist is no longer repurchasing the same document scan as a metered platform event. It is verifying a reusable artifact." },
+      { type: "paragraph", text: "Under a protocol model, the first verified outcome can be issued as a credential. The specialist network can then verify that credential cryptographically under its own acceptance policy. The second organization is no longer repurchasing the same document scan as a metered platform event. It is verifying a reusable artifact." },
       { type: "paragraph", text: "That does not mean identity becomes free. Infrastructure still has to run. Policies still have to be governed. Trust still has to be updated. But the economics shift in an important way: you stop paying third parties to rediscover the same fact every time the workflow crosses an organizational boundary." },
       { type: "paragraph", text: "This is where the second core tension becomes visible: portability vs lock-in. In a platform model, portability is weak because the vendor boundary is the trust boundary. In a protocol model, portability strengthens because the trust boundary is explicit and the artifact can move." },
       { type: "paragraph", text: "The same logic applies beyond healthcare. Enterprise access systems repeat checks across badges, apps, and gateways. Travel environments repeat assurance work across checkpoints and partners. Regulated networks repeat document validation because one organization's result is not packaged for another organization's verifier." },
       { type: "paragraph", text: "The tax shows up in several forms at once:" },
-      { type: "paragraph", text: "duplicated vendor spend repeated user friction extra integrations slower partner onboarding higher switching cost when the incumbent relationship changes" },
+      { type: "paragraph", text: "duplicated vendor spend, repeated user friction, extra integrations, slower partner onboarding, higher switching cost when the incumbent relationship changes" },
       { type: "paragraph", text: "The most damaging part is that success makes the old model worse. More verifiers, more channels, more partners, and more accepted credentials should make the system more efficient. In a per-check platform model, they often make it more expensive." },
       { type: "paragraph", text: "That is why infrastructure economics vs metered verification is not just a pricing conversation. It is an architecture conversation. The question is whether verification is an internal capability of the system you govern, or a transaction you keep renting forever." },
       { type: "heading", text: "A protocol changes the shape of the system" },
       { type: "paragraph", text: "The alternative is not to deny that trust is hard. The alternative is to model trust correctly." },
       { type: "paragraph", text: "A protocol approach does not eliminate vendors. It changes what they are allowed to own." },
+      { type: "paragraph", text: "Cryptography is necessary, but it is not the whole architecture. A signature can prove that a key signed a credential, and a proof can show that a claim satisfies a predicate. Those primitives do not, by themselves, decide where identity lives in the stack. The protocol question is about placement: whether trust, disclosure, verification, deployment, and lifecycle rules are portable across implementations, or trapped inside one platform's application boundary." },
       { type: "paragraph", text: "In a platform model, the vendor owns the boundary between issuance, verification, policy, and runtime behavior. In a protocol model, those become explicit objects that multiple implementations can understand. Vendors can still provide excellent tooling, hosted deployments, operator experiences, and management surfaces. What they should not own is the portability of the identity system itself." },
       { type: "paragraph", text: "The Marty Identity Protocol starts from a simple observation: every serious credential system has to answer the same recurring questions." },
       { type: "paragraph", text: "Who is trusted?" },
@@ -1186,9 +1250,9 @@ const me = Z({
       { type: "paragraph", text: "It also clarifies what a sponsor should be buying. Not a promise that one vendor will mediate every identity check forever. A protocol-aligned system that lets the organization govern trust, reuse verified state, and choose deployment models without restarting the architecture each time the environment changes." },
       { type: "paragraph", text: "And it clarifies what an architect should be designing. Not another one-off integration into an opaque verification surface. A system where trust rules, disclosure requirements, deployment choices, and lifecycle orchestration can be expressed once and reused across many journeys." },
       { type: "paragraph", text: "The practical result is a cleaner operating model:" },
-      { type: "paragraph", text: "one issuance can support many valid presentations one trust model can serve multiple verifiers one deployment strategy can vary by runtime without changing the underlying architecture one policy surface can evolve without forcing application rewrites" },
+      { type: "paragraph", text: "One issuance can support many valid presentations, one trust model can serve multiple verifiers, one deployment strategy can vary by runtime without changing the underlying architecture, one policy surface can evolve without forcing application rewrites" },
       { type: "paragraph", text: "That is why identity needs a protocol: not because protocols are fashionable, but because identity only becomes portable, economically sane, and operationally credible when the system is designed to let verified state move under clear rules." },
-      { type: "paragraph", text: "If that category shift makes sense, the next step is not another vendor comparison. It is understanding the shared model itself. Read five-primitives-in-one-picture next. That post is the map." }
+      { type: "paragraph", text: "If that category shift makes sense, the next step is not another vendor comparison. It is understanding the shared model itself. Read Five Primitives in One Picture next. That post is the map." }
     ]
   },
   {
@@ -1199,50 +1263,85 @@ const me = Z({
     date: "2025-01-12",
     updatedDate: "2026-04-11",
     category: "Technical",
-    readTime: "7 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Every credential verification starts with the same question: do I trust the issuer? In most systems, the answer is hardcoded - a trust anchor baked into application logic. MIP's Trust Profiles turn this into explicit, versionable configuration." },
-      { type: "heading", text: "What a Trust Profile Contains" },
-      { type: "paragraph", text: "A Trust Profile specifies trust sources (ICAO PKD, EU Trust Lists, pinned issuer DIDs), validation rules (accepted algorithms, key usage constraints), revocation policy (OCSP, CRL, offline grace periods), and supported credential formats (mDoc, VC-JWT, SD-JWT)." },
-      { type: "heading", text: "Why This Matters for Developers" },
-      { type: "paragraph", text: `Trust Profiles separate "who do we trust" from "how do we verify." Your verification code stays the same whether you're accepting an mDL from California or a PID from Germany - only the Trust Profile changes. This means fewer code paths, fewer bugs, and faster compliance updates.` },
-      { type: "paragraph", text: "In MIP, Trust Profiles are owned by security teams and change rarely. They're the slowest-moving primitive - and intentionally so." }
+      { type: "paragraph", text: "Every credential verification starts with the same question: Do I trust the issuer? That sounds simple until the verifier has to accept credentials from more than one organization, one jurisdiction, or one technology stack. A local issuer allowlist may work for a pilot. It does not scale into an ecosystem." },
+      { type: "paragraph", text: "A useful way into this problem is the topology of trust. A verifier rarely decides whether a single credential is well-formed in isolation. It is deciding whether the credential was issued by an authority the verifier recognizes, whether that authority is authorized for this credential type, whether the signing key is still valid, and whether any revocation or freshness rule changes the answer." },
+      { type: "paragraph", text: "In many systems, those decisions are scattered across application code, environment variables, issuer tables, certificate stores, partner contracts, and operational runbooks. The result is brittle infrastructure. One verifier accepts a credential because a developer pinned a key. Another rejects the same credential because a trust list was not synchronized. A third accepts it only through a vendor-specific integration path. None of those outcomes gives the ecosystem a shared trust model." },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) uses Trust Profiles to make that trust model explicit, versionable, and portable." },
+      { type: "heading", text: "What a Trust Profile contains" },
+      { type: "paragraph", text: "A Trust Profile specifies the sources of trust a verifier is allowed to rely on. Those sources may include ICAO PKD material for passports, EU Trust Lists for regulated European identity flows, pinned issuer DIDs for a controlled ecosystem, enterprise issuer registries, or other governed trust lists. The important point is not that every deployment uses the same source. The important point is that the source is declared as part of the system model." },
+      { type: "paragraph", text: "The profile also captures validation rules: accepted algorithms, key-usage constraints, certificate path rules, DID resolution expectations, supported credential formats, revocation posture, and offline grace periods. Those rules are not decorative metadata. They are the difference between a verifier that can explain its trust decision and a verifier that merely returns yes or no." },
+      { type: "paragraph", text: "This is where Trust Profiles become ecosystem infrastructure. If a verifier accepts mobile driver's licenses, the profile can express which trust anchors and mDoc rules matter for that environment. If the same organization later accepts employee credentials or education badges, it can add a different profile rather than forcing one global trust list to serve every use case. The verifier behavior changes because configuration changes, not because every application path is rewritten." },
+      { type: "heading", text: "Why this matters for developers" },
+      { type: "paragraph", text: "Developers should not have to rediscover the trust topology every time they write a verifier. Verification code should ask a stable question: given this credential, this presentation context, and this Trust Profile, does the credential chain back to an accepted trust source under the configured rules?" },
+      { type: "paragraph", text: "That separation matters because issuer ecosystems move. Certificates expire. Trust lists update. Issuers are suspended. New formats enter the program. Revocation expectations change when a deployment moves from online API verification to an offline kiosk. If trust is buried in code, each change becomes an engineering event. If trust is expressed in a Trust Profile, the organization has a controlled surface for updating the decision." },
+      { type: "paragraph", text: "It also gives security and compliance teams a real artifact to review. They can ask which issuers are trusted, which algorithms are accepted, how revocation is handled, and what happens when fresh trust material is unavailable. That conversation is much healthier than asking developers to explain a pile of conditionals after the fact." },
+      { type: "heading", text: "Trust Profiles are deliberately slow-moving" },
+      { type: "paragraph", text: "In MIP, Trust Profiles are one of the slowest-moving primitives. That is intentional. A Credential Template may change when a program adds a new claim. A Presentation Policy may change when a verifier narrows what it asks for. A Deployment Profile may change because a lane or runtime environment changes. Trust should change more carefully, because it defines who the ecosystem is willing to believe." },
+      { type: "paragraph", text: "That does not mean Trust Profiles are static. It means they deserve governance. A new issuer registry, post-incident key rotation, or revised revocation requirements should be implemented through versioned profile updates rather than emergency code patches. The profile becomes the place where ecosystem trust can evolve without becoming invisible." },
+      { type: "paragraph", text: "Trust Profiles are the foundation of every identity decision because every later primitive depends on them. Credential Templates define what can be issued. Presentation Policies define what must be shown. Deployment Profiles define where verification runs. Flows define how the lifecycle moves. But none of those objects can make a credential meaningful unless the system knows who it trusts and why." },
+      { type: "paragraph", text: "Read Credential Templates next if you want to see how that trust foundation connects to the shape of what gets issued." }
     ]
   },
   {
     slug: "business-case-for-credential-portability",
     title: "The Business Case for Credential Portability",
-    summary: "Vendor lock-in costs enterprises millions in re-verification. Portable credentials built on open standards eliminate that waste.",
+    summary: "Vendor lock-in can turn identity verification into repeated spend. Portable credentials built on open standards help reduce duplicate checks across systems.",
     authorId: "aiko-tanaka",
     date: "2025-01-18",
     updatedDate: "2026-04-17",
     category: "Business",
-    readTime: "6 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Enterprise KYC costs $50-$150 per verification - and most organizations perform the same check multiple times because credentials can't move between systems. This isn't a technology problem. It's a standards problem." },
-      { type: "heading", text: "The Re-Verification Tax" },
-      { type: "paragraph", text: "When a financial institution verifies a customer's identity, that proof of verification becomes trapped in one system. If the customer opens an account at another institution, the entire process repeats. Multiply this across industries and you get billions in duplicated verification work annually." },
-      { type: "heading", text: "How MIP Enables Reuse" },
-      { type: "paragraph", text: "MIP defines credential portability at the protocol level. Credentials issued under one vendor's infrastructure can be verified by any MIP-compatible verifier. Trust Profiles ensure the accepting party can express their own trust requirements without needing the same vendor. This turns identity from a per-check cost into reusable infrastructure." }
+      { type: "paragraph", text: "Enterprise identity checks become expensive when each workflow repeats the same verification because credentials cannot move between systems. The issue is not only technical. It is a standards, governance, and operating-model problem." },
+      { type: "paragraph", text: "The starting point is the real pressure field around identity: organizations are being pushed toward interoperability by regulation, wallet ecosystems, cross-border programs, and user expectations, yet many implementation models still trap verified state within a single vendor or application. When the proof cannot travel, every new verifier has to buy or build another path to the same conclusion." },
+      { type: "paragraph", text: "That is the business case for credential portability. It is not a promise that identity verification will become free. It is the claim that verified facts should be packaged, governed, and presented in a way that lets another party evaluate them under its own policy without restarting the entire verification journey." },
+      { type: "heading", text: "The re-verification tax" },
+      { type: "paragraph", text: "Re-verification occurs when a person or organization has already completed an identity check but cannot reuse the result in the next workflow. A customer verifies identity to open one account, then repeats a materially similar process with an affiliate. An employee proves eligibility to one internal system, then repeats assurance steps for another controlled environment. A student earns a credential from an institution, but an employer still lacks a governed way to trust the issuing context." },
+      { type: "paragraph", text: "Each repeated check has visible costs: vendor fees, manual review, support burden, integration work, and user friction. It also has less visible costs. Teams normalize duplicated assurance work because the architecture gives them no portable artifact to rely on. Sponsors start treating repeated verification as unavoidable operating expense instead of a symptom of poor infrastructure." },
+      { type: "paragraph", text: "Portability changes the question. Instead of asking whether one platform can mediate every future identity interaction, the organization asks whether a credential issued in one context can be verified in another under explicit trust, format, and policy rules. That is a more durable business question because it separates the value of the verified state from the commercial boundary of the original verification provider." },
+      { type: "heading", text: "Standards help, but they do not finish the job" },
+      { type: "paragraph", text: "Standards such as W3C Verifiable Credentials, SD-JWT, ISO 18013-5 mDoc, OpenID for Verifiable Credentials, and EUDI wallet profiles all move the market toward portability. But a format alone does not answer every business question. A verifier still needs to know which issuers it trusts, which credential types it accepts, which claims are required, what revocation status means, and whether the presentation context satisfies its policy." },
+      { type: "paragraph", text: "This is where many portability programs stall. They adopt a credential format but leave trust and policy decisions inside application code or vendor-specific configuration. The credential may be portable on paper, but the operating model is not. If a verifier cannot express its acceptance rules without rewriting an integration, the ecosystem remains fragile." },
+      { type: "heading", text: "How MIP enables reuse" },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) defines credential portability at the protocol-model level. Credentials issued through one implementation can be evaluated by verifiers that support the same trust, format, and policy model. Trust Profiles allow the accepting party to specify which issuers and trust sources it recognizes. Credential Templates define the shape and constraints of the issued credential. Presentation Policies define what the verifier needs to see. Deployment Profiles determine how that verification runs in the real environment." },
+      { type: "paragraph", text: "That composition matters for business adoption. A healthcare network, education ecosystem, airport program, or enterprise partner network can rely on portable credentials only if every participant can understand more than the signature. They need to understand the governed context around that signature. MIP gives those decisions names and boundaries, which makes them reviewable before they become operational surprises." },
+      { type: "paragraph", text: "For sponsors, the economic value is a cleaner path from repeated verification to reusable infrastructure. The organization still invests in policy, trust management, security review, support, and runtime operations. But it is no longer forced to treat every cross-system interaction as a brand-new identity event." },
+      { type: "heading", text: "What buyers should look for" },
+      { type: "paragraph", text: "A portable credential program should not be evaluated only by wallet demos or issuance speed. Buyers should ask whether the system can explain issuer authorization, credential schemas, disclosure rules, revocation posture, and verifier acceptance policy. They should ask whether these decisions are visible as artifacts or trapped behind a vendor surface. They should ask how the model changes when the next standard profile arrives." },
+      { type: "paragraph", text: "The business case is strongest when portability reduces redundant work without weakening trust. A verifier should be able to apply its own policy. A holder should not have to disclose more than the decision requires. An issuer should not have to rebuild the whole ecosystem for every verifier. Those are architectural outcomes, not marketing slogans." },
+      { type: "paragraph", text: "Credential portability is valuable because it lets identity behave more like infrastructure. The next useful step is understanding the credential object itself: what gets issued, which claims it contains, and which rules make it meaningful. That is the job of Credential Templates." }
     ]
   },
   {
     slug: "cryptographic-trust-anchors-primer",
     title: "Cryptographic Trust Anchors: A Primer for Identity Systems",
-    summary: "X.509 chains, CSCA/DS certificates, and DID documents - the cryptographic foundations that make verifiable credentials actually verifiable.",
+    summary: "X.509 chains, CSCA/DS certificates, and DID documents are cryptographic foundations that help make verifiable credentials actually verifiable.",
     authorId: "marcus-vale",
     date: "2025-01-23",
     updatedDate: "2026-04-22",
     category: "Cryptography",
-    readTime: "9 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: `When we say a credential is "verifiable," we mean there's a cryptographic chain from the credential back to an issuer whose public key is anchored in a trust framework. Understanding how these trust anchors work is essential for anyone building or evaluating identity systems.` },
+      { type: "paragraph", text: 'When we say a credential is "verifiable," we mean there is a cryptographic chain from the credential back to an issuer whose public key is anchored in a trust framework. That distinction matters because identity systems fail quickly when "verifiable" becomes a vibe instead of a chain of evidence.' },
+      { type: "paragraph", text: "A signed credential proves only that some key signed some data. The harder question is whether that key belongs to an issuer the verifier is willing to trust for this credential type, whether the key was valid when the credential was issued, whether the credential has been revoked, and whether the verification path still satisfies the policy in front of us." },
+      { type: "paragraph", text: "Trust anchors are the material or resolved authorities at the base of that decision. They may be root certificates, country signing certificates, trust-list entries, issuer DIDs, registry records, or other governed sources. They are not glamorous, but they are what keep verification from becoming a theatrical signature check." },
       { type: "heading", text: "X.509 and PKI" },
-      { type: "paragraph", text: "The most widely deployed trust model uses X.509 certificate chains. ICAO's PKD uses CSCA (Country Signing Certificate Authority) and DS (Document Signer) certificates to establish that a passport chip was signed by a legitimate authority. MIP's Trust Profiles natively support X.509 chains with configurable path validation rules." },
-      { type: "heading", text: "DID-Based Trust" },
-      { type: "paragraph", text: "Decentralized Identifiers (DIDs) provide an alternative trust model where issuer public keys are resolved from DID Documents rather than certificate chains. MIP supports both models - and critically, allows a single Trust Profile to accept credentials anchored in either X.509 or DID-based trust." },
-      { type: "heading", text: "Why Both Models Matter" },
-      { type: "paragraph", text: "Government credentials (passports, mDLs) will use X.509 for decades. Enterprise and education credentials are moving toward DIDs. Any protocol that forces a choice between the two is excluding half the market. MIP's Trust Profiles are format-agnostic by design." }
+      { type: "paragraph", text: "The most widely deployed trust model uses X.509 certificate chains. A verifier starts with a trust anchor, validates a certificate path, checks key usage and algorithm constraints, evaluates freshness or revocation information, and only then treats the end-entity signing key as acceptable for the credential being evaluated." },
+      { type: "paragraph", text: "Passport infrastructure is a useful example because the chain is concrete. ICAO's Public Key Directory supports the distribution of country signing material. Country Signing Certification Authority (CSCA) certificates and Document Signer (DS) certificates help establish that a passport chip was signed by a legitimate authority. A verifier that skips path validation or treats every certificate as equivalent is not doing serious verification." },
+      { type: "paragraph", text: "The same pattern appears in other high-assurance environments. Mobile driver's licenses, government credentials, and enterprise PKI deployments may differ in governance and format, but each depends on a verifier being able to answer: which roots are trusted, which intermediates are acceptable, which algorithms are allowed, and which revocation or freshness signals are required?" },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) supports X.509 chains via Trust Profiles with configurable path-validation rules. That means the certificate logic does not have to be scattered across each verifier implementation. The trust expectations become part of the governed profile." },
+      { type: "heading", text: "DID-based trust" },
+      { type: "paragraph", text: "Decentralized Identifiers (DIDs) provide a different trust model. Instead of resolving an issuer's public key via a certificate chain, a verifier resolves a DID Document and evaluates the key material, verification methods, controller information, and any trust framework that indicates whether that DID is acceptable for the credential type." },
+      { type: "paragraph", text: "DID-based trust can be useful in ecosystems where issuer identity is represented through registries, decentralized identifiers, or organizational governance models that do not cleanly map to traditional PKI. It does not remove the need for trust. It moves the trust question into DID resolution, registry governance, key rotation, method rules, and verifier policy." },
+      { type: "paragraph", text: "That distinction matters. DID documents can identify keys, but the verifier still needs a reason to accept the issuer. Without a trust profile or registry context, a DID can become just another self-asserted namespace. Cryptographic agility does not replace governance." },
+      { type: "heading", text: "Why both models matter" },
+      { type: "paragraph", text: "Many government credentials, including passports and mobile driver's licenses, are likely to rely on X.509-based trust for years to come. Enterprise, education, and emerging ecosystem credentials may use DID-based trust, registry-backed issuer discovery, or hybrid models. A protocol that forces a choice between these worlds excludes important use cases." },
+      { type: "paragraph", text: "MIP's position is deliberately format-agnostic. A Trust Profile can describe acceptable X.509 anchors, DID-based issuer sources, or both, depending on the deployment. The verifier does not need one architecture for passports and another for enterprise credentials. It needs a governed way to evaluate the trust chain that applies to the credential in front of it." },
+      { type: "paragraph", text: "This also gives security teams a cleaner review surface. Instead of asking whether a verifier supports a credential format in the abstract, they can inspect the trust profile that names the accepted anchors, algorithms, resolution methods, and revocation expectations. The result is not merely a successful signature check. It is an explicit trust decision that can be audited and changed." },
+      { type: "paragraph", text: "The hard work is not pretending that one trust model wins everywhere. The hard work is making trust explicit enough that the verifier can apply the right model without hiding the decision in code. That is why cryptographic trust anchors belong in the same conversation as policy, deployment, and credential shape." },
+      { type: "paragraph", text: 'Read the revocation comparison next if you want to follow the chain from "who signed this" to the equally difficult question: "Is this still valid now?"' }
     ]
   },
   {
@@ -1253,50 +1352,88 @@ const me = Z({
     date: "2025-01-29",
     updatedDate: "2026-04-28",
     category: "Technical",
-    readTime: "8 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Issuing a credential isn't just about signing data. You need to define what claims the credential contains, how long it's valid, who can issue it, and which claims can be selectively disclosed. MIP's Credential Templates capture all of this as structured configuration." },
+      { type: "paragraph", text: "Issuing a credential is not just about signing data. The signature demonstrates integrity and issuer control, but it does not tell the ecosystem what the credential is meant to represent. A credential becomes useful only when its structure, claims, constraints, disclosure behavior, and issuance rules are defined before issuance." },
+      { type: "paragraph", text: "Credential Templates answer one recurring protocol question: what exactly gets issued? Without that object, teams end up rebuilding the same decisions in controllers, form definitions, schema validators, wallet mappings, and verifier documentation. The credential may be signed, but the system around it remains informal." },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) turns credential shape into structured configuration. A template is not merely a JSON schema. It is the governed definition of a credential type inside the identity system." },
       { type: "heading", text: "Anatomy of a Credential Template" },
-      { type: "paragraph", text: "Every Credential Template in MIP specifies a credential type and schema, a claims map that defines which attributes appear and how they're derived, validity rules including TTL and reissue windows, issuer constraints (who is authorized to issue), and selective disclosure configuration." },
+      { type: "paragraph", text: "Every Credential Template starts with a credential type and schema. The type tells the ecosystem what kind of object is being issued: an employee badge, a mobile credential, an education badge, pre-boarding clearance, a membership credential, or another program-specific artifact. The schema defines the structure of the claims that can appear." },
+      { type: "paragraph", text: "The template also defines a claims map. This is where the system decides which attributes appear in the credential and how those attributes are derived. Some claims may come from application data. Some may come from an upstream source credential. Some may be computed at issuance time, such as an eligibility flag or a bounded status." },
+      { type: "paragraph", text: "Validity rules belong in the template as well. A credential may have a time-to-live, reissue window, expiration rule, or program-specific lifecycle expectation. These rules matter because verifiers should not have to infer validity from scattered business logic. The credential should carry a shape that reflects the program's operating assumptions." },
+      { type: "paragraph", text: "Issuer constraints are just as important. A template should make clear who is allowed to issue credentials of this type. In a controlled enterprise deployment, that might be one internal issuer. In an ecosystem, it might be a class of accredited institutions or registered partners. The template does not replace Trust Profiles, but it connects issuance shape to the issuer authorization model." },
       { type: "heading", text: "Selective Disclosure by Default" },
-      { type: "paragraph", text: 'MIP treats selective disclosure as a first-class concern, not a bolt-on feature. Credential Templates specify which claims are always disclosed, which can be selectively revealed, and which support zero-knowledge predicates (e.g., "age >= 21" without revealing the birth date).' },
-      { type: "paragraph", text: "This design means privacy is a property of the credential itself - not something the verifier opts into after the fact." }
+      { type: "paragraph", text: 'MIP treats selective disclosure as a first-class concern, not a bolt-on feature. Credential Templates specify which claims are always disclosed, which can be selectively revealed, and which support predicates such as "age over 21" without revealing the exact birth date.' },
+      { type: "paragraph", text: "That decision has to happen early. If a credential is issued in a format that cannot support selective disclosure for the relevant claims, a later Presentation Policy cannot magically repair the privacy model. The verifier may ask for less, but the credential may not be able to prove less. That is why disclosure capability belongs in the template." },
+      { type: "paragraph", text: "The template also helps wallets and verifiers reason about what presentations are possible. A wallet can understand which claims may be revealed. A verifier can understand whether its policy is compatible with the credential type. A governance team can review whether the credential is collecting or exposing more information than the program requires." },
+      { type: "heading", text: "Templates Reduce Integration Drift" },
+      { type: "paragraph", text: "In many identity systems, the same credential definition is duplicated in several places. The issuer has one schema. The wallet has a display model. The verifier has a validation shape. Documentation has another version. Over time, those copies drift. A field gets renamed in one place. A validity rule changes in another. A verifier silently assumes a claim that the issuer no longer guarantees." },
+      { type: "paragraph", text: "A Credential Template gives the ecosystem a single, governed object to inspect and version. Implementations can still generate code, forms, wallet displays, and validation logic from it, but the source of truth is the template rather than a set of handwritten assumptions." },
+      { type: "paragraph", text: "That does not mean every downstream representation becomes identical. Wallets still need user-facing labels, issuers still need intake forms, and verifiers still need runtime validators. The template gives those surfaces a shared contract so they can diverge intentionally for their role instead of drifting accidentally because each team copied the credential model by hand." },
+      { type: "paragraph", text: "This is why Credential Templates sit immediately after Trust Profiles in the Marty model. Trust Profiles answer who is trusted. Credential Templates answer what those trusted issuers are allowed to create. Presentation Policies then answer what a verifier is allowed to ask from that credential." },
+      { type: "paragraph", text: "If you want to see how the template becomes a privacy boundary at presentation time, read Presentation Policies and the Art of Minimum Disclosure next." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Arc 2: Core Concepts ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Arc 2: Core Concepts
   {
     slug: "presentation-policies-minimum-disclosure",
     title: "Presentation Policies and the Art of Minimum Disclosure",
-    summary: "Verifiers shouldn't ask for everything. Presentation Policies formalize exactly what's needed - and nothing more.",
+    summary: "Verifiers should not ask for everything. Presentation Policies define exactly what is needed, and nothing more.",
     authorId: "nora-patel",
     date: "2025-02-04",
     updatedDate: "2026-05-04",
     category: "Cryptography",
-    readTime: "7 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "The principle of data minimization - asking only for what you need - is a regulatory requirement under GDPR and a core design principle in MIP. Presentation Policies are how verifiers express their requirements without over-collecting." },
-      { type: "heading", text: "Claims, Predicates, and Proofs" },
-      { type: "paragraph", text: 'A Presentation Policy can require specific claims (e.g., "family_name"), predicates (e.g., "age_over_21 = true"), or zero-knowledge proofs (e.g., prove age >= 18 without revealing the exact birth date). Each requirement type has different privacy properties and different cryptographic costs.' },
-      { type: "heading", text: "Freshness and Revocation" },
-      { type: "paragraph", text: "Presentation Policies also specify how fresh the credential must be and whether revocation status must be checked. An age verification at a bar might accept a credential issued 30 days ago. A pre-boarding security check might require issuance within 24 hours and real-time revocation checking." },
-      { type: "paragraph", text: "By encoding these rules in the policy rather than application code, MIP ensures that disclosure requirements are auditable, portable, and governed by policy teams - not buried in verifier implementations." }
+      { type: "paragraph", text: "Verifiers should not ask for everything. That sounds obvious, but most identity workflows still start from convenience: collect the credentials, inspect the claims, keep the parts that seem useful, and maybe add a consent screen so the over-collection feels polite. A minimum-disclosure posture starts from a stricter place. If the verifier has not defined the minimum information needed for the decision, privacy has already been lost before cryptography enters the room." },
+      { type: "paragraph", text: "The principle of data minimization is both a regulatory idea and a system-design discipline. In identity, it means the verifier should ask only for the information required to make the specific decision at hand. A bar does not need a birth date if the decision is based on age 21 or older. A building access system may not need a job title if the decision is whether the holder belongs to an authorized group. A service may not need a legal name if a pseudonymous entitlement is enough." },
+      { type: "paragraph", text: "Presentation Policies are how the Marty Identity Protocol (MIP) turns that discipline into a governed object. They let verifiers express requirements without turning every verifier implementation into its own privacy policy." },
+      { type: "heading", text: "The verifier boundary comes first" },
+      { type: "paragraph", text: "A Presentation Policy defines the boundary of what a verifier is allowed to learn. That boundary should be written before the wallet constructs a presentation and before an application developer reaches for any available claims." },
+      { type: "paragraph", text: "This changes the order of design. Instead of starting from a credential and asking which claims could be disclosed, MIP starts from the decision. What must the verifier know? What must remain undisclosed? How fresh must the evidence be? Is a boolean predicate enough, or does the verifier truly need a full value? Which credential formats can satisfy the request?" },
+      { type: "paragraph", text: "That is why Presentation Policies matter even when selective disclosure is available. A privacy-preserving credential format is not enough if the verifier still asks for too much. The policy is the place where the verifier commits to the narrow question." },
+      { type: "heading", text: "Claims, predicates, and proofs" },
+      { type: "paragraph", text: 'A Presentation Policy can require direct claims, predicates, or proof mechanisms. A direct claim might be "family_name" or "credential_type." A predicate might be "age_over_21 = true" or "membership_status = active." A zero-knowledge proof may allow the holder to prove a condition without revealing the source attribute.' },
+      { type: "paragraph", text: "Each requirement type has different privacy and operational properties. Direct claims are simple and widely supported, but they reveal more. Predicates narrow the disclosure surface but require credential support and wallet capabilities. Zero-knowledge proofs can better protect the source value, but they incur additional computational cost and may require specialized signature schemes or proof systems." },
+      { type: "paragraph", text: "The policy does not pretend those trade-offs disappear. It names them. If a verifier needs the exact legal name for a regulated workflow, the policy can say so. If the verifier only needs a status flag, the policy can say that instead. The point is not always to disclose the least technically possible information. The point is to disclose only the information required for a legitimate decision." },
+      { type: "heading", text: "Freshness and revocation" },
+      { type: "paragraph", text: "Disclosure is not the only policy question. Presentation Policies also specify how fresh the credential or presentation must be and whether revocation status must be checked. An age verification at a low-risk venue might accept a credential issued weeks ago. A pre-boarding security check may require a recent presentation and a stronger revocation posture. A workforce credential used for facility access may need tighter freshness rules than the same credential used for a low-risk internal service." },
+      { type: "paragraph", text: "These decisions also have privacy implications. Real-time revocation checks can improve assurance, but poorly designed ones may leak usage patterns. Offline verification protects availability, but it requires clear grace periods and cached trust material. A Presentation Policy should make those expectations explicit rather than leaving each verifier to improvise." },
+      { type: "heading", text: "Policy makes privacy auditable" },
+      { type: "paragraph", text: "When disclosure requirements live in code, privacy review becomes forensic. Someone has to inspect controllers, API calls, wallet requests, and logs to learn what the verifier actually asked for. When disclosure requirements live in Presentation Policies, privacy review has an artifact." },
+      { type: "paragraph", text: "Policy teams can review whether the request is proportionate. Security teams can review freshness and revocation expectations. Product teams can understand what the holder's experience will require. Implementers can wire the verifier to a stable policy instead of rebuilding the request by hand." },
+      { type: "paragraph", text: "This is the practical value of minimum disclosure in MIP. It is not only a nicer consent screen. It is a protocol boundary that makes the verifier's request explicit, portable, and governable. Read Zero-Knowledge Predicates in Identity next if you want to see how some policies can be satisfied without revealing the source claim itself." }
     ]
   },
   {
     slug: "eudi-wallet-readiness",
     title: "EUDI Wallet Readiness: What the Regulation Actually Requires",
-    summary: "The EU Digital Identity Wallet regulation is coming. Here's what it means for your identity infrastructure - and how protocol-first design helps.",
+    summary: "The EU Digital Identity Wallet rollout is moving toward the end-of-2026 deadline. What it means for identity infrastructure and protocol-first design.",
     authorId: "aiko-tanaka",
     date: "2025-02-10",
     updatedDate: "2026-05-10",
     category: "Business",
-    readTime: "6 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "The eIDAS 2.0 regulation requires EU member states to offer EUDI wallets to citizens and residents, with implementing acts finalizing the technical requirements through 2025. Large online platforms and public services will be required to accept them. Member state rollout is phased, with initial availability expected from late 2026 through early 2027 - the largest mandated adoption of verifiable credentials in history, and most organizations aren't ready." },
-      { type: "heading", text: "What EUDI Requires" },
-      { type: "paragraph", text: "EUDI wallets will issue Person Identification Data (PID), qualified electronic attestations, and pseudonymous authentication tokens. Verifiers must support the EUDI Architecture Reference Framework (ARF), which mandates specific credential formats (SD-JWT-VC, mDoc), transport protocols (OpenID4VP), and trust models (EU Trust Lists)." },
-      { type: "heading", text: "Protocol-First Compliance" },
-      { type: "paragraph", text: "MIP's compliance profiles include a complete EUDI mapping. Instead of building EUDI support as a custom integration, MIP models it as a Compliance Profile that maps to standard Trust Profiles, Credential Templates, and Presentation Policies. When the regulation evolves, you update configuration - not code." }
+      { type: "paragraph", text: "The EU Digital Identity Wallet is not just another wallet initiative. It is a regulatory program that pushes public services, regulated sectors, and very large online platforms that require user authentication toward a common model for digital identity acceptance. EUDI is standards pressure made visible: organizations that treat it as a late integration task will discover that the hard part is not the button that opens a wallet. The hard part is the trust, format, policy, and governance model around that button." },
+      { type: "paragraph", text: "eIDAS 2.0 requires EU member states to provide at least one European Digital Identity Wallet for natural and legal persons in the Union, with technical requirements shaped through implementing acts and the EUDI Architecture Reference Framework. Rollout is phased, and the details continue to mature, but the direction is clear enough for infrastructure planning: verifiers need to prepare for wallet-based credentials that arrive with regulated expectations." },
+      { type: "paragraph", text: 'Readiness, therefore, cannot mean "we will add EUDI when someone asks for it." It means the identity architecture already has a place to express trusted issuers, credential formats, disclosure rules, presentation protocols, and regulatory profile changes.' },
+      { type: "heading", text: "What EUDI requires" },
+      { type: "paragraph", text: "EUDI wallets are expected to support Person Identification Data, attestations, and presentation flows that let users prove identity-related facts to relying parties. The exact implementation surface depends on evolving standards and national rollout choices, but the recurring ingredients are visible: credential formats such as SD-JWT-VC and mDoc, presentation protocols such as OpenID for Verifiable Presentations, trust lists or registries, and verifier obligations around data minimization and purpose limitation." },
+      { type: "paragraph", text: "That combination matters because no single layer carries the whole compliance burden. A verifier cannot be EUDI-ready merely by parsing a credential. It must know which trust sources count. It must know which claims it is allowed to request. It must know whether the presentation protocol and credential format are acceptable for the use case. It must handle updates as the profile evolves." },
+      { type: "paragraph", text: "The operational challenge is fragmentation. EUDI does not arrive in a world where organizations have only one identity stack. Most enterprises already have onboarding systems, access systems, customer identity systems, fraud workflows, compliance review, and partner integrations. EUDI readiness has to fit into that landscape without becoming another one-off integration path." },
+      { type: "heading", text: "The readiness trap" },
+      { type: "paragraph", text: "The common mistake is to treat EUDI as a vendor feature. A team waits for a wallet SDK, a relying-party service, or an identity platform to advertise support, then assumes the organization is ready. That may solve the first demo. It does not solve the governance problem." },
+      { type: "paragraph", text: "A verifier still needs to express what it trusts and what it asks for. A compliance team still needs to review whether the disclosure is proportionate. An architecture team still needs to understand how EUDI credentials interact with existing credentials. A support team still needs to handle failures when a wallet presentation cannot be completed or a trust list is unavailable." },
+      { type: "paragraph", text: "If those decisions are buried inside a vendor integration, every regulatory update becomes a vendor dependency. If they are expressed as protocol objects, the organization has a path to adapt without restarting the architecture." },
+      { type: "heading", text: "Protocol-first compliance" },
+      { type: "paragraph", text: "MIP models EUDI readiness through the same primitives it uses for other identity ecosystems. Trust Profiles express which trust lists, issuers, and validation rules apply. Credential Templates specify the expected credential types and claim shapes. Presentation Policies express what the relying party is allowed to request. Deployment Profiles express how the verification path runs in a real environment." },
+      { type: "paragraph", text: "A Compliance Profile can then map EUDI requirements into those primitives. That mapping is an important design move. EUDI support is not an isolated code branch. It becomes a profile that can evolve as requirements mature. When a format requirement changes, the relevant configuration changes. When a trust expectation changes, the Trust Profile changes. When a relying-party request must be narrowed, the Presentation Policy changes." },
+      { type: "paragraph", text: "This does not remove the need for implementation work. Teams still need wallet support, protocol support, testing, user experience design, monitoring, and operational procedures. But the implementation has a clearer contract because the regulatory profile is represented as structured identity infrastructure." },
+      { type: "heading", text: "What organizations should do now" },
+      { type: "paragraph", text: "The best preparation is to inventory the decisions EUDI will force. Which user journeys may need wallet acceptance? Which facts will the organization ask for? Which current systems assume document scans or account-based identity proofing? Which trust lists or regulated issuer sources will matter? Which teams own policy updates?" },
+      { type: "paragraph", text: "Those questions are easier to answer before a deadline. EUDI readiness is not only a European compliance story. It is a preview of how regulated digital identity will arrive elsewhere: through a combination of wallet standards, trust frameworks, and verifier responsibilities. A protocol-first model gives organizations a way to absorb that pressure without treating every new framework as a brand-new architecture." },
+      { type: "paragraph", text: "Read Compliance Profiles next if you want to see how standards and regulatory frameworks map onto reusable MIP primitives." }
     ]
   },
   {
@@ -1307,69 +1444,119 @@ const me = Z({
     date: "2025-02-16",
     updatedDate: "2026-05-15",
     category: "Technical",
-    readTime: "7 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "You've defined your Trust Profiles, built your Credential Templates, and configured your Presentation Policies. Now what? Deployment Profiles are the operational primitive that packages everything for runtime execution." },
-      { type: "heading", text: "What a Deployment Profile Controls" },
-      { type: "paragraph", text: 'Deployment Profiles specify which flows are enabled, which policies are active, the network mode (online, offline, hybrid), UX configuration (branding, locale), and device groupings called lanes. A lane might represent "Airport Terminal A - Gates 1-12" or "Mobile Verification Fleet - Eastern Region."' },
-      { type: "heading", text: "Online vs. Offline" },
-      { type: "paragraph", text: "The network mode is particularly important. Online deployments can check revocation in real-time and pull trust updates immediately. Offline deployments (airports, facilities, field operations) need pre-cached trust anchors and grace periods. MIP Deployment Profiles make this a configuration choice, not an architectural fork." },
-      { type: "paragraph", text: "This separation means the same Trust Profile and Presentation Policy can power both a cloud API and an air-gapped kiosk - only the Deployment Profile differs." }
+      { type: "paragraph", text: "You have defined your Trust Profiles, built your Credential Templates, and configured your Presentation Policies. Now the diagram has to survive contact with devices, networks, staff, lanes, kiosks, mobile apps, and environments that do not care how elegant the architecture looked in review." },
+      { type: "paragraph", text: "That operational moment matters. Identity systems do not fail only because the trust model is wrong. They fail because the trust model cannot be delivered to the place where verification actually happens. A policy that works in a cloud API may behave differently at an airport gate with intermittent connectivity. A credential flow that works on a laptop may strain a handheld verifier in the field. A revocation rule that is acceptable online may need a different posture offline." },
+      { type: "paragraph", text: "Deployment Profiles are the Marty Identity Protocol (MIP) primitive that packages identity configuration for runtime execution. They answer the practical question: where does this system run, under which operating assumptions?" },
+      { type: "heading", text: "What a Deployment Profile controls" },
+      { type: "paragraph", text: "A Deployment Profile specifies which Flows are enabled, which Presentation Policies are active, which Trust Profiles are available, how credentials are verified, and what runtime mode applies. It can also capture operational details such as branding, locale, lane grouping, device classes, cache behavior, and update cadence." },
+      { type: "paragraph", text: 'The lane concept is especially useful. A lane is a named operational grouping: "Airport Terminal A - Gates 1-12," "Mobile Verification Fleet - Eastern Region," "Clinic Intake Desk," or "Warehouse Visitor Kiosks." Each lane may share the same underlying trust and policy model while needing different runtime packaging.' },
+      { type: "paragraph", text: "That distinction lets operators make practical changes without changing the architecture. A verifier fleet can receive a different cache window. A kiosk lane can run a narrower set of flows. A mobile deployment can use a different user experience. The same identity primitives remain stable, but the deployment adapts to the environment." },
+      { type: "heading", text: "Online, offline, and hybrid operation" },
+      { type: "paragraph", text: "Network mode is one of the most important deployment decisions. Online deployments can check revocation in real time, resolve trust updates immediately, and call external services during verification. That gives strong freshness, but it assumes the network is available and latency is acceptable." },
+      { type: "paragraph", text: "Offline deployments need a different posture. Airports, facilities, field operations, events, and mobile teams may need verification to continue when connectivity is weak or unavailable. That means pre-cached trust anchors, bounded grace periods, local policy evaluation, and clear rules for what happens when freshness cannot be confirmed." },
+      { type: "paragraph", text: "Hybrid deployments sit between those extremes. They may operate online by default, cache trust material for resilience, and degrade into offline behavior for a defined period. The important point is that the mode is not an accidental property of the implementation. It is an explicit deployment choice." },
+      { type: "heading", text: "Runtime configuration is not second-class architecture" },
+      { type: "paragraph", text: "Teams often treat deployment as the boring part after the real design is finished. That is a mistake in identity. Runtime conditions shape security, privacy, user experience, and support. If a verifier cannot reach a revocation service, what should it do? If a handheld device misses a trust update, who can see that state? If a presentation policy changes, which lanes receive the update first?" },
+      { type: "paragraph", text: "Deployment Profiles make those questions reviewable. Operators can reason about rollout, rollback, monitoring, cache freshness, and lane-specific behavior. Security teams can review how offline grace periods work. Product teams can understand the user experience in each environment. The deployment stops being tribal knowledge." },
+      { type: "heading", text: "One model, many runtimes" },
+      { type: "paragraph", text: "The payoff is reuse. The same Trust Profile and Presentation Policy can power a cloud API, an on-prem verifier, a kiosk lane, and a mobile fleet. The differences belong in the Deployment Profile, not in four separate identity architectures." },
+      { type: "paragraph", text: "That separation is also what makes incident response more realistic. If an offline cache window needs to shrink, an operator should be able to change the deployment posture without rewriting the trust model. If a lane must be paused, the control plane should know which devices and flows are affected. Runtime configuration is where those operational controls become concrete." },
+      { type: "paragraph", text: "This is what lets MIP bridge design and production. Trust remains governed. Disclosure remains explicit. Credential shape remains stable. The runtime can still change because environments do, too." },
+      { type: "paragraph", text: "Read Flows next if you want to see how Deployment Profiles connect to the lifecycle that applicants, issuers, holders, and verifiers actually experience." }
     ]
   },
   {
     slug: "zero-knowledge-predicates-identity",
     title: "Zero-Knowledge Predicates in Identity: What, Why, and How",
-    summary: "Proving you're over 21 without revealing your birthday. ZK predicates in MIP enable privacy-preserving identity verification at protocol level.",
+    summary: "Proving you're over 21 without revealing your birthday. MIP's predicate-aware policies keep identity verification focused on the bounded question.",
     authorId: "nora-patel",
     date: "2025-02-21",
     updatedDate: "2026-05-21",
     category: "Cryptography",
-    readTime: "10 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "The most privacy-invasive moment in identity verification is disclosure. Does a bar need your full name, address, and birthday to verify you're old enough to drink? Of course not. They need exactly one bit of information: age >= 21. Zero-knowledge predicates make this possible at the cryptographic level." },
-      { type: "heading", text: "How ZK Predicates Work" },
-      { type: "paragraph", text: `A zero-knowledge predicate proves that a claim satisfies a condition without revealing the claim itself. The holder's wallet generates a proof that their birth_date attribute satisfies "age >= 21" - and the verifier learns nothing except whether the condition is met. No birth date is transmitted.` },
-      { type: "heading", text: "MIP's Approach" },
-      { type: "paragraph", text: "MIP encodes ZK predicate support in Presentation Policies. A policy can specify both required claims (full disclosure) and predicates (ZK proof) for different attributes in the same request. Credential Templates flag which claims support predicate evaluation at issuance time, so wallets know which proof types they can generate." },
-      { type: "heading", text: "Current Limitations" },
-      { type: "paragraph", text: "ZK predicates add computational cost and require specific credential formats (BBS+ signatures, CL signatures). MIP's approach is pragmatic: predicates are a policy option, not a requirement. Verifiers who need predicates specify them; verifiers who don't can use standard selective disclosure. The protocol supports the full spectrum." }
+      { type: "paragraph", text: "The most privacy-invasive moment in identity verification is disclosure. A verifier asks a question, and the holder reveals data to answer it. The question may be narrow, but the disclosure often is not. Does a venue need your full name, address, and birth date to know whether you are old enough to enter? Usually no. It needs one bounded fact." },
+      { type: "paragraph", text: "Zero-knowledge predicates are a way to keep the verifier inside that bounded fact. The point is not to make every identity flow cryptographically exotic. The point is to stop treating full-claim disclosure as the default answer when the real decision is narrower." },
+      { type: "paragraph", text: "A predicate is a statement about a claim: age is at least 21, certification status is current, membership tier is in an accepted set, or employment role satisfies a requirement. A zero-knowledge predicate allows the holder to prove the statement without revealing the underlying value." },
+      { type: "heading", text: "How ZK predicates work" },
+      { type: "paragraph", text: "In an age-check example, the wallet may hold a credential with a birth date or an issuer-derived age attribute. The verifier does not need the birth date. It needs to know whether the holder is at least 21 years old. A zero-knowledge proof allows the wallet to prove the predicate while keeping the source attribute hidden." },
+      { type: "paragraph", text: "The verifier learns whether the condition is satisfied. It does not learn the exact birth date. It does not learn the holder's age beyond the predicate boundary. If the proof system and credential format support unlinkability properties, repeated presentations may also reduce the risk that verifiers can correlate the holder across contexts." },
+      { type: "paragraph", text: "The privacy benefit is precise: the mechanism aligns the disclosure with the decision. The verifier gets enough evidence to act, but not the surrounding data it might be tempted to store, analyze, or reuse later." },
+      { type: "heading", text: "MIP's approach" },
+      { type: "paragraph", text: "MIP models predicate support through Presentation Policies and Credential Templates. A Credential Template can indicate which claims support predicate evaluation. A Presentation Policy can ask for a predicate rather than a full claim when the verifier only needs the bounded answer." },
+      { type: "paragraph", text: "That separation matters. The template describes what the credential can support. The policy describes what the verifier may request. The wallet uses both to construct a presentation. If the credential cannot support the requested predicate, the system should fail clearly rather than silently widening the disclosure." },
+      { type: "paragraph", text: "A policy can mix requirement types. A verifier may need one direct claim, one selectively disclosed attribute, and one predicate proof in the same presentation. That is normal. Privacy is not all-or-nothing; it is a set of boundaries around each decision." },
+      { type: "heading", text: "Current limitations" },
+      { type: "paragraph", text: "Zero-knowledge predicates are not free. They can add computational cost, require specific credential formats, depend on wallet support, and complicate interoperability. Some ecosystems may use BBS+ style signatures, CL signatures, or other proof systems. Others may rely on SD-JWT selective disclosure or issuer-derived boolean claims because those mechanisms are easier to deploy." },
+      { type: "paragraph", text: "MIP's posture is pragmatic. Predicates are a policy option, not a universal requirement. Verifiers that need them can request them. Verifiers that do not need them can use simpler disclosure mechanisms. The protocol should support the spectrum without pretending every decision needs the heaviest cryptographic tool." },
+      { type: "heading", text: "The policy question comes before the proof" },
+      { type: "paragraph", text: "The most important design step still happens before cryptography. The verifier must define the bounded question. If the policy asks for a full birth date, a later proof mechanism cannot undo the over-collection. If the policy requires age_over_21, the system can select the best available mechanism to satisfy that narrow requirement." },
+      { type: "paragraph", text: "The same principle applies beyond age checks. A workforce verifier may need to know whether a holder has an active safety certification, not the date of every training event. A membership verifier may need to know whether a tier is eligible, not the account history behind it. Predicates are most useful when the organization has already named the decision precisely." },
+      { type: "paragraph", text: "That naming work is an operational discipline. It gives legal, privacy, product, and engineering teams one phrase to inspect before anyone argues about proof systems. If the bounded question is weak, the proof will only make a weak request more expensive." },
+      { type: "paragraph", text: "That is why zero-knowledge predicates belong in the same conversation as Presentation Policies. The proof is valuable because the policy has already done the privacy work of narrowing the scope of the question. Read SD-JWT Selective Disclosure next to compare this approach with a simpler mechanism that hides undisclosed claims without proving arbitrary predicates." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Arc 3: Advanced Topics ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Arc 3: Advanced Topics
   {
     slug: "flows-orchestrating-identity-lifecycle",
     title: "Flows: Orchestrating the Identity Lifecycle",
-    summary: "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive - the user-facing product that ties everything together.",
+    summary: "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive: the user-visible lifecycle that ties trust, credential, presentation, and deployment rules together.",
     authorId: "daniel-ortega",
     date: "2025-02-27",
     updatedDate: "2026-05-27",
     category: "Technical",
-    readTime: "8 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "The other four MIP primitives define trust, credentials, policies, and deployment. Flow is the fifth primitive that ties them together into end-to-end journeys - the actual product that applicants, issuers, and verifiers experience." },
+      { type: "paragraph", text: "The other four MIP primitives define trust, credential shape, presentation requirements, and deployment posture. Flow is the fifth primitive that turns those objects into an end-to-end journey. It is the part that applicants, issuers, holders, operators, and verifiers actually experience." },
+      { type: "paragraph", text: "Flows are the antidote to identity systems that have good pieces but no coherent motion. A Trust Profile may be well defined. A Credential Template may be clear. A Presentation Policy may be privacy-aware. A Deployment Profile may package the runtime. But someone still has to move from application to approval to issuance to presentation to verification without every team inventing its own lifecycle." },
+      { type: "paragraph", text: "A Flow gives that lifecycle a governed shape." },
       { type: "heading", text: "Anatomy of a Flow" },
-      { type: "paragraph", text: "Every MIP Flow defines a sequence of stages: apply (collect applicant information), approve (evaluate against rules), issue (create and sign the credential), present (holder shows credential to verifier), and verify (check against trust and policy). Each stage references the relevant primitive - the approval stage references a Credential Template, the verify stage references a Presentation Policy and Trust Profile." },
-      { type: "heading", text: "Real-World Examples" },
-      { type: "paragraph", text: "A pre-boarding clearance flow: traveler submits passport data -> automated ICAO verification -> clearance credential issued -> presented at boarding gate -> verified offline at kiosk. An employee badge flow: HR submits employee info -> manager approves -> enterprise credential issued -> presented at door -> verified by access control system. The primitive composition is different, but the flow structure is identical." },
-      { type: "paragraph", text: "This uniformity is the point. Flows are the user's mental model. Everything else is configuration underneath." }
+      { type: "paragraph", text: "A MIP Flow defines a sequence of stages. A simple credential journey may begin with apply, where an applicant submits information or source evidence. It may move to approve, where rules, reviewers, or automated checks decide whether issuance is allowed. It may continue to issue, where a credential is created and signed. Later, the holder presents the credential, and a verifier evaluates it under trust and policy rules." },
+      { type: "paragraph", text: "Each stage references the relevant primitive. An approval stage may reference a Credential Template to determine the type of credential being requested. A verification stage may reference a Trust Profile and Presentation Policy because the verifier needs to know who to trust and what may be requested. A runtime stage may reference a Deployment Profile because the flow behaves differently in an online API than it does in an offline kiosk." },
+      { type: "paragraph", text: "This is the important design move: the Flow orchestrates primitives rather than burying their logic in a custom workflow engine. The lifecycle is not a pile of callbacks. It is a protocol object that can be reviewed, versioned, and reused." },
+      { type: "heading", text: "Real-world examples" },
+      { type: "paragraph", text: "Consider a pre-boarding clearance flow. A traveler submits passport data and supporting information. The issuer evaluates the passport evidence under approval rules and a Trust Profile that defines which passport trust sources and validation paths count. If the traveler satisfies the rules, the system issues a short-lived clearance credential from a defined Credential Template. At the gate, the traveler presents that credential. The verifier applies a Presentation Policy and runs under a Deployment Profile that may need offline behavior." },
+      { type: "paragraph", text: "Now consider an employee badge flow. HR submits employee information. A manager or automated rule approves the application. The system issues an enterprise credential. The employee presents that credential to a door reader or application gateway. The verifier checks the credential against enterprise trust and policy settings. The physical access deployment may have different runtime constraints than the cloud application, but the lifecycle shape is recognizable." },
+      { type: "paragraph", text: "The examples differ in standards, risk, and deployment environment. The Flow structure gives both journeys a common grammar." },
+      { type: "heading", text: "Flows make ownership visible" },
+      { type: "paragraph", text: "Identity lifecycles often cross team boundaries. Product teams own user intake. Security teams own trust requirements. Compliance teams own policy review. Operations teams own runtime behavior. Without a Flow, these responsibilities are stitched together informally. The result is fragile handoff logic and unclear accountability." },
+      { type: "paragraph", text: "A Flow makes those handoffs visible. It shows where information is collected, where decisions are made, where credentials are issued, and where verification happens. It gives teams a shared object to inspect rather than forcing them to reverse-engineer a user journey from application code." },
+      { type: "paragraph", text: "Flows also make change safer. If a verification stage needs a stricter Presentation Policy, the Flow can point to a new policy version. If a deployment moves from cloud-only to hybrid operation, the Flow can reference a different Deployment Profile. If the credential shape changes, the Flow can reference an updated Credential Template. The lifecycle moves, but the parts remain explicit." },
+      { type: "heading", text: "The user sees the flow, not the primitives" },
+      { type: "paragraph", text: "Most users will never ask about Trust Profiles or Credential Templates. They experience the flow: apply, wait, receive, present, get accepted or rejected. That is why Flow is not a decorative wrapper. It is the user-facing composition of the protocol." },
+      { type: "paragraph", text: "This uniformity is the point. A well-designed Flow lets the same protocol model support very different journeys without turning every journey into a custom integration. Read The Five Primitives in One Picture next if you want the map that shows how Flow sits among the other primitives." }
     ]
   },
   {
     slug: "compliance-profiles-bridging-regulation",
     title: "Compliance Profiles: Bridging Standards and Regulation",
-    summary: "ICAO, AAMVA, EUDI, Open Badges - every standard has its own rules. Compliance Profiles map them to MIP primitives so you configure once and comply everywhere.",
+    summary: "ICAO, AAMVA, EUDI, Open Badges - every framework brings its own rules. Compliance Profiles map those requirements to MIP primitives so teams can review, configure, and update them deliberately.",
     authorId: "elena-kovacs",
     date: "2025-03-05",
     updatedDate: "2026-06-02",
     category: "Business",
-    readTime: "6 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "The verifiable credentials landscape is fragmented across regulatory frameworks. A government DMV follows AAMVA rules. An airport follows ICAO 9303. A European service follows EUDI/eIDAS 2.0. An educational institution follows Open Badges 3.0. Each framework has different trust models, credential formats, and disclosure requirements." },
-      { type: "heading", text: "What Compliance Profiles Do" },
-      { type: "paragraph", text: "MIP Compliance Profiles are mappings from a specific standard or regulation to MIP primitives. The ICAO compliance profile specifies which Trust Profile settings are required for passport verification, which Credential Template fields map to ICAO data groups, and which Presentation Policy rules enforce ICAO's security requirements. You don't build ICAO support - you activate the ICAO Compliance Profile." },
-      { type: "heading", text: "Current Compliance Profile Inventory" },
-      { type: "paragraph", text: "MIP v0.1.0 currently includes eleven compliance-profile definitions across seven families: ICAO 9303, AAMVA mDL, EUDI/eIDAS 2.0, Open Badges 3.0, DIF Presentation Exchange, enterprise credentials, and a generic OID4VC profile. Each profile is versioned alongside the specification, so compliance updates are protocol updates - not vendor-specific patches." }
+      { type: "paragraph", text: "The verifiable credentials landscape is fragmented across regulatory and standards frameworks. A government DMV may need to align with mobile driver's license requirements. An airport verifier may need ICAO passport trust. A European relying party prepares for EUDI wallet rules. An educational institution looks at Open Badges. Each framework brings its own trust model, credential format, disclosure posture, and governance assumptions." },
+      { type: "paragraph", text: "The risk is clear: without a governed mapping layer, compliance becomes a collection of one-off interpretations. One team encodes a requirement in application code. Another stores it in documentation. A vendor handles part of it behind an API. An operations team discovers the gap only when a regulator, auditor, partner, or customer asks which rule is actually being enforced." },
+      { type: "paragraph", text: "Compliance Profiles exist to reduce that drift. They turn standards and regulatory frameworks into explicit mappings onto the Marty Identity Protocol (MIP) primitives." },
+      { type: "heading", text: "What Compliance Profiles do" },
+      { type: "paragraph", text: "A Compliance Profile explains how a specific standard, regulation, or ecosystem requirement maps to Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows. The point is not to hide the standard. The point is to make the standard operational without forcing each implementation to reinterpret it from scratch." },
+      { type: "paragraph", text: "An ICAO-oriented profile, for example, may specify which trust material and path validation expectations belong in the Trust Profile, which data elements or evidence constraints matter for Credential Templates, and which verifier request rules belong in Presentation Policies. An EUDI-oriented profile may capture wallet presentation expectations, credential format choices, trust-list requirements, and the relying party's disclosure posture." },
+      { type: "paragraph", text: "This gives governance teams something concrete to review. They can ask whether the profile reflects the framework as intended. They can see which primitive carries each requirement. They can version changes when a framework evolves. Most importantly, they can distinguish a governed compliance mapping from a vendor-specific implementation detail." },
+      { type: "heading", text: "Why mappings are safer than ad hoc integrations" },
+      { type: "paragraph", text: "Ad hoc compliance integrations often introduce hidden coupling. A verifier may support an ecosystem only because one service knows how to parse a format, another service knows where to fetch trust material, and a third service enforces a disclosure rule. The implementation works until a requirement changes. Then no one is sure which part of the stack owns the update." },
+      { type: "paragraph", text: "A Compliance Profile makes ownership cleaner. Trust changes belong in the trust configuration. Credential shape changes belong in templates. Verifier-request changes belong in Presentation Policies. Runtime posture belongs in Deployment Profiles. Lifecycle changes belong in Flows. The profile records the mapping so the system can evolve without turning compliance into archaeology." },
+      { type: "paragraph", text: 'That structure also helps buyers compare implementations. Instead of asking whether a vendor "supports EUDI" or "supports mDL," they can ask which profile version is implemented, which primitives it configures, and which requirements remain outside the current profile.' },
+      { type: "heading", text: "Current compliance profile inventory" },
+      { type: "paragraph", text: "MIP v0.1.0 includes compliance-profile definitions across several families, including ICAO 9303, AAMVA mDL, EUDI/eIDAS 2.0, Open Badges 3.0, DIF Presentation Exchange, enterprise credentials, and generic OID4VC-oriented profiles. The exact profile set should be read from the current specification rather than memorized from a blog post, because profiles are protocol artifacts that can evolve." },
+      { type: "paragraph", text: "The important architectural point is stable: compliance updates should be represented as versioned protocol updates, not as invisible patches in application code. A profile can be reviewed, tested, and referenced by implementers. That makes compliance less dependent on tribal knowledge." },
+      { type: "heading", text: "The governance payoff" },
+      { type: "paragraph", text: "Compliance is often discussed as a burden, but profile-based compliance can become an adoption advantage. It gives institutions a way to adopt credential ecosystems without losing control of policy and auditability. It lets implementers build against known mappings. It lets security and legal teams review the system at the right abstraction level." },
+      { type: "paragraph", text: "It also creates a practical conversation with partners. Instead of trading screenshots or vendor claims, two organizations can compare the profile versions and primitive mappings they expect to use. The disagreement becomes specific: a trust-list source, a credential format, a disclosure rule, a revocation posture, or a deployment requirement." },
+      { type: "paragraph", text: "Compliance Profiles bridge regulation and architecture. They do not replace careful legal analysis or standards conformance testing. They give those efforts a place to land inside the system model. Read Cedar Policies for Identity Governance next if you want to see how governance rules become executable authorization boundaries." }
     ]
   },
   {
@@ -1380,52 +1567,126 @@ const me = Z({
     date: "2025-03-11",
     updatedDate: "2026-06-08",
     category: "Cryptography",
-    readTime: "9 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Selective disclosure doesn't always require zero-knowledge proofs. SD-JWT (Selective Disclosure for JWTs) provides a simpler mechanism: the issuer includes hashed, salted versions of claims, and the holder reveals only the claims needed for a specific presentation. It's less privacy-preserving than ZK predicates but far more practical for most use cases." },
-      { type: "heading", text: "How SD-JWT Works" },
-      { type: "paragraph", text: "At issuance, each disclosable claim is encoded as a disclosure: a base64url-encoded JSON array of [salt, claim_name, claim_value]. The JWT body contains only the hashes of these disclosures. At presentation, the holder includes the full JWT plus only the disclosures the verifier needs. The verifier can verify the claim hash matches but never sees undisclosed claims." },
-      { type: "heading", text: "MIP's SD-JWT Integration" },
-      { type: "paragraph", text: 'MIP Credential Templates specify which claims are "always disclosed" (included in the JWT body directly), "selectively disclosable" (hashed, revealed per-presentation), and "never disclosed" (omitted entirely). Presentation Policies reference claims by name, and the wallet automatically constructs the minimal disclosure set. This design means the same credential works for both full-disclosure and minimal-disclosure scenarios without re-issuance.' }
+      { type: "paragraph", text: "Selective disclosure does not always require zero-knowledge proofs. Sometimes the right privacy improvement is more practical: issue a credential in a format that lets the holder reveal only selected claims while keeping the rest hidden. SD-JWT, short for Selectively Disclosable JWT and defined by RFC 9901, is one of the most important mechanisms in that middle ground." },
+      { type: "paragraph", text: "SD-JWT is a pragmatic privacy tool. It does not solve every privacy problem. It does not prove arbitrary predicates in the same way a zero-knowledge proof system might. It does, however, give many identity systems a deployable way to stop revealing the whole credential when the verifier only needs part of it." },
+      { type: "paragraph", text: "That distinction matters because over-disclosure is often a default behavior rather than a deliberate requirement. A verifier asks for a credential, receives a bundle of claims, and stores more than it needed. SD-JWT helps narrow the disclosure surface when the credential and wallet are designed for it." },
+      { type: "heading", text: "How SD-JWT works" },
+      { type: "paragraph", text: "At issuance, each selectively disclosable claim is encoded as a disclosure. For object properties, that disclosure contains a salt, a claim name, and a claim value; array-element disclosures omit the claim name. The issuer places hashes of those disclosures in the signed JWT rather than placing every claim value directly in the token body." },
+      { type: "paragraph", text: "At presentation time, the holder sends the signed JWT, along with only the disclosures needed by that verifier. The verifier checks that the disclosed claim hashes match the signed commitments. Undisclosed claims remain hidden because their salted values are not sent." },
+      { type: "paragraph", text: "This means that SD-JWT protects against unnecessary disclosure of claims, but it does not automatically hide everything about the presentation. The verifier still sees the disclosed claims. Linkability and correlation risks depend on credential design, holder binding, key use, and presentation protocol details. SD-JWT is a useful privacy mechanism, not a complete privacy model by itself." },
+      { type: "heading", text: "Where SD-JWT fits beside predicates" },
+      { type: "paragraph", text: "The easiest way to compare SD-JWT with zero-knowledge predicates is to ask what the verifier learns. With SD-JWT selective disclosure, the verifier can learn a selected claim value, such as a family name or an expiration date. With a predicate proof, the verifier may learn only whether a condition is true, such as age over 21." },
+      { type: "paragraph", text: "Both are useful. If the verifier legitimately needs the value, SD-JWT can reveal that value without revealing the rest of the credential. If the verifier only needs a bounded fact, a predicate may be better. The privacy design should follow the decision, not the other way around." },
+      { type: "heading", text: "MIP's SD-JWT integration" },
+      { type: "paragraph", text: "MIP connects SD-JWT behavior to Credential Templates and Presentation Policies. Credential Templates specify which claims are always disclosed, which can be selectively revealed, and which support predicate-style disclosure boundaries. That gives the issuer and governance team a place to define the credential's privacy posture before issuance." },
+      { type: "paragraph", text: "Presentation Policies then reference claims by name and define what the verifier is allowed to request. A wallet can use the credential template and the presentation policy to construct a minimal disclosure set. The verifier receives the evidence needed for the decision without receiving unrelated claims." },
+      { type: "paragraph", text: "This design also supports reuse. The same credential may work for a full-disclosure internal workflow and a minimal-disclosure external workflow, as long as the credential format and template support both. Reuse does not have to mean revealing the same claim set every time." },
+      { type: "heading", text: "The governance boundary still matters" },
+      { type: "paragraph", text: "SD-JWT helps only if the verifier request is disciplined. A verifier can still ask for too many disclosures. A wallet can still present more than necessary if the policy is vague. A system can still store disclosed claims beyond the purpose of the interaction. Privacy mechanisms need policy boundaries around them." },
+      { type: "paragraph", text: "A good implementation, therefore, treats SD-JWT as part of a larger review loop. Issuers define which claims can be disclosed. Verifiers justify which disclosures they request. Wallets present only the selected disclosures. Logs and analytics should avoid rebuilding the full credential from fragments that were supposed to remain separate." },
+      { type: "paragraph", text: "The simplest review question is often the best one: if this disclosure were printed on a screen in front of the holder, would the request still feel proportionate to the decision? SD-JWT helps enforce the answer only after the system has honestly asked that question." },
+      { type: "paragraph", text: "That is why MIP does not treat SD-JWT as an isolated feature. It belongs in a model where templates define capability, policies define allowed disclosure, and deployments define runtime behavior. Read Presentation Policies and the Art of Minimum Disclosure if you want the policy side of that same privacy boundary." }
     ]
   },
   {
     slug: "cedar-policies-for-identity-governance",
     title: "Writing Cedar Policies for Identity Governance",
-    summary: "A practical guide to writing Cedar authorization policies for MIP - from basic access control to complex approval workflows.",
+    summary: "MIP uses Cedar PolicySets to keep access control, credential verification, and approval rules inspectable, validated, and governed before they reach production.",
     authorId: "elena-kovacs",
     date: "2025-03-17",
     updatedDate: "2026-06-13",
     category: "Technical",
-    readTime: "10 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: 'MIP uses AWS Cedar as its authorization language. This post walks through practical examples of writing Cedar policies for common identity governance scenarios - from "only admins can create Trust Profiles" to "no user can approve their own credential application."' },
-      { type: "heading", text: "The MIP Cedar Schema" },
-      { type: "paragraph", text: "MIP's Cedar schema (mip.cedarschema) defines entity types for all protocol resources: Organization, TrustProfile, CredentialTemplate, Flow, Application, and more. Actions include create, read, update, delete, approve, reject, issue, verify, and revoke. Every API call is an authorization decision against this schema." },
-      { type: "heading", text: "Example: Separation of Duties" },
-      { type: "paragraph", text: 'A common governance requirement: the person who creates a credential application cannot approve it. In Cedar: forbid(principal, action == Action::"approve", resource) when { principal == resource.submittedBy }. This policy is statically analyzable - you can prove at deploy time that no policy grants an exception to this rule.' },
-      { type: "heading", text: "Extending Baseline Policies" },
-      { type: "paragraph", text: "MIP currently includes baseline Cedar policies that cover standard access control patterns. Organizations extend these with custom policies for their governance requirements. Cedar's deny-by-default model means custom policies can only add restrictions - they can never accidentally grant permissions that baseline policies don't allow." }
+      { type: "paragraph", text: "Identity governance fails when authorization rules are scattered across too many places. One service decides who can create a Trust Profile. Another decides who can approve an application. A spreadsheet tracks who is allowed to change credential templates. A runbook explains exceptions. Six months later, no one can prove which rule actually controlled the decision." },
+      { type: "paragraph", text: "Governance has to become an explicit control surface. MIP uses Cedar as its policy language because identity systems need authorization rules that are readable, reviewable, testable, and tied to protocol resources rather than hidden in application code." },
+      { type: "paragraph", text: "This post is not a full Cedar tutorial. It explains how Cedar fits into MIP: PolicySets store the rules, the MIP Cedar schema names the entities and actions, and implementations evaluate those policies before sensitive operations proceed." },
+      { type: "heading", text: "PolicySet is the durable artifact" },
+      { type: "paragraph", text: "A Cedar rule is useful only if the system knows where it belongs. In MIP, Cedar policies live inside PolicySet entities. A PolicySet has a type, a status, a schema version, and one or more Cedar policy entries. That turns authorization from a loose collection of snippets into a governed protocol object." },
+      { type: "paragraph", text: "The standard policy types cover three recurring domains. ACCESS_CONTROL governs API and administrative operations, often through SCIM roles. CREDENTIAL_VERIFICATION adds conditional trust rules to Trust Profiles and Compliance Profiles. APPROVAL_RULES governs application approval flows through Application Templates. CUSTOM policy sets can exist for organization-specific cases, but custom policies must still validate against the MIP Cedar schema. Organizations may extend Cedar with custom entity types and actions under their own namespace, but custom extensions should not modify the MIP namespace." },
+      { type: "paragraph", text: "That structure matters because a policy can now be reviewed beside the object it affects. A team can ask which PolicySet controls trust evaluation for this credential type, which PolicySet controls approval for this application template, or which role has extra access conditions beyond static permissions." },
+      { type: "heading", text: "The MIP Cedar schema" },
+      { type: "paragraph", text: "The MIP Cedar schema defines entity types for protocol resources such as Organization, User, ApiKey, ServiceAccount, Role, Credential, TrustProfile, ComplianceProfile, Application, Flow, and PolicySet. It also defines actions such as policy_sets:create, policy_sets:update, credentials:issue, applications:approve, flows:execute, and other resource-specific operations." },
+      { type: "paragraph", text: "That schema gives authorization decisions a shared vocabulary. A policy does not check arbitrary strings. It evaluates a principal, action, resource, and context that correspond to real protocol objects. That makes policy review concrete: who can update a Trust Profile, who can activate a PolicySet, who can approve an application, and under which conditions?" },
+      { type: "paragraph", text: 'A small policy-writing example makes the shape concrete: permit a user in a security-admin role to validate a PolicySet only when the request context says MFA is authenticated. In Cedar terms, the policy names the principal, action, resource, and context condition: principal in MIP::Role::"security-admin", action equals MIP::Action::"policy_sets:validate", resource is MIP::PolicySet, and context.mfa_authenticated is true.' },
+      { type: "paragraph", text: "Implementations must validate Cedar text against the MIP Cedar schema before persisting a PolicySet. A malformed or mismatched policy should fail while it is still a draft, not after it is attached to a production trust or approval path." },
+      { type: "heading", text: "Deny by default, forbid first" },
+      { type: "paragraph", text: "Cedar evaluation gives MIP a clean safety posture: if no permit rule matches, the request is denied; if any forbid rule matches, the request is denied even if another rule would permit it. That is exactly the shape identity governance needs. Exceptional access should be explicit, and hard stops should be hard stops." },
+      { type: "paragraph", text: "Consider separation of duties. The person who submits or creates a credential application should not be able to approve it. In Cedar, that rule belongs in a forbid policy that compares the approver context with the application submitter or creator. The exact field names depend on the implementation context, but the governance pattern is stable: block self-approval before any approval permit can succeed." },
+      { type: "paragraph", text: "This is especially important for identity systems because approvals often create durable credentials. A weak approval rule can become a credential that travels. Governance mistakes are not always confined to the application that caused them." },
+      { type: "heading", text: "Baseline policy, local policy" },
+      { type: "paragraph", text: "MIP provides reference Cedar policies for common control patterns: API access control, credential verification trust rules, and application approval rules. Those reference policies give implementers a starting point, but they are not a substitute for local governance." },
+      { type: "paragraph", text: "Organizations still need policy that reflects their environment. A hospital network, an airport operator, a university, and an enterprise HR system will not share the same approval model. The point of Cedar is that local rules can extend or constrain the baseline in a structured way instead of bypassing it through custom code." },
+      { type: "paragraph", text: "Policy extension should be treated as governance work. Who can modify policies? How are changes approved? Which tests prove that a custom rule does not weaken a baseline requirement? Which audit record shows when a policy changed? These questions are part of the identity system, not paperwork around it." },
+      { type: "heading", text: "Lifecycle matters" },
+      { type: "paragraph", text: "PolicySets need lifecycle rules because policy mistakes are production risks. A draft PolicySet should not be referenced by an active Trust Profile, Compliance Profile, Application Template, or role. Activation should be an authorized event. Archival should preserve the audit story for decisions that were made while the policy was active." },
+      { type: "paragraph", text: "This is why MIP treats PolicySet operations as first-class Cedar actions. Creating, updating, deleting, activating, archiving, reading, and validating policy sets are governed actions in the same system they protect. The policy surface is not outside the protocol; it is part of the protocol." },
+      { type: "heading", text: "Why policy belongs beside the protocol" },
+      { type: "paragraph", text: "Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows are powerful because they are explicit. They also need explicit authorization boundaries. Otherwise, the ability to change trust, issue credentials, widen disclosure, or move a deployment into production becomes another hidden admin assumption." },
+      { type: "paragraph", text: "That boundary has to cover ordinary operations and exceptional ones. Emergency changes, delegated administration, temporary approvals, and break-glass access should still be policy-governed events with evidence, not shortcuts that live outside the identity model. Governance is weakest when exceptions are invisible." },
+      { type: "paragraph", text: "When policy is part of the system model, organizations can reason about who is allowed to change trust, who can alter credential shape, who can narrow or widen disclosure, and who can activate runtime behavior. That is the difference between configurable infrastructure and ungoverned configuration." },
+      { type: "paragraph", text: "Read Compliance Profiles next if you want to see how external standards and regulatory obligations map into governed protocol objects. Read the schema walkthrough if you want to inspect the machine-readable surfaces that make these policy decisions implementable." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Arc 4: Launch & Strategic Outlook ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Arc 4: Launch & Strategic Outlook
   {
     slug: "introducing-mip",
     title: "Introducing the Marty Identity Protocol",
-    summary: "Today we open-source MIP - a vendor-neutral specification for cryptographically verifiable digital identity management. Five primitives, one protocol, zero lock-in.",
+    summary: "MIP is a draft, open-source specification for cryptographically verifiable digital identity management: five core primitives, explicit governance, and portable implementation surfaces.",
     authorId: "daniel-ortega",
     date: "2025-03-22",
-    updatedDate: "2026-06-19",
+    updatedDate: "2026-07-10",
     category: "Announcement",
-    readTime: "5 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "We are excited to announce the open-source release of the Marty Identity Protocol (MIP) - a formal, vendor-neutral specification that defines the minimum automatable set of primitives for issuing, holding, presenting, and verifying digital credentials." },
-      { type: "heading", text: "Why an Open Protocol?" },
-      { type: "paragraph", text: "Digital identity is fragmented. Every vendor builds its own trust model, their own credential format integration, and their own policy engine. The result: lock-in, incompatibility, and duplicated effort. MIP changes this by defining five core primitives - Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows - that any vendor can implement." },
-      { type: "heading", text: "What's in the Spec?" },
-      { type: "paragraph", text: "MIP v0.1.0 includes 36 JSON Schemas for all protocol entities, Cedar authorization policies, compliance profile mappings for ICAO, AAMVA, EUDI, and Open Badges, plus generated typed bindings in Rust, Python, and TypeScript. A conformance test suite lets implementers validate their work." },
-      { type: "heading", text: "Get Involved" },
-      { type: "paragraph", text: "MIP is licensed under Apache 2.0 and governed openly on GitHub. Contributions use the Developer Certificate of Origin (DCO) - no CLA required. Read the specification, explore the schemas, or submit a pull request." }
+      { type: "paragraph", text: "We are introducing the Marty Identity Protocol (MIP) because digital identity needs a shared model, not another platform boundary. MIP is a draft, open-source specification for the minimum set of primitives needed to issue, hold, present, verify, govern, and deploy digital credentials in a way that can survive across multiple implementations." },
+      { type: "paragraph", text: "The premise is simple: identity infrastructure keeps getting rebuilt because the important parts are not named consistently. Trust logic lives in one product. Credential shape lives in another. Disclosure rules hide in verifier code. Deployment behavior is discovered during rollout. Lifecycle orchestration becomes custom workflow logic. The ecosystem calls this integration, but much of it is repeated architecture work." },
+      { type: "paragraph", text: "MIP is an attempt to make those recurring decisions explicit enough that implementers can build against them." },
+      { type: "heading", text: "Why an open protocol?" },
+      { type: "paragraph", text: "Digital identity is fragmented for understandable reasons. Different standards solve different problems. Government credentials, enterprise credentials, education badges, and wallet ecosystems each bring their own trust assumptions and formats. Vendors then wrap those assumptions in proprietary surfaces because buyers need working products, not abstract architecture diagrams." },
+      { type: "paragraph", text: "The problem is that the proprietary surface often becomes the real architecture. Trust, policy, credential shape, and deployment behavior are bundled into a single implementation. Switching vendors or connecting ecosystems then requires translation, migration, or rework. The organization may own the business process, but it does not fully own the identity model." },
+      { type: "paragraph", text: "An open protocol changes the center of gravity. It does not eliminate products or vendors. It gives them a shared target. Implementations can compete on tooling, reliability, hosted operations, user experience, and support without forcing every buyer to accept a hidden trust model." },
+      { type: "heading", text: "The five primitives" },
+      { type: "paragraph", text: "MIP defines five core primitives: Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows. Trust Profiles answer who is trusted and how that trust is validated. Credential Templates answer what gets issued. Presentation Policies answer what a verifier is allowed to ask for. Deployment Profiles answer where and how the system runs. Flows orchestrate the lifecycle across those objects." },
+      { type: "paragraph", text: "Those primitives are deliberately ordinary. They are not meant to be a clever taxonomy. They are meant to be the minimum shared model that keeps identity systems from hiding the same decisions in incompatible places." },
+      { type: "paragraph", text: "That modesty is part of the design. MIP does not need to replace every credential format, wallet protocol, policy language, or deployment tool. It creates a common layer where those choices can be described together, so teams can see which decision belongs where and which implementation is responsible for it." },
+      { type: "paragraph", text: "When the primitives are explicit, teams can review them. Security teams can inspect trust. Privacy teams can inspect disclosure. Operators can inspect runtime posture. Implementers can generate types, validators, and tests from the same contract surface. Sponsors can understand what they are buying: reusable infrastructure rather than a permanently rented verification workflow." },
+      { type: "heading", text: "What is in the specification" },
+      { type: "paragraph", text: "The current MIP work includes a normative draft specification, machine-readable JSON Schemas for protocol entities, Cedar authorization policy surfaces, compliance-profile mappings, examples, conformance fixtures, and implementation-oriented artifacts that help teams validate their work. The exact inventory should be checked against the current repository, since the specification will evolve, but the design goal remains stable: make protocol objects inspectable and testable." },
+      {
+        type: "resources",
+        title: "Specification surfaces",
+        intro: "These are the fastest paths from this launch article into the current MIP draft and implementation-facing artifacts.",
+        items: [
+          {
+            label: "Marty Identity Protocol repository",
+            href: "https://github.com/Marty-Protocol/Marty-Protocol",
+            note: "The Apache 2.0, draft-status protocol repository maintained by the MIP authors."
+          },
+          {
+            label: "Normative draft specification",
+            href: "https://github.com/Marty-Protocol/Marty-Protocol/blob/main/SPECIFICATION.md",
+            note: "The canonical draft document for terminology, protocol entities, validation rules, conformance, and governance."
+          },
+          {
+            label: "JSON Schema contracts",
+            href: "https://github.com/Marty-Protocol/Marty-Protocol/tree/main/schemas",
+            note: "Machine-readable schemas for the protocol entities described in the article."
+          },
+          {
+            label: "Cedar policy schema",
+            href: "https://github.com/Marty-Protocol/Marty-Protocol/blob/main/cedar/mip.cedarschema",
+            note: "The authorization and governance schema used for policy-set evaluation."
+          }
+        ]
+      },
+      { type: "paragraph", text: "That matters because a protocol without artifacts becomes a white paper. MIP is intended to be evaluated by reading the model, inspecting the schemas, generating or validating types, and testing whether implementations preserve the same semantics." },
+      { type: "paragraph", text: "The practical test is whether a team can point to the object that carries each decision. If the trust rule, disclosure rule, deployment assumption, or lifecycle stage cannot be found as an inspectable artifact, then the protocol model has more work to do." },
+      { type: "heading", text: "Who should care" },
+      { type: "paragraph", text: "Architects should care because MIP gives them stable boundaries for trust, credential shape, disclosure, deployment, and lifecycle behavior. Operators should care because deployment assumptions become explicit. Security and governance teams should care because policy and trust decisions become reviewable. Sponsors should care because portability and reuse are easier to evaluate when the system has visible primitives." },
+      { type: "paragraph", text: "This release is not the end of the model. It is the beginning of a shared surface for implementation and review. Read The Five Primitives in One Picture next if you want the map before going deep into the individual objects." }
     ]
   },
   {
@@ -1436,16 +1697,21 @@ const me = Z({
     date: "2025-03-28",
     updatedDate: "2026-06-25",
     category: "Technical",
-    readTime: "8 min read",
+    readTime: "5 min read",
     content: [
-      { type: "paragraph", text: "One of MIP's most immediately useful artifacts is its JSON Schema collection. Every protocol entity - from TrustProfile to FlowExecution - has a corresponding JSON Schema that defines its structure, required fields, enum constraints, and cross-references. This post walks through how to use them." },
-      { type: "heading", text: "Schema Organization" },
-      { type: "paragraph", text: "MIP schemas are organized by entity in the schemas/ directory. Each schema uses JSON Schema Draft 2020-12 with $ref cross-references. The schemas are self-contained - you can validate MIP documents without any MIP-specific tooling, using any JSON Schema validator." },
-      { type: "heading", text: "Code Generation" },
-      { type: "paragraph", text: "The schemas are designed to support code generation. The generated typed bindings in Rust (serde models), Python (Pydantic v2 models), and TypeScript (Zod schemas) are all derived from the JSON Schemas. If your stack uses a different language, you can generate types directly from the schemas using standard JSON Schema code generators." },
-      { type: "paragraph", text: "This approach ensures that every MIP implementation - regardless of language - shares the same structural guarantees." },
+      { type: "paragraph", text: "One of MIP's most immediately useful artifacts is its JSON Schema surface. A protocol model becomes much easier to evaluate when implementers can inspect the actual shape of the objects, validate documents, and generate types without relying solely on prose." },
+      { type: "paragraph", text: "Schemas are proof that the model is operational. If Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows are real protocol objects, they should have machine-readable contracts. A schema cannot capture every semantic rule, but it can prevent a large class of drift before the system reaches production." },
+      { type: "paragraph", text: "This walkthrough explains how implementers should think about the schema layer: validation first, generated types second, integration contracts always." },
+      { type: "heading", text: "Schema organization" },
+      { type: "paragraph", text: "MIP schemas are organized by protocol entity. Each schema defines required fields, allowed values, nested structures, and references to related objects. The goal is not to make JSON Schema carry the entire protocol on its own. The goal is to give every implementation a shared structural baseline." },
+      { type: "paragraph", text: "That baseline is valuable immediately. A verifier implementation can reject malformed Presentation Policies before they reach runtime. A control plane can validate a Credential Template before it becomes available for issuance. A deployment tool can check whether a Deployment Profile includes required references before a lane receives the configuration." },
+      { type: "paragraph", text: "Schemas also make review easier. When an architect asks what a Trust Profile contains, the answer should not be a paragraph in a slide deck. It should be a contract surface that can be inspected, versioned, and tested." },
+      { type: "heading", text: "Code generation" },
+      { type: "paragraph", text: "The schemas are designed to support code generation. Implementations can derive typed models, validators, API contracts, and test fixtures from a single set of underlying definitions. If your stack uses Rust, Python, TypeScript, or another language, the key is that generated or handwritten models remain aligned with the schema." },
+      { type: "paragraph", text: "This reduces a common interoperability problem: two implementations claim to support the same protocol object but quietly disagree about field names, enum values, required references, or nested structures. Schema-backed validation does not prove semantic compatibility on its own, but it catches many failures earlier and provides conformance tests with a stable input surface." },
+      { type: "paragraph", text: "The right implementation posture is to treat schemas as the contract boundary. Application code should not invent additional required fields casually. Generated types should not drift from the schema. API endpoints should validate incoming protocol objects before trying to interpret them." },
       { type: "heading", text: "Inspect the contract surfaces directly" },
-      { type: "paragraph", text: "If you want to audit the machine-readable contract instead of taking the article on faith, start with the repo surfaces that already encode it. The digital identity domain entities point back to schema files such as issuance.json, policy-set.json, and wallet-profile.json. The Cedar schema defines the policy side. The verifier workspace also publishes generated JSON schemas for its desktop runtime. That is the practical reading order for implementers: inspect the contract, then inspect the generated consumers." },
+      { type: "paragraph", text: "If you want to audit the machine-readable contract instead of taking the article on faith, start with the repo surfaces that already encode it. The digital identity domain entities point back to schema files such as issuance.json, policy-set.json, and wallet-profile.json. The Cedar schema defines the policy side. The verifier workspace also publishes the JSON schemas generated by its desktop runtime. That is the practical reading order for implementers: inspect the contract, then inspect the generated consumers." },
       {
         type: "resources",
         title: "Repo surfaces",
@@ -1498,7 +1764,11 @@ class WalletProfile(Entity):
     Spec: schemas/wallet-profile.json
     """`
       },
-      { type: "paragraph", text: "That is the useful implementation posture: treat the schemas as the contract surface, then verify that your generated or handwritten models stay aligned with the contract-bearing entities and policy definitions the repo exposes." }
+      { type: "heading", text: "What schemas do not replace" },
+      { type: "paragraph", text: "JSON Schema is structural. It can say that a field exists, that a value is a string, or that an enum member is allowed. It cannot, by itself, prove that a Trust Profile is operationally safe, that a Presentation Policy is proportionate, or that a Flow represents a sensible user journey. Those semantic checks still need protocol rules, policy review, conformance tests, and implementation discipline." },
+      { type: "paragraph", text: "That limitation is worth stating because schema-backed projects often confuse structural validity with system correctness. A credential template can be valid JSON and still ask for the wrong claims. A presentation policy can conform to the schema and still over-collect. The schema tells implementers whether the object is shaped correctly; governance still decides whether the object is appropriate." },
+      { type: "paragraph", text: "That is why MIP uses schemas as one layer of the contract rather than the whole contract. Cedar policies govern authorization. Compliance Profiles map standards expectations. Tests exercise behavior. Documentation explains intent. The schemas keep the objects stable enough for those other layers to work." },
+      { type: "paragraph", text: "That is the useful implementation posture: treat the schemas as the contract surface, then verify that your generated or handwritten models stay aligned with the contract-bearing entities and policy definitions the repo exposes. Read Conformance Testing next if you want to see how structural contracts become implementation evidence." }
     ]
   },
   {
@@ -1509,14 +1779,27 @@ class WalletProfile(Entity):
     date: "2025-04-03",
     updatedDate: "2026-07-01",
     category: "Cryptography",
-    readTime: "8 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "NIST has finalized its post-quantum cryptography standards (ML-KEM, ML-DSA, SLH-DSA). The transition from RSA and ECDSA to post-quantum algorithms will take years - and identity systems will be among the last to migrate because credentials have long lifetimes and trust chains are deeply embedded. MIP is designed for this transition." },
-      { type: "heading", text: "The Problem" },
-      { type: "paragraph", text: `A credential issued today with ECDSA might be valid for 5 years. If a cryptographically relevant quantum computer arrives within that window, the credential's signature can be forged. "Harvest now, decrypt later" attacks make this a present-day concern for high-assurance identity systems.` },
-      { type: "heading", text: "MIP's Algorithm Agility" },
-      { type: "paragraph", text: "MIP Trust Profiles specify accepted algorithms as configuration, not code. Adding ML-DSA as an accepted signature algorithm is a Trust Profile update - not an application rewrite. Credential Templates can specify hybrid signatures (e.g., ECDSA + ML-DSA) during the transition period. Presentation Policies can require post-quantum signatures for high-assurance use cases while accepting classical signatures for lower-assurance ones." },
-      { type: "paragraph", text: "This flexibility means MIP deployments can begin the post-quantum transition incrementally, without a flag day." }
+      { type: "paragraph", text: "Post-quantum readiness is not a future press-release problem. It is a lifecycle problem. Identity systems issue credentials, trust anchors, signing keys, and verification policies that can remain relevant for years. If the cryptographic assumptions underneath those objects change, the system needs a migration path that is already visible before the crisis arrives." },
+      { type: "paragraph", text: "NIST has standardized post-quantum algorithms, including ML-KEM, ML-DSA, and SLH-DSA. That does not mean every identity deployment should flip a switch tomorrow. It means serious systems need algorithm agility, inventory, testing, and policy controls now so they are not trapped when ecosystems begin requiring post-quantum signatures or hybrid proofs." },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) is designed to make that transition a governed configuration problem rather than a hidden rewrite of verifier logic." },
+      { type: "heading", text: "The real risk is embedded assumptions" },
+      { type: "paragraph", text: "A sufficiently capable quantum computer would put widely used public-key algorithms such as RSA and elliptic-curve signature schemes under pressure. For credentials, the risk is not only that a live transaction could be attacked. It is that signed artifacts, issuer keys, certificate chains, and long-lived credentials may rely on algorithms whose assurance levels change over the lifetime of the credential program." },
+      { type: "paragraph", text: "Identity systems often make those assumptions in several places. The issuer chooses a signing algorithm. The credential format records the signature. The verifier accepts or rejects algorithms. Trust registries distribute keys or certificates. Deployment environments cache trust material. If each layer encodes algorithm choices differently, migration becomes slow and error-prone." },
+      { type: "paragraph", text: "The threat model is clear: do not treat post-quantum readiness as one library upgrade. Treat it as a set of trust, issuance, verification, and deployment decisions that must move together." },
+      { type: "heading", text: "Algorithm agility belongs in Trust Profiles" },
+      { type: "paragraph", text: "MIP Trust Profiles specify accepted algorithms as a policy-bearing configuration. A verifier should know which algorithms are acceptable for a credential type, which trust anchors are valid, which key strengths are allowed, and whether a transitional hybrid posture is required." },
+      { type: "paragraph", text: "That matters because the right answer may differ by use case. A low-risk membership credential may tolerate classical signatures longer than a high-assurance government or travel credential. A deployment that accepts older credentials may need a grace period, while a new issuance program may require post-quantum-ready formats from day one. The algorithm choice is not only a cryptographic preference; it is a policy decision tied to risk." },
+      { type: "heading", text: "Hybrid periods will be normal" },
+      { type: "paragraph", text: "Most ecosystems will not transition from classical to post-quantum signatures in a single step. There will be hybrid periods in which credentials, trust lists, and verifiers need to support multiple algorithm families. Some issuers may use dual signatures. Some verifiers may require a post-quantum signature only for higher-assurance presentations. Some deployments may accept older credentials until a defined date." },
+      { type: "paragraph", text: "MIP can express that posture across primitives. Credential Templates can specify which signature formats or proof capabilities a credential type supports. Presentation Policies can require stronger algorithms for particular verification contexts. Deployment Profiles can control rollout, cache refresh, and lane-specific acceptance rules. Trust Profiles remain the place where accepted anchors and algorithms are made explicit." },
+      { type: "heading", text: "Migration needs evidence" },
+      { type: "paragraph", text: "Post-quantum migration will require more than a compatibility matrix. Teams need evidence that verifiers reject deprecated algorithms, accept approved ones, preserve revocation behavior, and handle mixed credential populations safely. Conformance tests should include both valid and invalid algorithm cases. Operational dashboards should show which deployments have received updated trust material." },
+      { type: "paragraph", text: "Inventory is part of that evidence. A program should know which credential types use which algorithms, which issuers depend on which keys, which verifier lanes accept which signatures, and which trust anchors must rotate. Without that map, algorithm agility remains an aspiration instead of a migration plan." },
+      { type: "paragraph", text: "The first useful milestone is not universal post-quantum issuance. It is being able to answer what would have to change. Which credentials can be reissued? Which trust anchors are external dependencies? Which wallets can present newer proofs? Which verifiers can enforce different algorithm rules via policy rather than by release cycle?" },
+      { type: "paragraph", text: "The best migration is boring because the architecture already expected change. Algorithm agility does not remove the difficulty of post-quantum transition, but it keeps the difficulty in the right place: governed trust profiles, explicit templates, policy-aware verification, and deployment controls that can be tested before production pressure arrives." },
+      { type: "paragraph", text: "Read the revocation comparison next if you want to look at a similar migration problem: status checking also requires cryptography, policy, freshness, and deployment posture to line up." }
     ]
   },
   {
@@ -1527,31 +1810,59 @@ class WalletProfile(Entity):
     date: "2025-04-09",
     updatedDate: "2026-07-07",
     category: "Business",
-    readTime: "6 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: `The "trust" in verifiable credentials isn't self-evident. When a verifier receives a credential, they need to know whether the issuer is authorized to issue that type of credential. Trust registries provide this authorization layer - and they're one of the most underappreciated components of identity infrastructure.` },
-      { type: "heading", text: "What Trust Registries Do" },
-      { type: "paragraph", text: "A trust registry maintains a list of authorized issuers, their authorized credential types, and the governance framework they operate under. ICAO's PKD is a trust registry for passport issuers. The EU Trust List (LOTL) is a trust registry for EUDI wallet issuers. Enterprise trust registries track which departments can issue which badges." },
-      { type: "heading", text: "MIP's Trust Registry Model" },
-      { type: "paragraph", text: "MIP models trust registries as a supporting abstraction that feeds into Trust Profiles. A Trust Profile can reference multiple trust registries - an organization might trust issuers from the ICAO PKD AND their internal enterprise registry. The registry data is cached and synchronized according to the Deployment Profile's update schedule." }
+      { type: "paragraph", text: 'The word "trust" in verifiable credentials can sound automatic, but verifiers do not trust a credential simply because it is signed. They trust it because the issuer is recognized, authorized for that credential type, and operating under rules the verifier accepts. A trust registry is the ecosystem infrastructure that makes that authorization discoverable.' },
+      { type: "paragraph", text: "Without a registry model, every verifier has to answer issuer authorization by hand. One partner list lives in a spreadsheet. Another is buried in code. A third is maintained by a vendor service. That may work for a pilot, but it does not scale to networks where issuers, credential types, and governance rules change over time." },
+      { type: "paragraph", text: "Trust registries are underappreciated because they are not the shiny part of identity. They are the connective tissue that lets credentials become ecosystem infrastructure instead of isolated bilateral integrations." },
+      { type: "heading", text: "What trust registries do" },
+      { type: "paragraph", text: "A trust registry records which issuers are authorized to issue which credentials under which framework. It may include issuer identifiers, public keys or key references, credential type authorizations, assurance levels, accreditation status, governance metadata, status information, and effective dates. The exact shape depends on the ecosystem, but the question remains the same: is this issuer authorized to issue this credential in this context?" },
+      { type: "paragraph", text: "Examples already exist in different forms. ICAO's Public Key Directory supports passport trust material. European trust lists support regulated trust-service ecosystems. Education and workforce systems may need registries that distinguish accredited institutions from unrecognized issuers. Enterprises may need internal registries that say which departments or systems can issue employee badges, device credentials, or contractor passes." },
+      { type: "paragraph", text: "The registry does not replace verifier policy. It supplies trusted facts the verifier can use. A verifier still decides which registries it accepts, which credential types matter, what freshness is required, and how to handle missing or stale registry data." },
+      { type: "heading", text: "Scale changes the problem" },
+      { type: "paragraph", text: "Small credential programs can survive on a static issuer allowlist. Larger ecosystems cannot. Issuers join, leave, rotate keys, lose authorization, gain new credential scopes, or operate under revised governance frameworks. Verifiers need a way to consume those changes without redeploying application code every time the trust network moves." },
+      { type: "paragraph", text: "That is where federation enters the picture. A verifier may trust more than one registry. A travel deployment might combine passport-oriented trust material with an internal enterprise registry. A university verifier might accept badges from multiple accreditation networks. A workforce platform might separate issuer authorization from role-specific verifier policy." },
+      { type: "paragraph", text: "Federated trust only works if the boundaries are explicit. Which registry is authoritative for which issuer class? Which registry can authorize which credential type? What happens if two registries disagree? How fresh must the registry snapshot be before a verifier can rely on it?" },
+      { type: "paragraph", text: "Those questions become more important as adoption grows. A registry that is useful for ten issuers can become a source of ecosystem risk at ten thousand issuers if ownership, update rules, and dispute handling are unclear." },
+      { type: "paragraph", text: "Scale also changes monitoring. A registry is not finished when the issuer list exists. Operators need signals for failed synchronizations, expired authorizations, stale snapshots, unexpected key rotations, and policy changes that have not reached every verifier." },
+      { type: "heading", text: "MIP's registry posture" },
+      { type: "paragraph", text: "MIP models trust registries as supporting infrastructure that feeds Trust Profiles. A Trust Profile can reference one or more registries, define acceptable issuer sources, and specify how registry material is resolved and cached. The verifier applies the Trust Profile rather than hard-coding registry lookups inside every credential flow." },
+      { type: "paragraph", text: "Deployment Profiles then make the runtime side explicit. A cloud verifier may resolve registry updates frequently. An offline verifier may need a signed snapshot with a bounded time-to-live. A kiosk lane may need a different refresh cadence than a server-side API. These are operational differences, not reasons to fork the trust model." },
+      { type: "heading", text: "The verifier needs an answer it can explain" },
+      { type: "paragraph", text: "At verification time, the system should be able to explain why an issuer was accepted or rejected. Which registry authorized the issuer? Which credential type was in scope? Which trust profile was applied? Was the registry snapshot fresh enough? Was the authorization still active?" },
+      { type: "paragraph", text: "That explanation is what makes trust registries strategic. They let ecosystems grow without losing auditability. They let verifiers rely on shared infrastructure while retaining policy control. They turn issuer authorization into something more durable than a private allowlist." },
+      { type: "paragraph", text: "Read Trust Profiles next if you want the object that turns registry data into a concrete verifier decision." }
     ]
   },
   {
     slug: "offline-verification-design-patterns",
     title: "Offline Verification: Design Patterns for Disconnected Environments",
-    summary: "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns maintain security without connectivity.",
+    summary: "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns make cache freshness, revocation posture, and failure behavior explicit when connectivity drops.",
     authorId: "sofia-rahman",
     date: "2025-04-15",
     updatedDate: "2026-07-12",
     category: "Technical",
-    readTime: "8 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Not every verification happens with a stable internet connection. Airport gates during network outages, border crossings in remote areas, and field operations in disaster zones all need to verify credentials without calling home. MIP's Deployment Profiles provide several offline patterns." },
-      { type: "heading", text: "Pre-Cached Trust Anchors" },
-      { type: "paragraph", text: "Deployment Profiles with offline mode pre-cache trust anchors (CSCA certificates, trust list snapshots, issuer public keys) at configuration time. The cache has a configurable TTL - typically 72 hours for high-assurance environments. Beyond the TTL, the device can either refuse verification or downgrade to a lower assurance level." },
-      { type: "heading", text: "Revocation in Offline Mode" },
-      { type: "paragraph", text: "Revocation is the hardest problem in offline verification. Is a credential still valid if you can't check the CRL? MIP Deployment Profiles specify an offline revocation grace period and a policy for what happens when the grace period expires. This makes the trade-off explicit and auditable rather than hidden in application logic." },
-      { type: "paragraph", text: "The key insight: offline verification isn't a degraded mode - it's a different deployment profile with its own trust rules." }
+      { type: "paragraph", text: "Not every verification happens with a clean network path. Airport gates, border crossings, field teams, event entrances, warehouse floors, disaster response sites, and mobile inspection crews may need to verify credentials while connectivity is weak, expensive, blocked, or temporarily unavailable. If the system only works when it can call the cloud in real time, offline operation becomes a surprise failure mode." },
+      { type: "paragraph", text: "Offline verification should not mean casual verification. It should mean a different deployment posture with explicit trust material, freshness limits, revocation assumptions, operator guidance, and recovery behavior. The Marty Identity Protocol (MIP) is designed to put those decisions in Deployment Profiles so offline behavior is visible before devices reach the field." },
+      { type: "heading", text: "Pre-cached trust anchors" },
+      { type: "paragraph", text: "The first offline pattern is pre-cached trust material. A verifier may need issuer public keys, certificate chains, trust-list snapshots, registry entries, compliance-profile references, and policy configuration before it leaves the network. That material should be signed, versioned, and associated with a clear freshness window." },
+      { type: "paragraph", text: "The key question is not simply whether the cache exists. It is whether the deployment can explain what is in the cache, when it was last updated, which lanes or devices received it, and what happens when it expires. A handheld verifier with a stale trust snapshot should behave differently from one that updated this morning." },
+      { type: "paragraph", text: "MIP Deployment Profiles make cache posture part of the runtime configuration. A high-assurance lane may require a short cache window and refuse verification after expiration. A lower-risk environment may allow a longer grace period with an operator-visible warning. The point is to make the trade-off explicit." },
+      { type: "heading", text: "Revocation is the hard part" },
+      { type: "paragraph", text: "Revocation is where offline verification becomes uncomfortable. A verifier can still validate a signature even if the credential was revoked after the last status update. Online systems can check a status endpoint, an OCSP responder, a CRL, or a status-list artifact. Offline systems need a cached status posture and a rule for stale status information." },
+      { type: "paragraph", text: "There is no universal answer. Some environments should fail closed when revocation freshness cannot be confirmed. Others may accept a bounded grace period because availability is critical and the risk is understood. Some may downgrade the transaction, require secondary inspection, or log the decision for later reconciliation." },
+      { type: "paragraph", text: "What matters is that the rule is not hidden in application code. Deployment Profiles should specify revocation cache behavior, freshness windows, and expiration handling. Presentation Policies can then reference the assurance posture required for a specific verification decision." },
+      { type: "heading", text: "Device reality matters" },
+      { type: "paragraph", text: "Offline verification also depends on the device. A kiosk plugged into a controlled facility has different constraints than a phone in a remote field operation. Secure storage, clock reliability, software update cadence, battery life, operator training, and tamper resistance all affect how much trust can be placed in offline verification." },
+      { type: "paragraph", text: "This is why deployment is architecture. The cryptographic model may be correct, but if devices cannot preserve trusted time, protect cached keys, or receive updates reliably, the offline design is weaker than it looks on a diagram." },
+      { type: "paragraph", text: "Operators also need the verifier to clearly communicate its state. A device that is online, fully fresh, and policy-complete should not look identical to a device running on an expiring cache. The person using the tool needs enough signal to make the right operational choice without becoming a protocol expert." },
+      { type: "heading", text: "Recovery and reconciliation" },
+      { type: "paragraph", text: "A good offline pattern includes the moment after connectivity returns. Devices should synchronize logs, refresh trust material, reconcile status checks that could not be completed, and surface any decisions that were made under degraded conditions. Operators should be able to see which lane or device was offline, for how long, and under which policy." },
+      { type: "paragraph", text: "That evidence protects both security and operations. Security teams can see whether stale material was used beyond policy. Operators can identify devices that need attention. Support teams can explain why a verifier behaved differently during an outage instead of guessing from scattered logs." },
+      { type: "paragraph", text: "Offline verification is not a degraded mode. It is a deployment profile with its own trust rules. When those rules are explicit, teams can support disconnected environments without pretending that availability and assurance are the same thing." },
+      { type: "paragraph", text: "Read Deployment Profiles next if you want the broader runtime model that makes offline, online, and hybrid behavior configurable instead of accidental." }
     ]
   },
   {
@@ -1562,13 +1873,27 @@ class WalletProfile(Entity):
     date: "2025-04-20",
     updatedDate: "2026-07-18",
     category: "Cryptography",
-    readTime: "7 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Authenticity (is the credential real?) and binding (is the presenter the holder?) are independent properties. A credential can be authentically signed but presented by someone who stole it. Holder binding is the mechanism that prevents credential sharing and theft." },
-      { type: "heading", text: "Three Binding Models" },
-      { type: "paragraph", text: "MIP Presentation Policies support three binding models: cryptographic (proof of possession using a key bound to the credential at issuance), biometric (face match or fingerprint against a reference stored in the credential), and knowledge-based (challenge-response using information only the holder knows). Each model has different security properties, UX implications, and privacy costs." },
-      { type: "heading", text: "Protocol-Level Binding" },
-      { type: "paragraph", text: "Rather than embedding holder binding logic in application code, MIP encodes binding requirements in Presentation Policies. A policy might require cryptographic binding for online presentations and biometric binding for in-person presentations. The same credential serves both use cases - only the policy differs." }
+      { type: "paragraph", text: "Credential authenticity and holder binding are different questions. Authenticity asks whether the credential was issued by an authorized issuer and has not been tampered with. Holder binding asks whether the person or device presenting it is the legitimate holder. A credential can pass the first test and fail the second if it was copied, shared, stolen, or replayed." },
+      { type: "paragraph", text: "That distinction matters in the real world. A signed employee credential is not very useful if it can be forwarded to someone else. A mobile credential is weaker if possession of a screenshot is treated as possession of the identity. A verifier needs evidence that the presentation is tied to the holder, not only to an issuer's signature." },
+      { type: "paragraph", text: "The Marty Identity Protocol (MIP) treats holder binding as a policy and deployment decision rather than a single universal mechanism." },
+      { type: "heading", text: "Cryptographic binding" },
+      { type: "paragraph", text: "Cryptographic binding is often the cleanest model for digital presentations. The credential or presentation is bound to a key controlled by the holder, and the verifier requires proof of possession during presentation. The holder does not merely show data; the holder proves control of the key associated with the credential or wallet." },
+      { type: "paragraph", text: "This approach can work well for online and app-mediated flows, especially when wallets can protect private keys and generate fresh responses to verifier challenges. It also reduces the temptation to use biometrics everywhere. The limitation is operational: key management, wallet recovery, device migration, and compromised devices all need careful design." },
+      { type: "heading", text: "Biometric binding" },
+      { type: "paragraph", text: "Biometric binding is useful in some in-person settings, but it should not be treated as the default answer to every holder-binding problem. A face match, fingerprint check, or other biometric comparison can help establish that the presenter resembles an enrolled subject. It also raises questions about privacy, accessibility, error rates, spoofing, and retention." },
+      { type: "paragraph", text: "The strongest biometric posture is bounded and explicit. What reference is used? Is the biometric checked locally or remotely? Is the biometric template stored in the credential, on the device, or elsewhere? What happens when the match fails? Which operator can override the result? Those questions belong in policy and deployment review, not only in UX design." },
+      { type: "heading", text: "Knowledge and contextual binding" },
+      { type: "paragraph", text: "Knowledge-based checks, device posture, possession of a second factor, location context, or operator-assisted inspection can also contribute to binding. These mechanisms are usually weaker than well-designed cryptographic proof of possession, but they may be appropriate as secondary evidence or fallback behavior in specific workflows." },
+      { type: "paragraph", text: "A field inspection flow, for example, might combine cryptographic proof of possession with operator-visible document comparison. A facility access flow might require a wallet signature plus a device-bound passkey. A recovery flow might rely on stronger human review because the normal holder key is unavailable." },
+      { type: "heading", text: "Protocol-level binding" },
+      { type: "paragraph", text: "MIP encodes binding requirements in Presentation Policies and Deployment Profiles. A Presentation Policy can require proof of possession, allow or disallow biometric checks, or define fallback conditions. A Deployment Profile can specify which binding methods are available in a lane, kiosk, mobile app, or offline environment." },
+      { type: "paragraph", text: "That separation keeps holder binding from becoming hidden application behavior. The same credential may be acceptable with cryptographic binding in an online wallet flow and require additional in-person checks in a physical setting. The credential stays reusable, while the policy names the evidence required for the context." },
+      { type: "paragraph", text: "This also makes user experience trade-offs reviewable. A low-friction flow may be appropriate for a low-risk entitlement. A high-assurance facility access flow may justify stronger proof and more operator guidance. The policy should show why the holder is being asked for a particular kind of evidence." },
+      { type: "paragraph", text: "It also helps incident response. If a holder key is compromised, the organization needs to know which credentials, wallets, and presentation policies depend on that binding. If a biometric fallback is misconfigured, the affected deployment lane should be visible. Binding is safer when it can be traced." },
+      { type: "paragraph", text: "The clean design habit is to document the binding assumption beside the verifier decision. The system should know whether it accepted key possession, biometric comparison, operator inspection, or a fallback path, because each is a different assurance story." },
+      { type: "paragraph", text: "Holder binding is not about choosing biometrics or avoiding them. It is about proving that the presentation is connected to the legitimate holder with a method proportionate to the risk. Read Presentation Policies next if you want to see where those requirements become verifier-facing rules." }
     ]
   },
   {
@@ -1579,13 +1904,28 @@ class WalletProfile(Entity):
     date: "2025-04-26",
     updatedDate: "2026-07-24",
     category: "Business",
-    readTime: "5 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Open Badges 3.0 is a W3C Verifiable Credentials-based standard for education and workforce achievements. Universities, bootcamps, and employers issue badges for degrees, certifications, and skills. But without trust governance, a badge from a diploma mill looks the same as one from MIT. MIP fixes this." },
-      { type: "heading", text: "The Trust Gap in Education" },
-      { type: "paragraph", text: 'Open Badges defines the credential format but not the trust framework. Who is authorized to issue a "Certified Kubernetes Administrator" badge? How does an employer verify that the issuing institution is accredited? These are governance questions that Open Badges leaves to the ecosystem. MIP provides the trust infrastructure.' },
-      { type: "heading", text: "MIP + Open Badges" },
-      { type: "paragraph", text: "MIP's Open Badges compliance profile maps badges to Credential Templates, accreditation bodies to Trust Profiles, and employer verification requirements to Presentation Policies. The result: education credentials with the same trust guarantees as government-issued IDs." }
+      { type: "paragraph", text: "Education and workforce credentials are a natural fit for verifiable credentials. Degrees, certifications, licenses, continuing-education credits, skill badges, apprenticeships, and employer-issued achievements all need to travel across institutions. Open Badges 3.0 gives that ecosystem a W3C Verifiable Credentials-based format for representing achievements." },
+      { type: "paragraph", text: "The format matters, but it is not the whole trust problem. A badge can be well-formed and still come from an issuer the verifier does not recognize. It can describe a real achievement but omit the accreditation context a hiring system needs. It can be portable at the data layer while still requiring each employer, school, or platform to rebuild trust interpretation." },
+      { type: "paragraph", text: "MIP is useful here because education credentials need interoperability pressure translated into operational infrastructure, not another isolated badge portal." },
+      { type: "heading", text: "The trust gap in education credentials" },
+      { type: "paragraph", text: "Open Badges defines how an achievement can be represented. It does not, by itself, decide which issuers a verifier should trust, which programs are accredited, which credential types matter for a role, or which evidence is enough for a hiring decision. Those are ecosystem governance questions." },
+      { type: "paragraph", text: "A university degree, a bootcamp certificate, an internal employer credential, and a professional certification may all use similar technical rails while carrying very different assurance expectations. A verifier needs to distinguish issuer reputation, accreditation, credential scope, expiration, revocation, and relevance to the decision being made." },
+      { type: "paragraph", text: "This is where many education credential projects stall. The credential can be issued, displayed, and shared, but the verifier still has to decide what it means. If that interpretation is built separately by each employer or platform, the portability benefit remains limited." },
+      { type: "heading", text: "Mapping Open Badges into MIP" },
+      { type: "paragraph", text: "A MIP Compliance Profile can map Open Badges expectations into protocol primitives. Credential Templates describe the shape of achievement credentials, including required claims, issuer references, evidence links, expiration, and disclosure behavior. Trust Profiles describe which issuers, accreditation bodies, or registries are accepted for a given verification context." },
+      { type: "paragraph", text: "Presentation Policies describe what a verifier is allowed to request. An employer may need proof that a credential was issued by an accredited program and is still active. It may not need the holder's full education history. A scholarship program may need different evidence. A professional licensing workflow may require stronger issuer and revocation checks." },
+      { type: "paragraph", text: "Deployment Profiles then decide how the verification path runs. A university portal, an employer HR system, a mobile wallet presentation, and a background-check workflow may all rely on the same underlying trust and credential model while operating in different runtimes." },
+      { type: "heading", text: "Why this helps employers and institutions" },
+      { type: "paragraph", text: "Employers benefit when credential verification becomes repeatable rather than bespoke. They can define the trust profiles and presentation policies that matter for a role or workflow. Institutions benefit when their credentials can be evaluated through a transparent trust model rather than reduced to a screenshot or PDF attachment." },
+      { type: "paragraph", text: "Learners benefit when they can carry evidence across systems without exposing more than a verifier needs. A credential used for a hiring screen may disclose different details than the same credential used for alumni access or continuing-education tracking. Portability should not require maximum disclosure." },
+      { type: "paragraph", text: "The same model also helps platforms avoid becoming the sole interpreters of educational trust. A hiring system can rely on explicit issuer and accreditation rules instead of opaque ranking signals. A school can publish credentials into an ecosystem with a clearer verification path." },
+      { type: "heading", text: "Standards need governance to become infrastructure" },
+      { type: "paragraph", text: "Open Badges provides an important standard surface, but ecosystems also need rules for issuer authorization, accreditation, revocation, and verifier requests. MIP does not replace Open Badges. It gives organizations a way to govern how Open Badges-style credentials are trusted, requested, deployed, and reused." },
+      { type: "paragraph", text: "That governance can start small. A program can define the issuers it recognizes, the badge types it accepts, the evidence it requires, and the disclosure it will not request. Those choices are enough to turn a portable credential format into an operational verification path." },
+      { type: "paragraph", text: "As the ecosystem matures, those choices can become shared profiles rather than private interpretations. That is where employers, schools, and credential platforms get the real network benefit: fewer one-off trust conversations and more reusable verification rules." },
+      { type: "paragraph", text: "That distinction is the heart of standards work. A format can make data portable. A protocol model can make the operating decisions around that data explicit. Read Compliance Profiles next if you want the mapping layer that turns standards expectations into reusable MIP configuration." }
     ]
   },
   {
@@ -1596,13 +1936,21 @@ class WalletProfile(Entity):
     date: "2025-05-02",
     updatedDate: "2026-07-30",
     category: "Technical",
-    readTime: "7 min read",
+    readTime: "5 min read",
     content: [
-      { type: "paragraph", text: "A protocol specification is only useful if implementations can prove they're compliant. MIP ships a conformance test suite with valid fixtures (documents that must parse successfully), invalid fixtures (documents that must be rejected with specific error codes), and expected outcomes for edge cases." },
-      { type: "heading", text: "Using the Conformance Suite" },
-      { type: "paragraph", text: "The conformance/ directory contains 7 valid test fixtures and 5 invalid test cases, each with a .expected.json sidecar that specifies the expected validation result. To test your implementation: parse each fixture, validate it against the MIP JSON Schema, and compare the result to the expected outcome. The repository also includes generated typed bindings in Rust, Python, and TypeScript alongside the suite implementers can use to validate their own runtimes." },
-      { type: "heading", text: "Contributing Tests" },
-      { type: "paragraph", text: "The conformance suite grows with the spec. If you find an edge case your implementation handles differently than the published fixtures and expected outcomes, submit a conformance test fixture as a PR. This is one of the most valuable contributions the community can make - it makes every implementation more reliable." },
+      { type: "paragraph", text: 'A protocol specification is only useful if implementations can prove they are interpreting it the same way. Prose can explain intent, and schemas can validate structure, but implementers still need executable evidence. Conformance testing is how a protocol moves from "this looks compatible" to "this implementation handles the required cases."' },
+      { type: "paragraph", text: "For MIP, conformance is not a ceremonial checklist. It is the practical bridge between the five primitives and real verifier, issuer, wallet, and control-plane behavior. If two systems disagree about what makes a Presentation Policy valid or how a Trust Profile references issuer authority, portability becomes fragile even if both systems claim to support the protocol." },
+      { type: "paragraph", text: "The goal is to make those disagreements visible early, with fixtures and expected outcomes that implementers can run before integration pressure arrives." },
+      { type: "heading", text: "What conformance needs to prove" },
+      { type: "paragraph", text: "A useful conformance suite should cover valid objects, invalid objects, edge cases, and behavior that depends on relationships between primitives. A Credential Template may be structurally valid on its own but invalid in a flow if it references a missing issuer or unsupported credential format. A Presentation Policy may parse correctly but request a claim the credential template never exposes." },
+      { type: "paragraph", text: "That means conformance is not only parser testing. It includes schema validation, reference resolution, policy interpretation, negative cases, and expected failure modes. Implementers should be able to show that their system accepts the valid fixtures, rejects malformed or unsafe fixtures, and explains failures consistently enough for operators to act." },
+      { type: "heading", text: "Using the conformance surfaces" },
+      { type: "paragraph", text: "The repository exposes implementation-facing material rather than leaving conformance as a future promise. Valid fixtures should parse successfully. Invalid fixtures should fail for known reasons. Expected-result sidecars, matrices, and setup scripts give implementers a way to compare their runtime with the published model." },
+      { type: "paragraph", text: "The basic workflow is straightforward: pull the fixtures, parse each object, validate it against the relevant JSON Schema, resolve references when required, and compare the result to the expected outcome. If an implementation accepts a fixture that should fail, it may be too permissive. If it rejects a valid fixture, it may be too strict or may have drifted from the schema." },
+      { type: "paragraph", text: "Generated typed bindings can help, but they do not replace conformance tests. Types catch structural mistakes within a single implementation. Fixtures catch disagreements between implementations. The two should reinforce each other." },
+      { type: "heading", text: "Negative tests matter" },
+      { type: "paragraph", text: "Negative tests are often more valuable than happy-path examples. They show whether an implementation rejects missing references, unsupported algorithms, invalid credential types, excessive disclosure requests, malformed trust material, or policy combinations that should not reach production. In identity infrastructure, accepting the wrong thing is frequently more dangerous than rejecting something valid." },
+      { type: "paragraph", text: "A conformance suite should therefore make failure behavior explicit. A verifier should not silently ignore a policy condition it does not understand. A control plane should not publish a Deployment Profile with unresolved references. A wallet should not satisfy a presentation request by disclosing more than the policy permits." },
       { type: "heading", text: "Pull the fixtures and harness" },
       { type: "paragraph", text: "The implementation-facing material is not limited to prose. The repository already exposes a conformance matrix, an OpenID4VP fixture guide, a setup script that generates test data, and UI-level fixture definitions for verifier flows. If you are evaluating the protocol seriously, those are the first things to inspect after the article." },
       {
@@ -1640,7 +1988,10 @@ class WalletProfile(Entity):
 # optional: focus the presentation suite once fixtures exist
 pytest -m openid4vp`
       },
-      { type: "paragraph", text: "The point of conformance work is not to wave at a future suite. It is to make parser behavior, verification outcomes, and interoperability regressions observable with artifacts the next implementer can actually run." }
+      { type: "heading", text: "Contributing tests" },
+      { type: "paragraph", text: "The conformance suite should grow with the specification and with implementer experience. If an edge case is ambiguous, the right outcome is not private interpretation. It is a fixture, an expected result, and a specification clarification when needed. That is how the protocol becomes more precise without relying on one implementation as the hidden source of truth." },
+      { type: "paragraph", text: "Good contributions include minimal valid examples, minimal invalid examples, negative tests for unsafe behavior, and fixtures that capture real interoperability issues. Each test should explain the rule it protects. The best conformance suites are not large because they are noisy; they are large because they encode hard-won agreement." },
+      { type: "paragraph", text: "The point of conformance work is not to wave at a future suite. It is to make parser behavior, verification outcomes, and interoperability regressions observable with artifacts that the next implementer can actually run." }
     ]
   },
   {
@@ -1651,16 +2002,32 @@ pytest -m openid4vp`
     date: "2025-05-08",
     updatedDate: "2026-08-04",
     category: "Cryptography",
-    readTime: "9 min read",
+    readTime: "4 min read",
     content: [
-      { type: "paragraph", text: "Revocation is one of the hardest parts of verifiable credentials. Every revocation method trades off between privacy (does checking status reveal which credential is being used?), latency (how quickly does revocation take effect?), and offline support (can status be checked without connectivity?). MIP defines five standardized revocation methods and lets Deployment Profiles choose the right posture for each environment." },
-      { type: "heading", text: "The Five Standardized Methods" },
-      { type: "paragraph", text: "CRL (Certificate Revocation Lists): batch lists of revoked credential IDs; strong offline support but updated in batches with inherent latency. OCSP (Online Certificate Status Protocol): real-time per-credential checks; low latency but requires connectivity and can leak usage patterns to the status server. StatusList2021: the W3C status-list format; compact, privacy-preserving, and cacheable. Bitstring Status List: a generalized bitstring-based status format with similar compact, cache-friendly properties. Token Status List: token-oriented status distribution for ecosystems that publish signed status artifacts as token-style objects." },
-      { type: "heading", text: "MIP's Approach" },
-      { type: "paragraph", text: "MIP doesn't mandate a single revocation strategy. Instead, Trust Profiles specify which strategies are acceptable, Credential Templates specify which strategy was used at issuance, and Presentation Policies specify the required freshness. Deployment Profiles configure caching and grace periods. This layered approach lets the same ecosystem support both real-time online checking and 72-hour cached offline verification." }
+      { type: "paragraph", text: "Revocation is where credential systems learn whether their trust model is honest. A credential can be signed by the right issuer, shaped by the right template, and presented by the right holder, yet still be unacceptable because it has been suspended, revoked, expired, superseded, or otherwise made invalid after issuance." },
+      { type: "paragraph", text: "Every revocation strategy trades off privacy, latency, availability, complexity, and ecosystem compatibility. A real-time status check may provide freshness but reveal usage patterns. A cached list may protect availability but introduce delay. A privacy-preserving status list may scale well but require format and wallet support. There is no single best method for every deployment." },
+      { type: "paragraph", text: "MIP does not try to hide that trade-off. It gives Trust Profiles, Credential Templates, Presentation Policies, and Deployment Profiles places to name the revocation posture explicitly." },
+      { type: "heading", text: "CRLs and batch status" },
+      { type: "paragraph", text: "Certificate Revocation Lists are among the oldest patterns: publish a signed list of revoked certificates or identifiers, let verifiers download it, and check it locally. CRL-style systems can work well for offline or intermittently connected environments because the verifier can carry a snapshot." },
+      { type: "paragraph", text: "The cost is latency and size. A credential may remain accepted until the verifier receives an updated list. Large ecosystems can produce large lists. Operators need to know how often lists are refreshed, how stale is too stale, and what the verifier should do when the list cannot be updated." },
+      { type: "heading", text: "OCSP and real-time checks" },
+      { type: "paragraph", text: "The Online Certificate Status Protocol is closer to a real-time question: is this credential or certificate good right now? The verifier asks a status responder and receives an answer. That can reduce latency between revocation and enforcement, which matters for high-risk use cases." },
+      { type: "paragraph", text: "The trade-off is that online status checks require connectivity and can create privacy concerns. A status responder may learn when and where a credential is being used, unless the ecosystem is designed around that risk. Availability also becomes part of the assurance story: if the responder is unreachable, does verification fail closed, fail open, or degrade?" },
+      { type: "heading", text: "Status lists" },
+      { type: "paragraph", text: "Status-list approaches, including W3C StatusList2021 and related bitstring status-list designs, aim to make status checking compact, cacheable, and more privacy-preserving. A credential points to a position in a signed status list. The verifier checks the relevant bit or entry without querying a per-credential status endpoint for every presentation." },
+      { type: "paragraph", text: "These approaches can reduce usage leakage and work well with caching, but they still require careful design. The list must be signed, refreshed, and distributed. The verifier must know how fresh the list must be. The issuer must manage status updates correctly. The holder and verifier need format support." },
+      { type: "heading", text: "Token-oriented status" },
+      { type: "paragraph", text: "Some ecosystems use token-oriented status artifacts or signed status responses that fit naturally into JWT-based credential systems. These can be convenient where the broader stack already uses token formats, but the same questions remain: who signs the status artifact, how long it is valid, how verifiers cache it, and whether checking status leaks information about the holder." },
+      { type: "paragraph", text: "The method is less important than its explicitness. If the credential says one thing, the verifier assumes another, and the deployment caches a third, revocation becomes a reliability problem disguised as cryptography." },
+      { type: "heading", text: "MIP's layered approach" },
+      { type: "paragraph", text: "MIP lets each primitive carry the revocation decision it actually owns. Trust Profiles specify which revocation strategies and status authorities are acceptable. Credential Templates specify which status mechanism a credential type uses at issuance. Presentation Policies specify freshness requirements for a verifier decision. Deployment Profiles configure caching, offline grace periods, and runtime behavior when status cannot be refreshed." },
+      { type: "paragraph", text: "This layered approach lets the same ecosystem support different postures. A border or travel context may require stronger freshness than a low-risk membership check. An offline lane may accept a signed status-list snapshot for a bounded period. A cloud verifier may require an online check for selected credential types. Each choice should be visible and testable." },
+      { type: "heading", text: "Revocation is a policy decision with cryptographic evidence" },
+      { type: "paragraph", text: "The cryptographic status mechanism matters, but the verifier still needs a policy decision. How fresh is fresh enough? Which status source is trusted? What happens when the source is unavailable? Which risks justify failing open or failing closed? These questions are not afterthoughts. They are part of the credential's operating model." },
+      { type: "paragraph", text: "Revocation strategies should therefore be reviewed alongside Trust Profiles and Deployment Profiles, not bolted onto the end of issuance. Read Offline Verification next if you want to see how status freshness changes when the verifier cannot assume a live network." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Drafted Posts (from guides/05-drafting) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Drafted Posts (from guides/05-drafting)
   {
     slug: "five-primitives-in-one-picture",
     title: "The Five Primitives in One Picture",
@@ -1681,7 +2048,7 @@ pytest -m openid4vp`
       { type: "paragraph", text: "This post is that map: the picture you can keep in your head while the rest of the Marty material zooms in and out." },
       { type: "heading", text: "Five recurring questions, five primitives" },
       { type: "paragraph", text: "Every credential system, from a grocery self-checkout to an airline gate to an enterprise HR portal, has to answer the same recurring questions. The label on the credential may change. The transport may change. The regulator may change. The questions do not." },
-      { type: "paragraph", text: "Reader or system question: Who is trusted, and how do we validate that trust?. Marty primitive: Trust Profile. What it stabilizes: trust sources, cryptographic validation, revocation expectations. What should stop living in code: hardcoded issuer lists, ad hoc certificate logic, one-off trust checks | Reader or system question: What exactly gets issued?. Marty primitive: Credential Template. What it stabilizes: schema, claims, validity, issuer constraints, disclosure capabilities. What should stop living in code: custom payload assembly, duplicated claim rules, format-specific branching | Reader or system question: How does the credential move from application to issuance to use?. Marty primitive: Flow. What it stabilizes: lifecycle orchestration, stage sequencing, approvals, handoffs. What should stop living in code: bespoke journey code spread across apps, queues, and service callbacks | Reader or system question: What must be shown, and what can remain private?. Marty primitive: Presentation Policy. What it stabilizes: required claims, predicates, freshness, holder binding, minimum disclosure. What should stop living in code: verifier-specific logic hidden in endpoints and UI forms | Reader or system question: Where does verification run, under which runtime constraints?. Marty primitive: Deployment Profile. What it stabilizes: online/offline mode, lane/device packaging, sync windows, UX/runtime behavior. What should stop living in code: environment-specific feature flags, deployment forks, runtime special cases" },
+      { type: "paragraph", text: "Reader or system question: Who is trusted, and how do we validate that trust? Marty primitive: Trust Profile. What it stabilizes: trust sources, cryptographic validation, revocation expectations. What should stop living in code: hardcoded issuer lists, ad hoc certificate logic, one-off trust checks | Reader or system question: What exactly gets issued? Marty primitive: Credential Template. What it stabilizes: schema, claims, validity, issuer constraints, disclosure capabilities. What should stop living in code: custom payload assembly, duplicated claim rules, format-specific branching | Reader or system question: How does the credential move from application to issuance to use? Marty primitive: Flow. What it stabilizes: lifecycle orchestration, stage sequencing, approvals, handoffs. What should stop living in code: bespoke journey code spread across apps, queues, and service callbacks | Reader or system question: What must be shown, and what can remain private? Marty primitive: Presentation Policy. What it stabilizes: required claims, predicates, freshness, holder binding, minimum disclosure. What should stop living in code: verifier-specific logic hidden in endpoints and UI forms | Reader or system question: Where does verification run, under which runtime constraints? Marty primitive: Deployment Profile. What it stabilizes: online/offline mode, lane/device packaging, sync windows, UX/runtime behavior. What should stop living in code: environment-specific feature flags, deployment forks, runtime special cases" },
       { type: "paragraph", text: "That table is the reason the ecosystem becomes manageable. A sponsor does not want separate architectural universes for passport PKI, DIDs, and EUDI trust lists; they want one place to express who is trusted and how that trust changes safely. An implementer does not want three mental models for an employee badge, a mobile driver’s license, and an education credential; they want one object that defines what is issued and under which constraints. And when privacy or offline operation starts making the system expensive, Marty does not hide the problem in code. It gives the problem objects: Presentation Policies and Deployment Profiles." },
       { type: "paragraph", text: "The visual picture that follows from this is not arbitrary. The canonical map should read left to right as a DAG: Trust Profiles (grounded in trust anchors) -> Credential Templates -> Flows -> Presentation Policies -> Deployment Profiles. The point is not that every runtime call literally walks those boxes in that order. The point is that the reader can see the logic of the system in one glance:" },
       { type: "paragraph", text: "foundation on the left: what trust rests on structure next: what gets issued motion in the middle: how the system advances identity from stage to stage boundary after that: what can be asked and what can remain undisclosed runtime on the right: where the system actually lives when the network, device, and environment begin arguing back" },
@@ -1733,7 +2100,7 @@ pytest -m openid4vp`
       { type: "paragraph", text: "It also makes the options legible. Not every verifier request needs the same disclosure mode." },
       { type: "paragraph", text: "Disclosure mode: Full claim. What the verifier receives: Raw attributes such as birth date, address, or license number. What it learns: The underlying identity data itself. When it is justified: Only when the business or regulatory decision genuinely requires those exact values | Disclosure mode: Predicate. What the verifier receives: A bounded result such as age_over_21 = true. What it learns: One decision-relevant fact. When it is justified: Best when the verifier needs a yes/no or threshold answer and nothing else | Disclosure mode: Proof. What the verifier receives: A cryptographic proof that a condition holds without revealing the source value. What it learns: The condition is satisfied, with stronger privacy properties. When it is justified: Best when the policy requires stronger unlinkability or non-disclosure than standard claim reveal can provide" },
       { type: "paragraph", text: 'This is where the second tension becomes useful: policy versus buried code. The important design question is not "Which selective-disclosure technology is most impressive?" It is "What does policy require this verifier to know, and what must remain undisclosed?"' },
-      { type: "paragraph", text: "That is why mechanism choice should follow policy need rather than novelty. For many enterprise and retail verifiers, SD-JWT-style selective disclosure is the practical answer because it works with ordinary JSON processing, familiar JWT tooling, and existing integration habits. If the verifier only needs a small set of selectively disclosed fields, that may be enough. If the policy requires the verifier to learn only a boolean result and to avoid revealing the source attribute itself across repeated presentations, then a stronger proof model becomes appropriate." },
+      { type: "paragraph", text: "That is why mechanism choice should follow policy need rather than novelty. For many enterprise and retail verifiers, SD-JWT-style selective disclosure is the practical answer because it works with ordinary JSON processing, familiar JWT tooling, and existing integration habits. If the verifier only needs a small set of selectively disclosed fields, that may be enough. If the policy requires the verifier to learn only a Boolean result and to avoid revealing the source attribute itself across repeated presentations, then a stronger proof model becomes appropriate." },
       { type: "paragraph", text: "What matters is the direction of travel. Start with the decision boundary. Then choose the least complex mechanism that satisfies it. Reversing that order usually produces one of two mistakes: either the system overcollects because nobody specified a narrow policy, or it adopts fashionable cryptography for a problem that did not require it." },
       { type: "paragraph", text: "Privacy and compliance are not in conflict here. Explicit policy usually improves both. A verifier that asks only for age_over_21 == true has a cleaner justification record than one that ingests full license contents and then claims it never meant to keep them." },
       { type: "heading", text: "Operational privacy still has runtime consequences" },
@@ -1883,10 +2250,10 @@ pytest -m openid4vp`
       { type: "paragraph", text: 'Most executive buyers are taught to ask the wrong opening question: "What is our cost per check?" That framing works for a thin API called occasionally from the edge of the business. It breaks down once verification becomes part of the operating fabric - gates, lanes, portals, kiosks, partner handoffs, workforce access, and regulated customer journeys that now depend on reusable credentials. At that point the more useful question is different: are we renting verification forever, or are we building a governed verification capability we can actually own?' },
       { type: "paragraph", text: "That is the commercial shift Marty is trying to make legible. Daniel’s frame is architectural: mature infrastructure gets more useful as usage rises because the organization is amortizing a governed system. Sofia’s test is blunter: what happens when the line is moving and the network decides to get philosophical. Between those views, the real tension comes into focus: infrastructure economics vs metered verification extraction, and just beneath it, ownership vs recurring dependency." },
       { type: "heading", text: "Per-check pricing punishes growth" },
-      { type: "paragraph", text: "A legacy SaaS IDV vendor charges for each verification event because the architecture requires the verifier to call home. The issuer or platform remains in the middle of the transaction, the runtime depends on that path staying available, and every successful presentation becomes another billable moment. That is comfortable for pilots. It is punishing for production systems whose job is to verify repeatedly and at scale." },
+      { type: "paragraph", text: "A legacy SaaS IDV vendor charges for each verification event because the architecture requires the verifier to call home. The issuer or platform remains in the middle of the transaction; the runtime depends on that path staying available, and every successful presentation becomes another billable moment. That is comfortable for pilots. It is punishing for production systems whose job is to verify repeatedly and at scale." },
       { type: "paragraph", text: "The problem is not only the unit price. It is the shape of the curve. In a metered model, adoption increases dependency and spend at the same time. More verifiers, more partner surfaces, more user journeys, and more successful credential reuse should make identity cheaper per decision. Instead, the platform model turns each of those wins into another extraction point." },
       { type: "paragraph", text: "For a 10M-user monthly active access gate, the arithmetic is brutally simple. A legacy SaaS vendor charging $0.05 per check lands at $500,000 per month before anyone has improved latency, resilience, or operational control. The system is not just paying for identity assurance. It is paying rent on every successful decision." },
-      { type: "paragraph", text: "Monthly verification volume: 100,000 checks. Legacy SaaS at $0.05/check: $5,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: Metered pricing can look cheaper for low-volume pilots | Monthly verification volume: 1,000,000 checks. Legacy SaaS at $0.05/check: $50,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: The cost curve crosses once verification becomes operational | Monthly verification volume: 10,000,000 checks. Legacy SaaS at $0.05/check: $500,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: Growth becomes a financial penalty under per-check extraction" },
+      { type: "paragraph", text: "Monthly verification volume: 100,000 checks. Legacy SaaS at $0.05/check: $5,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: Metered pricing can look cheaper for low-volume pilots | Monthly verification volume: 1,000,000 checks. Legacy SaaS at $0.05/check: $50,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: The cost curve crosses once verification becomes operational | Monthly verification volume: 10,000,000 checks. Legacy SaaS at $0.05/check: $500,000/month. Self-hosted Marty deployment: ~$40,000/month. What the curve means: Growth becomes a financial penalty under per-check extraction." },
       { type: "paragraph", text: "That table matters precisely because it is not hype. If you run occasional checks in one narrow workflow, a metered service may feel acceptable for a while. But once credentials are presented repeatedly across an operational estate, the economics invert. The old model is no longer charging for rare external help. It is charging for normal system behavior." },
       { type: "paragraph", text: "Cost is only one symptom. The same architecture gives the vendor visibility into every verification, forces a network dependency into each decision, and charges again whenever the same proof has to be reused across another surface. That is the deeper re-verification tax. Success makes the old model more expensive because it was never designed to let verification become an internal capability." },
       { type: "heading", text: "Owning deployments changes the curve" },
@@ -2006,8 +2373,8 @@ pytest -m openid4vp`
       { type: "heading", text: "1. Regulatory fragmentation" },
       { type: "paragraph", text: "For a compliance lead or regulated architect, fragmentation rarely begins as an abstract standards debate. It begins as a pile of obligations that refuse to line up neatly. Retail age checks need minimal disclosure. European relying parties must accept EUDI wallet behavior and trust-list rules. Travel environments must preserve ICAO trust chains and offline tolerance. Enterprise portals need local governance and low-latency enforcement. The failure begins when each one becomes its own code path." },
       { type: "paragraph", text: "That is why the landscape feels more fragmented in production than it does in white papers. Teams often answer each framework with its own stack: one verifier path for AAMVA, another for EUDI, another for enterprise access, another for travel. Logging rules settle into handlers, trust anchors into service logic, and audit behavior into whatever the last team shipped. That is application sprawl." },
-      { type: "paragraph", text: "The result is Elena’s central tension: governance clarity vs application sprawl. Legal and compliance teams need one answer to a simple question-what changed, and where? ICAO, AAMVA, EUDI, Open Badges, and enterprise trust frameworks are not chaos. They reflect different institutional settings. The chaos starts when each standards cluster becomes a reason to fork the architecture." },
-      { type: "paragraph", text: "That is the point of Marty’s compliance abstraction. The architecture must preserve real differences in trust, disclosure, and governance, but it must preserve them in explicit objects. Otherwise every external rule becomes a private implementation detail, and private implementation details are where regulated systems become ungovernable." },
+      { type: "paragraph", text: "The result is Elena’s central tension: governance clarity vs application sprawl. Legal and compliance teams need one answer to a simple question: what changed, and where? ICAO, AAMVA, EUDI, Open Badges, and enterprise trust frameworks are not chaos. They reflect different institutional settings. The chaos starts when each standards cluster becomes a reason to fork the architecture." },
+      { type: "paragraph", text: "That is the point of Marty’s compliance abstraction. The architecture must preserve real differences in trust, disclosure, and governance, but it must preserve them in explicit objects. Otherwise, every external rule becomes a private implementation detail, and private implementation details are where regulated systems become ungovernable." },
       { type: "heading", text: "2. The compliance-profile translation layer" },
       { type: "paragraph", text: "A compliance profile is not a checkbox on a vendor slide. It is a translation layer that turns an external framework or rule bundle into explicit Marty objects: which formats are in scope, which trust assumptions apply, which presentation requirements are valid, which policy set must be evaluated, and which deployment surfaces inherit the result." },
       { type: "paragraph", text: "If you want a regulated buyer to imagine using this abstraction, picture a governed control plane entry for a verifier program: a named compliance profile, linked trust profile, linked presentation policy, linked Cedar policy set, versioned rollout, deployment scope, approver, and activation timestamp. In other words: an object a team can review, diff, approve, and deploy." },
@@ -2118,10 +2485,10 @@ principal.department == "HR"
       { type: "heading", text: "The disclosure problem" },
       { type: "paragraph", text: 'Consider a grocery self-checkout kiosk handling an age-restricted purchase. The decision is narrow: is the shopper over twenty-one? A conventional identity flow still tends to pull much more than that. A mobile driver’s license or wallet credential may expose name, address, exact date of birth, document number, expiration, and issuer metadata. The verifier may claim it only "uses" one field, but once the full payload crosses the boundary, the verifier has already learned more than the decision requires.' },
       { type: "paragraph", text: "That is the disclosure problem in plain terms. The privacy failure is not only that too much data becomes visible. It is that the holder and the operator both inherit the burden of everything the verifier never needed. Extra claims create extra logs, extra audit scope, and extra correlation risk across repeated presentations. A full credential shown once may be unnecessary. A full credential shown everywhere becomes a trail." },
-      { type: "paragraph", text: "So selective disclosure should be defined strictly. It does not mean the holder gets a nicer consent screen after the verifier has already asked for too much. It means non-required claims never cross the verifier boundary at all. That only works when a Presentation Policy states the request precisely. If policy says the verifier needs age_over_21 = true, the mechanism should deliver that answer and stop. If policy truly needs a name or credential ID, disclose that claim explicitly and no more. The first architectural move is not fancy cryptography. It is moving the boundary from verifier habit into governed policy." },
+      { type: "paragraph", text: "So, selective disclosure should be defined strictly. It does not mean the holder gets a nicer consent screen after the verifier has already asked for too much. It means non-required claims never cross the verifier boundary at all. That only works when a Presentation Policy states the request precisely. If policy says the verifier needs age_over_21 = true, the mechanism should deliver that answer and stop. If policy truly needs a name or credential ID, disclose that claim explicitly and no more. The first architectural move is not fancy cryptography. It is moving the boundary from verifier habit into governed policy." },
       { type: "heading", text: "Mechanism choices" },
       { type: "paragraph", text: "Once the policy boundary is clear, mechanism choice becomes a practical architecture decision instead of a cryptography fashion contest. Marcus’s contribution is simple but important: hiding undisclosed claims, proving only a predicate, and resisting linkage across repeated presentations are related properties, not identical ones." },
-      { type: "paragraph", text: "Mechanism: Full claim disclosure. What is presented: Exact attribute values. Operational fit: Universal. Privacy profile: Lowest privacy. Use when: Policy genuinely requires the exact value | Mechanism: SD-JWT selective disclosure. What is presented: JWT plus only needed disclosures. Operational fit: Excellent for JSON/JWT stacks. Privacy profile: Hides undisclosed claims, but not the strongest unlinkability. Use when: Relying parties need standard JSON processing and familiar JWT libraries | Mechanism: Issued predicate claim. What is presented: A bounded claim such as age_over_21 = true. Operational fit: Strong fit for ordinary claims handling. Privacy profile: Verifier learns only the predicate result. Use when: One stable yes/no decision is enough | Mechanism: ZK predicate or proof. What is presented: Proof that a condition holds without the source value. Operational fit: More specialized verifier support. Privacy profile: Stronger non-disclosure and better unlinkability. Use when: Policy requires stricter non-disclosure or stronger unlinkability" },
+      { type: "paragraph", text: "Mechanism: Full claim disclosure. What is presented: Exact attribute values. Operational fit: Universal. Privacy profile: Lowest privacy. Use when: Policy genuinely requires the exact value | Mechanism: SD-JWT selective disclosure. What is presented: JWT plus only needed disclosures. Operational fit: Excellent for JSON/JWT stacks. Privacy profile: Hides undisclosed claims, but not the strongest unlinkability. Use when: Relying parties need standard JSON processing and familiar JWT libraries | Mechanism: Issued predicate claim. What is presented: A bounded claim such as age_over_21 = true. Operational fit: Strong fit for ordinary claims handling. Privacy profile: Verifier learns only the predicate result. Use when: One stable yes/no decision is enough | Mechanism: ZK predicate or proof. What is presented: Proof that a condition holds without the source value. Operational fit: More specialized verifier support. Privacy profile: Stronger non-disclosure and better unlinkability. Use when: Policy requires stricter non-disclosure or stronger unlinkability." },
       { type: "paragraph", text: "For most enterprise web and API verifiers, SD-JWT is the pragmatic default. It keeps standard JSON processing and familiar JWT libraries while hiding claims that were not requested. That is why the completed evidence framework matters so much here: use SD-JWT when relying parties need standard JSON processing and familiar JWT libraries. It is not the strongest privacy model, but it is often the right operational one." },
       { type: "paragraph", text: 'ZK approaches are for a different bar. Use ZK approaches when policy requires stronger unlinkability or stricter non-disclosure properties-when the verifier should learn only that a condition holds, not the source value itself, and when repeated use should resist correlation more strongly. That does not make ZK "better" by default. It makes it appropriate when the policy outcome is stricter. Start with the decision boundary, then pick the lightest mechanism that satisfies it honestly.' },
       { type: "heading", text: "Policy and deployment implications" },
@@ -2155,7 +2522,7 @@ principal.department == "HR"
       { type: "paragraph", text: 'Sofia’s contribution is the runtime realism. A self-checkout lane is not a laboratory demo. It is a device under transaction pressure, intermittent connectivity, and support teams who would love to log everything "just in case." That is why the bounded request matters so much. When the kiosk only receives the predicate result, the support burden cannot quietly expand into full identity payload retention.' },
       { type: "paragraph", text: "That does not mean the operational questions disappear. The lane still needs to know which issuers it trusts, which credential formats it accepts, how long policy or trust material may remain cached, and what gets recorded for audit when a sale is approved or denied. But those are runtime questions wrapped around a bounded disclosure decision. They are not excuses to widen the disclosure surface. A good retail deployment can log that the verifier policy age_over_21 was satisfied at a certain kiosk, at a certain time, for a certain transaction class, without storing the underlying birth date or identity attributes." },
       { type: "paragraph", text: "This is the confidence shift the scene is supposed to create. A serious privacy reader already knows overcollection is bad. What they need is proof that a real retail lane can do something more disciplined without becoming hand-wavy or impractical. Age verification supplies that proof because the business decision is binary. Once the verifier is required to honor that boundary, the old habit of scanning and hoarding identity data looks less like a convenience and more like a design failure." },
-      { type: "paragraph", text: "The grocery kiosk example also shows why Marty’s policy layer matters more than any single disclosure mechanism. OID4VP can transport the request. Selective disclosure or predicate-capable credentials can satisfy it. But the architecture only stays privacy-preserving when the verifier request is explicitly constrained to what the decision requires. Otherwise the system merely acquires more sophisticated ways to overcollect." },
+      { type: "paragraph", text: "The grocery kiosk example also shows why Marty’s policy layer matters more than any single disclosure mechanism. OID4VP can transport the request. Selective disclosure or predicate-capable credentials can satisfy it. But the architecture only stays privacy-preserving when the verifier request is explicitly constrained to what the decision requires. Otherwise, the system merely acquires more sophisticated ways to overcollect." },
       { type: "paragraph", text: "That is the deeper buying implication. Marty is not promising that retail systems will become magically privacy-preserving because they adopted a new wallet flow. It is proving that privacy can be made operational when the verifier asks one bounded question, uses a policy that encodes that boundary, and keeps the runtime aligned with it. For age verification, the right design is almost embarrassingly simple: request age_over_21, get the answer, finish the sale, and leave the rest of the customer’s identity where it belongs." },
       { type: "paragraph", text: "If you want the broader argument for why this boundary must be governed as policy rather than left to verifier habit, continue to minimum-disclosure-is-a-policy-problem." }
     ]
@@ -2232,7 +2599,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the next implementation step, continue to mip-json-schemas-walkthrough. That is the clean handoff after this note because the objects doing the real work here - Presentation Policy, Trust Profile, Deployment Profile, Flow, and VerificationSession - already exist as JSON Schemas you can validate, generate types from, and wire into a verifier without treating the transport as the whole design." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 1 Foundations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 1 Foundations
   {
     slug: "what-is-digital-identity",
     title: "What Is Digital Identity?",
@@ -2246,11 +2613,11 @@ principal.department == "HR"
     content: [
       { type: "paragraph", text: 'The phrase "digital identity" gets used so loosely that it often stops meaning anything useful. Sometimes it means a login account. Sometimes it means KYC. Sometimes it means a fraud score, a wallet app, a government ID program, or the pile of data one company happens to hold about you.' },
       { type: "paragraph", text: 'That ambiguity is a problem because digital identity is becoming infrastructure. Architects, product teams, regulators, and buyers need a more precise model than "the thing that helps us know who someone is."' },
-      { type: "paragraph", text: "The cleanest definition is this: digital identity is a set of machine-readable claims about an entity. The entity may be a person, an organization, a device, or a service. The claims describe something another system may need to rely on: age, employer, licence status, enrollment, accreditation, entitlement, device ownership, or simply that the subject is the same one that was checked earlier." },
+      { type: "paragraph", text: "The cleanest definition is this: digital identity is a set of machine-readable claims about an entity. The entity may be a person, an organization, a device, or a service. The claims describe something another system may need to rely on: age, employer, license status, enrollment, accreditation, entitlement, device ownership, or simply that the subject is the same one that was checked earlier." },
       { type: "paragraph", text: "That sounds abstract until you compare it with the physical world. A passport, employee badge, university degree, and boarding pass are all physical ways of carrying claims someone else might rely on. Digital identity solves the same problem in a form software can process, transport, verify, and govern." },
       { type: "heading", text: "Identity is more than an account record" },
       { type: "paragraph", text: "Many systems still treat identity as an account record inside one platform. A user signs up, attributes are stored in a central database, and every important decision has to call back to that system to ask whether the record is still valid. That works well enough for closed applications. It works much less well when identity needs to travel." },
-      { type: "paragraph", text: "A hospital may need to rely on a medical licence issued elsewhere. An employer may need to verify a degree without becoming dependent on a custom university integration. A building door, an API gateway, and a web application may all need to rely on the same employee state without re-asking HR for the answer every time." },
+      { type: "paragraph", text: "A hospital may need to rely on a medical license issued elsewhere. An employer may need to verify a degree without becoming dependent on a custom university integration. A building door, an API gateway, and a web application may all need to rely on the same employee state without re-asking HR for the answer every time." },
       { type: "paragraph", text: 'That is why digital identity should be framed as reusable evidence rather than as vendor-owned account state. The useful unit is not "the profile in our system." The useful unit is the claim another party can evaluate under understandable trust rules.' },
       { type: "paragraph", text: "Once you see identity that way, the scope also gets wider in a helpful way. Digital identity is not only about people. An organization can hold claims about its legal existence or accreditation. A device can hold claims about its registration or attestation state. A service can hold claims about the environment it is allowed to operate in. The pattern is the same: machine-readable claims that another party may need to rely on." },
       { type: "paragraph", text: "The critical shift is this: identity is not the account itself. Identity is the evidence that allows a system to make a decision about the subject." },
@@ -2350,7 +2717,7 @@ principal.department == "HR"
       { type: "paragraph", text: 'A university saying someone earned a degree is different from a student claiming they graduated. An employer saying someone is an active employee is different from a person typing "I work here" into a web form. Issuers matter because their authority changes the meaning of the claim.' },
       { type: "heading", text: "Holders decide how claims travel" },
       { type: "paragraph", text: "Once a claim has been issued, the holder becomes the operational center of the system." },
-      { type: "paragraph", text: "The holder stores the credential and decides when to present it. In many systems that means a wallet application, but the underlying idea is broader than any single wallet product. The holder controls possession of the credential and participates in disclosure decisions at presentation time." },
+      { type: "paragraph", text: "The holder stores the credential and decides when to present it. In many systems, that means a wallet application, but the underlying idea is broader than any single wallet product. The holder controls possession of the credential and participates in disclosure decisions at presentation time." },
       { type: "paragraph", text: "That role matters because a credential that cannot travel with the holder is not very reusable. It may still be digitally signed, but it behaves more like centrally hosted account state than portable proof." },
       { type: "paragraph", text: "Holder control is also where privacy becomes practical. If the holder can present only what the verifier needs, then the system no longer has to leak a full identity record for every routine decision. An age-verification kiosk may need only proof that the customer is over twenty-one. An HR portal may need proof of active employment and department. A verifier should not learn more simply because the underlying credential contains more." },
       { type: "paragraph", text: "Possession matters too. A credential should not become trustworthy just because someone copied a file. Holder binding and proof-of-possession mechanisms exist so the system can tell the difference between the rightful holder and a stray duplicate." },
@@ -2378,7 +2745,7 @@ principal.department == "HR"
     content: [
       { type: "paragraph", text: "Many explanations of credentials stop at issuance, as if the interesting part were over once the issuer signed the document." },
       { type: "paragraph", text: "In practice, issuance is just the midpoint where the system becomes visible." },
-      { type: "paragraph", text: "Before a credential is issued, evidence has to be collected and a decision has to be made about whether the subject qualifies. After a credential is issued, it has to be presented, verified, kept current enough, revoked when necessary, and sometimes reissued when the underlying facts change. The lifecycle is what turns a credential from a neat artifact into an operating system for trust." },
+      { type: "paragraph", text: "Before a credential is issued, evidence has to be collected, and a decision has to be made about whether the subject qualifies. After a credential is issued, it has to be presented, verified, kept current enough, revoked when necessary, and sometimes reissued when the underlying facts change. The lifecycle is what turns a credential from a neat artifact into an operating system for trust." },
       { type: "paragraph", text: "That is why Marty treats flows, templates, policies, and deployment behavior as governed objects. A credential does not live only in the moment of signing. It lives through the whole path from application to real-world reliance." },
       { type: "heading", text: "Application and approval set the issuance conditions" },
       { type: "paragraph", text: "A trustworthy credential starts before the credential exists." },
@@ -2395,7 +2762,7 @@ principal.department == "HR"
       { type: "heading", text: "Verification, revocation, and renewal keep the system honest" },
       { type: "paragraph", text: "After issuance, the system still has work to do." },
       { type: "paragraph", text: "Verification has to confirm that the signature is valid, the issuer is trusted, the credential is still within policy, and any required status or revocation checks pass. That work may happen online with fresh status data, or offline with cached trust material and bounded freshness windows. Either way, a credential is not accepted because it exists. It is accepted because it still satisfies the verifier’s current rules." },
-      { type: "paragraph", text: "That is why revocation is part of the lifecycle rather than an awkward appendix. Some facts change. Employment ends. A licence is suspended. A credential is replaced. A device is lost. If the system cannot express that a once-valid credential should stop counting, the lifecycle is incomplete." },
+      { type: "paragraph", text: "That is why revocation is part of the lifecycle rather than an awkward appendix. Some facts change. Employment ends. A license is suspended. A credential is replaced. A device is lost. If the system cannot express that a once-valid credential should stop counting, the lifecycle is incomplete." },
       { type: "paragraph", text: "Renewal and reissue matter for the same reason. Some credentials expire on schedule. Others need to be reissued because the claims changed even though the subject is still legitimate. A department transfer may require a new employee credential. A renewed licence may need a fresh credential with a new validity window. A long-lived wallet may continue to hold several generations of proof for the same subject over time." },
       { type: "paragraph", text: "This is where operational pressure enters. Offline environments need cache windows and failure rules. High-assurance verifiers may require fresher status than low-risk ones. Some systems can tolerate a bounded grace period; others should fail closed. The lifecycle is where those runtime choices stop being abstract and start affecting real acceptance decisions." },
       { type: "paragraph", text: "A credential, then, is not a static thing. It is a governed object moving through a sequence: application, approval, issue, present, verify, update, revoke, renew." },
@@ -2429,7 +2796,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Once the reader sees why signatures matter, the next useful step is to separate the cryptographic jobs that identity systems actually depend on." },
       { type: "paragraph", text: "The first is authenticity and integrity. Digital signatures answer two questions together: did the right key sign this, and was the payload changed afterward? If the answer to either question is no, the credential should not count." },
       { type: "paragraph", text: "The second is structured disclosure. Identity systems often need to reveal less than the full credential. That is where hashing, commitments, and format-specific disclosure mechanisms matter. In SD-JWT, for example, hashed disclosures let the verifier check that selectively revealed claims really belong to the signed credential. In other ecosystems, a document or proof format may use different mechanisms, but the underlying purpose is the same: let the verifier trust a bounded disclosure without seeing every field." },
-      { type: "paragraph", text: "The third is key custody. A credential is only as reliable as the keys around it. If issuer keys are poorly governed, a perfectly designed credential format still becomes untrustworthy. If holder-side keys are exportable or weakly protected, then holder binding becomes questionable and wallet security claims start to collapse." },
+      { type: "paragraph", text: "The third is key custody. A credential is only as reliable as the keys around it. If issuer keys are poorly governed, a perfectly designed credential format still becomes untrustworthy. If holder-side keys are exportable or weakly protected, then holder binding becomes questionable, and wallet security claims start to collapse." },
       { type: "paragraph", text: "This is why identity cryptography is not only about ciphers and algorithms. It is about which keys exist, who controls them, how they are rotated, which algorithms are allowed, where the trust anchors come from, and how the runtime reacts when trust material becomes stale." },
       { type: "paragraph", text: 'That is also why the phrase "encrypted credential" is often less useful than people think. Confidentiality matters in some flows, but the first architectural requirement in digital identity is usually not secrecy. It is verifiability. The verifier needs to know that the claim came from an accepted issuer, remained intact, and still satisfies the active trust and policy rules.' },
       { type: "paragraph", text: "Marty’s model keeps those responsibilities legible. Trust Profiles declare acceptable trust sources and algorithms. Credential Templates shape what gets issued. Presentation Policies control what must be shown. Deployment Profiles determine how those checks behave in real runtime conditions. The cryptography is not an invisible library call under the floorboards. It is part of the architecture grammar." },
@@ -2439,7 +2806,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That is why serious identity stacks eventually move from generic cryptography into trust models, certificate hierarchies, trust lists, registries, issuer allow-lists, freshness rules, and revocation behavior. The signature proves integrity. Governance explains why the signature should count." },
       { type: "paragraph", text: "This is the bridge into PKI and trust anchors. Once the reader understands that signed data is stronger than unsigned JSON, the next question becomes more precise: how does the verifier know whether the signer belongs to a trusted authority in the first place?" },
       { type: "paragraph", text: "In government and travel ecosystems, the answer often runs through X.509 certificate chains, root certificates, and directories such as the ICAO Public Key Directory. In wallet ecosystems, it may include secure element or key-store constraints. In decentralized systems, it may include DID-based or hybrid trust models. Different ecosystems answer the question differently, but they all start from the same problem: key control is not yet institutional trust." },
-      { type: "paragraph", text: "That is why digital identity depends on cryptography in the first place. Without it, claims remain editable data and every verifier stays trapped in bilateral dependency. With it, credentials become portable proofs. And once those proofs exist, the real architectural work becomes deciding which ones should count, under which trust model, and in which runtime conditions." },
+      { type: "paragraph", text: "That is why digital identity depends on cryptography in the first place. Without it, claims remain editable data, and every verifier stays trapped in bilateral dependency. With it, credentials become portable proofs. And once those proofs exist, the real architectural work becomes deciding which ones should count, under which trust model, and in which runtime conditions." },
       { type: "paragraph", text: "If you want to follow that path forward, the next step is Public Key Infrastructure Explained. That is where raw signatures become governed trust instead of isolated key tricks." }
     ]
   },
@@ -2462,7 +2829,7 @@ principal.department == "HR"
       { type: "paragraph", text: "What it does not prove is who that someone was or why another organization should trust them." },
       { type: "paragraph", text: "Imagine an unknown service signs a JSON credential claiming it came from a state motor vehicle agency. If the signature verifies against the public key bundled with the payload, the verifier has learned only that the signer controlled that key. It has not yet learned whether the key belongs to the DMV, whether the DMV was authorized to issue that credential type, or whether the key was supposed to be accepted in this ecosystem at all." },
       { type: "paragraph", text: "That is the first mental reset PKI requires. Public-key cryptography proves key control. PKI adds the institutional wrapper that makes key control useful across organizational boundaries." },
-      { type: "paragraph", text: 'Identity systems need that wrapper constantly. A verifier is rarely asking "was this signed by some key?" It is asking "was this signed by a key that traces back to an issuer or authority I am supposed to trust?"' },
+      { type: "paragraph", text: 'Identity systems need that wrapper constantly. A verifier is rarely asking "was this signed by some key?" It is asking, "Was this signed by a key that traces back to an issuer or authority I am supposed to trust?"' },
       { type: "heading", text: "Certificates create verifiable issuer authority" },
       { type: "paragraph", text: "PKI answers that question by introducing certificates and certificate hierarchies." },
       { type: "paragraph", text: 'A certificate binds a public key to an identity under a signing authority. In the X.509 model, a certificate says, in effect, "this key belongs to this issuer, and this higher authority is willing to sign that statement." If the verifier already trusts that higher authority, it now has a path for trusting the issuer key too.' },
@@ -2472,7 +2839,7 @@ principal.department == "HR"
       { type: "paragraph", text: 'That is the difference between "we use PKI somewhere under the hood" and "our trust model is inspectable."' },
       { type: "heading", text: "Identity PKI is about distribution and governance as much as cryptography" },
       { type: "paragraph", text: "Once readers understand keys and certificates, the next trap is to imagine the job is finished. It is not." },
-      { type: "paragraph", text: "Real identity PKI depends on how trust material is distributed and maintained. A root certificate that never reaches the verifier is useless. A trust list that is not refreshed becomes stale. A verifier that quietly falls back to implicit trust during an outage has stopped being a serious verifier no matter how strong its signature code looks." },
+      { type: "paragraph", text: "Real identity PKI depends on how trust material is distributed and maintained. A root certificate that never reaches the verifier is useless. A trust list that is not refreshed becomes stale. A verifier that quietly falls back to implicit trust during an outage has stopped being a serious verifier, no matter how strong its signature code looks." },
       { type: "paragraph", text: "That is why identity PKI lives in distribution channels such as signed trust lists, national or ecosystem registries, pinned roots, and domain-specific directories like the ICAO Public Key Directory. The trusted root is only the starting point. The operational discipline around that root is what keeps the trust framework alive." },
       { type: "paragraph", text: 'Marty’s TrustSource model makes those distinctions explicit. A trust source can be a ROOT_CA, a TRUST_LIST, a PINNED_ISSUER, or a PKD_URL. That matters editorially because it lets the reader see that "PKI" is not one undifferentiated thing. Some ecosystems distribute roots directly. Some rely on signed lists. Some blend PKI with DID or other identifier systems. What matters is that the verifier’s trust starting point is declared rather than implied.' },
       { type: "paragraph", text: "This is also why PKI should never be taught only as a browser-TLS story. In identity, the interesting question is not merely whether an encrypted channel exists. The interesting question is whether a credential, a document, or a presentation can be traced back to an accepted issuer under the right governance and freshness rules." },
@@ -2552,7 +2919,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That sequence is worth learning because it protects readers from a common implementation mistake: assuming that one successful signature check means the verifier is done. A signature can be mathematically valid and still be unacceptable because the issuer is outside the approved trust set, the certificate is stale, the credential is revoked, the algorithm is no longer allowed, or the policy requirements were not actually satisfied." },
       { type: "heading", text: "Runtime pressure creates chain-validation pitfalls" },
       { type: "paragraph", text: "The hardest chain-validation problems usually appear at runtime, not in slides." },
-      { type: "paragraph", text: "A verifier running in a stable online environment can check revocation or pull fresh trust material more easily. A verifier in a travel lane, field device, or other constrained environment may have to rely on preloaded trust anchors, cached status material, and a bounded freshness window. That changes how chain validation behaves in practice even when the formal trust model is the same." },
+      { type: "paragraph", text: "A verifier running in a stable online environment can check revocation or pull fresh trust material more easily. A verifier in a travel lane, field device, or other constrained environment may have to rely on preloaded trust anchors, cached status material, and a bounded freshness window. That changes how chain validation behaves in practice, even when the formal trust model is the same." },
       { type: "paragraph", text: "This is why Marty separates crypto primitives from trust and deployment policy. The cryptographic crate can parse certificates, extract information, and support chain-building primitives. The deployment and trust layers decide which revocation strategy is in use, how stale trust data may become, and whether the verifier must fail closed once its trust package is too old." },
       { type: "paragraph", text: "Readers should also remember that certificate chains fail in boring ways as often as in dramatic ones. Missing intermediates, expired roots, stale trust lists, clock skew, revoked issuers, or mismatched algorithm expectations can all break a verifier that looked correct in a demo." },
       { type: "paragraph", text: 'That is why certificate validation should be taught as operational trust evaluation, not as a one-line library call. The verifier is not only answering "can I verify this signature?" It is answering "does this credential still count under the current trust, revocation, freshness, and policy rules of this deployment?"' },
@@ -2560,7 +2927,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want to see that discipline in a concrete high-assurance ecosystem, the next move is passport PKI. Read how-passport-pki-works next to see how certificate hierarchies, travel trust roots, and inspection runtimes work together." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 2 Standards ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 2 Standards
   {
     slug: "how-passport-pki-works",
     title: "How Passport PKI Works",
@@ -2593,8 +2960,8 @@ principal.department == "HR"
       { type: "paragraph", text: "That is where the ICAO Public Key Directory matters." },
       { type: "paragraph", text: "The PKD is the distribution layer that lets verifiers obtain the CSCA material needed for cross-border trust. Without a distribution channel like this, each verifier would need fragile bilateral arrangements or manual root exchange to trust foreign passport issuers. With a directory or equivalent trust-distribution process, verifier environments can keep an accepted set of country roots up to date enough to make local verification meaningful." },
       { type: "paragraph", text: 'This is why passport PKI should never be reduced to "the chip is signed." The real story is broader:' },
-      { type: "paragraph", text: "the country root establishes who is allowed to sign the signer certificate links the document-signing key to that root the distribution mechanism makes those roots available to other verifiers the verifier runtime decides how fresh and complete its trust package must be before it will accept a travel credential" },
-      { type: "paragraph", text: "That last point matters operationally. A passport verifier still needs deployment rules: how often roots are refreshed, how long cached material may be used, what happens when freshness expires, and when the runtime should fail closed. In travel, trust is never just a certificate story. It is a certificate plus distribution plus runtime story." },
+      { type: "paragraph", text: "The country root establishes who is allowed to sign; the signer certificate links the document-signing key to that root; the distribution mechanism makes those roots available to other verifiers; the verifier runtime decides how fresh and complete its trust package must be before it will accept a travel credential." },
+      { type: "paragraph", text: "That last point matters operationally. A passport verifier still needs deployment rules: how often roots are refreshed, how long cached material may be used, what happens when freshness expires, and when the runtime should fail closed. In travel, trust is never just a certificate story. It is a certificate, plus distribution, plus runtime story." },
       { type: "heading", text: "Inspection systems turn the hierarchy into local trust" },
       { type: "paragraph", text: "The payoff of passport PKI is that a verifier can make a high-assurance local trust decision." },
       { type: "paragraph", text: "An inspection system loads trusted CSCA material and related signer information ahead of time. A traveler presents the document or passport-backed credential. The verifier checks the chain from signer to accepted root, validates the signature, confirms validity and other policy requirements, and then decides locally whether the credential counts." },
@@ -2622,7 +2989,7 @@ principal.department == "HR"
       { type: "heading", text: "CSCA is the country-level root" },
       { type: "paragraph", text: "The simplest way to understand a CSCA certificate is to contrast it with the certificate below it." },
       { type: "paragraph", text: "A document signer certificate signs passport-chip data or closely related travel artifacts. A CSCA certificate signs the document signer layer, or at least anchors trust in that layer, so other verifiers can decide that the document signer really belongs to the issuing country’s accepted passport infrastructure." },
-      { type: "paragraph", text: 'In other words, the document signer says, "this travel data was signed by our passport system." The CSCA says, "this signer belongs to the country root you are supposed to trust."' },
+      { type: "paragraph", text: 'In other words, the document signer says, "This travel data was signed by our passport system." The CSCA says, "This signer belongs to the country root you are supposed to trust."' },
       { type: "paragraph", text: "That role is why CSCA certificates matter so much. If the verifier does not trust the right country root, the document signer chain cannot establish authority. The passport may contain signed data, but the verifier still has no accepted root from which to derive trust." },
       { type: "paragraph", text: "This is the same architectural pattern readers have already seen in general PKI. The difference is that passport verification makes the institutional role much clearer. The root is not an abstract certificate in a generic store. It is the country-level trust anchor that makes the rest of the travel chain meaningful." },
       { type: "heading", text: "Distribution is what makes the CSCA certificate useful elsewhere" },
@@ -2637,7 +3004,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Country roots change. Certificates roll over. Trust packages age. If a verifier is running on stale CSCA material, it may reject legitimate travel credentials or, worse, continue trusting roots that should no longer be accepted." },
       { type: "paragraph", text: 'This is why CSCA handling is inseparable from the verifier’s trust-refresh discipline. Online environments can usually refresh more aggressively. Offline or hybrid environments need bounded cache windows and explicit failure behavior. The trust story is not just "do we have a CSCA certificate?" It is "do we have the right one, sourced correctly, fresh enough for this deployment, and aligned with our current operator policy?"' },
       { type: "paragraph", text: "The Longfellow verifier-service example is useful here because it makes the root layer feel tangible rather than theoretical. The sample setup logs actual issuer CAs and roots being loaded, including California DMV IACA Root, Colorado Root Certificate, Georgia Root Certificate Authority, and Google Identity Credential Root IACA entries. Those examples remind the reader that verifier trust is not a concept floating above the system. It is a concrete set of certificate objects loaded into runtime." },
-      { type: "paragraph", text: "That is the right way to think about CSCAs too. They are not merely standard-defined artifacts that exist on paper. They are the exact roots a verifier must load, refresh, and audit if passport trust is going to work in the field." },
+      { type: "paragraph", text: "That is the right way to think about CSCAs, too. They are not merely standard-defined artifacts that exist on paper. They are the exact roots a verifier must load, refresh, and audit if passport trust is going to work in the field." },
       { type: "heading", text: "Why the CSCA object deserves its own explanation" },
       { type: "paragraph", text: "It can be tempting to treat the CSCA as just one more certificate in the hierarchy. It deserves more attention than that because it is the clearest example of what a trust anchor actually does." },
       { type: "paragraph", text: "It stabilizes the chain. It expresses institutional authority. It enables cross-border validation. And it turns local signature checks into accepted travel trust when the verifier has the right distribution and freshness discipline around it." },
@@ -2697,19 +3064,19 @@ principal.department == "HR"
     readTime: "7 min read",
     topic: "mDoc Standards",
     content: [
-      { type: "paragraph", text: "A mobile driving licence is easy to describe badly." },
+      { type: "paragraph", text: "A mobile driving license is easy to describe badly." },
       { type: "paragraph", text: "The bad version sounds almost cheerful: take the plastic card, put it in a wallet app, and let the phone do the rest." },
       { type: "paragraph", text: "The real problem is harder than that. A driving licence is a government credential. It is supposed to carry institutional trust, not just a familiar visual design. Once that credential moves onto a personal device, the verifier still needs three things to remain true at the same time:" },
-      { type: "paragraph", text: "the issuing authority still has to count as authoritative; the verifier still has to ask for only the data it needs; the presentation still has to be bound to the holder and the moment of the request." },
+      { type: "paragraph", text: "The issuing authority still has to count as authoritative; the verifier still has to ask for only the data it needs; the presentation still has to be bound to the holder and the moment of the request." },
       { type: "paragraph", text: "That is what ISO 18013-5 is really trying to solve." },
       { type: "paragraph", text: "The standard is not the whole mobile-identity market, and it does not eliminate regional policy differences. What it does provide is a shared grammar for how a mobile driving licence is structured, how a verifier asks for it, and how a holder’s device answers without discarding the government trust model that made the licence valuable in the first place." },
       { type: "heading", text: "A phone-held licence still has to feel like government trust" },
-      { type: "paragraph", text: "A physical driving licence gets a lot of help from the medium itself." },
+      { type: "paragraph", text: "A physical driving license gets a lot of help from the medium itself." },
       { type: "paragraph", text: "The card has familiar issuer branding, visible security features, and an institutional setting people already understand. A verifier may still inspect it badly, but the form factor makes the document feel like a government artifact. A phone-held licence has to recreate that confidence through a very different set of mechanisms." },
       { type: "paragraph", text: "That is why mDL should not be taught as a wallet-UX novelty first. It should be taught as a trust problem." },
       { type: "paragraph", text: "The holder’s phone is a consumer device. The licence is a regulated government credential. The verifier may be a police officer, a checkpoint reader, or a retail system under policy constraints of its own. Those parties do not need a prettier card image. They need a standard way to know which issuer signed the credential, which data elements are being requested, and whether the device presenting the credential is the same device to which the credential was bound." },
       { type: "paragraph", text: "This is also where ISO 18013-5 should be kept in scope correctly. It is not a universal standard for all digital identity. It is a specific mobile-document standard for driving licences and adjacent document-style credentials. Marty’s glossary gives the cleanest description: mDoc is the ISO 18013-5 mobile document format, a CBOR-encoded credential used for mDL, DTC, and other standards-based physical-identity credentials." },
-      { type: "paragraph", text: "That scope is important because it keeps readers from mixing several different arguments together. SD-JWT, VC-JWT, and other web-oriented formats are trying to solve adjacent problems in different environments. ISO 18013-5 is the part of the landscape that says: if a government licence has to be carried on a phone and shown to a reader device, this is the document and exchange model we expect." },
+      { type: "paragraph", text: "That scope is important because it keeps readers from mixing several different arguments together. SD-JWT, VC-JWT, and other web-oriented formats are trying to solve adjacent problems in different environments. ISO 18013-5 is the part of the landscape that says: if a government license has to be carried on a phone and shown to a reader device, this is the document and exchange model we expect." },
       { type: "paragraph", text: "So the first useful correction is simple. An mDL is not a phone wallpaper version of a state ID. It is a government-signed mobile document that has to survive verifier scrutiny on a personal device." },
       { type: "heading", text: "mDoc combines issuer-signed data with device-bound proof" },
       { type: "paragraph", text: "Once the scope is clear, the standard becomes much easier to understand." },
@@ -2717,9 +3084,9 @@ principal.department == "HR"
       { type: "paragraph", text: "On the presentation side, the MIP specification captures the proximity sequence in a compact form:" },
       { type: "paragraph", text: "DeviceEngagement -> SessionEstablishment -> DeviceRequest -> DeviceResponse." },
       { type: "paragraph", text: 'That sequence matters because it turns the interaction into something more disciplined than "show me your phone." The reader establishes a session with the holder device, asks for specific namespaces and data elements, and receives a signed response rather than a broad payload dump.' },
-      { type: "paragraph", text: "This is where the mDoc model earns its keep. The document is structured in namespaces, and the verifier requests the specific elements it needs from those namespaces. That does not magically solve privacy by itself, but it creates the right request boundary. A verifier no longer has to ingest an entire licence record simply because the holder presented a licence. It can ask for the elements its policy actually requires." },
+      { type: "paragraph", text: "This is where the mDoc model earns its keep. The document is structured in namespaces, and the verifier requests the specific elements it needs from those namespaces. That does not magically solve privacy by itself, but it creates the right request boundary. A verifier no longer has to ingest an entire license record simply because the holder presented a license. It can ask for the elements its policy actually requires." },
       { type: "paragraph", text: "The second important correction is about who signs what." },
-      { type: "paragraph", text: 'In practical mDL deployments, one layer of proof belongs to the issuer and another belongs to the holder device. The issuing authority signs the credential content that says, in effect, "these are the official licence claims we stand behind." The device then participates in the presentation moment so the verifier knows it is not just looking at a copied file or a replayed response from an earlier session.' },
+      { type: "paragraph", text: 'In practical mDL deployments, one layer of proof belongs to the issuer, and another belongs to the holder device. The issuing authority signs the credential content that says, in effect, "these are the official license claims we stand behind." The device then participates in the presentation moment so the verifier knows it is not just looking at a copied file or a replayed response from an earlier session.' },
       { type: "paragraph", text: "That is why holder binding is not an optional embellishment in this ecosystem. Marty’s Cedar verification rules make the point bluntly for AAMVA_MDL: verification is forbidden unless the credential format is MDOC, and it is also forbidden unless holder_binding_present is true. The format and the device-bound proof are both part of what makes the result acceptable." },
       { type: "paragraph", text: "This distinction is one of the easiest places for implementers to get lost. If all the trust lives in the issuer signature, the ecosystem becomes too easy to copy or replay. If all the attention goes to the device, the government issuer disappears from the trust picture. ISO 18013-5 keeps both visible: the issuer signs the document, and the device proves the holder-side presentation event." },
       { type: "paragraph", text: "Modern issuance ecosystems then add another layer around that. In Marty’s wallet-compatibility model, the common issuance bundle for mDL is MDOC plus OID4VCI_PRE_AUTH, narrowed further by a compliance code such as AAMVA_MDL or EUDI_MDL. That is a useful reminder that the standard does not live alone. The document format, the issuance path, and the compliance framework travel as a bundle." },
@@ -2733,7 +3100,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That is the government-trust half of the runtime story." },
       { type: "paragraph", text: 'The other half is operational. Local verification is one of the advantages of document-style credentials, but it should never be described as effortless offline freedom. A verifier can validate signatures and holder-bound proof locally only as long as its trust material, revocation data, and freshness rules remain inside the approved window. Once those artifacts age out, the verifier is no longer simply "offline." It is operating with stale assurance.' },
       { type: "paragraph", text: "This is where Marty’s abstractions help keep the explanation honest. A Trust Profile says which trust sources, algorithms, and formats count. A Deployment Profile says how that trust package reaches the runtime, how long it can remain current enough to use, and what the verifier should do when freshness expires. The mDL format does not eliminate those questions. It simply gives them a shared document grammar." },
-      { type: "paragraph", text: "That is the right place to land the argument. ISO 18013-5 makes a mobile driving licence possible because it keeps four things aligned:" },
+      { type: "paragraph", text: "That is the right place to land the argument. ISO 18013-5 makes a mobile driving license possible because it keeps four things aligned:" },
       { type: "paragraph", text: "a government-signed mobile document format; a device-oriented presentation exchange; bounded disclosure of requested data elements; and a trust model that still depends on real issuing-authority roots and runtime policy." },
       { type: "paragraph", text: "Once readers see that, the mDL story stops looking like a wallet feature race and starts looking like what it actually is: a government credential adapted for a phone without pretending the government-trust problem disappeared." },
       { type: "paragraph", text: "If you want the broader trust infrastructure behind that result, continue to how-governments-build-identity-pki. If you want the holder-side runtime story, go next to mobile-wallet-architectures. If you want the verifier-side request boundary that sits above the exchange, continue to presentation-protocols." }
@@ -2761,7 +3128,7 @@ principal.department == "HR"
       { type: "paragraph", text: 'Even a single national or state program usually involves more than one institutional boundary. The issuing authority may be one agency. The relying party may be a checkpoint, partner government, retailer, or transport operator. The verifier may need to keep working at a gate, a border booth, or another field environment where "call the issuer right now" is either too slow or too fragile.' },
       { type: "paragraph", text: "That is why government identity PKI should be understood first as a portability problem." },
       { type: "paragraph", text: "The credential has to travel farther than the issuing agency. The trust model has to travel with it." },
-      { type: "paragraph", text: "Travel is the cleanest example. An e-passport or a digital travel credential only becomes useful internationally if a foreign verifier can validate the signing chain without contacting the issuing state for each presentation. Mobile driving licences reveal the same pattern in a more regional form. A verifier does not want fifty different state-specific signing integrations. It wants a trust package that tells it which issuing authorities count and how to validate what they signed." },
+      { type: "paragraph", text: "Travel is the cleanest example. An e-passport or a digital travel credential only becomes useful internationally if a foreign verifier can validate the signing chain without contacting the issuing state for each presentation. Mobile driving licenses reveal the same pattern in a more regional form. A verifier does not want fifty different state-specific signing integrations. It wants a trust package that tells it which issuing authorities count and how to validate what they signed." },
       { type: "paragraph", text: 'This is also why "a valid signature" is not enough. A verifier is not asking whether some key signed the data. It is asking whether the signer belongs to a government or delegated authority it is supposed to trust for this credential class.' },
       { type: "paragraph", text: "That is the beginning of the government PKI story: portable trust requires more than a key pair. It requires a way to distribute recognized authority across institutional boundaries." },
       { type: "heading", text: "Root authorities, signers, and trust lists make sovereign PKI portable" },
@@ -2774,7 +3141,7 @@ principal.department == "HR"
       { type: "paragraph", text: "But hierarchy alone does not make trust portable. Other verifiers still need to obtain the roots and signer material they are expected to trust." },
       { type: "paragraph", text: "That is where distribution infrastructure enters." },
       { type: "paragraph", text: "The government identity ecosystems in Marty’s materials show the same architectural shape repeated with different governance bodies:" },
-      { type: "paragraph", text: "ICAO PKD distributes CSCA and document-signer material for travel credentials; AAMVA Digital Trust Service aggregates state-level IACA roots for US mobile driving licence ecosystems; EU Trusted Lists and the LOTL distribute trust anchors for eIDAS- and EUDI-adjacent environments." },
+      { type: "paragraph", text: "ICAO PKD distributes CSCA and document-signer material for travel credentials; AAMVA Digital Trust Service aggregates state-level IACA roots for US mobile driving license ecosystems; EU Trusted Lists and the LOTL distribute trust anchors for eIDAS- and EUDI-adjacent environments." },
       { type: "paragraph", text: "Those systems are not interchangeable, and they should not be described as if they were one universal registry. Their governance models are different. Their participants are different. Their update patterns are different." },
       { type: "paragraph", text: "What they do share is the architectural job." },
       { type: "paragraph", text: "They take a sovereign or ecosystem-specific root of trust and turn it into verifier-loadable trust material. That is the moment government PKI becomes usable beyond the issuing authority’s own boundary." },
@@ -2796,7 +3163,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the narrow travel exemplar of this model, continue to how-passport-pki-works. If you want the device-bound government-ID variant, go next to mobile-driving-licenses-iso-18013-5. If you want the broader trust-starting-point lens underneath both, return to understanding-trust-anchors." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 3 Credentials ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 3 Credentials
   {
     slug: "how-credential-issuance-works",
     title: "How Credential Issuance Works",
@@ -2821,7 +3188,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That is where Flow matters." },
       { type: "paragraph", text: "A flow turns issuance from a generic API call into a lifecycle. It links the template, the trust assumptions, the approval path, and the deployment context into one governed run. By the time a holder receives a credential offer, the important architectural questions are already being answered somewhere upstream. The offer is not the origin of the issuance. It is the point where a preconfigured issuance run becomes visible to the holder." },
       { type: "paragraph", text: "This is a useful correction because teams regularly reverse the sequence. They start from the transport standard, design the wallet interaction, and only later discover they still have nowhere explicit to encode credential meaning, approval rules, or lifecycle consequences. That is how issuance logic leaks into controller code, support playbooks, and vendor defaults." },
-      { type: "paragraph", text: "A serious issuance model works the other way around. First decide what is being issued and under which rules. Then decide how the holder receives it." },
+      { type: "paragraph", text: "A serious issuance model works the other way around. First, decide what is being issued and under which rules. Then decide how the holder receives it." },
       { type: "heading", text: "OID4VCI carries delivery, not meaning" },
       { type: "paragraph", text: "Once the governed issuance exists, OID4VCI becomes valuable for exactly the reason standards are supposed to be valuable: it gives the issuer and wallet a common delivery language." },
       { type: "paragraph", text: "OID4VCI defines the mechanics for credential offers, authorization state, token exchange, and credential delivery. That matters because issuers and wallets need a predictable way to agree on how a credential is claimed. Without that standard transport surface, every issuance flow becomes another custom integration." },
@@ -2839,7 +3206,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If the system wants to support revocation, renewal, support investigations, audit, replay defense, or lifecycle reporting, it needs more than a one-time transport transcript. It needs durable issuance evidence." },
       { type: "paragraph", text: "That means the system should be able to answer questions like these after the exchange is over:" },
       { type: "paragraph", text: "Which flow produced this credential? Which template defined it? Which holder claimed it? Which offer was redeemed, and when did it expire? Which format was delivered? What status or revocation handle was attached to the issued artifact? Is the credential still active, reissued, suspended, or revoked?" },
-      { type: "paragraph", text: "Those questions matter because issuance creates an operational object, not just a response body. The signed credential may be what the holder carries, but the issuer still needs lifecycle memory around it. Otherwise every later task becomes harder. Revocation turns into guesswork. Renewal becomes a new issuance with no lineage. Support teams have to inspect raw payloads instead of looking at governed records. Auditors see transport traces instead of business-state evidence." },
+      { type: "paragraph", text: "Those questions matter because issuance creates an operational object, not just a response body. The signed credential may be what the holder carries, but the issuer still needs lifecycle memory around it. Otherwise, every later task becomes harder. Revocation turns into guesswork. Renewal becomes a new issuance with no lineage. Support teams have to inspect raw payloads instead of looking at governed records. Auditors see transport traces instead of business-state evidence." },
       { type: "paragraph", text: "This is the deeper reason issuance belongs in the lifecycle model rather than in the transport layer. A credential is not only delivered. It is tracked, governed, and acted on over time." },
       { type: "paragraph", text: "That is also where the handoff to presentation becomes clearer. Issuance answers how the credential comes into existence under trust and approval. Presentation answers how the holder later proves something with it under disclosure and verifier policy. The two moments are connected, but they are not the same job. Confusing them is one of the fastest ways to make identity architecture harder than it needs to be." },
       { type: "paragraph", text: "So if you want the shortest reliable summary, keep this one: issuance starts with a governed template and flow, OID4VCI carries the delivery, and durable issuance records are what make the result operationally serious after the transport step is over." },
@@ -2862,7 +3229,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That definition matters because it keeps the reader focused on the right unit. A verifiable credential is not just a login session, not just a JSON document, and not just another API response. It is a portable proof object that can survive beyond the original issuer’s application boundary." },
       { type: "heading", text: "A credential is a signed claim set" },
       { type: "paragraph", text: "At the core, a credential contains a few pieces of information that always matter." },
-      { type: "paragraph", text: "It identifies the issuer that made the claim. It identifies the subject the claim is about. It carries the claims themselves. It includes proof material showing how the issuer signed it. It usually includes validity dates so the verifier can tell when the credential was issued and when it expires. In many deployments it also points to a status mechanism so the verifier can learn whether the credential has been revoked or suspended." },
+      { type: "paragraph", text: "It identifies the issuer that made the claim. It identifies the subject the claim is about. It carries the claims themselves. It includes proof material showing how the issuer signed it. It usually includes validity dates so the verifier can tell when the credential was issued and when it expires. In many deployments, it also points to a status mechanism so the verifier can learn whether the credential has been revoked or suspended." },
       { type: "paragraph", text: "Those parts are what turn a claim into something another system can rely on. Without an issuer, there is nobody to trust. Without claims, there is nothing to prove. Without proof, the verifier cannot tell whether the document was forged or altered. Without validity and status, the verifier cannot tell whether the proof is still current enough to count." },
       { type: "paragraph", text: 'That is why "a verifiable credential is just signed JSON" is technically true and editorially incomplete. The signature matters, but so do the surrounding rules: what the claims mean, how long they remain credible, and how a verifier knows whether the credential should still be accepted.' },
       { type: "paragraph", text: "A degree credential, an employee badge, a mobile driver’s licence, and a health-professional licence all share this shape even though their content differs. Each one is a claim set wrapped in enough proof and lifecycle information to support independent verification." },
@@ -2870,7 +3237,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Credential formats are where many readers get dragged into acronym fog. The useful way to approach them is not to treat every format as a different worldview. Treat them as different packaging choices for the same underlying job." },
       { type: "paragraph", text: "The web ecosystem often works with W3C-style verifiable credentials, typically expressed as JSON-LD or JWT-based envelopes. These are natural fits for systems already comfortable with web tooling and API-driven integration. They make it easier to move credential logic into the same engineering environments that already handle tokens, schemas, and JSON processing." },
       { type: "paragraph", text: "SD-JWT adds an especially practical improvement: selective disclosure. Instead of revealing every claim in the credential every time, the holder can disclose only the pieces the verifier asked for. That makes SD-JWT useful in ordinary enterprise and web environments where teams want privacy improvement without abandoning familiar JSON and JWT workflows." },
-      { type: "paragraph", text: "mDoc, used in standards such as ISO 18013-5 for mobile driving licences, is packaged differently again. It is tuned for device-oriented and proximity-oriented scenarios, including mobile document presentation. The environment is different, but the job is still the same: carry claims, prove issuer authenticity, and let the verifier make a decision." },
+      { type: "paragraph", text: "mDoc, used in standards such as ISO 18013-5 for mobile driving licenses, is packaged differently again. It is tuned for device-oriented and proximity-oriented scenarios, including mobile document presentation. The environment is different, but the job is still the same: carry claims, prove issuer authenticity, and let the verifier make a decision." },
       { type: "paragraph", text: "This is the point to keep steady: format diversity does not mean the concept is unstable. The packaging changes. The credential’s purpose does not. It still exists to let a holder present trusted, machine-readable claims in a form another party can verify." },
       { type: "paragraph", text: "That is why readers should learn the structure first and the format families second. The architecture should not disappear the moment new acronyms arrive." },
       { type: "heading", text: "Holder control is what makes the credential reusable" },
@@ -2947,7 +3314,7 @@ principal.department == "HR"
       { type: "paragraph", text: "A verifiable credential, however it is packaged, exists to carry claims, preserve issuer proof, and let a verifier make a decision. That job does not disappear when the encoding changes." },
       { type: "paragraph", text: "W3C-style verifiable credentials, including VC-JWT and related web-friendly shapes, fit naturally into JSON-heavy application environments. They make sense in systems that already think in APIs, tokens, and structured web payloads." },
       { type: "paragraph", text: "SD-JWT keeps much of that familiar JSON and JWT ergonomics while adding a more practical selective-disclosure model. Instead of forcing a verifier to see the whole claim set every time, the holder can reveal only the claims that matter for the decision. That makes SD-JWT attractive for systems that want privacy improvement without leaving ordinary web tooling behind." },
-      { type: "paragraph", text: "mDoc is different again. It is CBOR-based, device-oriented, and designed for scenarios such as mobile driving licences and proximity presentation. It carries different assumptions about device binding, transport, and runtime behavior." },
+      { type: "paragraph", text: "mDoc is different again. It is CBOR-based, device-oriented, and designed for scenarios such as mobile driving licenses and proximity presentation. It carries different assumptions about device binding, transport, and runtime behavior." },
       { type: "paragraph", text: "Those differences matter." },
       { type: "paragraph", text: "But they do not mean the underlying purpose of the credential has changed. In each case, the system still needs trusted issuer evidence, claim structure, holder control, and verifier judgment. If readers lose sight of that continuity, every new format starts pretending to be a whole new worldview." },
       { type: "paragraph", text: "That is the first defense against interoperability confusion: do not mistake different envelopes for different missions." },
@@ -2964,7 +3331,7 @@ principal.department == "HR"
       { type: "heading", text: "One model can survive multiple format families" },
       { type: "paragraph", text: "The encouraging part is that format diversity does not have to force a different architecture for every ecosystem." },
       { type: "paragraph", text: "This is where Marty’s object model earns its keep." },
-      { type: "paragraph", text: "A Trust Profile can still express who is trusted and how verification should happen even if one ecosystem uses web-style credentials and another uses mDoc trust material. A Credential Template can still define what is being issued even if one output is SD_JWT_VC and another is MDOC. A Presentation Policy can still define what the verifier needs to learn even if the holder satisfies that request through different proof mechanics. A Deployment Profile can still describe runtime expectations whether the verifier is a browser flow, a mobile app, or a proximity device. A Flow can still orchestrate the lifecycle across those variations." },
+      { type: "paragraph", text: "A Trust Profile can still express who is trusted and how verification should happen, even if one ecosystem uses web-style credentials and another uses mDoc trust material. A Credential Template can still define what is being issued, even if one output is SD_JWT_VC and another is MDOC. A Presentation Policy can still define what the verifier needs to learn, even if the holder satisfies that request through different proof mechanics. A Deployment Profile can still describe runtime expectations, whether the verifier is a browser flow, a mobile app, or a proximity device. A Flow can still orchestrate the lifecycle across those variations." },
       { type: "paragraph", text: "That is the architectural advantage." },
       { type: "paragraph", text: "The format can vary at the edge without forcing trust, disclosure, and deployment decisions to leak back into custom application code every time a new ecosystem arrives. Instead of rebuilding the system around each acronym, the system preserves a stable set of named decisions and lets formats attach where they belong." },
       { type: "paragraph", text: "This does not eliminate all interoperability work. Teams still need to know which format bundles they accept, which wallets they target, which standards ecosystem they are entering, and where specific protocol or compliance rules differ. But it turns the work into explicit configuration and explicit compatibility reasoning rather than into architecture panic." },
@@ -2972,7 +3339,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the standards-specific next layer, continue to mobile-driving-licenses-iso-18013-5 to see how the mDoc model works inside a live government-ID ecosystem. If you want to stay at the ecosystem level, mobile-wallet-architectures and one-protocol-many-ecosystems show how these bundle differences still fit inside one broader identity architecture." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 4 Wallets ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 4 Wallets
   {
     slug: "what-is-a-digital-identity-wallet",
     title: "What Is a Digital Identity Wallet",
@@ -3100,7 +3467,7 @@ principal.department == "HR"
       { type: "paragraph", text: "The holder-side selective disclosure flow in the authenticator makes this translation problem concrete." },
       { type: "paragraph", text: "Its disclosure sheet starts from a per-attribute model. Each attribute is tracked with whether it is required, whether it is currently disclosed, what disclosure risk it carries, what usage restrictions apply, and which data category it belongs to. That alone is a useful design lesson. The wallet is not acting as though every claim is equivalent. It is organizing disclosure around bounded decisions." },
       { type: "paragraph", text: "That matters because required and optional disclosure are not the same kind of choice." },
-      { type: "paragraph", text: "If an attribute is required by the verifier’s request, the wallet should say so clearly. It should not pretend the holder has a free choice where the policy says no. On the other hand, if a field is optional or can be withheld under the policy boundary, the wallet should make that visible too. Otherwise the holder experiences the whole flow as all-or-nothing even when the system is capable of more disciplined disclosure." },
+      { type: "paragraph", text: "If an attribute is required by the verifier’s request, the wallet should say so clearly. It should not pretend the holder has a free choice where the policy says no. On the other hand, if a field is optional or can be withheld under the policy boundary, the wallet should make that visible too. Otherwise, the holder experiences the whole flow as all-or-nothing even when the system is capable of more disciplined disclosure." },
       { type: "paragraph", text: "The authenticator UI patterns reinforce that distinction." },
       { type: "paragraph", text: "Required fields are marked and locked. Optional fields can be toggled. Each attribute can show a risk level such as low, medium, high, or critical. The sheet can also attach data-category labels and usage restrictions so the holder is not left guessing why one claim feels more sensitive than another." },
       { type: "paragraph", text: "That is the design move worth noticing." },
@@ -3143,14 +3510,14 @@ principal.department == "HR"
       { type: "paragraph", text: "This is one reason identity-wallet UX is harder than generic consumer-app UX." },
       { type: "paragraph", text: "In a typical consumer flow, the user often understands the service relationship already. In a wallet flow, the holder may move from issuer to wallet to verifier across deep links, QR codes, app-to-app handoffs, or offline presentation surfaces. The wallet becomes the one place where the system can pause and make the relationship intelligible again." },
       { type: "paragraph", text: "That is why identity UX has to carry trust cues, not just visual polish." },
-      { type: "paragraph", text: "The wallet needs to show enough context for the holder to answer questions like: is this a credential offer or a verifier request? which organization is asking? what credential is about to be used? what will be shared if I continue? what happens if I refuse?" },
+      { type: "paragraph", text: "The wallet needs to show enough context for the holder to answer questions like: Is this a credential offer or a verifier request? Which organization is asking? What credential is about to be used? What will be shared if I continue? What happens if I refuse?" },
       { type: "paragraph", text: "If those answers stay implicit, the wallet may still function technically and still teach users the wrong habit: approve first, understand later." },
       { type: "heading", text: "Good identity UX makes request, requester, and risk legible" },
       { type: "paragraph", text: "Once that trust problem is clear, the second principle follows naturally." },
       { type: "paragraph", text: "Good wallet UX makes the decision boundary legible." },
       { type: "paragraph", text: "The selective-disclosure patterns in the authenticator are a useful example because they do not treat all disclosure the same. Required fields are marked as required. Optional fields remain adjustable. Risk levels are visible. Data categories can be surfaced. Privacy modes can change the overall sharing posture. The wallet can even summarize the privacy impact before the holder confirms the action." },
       { type: "paragraph", text: "That is exactly the right direction." },
-      { type: "paragraph", text: "An identity wallet should tell the holder what is mandatory, what is optional, and what becomes more exposed if they widen the disclosure boundary. It should also make requester identity and disclosure scope visible before local authentication is requested. Otherwise the biometric step can start to feel like a generic approval ritual instead of a final confirmation on a clearly explained choice." },
+      { type: "paragraph", text: "An identity wallet should tell the holder what is mandatory, what is optional, and what becomes more exposed if they widen the disclosure boundary. It should also make requester identity and disclosure scope visible before local authentication is requested. Otherwise, the biometric step can start to feel like a generic approval ritual instead of a final confirmation on a clearly explained choice." },
       { type: "paragraph", text: "This is where identity UX differs from simple permission-dialog design." },
       { type: "paragraph", text: "The holder is not merely granting app access to a sensor or a file. The holder is making a trust decision about digital evidence. That means the interface has to make the requester, the request, and the risk understandable together." },
       { type: "paragraph", text: "The best wallet flows do not overwhelm the holder with technical jargon to accomplish that. They do something harder and more useful. They translate protocol detail into plain decision language while preserving the real boundary underneath." },
@@ -3159,7 +3526,7 @@ principal.department == "HR"
       { type: "heading", text: "Recovery, offline flow, and refusal paths matter as much as the happy path" },
       { type: "paragraph", text: "The final principle is the one product demos usually underplay." },
       { type: "paragraph", text: "A trustworthy wallet is judged just as much by its edge cases as by its happy path." },
-      { type: "paragraph", text: "The authenticator roadmap makes this visible in two especially useful ways. One milestone focuses on UX polish together with offline QR presentation. Another focuses on security hardening together with store and backup guidance. Those pairings are revealing. They treat usability, offline flow, and recovery as part of the same product surface rather than as separate concerns for separate teams." },
+      { type: "paragraph", text: "The authenticator roadmap makes this visible in two especially useful ways. One milestone focuses on UX polish, together with offline QR presentation. Another focuses on security hardening together with store and backup guidance. Those pairings are revealing. They treat usability, offline flow, and recovery as part of the same product surface rather than as separate concerns for separate teams." },
       { type: "paragraph", text: "That is the right instinct." },
       { type: "paragraph", text: 'Identity-wallet UX has to help people through situations that are much messier than "tap share and succeed." A verifier may be offline and rely on QR presentation. The holder may need to cancel safely because the requester does not look right. A device may be replaced, which means the user needs clear recovery guidance and realistic expectations about what can or cannot be restored automatically. A credential offer may arrive from another app or channel, and the wallet needs to re-establish context quickly enough that the holder is not lost.' },
       { type: "paragraph", text: "Those are UX problems, but they are also trust problems." },
@@ -3169,7 +3536,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want to see the regulated ecosystem where these UX demands become especially serious, continue to eudi-wallet-model-explained. If you want a narrower privacy decision surface after this, go next to deploy-age-verification." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 5 Privacy ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 5 Privacy
   {
     slug: "why-identity-systems-must-protect-privacy",
     title: "Why Identity Systems Must Protect Privacy",
@@ -3187,7 +3554,7 @@ principal.department == "HR"
       { type: "paragraph", text: "This is why identity systems must protect privacy at the architectural level. Once the verifier has already learned the full payload, privacy has already lost." },
       { type: "heading", text: "Overcollection is the default identity failure" },
       { type: "paragraph", text: "The first thing to admit is uncomfortable: identity verification systems are naturally biased toward asking for too much." },
-      { type: "paragraph", text: "That bias does not usually come from malice. It comes from convenience. A scanner SDK returns a broad set of fields. A verification API forwards the whole response object. A middleware layer logs request and response bodies by default. A support team wants the raw payload during incident triage. Every individual decision feels ordinary. Together they create a system that knows far more than the original business decision required." },
+      { type: "paragraph", text: "That bias does not usually come from malice. It comes from convenience. A scanner SDK returns a broad set of fields. A verification API forwards the whole response object. A middleware layer logs request and response bodies by default. A support team wants the raw payload during incident triage. Every individual decision feels ordinary. Together, they create a system that knows far more than the original business decision required." },
       { type: "paragraph", text: "That is why privacy trouble starts at the request boundary, not at the retention policy." },
       { type: "paragraph", text: "Take a simple age-gated purchase. The verifier needs one narrow fact: is this person over the threshold? In a legacy flow, the kiosk or POS lane often learns the customer’s full name, address, exact date of birth, license number, and whatever else the scanner exposes. At that point, the system already possesses a much richer identity record than the decision required. Privacy teams are then asked to contain the fallout after the architecture has already widened the knowledge boundary." },
       { type: "paragraph", text: 'Identity systems make this worse because the data is unusually reusable. A birth date, address, document number, or credential identifier can be copied into logs, correlated across transactions, shared with vendors, pulled into analytics, or retained "temporarily" for support until temporary becomes permanent. Overcollection is not only a legal risk. It is an operational habit that multiplies where the architecture allows it.' },
@@ -3230,7 +3597,7 @@ principal.department == "HR"
       { type: "paragraph", text: "A minimized request looks different from the first line." },
       { type: "paragraph", text: "Instead of requesting a broad payload and hoping the verifier exercises restraint later, the verifier requests only the bounded answer it actually needs. In the Marty privacy examples, that means asking only for $.verified_claims.claims.age_over_21 rather than the underlying birth date and adjacent identity fields." },
       { type: "paragraph", text: "The contrast is simple enough to show in one view:" },
-      { type: "paragraph", text: "Request boundary: Before: overcollection by habit. Verifier request or response shape: A JSON block that includes birthdate and adjacent identity fields. What the verifier learns: Exact date of birth, plus whatever additional attributes the payload exposes. Why it matters: The verifier now owns unnecessary PII, and that data can spread into logs, support tools, analytics, and audit scope | Request boundary: After: reduced correctly. Verifier request or response shape: Only $.verified_claims.claims.age_over_21. What the verifier learns: Whether the person satisfies the threshold. Why it matters: The verifier stays inside the decision boundary and never receives the underlying birth date." },
+      { type: "paragraph", text: "Request boundary: Before: overcollection by habit. Verifier request or response shape: A JSON block that includes birthdate and adjacent identity fields. What the verifier learns: Exact date of birth, plus whatever additional attributes the payload exposes. Why it matters: The verifier now owns unnecessary PII, and that data can spread into logs, support tools, analytics, and audit scope. | Request boundary: After: reduced correctly. Verifier request or response shape: Only $.verified_claims.claims.age_over_21. What the verifier learns: Whether the person satisfies the threshold. Why it matters: The verifier stays inside the decision boundary and never receives the underlying birth date." },
       { type: "paragraph", text: "That is not a cosmetic improvement. Exact birth date is a durable correlation surface. Once it reaches the verifier, it can be copied, retained, matched across events, and pulled into systems that were never part of the original decision. A bounded predicate does not eliminate all risk, but it prevents that whole class of unnecessary exposure from starting in the first place." },
       { type: "paragraph", text: "This is also the governance benefit. A verifier request that asks only for age_over_21 can be reviewed and approved as a real disclosure boundary. If the verifier later asks for the full birth date, that is no longer an invisible implementation change. It is an explicit expansion of what the verifier is allowed to know, and it should be treated as such." },
       { type: "paragraph", text: 'The operational payoff is just as real. Less unnecessary data means less sensitive material in logs, less sensitive material in observability pipelines, less sensitive material visible during support work, and less sensitive material dragged into breach-response scope. The audit record can stay narrow too: policy identifier, decision outcome, verifier instance, and timestamp - not a full identity payload "just in case."' },
@@ -3340,7 +3707,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the next practical layer, continue to compliance-profiles-in-practice. If you want the broader architectural argument for why this belongs in the protocol model at all, go back through why-identity-systems-must-protect-privacy and minimum-disclosure-is-a-policy-problem." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 6 Governance ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 6 Governance
   {
     slug: "identity-governance-models",
     title: "Identity Governance Models",
@@ -3352,7 +3719,7 @@ principal.department == "HR"
     topic: "Governance",
     content: [
       { type: "paragraph", text: "Governance sounds abstract right up until the first real disagreement arrives." },
-      { type: "paragraph", text: "One team wants to trust a new issuer. Another wants stricter disclosure rules. A regulator changes the logging boundary. A partner ecosystem adds a new trust source. Security wants formal approval for the change. Product wants it live before the next release window closes. Suddenly the identity system is not only about cryptography, formats, or user flows. It is about authority." },
+      { type: "paragraph", text: "One team wants to trust a new issuer. Another wants stricter disclosure rules. A regulator changes the logging boundary. A partner ecosystem adds a new trust source. Security wants formal approval for the change. Product wants it live before the next release window closes. Suddenly, the identity system is not only about cryptography, formats, or user flows. It is about authority." },
       { type: "paragraph", text: "Who gets to decide what counts?" },
       { type: "paragraph", text: "That is the real subject of identity governance." },
       { type: "paragraph", text: "The mistake many programs make is treating governance as an after-the-fact committee function rather than as part of the architecture itself. If the important decisions still live in scattered gateway configs, handwritten allowlists, or service-by-service exceptions, then the organization may have meetings about governance without actually having a governable system." },
@@ -3363,19 +3730,19 @@ principal.department == "HR"
       { type: "paragraph", text: "The moment an issuer produces a credential that another system may later accept, somebody has to decide whether that issuer belongs in the trusted set, which compliance rules apply, how updates are approved, and what happens when those answers change. A verifier cannot answer those questions honestly by cryptography alone. Signature validation proves who signed. It does not prove the signer should count in the first place." },
       { type: "paragraph", text: "That is why the governance problem appears so quickly once identity leaves a single application boundary." },
       { type: "paragraph", text: "Inside one tightly controlled enterprise, governance may be easy to ignore for a while because the same organization controls the issuer, the policy authors, and the verifier estate. The moment the system grows into a partner network, a regulated program, or a cross-department deployment, the hidden decisions become visible. Which issuer categories are allowed? Who can change a policy set? Which deployment inherits the update? Which audit record proves the change happened intentionally rather than by configuration drift?" },
-      { type: "paragraph", text: "Those are governance questions even when nobody uses the word." },
+      { type: "paragraph", text: "Those are governance questions, even when nobody uses the word." },
       { type: "paragraph", text: "The Marty material has a nice way of making this visible. The protocol world is already organized around objects with different owners and different rates of change. Trust, policy, compliance, runtime, and flow are not one undifferentiated blob. That separation is not only elegant architecture. It is a governance aid. If trust changes rarely, policy changes more often, and deployment conditions change per environment, then the system should expose those as different surfaces rather than forcing every change through the same engineering bottleneck." },
-      { type: "paragraph", text: "So before comparing governance models, it helps to name the thing all of them are trying to answer." },
+      { type: "paragraph", text: "So, before comparing governance models, it helps to name the thing all of them are trying to answer." },
       { type: "paragraph", text: "They are all deciding who is allowed to shape the accepted trust boundary and how those decisions become durable system behavior." },
       { type: "heading", text: "Centralized, federated, and ecosystem-led models optimize different control shapes" },
       { type: "paragraph", text: "Once governance is visible, the next step is to stop talking about it as though every program means the same thing." },
       { type: "paragraph", text: "Different identity environments optimize for different control shapes." },
       { type: "paragraph", text: "A centralized governance model is common inside a single enterprise or agency. One internal authority owns the approved issuers, the policy boundaries, the trust settings, and the rollout path. The appeal is obvious. Decisions can move quickly. Accountability is usually clear. Change control can stay close to the teams that also operate the runtime. The trade-off is that portability beyond that organization may remain weak because the governance answer is local by design." },
       { type: "paragraph", text: "A federated governance model spreads authority across participating organizations that agree on a shared framework but retain local autonomy. Think of airline alliances, sector-wide education networks, or multi-organization enterprise programs. The shared layer defines what it means to belong, which trust materials are authoritative, and how common updates travel. Each participant still applies its own local policy inside that shared envelope. The advantage is portability without one permanent central runtime. The cost is coordination. Shared governance takes work, and disagreements do not disappear just because the network uses common acronyms." },
-      { type: "paragraph", text: "An ecosystem-led or accreditation-led model is common in regulated programs. Here the deciding authority may be a government trust-list program, an accreditation body, an industry framework, or a standards-driven governance layer. The individual issuer does not invent the rules. The verifier does not invent them either. Both participate under a higher-order framework that decides acceptable trust sources, compliance obligations, and sometimes even disclosure or lifecycle expectations. The advantage is institutional legitimacy and broad interoperability. The cost is slower change, heavier external dependency, and the need to translate abstract frameworks into actual runtime objects." },
+      { type: "paragraph", text: "An ecosystem-led or accreditation-led model is common in regulated programs. Here, the deciding authority may be a government trust-list program, an accreditation body, an industry framework, or a standards-driven governance layer. The individual issuer does not invent the rules. The verifier does not invent them either. Both participate under a higher-order framework that decides acceptable trust sources, compliance obligations, and sometimes even disclosure or lifecycle expectations. The advantage is institutional legitimacy and broad interoperability. The cost is slower change, heavier external dependency, and the need to translate abstract frameworks into actual runtime objects." },
       { type: "paragraph", text: 'None of these models is inherently "the mature one."' },
       { type: "paragraph", text: "They solve different problems." },
-      { type: "paragraph", text: "Centralized governance is strong when one organization needs speed and accountability. Federated governance is strong when portability matters but local autonomy must survive. Ecosystem-led governance is strong when issuer legitimacy depends on an external framework that no one local team gets to rewrite." },
+      { type: "paragraph", text: "Centralized governance is strong when one organization needs speed and accountability. Federated governance is strong when portability matters, but local autonomy must survive. Ecosystem-led governance is strong when issuer legitimacy depends on an external framework that no one local team gets to rewrite." },
       { type: "paragraph", text: "What matters is whether the architecture matches the model honestly." },
       { type: "paragraph", text: "A system with centralized runtime ownership but vague partner onboarding rules usually becomes a political negotiation disguised as an integration task. A system that claims federation but still requires a live callback to one central authority for every decision has not really distributed trust. A system that claims regulatory alignment but still leaves critical rule changes buried in application code is not using its governance model structurally." },
       { type: "paragraph", text: "That is the failure Marty keeps trying to avoid." },
@@ -3406,11 +3773,11 @@ principal.department == "HR"
     topic: "Access Control",
     content: [
       { type: "paragraph", text: "Authorization models become confusing when teams meet them only as implementation details." },
-      { type: "paragraph", text: 'A gateway says "admin only." A workflow says "HR can approve this." A verifier says "permit only if the credential is current, the issuer is trusted, and the request happens from the right environment." Suddenly the organization is not arguing about one rule. It is arguing about what kind of rule it is even trying to write.' },
+      { type: "paragraph", text: 'A gateway says "admin only." A workflow says, "HR can approve this." A verifier says, "Permit only if the credential is current, the issuer is trusted, and the request happens from the right environment." Suddenly, the organization is not arguing about one rule. It is arguing about what kind of rule it is even trying to write.' },
       { type: "paragraph", text: "That is the useful starting point for RBAC and ABAC." },
       { type: "paragraph", text: "They are not rival slogans. They are different ways of deciding what information an access rule is allowed to care about." },
-      { type: "paragraph", text: "RBAC asks: which role does this actor have?" },
-      { type: "paragraph", text: "ABAC asks: which attributes of the actor, resource, action, and environment matter for this decision?" },
+      { type: "paragraph", text: "RBAC asks: Which role does this actor have?" },
+      { type: "paragraph", text: "ABAC asks: Which attributes of the actor, resource, action, and environment matter for this decision?" },
       { type: "paragraph", text: "Once you frame them that way, the trade-off becomes much clearer." },
       { type: "heading", text: "Roles get you moving fast, and then start leaking exceptions" },
       { type: "paragraph", text: "RBAC is popular for a good reason." },
@@ -3471,7 +3838,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Identity systems accumulate rules faster than most teams admit." },
       { type: "paragraph", text: "Who may create a trust profile? Which verifier may accept which credential format? When does revocation freshness become a hard fail? Can a low-risk application auto-approve? Does this request require MFA? Can this deployment keep operating in a degraded mode?" },
       { type: "paragraph", text: "The dangerous version of growth is when each of those answers lands in a different place." },
-      { type: "paragraph", text: "One service owns one rule. A gateway owns another. An approval workflow carries a third. A verifier bundle carries a fourth. A support engineer knows about a fifth because someone once added it under incident pressure and never wrote it down properly. At that point the organization does not have a rule surface. It has a memory problem with runtime consequences." },
+      { type: "paragraph", text: "One service owns one rule. A gateway owns another. An approval workflow carries a third. A verifier bundle carries a fourth. A support engineer knows about a fifth because someone once added it under incident pressure and never wrote it down properly. At that point, the organization does not have a rule surface. It has a memory problem with runtime consequences." },
       { type: "paragraph", text: "That is the real reason policy engines matter." },
       { type: "paragraph", text: "They are not there to make the architecture sound sophisticated. They are there to stop important identity decisions from dissolving into hidden code." },
       { type: "heading", text: "Hardcoded identity rules decay into application sprawl" },
@@ -3517,7 +3884,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If access control used one custom rule format, credential verification used a second opaque structure, and approval automation used a third, the system would still be hiding governance in multiple places. Cedar helps Marty avoid that fragmentation by making policy a named, validated, lifecycle-managed surface." },
       { type: "paragraph", text: "This is also the cleanest way to understand why a policy engine is not the same thing as a tutorial about writing policies." },
       { type: "paragraph", text: "This post is about why the engine exists. The Cedar policy article is about how to write against that engine. The enterprise deployment example is about what that engine changes operationally." },
-      { type: "paragraph", text: "Keep those layers separate and the architecture becomes much easier to explain." },
+      { type: "paragraph", text: "Keep those layers separate, and the architecture becomes much easier to explain." },
       { type: "paragraph", text: "A policy engine matters because identity systems need one governed way to evaluate important decisions. Cedar fits Marty because it is deny-by-default, schema-validated, analyzable, and lifecycle-managed as data instead of disappearing into code." },
       { type: "paragraph", text: "If you want the next practical layer, continue to cedar-policies-for-identity-governance. If you want to see that governed policy surface in a deployment context rather than in the abstract, go next to deploy-enterprise-access." }
     ]
@@ -3575,7 +3942,7 @@ principal.department == "HR"
       { type: "paragraph", text: "But a registry does not decide what the ecosystem should trust in the first place." },
       { type: "paragraph", text: "That decision belongs upstream, in the governance framework that decided who belongs, which obligations attach to membership, and how the network handles change." },
       { type: "paragraph", text: "That distinction is what keeps the architecture clean." },
-      { type: "paragraph", text: "If the framework is vague, the registry becomes a technical wrapper around unclear authority. If the registry is missing, the framework stays trapped in PDFs and operator folklore. If the local verifier is weak, the ecosystem may still have a rulebook and distribution layer but no reliable way to enforce the decision at the edge." },
+      { type: "paragraph", text: "If the framework is vague, the registry becomes a technical wrapper around unclear authority. If the registry is missing, the framework stays trapped in PDFs and operator folklore. If the local verifier is weak, the ecosystem may still have a rulebook and distribution layer, but no reliable way to enforce the decision at the edge." },
       { type: "paragraph", text: "Marty’s object model is useful here because it keeps those layers from collapsing into one another." },
       { type: "paragraph", text: "A Compliance Profile can capture ecosystem-specific obligations as a named bundle. A Trust Profile can express how one verifier consumes the accepted trust state. A trust service or registry layer can publish the current ecosystem state in a loadable form. A local deployment can still apply narrower presentation or runtime rules without pretending it has rewritten the entire framework." },
       { type: "paragraph", text: "That is the right decomposition." },
@@ -3584,7 +3951,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the next layer where those governance decisions turn into loadable trust state, continue to trust-registries-explained. If you want the cross-organization operating model built on top of that trust layer, go next to federation-in-identity-systems." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 7 Trust Infrastructure ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 7 Trust Infrastructure
   {
     slug: "trust-registries-explained",
     title: "Trust Registries Explained",
@@ -3614,7 +3981,7 @@ principal.department == "HR"
       { type: "paragraph", text: "At the trust-anchor layer, a registry may publish root certificates, signer certificates, jurisdiction codes, validity windows, source metadata, and signed add/remove operations. Marty's trust-profile service models this explicitly through registry entries that track fields such as anchor type, operation, country code, certificate or key material, validity dates, source, sequence number, and whether an entry is current. That is much closer to a synchronized trust ledger than to a contact list." },
       { type: "paragraph", text: "At the issuer layer, the same infrastructure often needs to carry issuer identity and governance status too. The issuer-registry surface in Marty includes fields like issuer_id, display name, compliance status, accreditation metadata, validity windows, linked trust-anchor identifiers, revocation state, and organization-level relationship rules. That means the verifier can learn not only that an issuer exists, but whether the issuer is active, suspended, revoked, scoped to a jurisdiction, or attached to a specific framework." },
       { type: "paragraph", text: "This is what makes trust registries so reusable across different ecosystems." },
-      { type: "paragraph", text: "ICAO PKD distributes passport trust material so foreign verifiers can learn accepted CSCA and signer chains. AAMVA-style trust distribution does similar work for North American mDL ecosystems. EU Trusted Lists and the List of Trusted Lists do it for eIDAS- and EUDI-adjacent environments. A non-government network such as an airline alliance, industry association, or education consortium can use the same architectural pattern even if its governance body and artifact formats differ." },
+      { type: "paragraph", text: "ICAO PKD distributes passport trust material so foreign verifiers can learn accepted CSCA and signer chains. AAMVA-style trust distribution does similar work for North American mDL ecosystems. EU Trusted Lists and the List of Trusted Lists do it for eIDAS- and EUDI-adjacent environments. A non-government network, such as an airline alliance, industry association, or education consortium, can use the same architectural pattern even if its governance body and artifact formats differ." },
       { type: "paragraph", text: 'The stable job is not "publish names." The stable job is "publish authoritative trust state."' },
       { type: "paragraph", text: "That is why registries often need sequence numbers, delta sync, signatures, and snapshots. Verifiers have to know what changed, whether a local copy is still current, and whether a newly added or removed issuer should change decision behavior immediately. Without that machinery, a registry is just a nice idea with stale data attached." },
       { type: "heading", text: "Local verification only works because registries travel" },
@@ -3622,7 +3989,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That distinction is worth holding onto." },
       { type: "paragraph", text: "When a verifier evaluates a credential, it still relies on a local Trust Profile, local validation rules, local revocation posture, and local Presentation Policy. The registry is not the final verdict. It is the synchronized source of ecosystem trust material the local runtime can apply." },
       { type: "paragraph", text: "This is where the registry becomes operational rather than conceptual." },
-      { type: "paragraph", text: "A serious verifier syncs registry state in the background, carries sequence or freshness information forward, and often works from signed snapshots or cached trust packages when connectivity is unstable. That is true in sovereign ecosystems and it is just as true in commercial federation. The verifier does not need to call the issuer in the live decision path if the accepted issuer set, trust anchors, and current status information have already been distributed properly." },
+      { type: "paragraph", text: "A serious verifier syncs registry state in the background, carries sequence or freshness information forward, and often works from signed snapshots or cached trust packages when connectivity is unstable. That is true in sovereign ecosystems, and it is just as true in commercial federation. The verifier does not need to call the issuer in the live decision path if the accepted issuer set, trust anchors, and current status information have already been distributed properly." },
       { type: "paragraph", text: 'Go back to the alliance example. Lufthansa does not want "whatever United claims today" at decision time. It wants a shared alliance trust surface that tells it United is an authorized issuer, under which trust package, until which status window, and with which local validation expectations. Once that package is synchronized, the lounge verifier can make the decision locally. That is portable trust rather than a nicer wrapper around centralized lookup.' },
       { type: "paragraph", text: "This is also why trust registries and OrganizationTrustProfile overlays fit together so well. The shared registry gives the ecosystem its common answer. The local organization overlay gives each participant a governed way to narrow or specialize that answer without forking the whole trust network." },
       { type: "paragraph", text: "That is the cleanest way to summarize the object." },
@@ -3668,7 +4035,7 @@ principal.department == "HR"
       { type: "paragraph", text: "When the trust infrastructure is distributed correctly, the verifier can make bounded local decisions under shared rules. That preserves three things centralized callback models usually compromise." },
       { type: "paragraph", text: "First, it preserves autonomy. Each verifier keeps its own runtime, its own operator posture, and its own presentation policy. Second, it preserves resilience. A credential can still be verified when the issuer is not in the request path, so long as the shared trust material remains current enough for the deployment. Third, it preserves privacy. The issuer does not have to watch every use of the credential simply because another organization wants to verify it." },
       { type: "paragraph", text: "Go back to the airline-alliance example. If Lufthansa must ask United every time a passenger approaches the lounge, the alliance has not achieved portable trust. It has achieved distributed branding around a centralized callback. If Lufthansa can validate the credential locally because the alliance registry, trust package, and policy boundaries are already synchronized, then the federation is doing real work." },
-      { type: "paragraph", text: "The same logic appears in government and education systems too. A foreign passport verifier, a partner employer, or a relying party in a regional identity scheme all need the same thing: shared trust infrastructure plus local verification authority." },
+      { type: "paragraph", text: "The same logic appears in government and education systems, too. A foreign passport verifier, a partner employer, or a relying party in a regional identity scheme all need the same thing: shared trust infrastructure plus local verification authority." },
       { type: "paragraph", text: "That is the cleanest summary of federation in identity systems." },
       { type: "paragraph", text: "Federation is not only about connecting organizations. It is about letting separate organizations share issuer legitimacy and proof rules without requiring one permanent center to sit in the middle of every decision. Shared trust makes the network legible. Local verification keeps the network operational." },
       { type: "paragraph", text: "If you want the infrastructure layer underneath that model, continue to trust-registries-explained. If you want the verifier-side mechanics of finding accepted issuers inside a federated network, go next to discovering-trusted-issuers. If you want the runtime surface that keeps those decisions credible at scale, continue to verifier-infrastructure." }
@@ -3738,14 +4105,14 @@ principal.department == "HR"
       { type: "paragraph", text: "It is tempting to think discovery and validation are the same process." },
       { type: "paragraph", text: "They are related. They are not identical." },
       { type: "paragraph", text: "Validation answers questions like: does the signature verify, is the credential still inside its validity window, does revocation state still allow acceptance, and does the policy actually accept the presented claims? Discovery answers an earlier question: which issuers should even be considered candidates for acceptance in this ecosystem?" },
-      { type: "paragraph", text: "That difference matters because a fake or out-of-scope issuer can still produce a syntactically clean credential. The verifier therefore needs a prior boundary that says which issuer families, trust anchors, or identifier namespaces belong inside the decision space." },
+      { type: "paragraph", text: "That difference matters because a fake or out-of-scope issuer can still produce a syntactically clean credential. The verifier, therefore, needs a prior boundary that says which issuer families, trust anchors, or identifier namespaces belong inside the decision space." },
       { type: "paragraph", text: "This is why Marty's trust model begins from explicit trust sources. A Trust Profile can point at a trust list, a root CA, a PKD endpoint, or a pinned issuer identifier. The runtime is not expected to guess which world it is in. Discovery begins from declared source types." },
       { type: "paragraph", text: "Once readers see that, the workflow becomes cleaner. You do not ask the crypto layer to solve issuer legitimacy. You ask the trust layer to discover the accepted issuer set, then you ask the crypto and policy layers to evaluate the credential against that set." },
       { type: "heading", text: "Issuers are discovered through registries, roots, and explicit identifiers" },
       { type: "paragraph", text: "Different ecosystems discover trusted issuers in different ways, but the architectural pattern is stable." },
       { type: "paragraph", text: "Some ecosystems publish signed trust lists or registry entries. Some distribute root certificates and let the verifier discover acceptable issuers by chain building under those anchors. Some use pinned issuer identifiers for a deliberately narrow trust boundary. Some use DID-based or similar identifier resolution where the issuer identity itself is the primary discovery surface." },
       { type: "paragraph", text: "Marty's trust-profile service makes those choices concrete. A trust source must specify exactly one of url, certificate_pem, or issuer_did. That is a useful modeling rule because it forces the verifier to be explicit about where issuer discovery begins." },
-      { type: "paragraph", text: "The issuer layer is structured too. IssuerEntity records carry issuer identifiers, organization scope, compliance status, validity windows, optional trust-anchor linkage, and revocation state. TrustProfileIssuer links then express whether the relationship is trusted, denied, or under review, plus any local trust-level or cascade policy. That means discovery is not a vague lookup. It is a governed process that can answer whether an issuer is active, in scope, suspended, or locally narrowed by one organization." },
+      { type: "paragraph", text: "The issuer layer is structured, too. IssuerEntity records carry issuer identifiers, organization scope, compliance status, validity windows, optional trust-anchor linkage, and revocation state. TrustProfileIssuer links then express whether the relationship is trusted, denied, or under review, plus any local trust-level or cascade policy. That means discovery is not a vague lookup. It is a governed process that can answer whether an issuer is active, in scope, suspended, or locally narrowed by one organization." },
       { type: "paragraph", text: "Examples help keep the pattern honest." },
       { type: "paragraph", text: "ICAO-style ecosystems discover accepted issuers through PKD-distributed roots and signer material. EUDI-style ecosystems discover accepted issuers through trusted-list infrastructure and the frameworks attached to that list. An enterprise or alliance network may discover accepted issuers through a signed registry or a narrower pinned-issuer model. DID-based ecosystems can use issuer DID resolution as the discovery surface, but the verifier still needs a rule explaining which DID authorities or registries count." },
       { type: "paragraph", text: "The common job is the same. Discovery turns a shared trust source into a concrete accepted issuer set." },
@@ -3761,7 +4128,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the broader infrastructure that publishes that trust boundary, continue to trust-registries-explained. If you want the runtime stack that consumes it in production, go next to verifier-infrastructure. If you want the root-of-trust angle underneath both, return to understanding-trust-anchors." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Publication Map Archive: Phase 8 MIP ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Publication Map Archive: Phase 8 MIP
   {
     slug: "why-the-marty-protocol-exists",
     title: "Why the Marty Protocol Exists",
@@ -3777,7 +4144,7 @@ principal.department == "HR"
       { type: "paragraph", text: "This post answers the next one." },
       { type: "paragraph", text: "Once you agree that identity should behave like reusable infrastructure instead of a permanently rented platform workflow, another problem appears immediately: what exactly is the shared model that different implementations are supposed to build against?" },
       { type: "paragraph", text: "That is the gap the Marty Identity Protocol exists to close." },
-      { type: "paragraph", text: "A category reframe by itself is not enough. It can explain why the old buying model is expensive, why re-verification is wasteful, and why identity logic should not stay trapped inside vendor-specific code. All of that matters. But sooner or later a serious architect still has to ask a harder question: if multiple teams, products, or vendors are going to build interoperable systems, which objects do they actually need to agree on?" },
+      { type: "paragraph", text: "A category reframe by itself is not enough. It can explain why the old buying model is expensive, why re-verification is wasteful, and why identity logic should not stay trapped inside vendor-specific code. All of that matters. But sooner or later, a serious architect still has to ask a harder question: if multiple teams, products, or vendors are going to build interoperable systems, which objects do they actually need to agree on?" },
       { type: "paragraph", text: "Daniel’s answer is deliberately narrow." },
       { type: "paragraph", text: "MIP exists because identity systems keep rediscovering the same five classes of decision - who is trusted, what gets issued, what must be shown, where verification runs, and how the journey moves from stage to stage - and they keep hiding those decisions in incompatible places. One product buries them in code. Another buries them in configuration. A standards profile answers one part, a vendor SDK answers another, and an operations team improvises the rest when the runtime gets hostile." },
       { type: "paragraph", text: "A protocol is what turns those recurring decisions into a shared grammar instead of another pile of custom work." },
@@ -3801,7 +4168,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That sentence does two jobs at once." },
       { type: "paragraph", text: "First, it says the protocol is about stable objects, not one favored transport or one hosted runtime. Second, it says the object model is minimal on purpose. MIP is not trying to redefine every ecosystem as one giant universal identity stack. It is trying to name the smallest set of recurring objects that still makes the system interoperable, governable, and automatable." },
       { type: "paragraph", text: "The easiest way to see why these five belong together is to ask what recurring question each one answers:" },
-      { type: "paragraph", text: "Recurring question: Who is trusted, and how is that trust validated?. MIP primitive: Trust Profile. Why it deserves its own object: Trust changes on its own cadence and should not be hidden in verifier code | Recurring question: What exactly gets issued?. MIP primitive: Credential Template. Why it deserves its own object: Credential structure, validity, compliance posture, and disclosure intent should be designed once and reused | Recurring question: What must the verifier learn?. MIP primitive: Presentation Policy. Why it deserves its own object: Disclosure boundaries should be governed as policy, not rediscovered in each verifier implementation | Recurring question: Where does the decision run?. MIP primitive: Deployment Profile. Why it deserves its own object: Runtime constraints, device grouping, cache windows, and network mode are real architectural variables | Recurring question: How does the whole journey move?. MIP primitive: Flow. Why it deserves its own object: Apply, approve, issue, present, and verify need a stable orchestration layer rather than bespoke glue" },
+      { type: "paragraph", text: "Recurring question: Who is trusted, and how is that trust validated?. MIP primitive: Trust Profile. Why it deserves its own object: Trust changes on its own cadence and should not be hidden in verifier code | Recurring question: What exactly gets issued?. MIP primitive: Credential Template. Why it deserves its own object: Credential structure, validity, compliance posture, and disclosure intent should be designed once and reused. | Recurring question: What must the verifier learn?. MIP primitive: Presentation Policy. Why it deserves its own object: Disclosure boundaries should be governed as policy, not rediscovered in each verifier implementation | Recurring question: Where does the decision run?. MIP primitive: Deployment Profile. Why it deserves its own object: Runtime constraints, device grouping, cache windows, and network mode are real architectural variables | Recurring question: How does the whole journey move?. MIP primitive: Flow. Why it deserves its own object: Apply, approve, issue, present, and verify need a stable orchestration layer rather than bespoke glue." },
       { type: "paragraph", text: "That table is the protocol motivation in compact form." },
       { type: "paragraph", text: "The primitives are not arbitrary boxes. They are the places where repeated identity decisions stop leaking into code." },
       { type: "paragraph", text: "This is also why MIP includes supporting abstractions without promoting all of them into new core primitives. Compliance Profiles, Application Templates, Revocation Profiles, Wallet Profiles, Device Registration, Notification Targets, and Policy Sets all matter. They make the model usable in real ecosystems. But they remain supporting abstractions because the deeper grammar still lives in the five recurring decision surfaces." },
@@ -3814,7 +4181,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Because these are the recurring decisions every serious identity system already has to answer, whether it answers them explicitly or hides them in the machinery." },
       { type: "heading", text: "Artifacts turn the protocol from theory into adoption surface" },
       { type: "paragraph", text: "A protocol deserves attention only when it becomes inspectable." },
-      { type: "paragraph", text: "Otherwise it is still a framing device." },
+      { type: "paragraph", text: "Otherwise, it is still a framing device." },
       { type: "paragraph", text: "This is the second reason MIP exists in the form it does. It is not enough to say that identity systems need shared primitives. Those primitives have to become artifacts that multiple implementations can actually use." },
       { type: "paragraph", text: "That is why the protocol surface matters so much." },
       { type: "paragraph", text: "The marty-protocol/README.md does not only name the five primitives. It also names the supporting abstractions, repository structure, standards alignment, and design principles. The formal SPECIFICATION.md goes further and defines validation rules, API expectations, governance, security, privacy, and conformance. The schema collection makes the objects machine-readable. The Cedar policy surfaces make authorization and evaluation logic explicit. The examples, conformance fixtures, and generated typed bindings in Rust, Python, and TypeScript make the model portable across stacks." },
@@ -3962,7 +4329,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Once readers see that, several later decisions stop looking like implementation trivia. Validity rules are not just timestamps. Trust references are not optional decorations. Workflow linkage is not an afterthought. They are all part of the answer to one architectural question: what exactly is this system allowed to issue?" },
       { type: "heading", text: "Claims, privacy posture, and issuer artifacts govern issuance before transport" },
       { type: "paragraph", text: "Once the contract is clear, the next layer is the anatomy inside it." },
-      { type: "paragraph", text: "The claims array is the most obvious part, but even here the template is doing more than many systems admit." },
+      { type: "paragraph", text: "The claims array is the most obvious part, but even here, the template is doing more than many systems admit." },
       { type: "paragraph", text: "Each claim has a name, type, required flag, optional namespace, optional display hints, and optional derived_from linkage. Those details matter because they stop the credential from becoming a bag of undocumented attributes. Claim names must be unique within the template. Derived claims must point back to other claims in the same object. That means the template can say, explicitly, that a claim like age_over_21 is derived from birth_date rather than being a mysteriously duplicated field invented downstream." },
       { type: "paragraph", text: "That is already better than a lot of issuance systems." },
       { type: "paragraph", text: "But the deeper value shows up when claim structure meets privacy posture." },
@@ -4056,7 +4423,7 @@ principal.department == "HR"
       { type: "paragraph", text: "A protocol only becomes real when it reaches a real endpoint." },
       { type: "paragraph", text: "That sounds obvious, but it is where a lot of otherwise thoughtful identity designs become fragile." },
       { type: "paragraph", text: "A team may define the right trust anchors, the right credential template, and the right presentation policy. Then the real world arrives: a gate loses connectivity, a kiosk runs stale cache, one scanner in a lane needs a different default policy, a mobile verifier must work offline for a bounded window, or an operator needs a visible interface on one device but not another. At that point, many systems fall back to ad hoc environment-specific code." },
-      { type: "paragraph", text: "Deployment Profiles exist so that operational reality can stay explicit too." },
+      { type: "paragraph", text: "Deployment Profiles exist so that operational reality can stay explicit, too." },
       { type: "paragraph", text: "The short explainer introduced the idea that the same trust logic can survive across cloud, hosted, and offline environments. This deeper pass explains the object that makes that claim believable. A Deployment Profile is not just a hosting note. It is the runtime contract that binds trust, presentation policies, optional issuance capability, device groupings, and operational posture into one endpoint-facing object." },
       { type: "paragraph", text: "That is why this primitive matters so much to operators. It is where architecture stops being a diagram and starts becoming a set of real scanners, kiosks, APIs, mobile surfaces, and update rules." },
       { type: "heading", text: "A deployment profile is the runtime contract" },
@@ -4072,13 +4439,13 @@ principal.department == "HR"
       { type: "paragraph", text: "Once the contract exists, the next question is how the endpoint is actually shaped." },
       { type: "paragraph", text: "This is where the primitive becomes more visibly operational." },
       { type: "paragraph", text: "The specification distinguishes ONLINE, OFFLINE, and HYBRID network modes. Those are not just labels for infrastructure teams. They signal how the endpoint expects to behave around trust refresh, revocation, and connectivity." },
-      { type: "paragraph", text: "An online deployment assumes live access is part of the normal runtime. An offline deployment assumes the opposite and therefore must rely on pre-cached material with bounded grace behavior. A hybrid deployment expects to use live information when available but continue operating with cached trust when the network is degraded." },
+      { type: "paragraph", text: "An online deployment assumes live access is part of the normal runtime. An offline deployment assumes the opposite and therefore must rely on pre-cached material with bounded grace behavior. A hybrid deployment expects to use live information when available, but continue operating with cached trust when the network is degraded." },
       { type: "paragraph", text: "That distinction matters because the same Trust Profile can behave very differently depending on the deployment posture wrapped around it. The trust logic may be the same. The operational envelope is not." },
       { type: "paragraph", text: "Lanes make the same point from a physical and logical angle." },
       { type: "paragraph", text: 'A Deployment Profile does not stop at "this airport" or "this kiosk fleet." It can define lanes, each with its own name, devices, and optional default-policy override. A lane might be Gate 12 North, a specific border booth cluster, or a logical mobile-verification fleet in one region. This is where the model stops talking about identity in the abstract and starts naming the actual zones where verification occurs.' },
       { type: "paragraph", text: "The device assignments matter for the same reason. A real deployment needs to know which devices belong to which operational zone, and the specification requires device identifiers to remain unique across lanes in the same profile. That sounds like a small constraint until you remember how quickly operational ambiguity turns into support ambiguity. If one device can appear in two lanes at once, the runtime no longer has a clean picture of where a verifier action actually happened." },
       { type: "paragraph", text: "Environment configuration adds the human and local-operational layer." },
-      { type: "paragraph", text: "Language, signage text, operator mode, accessibility mode, and offline cache TTL sit here because endpoint behavior is not only about cryptography. A verifier kiosk is still a real interface in a real environment. The primitive includes those details so operators do not need to bolt them on separately and then pretend they are unrelated to deployment governance." },
+      { type: "paragraph", text: "Language, signage text, operator mode, accessibility mode, and offline cache TTL sit here because endpoint behavior is not only about cryptography. A verifier kiosk is still a real interface in a real environment. The primitive includes those details, so operators do not need to bolt them on separately and then pretend they are unrelated to deployment governance." },
       { type: "paragraph", text: "This is the second deep lesson of the object: network mode, lane structure, device ownership, and interface posture are part of the runtime shape, not incidental implementation debris." },
       { type: "heading", text: "Update channels and cache rules turn architecture into operations" },
       { type: "paragraph", text: "The final layer is what keeps deployment behavior credible over time." },
@@ -4088,8 +4455,8 @@ principal.department == "HR"
       { type: "paragraph", text: 'An endpoint running offline is not simply "the same thing but without internet." It is operating under bounded assumptions. Cached trust, cached revocation posture, cached policies, and operator fallback behavior all need to stay inside declared windows. The Deployment Profile is what tells the runtime which window it is allowed to live inside.' },
       { type: "paragraph", text: "Update channels reinforce the same operational discipline." },
       { type: "paragraph", text: "A deployment can follow a stable, beta, or pinned update channel. That may sound like release engineering, but it is also protocol safety. One operator may need controlled rollout across a large fleet. Another may need version pinning for a regulated environment. The primitive lets those decisions stay explicit instead of hiding them in side documentation and one-off scripts." },
-      { type: "paragraph", text: "key_access_mode matters for the same reason. A deployment may depend on a key vault, HSM, or device keystore depending on what the environment can support. This is another reminder that deployment is not only about where the endpoint runs. It is about which operational assumptions the runtime is allowed to make while it runs there." },
-      { type: "paragraph", text: "Even the constraint rules tell the same story. A deployment must have at least one presentation policy. Its default policy, if present, must already be enabled. An issuance-capable deployment may only point at active credential templates. These rules stop the endpoint from drifting into a state where the operator thinks it is configured but the runtime is actually ambiguous." },
+      { type: "paragraph", text: "key_access_mode matters for the same reason. A deployment may depend on a key vault, HSM, or device keystore, depending on what the environment can support. This is another reminder that deployment is not only about where the endpoint runs. It is about which operational assumptions the runtime is allowed to make while it runs there." },
+      { type: "paragraph", text: "Even the constraint rules tell the same story. A deployment must have at least one presentation policy. Its default policy, if present, must already be enabled. An issuance-capable deployment may only point at active credential templates. These rules stop the endpoint from drifting into a state where the operator thinks it is configured, but the runtime is actually ambiguous." },
       { type: "paragraph", text: "That is the right place to land the deep explanation. A Deployment Profile is the runtime contract because it binds trust and policy to real endpoint posture: network mode, lanes, devices, cache windows, update behavior, issuance capability, and human-operational configuration. It is the object that lets one trust model survive many environments without pretending those environments are operationally identical." },
       { type: "paragraph", text: "Once readers see that, the broader deployment story becomes clearer. deployment-profiles-in-practice can then focus on choosing among environments because the primitive itself already explained how runtime packaging works. And same-trust-model-different-runtime can make a stronger claim because the operational boundary is no longer hand-waved." },
       { type: "paragraph", text: "If you want the next operational layer, continue to deployment-profiles-in-practice. If you want the offline runtime consequences, go next to offline-verification-guide. If you want the broader live synthesis that reconnects deployment to the other primitives, return to the-marty-identity-model or five-primitives-in-one-picture." }
@@ -4124,13 +4491,13 @@ principal.department == "HR"
       { type: "paragraph", text: "The second question is what kind of credential is being created." },
       { type: "paragraph", text: "Is this a long-lived identity artifact or a short-lived operational credential? Which claims belong in it? How long is it valid? Which compliance or format expectations govern it? Which claims are always disclosed, selectively disclosed, or shaped for predicate use? That is Credential Template work." },
       { type: "paragraph", text: "The third question is how the whole thing moves." },
-      { type: "paragraph", text: "The traveler applies. The evidence is reviewed. The credential is issued. Later it is presented. Still later it is verified. The movement from one governed state to the next is not accidental glue. That is Flow work. Flow is the primitive that sequences the journey so the system behaves like a lifecycle instead of a stack of disconnected components." },
+      { type: "paragraph", text: "The traveler applies. The evidence is reviewed. The credential is issued. Later, it is presented. Still later, it is verified. The movement from one governed state to the next is not accidental glue. That is Flow work. Flow is the primitive that sequences the journey, so the system behaves like a lifecycle instead of a stack of disconnected components." },
       { type: "paragraph", text: "The fourth question is what the gate verifier is allowed to learn." },
       { type: "paragraph", text: "The gate does not need every fact the issuer ever knew about the traveler. It needs the bounded facts required for the boarding decision under the right freshness and holder-binding conditions. That is Presentation Policy work. The policy defines whether the verifier wants a claim, a predicate, stronger holder binding, or a stricter revocation posture. It turns a vague business rule into an explicit request boundary." },
       { type: "paragraph", text: "The fifth question is where this judgment will run and under what runtime constraints." },
       { type: "paragraph", text: "A cloud verifier, a private terminal cluster, and a gate device do not live under the same network and latency assumptions. One may prefer live status checks. Another may need hybrid or offline-friendly behavior with clear cache windows and failure ladders. That is Deployment Profile work." },
       { type: "paragraph", text: "Seen end to end, the journey looks like this:" },
-      { type: "paragraph", text: "Journey moment: Source evidence is evaluated and trusted issuer material is loaded. Primitive doing the work: Trust Profile. Question it answers: Who counts, and under what cryptographic and freshness rules? | Journey moment: The clearance artifact is defined. Primitive doing the work: Credential Template. Question it answers: What exactly gets issued, with which claims, validity, and disclosure posture? | Journey moment: The traveler moves from application to issuance to later use. Primitive doing the work: Flow. Question it answers: How does the governed lifecycle advance from one stage to the next? | Journey moment: The gate asks only for the proof it needs. Primitive doing the work: Presentation Policy. Question it answers: What may the verifier learn, and how strong must that proof be? | Journey moment: The decision runs at a real gate under real constraints. Primitive doing the work: Deployment Profile. Question it answers: Where does the same trust and policy judgment execute in practice?" },
+      { type: "paragraph", text: "Journey moment: Source evidence is evaluated, and trusted issuer material is loaded. Primitive doing the work: Trust Profile. Question it answers: Who counts, and under what cryptographic and freshness rules? | Journey moment: The clearance artifact is defined. Primitive doing the work: Credential Template. Question it answers: What exactly gets issued, with which claims, validity, and disclosure posture? | Journey moment: The traveler moves from application to issuance to later use. Primitive doing the work: Flow. Question it answers: How does the governed lifecycle advance from one stage to the next? | Journey moment: The gate asks only for the proof it needs. Primitive doing the work: Presentation Policy. Question it answers: What may the verifier learn, and how strong must that proof be? | Journey moment: The decision runs at a real gate under real constraints. Primitive doing the work: Deployment Profile. Question it answers: Where does the same trust and policy judgment execute in practice?" },
       { type: "paragraph", text: "This is the first thing the capstone is supposed to make obvious." },
       { type: "paragraph", text: 'A real credential journey does not "use a protocol" in the abstract. It composes five different classes of decision.' },
       { type: "paragraph", text: "That same pattern shows up outside travel too. An HR credential issued for enterprise access still needs trust rules, a credential definition, lifecycle motion, bounded disclosure, and a runtime envelope. A retail age-verification flow still needs trust, issuance design, policy, and runtime packaging even if the journey is shorter and the verifier’s question is simpler. The specific stakes change. The composition does not." },
@@ -4141,7 +4508,7 @@ principal.department == "HR"
       { type: "paragraph", text: "Marty’s real contribution is not that it names five things." },
       { type: "paragraph", text: "It keeps five different kinds of logic from collapsing into one another." },
       { type: "paragraph", text: "A compact comparison makes that easier to see:" },
-      { type: "paragraph", text: "Primitive: Trust Profile. Core question: Who is trusted, and how is trust validated?. What leaks into code if it is missing: Hardcoded issuers, trust anchors, revocation assumptions, format-specific trust branches | Primitive: Credential Template. Core question: What gets issued?. What leaks into code if it is missing: Ad hoc payload assembly, duplicated claim rules, format-specific issuance logic | Primitive: Flow. Core question: How does the journey move?. What leaks into code if it is missing: Bespoke orchestration, callback sprawl, stage logic scattered across services | Primitive: Presentation Policy. Core question: What must be shown?. What leaks into code if it is missing: Verifier-specific disclosure logic hidden in endpoints, forms, and app handlers | Primitive: Deployment Profile. Core question: Where does the same judgment run?. What leaks into code if it is missing: Environment forks, stale-data improvisation, runtime behavior encoded as feature flags" },
+      { type: "paragraph", text: "Primitive: Trust Profile. Core question: Who is trusted, and how is trust validated? What leaks into code if it is missing: Hardcoded issuers, trust anchors, revocation assumptions, format-specific trust branches | Primitive: Credential Template. Core question: What gets issued? What leaks into code if it is missing: Ad hoc payload assembly, duplicated claim rules, format-specific issuance logic | Primitive: Flow. Core question: How does the journey move? What leaks into code if it is missing: Bespoke orchestration, callback sprawl, stage logic scattered across services | Primitive: Presentation Policy. Core question: What must be shown? What leaks into code if it is missing: Verifier-specific disclosure logic hidden in endpoints, forms, and app handlers | Primitive: Deployment Profile. Core question: Where does the same judgment run? What leaks into code if it is missing: Environment forks, stale-data improvisation, runtime behavior encoded as feature flags" },
       { type: "paragraph", text: "This is the second major capstone point." },
       { type: "paragraph", text: 'The primitives are not interchangeable labels for "identity stuff." They are adjacent decision surfaces with different owners, different rates of change, and different operational consequences.' },
       { type: "paragraph", text: "Trust usually changes more slowly than verifier disclosure requirements. Credential structure changes differently from runtime packaging. Flow changes with use case. Deployment changes with environment. Once those differences are explicit, the architecture becomes easier to govern because the system can tell what kind of change is actually happening." },
@@ -4174,7 +4541,7 @@ principal.department == "HR"
       { type: "paragraph", text: "That is why the protocol remains useful after the diagram, after the launch post, and after the deep dives." },
       { type: "paragraph", text: "It gives the reader one stable way to think about systems that would otherwise look unrelated." },
       { type: "paragraph", text: "A final comparison helps land the point:" },
-      { type: "paragraph", text: "What changes: ICAO vs EUDI vs enterprise vs retail compliance pressure. What stays stable: The five-primitives composition | What changes: OID4VCI vs OID4VP transport and wallet interaction. What stays stable: Trust, template, policy, deployment, and flow as the governing objects | What changes: Hosted vs self-hosted vs edge runtime constraints. What stays stable: The underlying trust and disclosure logic | What changes: Sector-specific credential shapes. What stays stable: The fact that Credential Templates define what gets issued and Flows move it through lifecycle stages" },
+      { type: "paragraph", text: "What changes: ICAO vs EUDI vs enterprise vs retail compliance pressure. What stays stable: The five-primitives composition | What changes: OID4VCI vs OID4VP transport and wallet interaction. What stays stable: Trust, template, policy, deployment, and flow as the governing objects | What changes: Hosted vs self-hosted vs edge runtime constraints. What stays stable: The underlying trust and disclosure logic | What changes: Sector-specific credential shapes. What stays stable: The fact that Credential Templates define what gets issued, and Flows move it through lifecycle stages" },
       { type: "paragraph", text: "This is the capstone payoff Daniel wants the reader to keep." },
       { type: "paragraph", text: "The five primitives are not only a map for teaching. They are the reason the architecture can survive change." },
       { type: "paragraph", text: "Once the composition is explicit, new standards become attachment points, not architecture replacements. New runtimes become deployment choices, not philosophical forks. New sectors become profile and flow variations, not excuses to rebuild the system from zero." },
@@ -4184,7 +4551,7 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the next implementation-facing layer, continue to mip-json-schemas-walkthrough. That is where the shared object model becomes machine-readable contract. If one part of the composition is still the part costing you time, go next to the primitive deep dive that matches it and read the capstone again afterward. It should feel even cleaner the second time." }
     ]
   },
-  // ΓöÇΓöÇΓöÇ Wallets & Credential Storage (Upcoming) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Wallets & Credential Storage (Upcoming)
   {
     slug: "mobile-wallet-architectures",
     title: "Mobile Wallet Architectures for Verifiable Credentials",
@@ -4215,7 +4582,7 @@ principal.department == "HR"
       { type: "paragraph", text: "On the issuance side, they need to receive credential offers and decide whether to accept them. On the presentation side, they need to interpret verifier requests and return the right credential material or proofs. That is why deep-link handling and protocol support are central to wallet architecture." },
       { type: "paragraph", text: "The Marty Authenticator deep-link documentation makes this especially clear. The app recognizes openid-credential-offer:// for issuance offers, openid4vp:// for presentation requests, and openid-credential:// for direct credential imports. Those schemes are not decoration. They are the wallet’s entry points into the surrounding identity ecosystem." },
       { type: "paragraph", text: "From there, wallet architecture becomes a question of controlled movement:" },
-      { type: "paragraph", text: "can the wallet accept a credential offer and bind it to the right holder context? can it surface a presentation request clearly enough that the holder knows what is being asked? can it authenticate the holder before release or proof generation? can it construct a presentation in the right format and return it through the right channel?" },
+      { type: "paragraph", text: "Can the wallet accept a credential offer and bind it to the right holder context? Can it surface a presentation request clearly enough that the holder knows what is being asked? Can it authenticate the holder before release or proof generation? Can it construct a presentation in the right format and return it through the right channel?" },
       { type: "paragraph", text: "Those are architectural responsibilities, not just UI niceties." },
       { type: "heading", text: "Compatibility is a matrix, not a logo wall" },
       { type: "paragraph", text: "This is the part many wallet conversations still get wrong." },
@@ -4251,9 +4618,9 @@ principal.department == "HR"
       { type: "paragraph", text: 'Readers sometimes assume "secure storage" means one component. In practice, wallet protection is layered.' },
       { type: "paragraph", text: "The Marty secure-storage crate is useful because it shows the layers directly. It generates a 256-bit database-encryption key, stores that key through the platform keychain using keyring, and then uses the resulting key to open a SQLCipher-backed SQLite database. In other words, the database is encrypted, but the database key is not stored next to the database. The sensitive secret lives in a stronger platform-managed store." },
       { type: "paragraph", text: "That is exactly the kind of separation a serious wallet wants:" },
-      { type: "paragraph", text: "a protected key store for the secrets that should not sit in ordinary app storage an encrypted local database for credential payloads, metadata, and history local-auth or biometric gates before sensitive release or presentation actions protocol logic above that stack to decide what is actually being disclosed" },
+      { type: "paragraph", text: "a protected key store for the secrets that should not sit in ordinary app storage, an encrypted local database for credential payloads, metadata, and history, local-auth or biometric gates before sensitive release or presentation actions, protocol logic above that stack to decide what is actually being disclosed" },
       { type: "paragraph", text: "The authenticator dependencies reinforce that story. flutter_secure_storage points to secure local secret handling. local_auth points to user-presence or biometric gates. The Rust bridge and protocol libraries handle credential and presentation logic on top of the protected local foundation." },
-      { type: "paragraph", text: 'This is why "does the app encrypt its local data?" is too small a wallet-security question. A wallet can encrypt a database and still mishandle the keys that matter most. The serious question is how the wallet separates and protects the different layers of secret material.' },
+      { type: "paragraph", text: 'This is why "Does the app encrypt its local data?" is too small a wallet-security question. A wallet can encrypt a database and still mishandle the keys that matter most. The serious question is how the wallet separates and protects the different layers of secret material.' },
       { type: "heading", text: "Recovery and portability push back on maximum binding" },
       { type: "paragraph", text: "The hardest wallet-security conversations begin when readers ask the question users will eventually ask anyway: what happens when the device is replaced, lost, or migrated?" },
       { type: "paragraph", text: "This is where secure storage and portability start pulling against each other." },
@@ -4299,8 +4666,8 @@ principal.department == "HR"
       { type: "paragraph", text: "This is why portability belongs next to governance and compliance, not just next to wallet UX." },
       { type: "paragraph", text: "The MIP compatibility matrix hints at the shape of the answer. MDOC under OID4VCI_PRE_AUTH with ICAO_DTC or EUDI_MDL describes which wallet class can receive the credential. SD_JWT_VC under OID4VCI_PRE_AUTH with EUDI_PID describes another compatible family. That helps implementers determine which wallets should interoperate at issuance time. But even perfect compatibility there does not automatically say whether a credential can later be exported from one wallet and imported into another while preserving the same trust posture." },
       { type: "paragraph", text: "In other words, compatibility is necessary for portability, but it is not sufficient." },
-      { type: "paragraph", text: 'The better buyer question is not "is this portable?" It is:' },
-      { type: "paragraph", text: "portable at which layer? under which compliance or ecosystem rules? with or without re-binding? with or without re-issuance? and for which credential classes?" },
+      { type: "paragraph", text: 'The better buyer question is not "Is this portable?" It is:' },
+      { type: "paragraph", text: "portable at which layer? Under which compliance or ecosystem rules? with or without re-binding? with or without re-issuance? And for which credential classes?" },
       { type: "paragraph", text: 'That is a much more useful conversation than the usual slideware claim that "users can always switch wallets." Serious systems rarely mean that in the strong sense.' },
       { type: "heading", text: "The strategic goal is ecosystem portability, not reckless export" },
       { type: "paragraph", text: "The strongest portability goal is usually not unrestricted credential export. It is freedom from ecosystem lock-in." },
@@ -4331,9 +4698,9 @@ principal.department == "HR"
       { type: "paragraph", text: "That combination matters. EUDI is real enough that timelines and obligations now shape planning, but still active enough that implementers should avoid speaking about the model as if every last detail were frozen forever." },
       { type: "heading", text: "What the wallet is expected to carry and do" },
       { type: "paragraph", text: "At its core, the EUDI wallet is meant to let a holder receive, store, and present high-value digital identity and attribute credentials under a common European trust framework." },
-      { type: "paragraph", text: "In the most visible opening path, that includes Person Identification Data credentials and, over time, a broader set of qualified or ecosystem-recognized attestations such as qualified electronic attestations of attributes. The wallet is therefore not just a login helper. It is meant to become a holder-side instrument for both identification and attribute sharing across relying parties." },
+      { type: "paragraph", text: "In the most visible opening path, that includes Person Identification Data credentials and, over time, a broader set of qualified or ecosystem-recognized attestations, such as qualified electronic attestations of attributes. The wallet is therefore not just a login helper. It is meant to become a holder-side instrument for both identification and attribute sharing across relying parties." },
       { type: "paragraph", text: "The architecture only works if several layers line up:" },
-      { type: "paragraph", text: "issuers need a recognized way to issue credentials into the wallet wallets need to handle the accepted credential formats and presentation protocols relying parties need a trust framework that tells them which credentials and issuers count the holder needs clear consent and disclosure boundaries rather than silent background sharing" },
+      { type: "paragraph", text: "Issuers need a recognized way to issue credentials into the wallet. Wallets need to handle the accepted credential formats and presentation protocols. Relying parties need a trust framework that tells them which credentials and issuers count. The holder needs clear consent and disclosure boundaries rather than silent background sharing." },
       { type: "paragraph", text: "Marty’s compliance and wallet-profile materials are useful precisely because they reduce that complexity into explicit bundles. In the compatibility matrix, SD_JWT_VC with OID4VCI_PRE_AUTH under EUDI_PID identifies one of the key EUDI compatibility classes. MDOC with OID4VCI_PRE_AUTH under EUDI_MDL identifies another. The point is not that Europe chose one universal credential form for everything. The point is that the ecosystem is defining specific format/protocol/compliance bundles that wallets and issuers need to meet." },
       { type: "paragraph", text: 'That is a more operationally honest way to talk about readiness than saying a wallet "supports EUDI" in the abstract.' },
       { type: "heading", text: "Trust lists, relying parties, and wallet interoperability are the real challenge" },
@@ -4349,18 +4716,18 @@ principal.department == "HR"
       { type: "paragraph", text: "For implementers, the practical lesson is not to wait for a mythical moment when every document stops changing. It is to prepare around the stable parts of the model now." },
       { type: "paragraph", text: "That means building wallet and verifier systems that can handle explicit trust sources, governed disclosure rules, and evolving compliance bundles without reopening the whole architecture every time a specification set advances. It means treating wallet support as a compatibility matrix problem - format plus issuance protocol plus compliance profile - instead of as a vague badge claim. And it means planning for a future in which wallets are not a peripheral add-on, but a central holder-side endpoint in regulated identity ecosystems." },
       { type: "paragraph", text: 'For buyers and policy teams, the lesson is similarly concrete. EUDI readiness is not just "have a wallet demo." It is:' },
-      { type: "paragraph", text: "can your issuance stack target the right wallet compatibility bundles? can your verifier accept the right trust and presentation models? can your governance model absorb trust-list and compliance updates without scattered code changes? can your product handle the holder-consent and relying-party flows this ecosystem expects?" },
+      { type: "paragraph", text: "Can your issuance stack target the right wallet compatibility bundles? Can your verifier accept the right trust and presentation models? Can your governance model absorb trust-list and compliance updates without scattered code changes? Can your product handle the holder-consent and relying-party flows this ecosystem expects?" },
       { type: "paragraph", text: "Those are the questions that separate genuine readiness from slide-deck optimism." },
       { type: "paragraph", text: "Europe’s wallet program matters because it makes the next phase of identity infrastructure harder to ignore. It turns wallets from optional ecosystem experiments into a regulated expectation. It also gives the rest of the market a preview of what serious wallet interoperability looks like when law, trust, and technical architecture all arrive at once." },
       { type: "paragraph", text: "If you want the shortest adjacent reading path, go back one step to credential-portability-across-wallets, then follow compliance-profiles-bridging-regulation to see how regulated ecosystems become governable configuration instead of application sprawl." }
     ]
   }
-], Fa = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], Ua = (t) => {
-  if (!t.updatedDate || t.updatedDate <= Fa)
+], ti = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], ai = (t) => {
+  if (!t.updatedDate || t.updatedDate <= ti)
     return t;
-  const { updatedDate: i, ...r } = t;
-  return r;
-}, H = Va.map(Ua).map((t) => Z(t)), Ha = Z([
+  const { updatedDate: r, ...i } = t;
+  return i;
+}, ie = ei.map(ai).map((t) => Z(t)), ii = Z([
   {
     phase: 1,
     title: "Foundations",
@@ -4457,7 +4824,7 @@ principal.department == "HR"
       { order: 40, slug: "how-everything-works-together", title: "How Everything Works Together", authorId: "daniel-ortega", category: "Technical", topic: "Protocol Synthesis" }
     ]
   }
-]), di = {
+]), jr = {
   "aiko-tanaka": "Professional portrait illustration of a Japanese female identity standards researcher in her early 40s, calm and analytical expression, short black hair, wearing a modern research lab blazer. Subtle background elements referencing passports, ICAO document seals, and global travel lines. Style: semi-realistic digital illustration, soft lighting, neutral academic background, professional LinkedIn style headshot, minimal color palette navy blue and gold.",
   "marcus-vale": "Professional portrait illustration of a cryptography researcher, male in his late 30s, slightly rugged academic look, dark hair, thoughtful expression, wearing a dark sweater and glasses. Background subtly features mathematical diagrams, public key cryptography symbols, and certificate chains. Style: semi-realistic academic portrait, cool lighting, modern research institute aesthetic.",
   "elena-kovacs": "Professional portrait illustration of a female policy and governance specialist, Eastern European appearance, early 40s, confident and composed expression. Wearing a professional blazer. Background subtly includes organizational diagrams, policy flow charts, and governance networks. Clean academic illustration style, neutral color palette, professional headshot.",
@@ -4465,15 +4832,140 @@ principal.department == "HR"
   "sofia-rahman": "Professional portrait illustration of a female mobile security researcher, South Asian appearance, early 30s, approachable and intelligent expression. Background includes subtle smartphone wallet icons, device security symbols, and credential cards. Modern digital illustration style, warm lighting.",
   "victor-leclerc": "Portrait illustration of a European infrastructure researcher, male early 40s, thoughtful expression, wearing a research institute sweater and glasses. Background includes subtle global trust networks, PKI certificate trees, and federation diagrams. Semi-realistic illustration style with muted colors.",
   "nora-patel": "Professional portrait illustration of a female privacy researcher, South Asian appearance mid-30s, calm thoughtful expression. Background subtly includes zero knowledge proof diagrams, privacy icons, and shield symbols. Soft lighting, academic digital illustration style."
-}, ce = Z([
+}, ve = Z([
+  {
+    part: "I",
+    title: "Foundations",
+    description: "Core concepts of digital identity - what it is, who participates, and how credentials work.",
+    layer: "Foundations",
+    slugs: [
+      "what-is-digital-identity",
+      "verifiable-credentials-explained",
+      "issuers-holders-verifiers-explained",
+      "credential-lifecycle"
+    ]
+  },
+  {
+    part: "II",
+    title: "The Marty Protocol Model",
+    description: "The five primitives that define every identity system - from trust to flow orchestration.",
+    layer: "Trust",
+    slugs: [
+      "five-primitives-in-one-picture",
+      "the-marty-identity-model",
+      "trust-profiles-explained",
+      "credential-templates-designing-what-gets-issued",
+      "presentation-policies-minimum-disclosure",
+      "deployment-profiles-from-design-to-production",
+      "flows-orchestrating-identity-lifecycle"
+    ]
+  },
+  {
+    part: "III",
+    title: "Trust & PKI",
+    description: "Cryptographic foundations - public key infrastructure, trust anchors, and certificate chains.",
+    layer: "Trust",
+    slugs: [
+      "why-identity-depends-on-cryptography",
+      "public-key-infrastructure-explained",
+      "understanding-trust-anchors",
+      "cryptographic-trust-anchors-primer",
+      "certificate-chains-and-validation",
+      "how-passport-pki-works",
+      "understanding-csca-certificates"
+    ]
+  },
+  {
+    part: "IV",
+    title: "Privacy & Disclosure",
+    description: "Data minimization, selective disclosure, and zero-knowledge proofs.",
+    layer: "Present",
+    slugs: [
+      "minimum-disclosure-is-a-policy-problem",
+      "selective-disclosure",
+      "data-minimization-in-identity",
+      "sd-jwt-selective-disclosure-deep-dive",
+      "zero-knowledge-predicates-identity"
+    ]
+  },
+  {
+    part: "V",
+    title: "Implementation",
+    description: "Transport protocols, schemas, and integration patterns for building with Marty.",
+    layer: "Issue",
+    slugs: [
+      "impl-oid4vci",
+      "impl-oid4vp",
+      "mip-json-schemas-walkthrough",
+      "conformance-testing-for-implementers"
+    ]
+  },
+  {
+    part: "VI",
+    title: "Deployment Patterns",
+    description: "How verifiable identity runs in real environments - airports, enterprises, kiosks, and edge devices.",
+    layer: "Deploy",
+    slugs: [
+      "deployment-profiles-in-practice",
+      "offline-verification-guide",
+      "deploy-airline-boarding",
+      "deploy-enterprise-access",
+      "deploy-age-verification",
+      "deploy-membership-credentials"
+    ]
+  },
+  {
+    part: "VII",
+    title: "Governance & Trust Infrastructure",
+    description: "Compliance frameworks, policy engines, trust registries, and wallet architecture.",
+    layer: "Govern",
+    slugs: [
+      "compliance-profiles-bridging-regulation",
+      "compliance-profiles-in-practice",
+      "cedar-policies-for-identity-governance",
+      "building-trust-registries-at-scale",
+      "mobile-wallet-architectures",
+      "secure-enclave-credential-storage",
+      "credential-portability-across-wallets",
+      "eudi-wallet-model-explained"
+    ]
+  }
+]), Je = ve.flatMap((t) => t.slugs), ri = (() => {
+  const t = Je.length, r = {};
+  let i = 0;
+  return ve.forEach((a, s) => {
+    a.slugs.forEach((n, d) => {
+      i += 1, r[n] = {
+        slug: n,
+        articleNumber: i,
+        totalArticles: t,
+        globalIndex: i - 1,
+        part: a.part,
+        partTitle: a.title,
+        partIndex: s + 1,
+        partArticleNumber: d + 1,
+        partArticleCount: a.slugs.length
+      };
+    });
+  }), r;
+})();
+function Xt(t) {
+  const r = ri[t];
+  return r ? {
+    ...r,
+    prevSlug: r.globalIndex > 0 ? Je[r.globalIndex - 1] : null,
+    nextSlug: r.globalIndex < Je.length - 1 ? Je[r.globalIndex + 1] : null
+  } : null;
+}
+const ue = Z([
   { id: 1, slug: "foundations", title: "Foundations", color: "#1565c0", icon: "School" },
   { id: 2, slug: "core-objects", title: "Core Objects", color: "#7b1fa2", icon: "Category" },
   { id: 3, slug: "trust-governance", title: "Trust & Governance", color: "#2e7d32", icon: "Security" },
   { id: 4, slug: "flows", title: "Flows", color: "#e65100", icon: "AccountTree" },
   { id: 5, slug: "deployments", title: "Deployments", color: "#00695c", icon: "CloudUpload" },
   { id: 6, slug: "implementations", title: "Implementations", color: "#c62828", icon: "Code" }
-]), xe = Z([
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 1: Foundations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+]), Pe = Z([
+  // Chapter 1: Foundations
   {
     slug: "foundations-identity",
     chapterId: 1,
@@ -4668,7 +5160,7 @@ Verifiable Credentials:
       }
     ]
   },
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 2: Core Objects ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Chapter 2: Core Objects
   {
     slug: "trust-profiles",
     chapterId: 2,
@@ -4865,7 +5357,7 @@ Verifiable Credentials:
       }
     ]
   },
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 3: Trust & Governance ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Chapter 3: Trust & Governance
   {
     slug: "trust-anchors",
     chapterId: 3,
@@ -5066,7 +5558,7 @@ permit(
       }
     ]
   },
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 4: Flows ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Chapter 4: Flows
   {
     slug: "issuance-flows",
     chapterId: 4,
@@ -5186,7 +5678,7 @@ permit(
       { type: "heading", text: "Choosing a Strategy in MIP" },
       {
         type: "paragraph",
-        text: "Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support high-privacy offline verification at a border crossing and real-time online checking at a web portal - using the same credential type."
+        text: "Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support privacy-aware offline verification at a border crossing and real-time online checking at a web portal - using the same credential type."
       }
     ]
   },
@@ -5231,7 +5723,7 @@ Presentation = [compact-sd-jwt]
       }
     ]
   },
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 5: Deployments ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Chapter 5: Deployments
   {
     slug: "deployment-profiles-in-practice",
     chapterId: 5,
@@ -5267,13 +5759,13 @@ Presentation = [compact-sd-jwt]
     chapterId: 5,
     order: 2,
     title: "Offline Verification",
-    summary: "Designing for offline verification requires careful thought about cache freshness, revocation strategies, and failure modes. MIP's architecture handles these by design.",
+    summary: "Designing for offline verification requires careful thought about cache freshness, revocation strategies, and failure modes. MIP's architecture makes those choices explicit instead of treating offline mode as a free security guarantee.",
     readTime: "7 min read",
     conceptTags: ["deployment", "offline"],
     content: [
       {
         type: "paragraph",
-        text: "Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require that verification work offline for hours or days at a time - with no degradation in security posture."
+        text: "Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require offline verification for hours or days at a time, with assurance bounded by cached trust material, status freshness, and configured failure behavior."
       },
       { type: "heading", text: "What Must Be Pre-Cached" },
       {
@@ -5484,7 +5976,7 @@ Presentation = [compact-sd-jwt]
       }
     ]
   },
-  // ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ Chapter 6: Implementations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Chapter 6: Implementations
   {
     slug: "impl-oid4vci",
     chapterId: 6,
@@ -5722,14 +6214,14 @@ Type 3 (Hardware-Bound):
       }
     ]
   }
-]), ze = xe.map((t) => t.slug), Te = Object.fromEntries(
-  xe.map((t) => [t.slug, t])
-), Ve = Object.fromEntries(
-  ce.map((t) => [
+]), Ge = Pe.map((t) => t.slug), Ae = Object.fromEntries(
+  Pe.map((t) => [t.slug, t])
+), $e = Object.fromEntries(
+  ue.map((t) => [
     t.id,
-    xe.filter((i) => i.chapterId === t.id).sort((i, r) => i.order - r.order)
+    Pe.filter((r) => r.chapterId === t.id).sort((r, i) => r.order - i.order)
   ])
-), Ut = {
+), Qt = {
   "why-identity-needs-a-protocol": ["foundation", "business"],
   "trust-profiles-explained": ["core-object", "trust-profile"],
   "business-case-for-credential-portability": ["business", "deployment"],
@@ -5813,7 +6305,7 @@ Type 3 (Hardware-Bound):
   "presentation-policies-explained-deep": ["presentation-policy", "core-object", "implementation"],
   "deployment-profiles-explained-deep": ["deployment-profile", "core-object", "deployment"],
   "how-everything-works-together": ["protocol-overview", "five-primitives", "flow"]
-}, ct = {
+}, gt = {
   "impl-oid4vci": ["OID4VCI"],
   "impl-oid4vp": ["OID4VP"],
   "sd-jwt-selective-disclosure-deep-dive": ["SD-JWT"],
@@ -5880,7 +6372,7 @@ Type 3 (Hardware-Bound):
   "deployment-profiles-explained-deep": ["OID4VP", "ICAO 9303"],
   "how-everything-works-together": ["OID4VCI", "OID4VP", "W3C VC"],
   "credential-portability-across-wallets": ["OID4VCI", "OID4VP"]
-}, ht = Z([
+}, ft = Z([
   {
     id: "foundations",
     title: "Foundations",
@@ -5975,22 +6467,22 @@ Type 3 (Hardware-Bound):
       "eudi-wallet-model-explained"
     ]
   }
-]), We = (() => {
+]), Be = (() => {
   const t = {};
-  for (const i of ht)
-    i.slugs.forEach((r, a) => {
-      t[r] = {
-        seriesId: i.id,
-        seriesTitle: i.title,
+  for (const r of ft)
+    r.slugs.forEach((i, a) => {
+      t[i] = {
+        seriesId: r.id,
+        seriesTitle: r.title,
         order: a + 1,
-        total: i.slugs.length,
-        slugs: i.slugs
+        total: r.slugs.length,
+        slugs: r.slugs
       };
     });
   return t;
-})(), pi = Object.fromEntries(
-  ht.map((t) => [t.id, t])
-), dt = {
+})(), Br = Object.fromEntries(
+  ft.map((t) => [t.id, t])
+), vt = {
   // Featured (manually pinned flagship posts)
   "why-identity-needs-a-protocol": "featured",
   "five-primitives-in-one-picture": "featured",
@@ -6080,7 +6572,7 @@ Type 3 (Hardware-Bound):
   "presentation-policies-explained-deep": "core-protocol",
   "deployment-profiles-explained-deep": "core-protocol",
   "how-everything-works-together": "core-protocol"
-}, le = [
+}, pe = [
   "what-is-digital-identity",
   "verifiable-credentials-explained",
   "issuers-holders-verifiers-explained",
@@ -6088,7 +6580,27 @@ Type 3 (Hardware-Bound):
   "five-primitives-in-one-picture",
   "the-marty-identity-model",
   "flows-orchestrating-identity-lifecycle"
-], Na = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], Ht = {
+], si = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], ni = [
+  "impl-oid4vci",
+  "impl-oid4vp",
+  "compliance-profiles-in-practice",
+  "deployment-profiles-in-practice",
+  "offline-verification-guide",
+  "deploy-airline-boarding",
+  "deploy-enterprise-access",
+  "deploy-age-verification",
+  "deploy-membership-credentials"
+], oi = ["selective-disclosure-explained"], li = new Set(ni), ci = new Set(oi);
+function Zt(t) {
+  return li.has(t);
+}
+function tt(t) {
+  return !ci.has(t) && !Zt(t);
+}
+function Se(t) {
+  return t.filter((r) => r.date <= si && tt(r.slug));
+}
+const ea = {
   Foundations: "Foundations",
   Trust: "Trust",
   Issue: "Issuance",
@@ -6096,8 +6608,8 @@ Type 3 (Hardware-Bound):
   Deploy: "Deployment",
   Execute: "Flow Orchestration",
   Govern: "Governance"
-}, re = {
-  // ΓöÇΓöÇ Start Here / Foundations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+}, ze = {
+  // Start Here / Foundations
   "what-is-digital-identity": {
     topic: "Foundations",
     layer: "Foundations",
@@ -6146,7 +6658,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Beginner",
     related: ["five-primitives-in-one-picture", "the-marty-identity-model", "what-is-digital-identity"]
   },
-  // ΓöÇΓöÇ Five Primitives (Core Protocol) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Five Primitives (Core Protocol)
   "trust-profiles-explained": {
     primitive: "Trust Profiles",
     layer: "Trust",
@@ -6182,7 +6694,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["credential-lifecycle", "impl-oid4vci", "impl-oid4vp"]
   },
-  // ΓöÇΓöÇ PKI for Identity ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // PKI for Identity
   "public-key-infrastructure-explained": {
     layer: "Trust",
     topic: "PKI for Identity",
@@ -6219,7 +6731,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["how-passport-pki-works", "certificate-chains-and-validation", "public-key-infrastructure-explained"]
   },
-  // ΓöÇΓöÇ Privacy & Disclosure ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Privacy & Disclosure
   "minimum-disclosure-is-a-policy-problem": {
     layer: "Present",
     topic: "Privacy & Disclosure",
@@ -6244,7 +6756,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["sd-jwt-selective-disclosure-deep-dive", "selective-disclosure", "data-minimization-in-identity"]
   },
-  // ΓöÇΓöÇ Implementation Guides ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Implementation Guides
   "impl-oid4vci": {
     primitive: "Credential Templates",
     layer: "Issue",
@@ -6273,7 +6785,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["impl-oid4vci", "impl-oid4vp", "mip-json-schemas-walkthrough"]
   },
-  // ΓöÇΓöÇ Governance & Policy ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Governance & Policy
   "compliance-profiles-bridging-regulation": {
     layer: "Govern",
     topic: "Governance",
@@ -6299,7 +6811,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["trust-profiles-explained", "compliance-profiles-in-practice", "cedar-policies-for-identity-governance"]
   },
-  // ΓöÇΓöÇ Deployment Patterns ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Deployment Patterns
   "deployment-profiles-in-practice": {
     primitive: "Deployment Profiles",
     layer: "Deploy",
@@ -6343,7 +6855,7 @@ Type 3 (Hardware-Bound):
     browseHidden: !0,
     related: ["deploy-age-verification", "deploy-enterprise-access", "credential-templates-designing-what-gets-issued"]
   },
-  // ΓöÇΓöÇ Wallets ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Wallets
   "mobile-wallet-architectures": {
     layer: "Deploy",
     topic: "Wallets",
@@ -6368,7 +6880,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["mobile-wallet-architectures", "credential-portability-across-wallets", "compliance-profiles-bridging-regulation"]
   },
-  // ΓöÇΓöÇ Business / Industry ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Business / Industry
   "business-case-for-credential-portability": {
     layer: "Foundations",
     topic: "Industry",
@@ -6393,7 +6905,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["credential-templates-designing-what-gets-issued", "credential-lifecycle", "impl-oid4vci"]
   },
-  // ΓöÇΓöÇ Standalone / Advanced ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Standalone / Advanced
   "why-identity-depends-on-cryptography": {
     layer: "Trust",
     topic: "Foundations",
@@ -6430,7 +6942,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Beginner",
     related: ["why-identity-needs-a-protocol", "five-primitives-in-one-picture", "the-marty-identity-model"]
   },
-  // ΓöÇΓöÇ Runtime, Evaluation & Strategy ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Runtime, Evaluation & Strategy
   "same-trust-model-different-runtime": {
     layer: "Deploy",
     topic: "Deployment Patterns",
@@ -6449,7 +6961,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["why-the-marty-protocol-exists", "mip-json-schemas-walkthrough", "conformance-testing-for-implementers"]
   },
-  // ΓöÇΓöÇ Standards & PKI ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Standards & PKI
   "what-icao-9303-specifies": {
     layer: "Trust",
     topic: "Passport PKI",
@@ -6468,7 +6980,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["how-passport-pki-works", "mobile-driving-licenses-iso-18013-5", "understanding-trust-anchors"]
   },
-  // ΓöÇΓöÇ Issuance, Presentation & Interoperability ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Issuance, Presentation & Interoperability
   "how-credential-issuance-works": {
     layer: "Issue",
     topic: "Credential Issuance",
@@ -6487,7 +6999,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["verifiable-credentials-explained", "presentation-protocols", "mobile-driving-licenses-iso-18013-5"]
   },
-  // ΓöÇΓöÇ Wallets & Holder Experience ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Wallets & Holder Experience
   "what-is-a-digital-identity-wallet": {
     layer: "Deploy",
     topic: "Wallets",
@@ -6512,7 +7024,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["what-is-a-digital-identity-wallet", "selective-disclosure-in-wallets", "eudi-wallet-model-explained"]
   },
-  // ΓöÇΓöÇ Privacy, Governance & Trust Infrastructure ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Privacy, Governance & Trust Infrastructure
   "why-identity-systems-must-protect-privacy": {
     layer: "Present",
     topic: "Privacy & Disclosure",
@@ -6588,7 +7100,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Intermediate",
     related: ["trust-registries-explained", "building-trust-registries-at-scale", "understanding-trust-anchors"]
   },
-  // ΓöÇΓöÇ Protocol Deep Dives & Synthesis ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // Protocol Deep Dives & Synthesis
   "why-the-marty-protocol-exists": {
     layer: "Foundations",
     topic: "Protocol Vision",
@@ -6629,7 +7141,7 @@ Type 3 (Hardware-Bound):
     difficulty: "Advanced",
     related: ["the-marty-identity-model", "five-primitives-in-one-picture", "flows-orchestrating-identity-lifecycle"]
   }
-}, Nt = {
+}, ta = {
   Foundations: "#546e7a",
   Trust: "#1565c0",
   Issue: "#7b1fa2",
@@ -6637,30 +7149,975 @@ Type 3 (Hardware-Bound):
   Deploy: "#e65100",
   Execute: "#00695c",
   Govern: "#4a148c"
-}, Ga = {
+}, hi = {
   Beginner: "success",
   Intermediate: "info",
   Advanced: "warning"
 };
-function Ka(t) {
-  var i;
-  return ((i = re[t]) == null ? void 0 : i.canonicalSlug) || t;
+function di(t) {
+  var r;
+  return ((r = ze[t]) == null ? void 0 : r.canonicalSlug) || t;
 }
-function Ja(t) {
-  const i = re[t];
-  return (i == null ? void 0 : i.status) === "legacy" ? i : null;
+function pi(t) {
+  const r = ze[t];
+  return (r == null ? void 0 : r.status) === "legacy" ? r : null;
 }
-function De(t) {
-  var i, r;
-  return ((i = re[t]) == null ? void 0 : i.status) !== "legacy" && ((r = re[t]) == null ? void 0 : r.browseHidden) !== !0;
+const ui = JSON.parse(String.raw`
+[
+  {
+    "slug": "why-identity-needs-a-protocol",
+    "title": "Why Identity Needs a Protocol",
+    "summary": "Identity is still being sold as a platform problem. Cryptography proves facts, but protocol placement determines whether verified state can move across implementations instead of staying trapped inside one vendor boundary.",
+    "authorId": "daniel-ortega",
+    "date": "2025-01-06",
+    "updatedDate": "2026-06-28",
+    "category": "Business",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "trust-profiles-explained",
+    "title": "Trust Profiles: The Foundation of Every Identity Decision",
+    "summary": "Before you can verify a credential, you need to decide who to trust. Trust Profiles formalize that decision as configuration, not code.",
+    "authorId": "victor-leclerc",
+    "date": "2025-01-12",
+    "updatedDate": "2026-04-11",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "business-case-for-credential-portability",
+    "title": "The Business Case for Credential Portability",
+    "summary": "Vendor lock-in can turn identity verification into repeated spend. Portable credentials built on open standards help reduce duplicate checks across systems.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-01-18",
+    "updatedDate": "2026-04-17",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "cryptographic-trust-anchors-primer",
+    "title": "Cryptographic Trust Anchors: A Primer for Identity Systems",
+    "summary": "X.509 chains, CSCA/DS certificates, and DID documents are cryptographic foundations that help make verifiable credentials actually verifiable.",
+    "authorId": "marcus-vale",
+    "date": "2025-01-23",
+    "updatedDate": "2026-04-22",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "credential-templates-designing-what-gets-issued",
+    "title": "Credential Templates: Designing What Gets Issued",
+    "summary": "A credential is more than a signed JSON blob. Credential Templates define the schema, claims, validity, and disclosure rules that make credentials meaningful.",
+    "authorId": "daniel-ortega",
+    "date": "2025-01-29",
+    "updatedDate": "2026-04-28",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "presentation-policies-minimum-disclosure",
+    "title": "Presentation Policies and the Art of Minimum Disclosure",
+    "summary": "Verifiers should not ask for everything. Presentation Policies define exactly what is needed, and nothing more.",
+    "authorId": "nora-patel",
+    "date": "2025-02-04",
+    "updatedDate": "2026-05-04",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "eudi-wallet-readiness",
+    "title": "EUDI Wallet Readiness: What the Regulation Actually Requires",
+    "summary": "The EU Digital Identity Wallet rollout is moving toward the end-of-2026 deadline. What it means for identity infrastructure and protocol-first design.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-02-10",
+    "updatedDate": "2026-05-10",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "deployment-profiles-from-design-to-production",
+    "title": "Deployment Profiles: From Design to Production",
+    "summary": "Trust Profiles and Presentation Policies are design-time. Deployment Profiles are how they get to devices, kiosks, and APIs in the real world.",
+    "authorId": "sofia-rahman",
+    "date": "2025-02-16",
+    "updatedDate": "2026-05-15",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "zero-knowledge-predicates-identity",
+    "title": "Zero-Knowledge Predicates in Identity: What, Why, and How",
+    "summary": "Proving you're over 21 without revealing your birthday. MIP's predicate-aware policies keep identity verification focused on the bounded question.",
+    "authorId": "nora-patel",
+    "date": "2025-02-21",
+    "updatedDate": "2026-05-21",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "flows-orchestrating-identity-lifecycle",
+    "title": "Flows: Orchestrating the Identity Lifecycle",
+    "summary": "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive: the user-visible lifecycle that ties trust, credential, presentation, and deployment rules together.",
+    "authorId": "daniel-ortega",
+    "date": "2025-02-27",
+    "updatedDate": "2026-05-27",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "compliance-profiles-bridging-regulation",
+    "title": "Compliance Profiles: Bridging Standards and Regulation",
+    "summary": "ICAO, AAMVA, EUDI, Open Badges - every framework brings its own rules. Compliance Profiles map those requirements to MIP primitives so teams can review, configure, and update them deliberately.",
+    "authorId": "elena-kovacs",
+    "date": "2025-03-05",
+    "updatedDate": "2026-06-02",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "sd-jwt-selective-disclosure-deep-dive",
+    "title": "SD-JWT Selective Disclosure: A Deep Dive",
+    "summary": "How SD-JWT enables selective disclosure without zero-knowledge proofs - and where MIP uses it across Credential Templates and Presentation Policies.",
+    "authorId": "nora-patel",
+    "date": "2025-03-11",
+    "updatedDate": "2026-06-08",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "cedar-policies-for-identity-governance",
+    "title": "Writing Cedar Policies for Identity Governance",
+    "summary": "MIP uses Cedar PolicySets to keep access control, credential verification, and approval rules inspectable, validated, and governed before they reach production.",
+    "authorId": "elena-kovacs",
+    "date": "2025-03-17",
+    "updatedDate": "2026-06-13",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "introducing-mip",
+    "title": "Introducing the Marty Identity Protocol",
+    "summary": "MIP is a draft, open-source specification for cryptographically verifiable digital identity management: five core primitives, explicit governance, and portable implementation surfaces.",
+    "authorId": "daniel-ortega",
+    "date": "2025-03-22",
+    "updatedDate": "2026-07-10",
+    "category": "Announcement",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "mip-json-schemas-walkthrough",
+    "title": "MIP JSON Schemas: A Walkthrough for Implementers",
+    "summary": "MIP currently includes 36 JSON Schemas covering every protocol entity. Here's how to use them for validation, code generation, and API contracts.",
+    "authorId": "daniel-ortega",
+    "date": "2025-03-28",
+    "updatedDate": "2026-06-25",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "post-quantum-readiness-in-identity",
+    "title": "Post-Quantum Readiness in Identity Protocols",
+    "summary": "Quantum computers will break RSA and ECDSA. MIP's algorithm-agnostic Trust Profiles are designed for the transition - here's how.",
+    "authorId": "marcus-vale",
+    "date": "2025-04-03",
+    "updatedDate": "2026-07-01",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "building-trust-registries-at-scale",
+    "title": "Building Trust Registries at Scale",
+    "summary": "Who is authorized to issue which credentials? Trust registries answer this question - and MIP provides a framework for building them.",
+    "authorId": "victor-leclerc",
+    "date": "2025-04-09",
+    "updatedDate": "2026-07-07",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "offline-verification-design-patterns",
+    "title": "Offline Verification: Design Patterns for Disconnected Environments",
+    "summary": "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns make cache freshness, revocation posture, and failure behavior explicit when connectivity drops.",
+    "authorId": "sofia-rahman",
+    "date": "2025-04-15",
+    "updatedDate": "2026-07-12",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "holder-binding-beyond-biometrics",
+    "title": "Holder Binding: Beyond Biometrics",
+    "summary": "How do you prove the person presenting a credential is the person it was issued to? MIP supports cryptographic, biometric, and knowledge-based binding.",
+    "authorId": "sofia-rahman",
+    "date": "2025-04-20",
+    "updatedDate": "2026-07-18",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "mip-and-open-badges-education-credentials",
+    "title": "MIP and Open Badges: Verifiable Education Credentials",
+    "summary": "Open Badges 3.0 meets MIP - how the protocol brings trust governance to education and workforce credentials.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-04-26",
+    "updatedDate": "2026-07-24",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "conformance-testing-for-implementers",
+    "title": "Conformance Testing: Proving Your MIP Implementation Works",
+    "summary": "MIP ships a conformance test suite with valid and invalid fixtures. Here's how to use it to validate your implementation.",
+    "authorId": "daniel-ortega",
+    "date": "2025-05-02",
+    "updatedDate": "2026-07-30",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "revocation-strategies-compared",
+    "title": "Revocation Strategies Compared: OCSP, CRL, and Status Lists",
+    "summary": "Credentials get revoked. MIP's revocation model supports five standardized methods with different privacy, latency, and offline trade-offs.",
+    "authorId": "marcus-vale",
+    "date": "2025-05-08",
+    "updatedDate": "2026-08-04",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "five-primitives-in-one-picture",
+    "title": "The Five Primitives in One Picture",
+    "summary": "If digital identity still looks like an acronym graveyard, this is the picture that turns it back into a system.",
+    "authorId": "daniel-ortega",
+    "date": "2025-05-13",
+    "updatedDate": "2026-08-10",
+    "category": "Technical",
+    "readTime": "8 min read"
+  },
+  {
+    "slug": "minimum-disclosure-is-a-policy-problem",
+    "title": "Minimum Disclosure Is a Policy Problem",
+    "summary": "Privacy fails first at the request boundary, which is why disclosure has to be governed as policy rather than left to verifier habit.",
+    "authorId": "nora-patel",
+    "date": "2025-05-19",
+    "updatedDate": "2026-08-16",
+    "category": "Cryptography",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "same-trust-model-different-runtime",
+    "title": "Same Trust Model, Different Runtime",
+    "summary": "The trust judgment should not have to change every time the runtime does. Marty keeps the verification model stable and uses Deployment Profiles to absorb the operational differences between cloud, self-hosted, and edge environments.",
+    "authorId": "sofia-rahman",
+    "date": "2025-05-25",
+    "updatedDate": "2026-08-22",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "one-protocol-many-ecosystems",
+    "title": "One Protocol, Many Ecosystems",
+    "summary": "The identity market does not lack standards. It lacks a stable way to operationalize them together. Marty treats ecosystem variation as profile data, not as a reason to rebuild the architecture every time the acronym changes.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-05-31",
+    "updatedDate": "2026-08-28",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "why-marty-is-ready-for-evaluation",
+    "title": "Why Marty Is Ready for Evaluation",
+    "summary": "Serious teams do not evaluate identity ideas because they are elegant. They evaluate them because there is enough inspectable surface-specification, schemas, conformance, policy, and deployment choices-to decide whether the architecture deserves a real design review.",
+    "authorId": "daniel-ortega",
+    "date": "2025-06-06",
+    "updatedDate": "2026-09-02",
+    "category": "Technical",
+    "readTime": "8 min read"
+  },
+  {
+    "slug": "infrastructure-economics-migration",
+    "title": "The Infrastructure Economics Migration",
+    "summary": "When identity is bought as a metered lookup service, growth makes the bill worse. When it is run as protocol infrastructure, growth turns into a deployment and governance question instead of a recurring extraction model.",
+    "authorId": "daniel-ortega",
+    "date": "2025-06-11",
+    "updatedDate": "2026-09-08",
+    "category": "Business",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "deployment-profiles-in-practice",
+    "title": "Deployment Profiles in Practice",
+    "summary": "Choose the runtime that matches your environment without rewriting the trust logic underneath it. Hosted, self-hosted, and edge deployments should differ operationally, not conceptually.",
+    "authorId": "sofia-rahman",
+    "date": "2025-06-17",
+    "updatedDate": "2026-09-14",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "offline-verification-guide",
+    "title": "Offline Verification Guide",
+    "summary": "Offline verification is not a magic trick. It is the discipline of deciding what trust material must already be on the device, how long it remains credible, and what the operator should do when freshness expires before the queue does.",
+    "authorId": "sofia-rahman",
+    "date": "2025-06-23",
+    "updatedDate": "2026-09-20",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "compliance-profiles-in-practice",
+    "title": "Compliance Profiles in Practice",
+    "summary": "Compliance only looks like paperwork from a distance. In production, it is the question of whether changing a rule means updating governed configuration or reopening application code in every regulated surface you own.",
+    "authorId": "daniel-ortega",
+    "date": "2025-06-29",
+    "updatedDate": "2026-09-25",
+    "category": "Business",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "deploy-airline-boarding",
+    "title": "Deploying Marty for Airline Boarding",
+    "summary": "At a boarding gate, identity architecture is judged in seconds: can the lane keep moving, can the verifier stay trustworthy when the network wobbles, and can operations tighten policy without rebuilding the device fleet?",
+    "authorId": "daniel-ortega",
+    "date": "2025-07-05",
+    "updatedDate": "2026-10-01",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "deploy-enterprise-access",
+    "title": "Deploying Marty for Enterprise Access",
+    "summary": "Enterprise access gets brittle when badges, network gateways, and internal applications all ask the same identity question through different systems. Marty turns that sprawl into one governed corporate credential, many bounded checks, and a policy surface security teams can actually inspect.",
+    "authorId": "daniel-ortega",
+    "date": "2025-07-10",
+    "updatedDate": "2026-10-07",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "selective-disclosure",
+    "title": "Selective Disclosure",
+    "summary": "Selective disclosure is not a magic privacy label. It is the discipline of revealing only what a decision requires, then choosing the lightest mechanism that can enforce that boundary.",
+    "authorId": "daniel-ortega",
+    "date": "2025-07-16",
+    "updatedDate": "2026-10-13",
+    "category": "Cryptography",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "deploy-age-verification",
+    "title": "Deploying Marty for Age Verification",
+    "summary": "At a grocery self-checkout kiosk, privacy is not an abstract principle. It is the difference between asking one yes-or-no question and quietly collecting a customer’s identity record because the lane was built for scanner convenience instead of disclosure discipline.",
+    "authorId": "daniel-ortega",
+    "date": "2025-07-28",
+    "updatedDate": "2026-10-24",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "deploy-membership-credentials",
+    "title": "Deploying Marty for Membership Credentials",
+    "summary": "Membership credentials are where identity architecture stops getting a free pass from government authority. If a partner verifier still has to phone the issuer every time, you may have a portable credential format, but you do not yet have portable trust.",
+    "authorId": "daniel-ortega",
+    "date": "2025-08-03",
+    "updatedDate": "2026-10-30",
+    "category": "Business",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "impl-oid4vci",
+    "title": "Implementing OID4VCI with Marty",
+    "summary": "OID4VCI is the transport that gets a credential offer, token exchange, and credential response across the wire. Marty is the object model that decides what is being issued, how that issuance is orchestrated, and which evidence remains once the transport step is over.",
+    "authorId": "daniel-ortega",
+    "date": "2025-08-08",
+    "updatedDate": "2026-11-05",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "impl-oid4vp",
+    "title": "Implementing OID4VP with Marty",
+    "summary": "OID4VP carries the presentation request and response. Marty is the part that decides what the verifier actually needs, which issuers are trusted, and how the same exchange behaves in a browser, API, or constrained deployment without turning each runtime into a different system.",
+    "authorId": "daniel-ortega",
+    "date": "2025-08-14",
+    "updatedDate": "2026-11-11",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "what-is-digital-identity",
+    "title": "What Is Digital Identity?",
+    "summary": "Digital identity is not a user account sitting in someone else’s database. It is portable, machine-readable evidence about a person, organization, or device that can be checked under clear trust rules.",
+    "authorId": "daniel-ortega",
+    "date": "2025-08-20",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "four-actors-of-identity-systems",
+    "title": "The Four Actors of Identity Systems",
+    "summary": "Identity ecosystems do not run on issuers, holders, and verifiers alone. They also depend on governance authorities that decide which issuers count, under which rules, and inside which trust framework.",
+    "authorId": "daniel-ortega",
+    "date": "2025-08-26",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "issuers-holders-verifiers-explained",
+    "title": "Issuers, Holders, Verifiers Explained",
+    "summary": "Identity systems become legible when you can see the three operational roles clearly: who makes the claim, who carries it, and who decides whether it should count for a real-world action.",
+    "authorId": "daniel-ortega",
+    "date": "2025-09-01",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "credential-lifecycle",
+    "title": "The Credential Lifecycle",
+    "summary": "Credentials are not static files that become trustworthy once and then stay trustworthy forever. They move through approval, issuance, presentation, verification, status change, and renewal under rules that have to hold up in production.",
+    "authorId": "daniel-ortega",
+    "date": "2025-09-06",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "why-identity-depends-on-cryptography",
+    "title": "Why Digital Identity Depends on Cryptography",
+    "summary": "Without cryptography, digital credentials are just JSON. This post explains how signing, hashing, and key management make credentials verifiable.",
+    "authorId": "marcus-vale",
+    "date": "2025-09-12",
+    "updatedDate": "2026-04-09",
+    "category": "Cryptography",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "public-key-infrastructure-explained",
+    "title": "Public Key Infrastructure Explained",
+    "summary": "PKI is the backbone of digital trust. This post demystifies certificate authorities, key pairs, and the trust hierarchies that secure credentials.",
+    "authorId": "marcus-vale",
+    "date": "2025-09-18",
+    "updatedDate": "2026-04-09",
+    "category": "Cryptography",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "understanding-trust-anchors",
+    "title": "Understanding Trust Anchors",
+    "summary": "Trust anchors are the root certificates and public keys that ground all credential verification. This post explains how they work and why they matter.",
+    "authorId": "marcus-vale",
+    "date": "2025-09-24",
+    "updatedDate": "2026-04-09",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "certificate-chains-and-validation",
+    "title": "Certificate Chains and Validation",
+    "summary": "Certificate chain validation is how systems verify that a credential traces back to a trusted authority. This post walks through the process step by step.",
+    "authorId": "marcus-vale",
+    "date": "2025-09-30",
+    "updatedDate": "2026-04-09",
+    "category": "Cryptography",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "how-passport-pki-works",
+    "title": "How Passport PKI Works",
+    "summary": "Every e-passport contains a signed chip. This post explains the PKI infrastructure - from CSCA to Document Signer certificates - that makes passport verification possible.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-05",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "understanding-csca-certificates",
+    "title": "Understanding CSCA Certificates",
+    "summary": "CSCA certificates are the trust anchors of passport PKI. This post explains what they contain, how they're distributed, and why they're critical to travel document verification.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-11",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "what-icao-9303-specifies",
+    "title": "What ICAO 9303 Actually Specifies",
+    "summary": "ICAO Doc 9303 is the international standard for machine-readable travel documents. This post breaks down what it actually requires - and what it leaves to implementers.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-17",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "mobile-driving-licenses-iso-18013-5",
+    "title": "Mobile Driving Licenses and ISO 18013-5",
+    "summary": "ISO 18013-5 defines how a driving licence can live on a phone without turning a government credential into a glorified screenshot. This post explains mDoc, proximity exchange, holder binding, and the trust model that makes mobile driving licences operationally credible.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-23",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "how-governments-build-identity-pki",
+    "title": "How Governments Build Identity PKI",
+    "summary": "Government identity PKI is the infrastructure that lets passports, mobile licences, and other official credentials be trusted beyond the issuing agency. This post explains how sovereign roots, delegated signers, trust-list distribution, and refresh discipline make that possible in the real world.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-29",
+    "updatedDate": "2026-04-09",
+    "category": "Business",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "how-credential-issuance-works",
+    "title": "How Credential Issuance Works",
+    "summary": "Credential issuance is the process of creating, approving, signing, and delivering a verifiable credential to a holder. This post explains the real mechanics of issuance without mistaking OID4VCI transport for the whole architecture.",
+    "authorId": "daniel-ortega",
+    "date": "2025-11-03",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "verifiable-credentials-explained",
+    "title": "Verifiable Credentials Explained",
+    "summary": "Verifiable credentials are cryptographically signed documents that let a holder prove claims about themselves without asking the issuer to vouch for each use in real time.",
+    "authorId": "daniel-ortega",
+    "date": "2025-11-09",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "presentation-protocols",
+    "title": "Presentation Protocols",
+    "summary": "A presentation protocol is how a verifier asks for bounded proof and how a holder’s wallet returns it. This post explains OID4VP, presentation definitions, and the mechanics that keep presentation safe.",
+    "authorId": "daniel-ortega",
+    "date": "2025-11-15",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "interoperability-between-credential-formats",
+    "title": "Interoperability Between Credential Formats",
+    "summary": "VC-JWT, SD-JWT, mDoc, JSON-LD - these formats do not magically collapse into one universal credential. This post explains where interoperability is real, where it is bundle-based, and how Marty keeps one model across many format families.",
+    "authorId": "daniel-ortega",
+    "date": "2025-11-21",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "what-is-a-digital-identity-wallet",
+    "title": "What Is a Digital Identity Wallet",
+    "summary": "A digital identity wallet is not just a place to store cards. It is the holder-side control point for receiving, holding, and presenting credentials under local control.",
+    "authorId": "sofia-rahman",
+    "date": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "device-binding-and-credential-security",
+    "title": "Device Binding and Credential Security",
+    "summary": "Device binding is the security choice that ties a credential to the holder’s device context instead of treating it like a copyable file.",
+    "authorId": "sofia-rahman",
+    "date": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "selective-disclosure-in-wallets",
+    "title": "Selective Disclosure in Wallets",
+    "summary": "Selective disclosure becomes real in a wallet when a verifier request is translated into a holder-readable choice about which claims to share.",
+    "authorId": "sofia-rahman",
+    "date": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "wallet-ux-design-for-identity",
+    "title": "Wallet UX Design for Identity",
+    "summary": "Identity-wallet UX succeeds when it makes requester intent, privacy boundaries, and recovery paths understandable before the holder is asked to share anything.",
+    "authorId": "sofia-rahman",
+    "date": "2026-04-09",
+    "category": "Business",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "why-identity-systems-must-protect-privacy",
+    "title": "Why Identity Systems Must Protect Privacy",
+    "summary": "Identity verification is inherently privacy-invasive. This post explains why privacy must be a design principle - not a feature - in identity systems.",
+    "authorId": "nora-patel",
+    "date": "2025-12-20",
+    "updatedDate": "2026-04-09",
+    "category": "Business",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "data-minimization-in-identity",
+    "title": "Data Minimization in Identity",
+    "summary": "Verifiers should only learn what they need. This post explains data minimization - the principle that drives selective disclosure, predicates, and privacy-preserving credentials.",
+    "authorId": "nora-patel",
+    "date": "2025-12-25",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "selective-disclosure-explained",
+    "title": "Selective Disclosure Explained",
+    "summary": "Selective disclosure lets holders reveal specific claims without exposing the full credential. This post explains the cryptographic mechanisms that make it work.",
+    "authorId": "nora-patel",
+    "date": "2025-12-31",
+    "updatedDate": "2026-04-10",
+    "category": "Cryptography",
+    "readTime": "9 min read"
+  },
+  {
+    "slug": "privacy-vs-compliance",
+    "title": "Privacy vs Compliance",
+    "summary": "Regulations require both privacy protection and data availability. This post explores the tension between privacy and compliance - and how protocol design can resolve it.",
+    "authorId": "nora-patel",
+    "date": "2026-01-06",
+    "updatedDate": "2026-04-09",
+    "category": "Business",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "identity-governance-models",
+    "title": "Identity Governance Models",
+    "summary": "Identity governance is the question of who decides which issuers, rules, and operating boundaries count once credentials have to work beyond one team or one application.",
+    "authorId": "elena-kovacs",
+    "date": "2026-04-03",
+    "category": "Business",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "rbac-vs-abac",
+    "title": "RBAC vs ABAC",
+    "summary": "Role-based access control makes authorization legible fast. Attribute-based access control makes it nuanced. Serious identity systems usually need both, but they should know why before the policy surface gets messy.",
+    "authorId": "elena-kovacs",
+    "date": "2026-04-04",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "policy-engines-for-identity-systems",
+    "title": "Policy Engines for Identity Systems",
+    "summary": "A policy engine exists so identity decisions can be evaluated as governed rules instead of rediscovered inside handlers, gateways, and approval code every time the system grows another edge case.",
+    "authorId": "elena-kovacs",
+    "date": "2026-04-05",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "governing-credential-ecosystems",
+    "title": "Governing Credential Ecosystems",
+    "summary": "Credential ecosystems become trustworthy only when the network agrees who belongs, what obligations apply, and how those decisions change over time. Trust infrastructure comes later. Governance comes first.",
+    "authorId": "elena-kovacs",
+    "date": "2026-04-06",
+    "category": "Business",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "trust-registries-explained",
+    "title": "Trust Registries Explained",
+    "summary": "Trust registries turn ecosystem governance into loadable trust material. This post explains why credential networks need them, what they actually distribute, and how verifiers use them without turning every decision into a phone-home lookup.",
+    "authorId": "victor-leclerc",
+    "date": "2026-02-04",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "federation-in-identity-systems",
+    "title": "Federation in Identity Systems",
+    "summary": "Federation is what lets separate organizations rely on shared identity rules without centralizing every verification decision. This post explains how shared trust, shared policy, and local verification make that possible.",
+    "authorId": "victor-leclerc",
+    "date": "2026-02-10",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "verifier-infrastructure",
+    "title": "Verifier Infrastructure",
+    "summary": "A serious verifier is not just a signature checker. It is a runtime stack of trust synchronization, status caching, policy evaluation, audit, and failure handling. This post explains what that stack actually looks like.",
+    "authorId": "victor-leclerc",
+    "date": "2026-02-16",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "discovering-trusted-issuers",
+    "title": "Discovering Trusted Issuers",
+    "summary": "Before a verifier can evaluate a credential, it has to know which issuers count. This post explains how trusted-issuer discovery works across trust lists, registries, pinned roots, and DID-based ecosystems.",
+    "authorId": "victor-leclerc",
+    "date": "2026-02-21",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "why-the-marty-protocol-exists",
+    "title": "Why the Marty Protocol Exists",
+    "summary": "Every identity system solves the same problems differently. MIP defines the minimum shared primitives to make credential systems interoperable. This post explains why.",
+    "authorId": "daniel-ortega",
+    "date": "2026-02-27",
+    "updatedDate": "2026-04-10",
+    "category": "Announcement",
+    "readTime": "8 min read"
+  },
+  {
+    "slug": "the-marty-identity-model",
+    "title": "The Marty Identity Model",
+    "summary": "Marty turns digital identity from a pile of standards, integrations, and policy exceptions into a governable system with stable objects: who is trusted, what gets issued, what must be shown, where verification runs, and how the journey moves.",
+    "authorId": "daniel-ortega",
+    "date": "2026-03-05",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "4 min read"
+  },
+  {
+    "slug": "trust-profile-evaluation-and-failure-handling",
+    "title": "Trust Profile Evaluation and Failure Handling",
+    "summary": "Trust Profiles are MIP's first primitive. This post walks through how trust sources, freshness rules, evaluation order, and fail-closed behavior turn a Trust Profile into a governed runtime decision boundary.",
+    "authorId": "daniel-ortega",
+    "date": "2026-03-11",
+    "updatedDate": "2026-04-10",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "credential-templates-explained-deep",
+    "title": "Credential Templates Explained",
+    "summary": "Credential Templates define what gets issued. This post provides a complete technical walkthrough of how schema, compliance, cryptographic artifacts, validity, privacy posture, and lifecycle state combine into one reusable issuance contract.",
+    "authorId": "daniel-ortega",
+    "date": "2026-03-17",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "presentation-policies-explained-deep",
+    "title": "Presentation Policies Explained",
+    "summary": "Presentation Policies define what verifiers require. This post provides a complete technical walkthrough of how required claims, predicates, fallback behavior, freshness, and holder binding combine into one machine-readable verifier contract.",
+    "authorId": "daniel-ortega",
+    "date": "2026-03-22",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "deployment-profiles-explained-deep",
+    "title": "Deployment Profiles Explained",
+    "summary": "Deployment Profiles package trust, templates, and policies for runtime execution. This post provides a complete technical walkthrough of how network mode, lanes, devices, cache windows, and update behavior turn abstract identity rules into real endpoints.",
+    "authorId": "daniel-ortega",
+    "date": "2026-03-28",
+    "updatedDate": "2026-04-09",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "how-everything-works-together",
+    "title": "How Everything Works Together",
+    "summary": "Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows - this post shows how all five MIP primitives compose into end-to-end identity systems.",
+    "authorId": "daniel-ortega",
+    "date": "2026-04-03",
+    "updatedDate": "2026-04-10",
+    "category": "Technical",
+    "readTime": "10 min read"
+  },
+  {
+    "slug": "mobile-wallet-architectures",
+    "title": "Mobile Wallet Architectures for Verifiable Credentials",
+    "summary": "How mobile credential wallets work - from platform secure elements to cloud backup, and what matters for interoperability.",
+    "authorId": "aiko-tanaka",
+    "date": "2026-04-07",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "secure-enclave-credential-storage",
+    "title": "Secure Enclave Storage for Credentials",
+    "summary": "Understanding how hardware-backed key storage protects credential holder binding - secure enclaves, StrongBox, and attestation.",
+    "authorId": "marcus-vale",
+    "date": "2026-04-08",
+    "category": "Cryptography",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "credential-portability-across-wallets",
+    "title": "Credential Portability Across Wallets",
+    "summary": "Can a credential issued to one wallet be moved to another? The technical and policy boundaries of credential portability.",
+    "authorId": "elena-kovacs",
+    "date": "2026-04-09",
+    "category": "Technical",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "eudi-wallet-model-explained",
+    "title": "The EUDI Wallet Model Explained",
+    "summary": "How the EU Digital Identity Wallet architecture works - PID issuance, QEAA, trust lists, and what implementers need to know.",
+    "authorId": "aiko-tanaka",
+    "date": "2026-04-10",
+    "category": "Technical",
+    "readTime": "7 min read"
+  }
+]
+`), mi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], yi = (t) => {
+  if (!t.updatedDate || t.updatedDate <= mi)
+    return t;
+  const { updatedDate: r, ...i } = t;
+  return i;
+}, me = ui.map(yi).map((t) => Z(t)), pt = "https://elevenidllc.com", Ie = "/images/social", gi = `${Ie}/elevenid-blog-default.png`, aa = Object.fromEntries(
+  me.map((t) => [t.slug, `${Ie}/${t.slug}.png`])
+);
+function fi(t = pt) {
+  return String(t || pt).replace(/\/+$/, "");
 }
-function Fe(t) {
-  return t.filter((i) => i.date <= Na && De(i.slug));
+function ia(t) {
+  return String(t || "").trim();
 }
-function $a() {
-  const t = Fe(H).length, r = (/* @__PURE__ */ new Date()).toLocaleDateString("en-US", { month: "short", year: "numeric" });
-  return /* @__PURE__ */ n(
-    V,
+function vi(t) {
+  return Object.prototype.hasOwnProperty.call(aa, ia(t));
+}
+function bi(t, r = "linkedin") {
+  const i = String(r || "linkedin").trim().toLowerCase(), a = ia(t);
+  return vi(a) ? i === "linkedin" ? aa[a] : i === "master" ? `${Ie}/master/${a}-master.png` : `${Ie}/platforms/${a}-${i}.png` : i === "linkedin" ? gi : i === "master" ? `${Ie}/master/elevenid-blog-default-master.png` : `${Ie}/platforms/elevenid-blog-default-${i}.png`;
+}
+function wi(t, r = pt, i = "linkedin") {
+  return `${fi(r)}${bi(t, i)}`;
+}
+const xi = JSON.parse(String.raw`{
+  "what-is-digital-identity": "Foundations",
+  "verifiable-credentials-explained": "Foundations",
+  "four-actors-of-identity-systems": "Foundations",
+  "issuers-holders-verifiers-explained": "Foundations",
+  "credential-lifecycle": "Foundations",
+  "five-primitives-in-one-picture": "Protocol Overview",
+  "the-marty-identity-model": "Protocol Overview",
+  "why-identity-needs-a-protocol": "Protocol Vision",
+  "trust-profiles-explained": "Core Protocol",
+  "credential-templates-designing-what-gets-issued": "Core Protocol",
+  "presentation-policies-minimum-disclosure": "Core Protocol",
+  "deployment-profiles-from-design-to-production": "Core Protocol",
+  "flows-orchestrating-identity-lifecycle": "Core Protocol",
+  "public-key-infrastructure-explained": "PKI for Identity",
+  "understanding-trust-anchors": "PKI for Identity",
+  "cryptographic-trust-anchors-primer": "PKI for Identity",
+  "certificate-chains-and-validation": "PKI for Identity",
+  "how-passport-pki-works": "PKI for Identity",
+  "understanding-csca-certificates": "PKI for Identity",
+  "minimum-disclosure-is-a-policy-problem": "Privacy & Disclosure",
+  "selective-disclosure": "Privacy & Disclosure",
+  "sd-jwt-selective-disclosure-deep-dive": "Privacy & Disclosure",
+  "zero-knowledge-predicates-identity": "Privacy & Disclosure",
+  "impl-oid4vci": "Implementation",
+  "impl-oid4vp": "Implementation",
+  "mip-json-schemas-walkthrough": "Implementation",
+  "conformance-testing-for-implementers": "Implementation",
+  "compliance-profiles-bridging-regulation": "Governance",
+  "compliance-profiles-in-practice": "Governance",
+  "cedar-policies-for-identity-governance": "Governance",
+  "building-trust-registries-at-scale": "Governance",
+  "deployment-profiles-in-practice": "Deployment Patterns",
+  "offline-verification-guide": "Deployment Patterns",
+  "deploy-airline-boarding": "Deployment Patterns",
+  "deploy-enterprise-access": "Deployment Patterns",
+  "deploy-age-verification": "Deployment Patterns",
+  "deploy-membership-credentials": "Deployment Patterns",
+  "mobile-wallet-architectures": "Wallets",
+  "secure-enclave-credential-storage": "Wallets",
+  "credential-portability-across-wallets": "Wallets",
+  "eudi-wallet-model-explained": "Wallets",
+  "business-case-for-credential-portability": "Industry",
+  "eudi-wallet-readiness": "Industry",
+  "infrastructure-economics-migration": "Industry",
+  "mip-and-open-badges-education-credentials": "Industry",
+  "why-identity-depends-on-cryptography": "Foundations",
+  "post-quantum-readiness-in-identity": "PKI for Identity",
+  "revocation-strategies-compared": "Implementation",
+  "holder-binding-beyond-biometrics": "Privacy & Disclosure",
+  "offline-verification-design-patterns": "Implementation",
+  "introducing-mip": "Protocol Vision",
+  "same-trust-model-different-runtime": "Deployment Patterns",
+  "one-protocol-many-ecosystems": "Protocol Vision",
+  "why-marty-is-ready-for-evaluation": "Protocol Vision",
+  "what-icao-9303-specifies": "Passport PKI",
+  "mobile-driving-licenses-iso-18013-5": "mDoc Standards",
+  "how-governments-build-identity-pki": "Government Identity",
+  "how-credential-issuance-works": "Credential Issuance",
+  "presentation-protocols": "Credential Presentation",
+  "interoperability-between-credential-formats": "Interoperability",
+  "what-is-a-digital-identity-wallet": "Wallets",
+  "device-binding-and-credential-security": "Wallets",
+  "selective-disclosure-in-wallets": "Wallets",
+  "wallet-ux-design-for-identity": "Wallets",
+  "why-identity-systems-must-protect-privacy": "Privacy & Disclosure",
+  "data-minimization-in-identity": "Privacy & Disclosure",
+  "selective-disclosure-explained": "Privacy & Disclosure",
+  "privacy-vs-compliance": "Privacy & Disclosure",
+  "identity-governance-models": "Governance",
+  "rbac-vs-abac": "Governance",
+  "policy-engines-for-identity-systems": "Governance",
+  "governing-credential-ecosystems": "Governance",
+  "trust-registries-explained": "Trust Infrastructure",
+  "federation-in-identity-systems": "Trust Infrastructure",
+  "verifier-infrastructure": "Trust Infrastructure",
+  "discovering-trusted-issuers": "Trust Infrastructure",
+  "why-the-marty-protocol-exists": "Protocol Vision",
+  "trust-profile-evaluation-and-failure-handling": "Core Protocol",
+  "credential-templates-explained-deep": "Core Protocol",
+  "presentation-policies-explained-deep": "Core Protocol",
+  "deployment-profiles-explained-deep": "Core Protocol",
+  "how-everything-works-together": "Protocol Overview"
+}`), Ti = JSON.parse(String.raw`{
+  "trust-profiles-explained": "Trust Profiles",
+  "credential-templates-designing-what-gets-issued": "Credential Templates",
+  "presentation-policies-minimum-disclosure": "Presentation Policies",
+  "deployment-profiles-from-design-to-production": "Deployment Profiles",
+  "flows-orchestrating-identity-lifecycle": "Flows",
+  "impl-oid4vci": "Credential Templates",
+  "impl-oid4vp": "Presentation Policies",
+  "deployment-profiles-in-practice": "Deployment Profiles",
+  "trust-profile-evaluation-and-failure-handling": "Trust Profiles",
+  "credential-templates-explained-deep": "Credential Templates",
+  "presentation-policies-explained-deep": "Presentation Policies",
+  "deployment-profiles-explained-deep": "Deployment Profiles"
+}`);
+function re(t) {
+  return (t == null ? void 0 : t.trim().toLowerCase()) || "";
+}
+function We(t) {
+  const r = re(t);
+  return r ? `/blog/tag/${encodeURIComponent(r)}` : "/blog";
+}
+function ki(t) {
+  if (!t)
+    return "";
+  try {
+    return re(decodeURIComponent(t));
+  } catch {
+    return re(t);
+  }
+}
+function Ii(t, r) {
+  const i = re(t);
+  return r.find((a) => re(a) === i) || "";
+}
+function Pi() {
+  const t = Se(me).length, i = (/* @__PURE__ */ new Date()).toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  return /* @__PURE__ */ o(
+    F,
     {
       elevation: 0,
       sx: {
@@ -6672,7 +8129,7 @@ function $a() {
       },
       children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: {
@@ -6687,7 +8144,7 @@ function $a() {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "h2",
             component: "h1",
@@ -6698,7 +8155,7 @@ function $a() {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "h6",
             component: "p",
@@ -6706,8 +8163,8 @@ function $a() {
             children: "Concepts, standards, and implementation guides for verifiable identity systems."
           }
         ),
-        /* @__PURE__ */ n(
-          o,
+        /* @__PURE__ */ o(
+          l,
           {
             variant: "body2",
             sx: {
@@ -6720,17 +8177,17 @@ function $a() {
             children: [
               t,
               " articles across foundations, PKI, deployment, and governance | Updated ",
-              r
+              i
             ]
           }
         ),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 2, flexWrap: "wrap" }, children: [
+        /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, flexWrap: "wrap" }, children: [
           /* @__PURE__ */ e(
-            _,
+            z,
             {
               variant: "contained",
               size: "large",
-              startIcon: /* @__PURE__ */ e(st, {}),
+              startIcon: /* @__PURE__ */ e(ut, {}),
               component: "a",
               href: "#start-here",
               sx: { bgcolor: "primary.main", fontWeight: 700, px: 3 },
@@ -6738,11 +8195,11 @@ function $a() {
             }
           ),
           /* @__PURE__ */ e(
-            _,
+            z,
             {
               variant: "outlined",
               size: "large",
-              startIcon: /* @__PURE__ */ e(jt, {}),
+              startIcon: /* @__PURE__ */ e(Gt, {}),
               component: "a",
               href: "#implementation",
               sx: {
@@ -6756,11 +8213,11 @@ function $a() {
             }
           ),
           /* @__PURE__ */ e(
-            _,
+            z,
             {
               variant: "outlined",
               size: "large",
-              startIcon: /* @__PURE__ */ e(Je, {}),
+              startIcon: /* @__PURE__ */ e(Ve, {}),
               component: k,
               to: "/blog/foundations",
               sx: {
@@ -6778,14 +8235,14 @@ function $a() {
     }
   );
 }
-function Ya() {
-  const t = le.map((r) => H.find((a) => a.slug === r)).filter(Boolean), i = t.reduce((r, a) => {
-    var c;
-    const s = (c = a.readTime) == null ? void 0 : c.match(/(\d+)/);
-    return r + (s ? parseInt(s[1], 10) : 0);
+function Ai() {
+  const t = pe.map((i) => me.find((a) => a.slug === i)).filter(Boolean), r = t.reduce((i, a) => {
+    var n;
+    const s = (n = a.readTime) == null ? void 0 : n.match(/(\d+)/);
+    return i + (s ? parseInt(s[1], 10) : 0);
   }, 0);
-  return /* @__PURE__ */ n(
-    V,
+  return /* @__PURE__ */ o(
+    F,
     {
       id: "start-here",
       elevation: 0,
@@ -6799,7 +8256,7 @@ function Ya() {
       },
       children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: {
@@ -6813,11 +8270,11 @@ function Ya() {
             children: "Learning Path"
           }
         ),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
-          /* @__PURE__ */ e(fa, { color: "primary", sx: { fontSize: 28 } }),
-          /* @__PURE__ */ e(o, { variant: "h5", fontWeight: 800, color: "primary.dark", children: "Start Here" }),
-          /* @__PURE__ */ n(
-            o,
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
+          /* @__PURE__ */ e(Wa, { color: "primary", sx: { fontSize: 28 } }),
+          /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 800, color: "primary.dark", children: "Start Here" }),
+          /* @__PURE__ */ o(
+            l,
             {
               variant: "caption",
               sx: {
@@ -6833,26 +8290,26 @@ function Ya() {
               children: [
                 t.length,
                 " articles | ~",
-                i,
+                r,
                 " min total"
               ]
             }
           )
         ] }),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, ml: 5.5 }, children: "New to digital identity? Follow this path to build a solid foundation." }),
-        /* @__PURE__ */ e(sa, { disablePadding: !0, children: t.map((r, a) => /* @__PURE__ */ e(na, { disablePadding: !0, sx: { mb: 0.5 }, children: /* @__PURE__ */ n(
-          _t,
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, ml: 5.5 }, children: "New to digital identity? Follow this path to build a solid foundation." }),
+        /* @__PURE__ */ e(va, { disablePadding: !0, children: t.map((i, a) => /* @__PURE__ */ e(ba, { disablePadding: !0, sx: { mb: 0.5 }, children: /* @__PURE__ */ o(
+          Ft,
           {
             component: k,
-            to: `/blog/${r.slug}`,
+            to: `/blog/${i.slug}`,
             sx: {
               borderRadius: 2,
               py: 1.5,
               "&:hover": { bgcolor: "primary.100" }
             },
             children: [
-              /* @__PURE__ */ e(oa, { sx: { minWidth: 40 }, children: /* @__PURE__ */ e(
-                o,
+              /* @__PURE__ */ e(wa, { sx: { minWidth: 40 }, children: /* @__PURE__ */ e(
+                l,
                 {
                   variant: "h6",
                   fontWeight: 800,
@@ -6862,75 +8319,75 @@ function Ya() {
                 }
               ) }),
               /* @__PURE__ */ e(
-                Rt,
+                Ut,
                 {
-                  primary: r.title,
-                  secondary: /* @__PURE__ */ n(He, { children: [
-                    ye(r.summary, 220),
-                    /* @__PURE__ */ n(o, { component: "span", variant: "caption", sx: { display: "block", mt: 0.5, fontWeight: 600, color: "text.secondary" }, children: [
+                  primary: i.title,
+                  secondary: /* @__PURE__ */ o(Le, { children: [
+                    be(i.summary, 220),
+                    /* @__PURE__ */ o(l, { component: "span", variant: "caption", sx: { display: "block", mt: 0.5, fontWeight: 600, color: "text.secondary" }, children: [
                       "Step ",
                       a + 1,
                       " of ",
                       t.length,
                       " | ",
-                      r.readTime
+                      i.readTime
                     ] })
                   ] }),
                   primaryTypographyProps: { fontWeight: 700, fontSize: "0.95rem" },
                   secondaryTypographyProps: { component: "div", fontSize: "0.8rem", lineHeight: 1.5 }
                 }
               ),
-              /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 2, color: "primary.main", flexShrink: 0 }, children: [
-                /* @__PURE__ */ e(o, { variant: "caption", sx: { fontWeight: 800, letterSpacing: 0.2 }, children: "Read article" }),
+              /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 2, color: "primary.main", flexShrink: 0 }, children: [
+                /* @__PURE__ */ e(l, { variant: "caption", sx: { fontWeight: 800, letterSpacing: 0.2 }, children: "Read article" }),
                 /* @__PURE__ */ e(Q, { sx: { fontSize: 16 } })
               ] })
             ]
           }
-        ) }, r.slug)) })
+        ) }, i.slug)) })
       ]
     }
   );
 }
-const je = [
+const Ne = [
   {
-    icon: va,
+    icon: Oa,
     title: "Trust Profiles",
     description: "Who is trusted",
     verb: "Trust",
     color: "#1565c0"
   },
   {
-    icon: ba,
+    icon: Ma,
     title: "Credential Templates",
     description: "What is issued",
     verb: "Issue",
     color: "#7b1fa2"
   },
   {
-    icon: wa,
+    icon: qa,
     title: "Presentation Policies",
     description: "What must be shown",
     verb: "Present",
     color: "#2e7d32"
   },
   {
-    icon: xa,
+    icon: Ea,
     title: "Deployment Profiles",
     description: "Where it runs",
     verb: "Deploy",
     color: "#e65100"
   },
   {
-    icon: Bt,
+    icon: Nt,
     title: "Flows",
     description: "How journeys are orchestrated",
     verb: "Flows",
     color: "#00695c"
   }
 ];
-function Xa() {
-  return /* @__PURE__ */ n(
-    V,
+function Ci() {
+  return /* @__PURE__ */ o(
+    F,
     {
       id: "protocol-diagram",
       elevation: 0,
@@ -6943,11 +8400,11 @@ function Xa() {
         borderColor: "grey.200"
       },
       children: [
-        /* @__PURE__ */ e(o, { variant: "h5", fontWeight: 800, gutterBottom: !0, children: "How the Marty Identity Protocol Works" }),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 560 }, children: "Five primitives define the protocol layer - from who is trusted to how credential journeys are orchestrated." }),
-        /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { display: "block", mb: 3, maxWidth: 620, lineHeight: 1.6 }, children: "The system map groups the handbook into reader-facing layers. This diagram names the five protocol primitives inside that layer." }),
+        /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 800, gutterBottom: !0, children: "How the Marty Identity Protocol Works" }),
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 560 }, children: "Five primitives define the protocol layer - from who is trusted to how credential journeys are orchestrated." }),
+        /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { display: "block", mb: 3, maxWidth: 620, lineHeight: 1.6 }, children: "The system map groups the handbook into reader-facing layers. This diagram names the five protocol primitives inside that layer." }),
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             sx: {
               display: "flex",
@@ -6957,11 +8414,11 @@ function Xa() {
               gap: { xs: 0, md: 0 },
               mb: 3
             },
-            children: je.map((t, i) => {
-              const r = t.icon;
-              return /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", flexDirection: { xs: "column", md: "row" } }, children: [
-                /* @__PURE__ */ n(
-                  l,
+            children: Ne.map((t, r) => {
+              const i = t.icon;
+              return /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", flexDirection: { xs: "column", md: "row" } }, children: [
+                /* @__PURE__ */ o(
+                  c,
                   {
                     sx: {
                       textAlign: "center",
@@ -6976,11 +8433,11 @@ function Xa() {
                       "&:hover": { transform: "translateY(-3px)", boxShadow: 3, bgcolor: `${t.color}08` }
                     },
                     children: [
-                      /* @__PURE__ */ e(r, { sx: { fontSize: 36, color: t.color, mb: 0.75 } }),
-                      /* @__PURE__ */ e(o, { variant: "subtitle2", fontWeight: 700, sx: { lineHeight: 1.3, fontSize: "0.85rem" }, children: t.title }),
-                      /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { display: "block", mt: 0.25 }, children: t.description }),
+                      /* @__PURE__ */ e(i, { sx: { fontSize: 36, color: t.color, mb: 0.75 } }),
+                      /* @__PURE__ */ e(l, { variant: "subtitle2", fontWeight: 700, sx: { lineHeight: 1.3, fontSize: "0.85rem" }, children: t.title }),
+                      /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { display: "block", mt: 0.25 }, children: t.description }),
                       /* @__PURE__ */ e(
-                        o,
+                        l,
                         {
                           variant: "caption",
                           sx: {
@@ -6998,8 +8455,8 @@ function Xa() {
                     ]
                   }
                 ),
-                i < je.length - 1 && /* @__PURE__ */ e(
-                  l,
+                r < Ne.length - 1 && /* @__PURE__ */ e(
+                  c,
                   {
                     sx: {
                       display: "flex",
@@ -7009,7 +8466,7 @@ function Xa() {
                       py: { xs: 0.5, md: 0 }
                     },
                     children: /* @__PURE__ */ e(
-                      o,
+                      l,
                       {
                         sx: {
                           fontSize: "1.2rem",
@@ -7027,7 +8484,7 @@ function Xa() {
           }
         ),
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             sx: {
               display: "flex",
@@ -7041,9 +8498,9 @@ function Xa() {
               border: "1px solid",
               borderColor: "grey.200"
             },
-            children: je.map((t, i) => /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.75 }, children: [
-              /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, sx: { color: t.color }, children: t.verb }),
-              i < je.length - 1 && /* @__PURE__ */ e(l, { sx: { width: 24, height: 1, bgcolor: "grey.300" } })
+            children: Ne.map((t, r) => /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.75 }, children: [
+              /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, sx: { color: t.color }, children: t.verb }),
+              r < Ne.length - 1 && /* @__PURE__ */ e(c, { sx: { width: 24, height: 1, bgcolor: "grey.300" } })
             ] }, t.title))
           }
         )
@@ -7051,7 +8508,7 @@ function Xa() {
     }
   );
 }
-const At = [
+const qt = [
   { id: "overview", label: "Overview" },
   { id: "start-here", label: "Start Here" },
   { id: "five-primitives", label: "Five Primitives" },
@@ -7061,30 +8518,30 @@ const At = [
   { id: "governance", label: "Governance & Trust Infrastructure" },
   { id: "latest", label: "Latest" }
 ];
-function Qa({ searchValue: t, onSearch: i, onNavigateAuthors: r, sectionNavEnabled: a = !0 }) {
-  const [s, c] = ne("overview"), [u, h] = ne(!1);
-  return Pe(() => {
+function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabled: a = !0 }) {
+  const [s, n] = ce("overview"), [d, h] = ce(!1);
+  return Oe(() => {
     if (!a) {
-      c("overview");
+      n("overview");
       return;
     }
-    const d = new IntersectionObserver(
-      (y) => {
-        for (const m of y)
-          m.isIntersecting && c(m.target.id);
+    const p = new IntersectionObserver(
+      (g) => {
+        for (const m of g)
+          m.isIntersecting && n(m.target.id);
       },
       { rootMargin: "-60px 0px -75% 0px" }
-    ), p = setTimeout(() => {
-      At.forEach(({ id: y }) => {
-        const m = document.getElementById(y);
-        m && d.observe(m);
+    ), u = setTimeout(() => {
+      qt.forEach(({ id: g }) => {
+        const m = document.getElementById(g);
+        m && p.observe(m);
       });
     }, 100);
     return () => {
-      clearTimeout(p), d.disconnect();
+      clearTimeout(u), p.disconnect();
     };
   }, [a]), /* @__PURE__ */ e(
-    l,
+    c,
     {
       sx: {
         position: "sticky",
@@ -7097,9 +8554,9 @@ function Qa({ searchValue: t, onSearch: i, onNavigateAuthors: r, sectionNavEnabl
         py: 0.75,
         mb: 3
       },
-      children: /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center" }, children: [
+      children: /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center" }, children: [
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             sx: {
               display: "flex",
@@ -7109,90 +8566,90 @@ function Qa({ searchValue: t, onSearch: i, onNavigateAuthors: r, sectionNavEnabl
               "&::-webkit-scrollbar": { display: "none" },
               scrollbarWidth: "none"
             },
-            children: a ? At.map((d) => /* @__PURE__ */ e(
-              _,
+            children: a ? qt.map((p) => /* @__PURE__ */ e(
+              z,
               {
                 size: "small",
                 component: "a",
-                href: `#${d.id}`,
-                "aria-current": s === d.id ? "location" : void 0,
+                href: `#${p.id}`,
+                "aria-current": s === p.id ? "location" : void 0,
                 sx: {
                   minWidth: "auto",
                   px: 1.5,
                   py: 0.5,
                   borderRadius: 1,
-                  fontWeight: s === d.id ? 700 : 500,
-                  color: s === d.id ? "primary.main" : "text.secondary",
-                  bgcolor: s === d.id ? "primary.50" : "transparent",
+                  fontWeight: s === p.id ? 700 : 500,
+                  color: s === p.id ? "primary.main" : "text.secondary",
+                  bgcolor: s === p.id ? "primary.50" : "transparent",
                   borderBottom: "2px solid",
-                  borderColor: s === d.id ? "primary.main" : "transparent",
+                  borderColor: s === p.id ? "primary.main" : "transparent",
                   whiteSpace: "nowrap",
                   fontSize: "0.8rem",
                   textTransform: "none",
                   textDecoration: "none",
                   "&:hover": {
-                    bgcolor: s === d.id ? "primary.50" : "grey.50"
+                    bgcolor: s === p.id ? "primary.50" : "grey.50"
                   }
                 },
-                children: d.label
+                children: p.label
               },
-              d.id
-            )) : /* @__PURE__ */ e(l, { sx: { display: "flex", alignItems: "center", flexGrow: 1, px: 1.5, minHeight: 32 }, children: /* @__PURE__ */ e(o, { variant: "caption", sx: { fontWeight: 700, color: "text.secondary", letterSpacing: 0.3 }, children: t ? "Search results" : "Filtered archive" }) })
+              p.id
+            )) : /* @__PURE__ */ e(c, { sx: { display: "flex", alignItems: "center", flexGrow: 1, px: 1.5, minHeight: 32 }, children: /* @__PURE__ */ e(l, { variant: "caption", sx: { fontWeight: 700, color: "text.secondary", letterSpacing: 0.3 }, children: t ? "Search results" : "Filtered archive" }) })
           }
         ),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 1, flexShrink: 0 }, children: [
-          u ? /* @__PURE__ */ e(
-            la,
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 1, flexShrink: 0 }, children: [
+          d ? /* @__PURE__ */ e(
+            xa,
             {
               size: "small",
               autoFocus: !0,
               placeholder: "Search trust profiles, OID4VCI, offline verification...",
               value: t,
-              onChange: (d) => i(d.target.value),
+              onChange: (p) => r(p.target.value),
               sx: { width: { xs: 200, md: 320 } },
               InputProps: {
-                startAdornment: /* @__PURE__ */ e(ut, { position: "start", children: /* @__PURE__ */ e(gt, { fontSize: "small" }) }),
-                endAdornment: /* @__PURE__ */ e(ut, { position: "end", children: /* @__PURE__ */ e(
-                  _e,
+                startAdornment: /* @__PURE__ */ e(wt, { position: "start", children: /* @__PURE__ */ e(kt, { fontSize: "small" }) }),
+                endAdornment: /* @__PURE__ */ e(wt, { position: "end", children: /* @__PURE__ */ e(
+                  Ue,
                   {
                     size: "small",
                     onClick: () => {
-                      h(!1), i("");
+                      h(!1), r("");
                     },
-                    children: /* @__PURE__ */ e(Ta, { fontSize: "small" })
+                    children: /* @__PURE__ */ e(za, { fontSize: "small" })
                   }
                 ) })
               }
             }
           ) : /* @__PURE__ */ e(
-            _e,
+            Ue,
             {
               size: "small",
               onClick: () => h(!0),
               sx: { color: "text.secondary" },
               "aria-label": "Search articles",
-              children: /* @__PURE__ */ e(gt, { fontSize: "small" })
+              children: /* @__PURE__ */ e(kt, { fontSize: "small" })
             }
           ),
           /* @__PURE__ */ e(
-            _e,
+            Ue,
             {
               size: "small",
-              onClick: r,
+              onClick: i,
               sx: { color: "text.secondary" },
               "aria-label": "Authors",
-              children: /* @__PURE__ */ e(Ia, { fontSize: "small" })
+              children: /* @__PURE__ */ e(Ra, { fontSize: "small" })
             }
           ),
           /* @__PURE__ */ e(
-            _e,
+            Ue,
             {
               size: "small",
               component: "a",
               href: "/blog/rss.xml",
               sx: { color: "text.secondary" },
               "aria-label": "RSS feed",
-              children: /* @__PURE__ */ e(ka, { fontSize: "small" })
+              children: /* @__PURE__ */ e(_a, { fontSize: "small" })
             }
           )
         ] })
@@ -7200,7 +8657,7 @@ function Qa({ searchValue: t, onSearch: i, onNavigateAuthors: r, sectionNavEnabl
     }
   );
 }
-const rt = Z([
+const lt = Z([
   {
     label: "Foundations",
     color: "#546e7a",
@@ -7271,13 +8728,13 @@ const rt = Z([
     ]
   }
 ]);
-function Za() {
-  const t = Ne(), i = Ge(t.breakpoints.down("md")), [r, a] = ne({}), s = (c) => {
-    a((u) => ({ ...u, [c]: !u[c] }));
+function Si() {
+  const t = Xe(), r = Qe(t.breakpoints.down("md")), [i, a] = ce({}), s = (n) => {
+    a((d) => ({ ...d, [n]: !d[n] }));
   };
-  return /* @__PURE__ */ n(l, { sx: { mb: 2 }, children: [
+  return /* @__PURE__ */ o(c, { sx: { mb: 2 }, children: [
     /* @__PURE__ */ e(
-      o,
+      l,
       {
         variant: "overline",
         sx: {
@@ -7292,7 +8749,7 @@ function Za() {
       }
     ),
     /* @__PURE__ */ e(
-      o,
+      l,
       {
         variant: "h4",
         fontWeight: 800,
@@ -7305,7 +8762,7 @@ function Za() {
       }
     ),
     /* @__PURE__ */ e(
-      o,
+      l,
       {
         variant: "body1",
         color: "text.secondary",
@@ -7314,89 +8771,89 @@ function Za() {
       }
     ),
     /* @__PURE__ */ e(
-      l,
+      c,
       {
         sx: {
           display: "grid",
-          gridTemplateColumns: i ? "1fr" : "repeat(3, 1fr)",
+          gridTemplateColumns: r ? "1fr" : "repeat(3, 1fr)",
           gap: 0,
           border: "1px solid",
           borderColor: "grey.200",
           borderRadius: 2,
           overflow: "hidden"
         },
-        children: rt.map((c, u) => {
-          const h = i && r[c.label];
-          return /* @__PURE__ */ n(
-            l,
+        children: lt.map((n, d) => {
+          const h = r && i[n.label];
+          return /* @__PURE__ */ o(
+            c,
             {
               sx: {
-                borderBottom: i ? u < rt.length - 1 ? "1px solid" : "none" : u < rt.length - 3 ? "1px solid" : "none",
-                borderRight: i ? "none" : u % 3 !== 2 ? "1px solid" : "none",
+                borderBottom: r ? d < lt.length - 1 ? "1px solid" : "none" : d < lt.length - 3 ? "1px solid" : "none",
+                borderRight: r ? "none" : d % 3 !== 2 ? "1px solid" : "none",
                 borderColor: "grey.200",
                 p: { xs: 2.5, md: 3 }
               },
               children: [
-                /* @__PURE__ */ n(
-                  l,
+                /* @__PURE__ */ o(
+                  c,
                   {
-                    onClick: i ? () => s(c.label) : void 0,
+                    onClick: r ? () => s(n.label) : void 0,
                     sx: {
                       mb: h ? 0 : 2,
                       pb: 1.5,
                       borderBottom: "2px solid",
-                      borderColor: c.color,
-                      cursor: i ? "pointer" : "default"
+                      borderColor: n.color,
+                      cursor: r ? "pointer" : "default"
                     },
                     children: [
-                      /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
+                      /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
                         /* @__PURE__ */ e(
-                          l,
+                          c,
                           {
                             sx: {
                               width: 10,
                               height: 10,
                               borderRadius: "50%",
-                              bgcolor: c.color,
+                              bgcolor: n.color,
                               flexShrink: 0
                             }
                           }
                         ),
                         /* @__PURE__ */ e(
-                          o,
+                          l,
                           {
                             variant: "subtitle2",
                             sx: {
                               fontWeight: 800,
                               fontSize: "0.82rem",
                               letterSpacing: 0.5,
-                              color: c.color,
+                              color: n.color,
                               textTransform: "uppercase",
                               flexGrow: 1
                             },
-                            children: c.label
+                            children: n.label
                           }
                         ),
-                        i && (h ? /* @__PURE__ */ e(ot, { sx: { fontSize: 18, color: "text.secondary" } }) : /* @__PURE__ */ e(Pa, { sx: { fontSize: 18, color: "text.secondary" } }))
+                        r && (h ? /* @__PURE__ */ e(mt, { sx: { fontSize: 18, color: "text.secondary" } }) : /* @__PURE__ */ e(ja, { sx: { fontSize: 18, color: "text.secondary" } }))
                       ] }),
                       /* @__PURE__ */ e(
-                        o,
+                        l,
                         {
                           variant: "caption",
                           sx: { display: "block", mt: 0.75, color: "text.secondary", fontSize: "0.72rem", lineHeight: 1.45 },
-                          children: c.description
+                          children: n.description
                         }
                       )
                     ]
                   }
                 ),
-                /* @__PURE__ */ e(zt, { in: !h, timeout: 200, children: /* @__PURE__ */ e(l, { sx: { display: "flex", flexDirection: "column", gap: 0 }, children: c.nodes.map((d, p) => /* @__PURE__ */ n(
-                  l,
+                /* @__PURE__ */ e(Ht, { in: !h, timeout: 200, children: /* @__PURE__ */ e(c, { sx: { display: "flex", flexDirection: "column", gap: 0 }, children: n.nodes.map((p, u) => /* @__PURE__ */ o(
+                  c,
                   {
                     sx: { display: "flex", alignItems: "stretch" },
                     children: [
                       /* @__PURE__ */ e(
-                        l,
+                        c,
                         {
                           sx: {
                             width: 20,
@@ -7407,7 +8864,7 @@ function Za() {
                               position: "absolute",
                               left: 4,
                               top: 0,
-                              bottom: p === c.nodes.length - 1 ? "50%" : 0,
+                              bottom: u === n.nodes.length - 1 ? "50%" : 0,
                               width: "1.5px",
                               bgcolor: "grey.300"
                             },
@@ -7424,18 +8881,18 @@ function Za() {
                         }
                       ),
                       /* @__PURE__ */ e(
-                        ca,
+                        Ta,
                         {
-                          title: d.tip,
+                          title: p.tip,
                           placement: "right",
                           arrow: !0,
                           enterDelay: 300,
                           leaveDelay: 0,
                           children: /* @__PURE__ */ e(
-                            o,
+                            l,
                             {
                               component: k,
-                              to: `/blog/${d.slug}`,
+                              to: `/blog/${p.slug}`,
                               sx: {
                                 display: "block",
                                 py: 0.6,
@@ -7445,32 +8902,32 @@ function Za() {
                                 lineHeight: 1.4,
                                 textDecoration: "none",
                                 transition: "color 0.12s",
-                                "&:hover": { color: c.color, textDecoration: "underline" }
+                                "&:hover": { color: n.color, textDecoration: "underline" }
                               },
-                              children: d.text
+                              children: p.text
                             }
                           )
                         }
                       )
                     ]
                   },
-                  d.slug
+                  p.slug
                 )) }) })
               ]
             },
-            c.label
+            n.label
           );
         })
       }
     )
   ] });
 }
-const er = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], oe = { scrollMarginTop: "56px" }, de = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
-function tr(t, i, r) {
-  const a = i[t], s = r[t];
+const Wi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], de = { scrollMarginTop: "56px" }, ye = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
+function Oi(t, r, i) {
+  const a = r[t], s = i[t];
   return a === "core-protocol" || (s == null ? void 0 : s.seriesId) === "five-primitives" ? "Core Primitive" : a === "implementation" || (s == null ? void 0 : s.seriesId) === "implementations" ? "Guide" : a === "start-learning" ? "Concept" : (s == null ? void 0 : s.seriesId) === "deployments" || (s == null ? void 0 : s.seriesId) === "pki-for-identity" || (s == null ? void 0 : s.seriesId) === "privacy-and-disclosure" || (s == null ? void 0 : s.seriesId) === "governance" || (s == null ? void 0 : s.seriesId) === "wallets" ? "Guide" : null;
 }
-const ar = {
+const Mi = {
   "Core Primitive": {
     borderLeft: "4px solid",
     borderLeftColor: "#1565c0",
@@ -7490,108 +8947,102 @@ const ar = {
     chipColor: "success"
   }
 };
-function Gt(t) {
-  return t.reduce((i, r) => {
+function ra(t) {
+  return t.reduce((r, i) => {
     var s;
-    const a = (s = r.readTime) == null ? void 0 : s.match(/(\d+)/);
-    return i + (a ? parseInt(a[1], 10) : 0);
+    const a = (s = i.readTime) == null ? void 0 : s.match(/(\d+)/);
+    return r + (a ? parseInt(a[1], 10) : 0);
   }, 0);
 }
-function Ct(t, i) {
-  return i.some((r) => r == null ? void 0 : r.toLowerCase().includes(t));
+function Et(t, r) {
+  return r.some((i) => i == null ? void 0 : i.toLowerCase().includes(t));
 }
-function we(t) {
-  return (t == null ? void 0 : t.trim().toLowerCase()) || "";
+function sa(t, r) {
+  const i = re(t);
+  return r.some((a) => re(a) === i);
 }
-function Kt(t, i) {
-  const r = we(t);
-  return i.some((a) => we(a) === r);
-}
-function Jt(t) {
-  const i = re[t.slug];
+function na(t) {
+  const r = xi[t.slug];
   return [
     .../* @__PURE__ */ new Set([
-      ...ct[t.slug] || [],
-      ...Ut[t.slug] || [],
-      ...i != null && i.topic ? [i.topic] : []
-    ])
-  ];
-}
-function $t(t, i) {
-  var a;
-  const r = ((a = i[t.chapterId]) == null ? void 0 : a.title) || null;
-  return [
-    .../* @__PURE__ */ new Set([
-      ...t.conceptTags || [],
+      ...gt[t.slug] || [],
+      ...Qt[t.slug] || [],
       ...r ? [r] : []
     ])
   ];
 }
-function Yt(t, i) {
-  return Kt(i, Jt(t));
+function oa(t, r) {
+  var a;
+  const i = ((a = r[t.chapterId]) == null ? void 0 : a.title) || null;
+  return [
+    .../* @__PURE__ */ new Set([
+      ...t.conceptTags || [],
+      ...i ? [i] : []
+    ])
+  ];
 }
-function Xt(t, i, r) {
-  return Kt(r, $t(t, i));
+function la(t, r) {
+  return sa(r, na(t));
 }
-function rr(t) {
-  return t ? `/blog?tag=${encodeURIComponent(t)}` : "/blog";
+function ca(t, r, i) {
+  return sa(i, oa(t, r));
 }
-function ir(t, i, r, a) {
+function qi(t, r, i, a) {
   if (!t.trim()) return null;
-  const s = t.toLowerCase(), c = Object.fromEntries(a.map((p) => [p.id, p])), u = i.filter((p) => Ct(s, [p.title, p.summary, p.category])).map((p) => ({
+  const s = t.toLowerCase(), n = Object.fromEntries(a.map((u) => [u.id, u])), d = r.filter((u) => Et(s, [u.title, u.summary, u.category])).map((u) => ({
+    kind: "post",
+    slug: u.slug,
+    item: u
+  })), h = new Set(d.map((u) => u.slug)), p = i.filter((u) => !h.has(u.slug)).filter((u) => {
+    const g = n[u.chapterId];
+    return Et(s, [
+      u.title,
+      u.summary,
+      g == null ? void 0 : g.title,
+      ...u.conceptTags || []
+    ]);
+  }).map((u) => {
+    var g;
+    return {
+      kind: "guide",
+      slug: u.slug,
+      item: u,
+      chapterTitle: ((g = n[u.chapterId]) == null ? void 0 : g.title) || null
+    };
+  });
+  return [...d, ...p];
+}
+function Ei(t, r, i, a) {
+  if (!t.trim()) return null;
+  const s = Object.fromEntries(a.map((p) => [p.id, p])), n = r.filter((p) => la(p, t)).map((p) => ({
     kind: "post",
     slug: p.slug,
     item: p
-  })), h = new Set(u.map((p) => p.slug)), d = r.filter((p) => !h.has(p.slug)).filter((p) => {
-    const y = c[p.chapterId];
-    return Ct(s, [
-      p.title,
-      p.summary,
-      y == null ? void 0 : y.title,
-      ...p.conceptTags || []
-    ]);
-  }).map((p) => {
-    var y;
+  })), d = new Set(n.map((p) => p.slug)), h = i.filter((p) => !d.has(p.slug)).filter((p) => ca(p, s, t)).map((p) => {
+    var u;
     return {
       kind: "guide",
       slug: p.slug,
       item: p,
-      chapterTitle: ((y = c[p.chapterId]) == null ? void 0 : y.title) || null
+      chapterTitle: ((u = s[p.chapterId]) == null ? void 0 : u.title) || null
     };
   });
-  return [...u, ...d];
+  return [...n, ...h];
 }
-function sr(t, i, r, a) {
-  if (!t.trim()) return null;
-  const s = Object.fromEntries(a.map((d) => [d.id, d])), c = i.filter((d) => Yt(d, t)).map((d) => ({
-    kind: "post",
-    slug: d.slug,
-    item: d
-  })), u = new Set(c.map((d) => d.slug)), h = r.filter((d) => !u.has(d.slug)).filter((d) => Xt(d, s, t)).map((d) => {
-    var p;
-    return {
-      kind: "guide",
-      slug: d.slug,
-      item: d,
-      chapterTitle: ((p = s[d.chapterId]) == null ? void 0 : p.title) || null
-    };
-  });
-  return [...c, ...h];
-}
-function nr(t, i, r) {
-  const a = Object.fromEntries(r.map((u) => [u.id, u])), s = /* @__PURE__ */ new Map(), c = (u) => {
-    u && s.set(u, (s.get(u) || 0) + 1);
+function zi(t, r, i) {
+  const a = Object.fromEntries(i.map((d) => [d.id, d])), s = /* @__PURE__ */ new Map(), n = (d) => {
+    d && s.set(d, (s.get(d) || 0) + 1);
   };
-  return t.forEach((u) => {
-    Jt(u).forEach(c);
-  }), i.forEach((u) => {
-    $t(u, a).forEach(c);
-  }), [...s.entries()].map(([u, h]) => ({ tag: u, count: h })).sort((u, h) => h.count - u.count || u.tag.localeCompare(h.tag)).slice(0, 14);
+  return t.forEach((d) => {
+    na(d).forEach(n);
+  }), r.forEach((d) => {
+    oa(d, a).forEach(n);
+  }), [...s.entries()].map(([d, h]) => ({ tag: d, count: h })).sort((d, h) => h.count - d.count || d.tag.localeCompare(h.tag));
 }
-function or(t, i, r) {
-  return t.kind === "post" ? Yt(t.item, i) : Xt(t.item, r, i);
+function _i(t, r, i) {
+  return t.kind === "post" ? la(t.item, r) : ca(t.item, i, r);
 }
-const Qt = [
+const ha = [
   { id: "start-here", verb: "Learn", label: "Start Here" },
   { id: "system-map", verb: "Map", label: "System Map" },
   { id: "five-primitives", verb: "Protocol", label: "Five Primitives" },
@@ -7600,14 +9051,14 @@ const Qt = [
   { id: "deployment", verb: "Deploy", label: "Deployment Patterns" },
   { id: "governance", verb: "Govern", label: "Governance" },
   { id: "latest", verb: "Archive", label: "Latest" }
-], ve = {
+], Te = {
   "five-primitives": ["five-primitives"],
   implementation: ["implementations"],
   "trust-pki": ["pki-for-identity"],
   "privacy-disclosure": ["privacy-and-disclosure"],
   deployment: ["deployments"],
   governance: ["governance", "wallets"]
-}, St = [
+}, zt = [
   { verb: "Learn", label: "Start Here", target: "start-here" },
   { verb: "Map", label: "System Map", target: "system-map" },
   { verb: "Understand", label: "Five Primitives", target: "five-primitives" },
@@ -7615,16 +9066,16 @@ const Qt = [
   { verb: "Secure", label: "PKI & Trust", target: "trust-pki" },
   { verb: "Deploy", label: "Deployment Patterns", target: "deployment" },
   { verb: "Govern", label: "Governance", target: "governance" }
-], lr = {
+], Ri = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function cr({ article: t }) {
+function ji({ article: t }) {
   return /* @__PURE__ */ e(
-    Ae,
+    Me,
     {
       elevation: 1,
       sx: {
@@ -7636,15 +9087,15 @@ function cr({ article: t }) {
         "&:hover": { transform: "translateY(-3px)", boxShadow: 5 }
       },
       children: /* @__PURE__ */ e(
-        Ce,
+        qe,
         {
           component: k,
           to: `/blog/${t.slug}`,
           sx: { flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "stretch" },
-          children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1, p: 2.5 }, children: [
-            /* @__PURE__ */ e(o, { variant: "subtitle2", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35 }, children: t.title }),
+          children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 2.5 }, children: [
+            /* @__PURE__ */ e(l, { variant: "subtitle2", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35 }, children: t.title }),
             /* @__PURE__ */ e(
-              o,
+              l,
               {
                 variant: "body2",
                 color: "text.secondary",
@@ -7658,9 +9109,9 @@ function cr({ article: t }) {
     }
   );
 }
-function hr({ article: t, chapterTitle: i }) {
+function Bi({ article: t, chapterTitle: r }) {
   return /* @__PURE__ */ e(
-    Ae,
+    Me,
     {
       elevation: 1,
       sx: {
@@ -7676,30 +9127,30 @@ function hr({ article: t, chapterTitle: i }) {
         "&:hover": { transform: "translateY(-3px)", boxShadow: 5 }
       },
       children: /* @__PURE__ */ e(
-        Ce,
+        qe,
         {
           component: k,
           to: `/blog/${t.slug}`,
           sx: { flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "stretch" },
-          children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1, p: 2.5 }, children: [
-            /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: [
+          children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 2.5 }, children: [
+            /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: [
               /* @__PURE__ */ e(T, { label: "Guide", size: "small", color: "secondary", sx: { fontWeight: 700, fontSize: "0.68rem" } }),
-              i && /* @__PURE__ */ e(T, { label: i, size: "small", variant: "outlined", sx: { fontWeight: 600, fontSize: "0.68rem" } }),
+              r && /* @__PURE__ */ e(T, { label: r, size: "small", variant: "outlined", sx: { fontWeight: 600, fontSize: "0.68rem" } }),
               /* @__PURE__ */ e(T, { label: t.readTime, size: "small", variant: "outlined", sx: { fontWeight: 600, fontSize: "0.68rem" } })
             ] }),
-            /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35, fontSize: "1.05rem" }, children: t.title }),
-            /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.6, fontSize: "0.84rem" }, children: t.summary })
+            /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35, fontSize: "1.05rem" }, children: t.title }),
+            /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.6, fontSize: "0.84rem" }, children: t.summary })
           ] })
         }
       )
     }
   );
 }
-function dr({ availableTags: t, activeTag: i }) {
-  if (!t.length && !i) return null;
-  const r = we(i), a = r && !t.some(({ tag: s }) => we(s) === r) ? [{ tag: i, count: 0 }, ...t] : t;
-  return /* @__PURE__ */ n(
-    l,
+function Li({ availableTags: t, activeTag: r }) {
+  if (!t.length && !r) return null;
+  const i = re(r), a = i && !t.some(({ tag: s }) => re(s) === i) ? [{ tag: r, count: 0 }, ...t] : t;
+  return /* @__PURE__ */ o(
+    c,
     {
       sx: {
         mb: 3,
@@ -7710,19 +9161,19 @@ function dr({ availableTags: t, activeTag: i }) {
         bgcolor: "grey.50"
       },
       children: [
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap", mb: 1 }, children: [
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap", mb: 1 }, children: [
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               variant: "overline",
               sx: { fontWeight: 800, letterSpacing: 1.5, fontSize: "0.65rem", color: "text.disabled" },
               children: "Filter by Tag"
             }
           ),
-          i && /* @__PURE__ */ e(_, { component: k, to: "/blog", size: "small", sx: { ml: "auto", fontWeight: 700 }, children: "Clear filter" })
+          r && /* @__PURE__ */ e(z, { component: k, to: "/blog", size: "small", sx: { ml: "auto", fontWeight: 700 }, children: "Clear filter" })
         ] }),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.6 }, children: "Jump straight to a protocol, standard, or topic without paging through the full archive." }),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: [
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.6 }, children: "Jump straight to a protocol, standard, or topic without paging through the full archive." }),
+        /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: [
           /* @__PURE__ */ e(
             T,
             {
@@ -7730,20 +9181,20 @@ function dr({ availableTags: t, activeTag: i }) {
               clickable: !0,
               component: k,
               to: "/blog",
-              color: i ? "default" : "primary",
-              variant: i ? "outlined" : "filled",
+              color: r ? "default" : "primary",
+              variant: r ? "outlined" : "filled",
               sx: { fontWeight: 700 }
             }
           ),
-          a.map(({ tag: s, count: c }) => /* @__PURE__ */ e(
+          a.map(({ tag: s, count: n }) => /* @__PURE__ */ e(
             T,
             {
-              label: c ? `${s} (${c})` : s,
+              label: n ? `${s} (${n})` : s,
               clickable: !0,
               component: k,
-              to: rr(s),
-              color: we(s) === r ? "primary" : "default",
-              variant: we(s) === r ? "filled" : "outlined",
+              to: We(s),
+              color: re(s) === i ? "primary" : "default",
+              variant: re(s) === i ? "filled" : "outlined",
               sx: { fontWeight: 600 }
             },
             s
@@ -7753,10 +9204,10 @@ function dr({ availableTags: t, activeTag: i }) {
     }
   );
 }
-function pr() {
-  const [t, i] = ne(1), r = Ve[t] || [];
-  return /* @__PURE__ */ n(
-    l,
+function Vi() {
+  const [t, r] = ce(1), i = $e[t] || [];
+  return /* @__PURE__ */ o(
+    c,
     {
       sx: {
         mb: 4,
@@ -7767,19 +9218,19 @@ function pr() {
         borderColor: "primary.100"
       },
       children: [
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
-          /* @__PURE__ */ e(st, { color: "primary" }),
-          /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 800, color: "primary.dark", children: "Structured Guide" })
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
+          /* @__PURE__ */ e(ut, { color: "primary" }),
+          /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, color: "primary.dark", children: "Structured Guide" })
         ] }),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 3, ml: 4.5 }, children: "Six chapters of progressive learning - pick up where your series knowledge leaves off." }),
-        /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, mb: 3, flexWrap: "wrap" }, children: ce.map((a) => /* @__PURE__ */ e(
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 3, ml: 4.5 }, children: "Six chapters of progressive learning - pick up where your series knowledge leaves off." }),
+        /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, mb: 3, flexWrap: "wrap" }, children: ue.map((a) => /* @__PURE__ */ e(
           T,
           {
             label: `${a.id}. ${a.title}`,
             clickable: !0,
             color: t === a.id ? "primary" : "default",
             variant: t === a.id ? "filled" : "outlined",
-            onClick: () => i(a.id),
+            onClick: () => r(a.id),
             sx: {
               fontWeight: t === a.id ? 700 : 500,
               bgcolor: t === a.id ? void 0 : "background.paper"
@@ -7787,15 +9238,15 @@ function pr() {
           },
           a.id
         )) }),
-        /* @__PURE__ */ e(U, { container: !0, spacing: 2, children: r.map((a) => /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 3, children: /* @__PURE__ */ e(cr, { article: a }) }, a.slug)) })
+        /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: i.map((a) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 3, children: /* @__PURE__ */ e(ji, { article: a }) }, a.slug)) })
       ]
     }
   );
 }
-function Ue({ post: t, featured: i = !1 }) {
-  const r = Ie[t.authorId] || {}, a = t.date > er, s = new Date(t.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), c = t.updatedDate ? new Date(t.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : null, u = We[t.slug], h = ct[t.slug] || [], d = tr(t.slug, dt, We), p = d ? ar[d] : null;
-  return i ? /* @__PURE__ */ n(
-    l,
+function Ye({ post: t, featured: r = !1 }) {
+  const i = De[t.authorId] || {}, a = t.date > Wi, s = new Date(t.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), n = t.updatedDate ? new Date(t.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : null, d = Be[t.slug], h = gt[t.slug] || [], p = Oi(t.slug, vt, Be), u = p ? Mi[p] : null;
+  return r ? /* @__PURE__ */ o(
+    c,
     {
       component: k,
       to: `/blog/${t.slug}`,
@@ -7813,7 +9264,7 @@ function Ue({ post: t, featured: i = !1 }) {
       },
       children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: {
@@ -7828,7 +9279,7 @@ function Ue({ post: t, featured: i = !1 }) {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "h3",
             fontWeight: 900,
@@ -7841,7 +9292,7 @@ function Ue({ post: t, featured: i = !1 }) {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "body1",
             sx: {
@@ -7854,20 +9305,20 @@ function Ue({ post: t, featured: i = !1 }) {
             children: t.summary
           }
         ),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }, children: [
-          /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5 }, children: [
-            /* @__PURE__ */ e(ke, { src: r.avatarImage, sx: { width: 36, height: 36, bgcolor: "primary.light", fontSize: "0.8rem" }, children: r.avatar }),
-            /* @__PURE__ */ n(l, { children: [
-              /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 600, sx: { color: "common.white" }, children: r.name }),
-              /* @__PURE__ */ n(o, { variant: "caption", sx: { color: "rgba(255,255,255,0.5)" }, children: [
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }, children: [
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5 }, children: [
+            /* @__PURE__ */ e(Ce, { src: i.avatarImage, sx: { width: 36, height: 36, bgcolor: "primary.light", fontSize: "0.8rem" }, children: i.avatar }),
+            /* @__PURE__ */ o(c, { children: [
+              /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, sx: { color: "common.white" }, children: i.name }),
+              /* @__PURE__ */ o(l, { variant: "caption", sx: { color: "rgba(255,255,255,0.5)" }, children: [
                 s,
                 " | ",
                 t.readTime
               ] })
             ] })
           ] }),
-          /* @__PURE__ */ n(
-            l,
+          /* @__PURE__ */ o(
+            c,
             {
               component: "span",
               sx: {
@@ -7883,7 +9334,7 @@ function Ue({ post: t, featured: i = !1 }) {
                 color: "common.white"
               },
               children: [
-                /* @__PURE__ */ e(o, { component: "span", variant: "body2", sx: { color: "inherit", fontWeight: 700 }, children: "Read article" }),
+                /* @__PURE__ */ e(l, { component: "span", variant: "body2", sx: { color: "inherit", fontWeight: 700 }, children: "Read article" }),
                 /* @__PURE__ */ e(Q, { sx: { fontSize: "1rem" } })
               ]
             }
@@ -7892,7 +9343,7 @@ function Ue({ post: t, featured: i = !1 }) {
       ]
     }
   ) : /* @__PURE__ */ e(
-    Ae,
+    Me,
     {
       elevation: 1,
       sx: {
@@ -7904,48 +9355,48 @@ function Ue({ post: t, featured: i = !1 }) {
         borderColor: "grey.200",
         transition: "all 0.2s",
         "&:hover": { transform: "translateY(-4px)", boxShadow: 6 },
-        ...p ? {
-          borderLeft: p.borderLeft,
-          borderLeftColor: p.borderLeftColor,
-          bgcolor: p.bgcolor
+        ...u ? {
+          borderLeft: u.borderLeft,
+          borderLeftColor: u.borderLeftColor,
+          bgcolor: u.bgcolor
         } : {}
       },
       children: /* @__PURE__ */ e(
-        Ce,
+        qe,
         {
           component: k,
           to: `/blog/${t.slug}`,
           sx: { flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "stretch" },
-          children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1, p: 3 }, children: [
-            /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: [
-              d && /* @__PURE__ */ e(
+          children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 3 }, children: [
+            /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: [
+              p && /* @__PURE__ */ e(
                 T,
                 {
-                  label: d,
+                  label: p,
                   size: "small",
-                  color: (p == null ? void 0 : p.chipColor) || "default",
+                  color: (u == null ? void 0 : u.chipColor) || "default",
                   sx: { fontWeight: 700, fontSize: "0.68rem" }
                 }
               ),
-              /* @__PURE__ */ e(T, { label: t.category, size: "small", color: lr[t.category] || "default", variant: "outlined", sx: { fontWeight: 600 } }),
-              u && /* @__PURE__ */ e(T, { label: u.seriesTitle, size: "small", variant: "outlined", sx: { fontSize: "0.7rem", fontWeight: 600 } }),
-              h.map((y) => /* @__PURE__ */ e(T, { label: y, size: "small", variant: "outlined", sx: { fontFamily: "monospace", fontSize: "0.65rem", fontWeight: 600, borderColor: "info.main", color: "info.main" } }, y)),
+              /* @__PURE__ */ e(T, { label: t.category, size: "small", color: Ri[t.category] || "default", variant: "outlined", sx: { fontWeight: 600 } }),
+              d && /* @__PURE__ */ e(T, { label: d.seriesTitle, size: "small", variant: "outlined", sx: { fontSize: "0.7rem", fontWeight: 600 } }),
+              h.map((g) => /* @__PURE__ */ e(T, { label: g, size: "small", variant: "outlined", sx: { fontFamily: "monospace", fontSize: "0.65rem", fontWeight: 600, borderColor: "info.main", color: "info.main" } }, g)),
               a && /* @__PURE__ */ e(T, { label: "Update Pending", size: "small", sx: { bgcolor: "warning.50", color: "warning.dark", fontWeight: 600, fontSize: "0.68rem" } })
             ] }),
-            /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35, fontSize: "1.15rem" }, children: t.title }),
-            /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2.5, lineHeight: 1.65, fontSize: "0.875rem" }, children: t.summary }),
-            /* @__PURE__ */ e(ee, { sx: { mb: 2 } }),
-            /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
-              /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-                /* @__PURE__ */ e(ke, { src: r.avatarImage, sx: { width: 26, height: 26, fontSize: "0.7rem", bgcolor: "primary.main" }, children: r.avatar || "?" }),
-                /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", noWrap: !0, sx: { fontSize: "0.75rem" }, children: [
-                  r.name || t.authorId,
+            /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35, fontSize: "1.15rem" }, children: t.title }),
+            /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2.5, lineHeight: 1.65, fontSize: "0.875rem" }, children: t.summary }),
+            /* @__PURE__ */ e(se, { sx: { mb: 2 } }),
+            /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
+              /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
+                /* @__PURE__ */ e(Ce, { src: i.avatarImage, sx: { width: 26, height: 26, fontSize: "0.7rem", bgcolor: "primary.main" }, children: i.avatar || "?" }),
+                /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", noWrap: !0, sx: { fontSize: "0.75rem" }, children: [
+                  i.name || t.authorId,
                   " | ",
                   s,
-                  c ? ` | Upd. ${c}` : ""
+                  n ? ` | Upd. ${n}` : ""
                 ] })
               ] }),
-              /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { flexShrink: 0, fontStyle: "italic", fontSize: "0.75rem" }, children: t.readTime })
+              /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { flexShrink: 0, fontStyle: "italic", fontSize: "0.75rem" }, children: t.readTime })
             ] })
           ] })
         }
@@ -7953,14 +9404,14 @@ function Ue({ post: t, featured: i = !1 }) {
     }
   );
 }
-function be({ title: t, description: i, posts: r }) {
-  if (!r.length) return null;
-  const a = Gt(r);
-  return /* @__PURE__ */ n(l, { sx: { mb: 5 }, children: [
-    t && /* @__PURE__ */ n(l, { sx: { mb: 3 }, children: [
-      /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
+function ke({ title: t, description: r, posts: i }) {
+  if (!i.length) return null;
+  const a = ra(i);
+  return /* @__PURE__ */ o(c, { sx: { mb: 5 }, children: [
+    t && /* @__PURE__ */ o(c, { sx: { mb: 3 }, children: [
+      /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "h4",
             fontWeight: 800,
@@ -7971,23 +9422,23 @@ function be({ title: t, description: i, posts: r }) {
         /* @__PURE__ */ e(
           T,
           {
-            label: `${r.length} article${r.length !== 1 ? "s" : ""} | ~${a} min`,
+            label: `${i.length} article${i.length !== 1 ? "s" : ""} | ~${a} min`,
             size: "small",
             variant: "outlined",
             sx: { fontWeight: 700, fontSize: "0.72rem", borderColor: "grey.400" }
           }
         )
       ] }),
-      i && /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: i })
+      r && /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: r })
     ] }),
-    /* @__PURE__ */ e(U, { container: !0, spacing: 2.5, children: r.map((s) => /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(Ue, { post: s }) }, s.slug)) })
+    /* @__PURE__ */ e(G, { container: !0, spacing: 2.5, children: i.map((s) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(Ye, { post: s }) }, s.slug)) })
   ] });
 }
-function ur({ articles: t }) {
-  const [i, r] = ne(9);
-  return /* @__PURE__ */ n(l, { sx: { mb: 6 }, children: [
-    /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "baseline", gap: 2, mb: 1 }, children: [
-      /* @__PURE__ */ e(o, { variant: "h4", fontWeight: 800, sx: { fontSize: { xs: "1.5rem", md: "1.85rem" } }, children: "Latest" }),
+function Fi({ articles: t }) {
+  const [r, i] = ce(9);
+  return /* @__PURE__ */ o(c, { sx: { mb: 6 }, children: [
+    /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, mb: 1 }, children: [
+      /* @__PURE__ */ e(l, { variant: "h4", fontWeight: 800, sx: { fontSize: { xs: "1.5rem", md: "1.85rem" } }, children: "Latest" }),
       /* @__PURE__ */ e(
         T,
         {
@@ -7998,14 +9449,14 @@ function ur({ articles: t }) {
         }
       )
     ] }),
-    /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { mb: 4, fontSize: "1rem" }, children: "All articles in reverse-chronological order." }),
-    /* @__PURE__ */ e(U, { container: !0, spacing: 2.5, children: t.slice(0, i).map((a) => /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(Ue, { post: a }) }, a.slug)) }),
-    t.length > i && /* @__PURE__ */ e(l, { sx: { textAlign: "center", mt: 5 }, children: /* @__PURE__ */ e(_, { variant: "outlined", onClick: () => r((a) => a + 9), children: "Load More" }) })
+    /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mb: 4, fontSize: "1rem" }, children: "All articles in reverse-chronological order." }),
+    /* @__PURE__ */ e(G, { container: !0, spacing: 2.5, children: t.slice(0, r).map((a) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(Ye, { post: a }) }, a.slug)) }),
+    t.length > r && /* @__PURE__ */ e(c, { sx: { textAlign: "center", mt: 5 }, children: /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => i((a) => a + 9), children: "Load More" }) })
   ] });
 }
-function mr({ activeSection: t }) {
+function Ui({ activeSection: t }) {
   return /* @__PURE__ */ e(
-    l,
+    c,
     {
       component: "nav",
       "aria-label": "Section navigation",
@@ -8018,14 +9469,14 @@ function mr({ activeSection: t }) {
         flexShrink: 0,
         pr: 3
       },
-      children: Qt.map((i) => {
-        const r = t === i.id;
-        return /* @__PURE__ */ n(
-          l,
+      children: ha.map((r) => {
+        const i = t === r.id;
+        return /* @__PURE__ */ o(
+          c,
           {
             component: "a",
-            href: `#${i.id}`,
-            "aria-current": r ? "location" : void 0,
+            href: `#${r.id}`,
+            "aria-current": i ? "location" : void 0,
             sx: {
               display: "block",
               cursor: "pointer",
@@ -8033,14 +9484,14 @@ function mr({ activeSection: t }) {
               pl: 2,
               color: "inherit",
               borderLeft: "2px solid",
-              borderColor: r ? "primary.main" : "grey.200",
+              borderColor: i ? "primary.main" : "grey.200",
               textDecoration: "none",
               transition: "all 0.15s",
               "&:hover": { borderColor: "primary.light" }
             },
             children: [
               /* @__PURE__ */ e(
-                o,
+                l,
                 {
                   variant: "caption",
                   sx: {
@@ -8049,112 +9500,129 @@ function mr({ activeSection: t }) {
                     textTransform: "uppercase",
                     letterSpacing: 1,
                     fontSize: "0.6rem",
-                    color: r ? "primary.main" : "text.disabled",
+                    color: i ? "primary.main" : "text.disabled",
                     mb: 0.25
                   },
-                  children: i.verb
+                  children: r.verb
                 }
               ),
               /* @__PURE__ */ e(
-                o,
+                l,
                 {
                   variant: "body2",
                   sx: {
-                    fontWeight: r ? 700 : 500,
+                    fontWeight: i ? 700 : 500,
                     fontSize: "0.82rem",
-                    color: r ? "text.primary" : "text.secondary",
+                    color: i ? "text.primary" : "text.secondary",
                     lineHeight: 1.3
                   },
-                  children: i.label
+                  children: r.label
                 }
               )
             ]
           },
-          i.id
+          r.id
         );
       })
     }
   );
 }
-function ui() {
-  const t = Ke(), [i] = ga(), [r, a] = ne(""), [s, c] = ne("start-here"), u = Ne(), h = Ge(u.breakpoints.up("lg")), d = i.get("tag") || "", p = Y(
-    () => Object.fromEntries(ce.map((j) => [j.id, j])),
+function Lr() {
+  const t = Ze(), { tag: r } = et(), [i] = Sa(), [a, s] = ce(""), [n, d] = ce("start-here"), h = Xe(), p = Qe(h.breakpoints.up("lg")), u = ki(r) || re(i.get("tag") || ""), g = J(
+    () => Object.fromEntries(ue.map((P) => [P.id, P])),
     []
   );
-  Pe(() => {
-    const j = new IntersectionObserver(
-      (ae) => {
-        for (const K of ae)
-          K.isIntersecting && c(K.target.id);
+  Oe(() => {
+    const P = new IntersectionObserver(
+      (oe) => {
+        for (const y of oe)
+          y.isIntersecting && d(y.target.id);
       },
       { rootMargin: "-80px 0px -70% 0px" }
-    ), te = setTimeout(() => {
-      Qt.forEach(({ id: ae }) => {
-        const K = document.getElementById(ae);
-        K && j.observe(K);
+    ), ae = setTimeout(() => {
+      ha.forEach(({ id: oe }) => {
+        const y = document.getElementById(oe);
+        y && P.observe(y);
       });
     }, 200);
     return () => {
-      clearTimeout(te), j.disconnect();
+      clearTimeout(ae), P.disconnect();
     };
   }, []);
-  const y = aa((j) => j.flatMap((te) => {
-    const ae = ht.find((K) => K.id === te);
-    return ae ? ae.slugs.map((K) => H.find((Me) => Me.slug === K)).filter((K) => K && De(K.slug)) : [];
-  }), []), m = Y(
-    () => Fe(H).find((j) => dt[j.slug] === "featured"),
+  const m = ya((P) => P.flatMap((ae) => {
+    const oe = ft.find((y) => y.id === ae);
+    return oe ? oe.slugs.map((y) => me.find((w) => w.slug === y)).filter((y) => y && tt(y.slug)) : [];
+  }), []), v = J(
+    () => Se(me).find((P) => vt[P.slug] === "featured"),
     []
-  ), w = Y(() => y(ve["five-primitives"]), [y]), O = Y(() => y(ve.implementation), [y]), x = Y(() => y(ve["trust-pki"]), [y]), D = Y(() => y(ve["privacy-disclosure"]), [y]), M = Y(() => y(ve.deployment), [y]), N = Y(() => y(ve.governance), [y]), J = Y(
-    () => [...Fe(H)].sort((j, te) => new Date(te.date) - new Date(j.date)),
+  ), O = J(() => m(Te["five-primitives"]), [m]), _ = J(() => m(Te.implementation), [m]), x = J(() => m(Te["trust-pki"]), [m]), R = J(() => m(Te["privacy-disclosure"]), [m]), U = J(() => m(Te.deployment), [m]), N = J(() => m(Te.governance), [m]), I = J(
+    () => [...Se(me)].sort((P, ae) => new Date(ae.date) - new Date(P.date)),
     []
-  ), L = Y(() => ir(r, J, xe, ce), [r, J]), F = Y(() => d ? sr(d, J, xe, ce) : null, [d, J]), v = Y(() => nr(J, xe, ce), [J]), G = Y(() => L ? d ? L.filter((j) => or(j, d, p)) : L : F, [d, p, L, F]), pe = O, Oe = Gt(pe);
-  return /* @__PURE__ */ n(l, { children: [
+  ), j = J(() => qi(a, I, Pe, ue), [a, I]), f = J(() => u ? Ei(u, I, Pe, ue) : null, [u, I]), ee = J(() => zi(I, Pe, ue), [I]), _e = J(() => ee.slice(0, 14), [ee]), H = J(() => Ii(u, ee.map(({ tag: P }) => P)) || u, [ee, u]), K = J(() => j ? H ? j.filter((P) => _i(P, H, g)) : j : f, [H, g, j, f]), ge = _, xe = ra(ge), he = !!j, Re = !he && H ? `${H} Articles - Marty Identity Protocol Blog` : "Blog - Marty Identity Protocol", ne = !he && H ? `${(K == null ? void 0 : K.length) || 0} Marty Identity Protocol articles and guide chapters tagged ${H}.` : "Concepts, standards, and implementation guides for verifiable identity systems.", je = !he && H ? We(H) : "/blog", te = J(() => dt(!he && H ? {
+    name: `${H} Articles`,
+    description: ne,
+    url: `https://elevenidllc.com${We(H)}`,
+    items: (K || []).slice(0, 24).map((P) => ({
+      name: P.item.title,
+      url: `https://elevenidllc.com/blog/${P.slug}`
+    }))
+  } : {
+    name: "Marty Identity Protocol Blog",
+    description: "Concepts, standards, and implementation guides for verifiable identity systems.",
+    url: "https://elevenidllc.com/blog",
+    items: I.slice(0, 24).map((P) => ({
+      name: P.title,
+      url: `https://elevenidllc.com/blog/${P.slug}`
+    }))
+  }), [H, K, he, I, ne]);
+  return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
-        title: "Blog - Marty Identity Protocol",
-        description: "Concepts, standards, and implementation guides for verifiable identity systems.",
-        canonicalPath: "/blog",
-        keywords: ["MIP blog", "identity protocol", "open standard", "verifiable credentials", "digital identity"]
+        title: Re,
+        description: ne,
+        canonicalPath: je,
+        keywords: H ? ["MIP blog", H, "identity protocol", "verifiable credentials"] : ["MIP blog", "identity protocol", "open standard", "verifiable credentials", "digital identity"],
+        structuredData: te
       }
     ),
     /* @__PURE__ */ e(
-      Qa,
+      Di,
       {
-        searchValue: r,
-        onSearch: a,
+        searchValue: a,
+        onSearch: s,
         onNavigateAuthors: () => t("/authors"),
-        sectionNavEnabled: !G
+        sectionNavEnabled: !K
       }
     ),
     /* @__PURE__ */ e(
-      dr,
+      Li,
       {
-        availableTags: v,
-        activeTag: d
+        availableTags: _e,
+        activeTag: H
       }
     ),
-    G ? /* @__PURE__ */ n(l, { sx: { mb: 4 }, children: [
-      /* @__PURE__ */ e(o, { variant: "overline", sx: { display: "block", mb: 0.5, fontWeight: 800, letterSpacing: 1.5, fontSize: "0.65rem", color: "text.disabled" }, children: L ? "Search results" : "Filtered archive" }),
-      /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, sx: { mb: 0.75 }, children: L ? `${G.length} result${G.length !== 1 ? "s" : ""} for "${r}"${d ? ` in ${d}` : ""}` : `Results for "${d}"` }),
-      !L && /* @__PURE__ */ n(o, { variant: "body2", color: "text.secondary", sx: { mb: 2 }, children: [
-        G.length,
+    K ? /* @__PURE__ */ o(c, { sx: { mb: 4 }, children: [
+      /* @__PURE__ */ e(l, { variant: "overline", sx: { display: "block", mb: 0.5, fontWeight: 800, letterSpacing: 1.5, fontSize: "0.65rem", color: "text.disabled" }, children: j ? "Search results" : "Filtered archive" }),
+      /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, sx: { mb: 0.75 }, children: j ? `${K.length} result${K.length !== 1 ? "s" : ""} for "${a}"${H ? ` in ${H}` : ""}` : `Results for "${H}"` }),
+      !j && /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { mb: 2 }, children: [
+        K.length,
         " published article",
-        G.length !== 1 ? "s and guide chapters" : "",
+        K.length !== 1 ? "s and guide chapters" : "",
         " currently match this tag."
       ] }),
-      G.length > 0 ? /* @__PURE__ */ e(U, { container: !0, spacing: 2, children: G.map((j) => /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: j.kind === "guide" ? /* @__PURE__ */ e(
-        hr,
+      K.length > 0 ? /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: K.map((P) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: P.kind === "guide" ? /* @__PURE__ */ e(
+        Bi,
         {
-          article: j.item,
-          chapterTitle: j.chapterTitle
+          article: P.item,
+          chapterTitle: P.chapterTitle
         }
-      ) : /* @__PURE__ */ e(Ue, { post: j.item }) }, `${j.kind}:${j.slug}`)) }) : /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { textAlign: "center", py: 6 }, children: L ? 'No articles or guide chapters match the current search and tag filter. Try "trust profiles", "OID4VCI", or "deployment".' : `No published articles or guide chapters match the "${d}" tag yet.` })
-    ] }) : /* @__PURE__ */ n(He, { children: [
-      /* @__PURE__ */ n(l, { id: "overview", sx: oe, children: [
-        /* @__PURE__ */ e($a, {}),
+      ) : /* @__PURE__ */ e(Ye, { post: P.item }) }, `${P.kind}:${P.slug}`)) }) : /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { textAlign: "center", py: 6 }, children: j ? 'No articles or guide chapters match the current search and tag filter. Try "trust profiles", "OID4VCI", or "deployment".' : `No published articles or guide chapters match the "${H}" tag yet.` })
+    ] }) : /* @__PURE__ */ o(Le, { children: [
+      /* @__PURE__ */ o(c, { id: "overview", sx: de, children: [
+        /* @__PURE__ */ e(Pi, {}),
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             sx: {
               display: "flex",
@@ -8169,11 +9637,11 @@ function ui() {
               border: "1px solid",
               borderColor: "grey.200"
             },
-            children: St.map((j, te) => /* @__PURE__ */ n(
-              l,
+            children: zt.map((P, ae) => /* @__PURE__ */ o(
+              c,
               {
                 component: "a",
-                href: `#${j.target}`,
+                href: `#${P.target}`,
                 sx: {
                   display: "flex",
                   alignItems: "center",
@@ -8185,56 +9653,56 @@ function ui() {
                 },
                 children: [
                   /* @__PURE__ */ e(
-                    o,
+                    l,
                     {
                       variant: "caption",
                       fontWeight: 800,
                       color: "primary.main",
                       sx: { textTransform: "uppercase", fontSize: "0.7rem" },
-                      children: j.verb
+                      children: P.verb
                     }
                   ),
                   /* @__PURE__ */ e(
-                    o,
+                    l,
                     {
                       className: "section-label",
                       variant: "caption",
                       color: "text.secondary",
                       sx: { fontWeight: 600, fontSize: "0.75rem", transition: "color 0.15s" },
-                      children: j.label
+                      children: P.label
                     }
                   ),
-                  te < St.length - 1 && /* @__PURE__ */ e(o, { variant: "caption", color: "grey.400", sx: { ml: { xs: 0.5, md: 1 } }, children: "->" })
+                  ae < zt.length - 1 && /* @__PURE__ */ e(l, { variant: "caption", color: "grey.400", sx: { ml: { xs: 0.5, md: 1 } }, children: "->" })
                 ]
               },
-              j.target
+              P.target
             ))
           }
         )
       ] }),
-      /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0 }, children: [
-        h && /* @__PURE__ */ e(mr, { activeSection: s }),
-        /* @__PURE__ */ n(l, { sx: { flexGrow: 1, minWidth: 0 }, children: [
-          /* @__PURE__ */ e(l, { id: "start-here", sx: { ...oe, ...de }, children: /* @__PURE__ */ e(Ya, {}) }),
-          /* @__PURE__ */ n(l, { id: "system-map", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: [
-            /* @__PURE__ */ e(Za, {}),
-            m && /* @__PURE__ */ e(l, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Ue, { post: m, featured: !0 }) })
+      /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0 }, children: [
+        p && /* @__PURE__ */ e(Ui, { activeSection: n }),
+        /* @__PURE__ */ o(c, { sx: { flexGrow: 1, minWidth: 0 }, children: [
+          /* @__PURE__ */ e(c, { id: "start-here", sx: { ...de, ...ye }, children: /* @__PURE__ */ e(Ai, {}) }),
+          /* @__PURE__ */ o(c, { id: "system-map", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+            /* @__PURE__ */ e(Si, {}),
+            v && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Ye, { post: v, featured: !0 }) })
           ] }),
-          /* @__PURE__ */ n(l, { id: "five-primitives", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: [
-            /* @__PURE__ */ e(Xa, {}),
+          /* @__PURE__ */ o(c, { id: "five-primitives", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+            /* @__PURE__ */ e(Ci, {}),
             /* @__PURE__ */ e(
-              be,
+              ke,
               {
                 title: "Five Primitives",
                 description: "The protocol layer contains five primitives: Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows.",
-                posts: w
+                posts: O
               }
             )
           ] }),
-          /* @__PURE__ */ n(l, { id: "implementation", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: [
-            /* @__PURE__ */ n(l, { sx: { mb: 4 }, children: [
+          /* @__PURE__ */ o(c, { id: "implementation", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+            /* @__PURE__ */ o(c, { sx: { mb: 4 }, children: [
               /* @__PURE__ */ e(
-                o,
+                l,
                 {
                   variant: "h4",
                   fontWeight: 800,
@@ -8242,13 +9710,13 @@ function ui() {
                   children: "Identity Foundations"
                 }
               ),
-              /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Core concepts - digital identity basics, credential models, and verification." })
+              /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Core concepts - digital identity basics, credential models, and verification." })
             ] }),
-            /* @__PURE__ */ e(pr, {}),
-            /* @__PURE__ */ n(l, { sx: { mb: 3, mt: 6 }, children: [
-              /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
+            /* @__PURE__ */ e(Vi, {}),
+            /* @__PURE__ */ o(c, { sx: { mb: 3, mt: 6 }, children: [
+              /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
                 /* @__PURE__ */ e(
-                  o,
+                  l,
                   {
                     variant: "h4",
                     fontWeight: 800,
@@ -8259,20 +9727,20 @@ function ui() {
                 /* @__PURE__ */ e(
                   T,
                   {
-                    label: `${pe.length} article${pe.length !== 1 ? "s" : ""} | ~${Oe} min`,
+                    label: `${ge.length} article${ge.length !== 1 ? "s" : ""} | ~${xe} min`,
                     size: "small",
                     variant: "outlined",
                     sx: { fontWeight: 700, fontSize: "0.72rem", borderColor: "grey.400" }
                   }
                 )
               ] }),
-              /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Transport protocols, schemas, and integration patterns for building systems with Marty." })
+              /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Transport protocols, schemas, and integration patterns for building systems with Marty." })
             ] }),
-            /* @__PURE__ */ e(be, { posts: O })
+            /* @__PURE__ */ e(ke, { posts: _ })
           ] }),
-          /* @__PURE__ */ n(l, { id: "trust-pki", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+          /* @__PURE__ */ o(c, { id: "trust-pki", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
             /* @__PURE__ */ e(
-              be,
+              ke,
               {
                 title: "Trust & PKI",
                 description: "Cryptographic foundations of verifiable identity: trust anchors, certificate chains, and validation.",
@@ -8280,37 +9748,430 @@ function ui() {
               }
             ),
             /* @__PURE__ */ e(
-              be,
+              ke,
               {
                 title: "Privacy & Disclosure",
                 description: "Selective disclosure, data minimization, and zero-knowledge proofs.",
-                posts: D
+                posts: R
               }
             )
           ] }),
-          /* @__PURE__ */ e(l, { id: "deployment", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
-            be,
+          /* @__PURE__ */ e(c, { id: "deployment", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
+            ke,
             {
               title: "Deployment Patterns",
               description: "How verifiable identity runs in real environments: airports, enterprises, kiosks, and edge devices.",
-              posts: M
+              posts: U
             }
           ) }),
-          /* @__PURE__ */ e(l, { id: "governance", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
-            be,
+          /* @__PURE__ */ e(c, { id: "governance", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
+            ke,
             {
               title: "Governance & Trust Infrastructure",
               description: "Compliance frameworks, policy engines, and trust registries.",
               posts: N
             }
           ) }),
-          /* @__PURE__ */ e(l, { id: "latest", sx: { ...oe, ...de, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(ur, { articles: J }) })
+          /* @__PURE__ */ e(c, { id: "latest", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(Fi, { articles: I }) })
         ] })
       ] })
     ] })
   ] });
 }
-const yr = 256, gr = {
+function _t({ label: t, title: r, subtitle: i, to: a, align: s = "left", direction: n = "forward" }) {
+  const d = n === "forward";
+  return /* @__PURE__ */ o(
+    c,
+    {
+      component: k,
+      to: a,
+      sx: {
+        display: "block",
+        p: 2.25,
+        borderRadius: 2,
+        border: "1px solid",
+        borderColor: "grey.300",
+        bgcolor: "background.paper",
+        color: "inherit",
+        textDecoration: "none",
+        textAlign: s,
+        transition: "all 0.15s",
+        "&:hover": {
+          borderColor: "primary.main",
+          bgcolor: "primary.50"
+        }
+      },
+      children: [
+        /* @__PURE__ */ o(
+          c,
+          {
+            sx: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: s === "right" ? "flex-end" : "flex-start",
+              gap: 0.5,
+              mb: 0.5
+            },
+            children: [
+              !d && /* @__PURE__ */ e(X, { sx: { fontSize: 14, color: "text.secondary" } }),
+              /* @__PURE__ */ e(
+                l,
+                {
+                  variant: "caption",
+                  sx: {
+                    color: "text.secondary",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: 0.5
+                  },
+                  children: t
+                }
+              ),
+              d && /* @__PURE__ */ e(Q, { sx: { fontSize: 14, color: "text.secondary" } })
+            ]
+          }
+        ),
+        /* @__PURE__ */ e(l, { variant: "body1", fontWeight: 700, sx: { lineHeight: 1.35 }, children: r }),
+        i && /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mt: 0.75, lineHeight: 1.55 }, children: i })
+      ]
+    }
+  );
+}
+function Hi(t, r, i) {
+  const a = (i || []).filter(
+    (n) => n !== t && n !== r.prevSlug && n !== r.nextSlug
+  );
+  if (a.length > 0)
+    return a.slice(0, 3);
+  const s = ve.find((n) => n.part === r.part);
+  return s ? s.slugs.filter(
+    (n) => n !== t && n !== r.prevSlug && n !== r.nextSlug
+  ).slice(0, 3) : [];
+}
+function da({ slug: t }) {
+  const r = Be[t], i = pe.indexOf(t), a = ze[t], s = Xt(t);
+  if (s) {
+    const n = s.prevSlug ? ie.find((p) => p.slug === s.prevSlug) : null, d = s.nextSlug ? ie.find((p) => p.slug === s.nextSlug) : null, h = Hi(t, s, a == null ? void 0 : a.related);
+    return /* @__PURE__ */ o(
+      F,
+      {
+        elevation: 0,
+        sx: {
+          mt: 6,
+          p: { xs: 3, md: 4 },
+          borderRadius: 3,
+          border: "1px solid",
+          borderColor: "grey.300",
+          bgcolor: "grey.50"
+        },
+        children: [
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, mb: 1 }, children: [
+            /* @__PURE__ */ e(Ve, { fontSize: "small", color: "primary" }),
+            /* @__PURE__ */ e(
+              l,
+              {
+                variant: "overline",
+                sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "primary.main" },
+                children: "Article Navigation"
+              }
+            )
+          ] }),
+          /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: "Continue in the Handbook" }),
+          /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { mb: 2.5, lineHeight: 1.7 }, children: [
+            "You are on article ",
+            s.articleNumber,
+            " of ",
+            s.totalArticles,
+            " in Part ",
+            s.part,
+            ": ",
+            s.partTitle,
+            "."
+          ] }),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1, flexWrap: "wrap", mb: 2.5 }, children: [
+            /* @__PURE__ */ e(T, { label: `Article ${s.articleNumber} of ${s.totalArticles}`, size: "small", color: "primary", variant: "outlined", sx: { fontWeight: 700 } }),
+            /* @__PURE__ */ e(T, { label: `Part ${s.part} · ${s.partTitle}`, size: "small", variant: "outlined", sx: { fontWeight: 700 } })
+          ] }),
+          /* @__PURE__ */ o(
+            c,
+            {
+              sx: {
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(2, minmax(0, 1fr))" },
+                gap: 2
+              },
+              children: [
+                /* @__PURE__ */ e(
+                  _t,
+                  {
+                    label: "Previous in Handbook",
+                    title: n ? n.title : "Handbook overview",
+                    subtitle: n ? n.summary : "Return to the full handbook table of contents.",
+                    to: n ? `/blog/${n.slug}` : "/blog/foundations",
+                    direction: "back"
+                  }
+                ),
+                /* @__PURE__ */ e(
+                  _t,
+                  {
+                    label: "Next in Handbook",
+                    title: d ? d.title : "Browse the handbook",
+                    subtitle: d ? d.summary : "Choose your next article from the handbook overview.",
+                    to: d ? `/blog/${d.slug}` : "/blog/foundations",
+                    align: "right"
+                  }
+                )
+              ]
+            }
+          ),
+          h.length > 0 && /* @__PURE__ */ e(ct, { relatedSlugs: h, sx: { mt: 3 } })
+        ]
+      }
+    );
+  }
+  if (i >= 0) {
+    const n = i < pe.length - 1 ? pe[i + 1] : null, d = n ? ie.find((p) => p.slug === n) : null, h = (i + 1) / pe.length * 100;
+    return /* @__PURE__ */ o(
+      F,
+      {
+        elevation: 0,
+        sx: {
+          mt: 6,
+          p: { xs: 3, md: 4 },
+          borderRadius: 3,
+          border: "2px solid",
+          borderColor: "primary.main",
+          bgcolor: "primary.50"
+        },
+        children: [
+          /* @__PURE__ */ e(
+            l,
+            {
+              variant: "overline",
+              sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "primary.main", mb: 1 },
+              children: "Learning Path"
+            }
+          ),
+          /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, color: "primary.dark", gutterBottom: !0, children: "Continue the Learning Path" }),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
+            /* @__PURE__ */ e(
+              xt,
+              {
+                variant: "determinate",
+                value: h,
+                sx: { flexGrow: 1, height: 6, borderRadius: 1 }
+              }
+            ),
+            /* @__PURE__ */ o(l, { variant: "caption", fontWeight: 700, color: "primary.main", children: [
+              i + 1,
+              "/",
+              pe.length
+            ] })
+          ] }),
+          /* @__PURE__ */ e(c, { sx: { mb: 2.5 }, children: pe.map((p, u) => {
+            const g = ie.find((_) => _.slug === p);
+            if (!g) return null;
+            const m = u < i, v = u === i, O = u === i + 1;
+            return /* @__PURE__ */ o(
+              c,
+              {
+                component: k,
+                to: `/blog/${p}`,
+                sx: {
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  py: 0.75,
+                  color: "inherit",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  opacity: v || m || O ? 1 : 0.5,
+                  "&:hover": { color: "primary.main" }
+                },
+                children: [
+                  m ? /* @__PURE__ */ e(Ba, { sx: { fontSize: 18, color: "success.main" } }) : /* @__PURE__ */ e(
+                    l,
+                    {
+                      variant: "caption",
+                      fontWeight: 800,
+                      sx: {
+                        width: 18,
+                        height: 18,
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "0.65rem",
+                        bgcolor: v ? "primary.main" : "transparent",
+                        color: v ? "common.white" : "text.secondary",
+                        border: v ? "none" : "1.5px solid",
+                        borderColor: "grey.400"
+                      },
+                      children: u + 1
+                    }
+                  ),
+                  /* @__PURE__ */ o(
+                    l,
+                    {
+                      variant: "body2",
+                      sx: {
+                        fontWeight: v ? 700 : O ? 600 : 400,
+                        fontSize: "0.82rem",
+                        color: v ? "primary.dark" : O ? "text.primary" : "text.secondary"
+                      },
+                      children: [
+                        g.title,
+                        v && " (current)",
+                        O && " ->"
+                      ]
+                    }
+                  )
+                ]
+              },
+              p
+            );
+          }) }),
+          d && /* @__PURE__ */ o(
+            z,
+            {
+              variant: "contained",
+              component: k,
+              to: `/blog/${n}`,
+              endIcon: /* @__PURE__ */ e(Q, {}),
+              sx: { fontWeight: 700 },
+              children: [
+                "Next: ",
+                be(d.title, 40)
+              ]
+            }
+          )
+        ]
+      }
+    );
+  }
+  if (r) {
+    const { seriesTitle: n, order: d, total: h, slugs: p } = r, u = d < h ? p[d] : null, g = u ? ie.find((v) => v.slug === u) : null, m = d / h * 100;
+    return /* @__PURE__ */ o(
+      F,
+      {
+        elevation: 0,
+        sx: {
+          mt: 6,
+          p: { xs: 3, md: 4 },
+          borderRadius: 3,
+          border: "1px solid",
+          borderColor: "grey.300",
+          bgcolor: "grey.50"
+        },
+        children: [
+          /* @__PURE__ */ e(
+            l,
+            {
+              variant: "overline",
+              sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "text.disabled", mb: 1 },
+              children: "Continue Learning"
+            }
+          ),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2 }, children: [
+            /* @__PURE__ */ e(T, { label: n, size: "small", color: "primary", variant: "outlined", sx: { fontWeight: 700 } }),
+            /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+              d,
+              " of ",
+              h
+            ] })
+          ] }),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
+            /* @__PURE__ */ e(
+              xt,
+              {
+                variant: "determinate",
+                value: m,
+                sx: { flexGrow: 1, height: 5, borderRadius: 1 }
+              }
+            ),
+            /* @__PURE__ */ o(l, { variant: "caption", fontWeight: 700, color: "text.secondary", children: [
+              Math.round(m),
+              "%"
+            ] })
+          ] }),
+          g ? /* @__PURE__ */ o(
+            z,
+            {
+              variant: "contained",
+              component: k,
+              to: `/blog/${u}`,
+              endIcon: /* @__PURE__ */ e(Q, {}),
+              sx: { fontWeight: 700 },
+              children: [
+                "Next: ",
+                be(g.title, 40)
+              ]
+            }
+          ) : /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", fontWeight: 600, children: "You’ve completed this series." }),
+          (a == null ? void 0 : a.related) && a.related.length > 0 && /* @__PURE__ */ e(ct, { relatedSlugs: a.related, sx: { mt: 3 } })
+        ]
+      }
+    );
+  }
+  return a != null && a.related && a.related.length > 0 ? /* @__PURE__ */ o(
+    F,
+    {
+      elevation: 0,
+      sx: {
+        mt: 6,
+        p: { xs: 3, md: 4 },
+        borderRadius: 3,
+        border: "1px solid",
+        borderColor: "grey.300",
+        bgcolor: "grey.50"
+      },
+      children: [
+        /* @__PURE__ */ e(
+          l,
+          {
+            variant: "overline",
+            sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "text.disabled", mb: 1 },
+            children: "Continue Learning"
+          }
+        ),
+        /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, children: "Recommended Next" }),
+        /* @__PURE__ */ e(ct, { relatedSlugs: a.related })
+      ]
+    }
+  ) : null;
+}
+function ct({ relatedSlugs: t, sx: r = {} }) {
+  const i = t.map((a) => ie.find((s) => s.slug === a)).filter((a) => a && tt(a.slug)).slice(0, 3);
+  return i.length === 0 ? null : /* @__PURE__ */ o(c, { sx: r, children: [
+    /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, fontSize: "0.65rem" }, children: "Related Topics" }),
+    /* @__PURE__ */ e(c, { sx: { mt: 1, display: "flex", flexDirection: "column", gap: 1 }, children: i.map((a) => /* @__PURE__ */ o(
+      c,
+      {
+        component: k,
+        to: `/blog/${a.slug}`,
+        sx: {
+          display: "block",
+          p: 1.5,
+          borderRadius: 1.5,
+          border: "1px solid",
+          borderColor: "grey.200",
+          bgcolor: "background.paper",
+          color: "inherit",
+          cursor: "pointer",
+          textDecoration: "none",
+          transition: "all 0.15s",
+          "&:hover": { borderColor: "primary.main", bgcolor: "primary.50" }
+        },
+        children: [
+          /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, sx: { fontSize: "0.85rem", lineHeight: 1.3 }, children: a.title }),
+          /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.72rem" }, children: a.readTime })
+        ]
+      },
+      a.slug
+    )) })
+  ] });
+}
+const Gi = 256, Ni = {
   foundation: "info",
   credential: "info",
   verification: "info",
@@ -8343,21 +10204,21 @@ const yr = 256, gr = {
   announcement: "primary",
   business: "success"
 };
-function fr({ label: t, lang: i, code: r }) {
-  const [a, s] = ne(!1);
-  return /* @__PURE__ */ n(
-    V,
+function Ki({ label: t, lang: r, code: i }) {
+  const [a, s] = ce(!1);
+  return /* @__PURE__ */ o(
+    F,
     {
       variant: "outlined",
       sx: { my: 3, borderRadius: 2, overflow: "hidden", borderColor: "grey.300" },
       children: [
-        /* @__PURE__ */ n(
-          l,
+        /* @__PURE__ */ o(
+          c,
           {
             role: "button",
             tabIndex: 0,
-            onClick: () => s((c) => !c),
-            onKeyDown: (c) => (c.key === "Enter" || c.key === " ") && s((u) => !u),
+            onClick: () => s((n) => !n),
+            onKeyDown: (n) => (n.key === "Enter" || n.key === " ") && s((d) => !d),
             sx: {
               display: "flex",
               alignItems: "center",
@@ -8370,20 +10231,20 @@ function fr({ label: t, lang: i, code: r }) {
               "&:hover": { bgcolor: "grey.200" }
             },
             children: [
-              /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-                /* @__PURE__ */ e(jt, { fontSize: "small", color: "action" }),
-                /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 600, color: "text.secondary", children: t }),
+              /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
+                /* @__PURE__ */ e(Gt, { fontSize: "small", color: "action" }),
+                /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, color: "text.secondary", children: t }),
                 /* @__PURE__ */ e(
                   T,
                   {
-                    label: i,
+                    label: r,
                     size: "small",
                     sx: { height: 18, fontSize: "0.65rem", fontFamily: "monospace" }
                   }
                 )
               ] }),
               /* @__PURE__ */ e(
-                ot,
+                mt,
                 {
                   fontSize: "small",
                   color: "action",
@@ -8396,8 +10257,8 @@ function fr({ label: t, lang: i, code: r }) {
             ]
           }
         ),
-        /* @__PURE__ */ e(zt, { in: a, children: /* @__PURE__ */ e(
-          l,
+        /* @__PURE__ */ e(Ht, { in: a, children: /* @__PURE__ */ e(
+          c,
           {
             component: "pre",
             sx: {
@@ -8411,22 +10272,22 @@ function fr({ label: t, lang: i, code: r }) {
               lineHeight: 1.65,
               whiteSpace: "pre"
             },
-            children: /* @__PURE__ */ e("code", { children: r })
+            children: /* @__PURE__ */ e("code", { children: i })
           }
         ) })
       ]
     }
   );
 }
-function vr({ block: t }) {
-  return t.type === "heading" ? /* @__PURE__ */ e(o, { variant: "h5", fontWeight: 700, sx: { mt: 4.5, mb: 1.5, scrollMarginTop: 80 }, children: t.text }) : t.type === "code" ? /* @__PURE__ */ e(fr, { label: t.label, lang: t.lang, code: t.code }) : /* @__PURE__ */ e(o, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: t.text });
+function Ji({ block: t }) {
+  return t.type === "heading" ? /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 700, sx: { mt: 4.5, mb: 1.5, scrollMarginTop: 80 }, children: t.text }) : t.type === "code" ? /* @__PURE__ */ e(Ki, { label: t.label, lang: t.lang, code: t.code }) : /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: t.text });
 }
-function Dt({ currentSlug: t }) {
-  return /* @__PURE__ */ n(l, { sx: { pt: 2, pb: 4 }, children: [
-    /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1, px: 2, mb: 2 }, children: [
-      /* @__PURE__ */ e(Je, { color: "primary", fontSize: "small" }),
+function Rt({ currentSlug: t }) {
+  return /* @__PURE__ */ o(c, { sx: { pt: 2, pb: 4 }, children: [
+    /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, px: 2, mb: 2 }, children: [
+      /* @__PURE__ */ e(Ve, { color: "primary", fontSize: "small" }),
       /* @__PURE__ */ e(
-        o,
+        l,
         {
           variant: "caption",
           fontWeight: 700,
@@ -8436,9 +10297,9 @@ function Dt({ currentSlug: t }) {
         }
       )
     ] }),
-    ce.map((i) => /* @__PURE__ */ n(l, { sx: { mb: 1 }, children: [
-      /* @__PURE__ */ n(
-        o,
+    ue.map((r) => /* @__PURE__ */ o(c, { sx: { mb: 1 }, children: [
+      /* @__PURE__ */ o(
+        l,
         {
           variant: "caption",
           fontWeight: 700,
@@ -8453,20 +10314,20 @@ function Dt({ currentSlug: t }) {
             fontSize: "0.65rem"
           },
           children: [
-            i.id,
+            r.id,
             ". ",
-            i.title
+            r.title
           ]
         }
       ),
-      (Ve[i.id] || []).map((r) => {
-        const a = r.slug === t;
+      ($e[r.id] || []).map((i) => {
+        const a = i.slug === t;
         return /* @__PURE__ */ e(
-          _t,
+          Ft,
           {
             selected: a,
             component: k,
-            to: `/blog/${r.slug}`,
+            to: `/blog/${i.slug}`,
             sx: {
               py: 0.55,
               px: 2,
@@ -8479,9 +10340,9 @@ function Dt({ currentSlug: t }) {
               }
             },
             children: /* @__PURE__ */ e(
-              Rt,
+              Ut,
               {
-                primary: r.title,
+                primary: i.title,
                 primaryTypographyProps: {
                   variant: "body2",
                   fontWeight: a ? 700 : 400,
@@ -8491,19 +10352,19 @@ function Dt({ currentSlug: t }) {
               }
             )
           },
-          r.slug
+          i.slug
         );
       })
-    ] }, i.id))
+    ] }, r.id))
   ] });
 }
-function br() {
-  const { slug: t } = nt(), i = Ne(), r = Ge(i.breakpoints.up("md")), a = Te[t], s = ze.indexOf(t), c = s > 0 ? Te[ze[s - 1]] : null, u = s < ze.length - 1 ? Te[ze[s + 1]] : null;
+function $i() {
+  const { slug: t } = et(), r = Xe(), i = Qe(r.breakpoints.up("md")), a = Ae[t], s = Ge.indexOf(t), n = Xt(t), d = s > 0 ? Ae[Ge[s - 1]] : null, h = s < Ge.length - 1 ? Ae[Ge[s + 1]] : null;
   if (!a)
-    return /* @__PURE__ */ n(l, { sx: { textAlign: "center", py: 10 }, children: [
-      /* @__PURE__ */ e(o, { variant: "h4", gutterBottom: !0, children: "Guide article not found" }),
+    return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
+      /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Guide article not found" }),
       /* @__PURE__ */ e(
-        _,
+        z,
         {
           variant: "outlined",
           component: k,
@@ -8513,10 +10374,10 @@ function br() {
         }
       )
     ] });
-  const h = ce.find((p) => p.id === a.chapterId), d = Ve[a.chapterId] || [];
-  return /* @__PURE__ */ n(l, { sx: { display: "flex", gap: { md: 4 }, alignItems: "flex-start" }, children: [
+  const p = ue.find((g) => g.id === a.chapterId), u = $e[a.chapterId] || [];
+  return /* @__PURE__ */ o(c, { sx: { display: "flex", gap: { md: 4 }, alignItems: "flex-start" }, children: [
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
         title: `${a.title} - Marty Protocol Guide`,
         description: a.summary,
@@ -8524,15 +10385,22 @@ function br() {
         keywords: ["MIP guide", "Marty Protocol", ...a.conceptTags],
         ogType: "article",
         ogMeta: {
-          "article:section": `Chapter ${a.chapterId}: ${h == null ? void 0 : h.title}`
-        }
+          "article:section": `Chapter ${a.chapterId}: ${p == null ? void 0 : p.title}`
+        },
+        structuredData: $t({
+          headline: a.title,
+          description: a.summary,
+          authorName: "The MIP Authors",
+          authorType: "Organization",
+          url: `https://elevenidllc.com/blog/${t}`
+        })
       }
     ),
-    r && /* @__PURE__ */ e(
-      l,
+    i && /* @__PURE__ */ e(
+      c,
       {
         sx: {
-          width: yr,
+          width: Gi,
           flexShrink: 0,
           position: "sticky",
           top: 24,
@@ -8543,12 +10411,12 @@ function br() {
           borderRadius: 2,
           bgcolor: "background.paper"
         },
-        children: /* @__PURE__ */ e(Dt, { currentSlug: t })
+        children: /* @__PURE__ */ e(Rt, { currentSlug: t })
       }
     ),
-    /* @__PURE__ */ n(l, { sx: { flexGrow: 1, minWidth: 0 }, children: [
+    /* @__PURE__ */ o(c, { sx: { flexGrow: 1, minWidth: 0 }, children: [
       /* @__PURE__ */ e(
-        _,
+        z,
         {
           startIcon: /* @__PURE__ */ e(X, {}),
           component: k,
@@ -8558,8 +10426,8 @@ function br() {
           children: "All Posts"
         }
       ),
-      /* @__PURE__ */ n(
-        V,
+      /* @__PURE__ */ o(
+        F,
         {
           elevation: 0,
           sx: {
@@ -8571,10 +10439,10 @@ function br() {
             borderColor: "primary.100"
           },
           children: [
-            /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1, mb: 1.5 }, children: [
-              /* @__PURE__ */ e(st, { color: "primary", sx: { fontSize: 18 } }),
+            /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, mb: 1.5 }, children: [
+              /* @__PURE__ */ e(ut, { color: "primary", sx: { fontSize: 18 } }),
               /* @__PURE__ */ e(
-                o,
+                l,
                 {
                   variant: "caption",
                   fontWeight: 700,
@@ -8585,7 +10453,7 @@ function br() {
               )
             ] }),
             /* @__PURE__ */ e(
-              ha,
+              ka,
               {
                 activeStep: a.chapterId - 1,
                 alternativeLabel: !0,
@@ -8593,15 +10461,15 @@ function br() {
                   "& .MuiStepLabel-label": { fontSize: { xs: "0.6rem", sm: "0.7rem" } },
                   "& .MuiStepConnector-line": { borderTopWidth: 2 }
                 },
-                children: ce.map((p) => {
-                  var m;
-                  const y = (m = Ve[p.id]) == null ? void 0 : m[0];
+                children: ue.map((g) => {
+                  var v;
+                  const m = (v = $e[g.id]) == null ? void 0 : v[0];
                   return /* @__PURE__ */ e(
-                    da,
+                    Ia,
                     {
-                      children: y ? /* @__PURE__ */ e(pa, { component: k, to: `/blog/${y.slug}`, children: /* @__PURE__ */ e(mt, { children: p.title }) }) : /* @__PURE__ */ e(mt, { children: p.title })
+                      children: m ? /* @__PURE__ */ e(Pa, { component: k, to: `/blog/${m.slug}`, children: /* @__PURE__ */ e(Tt, { children: g.title }) }) : /* @__PURE__ */ e(Tt, { children: g.title })
                     },
-                    p.id
+                    g.id
                   );
                 })
               }
@@ -8609,17 +10477,17 @@ function br() {
           ]
         }
       ),
-      /* @__PURE__ */ n(
-        V,
+      /* @__PURE__ */ o(
+        F,
         {
           elevation: 0,
           sx: { p: { xs: 3, md: 4 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 },
           children: [
-            /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 1, mb: 2, flexWrap: "wrap", alignItems: "center" }, children: [
+            /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1, mb: 2, flexWrap: "wrap", alignItems: "center" }, children: [
               /* @__PURE__ */ e(
                 T,
                 {
-                  label: h == null ? void 0 : h.title,
+                  label: p == null ? void 0 : p.title,
                   size: "small",
                   color: "primary",
                   sx: { fontWeight: 700 }
@@ -8628,7 +10496,7 @@ function br() {
               /* @__PURE__ */ e(
                 T,
                 {
-                  label: `${a.order} of ${d.length}`,
+                  label: `${a.order} of ${u.length}`,
                   size: "small",
                   variant: "outlined"
                 }
@@ -8636,7 +10504,7 @@ function br() {
               /* @__PURE__ */ e(T, { label: a.readTime, size: "small", variant: "outlined" })
             ] }),
             /* @__PURE__ */ e(
-              o,
+              l,
               {
                 variant: "h3",
                 component: "h1",
@@ -8646,100 +10514,102 @@ function br() {
                 children: a.title
               }
             ),
-            /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { lineHeight: 1.7, mb: 2.5 }, children: a.summary }),
-            a.conceptTags.length > 0 && /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: a.conceptTags.map((p) => /* @__PURE__ */ e(
+            /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { lineHeight: 1.7, mb: 2.5 }, children: a.summary }),
+            a.conceptTags.length > 0 && /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: a.conceptTags.map((g) => /* @__PURE__ */ e(
               T,
               {
-                label: p,
+                label: g,
                 size: "small",
                 variant: "outlined",
-                color: gr[p] || "default",
+                color: Ni[g] || "default",
                 clickable: !0,
                 component: k,
-                to: `/blog?tag=${encodeURIComponent(p)}`,
+                to: We(g),
                 sx: { fontFamily: "monospace", fontSize: "0.75rem" }
               },
-              p
+              g
             )) })
           ]
         }
       ),
-      /* @__PURE__ */ e(ee, { sx: { mb: 4 } }),
-      /* @__PURE__ */ e(l, { sx: { maxWidth: 780 }, children: a.content.map((p, y) => /* @__PURE__ */ e(vr, { block: p }, y)) }),
-      !r && /* @__PURE__ */ e(l, { sx: { mt: 6 }, children: /* @__PURE__ */ n(ua, { variant: "outlined", sx: { borderRadius: "8px !important" }, children: [
-        /* @__PURE__ */ e(ma, { expandIcon: /* @__PURE__ */ e(ot, {}), children: /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-          /* @__PURE__ */ e(Je, { fontSize: "small", color: "primary" }),
-          /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 700, children: "Browse All Guide Articles" })
+      /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
+      /* @__PURE__ */ e(c, { sx: { maxWidth: 780 }, children: a.content.map((g, m) => /* @__PURE__ */ e(Ji, { block: g }, m)) }),
+      !i && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ o(Aa, { variant: "outlined", sx: { borderRadius: "8px !important" }, children: [
+        /* @__PURE__ */ e(Ca, { expandIcon: /* @__PURE__ */ e(mt, {}), children: /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
+          /* @__PURE__ */ e(Ve, { fontSize: "small", color: "primary" }),
+          /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, children: "Browse All Guide Articles" })
         ] }) }),
-        /* @__PURE__ */ e(ya, { sx: { p: 0 }, children: /* @__PURE__ */ e(Dt, { currentSlug: t }) })
+        /* @__PURE__ */ e(Da, { sx: { p: 0 }, children: /* @__PURE__ */ e(Rt, { currentSlug: t }) })
       ] }) }),
-      /* @__PURE__ */ e(ee, { sx: { mt: 6, mb: 3 } }),
-      /* @__PURE__ */ n(
-        l,
-        {
-          sx: {
-            display: "flex",
-            gap: 2,
-            justifyContent: "space-between",
-            alignItems: "flex-start"
-          },
-          children: [
-            c ? /* @__PURE__ */ n(
-              _,
-              {
-                variant: "outlined",
-                component: k,
-                to: `/blog/${c.slug}`,
-                sx: {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  py: 1.5,
-                  px: 2.5,
-                  textAlign: "left",
-                  maxWidth: 280
-                },
-                children: [
-                  /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
-                    /* @__PURE__ */ e(X, { sx: { fontSize: 14 } }),
-                    /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", children: "Previous" })
-                  ] }),
-                  /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: c.title })
-                ]
-              }
-            ) : /* @__PURE__ */ e(l, {}),
-            u && /* @__PURE__ */ n(
-              _,
-              {
-                variant: "contained",
-                component: k,
-                to: `/blog/${u.slug}`,
-                sx: {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                  py: 1.5,
-                  px: 2.5,
-                  textAlign: "right",
-                  ml: "auto",
-                  maxWidth: 280
-                },
-                children: [
-                  /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
-                    /* @__PURE__ */ e(o, { variant: "caption", sx: { color: "rgba(255,255,255,0.8)" }, children: "Next" }),
-                    /* @__PURE__ */ e(Q, { sx: { fontSize: 14 } })
-                  ] }),
-                  /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: u.title })
-                ]
-              }
-            )
-          ]
-        }
-      ),
-      /* @__PURE__ */ e(ee, { sx: { my: 4 } }),
-      /* @__PURE__ */ n(l, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
+      n ? /* @__PURE__ */ e(da, { slug: t }) : /* @__PURE__ */ o(Le, { children: [
+        /* @__PURE__ */ e(se, { sx: { mt: 6, mb: 3 } }),
+        /* @__PURE__ */ o(
+          c,
+          {
+            sx: {
+              display: "flex",
+              gap: 2,
+              justifyContent: "space-between",
+              alignItems: "flex-start"
+            },
+            children: [
+              d ? /* @__PURE__ */ o(
+                z,
+                {
+                  variant: "outlined",
+                  component: k,
+                  to: `/blog/${d.slug}`,
+                  sx: {
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    py: 1.5,
+                    px: 2.5,
+                    textAlign: "left",
+                    maxWidth: 280
+                  },
+                  children: [
+                    /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
+                      /* @__PURE__ */ e(X, { sx: { fontSize: 14 } }),
+                      /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", children: "Previous" })
+                    ] }),
+                    /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: d.title })
+                  ]
+                }
+              ) : /* @__PURE__ */ e(c, {}),
+              h && /* @__PURE__ */ o(
+                z,
+                {
+                  variant: "contained",
+                  component: k,
+                  to: `/blog/${h.slug}`,
+                  sx: {
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-end",
+                    py: 1.5,
+                    px: 2.5,
+                    textAlign: "right",
+                    ml: "auto",
+                    maxWidth: 280
+                  },
+                  children: [
+                    /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
+                      /* @__PURE__ */ e(l, { variant: "caption", sx: { color: "rgba(255,255,255,0.8)" }, children: "Next" }),
+                      /* @__PURE__ */ e(Q, { sx: { fontSize: 14 } })
+                    ] }),
+                    /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: h.title })
+                  ]
+                }
+              )
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ e(se, { sx: { my: 4 } }),
+      /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ e(
-          _,
+          z,
           {
             variant: "outlined",
             component: k,
@@ -8749,17 +10619,17 @@ function br() {
           }
         ),
         /* @__PURE__ */ e(
-          _,
+          z,
           {
             variant: "outlined",
-            startIcon: /* @__PURE__ */ e(Bt, {}),
+            startIcon: /* @__PURE__ */ e(Nt, {}),
             component: k,
             to: `/protocol#${a.slug}`,
             children: "View in Protocol Map"
           }
         ),
         /* @__PURE__ */ e(
-          _,
+          z,
           {
             variant: "outlined",
             endIcon: /* @__PURE__ */ e(Q, {}),
@@ -8772,11 +10642,11 @@ function br() {
     ] })
   ] });
 }
-function Ot({ seriesInfo: t }) {
+function jt({ seriesInfo: t }) {
   if (!t) return null;
-  const { seriesTitle: i, order: r, total: a, slugs: s } = t, c = r > 1 ? s[r - 2] : null, u = r < a ? s[r] : null, h = c ? H.find((p) => p.slug === c) : null, d = u ? H.find((p) => p.slug === u) : null;
-  return /* @__PURE__ */ n(
-    V,
+  const { seriesTitle: r, order: i, total: a, slugs: s } = t, n = i > 1 ? s[i - 2] : null, d = i < a ? s[i] : null, h = n ? ie.find((u) => u.slug === n) : null, p = d ? ie.find((u) => u.slug === d) : null;
+  return /* @__PURE__ */ o(
+    F,
     {
       variant: "outlined",
       sx: {
@@ -8789,45 +10659,45 @@ function Ot({ seriesInfo: t }) {
         gap: 1
       },
       children: [
-        /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1, flexShrink: 0 }, children: [
+        /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, flexShrink: 0 }, children: [
           /* @__PURE__ */ e(
             T,
             {
-              label: i,
+              label: r,
               size: "small",
               color: "primary",
               variant: "outlined",
               sx: { fontWeight: 700 }
             }
           ),
-          /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-            r,
+          /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+            i,
             " of ",
             a
           ] })
         ] }),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 1 }, children: [
+        /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1 }, children: [
           h && /* @__PURE__ */ e(
-            _,
+            z,
             {
               size: "small",
               component: k,
-              to: `/blog/${c}`,
+              to: `/blog/${n}`,
               startIcon: /* @__PURE__ */ e(X, {}),
               sx: { textTransform: "none", fontSize: "0.78rem" },
-              children: ye(h.title, 35)
+              children: be(h.title, 35)
             }
           ),
-          d && /* @__PURE__ */ e(
-            _,
+          p && /* @__PURE__ */ e(
+            z,
             {
               size: "small",
               variant: "contained",
               component: k,
-              to: `/blog/${u}`,
+              to: `/blog/${d}`,
               endIcon: /* @__PURE__ */ e(Q, {}),
               sx: { textTransform: "none", fontSize: "0.78rem" },
-              children: ye(d.title, 35)
+              children: be(p.title, 35)
             }
           )
         ] })
@@ -8835,12 +10705,12 @@ function Ot({ seriesInfo: t }) {
     }
   );
 }
-function wr({ slug: t }) {
-  const i = re[t], r = We[t], a = le.indexOf(t);
-  if (!i) return null;
-  const s = Nt[i.layer] || "#546e7a", c = Ht[i.layer] || i.layer, u = (i.related || []).map((h) => H.find((d) => d.slug === h)).filter((h) => h && De(h.slug)).slice(0, 3);
-  return /* @__PURE__ */ n(
-    l,
+function Yi({ slug: t }) {
+  const r = ze[t], i = Be[t], a = pe.indexOf(t);
+  if (!r) return null;
+  const s = ta[r.layer] || "#546e7a", n = ea[r.layer] || r.layer, d = (r.related || []).map((h) => ie.find((p) => p.slug === h)).filter((h) => h && tt(h.slug)).slice(0, 3);
+  return /* @__PURE__ */ o(
+    c,
     {
       sx: {
         mb: 4,
@@ -8854,7 +10724,7 @@ function wr({ slug: t }) {
       },
       children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: {
@@ -8868,41 +10738,41 @@ function wr({ slug: t }) {
             children: a >= 0 ? "Part of the Learning Path" : "Part of the Marty Identity Protocol"
           }
         ),
-        /* @__PURE__ */ n(
-          l,
+        /* @__PURE__ */ o(
+          c,
           {
             sx: {
               display: "grid",
               gridTemplateColumns: { xs: "1fr 1fr", md: "repeat(auto-fit, minmax(120px, 1fr))" },
               gap: { xs: 1.5, md: 2 },
-              mb: u.length > 0 ? 2 : 0
+              mb: d.length > 0 ? 2 : 0
             },
             children: [
               a >= 0 && /* @__PURE__ */ e(
-                Be,
+                Ke,
                 {
                   label: "Series",
-                  value: `Start Here - Step ${a + 1} of ${le.length}`
+                  value: `Start Here - Step ${a + 1} of ${pe.length}`
                 }
               ),
-              r && a < 0 && /* @__PURE__ */ e(Be, { label: "Series", value: r.seriesTitle }),
-              i.primitive && /* @__PURE__ */ e(Be, { label: "Primitive", value: i.primitive }),
-              /* @__PURE__ */ n(l, { children: [
-                /* @__PURE__ */ e(o, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Layer" }),
-                /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.75, mt: 0.25 }, children: [
-                  /* @__PURE__ */ e(l, { sx: { width: 8, height: 8, borderRadius: "50%", bgcolor: s, flexShrink: 0 } }),
-                  /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 600, sx: { fontSize: "0.85rem" }, children: c })
+              i && a < 0 && /* @__PURE__ */ e(Ke, { label: "Series", value: i.seriesTitle }),
+              r.primitive && /* @__PURE__ */ e(Ke, { label: "Primitive", value: r.primitive }),
+              /* @__PURE__ */ o(c, { children: [
+                /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Layer" }),
+                /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.75, mt: 0.25 }, children: [
+                  /* @__PURE__ */ e(c, { sx: { width: 8, height: 8, borderRadius: "50%", bgcolor: s, flexShrink: 0 } }),
+                  /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, sx: { fontSize: "0.85rem" }, children: n })
                 ] })
               ] }),
-              /* @__PURE__ */ e(Be, { label: "Topic", value: i.topic }),
-              /* @__PURE__ */ n(l, { children: [
-                /* @__PURE__ */ e(o, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Difficulty" }),
-                /* @__PURE__ */ e(l, { sx: { mt: 0.25 }, children: /* @__PURE__ */ e(
+              /* @__PURE__ */ e(Ke, { label: "Topic", value: r.topic }),
+              /* @__PURE__ */ o(c, { children: [
+                /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Difficulty" }),
+                /* @__PURE__ */ e(c, { sx: { mt: 0.25 }, children: /* @__PURE__ */ e(
                   T,
                   {
-                    label: i.difficulty,
+                    label: r.difficulty,
                     size: "small",
-                    color: Ga[i.difficulty] || "default",
+                    color: hi[r.difficulty] || "default",
                     sx: { fontWeight: 700, fontSize: "0.72rem", height: 22 }
                   }
                 ) })
@@ -8910,12 +10780,12 @@ function wr({ slug: t }) {
             ]
           }
         ),
-        u.length > 0 && /* @__PURE__ */ n(l, { sx: { pt: 1.5, borderTop: "1px solid", borderColor: "grey.200" }, children: [
-          /* @__PURE__ */ e(o, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Related" }),
-          /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mt: 0.5 }, children: u.map((h) => /* @__PURE__ */ e(
+        d.length > 0 && /* @__PURE__ */ o(c, { sx: { pt: 1.5, borderTop: "1px solid", borderColor: "grey.200" }, children: [
+          /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: "Related" }),
+          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mt: 0.5 }, children: d.map((h) => /* @__PURE__ */ e(
             T,
             {
-              label: ye(h.title, 40),
+              label: be(h.title, 40),
               size: "small",
               variant: "outlined",
               clickable: !0,
@@ -8930,42 +10800,42 @@ function wr({ slug: t }) {
     }
   );
 }
-function Be({ label: t, value: i }) {
-  return /* @__PURE__ */ n(l, { children: [
-    /* @__PURE__ */ e(o, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: t }),
-    /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 600, sx: { fontSize: "0.85rem", mt: 0.25 }, children: i })
+function Ke({ label: t, value: r }) {
+  return /* @__PURE__ */ o(c, { children: [
+    /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }, children: t }),
+    /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, sx: { fontSize: "0.85rem", mt: 0.25 }, children: r })
   ] });
 }
-function Zt(t) {
+function pa(t) {
   return t.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").slice(0, 60);
 }
-function xr({ content: t }) {
-  const i = Y(
+function Xi({ content: t }) {
+  const r = J(
     () => (t || []).filter((s) => s.type === "heading").map((s) => ({
       text: s.text,
-      id: Zt(s.text)
+      id: pa(s.text)
     })),
     [t]
-  ), [r, a] = ne("");
-  return Pe(() => {
-    if (i.length === 0) return;
+  ), [i, a] = ce("");
+  return Oe(() => {
+    if (r.length === 0) return;
     const s = new IntersectionObserver(
-      (u) => {
-        for (const h of u)
+      (d) => {
+        for (const h of d)
           h.isIntersecting && a(h.target.id);
       },
       { rootMargin: "-80px 0px -75% 0px" }
-    ), c = setTimeout(() => {
-      i.forEach(({ id: u }) => {
-        const h = document.getElementById(u);
+    ), n = setTimeout(() => {
+      r.forEach(({ id: d }) => {
+        const h = document.getElementById(d);
         h && s.observe(h);
       });
     }, 300);
     return () => {
-      clearTimeout(c), s.disconnect();
+      clearTimeout(n), s.disconnect();
     };
-  }, [i]), i.length < 2 ? null : /* @__PURE__ */ n(
-    l,
+  }, [r]), r.length < 2 ? null : /* @__PURE__ */ o(
+    c,
     {
       component: "nav",
       "aria-label": "Table of contents",
@@ -8982,7 +10852,7 @@ function xr({ content: t }) {
       },
       children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: {
@@ -8996,22 +10866,22 @@ function xr({ content: t }) {
             children: "On this page"
           }
         ),
-        i.map((s) => {
-          const c = r === s.id;
+        r.map((s) => {
+          const n = i === s.id;
           return /* @__PURE__ */ e(
-            o,
+            l,
             {
               component: "a",
               href: `#${s.id}`,
-              "aria-current": c ? "location" : void 0,
+              "aria-current": n ? "location" : void 0,
               variant: "body2",
               sx: {
                 display: "block",
                 py: 0.5,
                 fontSize: "0.78rem",
                 lineHeight: 1.4,
-                fontWeight: c ? 700 : 400,
-                color: c ? "primary.main" : "text.secondary",
+                fontWeight: n ? 700 : 400,
+                color: n ? "primary.main" : "text.secondary",
                 textDecoration: "none",
                 cursor: "pointer",
                 transition: "color 0.15s",
@@ -9026,251 +10896,7 @@ function xr({ content: t }) {
     }
   );
 }
-function Tr({ slug: t }) {
-  const i = We[t], r = le.indexOf(t), a = re[t];
-  if (r >= 0) {
-    const s = r < le.length - 1 ? le[r + 1] : null, c = s ? H.find((h) => h.slug === s) : null, u = (r + 1) / le.length * 100;
-    return /* @__PURE__ */ n(
-      V,
-      {
-        elevation: 0,
-        sx: {
-          mt: 6,
-          p: { xs: 3, md: 4 },
-          borderRadius: 3,
-          border: "2px solid",
-          borderColor: "primary.main",
-          bgcolor: "primary.50"
-        },
-        children: [
-          /* @__PURE__ */ e(
-            o,
-            {
-              variant: "overline",
-              sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "primary.main", mb: 1 },
-              children: "Learning Path"
-            }
-          ),
-          /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 800, color: "primary.dark", gutterBottom: !0, children: "Continue the Learning Path" }),
-          /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
-            /* @__PURE__ */ e(
-              yt,
-              {
-                variant: "determinate",
-                value: u,
-                sx: { flexGrow: 1, height: 6, borderRadius: 1 }
-              }
-            ),
-            /* @__PURE__ */ n(o, { variant: "caption", fontWeight: 700, color: "primary.main", children: [
-              r + 1,
-              "/",
-              le.length
-            ] })
-          ] }),
-          /* @__PURE__ */ e(l, { sx: { mb: 2.5 }, children: le.map((h, d) => {
-            const p = H.find((O) => O.slug === h);
-            if (!p) return null;
-            const y = d < r, m = d === r, w = d === r + 1;
-            return /* @__PURE__ */ n(
-              l,
-              {
-                component: k,
-                to: `/blog/${h}`,
-                sx: {
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  py: 0.75,
-                  color: "inherit",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  opacity: m || y || w ? 1 : 0.5,
-                  "&:hover": { color: "primary.main" }
-                },
-                children: [
-                  y ? /* @__PURE__ */ e(Aa, { sx: { fontSize: 18, color: "success.main" } }) : /* @__PURE__ */ e(
-                    o,
-                    {
-                      variant: "caption",
-                      fontWeight: 800,
-                      sx: {
-                        width: 18,
-                        height: 18,
-                        borderRadius: "50%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "0.65rem",
-                        bgcolor: m ? "primary.main" : "transparent",
-                        color: m ? "common.white" : "text.secondary",
-                        border: m ? "none" : "1.5px solid",
-                        borderColor: "grey.400"
-                      },
-                      children: d + 1
-                    }
-                  ),
-                  /* @__PURE__ */ n(
-                    o,
-                    {
-                      variant: "body2",
-                      sx: {
-                        fontWeight: m ? 700 : w ? 600 : 400,
-                        fontSize: "0.82rem",
-                        color: m ? "primary.dark" : w ? "text.primary" : "text.secondary"
-                      },
-                      children: [
-                        p.title,
-                        m && " (current)",
-                        w && " ->"
-                      ]
-                    }
-                  )
-                ]
-              },
-              h
-            );
-          }) }),
-          c && /* @__PURE__ */ n(
-            _,
-            {
-              variant: "contained",
-              component: k,
-              to: `/blog/${s}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
-              sx: { fontWeight: 700 },
-              children: [
-                "Next: ",
-                ye(c.title, 40)
-              ]
-            }
-          )
-        ]
-      }
-    );
-  }
-  if (i) {
-    const { seriesTitle: s, order: c, total: u, slugs: h } = i, d = c < u ? h[c] : null, p = d ? H.find((m) => m.slug === d) : null, y = c / u * 100;
-    return /* @__PURE__ */ n(
-      V,
-      {
-        elevation: 0,
-        sx: {
-          mt: 6,
-          p: { xs: 3, md: 4 },
-          borderRadius: 3,
-          border: "1px solid",
-          borderColor: "grey.300",
-          bgcolor: "grey.50"
-        },
-        children: [
-          /* @__PURE__ */ e(
-            o,
-            {
-              variant: "overline",
-              sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "text.disabled", mb: 1 },
-              children: "Continue Learning"
-            }
-          ),
-          /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2 }, children: [
-            /* @__PURE__ */ e(T, { label: s, size: "small", color: "primary", variant: "outlined", sx: { fontWeight: 700 } }),
-            /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-              c,
-              " of ",
-              u
-            ] })
-          ] }),
-          /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
-            /* @__PURE__ */ e(
-              yt,
-              {
-                variant: "determinate",
-                value: y,
-                sx: { flexGrow: 1, height: 5, borderRadius: 1 }
-              }
-            ),
-            /* @__PURE__ */ n(o, { variant: "caption", fontWeight: 700, color: "text.secondary", children: [
-              Math.round(y),
-              "%"
-            ] })
-          ] }),
-          p ? /* @__PURE__ */ n(
-            _,
-            {
-              variant: "contained",
-              component: k,
-              to: `/blog/${d}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
-              sx: { fontWeight: 700 },
-              children: [
-                "Next: ",
-                ye(p.title, 40)
-              ]
-            }
-          ) : /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", fontWeight: 600, children: "You’ve completed this series." }),
-          (a == null ? void 0 : a.related) && a.related.length > 0 && /* @__PURE__ */ e(Mt, { relatedSlugs: a.related, sx: { mt: 3 } })
-        ]
-      }
-    );
-  }
-  return a != null && a.related && a.related.length > 0 ? /* @__PURE__ */ n(
-    V,
-    {
-      elevation: 0,
-      sx: {
-        mt: 6,
-        p: { xs: 3, md: 4 },
-        borderRadius: 3,
-        border: "1px solid",
-        borderColor: "grey.300",
-        bgcolor: "grey.50"
-      },
-      children: [
-        /* @__PURE__ */ e(
-          o,
-          {
-            variant: "overline",
-            sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.6rem", color: "text.disabled", mb: 1 },
-            children: "Continue Learning"
-          }
-        ),
-        /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, gutterBottom: !0, children: "Recommended Next" }),
-        /* @__PURE__ */ e(Mt, { relatedSlugs: a.related })
-      ]
-    }
-  ) : null;
-}
-function Mt({ relatedSlugs: t, sx: i = {} }) {
-  const r = t.map((a) => H.find((s) => s.slug === a)).filter((a) => a && De(a.slug)).slice(0, 3);
-  return r.length === 0 ? null : /* @__PURE__ */ n(l, { sx: i, children: [
-    /* @__PURE__ */ e(o, { variant: "caption", color: "text.disabled", sx: { fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, fontSize: "0.65rem" }, children: "Related Topics" }),
-    /* @__PURE__ */ e(l, { sx: { mt: 1, display: "flex", flexDirection: "column", gap: 1 }, children: r.map((a) => /* @__PURE__ */ n(
-      l,
-      {
-        component: k,
-        to: `/blog/${a.slug}`,
-        sx: {
-          display: "block",
-          p: 1.5,
-          borderRadius: 1.5,
-          border: "1px solid",
-          borderColor: "grey.200",
-          bgcolor: "background.paper",
-          color: "inherit",
-          cursor: "pointer",
-          textDecoration: "none",
-          transition: "all 0.15s",
-          "&:hover": { borderColor: "primary.main", bgcolor: "primary.50" }
-        },
-        children: [
-          /* @__PURE__ */ e(o, { variant: "body2", fontWeight: 700, sx: { fontSize: "0.85rem", lineHeight: 1.3 }, children: a.title }),
-          /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.72rem" }, children: a.readTime })
-        ]
-      },
-      a.slug
-    )) })
-  ] });
-}
-const ea = [
+const ua = [
   { term: "Presentation Policies", slug: "presentation-policies-minimum-disclosure" },
   { term: "Credential Templates", slug: "credential-templates-designing-what-gets-issued" },
   { term: "Deployment Profiles", slug: "deployment-profiles-from-design-to-production" },
@@ -9294,25 +10920,25 @@ const ea = [
   { term: "Trust Registry", slug: "building-trust-registries-at-scale" },
   { term: "Zero-Knowledge Predicates", slug: "zero-knowledge-predicates-identity" },
   { term: "SD-JWT", slug: "sd-jwt-selective-disclosure-deep-dive" }
-], Wt = new RegExp(
-  `(${ea.map((t) => t.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+], Bt = new RegExp(
+  `(${ua.map((t) => t.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
   "g"
 );
-function kr(t, i) {
-  const r = /* @__PURE__ */ new Set(), a = [];
+function Qi(t, r) {
+  const i = /* @__PURE__ */ new Set(), a = [];
   let s = 0;
-  Wt.lastIndex = 0;
-  let c;
-  for (; (c = Wt.exec(t)) !== null; ) {
-    const u = c[1], h = ea.find((d) => d.term === u);
-    !h || h.slug === i || r.has(h.slug) || (c.index > s && a.push(t.slice(s, c.index)), a.push({ term: u, slug: h.slug }), r.add(h.slug), s = c.index + u.length);
+  Bt.lastIndex = 0;
+  let n;
+  for (; (n = Bt.exec(t)) !== null; ) {
+    const d = n[1], h = ua.find((p) => p.term === d);
+    !h || h.slug === r || i.has(h.slug) || (n.index > s && a.push(t.slice(s, n.index)), a.push({ term: d, slug: h.slug }), i.add(h.slug), s = n.index + d.length);
   }
   return s < t.length && a.push(t.slice(s)), a.length > 0 ? a : [t];
 }
-function Ir({ text: t, currentSlug: i }) {
-  const r = kr(t, i);
-  return /* @__PURE__ */ e(o, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: r.map((a, s) => typeof a == "string" ? /* @__PURE__ */ e(ra, { children: a }, s) : /* @__PURE__ */ e(
-    l,
+function Zi({ text: t, currentSlug: r }) {
+  const i = Qi(t, r);
+  return /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: i.map((a, s) => typeof a == "string" ? /* @__PURE__ */ e(ga, { children: a }, s) : /* @__PURE__ */ e(
+    c,
     {
       component: k,
       to: `/blog/${a.slug}`,
@@ -9331,9 +10957,9 @@ function Ir({ text: t, currentSlug: i }) {
     s
   )) });
 }
-function Pr({ block: t }) {
-  return /* @__PURE__ */ n(
-    V,
+function er({ block: t }) {
+  return /* @__PURE__ */ o(
+    F,
     {
       elevation: 0,
       sx: {
@@ -9344,8 +10970,8 @@ function Pr({ block: t }) {
         borderColor: "grey.200"
       },
       children: [
-        (t.lang || t.label) && /* @__PURE__ */ n(
-          l,
+        (t.lang || t.label) && /* @__PURE__ */ o(
+          c,
           {
             sx: {
               px: 2,
@@ -9359,7 +10985,7 @@ function Pr({ block: t }) {
             },
             children: [
               t.lang && /* @__PURE__ */ e(
-                o,
+                l,
                 {
                   variant: "caption",
                   sx: {
@@ -9372,12 +10998,12 @@ function Pr({ block: t }) {
                   children: t.lang
                 }
               ),
-              t.label && /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.75rem" }, children: t.label })
+              t.label && /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.75rem" }, children: t.label })
             ]
           }
         ),
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             component: "pre",
             sx: {
@@ -9399,9 +11025,9 @@ function Pr({ block: t }) {
     }
   );
 }
-function Ar({ block: t }) {
-  return /* @__PURE__ */ n(
-    V,
+function tr({ block: t }) {
+  return /* @__PURE__ */ o(
+    F,
     {
       elevation: 0,
       sx: {
@@ -9414,20 +11040,20 @@ function Ar({ block: t }) {
       },
       children: [
         t.title && /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: { display: "block", mb: 1, fontWeight: 800, letterSpacing: 1.4, fontSize: "0.65rem", color: "primary.main" },
             children: t.title
           }
         ),
-        t.intro && /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.7 }, children: t.intro }),
-        /* @__PURE__ */ e(l, { sx: { display: "grid", gap: 1.5 }, children: t.items.map((i) => /* @__PURE__ */ n(l, { children: [
+        t.intro && /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.7 }, children: t.intro }),
+        /* @__PURE__ */ e(c, { sx: { display: "grid", gap: 1.5 }, children: t.items.map((r) => /* @__PURE__ */ o(c, { children: [
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               component: "a",
-              href: i.href,
+              href: r.href,
               target: "_blank",
               rel: "noreferrer",
               sx: {
@@ -9439,43 +11065,43 @@ function Ar({ block: t }) {
                 textDecoration: "none",
                 "&:hover": { textDecoration: "underline" }
               },
-              children: i.label
+              children: r.label
             }
           ),
-          i.note && /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mt: 0.35, lineHeight: 1.6 }, children: i.note })
-        ] }, i.href)) })
+          r.note && /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mt: 0.35, lineHeight: 1.6 }, children: r.note })
+        ] }, r.href)) })
       ]
     }
   );
 }
-function Cr({ content: t, currentSlug: i }) {
-  return /* @__PURE__ */ e(He, { children: t.map((r, a) => r.type === "heading" ? /* @__PURE__ */ e(
-    o,
+function ar({ content: t, currentSlug: r }) {
+  return /* @__PURE__ */ e(Le, { children: t.map((i, a) => i.type === "heading" ? /* @__PURE__ */ e(
+    l,
     {
-      id: Zt(r.text),
+      id: pa(i.text),
       variant: "h5",
       fontWeight: 700,
       sx: { mt: 4, mb: 2, scrollMarginTop: "80px" },
-      children: r.text
+      children: i.text
     },
     a
-  ) : r.type === "code" ? /* @__PURE__ */ e(Pr, { block: r }, a) : r.type === "resources" ? /* @__PURE__ */ e(Ar, { block: r }, a) : /* @__PURE__ */ e(
-    Ir,
+  ) : i.type === "code" ? /* @__PURE__ */ e(er, { block: i }, a) : i.type === "resources" ? /* @__PURE__ */ e(tr, { block: i }, a) : /* @__PURE__ */ e(
+    Zi,
     {
-      text: r.text,
-      currentSlug: i
+      text: i.text,
+      currentSlug: r
     },
     a
   )) });
 }
-const Sr = {
+const ir = {
   featured: "Featured",
   "start-learning": "Start Here",
   "core-protocol": "Five Primitives",
   implementation: "Implementation",
   cryptography: "Trust & PKI",
   business: "Governance & Industry"
-}, Dr = {
+}, rr = {
   featured: "overview",
   "start-learning": "start-here",
   "core-protocol": "five-primitives",
@@ -9483,31 +11109,31 @@ const Sr = {
   cryptography: "trust-pki",
   business: "governance"
 };
-function Or({ slug: t, title: i }) {
-  const r = dt[t], a = re[t], s = (a == null ? void 0 : a.topic) || null, c = s || Sr[r] || (a ? Ht[a.layer] || a.layer : null), u = Dr[r] || null, h = s ? `/blog?tag=${encodeURIComponent(s)}` : u ? `/blog#${u}` : "/blog", d = [
+function sr({ slug: t, title: r }) {
+  const i = vt[t], a = ze[t], s = (a == null ? void 0 : a.topic) || null, n = s || ir[i] || (a ? ea[a.layer] || a.layer : null), d = rr[i] || null, h = s ? We(s) : d ? `/blog#${d}` : "/blog", p = [
     { label: "Blog", path: "/blog" }
   ];
-  return c && d.push({
-    label: c,
+  return n && p.push({
+    label: n,
     path: h
-  }), d.push({ label: i, path: null }), Pe(() => {
-    const p = "https://elevenidllc.com", y = {
+  }), p.push({ label: r, path: null }), Oe(() => {
+    const u = "https://elevenidllc.com", g = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: d.map((w, O) => ({
+      itemListElement: p.map((v, O) => ({
         "@type": "ListItem",
         position: O + 1,
-        name: w.label,
-        ...w.path ? { item: `${p}${w.path}` } : {}
+        name: v.label,
+        ...v.path ? { item: `${u}${v.path}` } : {}
       }))
     };
     let m = document.head.querySelector('script[data-seo-breadcrumb="true"]');
-    return m || (m = document.createElement("script"), m.type = "application/ld+json", m.setAttribute("data-seo-breadcrumb", "true"), document.head.appendChild(m)), m.textContent = JSON.stringify(y), () => {
-      const w = document.head.querySelector('script[data-seo-breadcrumb="true"]');
-      w && w.remove();
+    return m || (m = document.createElement("script"), m.type = "application/ld+json", m.setAttribute("data-seo-breadcrumb", "true"), document.head.appendChild(m)), m.textContent = JSON.stringify(g), () => {
+      const v = document.head.querySelector('script[data-seo-breadcrumb="true"]');
+      v && v.remove();
     };
   }), /* @__PURE__ */ e(
-    l,
+    c,
     {
       component: "nav",
       "aria-label": "Breadcrumb",
@@ -9518,50 +11144,50 @@ function Or({ slug: t, title: i }) {
         mb: 2,
         flexWrap: "wrap"
       },
-      children: d.map((p, y) => {
-        const m = y === d.length - 1;
-        return /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5 }, children: [
-          y > 0 && /* @__PURE__ */ e(Ca, { sx: { fontSize: 14, color: "text.disabled" } }),
+      children: p.map((u, g) => {
+        const m = g === p.length - 1;
+        return /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5 }, children: [
+          g > 0 && /* @__PURE__ */ e(La, { sx: { fontSize: 14, color: "text.disabled" } }),
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               variant: "caption",
-              component: p.path ? k : "span",
-              to: p.path || void 0,
+              component: u.path ? k : "span",
+              to: u.path || void 0,
               sx: {
                 fontSize: "0.75rem",
                 fontWeight: m ? 600 : 500,
                 color: m ? "text.primary" : "text.secondary",
-                cursor: p.path ? "pointer" : "default",
+                cursor: u.path ? "pointer" : "default",
                 maxWidth: m ? 280 : "none",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
                 textDecoration: "none",
-                "&:hover": p.path ? { color: "primary.main", textDecoration: "underline" } : {}
+                "&:hover": u.path ? { color: "primary.main", textDecoration: "underline" } : {}
               },
-              children: p.label
+              children: u.label
             }
           )
-        ] }, y);
+        ] }, g);
       })
     }
   );
 }
-function Mr({ color: t = "primary.main" }) {
-  const [i, r] = ne(0), a = ia(null);
-  return Pe(() => {
+function nr({ color: t = "primary.main" }) {
+  const [r, i] = ce(0), a = fa(null);
+  return Oe(() => {
     const s = () => {
-      const u = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
-      h > 0 && r(Math.min(u / h * 100, 100));
-    }, c = () => {
+      const d = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+      h > 0 && i(Math.min(d / h * 100, 100));
+    }, n = () => {
       a.current && cancelAnimationFrame(a.current), a.current = requestAnimationFrame(s);
     };
-    return window.addEventListener("scroll", c, { passive: !0 }), s(), () => {
-      window.removeEventListener("scroll", c), a.current && cancelAnimationFrame(a.current);
+    return window.addEventListener("scroll", n, { passive: !0 }), s(), () => {
+      window.removeEventListener("scroll", n), a.current && cancelAnimationFrame(a.current);
     };
   }, []), /* @__PURE__ */ e(
-    l,
+    c,
     {
       sx: {
         position: "fixed",
@@ -9573,11 +11199,11 @@ function Mr({ color: t = "primary.main" }) {
         bgcolor: "grey.200"
       },
       children: /* @__PURE__ */ e(
-        l,
+        c,
         {
           sx: {
             height: "100%",
-            width: `${i}%`,
+            width: `${r}%`,
             bgcolor: t,
             transition: "width 0.1s linear"
           }
@@ -9586,9 +11212,9 @@ function Mr({ color: t = "primary.main" }) {
     }
   );
 }
-function Wr() {
-  return /* @__PURE__ */ n(
-    l,
+function or() {
+  return /* @__PURE__ */ o(
+    c,
     {
       sx: {
         display: "flex",
@@ -9604,13 +11230,13 @@ function Wr() {
         borderColor: "grey.200"
       },
       children: [
-        /* @__PURE__ */ e(Sa, { sx: { fontSize: 18, color: "text.disabled", mt: 0.25, flexShrink: 0 } }),
-        /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.72rem", lineHeight: 1.55 }, children: "This article was produced by an AI research persona and reviewed by the ElevenID editorial team. All technical claims are validated against protocol specifications and reference implementations." })
+        /* @__PURE__ */ e(Va, { sx: { fontSize: 18, color: "text.disabled", mt: 0.25, flexShrink: 0 } }),
+        /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.72rem", lineHeight: 1.55 }, children: "This article was produced by an AI research persona and reviewed by the ElevenID editorial team. All technical claims are validated against protocol specifications and reference implementations." })
       ]
     }
   );
 }
-const qr = Z({
+const lr = Z({
   Foundations: {
     headline: "See it in action",
     body: "Explore the Marty platform to see how these concepts become real credential operations.",
@@ -9653,16 +11279,16 @@ const qr = Z({
     primary: { label: "Explore Governance", path: "/protocol#governance" },
     secondary: { label: "View Compliance Profiles", path: "/protocol#compliance-profiles" }
   }
-}), Er = Z({
+}), cr = Z({
   headline: "Ready to build?",
   body: "Explore the Marty platform - from credential issuance to verification APIs and deployment guides.",
   primary: { label: "Try the Verification API", path: "/verification" },
   secondary: { label: "Explore Issuance", path: "/issuance" }
 });
-function _r({ slug: t }) {
-  const i = re[t], r = i && qr[i.layer] || Er;
-  return /* @__PURE__ */ n(
-    V,
+function hr({ slug: t }) {
+  const r = ze[t], i = r && lr[r.layer] || cr;
+  return /* @__PURE__ */ o(
+    F,
     {
       elevation: 0,
       sx: {
@@ -9675,28 +11301,28 @@ function _r({ slug: t }) {
         textAlign: "center"
       },
       children: [
-        /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: r.headline }),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 480, mx: "auto" }, children: r.body }),
-        /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }, children: [
+        /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: i.headline }),
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 480, mx: "auto" }, children: i.body }),
+        /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }, children: [
           /* @__PURE__ */ e(
-            _,
+            z,
             {
               variant: "contained",
               size: "small",
               component: k,
-              to: r.primary.path,
+              to: i.primary.path,
               endIcon: /* @__PURE__ */ e(Q, {}),
-              children: r.primary.label
+              children: i.primary.label
             }
           ),
           /* @__PURE__ */ e(
-            _,
+            z,
             {
               variant: "outlined",
               size: "small",
               component: k,
-              to: r.secondary.path,
-              children: r.secondary.label
+              to: i.secondary.path,
+              children: i.secondary.label
             }
           )
         ] })
@@ -9705,54 +11331,60 @@ function _r({ slug: t }) {
   );
 }
 (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
-const qt = {
+const Lt = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function mi() {
-  const { slug: t } = nt(), i = Ne(), r = Ge(i.breakpoints.up("lg"));
-  if (Te[t])
-    return /* @__PURE__ */ e(br, {});
-  const a = H.find((x) => x.slug === t), s = Ja(t), c = Ka(t), u = c !== t ? H.find((x) => x.slug === c) : null, h = a ? Ie[a.authorId] || {} : {}, d = Ut[t] || [], p = ct[t] || [], y = We[t] || null, m = a ? Fe(H).filter(
+function Vr() {
+  const { slug: t } = et(), r = Xe(), i = Qe(r.breakpoints.up("lg"));
+  if (Ae[t])
+    return /* @__PURE__ */ e($i, {});
+  const a = ie.find((x) => x.slug === t), s = pi(t), n = di(t), d = n !== t ? ie.find((x) => x.slug === n) : null, h = a ? De[a.authorId] || {} : {}, p = Qt[t] || [], u = gt[t] || [], g = Be[t] || null, m = a ? Se(ie).filter(
     (x) => x.slug !== a.slug && x.category === a.category
-  ).sort((x, D) => new Date(D.date) - new Date(x.date)).slice(0, 3) : [];
+  ).sort((x, R) => new Date(R.date) - new Date(x.date)).slice(0, 3) : [];
   if (!a)
-    return /* @__PURE__ */ n(l, { sx: { textAlign: "center", py: 10 }, children: [
-      /* @__PURE__ */ e(o, { variant: "h4", gutterBottom: !0, children: "Post not found" }),
-      /* @__PURE__ */ e(_, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" })
+    return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
+      /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Post not found" }),
+      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" })
     ] });
-  const w = new Date(a.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), O = a.updatedDate ? new Date(a.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : null;
-  return /* @__PURE__ */ n(l, { children: [
-    /* @__PURE__ */ e(Mr, {}),
+  const v = new Date(a.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), O = a.updatedDate ? new Date(a.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : null, _ = wi(n);
+  return /* @__PURE__ */ o(c, { children: [
+    /* @__PURE__ */ e(nr, {}),
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
         title: a.title,
         description: a.summary,
-        canonicalPath: `/blog/${c}`,
+        canonicalPath: `/blog/${n}`,
+        ogImage: _,
         keywords: ["MIP", "identity protocol", a.category.toLowerCase(), "verifiable credentials"],
         ogType: "article",
         ogMeta: {
           "article:published_time": a.date,
           "article:author": h.name || "The MIP Authors",
-          "article:section": a.category
+          "article:section": a.category,
+          "og:image:width": 1200,
+          "og:image:height": 627
         },
-        structuredData: Ba({
+        structuredData: $t({
           headline: a.title,
           description: a.summary,
           datePublished: a.date,
+          dateModified: a.updatedDate || a.date,
           authorName: h.name || "The MIP Authors",
-          url: `https://elevenidllc.com/blog/${a.slug}`
+          authorType: h.name ? "Person" : "Organization",
+          url: `https://elevenidllc.com/blog/${n}`,
+          image: _
         })
       }
     ),
-    /* @__PURE__ */ e(_, { component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), sx: { mb: 1 }, children: "All Posts" }),
-    /* @__PURE__ */ e(Or, { slug: t, title: a.title }),
-    s && u && /* @__PURE__ */ n(
-      V,
+    /* @__PURE__ */ e(z, { component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), sx: { mb: 1 }, children: "All Posts" }),
+    /* @__PURE__ */ e(sr, { slug: t, title: a.title }),
+    s && d && /* @__PURE__ */ o(
+      F,
       {
         variant: "outlined",
         sx: {
@@ -9766,41 +11398,41 @@ function mi() {
         },
         children: [
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               variant: "overline",
               sx: { display: "block", fontWeight: 800, letterSpacing: 1.5, fontSize: "0.65rem", color: "warning.dark", mb: 0.75 },
               children: "Legacy explainer"
             }
           ),
-          /* @__PURE__ */ n(o, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: [
+          /* @__PURE__ */ o(l, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: [
             "Start with ",
-            u.title
+            d.title
           ] }),
-          /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.7 }, children: s.legacyNotice }),
-          /* @__PURE__ */ n(
-            _,
+          /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.7 }, children: s.legacyNotice }),
+          /* @__PURE__ */ o(
+            z,
             {
               variant: "contained",
               color: "warning",
               component: k,
-              to: `/blog/${c}`,
+              to: `/blog/${n}`,
               endIcon: /* @__PURE__ */ e(Q, {}),
               sx: { fontWeight: 700 },
               children: [
                 "Read ",
-                u.title
+                d.title
               ]
             }
           )
         ]
       }
     ),
-    /* @__PURE__ */ n(V, { elevation: 0, sx: { p: { xs: 3, md: 5 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 }, children: [
-      /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 1, mb: 2, flexWrap: "wrap" }, children: [
-        /* @__PURE__ */ e(T, { label: a.category, size: "small", color: qt[a.category] || "primary", sx: { fontWeight: 600 } }),
+    /* @__PURE__ */ o(F, { elevation: 0, sx: { p: { xs: 3, md: 5 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 }, children: [
+      /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1, mb: 2, flexWrap: "wrap" }, children: [
+        /* @__PURE__ */ e(T, { label: a.category, size: "small", color: Lt[a.category] || "primary", sx: { fontWeight: 600 } }),
         /* @__PURE__ */ e(T, { label: a.readTime, size: "small", variant: "outlined" }),
-        p.map((x) => /* @__PURE__ */ e(
+        u.map((x) => /* @__PURE__ */ e(
           T,
           {
             label: x,
@@ -9810,7 +11442,7 @@ function mi() {
           },
           x
         )),
-        d.map((x) => /* @__PURE__ */ e(
+        p.map((x) => /* @__PURE__ */ e(
           T,
           {
             label: x,
@@ -9819,17 +11451,17 @@ function mi() {
             color: "default",
             clickable: !0,
             component: k,
-            to: `/blog?tag=${encodeURIComponent(x)}`,
+            to: We(x),
             sx: { fontFamily: "monospace", fontSize: "0.75rem" }
           },
           x
         ))
       ] }),
-      /* @__PURE__ */ e(o, { variant: "h3", component: "h1", fontWeight: 800, gutterBottom: !0, sx: { fontSize: { xs: "1.75rem", md: "2.5rem" } }, children: a.title }),
-      /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", sx: { mb: 3 }, children: a.summary }),
-      /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "flex-start", gap: 1.5 }, children: [
+      /* @__PURE__ */ e(l, { variant: "h3", component: "h1", fontWeight: 800, gutterBottom: !0, sx: { fontSize: { xs: "1.75rem", md: "2.5rem" } }, children: a.title }),
+      /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mb: 3 }, children: a.summary }),
+      /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "flex-start", gap: 1.5 }, children: [
         /* @__PURE__ */ e(
-          ke,
+          Ce,
           {
             component: k,
             to: `/authors/${a.authorId}`,
@@ -9838,9 +11470,9 @@ function mi() {
             children: h.avatar || "?"
           }
         ),
-        /* @__PURE__ */ n(l, { children: [
-          /* @__PURE__ */ n(
-            o,
+        /* @__PURE__ */ o(c, { children: [
+          /* @__PURE__ */ o(
+            l,
             {
               variant: "body2",
               fontWeight: 600,
@@ -9854,30 +11486,30 @@ function mi() {
               ]
             }
           ),
-          /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-            w,
+          /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+            v,
             O && ` | Updated ${O}`,
             " | ",
             a.readTime,
             " | ",
             a.category
           ] }),
-          h.expertise && h.expertise.length > 0 && /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mt: 0.75 }, children: h.expertise.slice(0, 4).map((x) => /* @__PURE__ */ e(T, { label: x, size: "small", variant: "outlined", sx: { fontSize: "0.65rem", height: 20, fontWeight: 600, color: "text.secondary" } }, x)) })
+          h.expertise && h.expertise.length > 0 && /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mt: 0.75 }, children: h.expertise.slice(0, 4).map((x) => /* @__PURE__ */ e(T, { label: x, size: "small", variant: "outlined", sx: { fontSize: "0.65rem", height: 20, fontWeight: 600, color: "text.secondary" } }, x)) })
         ] })
       ] })
     ] }),
-    y && /* @__PURE__ */ e(l, { sx: { mb: 3 }, children: /* @__PURE__ */ e(Ot, { seriesInfo: y }) }),
-    /* @__PURE__ */ e(wr, { slug: t }),
-    /* @__PURE__ */ e(ee, { sx: { mb: 4 } }),
-    /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0 }, children: [
-      /* @__PURE__ */ e(l, { sx: { maxWidth: 780, flexGrow: 1, minWidth: 0 }, children: /* @__PURE__ */ e(Cr, { content: a.content, currentSlug: t }) }),
-      r && /* @__PURE__ */ e(xr, { content: a.content })
+    g && /* @__PURE__ */ e(c, { sx: { mb: 3 }, children: /* @__PURE__ */ e(jt, { seriesInfo: g }) }),
+    /* @__PURE__ */ e(Yi, { slug: t }),
+    /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
+    /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0 }, children: [
+      /* @__PURE__ */ e(c, { sx: { maxWidth: 780, flexGrow: 1, minWidth: 0 }, children: /* @__PURE__ */ e(ar, { content: a.content, currentSlug: t }) }),
+      i && /* @__PURE__ */ e(Xi, { content: a.content })
     ] }),
-    /* @__PURE__ */ e(Wr, {}),
-    /* @__PURE__ */ e(Tr, { slug: t }),
-    h.bio && /* @__PURE__ */ e(V, { variant: "outlined", sx: { p: 3, mt: 6, borderRadius: 2 }, children: /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 2, alignItems: "flex-start" }, children: [
+    /* @__PURE__ */ e(or, {}),
+    /* @__PURE__ */ e(da, { slug: t }),
+    h.bio && /* @__PURE__ */ e(F, { variant: "outlined", sx: { p: 3, mt: 6, borderRadius: 2 }, children: /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, alignItems: "flex-start" }, children: [
       /* @__PURE__ */ e(
-        ke,
+        Ce,
         {
           component: k,
           to: `/authors/${a.authorId}`,
@@ -9886,9 +11518,9 @@ function mi() {
           children: h.avatar
         }
       ),
-      /* @__PURE__ */ n(l, { sx: { flex: 1 }, children: [
+      /* @__PURE__ */ o(c, { sx: { flex: 1 }, children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "subtitle1",
             fontWeight: 700,
@@ -9898,23 +11530,23 @@ function mi() {
             children: h.name
           }
         ),
-        /* @__PURE__ */ n(o, { variant: "body2", color: "text.secondary", sx: { mb: 1 }, children: [
+        /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { mb: 1 }, children: [
           h.title,
           h.subtitle ? ` - ${h.subtitle}` : ""
         ] }),
-        /* @__PURE__ */ e(o, { variant: "body2", sx: { mb: 1.5 }, children: h.bio }),
-        h.expertise && h.expertise.length > 0 && /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mb: 1.5 }, children: h.expertise.map((x) => /* @__PURE__ */ e(T, { label: x, size: "small", variant: "outlined", sx: { fontFamily: "monospace", fontSize: "0.7rem" } }, x)) }),
-        h.disclosure && /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { fontStyle: "italic" }, children: h.disclosure })
+        /* @__PURE__ */ e(l, { variant: "body2", sx: { mb: 1.5 }, children: h.bio }),
+        h.expertise && h.expertise.length > 0 && /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mb: 1.5 }, children: h.expertise.map((x) => /* @__PURE__ */ e(T, { label: x, size: "small", variant: "outlined", sx: { fontFamily: "monospace", fontSize: "0.7rem" } }, x)) }),
+        h.disclosure && /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontStyle: "italic" }, children: h.disclosure })
       ] })
     ] }) }),
-    y && /* @__PURE__ */ e(l, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Ot, { seriesInfo: y }) }),
-    m.length > 0 && /* @__PURE__ */ n(l, { sx: { mt: 8 }, children: [
-      /* @__PURE__ */ e(ee, { sx: { mb: 4 } }),
-      /* @__PURE__ */ e(o, { variant: "h5", fontWeight: 700, gutterBottom: !0, children: "Related Articles" }),
-      /* @__PURE__ */ e(U, { container: !0, spacing: 3, children: m.map((x) => {
-        const D = Ie[x.authorId] || {};
-        return /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
-          Ae,
+    g && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(jt, { seriesInfo: g }) }),
+    m.length > 0 && /* @__PURE__ */ o(c, { sx: { mt: 8 }, children: [
+      /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
+      /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 700, gutterBottom: !0, children: "Related Articles" }),
+      /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: m.map((x) => {
+        const R = De[x.authorId] || {};
+        return /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
+          Me,
           {
             elevation: 1,
             sx: {
@@ -9924,25 +11556,25 @@ function mi() {
               "&:hover": { transform: "translateY(-3px)", boxShadow: 5 }
             },
             children: /* @__PURE__ */ e(
-              Ce,
+              qe,
               {
                 component: k,
                 to: `/blog/${x.slug}`,
                 sx: { height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" },
-                children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1 }, children: [
+                children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1 }, children: [
                   /* @__PURE__ */ e(
                     T,
                     {
                       label: x.category,
                       size: "small",
-                      color: qt[x.category] || "default",
+                      color: Lt[x.category] || "default",
                       sx: { mb: 1.5, fontWeight: 600 }
                     }
                   ),
-                  /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { fontSize: "1rem", lineHeight: 1.4 }, children: x.title }),
-                  /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, fontSize: "0.85rem" }, children: x.summary }),
-                  /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-                    D.name || x.authorId,
+                  /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { fontSize: "1rem", lineHeight: 1.4 }, children: x.title }),
+                  /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, fontSize: "0.85rem" }, children: x.summary }),
+                  /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+                    R.name || x.authorId,
                     " | ",
                     x.readTime
                   ] })
@@ -9953,44 +11585,54 @@ function mi() {
         ) }, x.slug);
       }) })
     ] }),
-    /* @__PURE__ */ e(_r, { slug: t }),
-    /* @__PURE__ */ e(ee, { sx: { my: 6 } }),
-    /* @__PURE__ */ n(l, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
-      /* @__PURE__ */ e(_, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "All Posts" }),
-      /* @__PURE__ */ e(_, { variant: "contained", component: k, to: "/protocol", endIcon: /* @__PURE__ */ e(Q, {}), children: "Explore the Protocol" })
+    /* @__PURE__ */ e(hr, { slug: t }),
+    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
+    /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
+      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "All Posts" }),
+      /* @__PURE__ */ e(z, { variant: "contained", component: k, to: "/protocol", endIcon: /* @__PURE__ */ e(Q, {}), children: "Explore the Protocol" })
     ] })
   ] });
 }
-const Rr = (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
-function yi() {
-  const t = Ke(), i = Object.entries(Ie), r = {};
-  return Ha.forEach((a) => {
-    a.posts.forEach((s) => {
-      r[s.authorId] = (r[s.authorId] || 0) + 1;
+function Fr() {
+  const t = Ze(), r = Object.entries(De), i = {};
+  ii.forEach((s) => {
+    s.posts.forEach((n) => {
+      i[n.authorId] = (i[n.authorId] || 0) + 1;
     });
-  }), /* @__PURE__ */ n(l, { children: [
+  });
+  const a = Se(me).reduce((s, n) => (s[n.authorId] = (s[n.authorId] || 0) + 1, s), {});
+  return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
         title: "Research Authors - Marty Identity Protocol",
         description: "Meet the AI research personas analyzing verifiable identity standards, cryptography, governance, and protocol design.",
         canonicalPath: "/authors",
-        keywords: ["MIP authors", "identity research", "protocol analysts", "verifiable credentials"]
+        keywords: ["MIP authors", "identity research", "protocol analysts", "verifiable credentials"],
+        structuredData: dt({
+          name: "Research Authors",
+          description: "Meet the AI research personas analyzing verifiable identity standards, cryptography, governance, and protocol design.",
+          url: "https://elevenidllc.com/authors",
+          items: r.map(([s, n]) => ({
+            name: n.name,
+            url: `https://elevenidllc.com/authors/${s}`
+          }))
+        })
       }
     ),
-    /* @__PURE__ */ n(l, { sx: { mb: 2 }, children: [
+    /* @__PURE__ */ o(c, { sx: { mb: 2 }, children: [
       /* @__PURE__ */ e(
-        o,
+        l,
         {
           variant: "overline",
           sx: { fontWeight: 700, letterSpacing: 2, color: "primary.main" },
           children: "Authors / Research Team"
         }
       ),
-      /* @__PURE__ */ e(o, { variant: "h3", component: "h1", fontWeight: 900, gutterBottom: !0, children: "Research Authors" })
+      /* @__PURE__ */ e(l, { variant: "h3", component: "h1", fontWeight: 900, gutterBottom: !0, children: "Research Authors" })
     ] }),
-    /* @__PURE__ */ n(
-      V,
+    /* @__PURE__ */ o(
+      F,
       {
         elevation: 0,
         sx: {
@@ -10001,13 +11643,13 @@ function yi() {
           color: "common.white"
         },
         children: [
-          /* @__PURE__ */ e(o, { variant: "body1", sx: { maxWidth: 720, lineHeight: 1.8 }, children: "The ElevenID research personas analyze standards, cryptography, governance, and protocol design that power modern verifiable identity systems. Each persona specializes in a domain of the Marty Identity Protocol - from passport PKI and wallet architecture to privacy research and trust infrastructure." }),
-          /* @__PURE__ */ e(o, { variant: "caption", sx: { mt: 2, display: "block", opacity: 0.7 }, children: "Research personas maintained by ElevenID AI systems." })
+          /* @__PURE__ */ e(l, { variant: "body1", sx: { maxWidth: 720, lineHeight: 1.8 }, children: "The ElevenID research personas analyze standards, cryptography, governance, and protocol design that power modern verifiable identity systems. Each persona specializes in a domain of the Marty Identity Protocol - from passport PKI and wallet architecture to privacy research and trust infrastructure." }),
+          /* @__PURE__ */ e(l, { variant: "caption", sx: { mt: 2, display: "block", opacity: 0.7 }, children: "Research personas maintained by ElevenID AI systems." })
         ]
       }
     ),
     /* @__PURE__ */ e(
-      V,
+      F,
       {
         variant: "outlined",
         sx: {
@@ -10020,19 +11662,17 @@ function yi() {
           alignItems: "flex-start",
           gap: 1.5
         },
-        children: /* @__PURE__ */ n(o, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.65 }, children: [
+        children: /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.65 }, children: [
           /* @__PURE__ */ e("strong", { children: "About Our Authors:" }),
           " Articles are written by AI research personas trained on the Marty Identity Protocol specification and identity architecture literature. Each persona specializes in a domain - from cryptography and governance to wallet systems and privacy research - to provide focused, technically grounded analysis."
         ] })
       }
     ),
-    /* @__PURE__ */ e(U, { container: !0, spacing: 3, children: i.map(([a, s]) => {
-      var h;
-      const c = H.filter(
-        (d) => d.authorId === a && d.date <= Rr && De(d.slug)
-      ).length, u = r[a] || 0;
-      return /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
-        Ae,
+    /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: r.map(([s, n]) => {
+      var p;
+      const d = a[s] || 0, h = i[s] || 0;
+      return /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
+        Me,
         {
           elevation: 2,
           sx: {
@@ -10044,16 +11684,16 @@ function yi() {
             "&:hover": { transform: "translateY(-4px)", boxShadow: 6 }
           },
           children: /* @__PURE__ */ e(
-            Ce,
+            qe,
             {
-              onClick: () => t(`/authors/${a}`),
+              onClick: () => t(`/authors/${s}`),
               sx: { flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "stretch" },
-              children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1, p: 3 }, children: [
-                /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 2, mb: 2 }, children: [
+              children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 3 }, children: [
+                /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 2, mb: 2 }, children: [
                   /* @__PURE__ */ e(
-                    ke,
+                    Ce,
                     {
-                      src: s.avatarImage,
+                      src: n.avatarImage,
                       sx: {
                         width: 64,
                         height: 64,
@@ -10061,16 +11701,16 @@ function yi() {
                         fontSize: "1.2rem",
                         fontWeight: 700
                       },
-                      children: s.avatar
+                      children: n.avatar
                     }
                   ),
-                  /* @__PURE__ */ n(l, { children: [
-                    /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, sx: { lineHeight: 1.3 }, children: s.name }),
-                    /* @__PURE__ */ e(o, { variant: "body2", color: "primary.dark", fontWeight: 600, children: s.title })
+                  /* @__PURE__ */ o(c, { children: [
+                    /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, sx: { lineHeight: 1.3 }, children: n.name }),
+                    /* @__PURE__ */ e(l, { variant: "body2", color: "primary.dark", fontWeight: 600, children: n.title })
                   ] })
                 ] }),
                 /* @__PURE__ */ e(
-                  o,
+                  l,
                   {
                     variant: "body2",
                     color: "text.secondary",
@@ -10082,48 +11722,48 @@ function yi() {
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden"
                     },
-                    children: s.bio
+                    children: n.bio
                   }
                 ),
-                ((h = s.characterProfile) == null ? void 0 : h.archetype) && /* @__PURE__ */ e(l, { sx: { mb: 2 }, children: /* @__PURE__ */ e(
+                ((p = n.characterProfile) == null ? void 0 : p.archetype) && /* @__PURE__ */ e(c, { sx: { mb: 2 }, children: /* @__PURE__ */ e(
                   T,
                   {
-                    label: s.characterProfile.archetype,
+                    label: n.characterProfile.archetype,
                     size: "small",
                     color: "secondary",
                     variant: "outlined"
                   }
                 ) }),
-                s.expertise && /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mb: 2 }, children: [
-                  s.expertise.slice(0, 3).map((d) => /* @__PURE__ */ e(
+                n.expertise && /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0.5, flexWrap: "wrap", mb: 2 }, children: [
+                  n.expertise.slice(0, 3).map((u) => /* @__PURE__ */ e(
                     T,
                     {
-                      label: d,
+                      label: u,
                       size: "small",
                       variant: "outlined",
                       sx: { fontSize: "0.7rem", fontFamily: "monospace" }
                     },
-                    d
+                    u
                   )),
-                  s.expertise.length > 3 && /* @__PURE__ */ e(
+                  n.expertise.length > 3 && /* @__PURE__ */ e(
                     T,
                     {
-                      label: `+${s.expertise.length - 3}`,
+                      label: `+${n.expertise.length - 3}`,
                       size: "small",
                       sx: { fontSize: "0.7rem" }
                     }
                   )
                 ] }),
-                /* @__PURE__ */ e(ee, { sx: { mb: 1.5 } }),
-                /* @__PURE__ */ n(l, { sx: { display: "flex", justifyContent: "space-between", alignItems: "center" }, children: [
-                  /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-                    c,
+                /* @__PURE__ */ e(se, { sx: { mb: 1.5 } }),
+                /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "space-between", alignItems: "center" }, children: [
+                  /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+                    d,
                     " published | ",
-                    u,
+                    h,
                     " on roadmap"
                   ] }),
-                  /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 0.5, color: "primary.main" }, children: [
-                    /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "primary", children: "View profile" }),
+                  /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, color: "primary.main" }, children: [
+                    /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "primary", children: "View profile" }),
                     /* @__PURE__ */ e(Q, { sx: { fontSize: 13 } })
                   ] })
                 ] })
@@ -10131,44 +11771,53 @@ function yi() {
             }
           )
         }
-      ) }, a);
+      ) }, s);
     }) }),
-    /* @__PURE__ */ e(ee, { sx: { my: 6 } }),
-    /* @__PURE__ */ e(l, { sx: { display: "flex", justifyContent: "center", gap: 2 }, children: /* @__PURE__ */ e(_, { variant: "outlined", onClick: () => t("/blog"), startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" }) })
+    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
+    /* @__PURE__ */ e(c, { sx: { display: "flex", justifyContent: "center", gap: 2 }, children: /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => t("/blog"), startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" }) })
   ] });
 }
-const zr = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], jr = {
+const dr = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function gi() {
-  var u, h, d, p, y;
-  const { authorId: t } = nt(), i = Ke(), r = Ie[t];
-  if (!r)
-    return /* @__PURE__ */ n(l, { sx: { textAlign: "center", py: 10 }, children: [
-      /* @__PURE__ */ e(o, { variant: "h4", gutterBottom: !0, children: "Author not found" }),
-      /* @__PURE__ */ e(_, { variant: "outlined", onClick: () => i("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" })
+function Ur() {
+  var d, h, p, u, g;
+  const { authorId: t } = et(), r = Ze(), i = De[t];
+  if (!i)
+    return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
+      /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Author not found" }),
+      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" })
     ] });
-  const a = H.filter((m) => m.authorId === t && m.date <= zr && De(m.slug)).sort((m, w) => new Date(w.date) - new Date(m.date)), s = r.characterProfile, c = ((s == null ? void 0 : s.handoffAuthors) || []).filter((m) => m !== t).map((m) => {
-    var w;
-    return { id: m, name: ((w = Ie[m]) == null ? void 0 : w.name) || m };
+  const a = Se(me).filter((m) => m.authorId === t).sort((m, v) => new Date(v.date) - new Date(m.date)), s = i.characterProfile, n = ((s == null ? void 0 : s.handoffAuthors) || []).filter((m) => m !== t).map((m) => {
+    var v;
+    return { id: m, name: ((v = De[m]) == null ? void 0 : v.name) || m };
   });
-  return /* @__PURE__ */ n(l, { children: [
+  return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
-        title: `${r.name} - ${r.title}`,
-        description: r.bio,
+        title: `${i.name} - ${i.title}`,
+        description: i.bio,
         canonicalPath: `/authors/${t}`,
-        keywords: [r.name, r.title, "MIP", "identity protocol"]
+        keywords: [i.name, i.title, "MIP", "identity protocol"],
+        ogType: "profile",
+        structuredData: Qa({
+          name: i.name,
+          description: i.bio,
+          url: `https://elevenidllc.com/authors/${t}`,
+          jobTitle: `${i.title}${i.subtitle ? ` - ${i.subtitle}` : ""}`,
+          image: i.avatarImage ? `https://elevenidllc.com${i.avatarImage}` : null,
+          knowsAbout: i.expertise || []
+        })
       }
     ),
-    /* @__PURE__ */ e(_, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => i("/authors"), sx: { mb: 3 }, children: "All Authors" }),
+    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => r("/authors"), sx: { mb: 3 }, children: "All Authors" }),
     /* @__PURE__ */ e(
-      V,
+      F,
       {
         elevation: 0,
         sx: {
@@ -10179,11 +11828,11 @@ function gi() {
           border: "1px solid",
           borderColor: "primary.100"
         },
-        children: /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 3, alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }, children: [
+        children: /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 3, alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }, children: [
           /* @__PURE__ */ e(
-            ke,
+            Ce,
             {
-              src: r.avatarImage,
+              src: i.avatarImage,
               sx: {
                 width: 96,
                 height: 96,
@@ -10192,23 +11841,23 @@ function gi() {
                 fontWeight: 700,
                 flexShrink: 0
               },
-              children: r.avatar
+              children: i.avatar
             }
           ),
-          /* @__PURE__ */ n(l, { sx: { flex: 1 }, children: [
-            /* @__PURE__ */ e(o, { variant: "h4", fontWeight: 800, gutterBottom: !0, children: r.name }),
-            /* @__PURE__ */ n(o, { variant: "h6", color: "primary.dark", gutterBottom: !0, sx: { fontWeight: 600 }, children: [
-              r.title,
-              r.subtitle ? ` - ${r.subtitle}` : ""
+          /* @__PURE__ */ o(c, { sx: { flex: 1 }, children: [
+            /* @__PURE__ */ e(l, { variant: "h4", fontWeight: 800, gutterBottom: !0, children: i.name }),
+            /* @__PURE__ */ o(l, { variant: "h6", color: "primary.dark", gutterBottom: !0, sx: { fontWeight: 600 }, children: [
+              i.title,
+              i.subtitle ? ` - ${i.subtitle}` : ""
             ] }),
-            (s == null ? void 0 : s.archetype) && /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 1.5 }, children: [
+            (s == null ? void 0 : s.archetype) && /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 1.5 }, children: [
               /* @__PURE__ */ e(T, { label: s.archetype, color: "secondary", size: "small" }),
               s.emotionalTemperature && /* @__PURE__ */ e(T, { label: s.emotionalTemperature, size: "small", variant: "outlined" })
             ] }),
-            /* @__PURE__ */ e(o, { variant: "body1", sx: { mb: 2, lineHeight: 1.8, maxWidth: 680 }, children: r.bio }),
-            r.expertise && r.expertise.length > 0 && /* @__PURE__ */ n(l, { sx: { mb: 2 }, children: [
-              /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { mb: 1, display: "block", textTransform: "uppercase", letterSpacing: 1 }, children: "Areas of Expertise" }),
-              /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: r.expertise.map((m) => /* @__PURE__ */ e(
+            /* @__PURE__ */ e(l, { variant: "body1", sx: { mb: 2, lineHeight: 1.8, maxWidth: 680 }, children: i.bio }),
+            i.expertise && i.expertise.length > 0 && /* @__PURE__ */ o(c, { sx: { mb: 2 }, children: [
+              /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { mb: 1, display: "block", textTransform: "uppercase", letterSpacing: 1 }, children: "Areas of Expertise" }),
+              /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: i.expertise.map((m) => /* @__PURE__ */ e(
                 T,
                 {
                   label: m,
@@ -10219,24 +11868,24 @@ function gi() {
                 m
               )) })
             ] }),
-            r.disclosure && /* @__PURE__ */ e(o, { variant: "caption", color: "text.secondary", sx: { fontStyle: "italic", display: "block", mt: 1 }, children: r.disclosure })
+            i.disclosure && /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontStyle: "italic", display: "block", mt: 1 }, children: i.disclosure })
           ] })
         ] })
       }
     ),
-    s && /* @__PURE__ */ n(U, { container: !0, spacing: 3, sx: { mb: 5 }, children: [
-      /* @__PURE__ */ e(U, { item: !0, xs: 12, md: 7, children: /* @__PURE__ */ n(V, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
+    s && /* @__PURE__ */ o(G, { container: !0, spacing: 3, sx: { mb: 5 }, children: [
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 7, children: /* @__PURE__ */ o(F, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "overline",
             sx: { fontWeight: 700, letterSpacing: 1.5, color: "primary.main" },
             children: "Narrator Profile"
           }
         ),
-        /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mt: 1.5, mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Core question" }),
-        /* @__PURE__ */ n(
-          o,
+        /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mt: 1.5, mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Core question" }),
+        /* @__PURE__ */ o(
+          l,
           {
             variant: "h6",
             sx: { lineHeight: 1.5, fontStyle: "italic", fontWeight: 700, mb: 2.5, maxWidth: 760 },
@@ -10247,61 +11896,61 @@ function gi() {
             ]
           }
         ),
-        /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.8, mb: 2 }, children: s.worldview }),
-        s.useWhen && /* @__PURE__ */ n(o, { variant: "body2", sx: { lineHeight: 1.75 }, children: [
+        /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.8, mb: 2 }, children: s.worldview }),
+        s.useWhen && /* @__PURE__ */ o(l, { variant: "body2", sx: { lineHeight: 1.75 }, children: [
           /* @__PURE__ */ e("strong", { children: "Best used when:" }),
           " ",
           s.useWhen
         ] })
       ] }) }),
-      /* @__PURE__ */ e(U, { item: !0, xs: 12, md: 5, children: /* @__PURE__ */ n(V, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
-        /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "What this voice notices first" }),
-        /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (u = s.noticesFirst) == null ? void 0 : u.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined" }, m)) }),
-        /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Voice traits" }),
-        /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (h = s.voiceTraits) == null ? void 0 : h.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", color: "primary", variant: "outlined" }, m)) }),
-        c.length > 0 && /* @__PURE__ */ n(He, { children: [
-          /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Best handoffs" }),
-          /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: c.map(({ id: m, name: w }) => /* @__PURE__ */ e(
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 5, children: /* @__PURE__ */ o(F, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
+        /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "What this voice notices first" }),
+        /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (d = s.noticesFirst) == null ? void 0 : d.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined" }, m)) }),
+        /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Voice traits" }),
+        /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (h = s.voiceTraits) == null ? void 0 : h.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", color: "primary", variant: "outlined" }, m)) }),
+        n.length > 0 && /* @__PURE__ */ o(Le, { children: [
+          /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Best handoffs" }),
+          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: n.map(({ id: m, name: v }) => /* @__PURE__ */ e(
             T,
             {
-              label: w,
+              label: v,
               size: "small",
               clickable: !0,
-              onClick: () => i(`/authors/${m}`)
+              onClick: () => r(`/authors/${m}`)
             },
             m
           )) })
         ] })
       ] }) }),
-      /* @__PURE__ */ e(U, { item: !0, xs: 12, children: /* @__PURE__ */ e(V, { variant: "outlined", sx: { p: 3, borderRadius: 3 }, children: /* @__PURE__ */ n(U, { container: !0, spacing: 3, children: [
-        /* @__PURE__ */ n(U, { item: !0, xs: 12, md: 6, children: [
-          /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Signature moves" }),
-          /* @__PURE__ */ e(l, { component: "ul", sx: { pl: 2.5, my: 0 }, children: (d = s.signatureMoves) == null ? void 0 : d.map((m) => /* @__PURE__ */ e(o, { component: "li", variant: "body2", color: "text.secondary", sx: { mb: 1, lineHeight: 1.75 }, children: m }, m)) })
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, children: /* @__PURE__ */ e(F, { variant: "outlined", sx: { p: 3, borderRadius: 3 }, children: /* @__PURE__ */ o(G, { container: !0, spacing: 3, children: [
+        /* @__PURE__ */ o(G, { item: !0, xs: 12, md: 6, children: [
+          /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Signature moves" }),
+          /* @__PURE__ */ e(c, { component: "ul", sx: { pl: 2.5, my: 0 }, children: (p = s.signatureMoves) == null ? void 0 : p.map((m) => /* @__PURE__ */ e(l, { component: "li", variant: "body2", color: "text.secondary", sx: { mb: 1, lineHeight: 1.75 }, children: m }, m)) })
         ] }),
-        /* @__PURE__ */ n(U, { item: !0, xs: 12, md: 6, children: [
-          /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Best used for" }),
-          /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (p = s.bestAssignments) == null ? void 0 : p.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined", sx: { bgcolor: "background.paper" } }, m)) }),
-          /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Why this persona matters" }),
-          /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.8, mb: 2 }, children: s.commercialFunction }),
-          /* @__PURE__ */ e(o, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Favorite examples" }),
-          /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: (y = s.favoriteExamples) == null ? void 0 : y.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined" }, m)) })
+        /* @__PURE__ */ o(G, { item: !0, xs: 12, md: 6, children: [
+          /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Best used for" }),
+          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (u = s.bestAssignments) == null ? void 0 : u.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined", sx: { bgcolor: "background.paper" } }, m)) }),
+          /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Why this persona matters" }),
+          /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { lineHeight: 1.8, mb: 2 }, children: s.commercialFunction }),
+          /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Favorite examples" }),
+          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: (g = s.favoriteExamples) == null ? void 0 : g.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined" }, m)) })
         ] })
       ] }) }) })
     ] }),
-    /* @__PURE__ */ n(o, { variant: "h5", fontWeight: 700, gutterBottom: !0, children: [
+    /* @__PURE__ */ o(l, { variant: "h5", fontWeight: 700, gutterBottom: !0, children: [
       "Posts by ",
-      r.name
+      i.name
     ] }),
-    /* @__PURE__ */ n(o, { variant: "body2", color: "text.secondary", sx: { mb: 3 }, children: [
+    /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { mb: 3 }, children: [
       a.length,
       " article",
       a.length !== 1 ? "s" : "",
       " published"
     ] }),
-    a.length === 0 ? /* @__PURE__ */ e(V, { elevation: 0, sx: { p: 4, textAlign: "center", bgcolor: "grey.50", borderRadius: 2 }, children: /* @__PURE__ */ e(o, { variant: "body1", color: "text.secondary", children: "No published articles yet. Check back soon." }) }) : /* @__PURE__ */ e(U, { container: !0, spacing: 3, children: a.map((m) => {
-      const w = new Date(m.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-      return /* @__PURE__ */ e(U, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
-        Ae,
+    a.length === 0 ? /* @__PURE__ */ e(F, { elevation: 0, sx: { p: 4, textAlign: "center", bgcolor: "grey.50", borderRadius: 2 }, children: /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", children: "No published articles yet. Check back soon." }) }) : /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: a.map((m) => {
+      const v = new Date(m.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+      return /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
+        Me,
         {
           elevation: 1,
           sx: {
@@ -10313,25 +11962,25 @@ function gi() {
             "&:hover": { transform: "translateY(-3px)", boxShadow: 5 }
           },
           children: /* @__PURE__ */ e(
-            Ce,
+            qe,
             {
-              onClick: () => i(`/blog/${m.slug}`),
+              onClick: () => r(`/blog/${m.slug}`),
               sx: { flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "stretch" },
-              children: /* @__PURE__ */ n(Se, { sx: { flexGrow: 1, p: 3 }, children: [
-                /* @__PURE__ */ e(l, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: /* @__PURE__ */ e(
+              children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 3 }, children: [
+                /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, mb: 2, flexWrap: "wrap" }, children: /* @__PURE__ */ e(
                   T,
                   {
                     label: m.category,
                     size: "small",
-                    color: jr[m.category] || "default",
+                    color: dr[m.category] || "default",
                     sx: { fontWeight: 600 }
                   }
                 ) }),
-                /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35 }, children: m.title }),
-                /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.65 }, children: m.summary }),
-                /* @__PURE__ */ e(ee, { sx: { mb: 1.5 } }),
-                /* @__PURE__ */ n(o, { variant: "caption", color: "text.secondary", children: [
-                  w,
+                /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35 }, children: m.title }),
+                /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.65 }, children: m.summary }),
+                /* @__PURE__ */ e(se, { sx: { mb: 1.5 } }),
+                /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
+                  v,
                   " | ",
                   m.readTime
                 ] })
@@ -10341,129 +11990,29 @@ function gi() {
         }
       ) }, m.slug);
     }) }),
-    /* @__PURE__ */ e(ee, { sx: { my: 6 } }),
-    /* @__PURE__ */ n(l, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
-      /* @__PURE__ */ e(_, { variant: "outlined", onClick: () => i("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" }),
-      /* @__PURE__ */ e(_, { variant: "contained", endIcon: /* @__PURE__ */ e(Q, {}), onClick: () => i("/blog"), children: "Browse All Posts" })
+    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
+    /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
+      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" }),
+      /* @__PURE__ */ e(z, { variant: "contained", endIcon: /* @__PURE__ */ e(Q, {}), onClick: () => r("/blog"), children: "Browse All Posts" })
     ] })
   ] });
 }
-const Le = Z([
-  {
-    part: "I",
-    title: "Foundations",
-    description: "Core concepts of digital identity - what it is, who participates, and how credentials work.",
-    layer: "Foundations",
-    slugs: [
-      "what-is-digital-identity",
-      "verifiable-credentials-explained",
-      "issuers-holders-verifiers-explained",
-      "credential-lifecycle"
-    ]
-  },
-  {
-    part: "II",
-    title: "The Marty Protocol Model",
-    description: "The five primitives that define every identity system - from trust to flow orchestration.",
-    layer: "Trust",
-    slugs: [
-      "five-primitives-in-one-picture",
-      "the-marty-identity-model",
-      "trust-profiles-explained",
-      "credential-templates-designing-what-gets-issued",
-      "presentation-policies-minimum-disclosure",
-      "deployment-profiles-from-design-to-production",
-      "flows-orchestrating-identity-lifecycle"
-    ]
-  },
-  {
-    part: "III",
-    title: "Trust & PKI",
-    description: "Cryptographic foundations - public key infrastructure, trust anchors, and certificate chains.",
-    layer: "Trust",
-    slugs: [
-      "why-identity-depends-on-cryptography",
-      "public-key-infrastructure-explained",
-      "understanding-trust-anchors",
-      "cryptographic-trust-anchors-primer",
-      "certificate-chains-and-validation",
-      "how-passport-pki-works",
-      "understanding-csca-certificates"
-    ]
-  },
-  {
-    part: "IV",
-    title: "Privacy & Disclosure",
-    description: "Data minimization, selective disclosure, and zero-knowledge proofs.",
-    layer: "Present",
-    slugs: [
-      "minimum-disclosure-is-a-policy-problem",
-      "selective-disclosure",
-      "data-minimization-in-identity",
-      "sd-jwt-selective-disclosure-deep-dive",
-      "zero-knowledge-predicates-identity"
-    ]
-  },
-  {
-    part: "V",
-    title: "Implementation",
-    description: "Transport protocols, schemas, and integration patterns for building with Marty.",
-    layer: "Issue",
-    slugs: [
-      "impl-oid4vci",
-      "impl-oid4vp",
-      "mip-json-schemas-walkthrough",
-      "conformance-testing-for-implementers"
-    ]
-  },
-  {
-    part: "VI",
-    title: "Deployment Patterns",
-    description: "How verifiable identity runs in real environments - airports, enterprises, kiosks, and edge devices.",
-    layer: "Deploy",
-    slugs: [
-      "deployment-profiles-in-practice",
-      "offline-verification-guide",
-      "deploy-airline-boarding",
-      "deploy-enterprise-access",
-      "deploy-age-verification",
-      "deploy-membership-credentials"
-    ]
-  },
-  {
-    part: "VII",
-    title: "Governance & Trust Infrastructure",
-    description: "Compliance frameworks, policy engines, trust registries, and wallet architecture.",
-    layer: "Govern",
-    slugs: [
-      "compliance-profiles-bridging-regulation",
-      "compliance-profiles-in-practice",
-      "cedar-policies-for-identity-governance",
-      "building-trust-registries-at-scale",
-      "mobile-wallet-architectures",
-      "secure-enclave-credential-storage",
-      "credential-portability-across-wallets",
-      "eudi-wallet-model-explained"
-    ]
-  }
-]);
-function Et(t) {
-  return t.reduce((i, r) => {
-    var c;
-    const a = ta(r), s = (c = a == null ? void 0 : a.readTime) == null ? void 0 : c.match(/(\d+)/);
-    return i + (s ? parseInt(s[1], 10) : 0);
+function Vt(t) {
+  return t.reduce((r, i) => {
+    var n;
+    const a = ma(i), s = (n = a == null ? void 0 : a.readTime) == null ? void 0 : n.match(/(\d+)/);
+    return r + (s ? parseInt(s[1], 10) : 0);
   }, 0);
 }
-function ta(t) {
-  var i;
-  return (i = re[t]) != null && i.browseHidden && Te[t] ? Te[t] : H.find((r) => r.slug === t);
+function ma(t) {
+  return Zt(t) && Ae[t] ? Ae[t] : me.find((r) => r.slug === t);
 }
-function fi() {
-  const t = Ke(), i = Le.reduce((s, c) => s + c.slugs.length, 0), r = Le.reduce((s, c) => s + Et(c.slugs), 0);
+function Hr() {
+  const t = Ze(), r = ve.reduce((s, n) => s + n.slugs.length, 0), i = ve.reduce((s, n) => s + Vt(n.slugs), 0);
   let a = 0;
-  return /* @__PURE__ */ n(l, { children: [
+  return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      ge,
+      we,
       {
         title: "Identity Infrastructure Foundations - Marty Identity Protocol",
         description: "A structured introduction to verifiable identity infrastructure. Foundations, protocols, cryptography, deployment patterns, and governance.",
@@ -10471,9 +12020,9 @@ function fi() {
         keywords: ["digital identity", "verifiable credentials", "identity infrastructure", "PKI", "OID4VCI", "selective disclosure", "trust profiles"]
       }
     ),
-    /* @__PURE__ */ e(_, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => t("/blog"), sx: { mb: 3 }, children: "Blog" }),
-    /* @__PURE__ */ n(
-      V,
+    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => t("/blog"), sx: { mb: 3 }, children: "Blog" }),
+    /* @__PURE__ */ o(
+      F,
       {
         elevation: 0,
         sx: {
@@ -10484,10 +12033,10 @@ function fi() {
           color: "common.white"
         },
         children: [
-          /* @__PURE__ */ n(l, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2 }, children: [
-            /* @__PURE__ */ e(Je, { sx: { fontSize: 28, opacity: 0.7 } }),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2 }, children: [
+            /* @__PURE__ */ e(Ve, { sx: { fontSize: 28, opacity: 0.7 } }),
             /* @__PURE__ */ e(
-              o,
+              l,
               {
                 variant: "overline",
                 sx: {
@@ -10501,7 +12050,7 @@ function fi() {
             )
           ] }),
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               variant: "h2",
               component: "h1",
@@ -10512,7 +12061,7 @@ function fi() {
             }
           ),
           /* @__PURE__ */ e(
-            o,
+            l,
             {
               variant: "h6",
               component: "p",
@@ -10520,18 +12069,18 @@ function fi() {
               children: "A structured introduction to digital identity infrastructure - from foundational concepts to production deployment patterns."
             }
           ),
-          /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 2, flexWrap: "wrap", alignItems: "center" }, children: [
+          /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, flexWrap: "wrap", alignItems: "center" }, children: [
             /* @__PURE__ */ e(
               T,
               {
-                label: `${i} articles`,
+                label: `${r} articles`,
                 sx: { bgcolor: "rgba(255,255,255,0.15)", color: "common.white", fontWeight: 700, fontSize: "0.78rem" }
               }
             ),
             /* @__PURE__ */ e(
               T,
               {
-                label: `~${r} min total`,
+                label: `~${i} min total`,
                 sx: { bgcolor: "rgba(255,255,255,0.15)", color: "common.white", fontWeight: 700, fontSize: "0.78rem" }
               }
             ),
@@ -10546,11 +12095,11 @@ function fi() {
         ]
       }
     ),
-    Le.map((s, c) => {
-      const u = Nt[s.layer] || "#546e7a", h = Et(s.slugs);
-      return /* @__PURE__ */ n(l, { sx: { mb: { xs: 6, md: 8 } }, children: [
-        /* @__PURE__ */ n(
-          l,
+    ve.map((s, n) => {
+      const d = ta[s.layer] || "#546e7a", h = Vt(s.slugs);
+      return /* @__PURE__ */ o(c, { sx: { mb: { xs: 6, md: 8 } }, children: [
+        /* @__PURE__ */ o(
+          c,
           {
             sx: {
               display: "flex",
@@ -10560,15 +12109,15 @@ function fi() {
               flexWrap: "wrap"
             },
             children: [
-              /* @__PURE__ */ n(
-                o,
+              /* @__PURE__ */ o(
+                l,
                 {
                   variant: "overline",
                   sx: {
                     fontWeight: 800,
                     letterSpacing: 1.5,
                     fontSize: "0.65rem",
-                    color: u
+                    color: d
                   },
                   children: [
                     "Part ",
@@ -10589,7 +12138,7 @@ function fi() {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "h4",
             fontWeight: 800,
@@ -10602,7 +12151,7 @@ function fi() {
           }
         ),
         /* @__PURE__ */ e(
-          o,
+          l,
           {
             variant: "body1",
             color: "text.secondary",
@@ -10611,20 +12160,20 @@ function fi() {
           }
         ),
         /* @__PURE__ */ e(
-          l,
+          c,
           {
             sx: {
               borderLeft: "3px solid",
-              borderColor: u,
+              borderColor: d,
               pl: { xs: 2, md: 3 }
             },
-            children: s.slugs.map((d) => {
+            children: s.slugs.map((p) => {
               a++;
-              const p = ta(d), y = re[d];
-              return p ? /* @__PURE__ */ n(
-                l,
+              const u = ma(p), g = Ti[p];
+              return u ? /* @__PURE__ */ o(
+                c,
                 {
-                  onClick: () => t(`/blog/${d}`),
+                  onClick: () => t(`/blog/${p}`),
                   sx: {
                     display: "flex",
                     alignItems: "baseline",
@@ -10642,12 +12191,12 @@ function fi() {
                   },
                   children: [
                     /* @__PURE__ */ e(
-                      o,
+                      l,
                       {
                         variant: "body2",
                         sx: {
                           fontWeight: 800,
-                          color: u,
+                          color: d,
                           fontSize: "0.85rem",
                           minWidth: 28,
                           textAlign: "right",
@@ -10656,9 +12205,9 @@ function fi() {
                         children: a
                       }
                     ),
-                    /* @__PURE__ */ n(l, { sx: { flexGrow: 1, minWidth: 0 }, children: [
+                    /* @__PURE__ */ o(c, { sx: { flexGrow: 1, minWidth: 0 }, children: [
                       /* @__PURE__ */ e(
-                        o,
+                        l,
                         {
                           className: "article-title",
                           variant: "body1",
@@ -10668,51 +12217,51 @@ function fi() {
                             lineHeight: 1.4,
                             transition: "color 0.15s"
                           },
-                          children: p.title
+                          children: u.title
                         }
                       ),
-                      p.summary && /* @__PURE__ */ e(
-                        o,
+                      u.summary && /* @__PURE__ */ e(
+                        l,
                         {
                           variant: "body2",
                           color: "text.secondary",
                           sx: { fontSize: "0.8rem", lineHeight: 1.5, mt: 0.25 },
-                          children: ye(p.summary, 120)
+                          children: be(u.summary, 120)
                         }
                       )
                     ] }),
-                    /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 1, alignItems: "center", flexShrink: 0 }, children: [
-                      (y == null ? void 0 : y.primitive) && /* @__PURE__ */ e(
+                    /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1, alignItems: "center", flexShrink: 0 }, children: [
+                      g && /* @__PURE__ */ e(
                         T,
                         {
-                          label: y.primitive,
+                          label: g,
                           size: "small",
                           variant: "outlined",
                           sx: { fontSize: "0.62rem", fontWeight: 600, height: 20, display: { xs: "none", md: "flex" } }
                         }
                       ),
                       /* @__PURE__ */ e(
-                        o,
+                        l,
                         {
                           variant: "caption",
                           color: "text.secondary",
                           sx: { fontStyle: "italic", fontSize: "0.75rem", whiteSpace: "nowrap" },
-                          children: p.readTime
+                          children: u.readTime
                         }
                       )
                     ] })
                   ]
                 },
-                d
+                p
               ) : null;
             })
           }
         ),
-        c < Le.length - 1 && /* @__PURE__ */ e(ee, { sx: { mt: { xs: 5, md: 7 } } })
+        n < ve.length - 1 && /* @__PURE__ */ e(se, { sx: { mt: { xs: 5, md: 7 } } })
       ] }, s.part);
     }),
-    /* @__PURE__ */ n(
-      V,
+    /* @__PURE__ */ o(
+      F,
       {
         elevation: 0,
         sx: {
@@ -10725,11 +12274,11 @@ function fi() {
           textAlign: "center"
         },
         children: [
-          /* @__PURE__ */ e(o, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: "Ready to start?" }),
-          /* @__PURE__ */ e(o, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 480, mx: "auto" }, children: "Begin with the foundations or jump to any section that matches your experience level." }),
-          /* @__PURE__ */ n(l, { sx: { display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }, children: [
+          /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, gutterBottom: !0, children: "Ready to start?" }),
+          /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 3, maxWidth: 480, mx: "auto" }, children: "Begin with the foundations or jump to any section that matches your experience level." }),
+          /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }, children: [
             /* @__PURE__ */ e(
-              _,
+              z,
               {
                 variant: "contained",
                 endIcon: /* @__PURE__ */ e(Q, {}),
@@ -10738,7 +12287,7 @@ function fi() {
               }
             ),
             /* @__PURE__ */ e(
-              _,
+              z,
               {
                 variant: "outlined",
                 onClick: () => t("/blog"),
@@ -10752,37 +12301,39 @@ function fi() {
   ] });
 }
 export {
-  Wr as AIDisclosureBanner,
-  re as ARTICLE_META,
-  di as AUTHOR_AVATAR_PROMPTS,
-  gi as AuthorPage,
-  yi as AuthorsPage,
-  Ie as BLOG_AUTHORS,
-  H as BLOG_POSTS,
-  Ut as BLOG_POST_CONCEPT_TAGS,
-  ct as BLOG_POST_STANDARDS_TAGS,
-  Ha as BLOG_ROADMAP,
-  ht as BLOG_SERIES,
-  ui as BlogPage,
-  mi as BlogPostPage,
-  Or as Breadcrumbs,
-  Ga as DIFFICULTY_COLORS,
-  fi as FoundationsPage,
-  xe as GUIDE_ARTICLES,
-  Ve as GUIDE_ARTICLES_BY_CHAPTER,
-  Te as GUIDE_ARTICLE_MAP,
-  ze as GUIDE_ARTICLE_SLUGS,
-  ce as GUIDE_CHAPTERS,
-  Nt as LAYER_COLORS,
-  _r as ProductBridgeCTA,
-  br as ProtocolGuidePage,
-  Mr as ReadingProgressBar,
-  dt as SECTION_BY_SLUG,
-  ge as SEOHead,
-  pi as SERIES_BY_ID,
-  We as SERIES_BY_POST_SLUG,
-  le as START_HERE_SLUGS,
-  Ba as articleSchema,
-  ci as organizationSchema,
-  hi as softwareApplicationSchema
+  or as AIDisclosureBanner,
+  ze as ARTICLE_META,
+  jr as AUTHOR_AVATAR_PROMPTS,
+  Ur as AuthorPage,
+  Fr as AuthorsPage,
+  De as BLOG_AUTHORS,
+  ie as BLOG_POSTS,
+  Qt as BLOG_POST_CONCEPT_TAGS,
+  gt as BLOG_POST_STANDARDS_TAGS,
+  ii as BLOG_ROADMAP,
+  ft as BLOG_SERIES,
+  Lr as BlogPage,
+  Vr as BlogPostPage,
+  sr as Breadcrumbs,
+  hi as DIFFICULTY_COLORS,
+  Hr as FoundationsPage,
+  Pe as GUIDE_ARTICLES,
+  $e as GUIDE_ARTICLES_BY_CHAPTER,
+  Ae as GUIDE_ARTICLE_MAP,
+  Ge as GUIDE_ARTICLE_SLUGS,
+  ue as GUIDE_CHAPTERS,
+  ta as LAYER_COLORS,
+  hr as ProductBridgeCTA,
+  $i as ProtocolGuidePage,
+  nr as ReadingProgressBar,
+  vt as SECTION_BY_SLUG,
+  we as SEOHead,
+  Br as SERIES_BY_ID,
+  Be as SERIES_BY_POST_SLUG,
+  pe as START_HERE_SLUGS,
+  $t as articleSchema,
+  dt as collectionPageSchema,
+  _r as organizationSchema,
+  Qa as personSchema,
+  Rr as softwareApplicationSchema
 };
