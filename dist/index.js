@@ -1,28 +1,28 @@
-import { jsxs as o, jsx as e, Fragment as Le } from "react/jsx-runtime";
-import { useEffect as Oe, useState as ce, useMemo as J, useCallback as ya, Fragment as ga, useRef as fa } from "react";
-import { Paper as F, Typography as l, Box as c, Button as z, List as va, ListItem as ba, ListItemButton as Ft, ListItemIcon as wa, ListItemText as Ut, TextField as xa, InputAdornment as wt, IconButton as Ue, useTheme as Xe, useMediaQuery as Qe, Collapse as Ht, Tooltip as Ta, Grid as G, Chip as T, Card as Me, CardActionArea as qe, CardContent as Ee, Avatar as Ce, Divider as se, LinearProgress as xt, Stepper as ka, Step as Ia, StepButton as Pa, StepLabel as Tt, Accordion as Aa, AccordionSummary as Ca, AccordionDetails as Da } from "@mui/material";
-import ut from "@mui/icons-material/School";
-import Q from "@mui/icons-material/ArrowForward";
-import { Link as k, useNavigate as Ze, useParams as et, useSearchParams as Sa } from "react-router-dom";
-import Gt from "@mui/icons-material/Code";
-import Ve from "@mui/icons-material/MenuBook";
-import Wa from "@mui/icons-material/PlayCircleOutline";
-import Oa from "@mui/icons-material/Security";
-import Ma from "@mui/icons-material/Description";
-import qa from "@mui/icons-material/Policy";
-import Ea from "@mui/icons-material/CloudUpload";
-import Nt from "@mui/icons-material/AccountTree";
-import kt from "@mui/icons-material/Search";
-import za from "@mui/icons-material/Close";
-import _a from "@mui/icons-material/RssFeed";
-import Ra from "@mui/icons-material/Groups";
-import mt from "@mui/icons-material/ExpandMore";
-import ja from "@mui/icons-material/ExpandLess";
-import X from "@mui/icons-material/ArrowBack";
-import Ba from "@mui/icons-material/CheckCircle";
-import La from "@mui/icons-material/NavigateNext";
-import Va from "@mui/icons-material/SmartToyOutlined";
-function Fa(t) {
+import { jsxs as o, jsx as e, Fragment as Be } from "react/jsx-runtime";
+import { useEffect as xe, useState as le, useMemo as N, useCallback as fa, Fragment as va, useRef as ba } from "react";
+import { Paper as U, Typography as l, Box as c, Button as z, List as wa, ListItem as xa, ListItemButton as Ut, ListItemIcon as Ta, ListItemText as Ht, TextField as ka, InputAdornment as xt, IconButton as Ue, useTheme as Xe, useMediaQuery as Qe, Collapse as Gt, Tooltip as Ia, Grid as G, Chip as T, Card as Me, CardActionArea as qe, CardContent as Ee, Avatar as Se, Divider as re, LinearProgress as Tt, Stepper as Pa, Step as Aa, StepButton as Ca, StepLabel as kt, Accordion as Da, AccordionSummary as Sa, AccordionDetails as Wa } from "@mui/material";
+import mt from "@mui/icons-material/School";
+import Z from "@mui/icons-material/ArrowForward";
+import { Link as k, useNavigate as Ze, useParams as et, useSearchParams as Oa } from "react-router-dom";
+import Nt from "@mui/icons-material/Code";
+import Le from "@mui/icons-material/MenuBook";
+import Ma from "@mui/icons-material/PlayCircleOutline";
+import qa from "@mui/icons-material/Security";
+import Ea from "@mui/icons-material/Description";
+import za from "@mui/icons-material/Policy";
+import _a from "@mui/icons-material/CloudUpload";
+import Kt from "@mui/icons-material/AccountTree";
+import It from "@mui/icons-material/Search";
+import Ra from "@mui/icons-material/Close";
+import ja from "@mui/icons-material/RssFeed";
+import Ba from "@mui/icons-material/Groups";
+import yt from "@mui/icons-material/ExpandMore";
+import La from "@mui/icons-material/ExpandLess";
+import Q from "@mui/icons-material/ArrowBack";
+import Va from "@mui/icons-material/CheckCircle";
+import Fa from "@mui/icons-material/NavigateNext";
+import Ua from "@mui/icons-material/SmartToyOutlined";
+function Ha(t) {
   return t && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") ? t.default : t;
 }
 var ht = { exports: {} }, He = { exports: {} }, B = {};
@@ -34,71 +34,71 @@ var ht = { exports: {} }, He = { exports: {} }, B = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var It;
-function Ua() {
-  if (It) return B;
-  It = 1;
-  var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, v = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, U = t ? Symbol.for("react.responder") : 60118, N = t ? Symbol.for("react.scope") : 60119;
-  function I(f) {
-    if (typeof f == "object" && f !== null) {
-      var ee = f.$$typeof;
-      switch (ee) {
+var Pt;
+function Ga() {
+  if (Pt) return B;
+  Pt = 1;
+  var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, b = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, H = t ? Symbol.for("react.responder") : 60118, K = t ? Symbol.for("react.scope") : 60119;
+  function P(v) {
+    if (typeof v == "object" && v !== null) {
+      var Y = v.$$typeof;
+      switch (Y) {
         case r:
-          switch (f = f.type, f) {
+          switch (v = v.type, v) {
             case p:
             case u:
             case a:
             case n:
             case s:
             case m:
-              return f;
+              return v;
             default:
-              switch (f = f && f.$$typeof, f) {
+              switch (v = v && v.$$typeof, v) {
                 case h:
                 case g:
                 case _:
                 case O:
                 case d:
-                  return f;
+                  return v;
                 default:
-                  return ee;
+                  return Y;
               }
           }
         case i:
-          return ee;
+          return Y;
       }
     }
   }
-  function j(f) {
-    return I(f) === u;
+  function j(v) {
+    return P(v) === u;
   }
-  return B.AsyncMode = p, B.ConcurrentMode = u, B.ContextConsumer = h, B.ContextProvider = d, B.Element = r, B.ForwardRef = g, B.Fragment = a, B.Lazy = _, B.Memo = O, B.Portal = i, B.Profiler = n, B.StrictMode = s, B.Suspense = m, B.isAsyncMode = function(f) {
-    return j(f) || I(f) === p;
-  }, B.isConcurrentMode = j, B.isContextConsumer = function(f) {
-    return I(f) === h;
-  }, B.isContextProvider = function(f) {
-    return I(f) === d;
-  }, B.isElement = function(f) {
-    return typeof f == "object" && f !== null && f.$$typeof === r;
-  }, B.isForwardRef = function(f) {
-    return I(f) === g;
-  }, B.isFragment = function(f) {
-    return I(f) === a;
-  }, B.isLazy = function(f) {
-    return I(f) === _;
-  }, B.isMemo = function(f) {
-    return I(f) === O;
-  }, B.isPortal = function(f) {
-    return I(f) === i;
-  }, B.isProfiler = function(f) {
-    return I(f) === n;
-  }, B.isStrictMode = function(f) {
-    return I(f) === s;
-  }, B.isSuspense = function(f) {
-    return I(f) === m;
-  }, B.isValidElementType = function(f) {
-    return typeof f == "string" || typeof f == "function" || f === a || f === u || f === n || f === s || f === m || f === v || typeof f == "object" && f !== null && (f.$$typeof === _ || f.$$typeof === O || f.$$typeof === d || f.$$typeof === h || f.$$typeof === g || f.$$typeof === R || f.$$typeof === U || f.$$typeof === N || f.$$typeof === x);
-  }, B.typeOf = I, B;
+  return B.AsyncMode = p, B.ConcurrentMode = u, B.ContextConsumer = h, B.ContextProvider = d, B.Element = r, B.ForwardRef = g, B.Fragment = a, B.Lazy = _, B.Memo = O, B.Portal = i, B.Profiler = n, B.StrictMode = s, B.Suspense = m, B.isAsyncMode = function(v) {
+    return j(v) || P(v) === p;
+  }, B.isConcurrentMode = j, B.isContextConsumer = function(v) {
+    return P(v) === h;
+  }, B.isContextProvider = function(v) {
+    return P(v) === d;
+  }, B.isElement = function(v) {
+    return typeof v == "object" && v !== null && v.$$typeof === r;
+  }, B.isForwardRef = function(v) {
+    return P(v) === g;
+  }, B.isFragment = function(v) {
+    return P(v) === a;
+  }, B.isLazy = function(v) {
+    return P(v) === _;
+  }, B.isMemo = function(v) {
+    return P(v) === O;
+  }, B.isPortal = function(v) {
+    return P(v) === i;
+  }, B.isProfiler = function(v) {
+    return P(v) === n;
+  }, B.isStrictMode = function(v) {
+    return P(v) === s;
+  }, B.isSuspense = function(v) {
+    return P(v) === m;
+  }, B.isValidElementType = function(v) {
+    return typeof v == "string" || typeof v == "function" || v === a || v === u || v === n || v === s || v === m || v === b || typeof v == "object" && v !== null && (v.$$typeof === _ || v.$$typeof === O || v.$$typeof === d || v.$$typeof === h || v.$$typeof === g || v.$$typeof === R || v.$$typeof === H || v.$$typeof === K || v.$$typeof === x);
+  }, B.typeOf = P, B;
 }
 var L = {};
 /** @license React v16.13.1
@@ -109,20 +109,20 @@ var L = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Pt;
-function Ha() {
-  return Pt || (Pt = 1, process.env.NODE_ENV !== "production" && function() {
-    var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, v = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, U = t ? Symbol.for("react.responder") : 60118, N = t ? Symbol.for("react.scope") : 60119;
-    function I(b) {
-      return typeof b == "string" || typeof b == "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      b === a || b === u || b === n || b === s || b === m || b === v || typeof b == "object" && b !== null && (b.$$typeof === _ || b.$$typeof === O || b.$$typeof === d || b.$$typeof === h || b.$$typeof === g || b.$$typeof === R || b.$$typeof === U || b.$$typeof === N || b.$$typeof === x);
+var At;
+function Na() {
+  return At || (At = 1, process.env.NODE_ENV !== "production" && function() {
+    var t = typeof Symbol == "function" && Symbol.for, r = t ? Symbol.for("react.element") : 60103, i = t ? Symbol.for("react.portal") : 60106, a = t ? Symbol.for("react.fragment") : 60107, s = t ? Symbol.for("react.strict_mode") : 60108, n = t ? Symbol.for("react.profiler") : 60114, d = t ? Symbol.for("react.provider") : 60109, h = t ? Symbol.for("react.context") : 60110, p = t ? Symbol.for("react.async_mode") : 60111, u = t ? Symbol.for("react.concurrent_mode") : 60111, g = t ? Symbol.for("react.forward_ref") : 60112, m = t ? Symbol.for("react.suspense") : 60113, b = t ? Symbol.for("react.suspense_list") : 60120, O = t ? Symbol.for("react.memo") : 60115, _ = t ? Symbol.for("react.lazy") : 60116, x = t ? Symbol.for("react.block") : 60121, R = t ? Symbol.for("react.fundamental") : 60117, H = t ? Symbol.for("react.responder") : 60118, K = t ? Symbol.for("react.scope") : 60119;
+    function P(w) {
+      return typeof w == "string" || typeof w == "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+      w === a || w === u || w === n || w === s || w === m || w === b || typeof w == "object" && w !== null && (w.$$typeof === _ || w.$$typeof === O || w.$$typeof === d || w.$$typeof === h || w.$$typeof === g || w.$$typeof === R || w.$$typeof === H || w.$$typeof === K || w.$$typeof === x);
     }
-    function j(b) {
-      if (typeof b == "object" && b !== null) {
-        var le = b.$$typeof;
-        switch (le) {
+    function j(w) {
+      if (typeof w == "object" && w !== null) {
+        var oe = w.$$typeof;
+        switch (oe) {
           case r:
-            var Fe = b.type;
+            var Fe = w.type;
             switch (Fe) {
               case p:
               case u:
@@ -132,79 +132,79 @@ function Ha() {
               case m:
                 return Fe;
               default:
-                var bt = Fe && Fe.$$typeof;
-                switch (bt) {
+                var wt = Fe && Fe.$$typeof;
+                switch (wt) {
                   case h:
                   case g:
                   case _:
                   case O:
                   case d:
-                    return bt;
+                    return wt;
                   default:
-                    return le;
+                    return oe;
                 }
             }
           case i:
-            return le;
+            return oe;
         }
       }
     }
-    var f = p, ee = u, _e = h, H = d, K = r, ge = g, xe = a, he = _, Re = O, ne = i, je = n, te = s, P = m, ae = !1;
-    function oe(b) {
-      return ae || (ae = !0, console.warn("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")), y(b) || j(b) === p;
+    var v = p, Y = u, _e = h, F = d, ne = r, J = g, ye = a, Re = _, ce = O, ge = i, ve = n, te = s, he = m, I = !1;
+    function se(w) {
+      return I || (I = !0, console.warn("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")), y(w) || j(w) === p;
     }
-    function y(b) {
-      return j(b) === u;
+    function y(w) {
+      return j(w) === u;
     }
-    function w(b) {
-      return j(b) === h;
+    function f(w) {
+      return j(w) === h;
     }
-    function W(b) {
-      return j(b) === d;
+    function C(w) {
+      return j(w) === d;
     }
-    function D(b) {
-      return typeof b == "object" && b !== null && b.$$typeof === r;
+    function S(w) {
+      return typeof w == "object" && w !== null && w.$$typeof === r;
     }
-    function A(b) {
-      return j(b) === g;
+    function A(w) {
+      return j(w) === g;
     }
-    function M(b) {
-      return j(b) === a;
+    function M(w) {
+      return j(w) === a;
     }
-    function C(b) {
-      return j(b) === _;
+    function D(w) {
+      return j(w) === _;
     }
-    function S(b) {
-      return j(b) === O;
+    function W(w) {
+      return j(w) === O;
     }
-    function q(b) {
-      return j(b) === i;
+    function q(w) {
+      return j(w) === i;
     }
-    function V(b) {
-      return j(b) === n;
+    function V(w) {
+      return j(w) === n;
     }
-    function E(b) {
-      return j(b) === s;
+    function E(w) {
+      return j(w) === s;
     }
-    function Y(b) {
-      return j(b) === m;
+    function X(w) {
+      return j(w) === m;
     }
-    L.AsyncMode = f, L.ConcurrentMode = ee, L.ContextConsumer = _e, L.ContextProvider = H, L.Element = K, L.ForwardRef = ge, L.Fragment = xe, L.Lazy = he, L.Memo = Re, L.Portal = ne, L.Profiler = je, L.StrictMode = te, L.Suspense = P, L.isAsyncMode = oe, L.isConcurrentMode = y, L.isContextConsumer = w, L.isContextProvider = W, L.isElement = D, L.isForwardRef = A, L.isFragment = M, L.isLazy = C, L.isMemo = S, L.isPortal = q, L.isProfiler = V, L.isStrictMode = E, L.isSuspense = Y, L.isValidElementType = I, L.typeOf = j;
+    L.AsyncMode = v, L.ConcurrentMode = Y, L.ContextConsumer = _e, L.ContextProvider = F, L.Element = ne, L.ForwardRef = J, L.Fragment = ye, L.Lazy = Re, L.Memo = ce, L.Portal = ge, L.Profiler = ve, L.StrictMode = te, L.Suspense = he, L.isAsyncMode = se, L.isConcurrentMode = y, L.isContextConsumer = f, L.isContextProvider = C, L.isElement = S, L.isForwardRef = A, L.isFragment = M, L.isLazy = D, L.isMemo = W, L.isPortal = q, L.isProfiler = V, L.isStrictMode = E, L.isSuspense = X, L.isValidElementType = P, L.typeOf = j;
   }()), L;
 }
-var At;
-function Kt() {
-  return At || (At = 1, process.env.NODE_ENV === "production" ? He.exports = Ua() : He.exports = Ha()), He.exports;
+var Ct;
+function Jt() {
+  return Ct || (Ct = 1, process.env.NODE_ENV === "production" ? He.exports = Ga() : He.exports = Na()), He.exports;
 }
 /*
 object-assign
 (c) Sindre Sorhus
 @license MIT
 */
-var at, Ct;
-function Ga() {
-  if (Ct) return at;
-  Ct = 1;
+var at, Dt;
+function Ka() {
+  if (Dt) return at;
+  Dt = 1;
   var t = Object.getOwnPropertySymbols, r = Object.prototype.hasOwnProperty, i = Object.prototype.propertyIsEnumerable;
   function a(n) {
     if (n == null)
@@ -240,32 +240,32 @@ function Ga() {
         r.call(h, m) && (p[m] = h[m]);
       if (t) {
         u = t(h);
-        for (var v = 0; v < u.length; v++)
-          i.call(h, u[v]) && (p[u[v]] = h[u[v]]);
+        for (var b = 0; b < u.length; b++)
+          i.call(h, u[b]) && (p[u[b]] = h[u[b]]);
       }
     }
     return p;
   }, at;
 }
-var it, Dt;
-function yt() {
-  if (Dt) return it;
-  Dt = 1;
+var it, St;
+function gt() {
+  if (St) return it;
+  St = 1;
   var t = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
   return it = t, it;
 }
-var rt, St;
-function Jt() {
-  return St || (St = 1, rt = Function.call.bind(Object.prototype.hasOwnProperty)), rt;
+var rt, Wt;
+function $t() {
+  return Wt || (Wt = 1, rt = Function.call.bind(Object.prototype.hasOwnProperty)), rt;
 }
-var st, Wt;
-function Na() {
-  if (Wt) return st;
-  Wt = 1;
+var st, Ot;
+function Ja() {
+  if (Ot) return st;
+  Ot = 1;
   var t = function() {
   };
   if (process.env.NODE_ENV !== "production") {
-    var r = yt(), i = {}, a = Jt();
+    var r = gt(), i = {}, a = $t();
     t = function(n) {
       var d = "Warning: " + n;
       typeof console < "u" && console.error(d);
@@ -282,10 +282,10 @@ function Na() {
           var m;
           try {
             if (typeof n[g] != "function") {
-              var v = Error(
+              var b = Error(
                 (p || "React class") + ": " + h + " type `" + g + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof n[g] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`."
               );
-              throw v.name = "Invariant Violation", v;
+              throw b.name = "Invariant Violation", b;
             }
             m = n[g](d, g, p, h, null, r);
           } catch (_) {
@@ -307,11 +307,11 @@ function Na() {
     process.env.NODE_ENV !== "production" && (i = {});
   }, st = s, st;
 }
-var nt, Ot;
-function Ka() {
-  if (Ot) return nt;
-  Ot = 1;
-  var t = Kt(), r = Ga(), i = yt(), a = Jt(), s = Na(), n = function() {
+var nt, Mt;
+function $a() {
+  if (Mt) return nt;
+  Mt = 1;
+  var t = Jt(), r = Ka(), i = gt(), a = $t(), s = Ja(), n = function() {
   };
   process.env.NODE_ENV !== "production" && (n = function(h) {
     var p = "Warning: " + h;
@@ -327,236 +327,236 @@ function Ka() {
   return nt = function(h, p) {
     var u = typeof Symbol == "function" && Symbol.iterator, g = "@@iterator";
     function m(y) {
-      var w = y && (u && y[u] || y[g]);
-      if (typeof w == "function")
-        return w;
+      var f = y && (u && y[u] || y[g]);
+      if (typeof f == "function")
+        return f;
     }
-    var v = "<<anonymous>>", O = {
-      array: U("array"),
-      bigint: U("bigint"),
-      bool: U("boolean"),
-      func: U("function"),
-      number: U("number"),
-      object: U("object"),
-      string: U("string"),
-      symbol: U("symbol"),
-      any: N(),
-      arrayOf: I,
+    var b = "<<anonymous>>", O = {
+      array: H("array"),
+      bigint: H("bigint"),
+      bool: H("boolean"),
+      func: H("function"),
+      number: H("number"),
+      object: H("object"),
+      string: H("string"),
+      symbol: H("symbol"),
+      any: K(),
+      arrayOf: P,
       element: j(),
-      elementType: f(),
-      instanceOf: ee,
-      node: ge(),
-      objectOf: H,
+      elementType: v(),
+      instanceOf: Y,
+      node: J(),
+      objectOf: F,
       oneOf: _e,
-      oneOfType: K,
-      shape: he,
-      exact: Re
+      oneOfType: ne,
+      shape: Re,
+      exact: ce
     };
-    function _(y, w) {
-      return y === w ? y !== 0 || 1 / y === 1 / w : y !== y && w !== w;
+    function _(y, f) {
+      return y === f ? y !== 0 || 1 / y === 1 / f : y !== y && f !== f;
     }
-    function x(y, w) {
-      this.message = y, this.data = w && typeof w == "object" ? w : {}, this.stack = "";
+    function x(y, f) {
+      this.message = y, this.data = f && typeof f == "object" ? f : {}, this.stack = "";
     }
     x.prototype = Error.prototype;
     function R(y) {
       if (process.env.NODE_ENV !== "production")
-        var w = {}, W = 0;
-      function D(M, C, S, q, V, E, Y) {
-        if (q = q || v, E = E || S, Y !== i) {
+        var f = {}, C = 0;
+      function S(M, D, W, q, V, E, X) {
+        if (q = q || b, E = E || W, X !== i) {
           if (p) {
-            var b = new Error(
+            var w = new Error(
               "Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types"
             );
-            throw b.name = "Invariant Violation", b;
+            throw w.name = "Invariant Violation", w;
           } else if (process.env.NODE_ENV !== "production" && typeof console < "u") {
-            var le = q + ":" + S;
-            !w[le] && // Avoid spamming the console because they are often not actionable except for lib authors
-            W < 3 && (n(
+            var oe = q + ":" + W;
+            !f[oe] && // Avoid spamming the console because they are often not actionable except for lib authors
+            C < 3 && (n(
               "You are manually calling a React.PropTypes validation function for the `" + E + "` prop on `" + q + "`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details."
-            ), w[le] = !0, W++);
+            ), f[oe] = !0, C++);
           }
         }
-        return C[S] == null ? M ? C[S] === null ? new x("The " + V + " `" + E + "` is marked as required " + ("in `" + q + "`, but its value is `null`.")) : new x("The " + V + " `" + E + "` is marked as required in " + ("`" + q + "`, but its value is `undefined`.")) : null : y(C, S, q, V, E);
+        return D[W] == null ? M ? D[W] === null ? new x("The " + V + " `" + E + "` is marked as required " + ("in `" + q + "`, but its value is `null`.")) : new x("The " + V + " `" + E + "` is marked as required in " + ("`" + q + "`, but its value is `undefined`.")) : null : y(D, W, q, V, E);
       }
-      var A = D.bind(null, !1);
-      return A.isRequired = D.bind(null, !0), A;
+      var A = S.bind(null, !1);
+      return A.isRequired = S.bind(null, !0), A;
     }
-    function U(y) {
-      function w(W, D, A, M, C, S) {
-        var q = W[D], V = te(q);
+    function H(y) {
+      function f(C, S, A, M, D, W) {
+        var q = C[S], V = te(q);
         if (V !== y) {
-          var E = P(q);
+          var E = he(q);
           return new x(
-            "Invalid " + M + " `" + C + "` of type " + ("`" + E + "` supplied to `" + A + "`, expected ") + ("`" + y + "`."),
+            "Invalid " + M + " `" + D + "` of type " + ("`" + E + "` supplied to `" + A + "`, expected ") + ("`" + y + "`."),
             { expectedType: y }
           );
         }
         return null;
       }
-      return R(w);
+      return R(f);
     }
-    function N() {
+    function K() {
       return R(d);
     }
-    function I(y) {
-      function w(W, D, A, M, C) {
+    function P(y) {
+      function f(C, S, A, M, D) {
         if (typeof y != "function")
-          return new x("Property `" + C + "` of component `" + A + "` has invalid PropType notation inside arrayOf.");
-        var S = W[D];
-        if (!Array.isArray(S)) {
-          var q = te(S);
-          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an array."));
+          return new x("Property `" + D + "` of component `" + A + "` has invalid PropType notation inside arrayOf.");
+        var W = C[S];
+        if (!Array.isArray(W)) {
+          var q = te(W);
+          return new x("Invalid " + M + " `" + D + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an array."));
         }
-        for (var V = 0; V < S.length; V++) {
-          var E = y(S, V, A, M, C + "[" + V + "]", i);
+        for (var V = 0; V < W.length; V++) {
+          var E = y(W, V, A, M, D + "[" + V + "]", i);
           if (E instanceof Error)
             return E;
         }
         return null;
       }
-      return R(w);
+      return R(f);
     }
     function j() {
-      function y(w, W, D, A, M) {
-        var C = w[W];
-        if (!h(C)) {
-          var S = te(C);
-          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + S + "` supplied to `" + D + "`, expected a single ReactElement."));
+      function y(f, C, S, A, M) {
+        var D = f[C];
+        if (!h(D)) {
+          var W = te(D);
+          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + W + "` supplied to `" + S + "`, expected a single ReactElement."));
         }
         return null;
       }
       return R(y);
     }
-    function f() {
-      function y(w, W, D, A, M) {
-        var C = w[W];
-        if (!t.isValidElementType(C)) {
-          var S = te(C);
-          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + S + "` supplied to `" + D + "`, expected a single ReactElement type."));
+    function v() {
+      function y(f, C, S, A, M) {
+        var D = f[C];
+        if (!t.isValidElementType(D)) {
+          var W = te(D);
+          return new x("Invalid " + A + " `" + M + "` of type " + ("`" + W + "` supplied to `" + S + "`, expected a single ReactElement type."));
         }
         return null;
       }
       return R(y);
     }
-    function ee(y) {
-      function w(W, D, A, M, C) {
-        if (!(W[D] instanceof y)) {
-          var S = y.name || v, q = oe(W[D]);
-          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected ") + ("instance of `" + S + "`."));
+    function Y(y) {
+      function f(C, S, A, M, D) {
+        if (!(C[S] instanceof y)) {
+          var W = y.name || b, q = se(C[S]);
+          return new x("Invalid " + M + " `" + D + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected ") + ("instance of `" + W + "`."));
         }
         return null;
       }
-      return R(w);
+      return R(f);
     }
     function _e(y) {
       if (!Array.isArray(y))
         return process.env.NODE_ENV !== "production" && (arguments.length > 1 ? n(
           "Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z])."
         ) : n("Invalid argument supplied to oneOf, expected an array.")), d;
-      function w(W, D, A, M, C) {
-        for (var S = W[D], q = 0; q < y.length; q++)
-          if (_(S, y[q]))
+      function f(C, S, A, M, D) {
+        for (var W = C[S], q = 0; q < y.length; q++)
+          if (_(W, y[q]))
             return null;
-        var V = JSON.stringify(y, function(Y, b) {
-          var le = P(b);
-          return le === "symbol" ? String(b) : b;
+        var V = JSON.stringify(y, function(X, w) {
+          var oe = he(w);
+          return oe === "symbol" ? String(w) : w;
         });
-        return new x("Invalid " + M + " `" + C + "` of value `" + String(S) + "` " + ("supplied to `" + A + "`, expected one of " + V + "."));
+        return new x("Invalid " + M + " `" + D + "` of value `" + String(W) + "` " + ("supplied to `" + A + "`, expected one of " + V + "."));
       }
-      return R(w);
+      return R(f);
     }
-    function H(y) {
-      function w(W, D, A, M, C) {
+    function F(y) {
+      function f(C, S, A, M, D) {
         if (typeof y != "function")
-          return new x("Property `" + C + "` of component `" + A + "` has invalid PropType notation inside objectOf.");
-        var S = W[D], q = te(S);
+          return new x("Property `" + D + "` of component `" + A + "` has invalid PropType notation inside objectOf.");
+        var W = C[S], q = te(W);
         if (q !== "object")
-          return new x("Invalid " + M + " `" + C + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an object."));
-        for (var V in S)
-          if (a(S, V)) {
-            var E = y(S, V, A, M, C + "." + V, i);
+          return new x("Invalid " + M + " `" + D + "` of type " + ("`" + q + "` supplied to `" + A + "`, expected an object."));
+        for (var V in W)
+          if (a(W, V)) {
+            var E = y(W, V, A, M, D + "." + V, i);
             if (E instanceof Error)
               return E;
           }
         return null;
       }
-      return R(w);
+      return R(f);
     }
-    function K(y) {
+    function ne(y) {
       if (!Array.isArray(y))
         return process.env.NODE_ENV !== "production" && n("Invalid argument supplied to oneOfType, expected an instance of array."), d;
-      for (var w = 0; w < y.length; w++) {
-        var W = y[w];
-        if (typeof W != "function")
+      for (var f = 0; f < y.length; f++) {
+        var C = y[f];
+        if (typeof C != "function")
           return n(
-            "Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + ae(W) + " at index " + w + "."
+            "Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + I(C) + " at index " + f + "."
           ), d;
       }
-      function D(A, M, C, S, q) {
+      function S(A, M, D, W, q) {
         for (var V = [], E = 0; E < y.length; E++) {
-          var Y = y[E], b = Y(A, M, C, S, q, i);
-          if (b == null)
+          var X = y[E], w = X(A, M, D, W, q, i);
+          if (w == null)
             return null;
-          b.data && a(b.data, "expectedType") && V.push(b.data.expectedType);
+          w.data && a(w.data, "expectedType") && V.push(w.data.expectedType);
         }
-        var le = V.length > 0 ? ", expected one of type [" + V.join(", ") + "]" : "";
-        return new x("Invalid " + S + " `" + q + "` supplied to " + ("`" + C + "`" + le + "."));
+        var oe = V.length > 0 ? ", expected one of type [" + V.join(", ") + "]" : "";
+        return new x("Invalid " + W + " `" + q + "` supplied to " + ("`" + D + "`" + oe + "."));
       }
-      return R(D);
+      return R(S);
     }
-    function ge() {
-      function y(w, W, D, A, M) {
-        return ne(w[W]) ? null : new x("Invalid " + A + " `" + M + "` supplied to " + ("`" + D + "`, expected a ReactNode."));
+    function J() {
+      function y(f, C, S, A, M) {
+        return ge(f[C]) ? null : new x("Invalid " + A + " `" + M + "` supplied to " + ("`" + S + "`, expected a ReactNode."));
       }
       return R(y);
     }
-    function xe(y, w, W, D, A) {
+    function ye(y, f, C, S, A) {
       return new x(
-        (y || "React class") + ": " + w + " type `" + W + "." + D + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + A + "`."
+        (y || "React class") + ": " + f + " type `" + C + "." + S + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + A + "`."
       );
     }
-    function he(y) {
-      function w(W, D, A, M, C) {
-        var S = W[D], q = te(S);
+    function Re(y) {
+      function f(C, S, A, M, D) {
+        var W = C[S], q = te(W);
         if (q !== "object")
-          return new x("Invalid " + M + " `" + C + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
+          return new x("Invalid " + M + " `" + D + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
         for (var V in y) {
           var E = y[V];
           if (typeof E != "function")
-            return xe(A, M, C, V, P(E));
-          var Y = E(S, V, A, M, C + "." + V, i);
-          if (Y)
-            return Y;
+            return ye(A, M, D, V, he(E));
+          var X = E(W, V, A, M, D + "." + V, i);
+          if (X)
+            return X;
         }
         return null;
       }
-      return R(w);
+      return R(f);
     }
-    function Re(y) {
-      function w(W, D, A, M, C) {
-        var S = W[D], q = te(S);
+    function ce(y) {
+      function f(C, S, A, M, D) {
+        var W = C[S], q = te(W);
         if (q !== "object")
-          return new x("Invalid " + M + " `" + C + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
-        var V = r({}, W[D], y);
+          return new x("Invalid " + M + " `" + D + "` of type `" + q + "` " + ("supplied to `" + A + "`, expected `object`."));
+        var V = r({}, C[S], y);
         for (var E in V) {
-          var Y = y[E];
-          if (a(y, E) && typeof Y != "function")
-            return xe(A, M, C, E, P(Y));
-          if (!Y)
+          var X = y[E];
+          if (a(y, E) && typeof X != "function")
+            return ye(A, M, D, E, he(X));
+          if (!X)
             return new x(
-              "Invalid " + M + " `" + C + "` key `" + E + "` supplied to `" + A + "`.\nBad object: " + JSON.stringify(W[D], null, "  ") + `
+              "Invalid " + M + " `" + D + "` key `" + E + "` supplied to `" + A + "`.\nBad object: " + JSON.stringify(C[S], null, "  ") + `
 Valid keys: ` + JSON.stringify(Object.keys(y), null, "  ")
             );
-          var b = Y(S, E, A, M, C + "." + E, i);
-          if (b)
-            return b;
+          var w = X(W, E, A, M, D + "." + E, i);
+          if (w)
+            return w;
         }
         return null;
       }
-      return R(w);
+      return R(f);
     }
-    function ne(y) {
+    function ge(y) {
       switch (typeof y) {
         case "number":
         case "string":
@@ -566,20 +566,20 @@ Valid keys: ` + JSON.stringify(Object.keys(y), null, "  ")
           return !y;
         case "object":
           if (Array.isArray(y))
-            return y.every(ne);
+            return y.every(ge);
           if (y === null || h(y))
             return !0;
-          var w = m(y);
-          if (w) {
-            var W = w.call(y), D;
-            if (w !== y.entries) {
-              for (; !(D = W.next()).done; )
-                if (!ne(D.value))
+          var f = m(y);
+          if (f) {
+            var C = f.call(y), S;
+            if (f !== y.entries) {
+              for (; !(S = C.next()).done; )
+                if (!ge(S.value))
                   return !1;
             } else
-              for (; !(D = W.next()).done; ) {
-                var A = D.value;
-                if (A && !ne(A[1]))
+              for (; !(S = C.next()).done; ) {
+                var A = S.value;
+                if (A && !ge(A[1]))
                   return !1;
               }
           } else
@@ -589,50 +589,50 @@ Valid keys: ` + JSON.stringify(Object.keys(y), null, "  ")
           return !1;
       }
     }
-    function je(y, w) {
-      return y === "symbol" ? !0 : w ? w["@@toStringTag"] === "Symbol" || typeof Symbol == "function" && w instanceof Symbol : !1;
+    function ve(y, f) {
+      return y === "symbol" ? !0 : f ? f["@@toStringTag"] === "Symbol" || typeof Symbol == "function" && f instanceof Symbol : !1;
     }
     function te(y) {
-      var w = typeof y;
-      return Array.isArray(y) ? "array" : y instanceof RegExp ? "object" : je(w, y) ? "symbol" : w;
+      var f = typeof y;
+      return Array.isArray(y) ? "array" : y instanceof RegExp ? "object" : ve(f, y) ? "symbol" : f;
     }
-    function P(y) {
+    function he(y) {
       if (typeof y > "u" || y === null)
         return "" + y;
-      var w = te(y);
-      if (w === "object") {
+      var f = te(y);
+      if (f === "object") {
         if (y instanceof Date)
           return "date";
         if (y instanceof RegExp)
           return "regexp";
       }
-      return w;
+      return f;
     }
-    function ae(y) {
-      var w = P(y);
-      switch (w) {
+    function I(y) {
+      var f = he(y);
+      switch (f) {
         case "array":
         case "object":
-          return "an " + w;
+          return "an " + f;
         case "boolean":
         case "date":
         case "regexp":
-          return "a " + w;
+          return "a " + f;
         default:
-          return w;
+          return f;
       }
     }
-    function oe(y) {
-      return !y.constructor || !y.constructor.name ? v : y.constructor.name;
+    function se(y) {
+      return !y.constructor || !y.constructor.name ? b : y.constructor.name;
     }
     return O.checkPropTypes = s, O.resetWarningCache = s.resetWarningCache, O.PropTypes = O, O;
   }, nt;
 }
-var ot, Mt;
-function Ja() {
-  if (Mt) return ot;
-  Mt = 1;
-  var t = yt();
+var ot, qt;
+function Ya() {
+  if (qt) return ot;
+  qt = 1;
+  var t = gt();
   function r() {
   }
   function i() {
@@ -640,10 +640,10 @@ function Ja() {
   return i.resetWarningCache = r, ot = function() {
     function a(d, h, p, u, g, m) {
       if (m !== t) {
-        var v = new Error(
+        var b = new Error(
           "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types"
         );
-        throw v.name = "Invariant Violation", v;
+        throw b.name = "Invariant Violation", b;
       }
     }
     a.isRequired = a;
@@ -677,12 +677,12 @@ function Ja() {
   }, ot;
 }
 if (process.env.NODE_ENV !== "production") {
-  var $a = Kt(), Ya = !0;
-  ht.exports = Ka()($a.isElement, Ya);
+  var Xa = Jt(), Qa = !0;
+  ht.exports = $a()(Xa.isElement, Qa);
 } else
-  ht.exports = Ja()();
-var Xa = ht.exports;
-const $ = /* @__PURE__ */ Fa(Xa), we = ({
+  ht.exports = Ya()();
+var Za = ht.exports;
+const $ = /* @__PURE__ */ Ha(Za), ke = ({
   title: t,
   description: r,
   canonicalPath: i,
@@ -693,31 +693,31 @@ const $ = /* @__PURE__ */ Fa(Xa), we = ({
   keywords: h = []
 }) => {
   const p = "https://elevenidllc.com", u = t.includes("ElevenID LLC") ? t : `${t} | ElevenID LLC`, g = `${p}${i}`;
-  return Oe(() => {
+  return xe(() => {
     var x;
     document.title = u;
     const m = (R) => {
-      document.head.querySelectorAll(R).forEach((U) => U.remove());
-    }, v = (R, U = {}, N = null) => {
-      let I = document.head.querySelector(R);
-      return I || (I = document.createElement("meta"), Object.entries(U).forEach(([j, f]) => I.setAttribute(j, f)), document.head.appendChild(I)), N !== null && I.setAttribute("content", N), I;
-    }, O = (R, U, N) => {
-      let I = document.head.querySelector(R);
-      return I || (I = document.createElement("link"), I.setAttribute("rel", U), document.head.appendChild(I)), I.setAttribute("href", N), I;
+      document.head.querySelectorAll(R).forEach((H) => H.remove());
+    }, b = (R, H = {}, K = null) => {
+      let P = document.head.querySelector(R);
+      return P || (P = document.createElement("meta"), Object.entries(H).forEach(([j, v]) => P.setAttribute(j, v)), document.head.appendChild(P)), K !== null && P.setAttribute("content", K), P;
+    }, O = (R, H, K) => {
+      let P = document.head.querySelector(R);
+      return P || (P = document.createElement("link"), P.setAttribute("rel", H), document.head.appendChild(P)), P.setAttribute("href", K), P;
     };
-    v('meta[name="description"]', { name: "description" }, r), h.length > 0 ? v('meta[name="keywords"]', { name: "keywords" }, h.join(", ")) : (x = document.head.querySelector('meta[name="keywords"]')) == null || x.remove(), O('link[rel="canonical"]', "canonical", g), v('meta[property="og:site_name"]', { property: "og:site_name" }, "ElevenID LLC"), v('meta[property="og:type"]', { property: "og:type" }, s), v('meta[property="og:title"]', { property: "og:title" }, u), v('meta[property="og:description"]', { property: "og:description" }, r), v('meta[property="og:url"]', { property: "og:url" }, g), v('meta[property="og:image"]', { property: "og:image" }, a), v('meta[property="og:image:alt"]', { property: "og:image:alt" }, t), m('meta[data-seo-og-extra="true"]'), Object.entries(n).forEach(([R, U]) => {
-      if (U == null || U === "")
+    b('meta[name="description"]', { name: "description" }, r), h.length > 0 ? b('meta[name="keywords"]', { name: "keywords" }, h.join(", ")) : (x = document.head.querySelector('meta[name="keywords"]')) == null || x.remove(), O('link[rel="canonical"]', "canonical", g), b('meta[property="og:site_name"]', { property: "og:site_name" }, "ElevenID LLC"), b('meta[property="og:type"]', { property: "og:type" }, s), b('meta[property="og:title"]', { property: "og:title" }, u), b('meta[property="og:description"]', { property: "og:description" }, r), b('meta[property="og:url"]', { property: "og:url" }, g), b('meta[property="og:image"]', { property: "og:image" }, a), b('meta[property="og:image:alt"]', { property: "og:image:alt" }, t), m('meta[data-seo-og-extra="true"]'), Object.entries(n).forEach(([R, H]) => {
+      if (H == null || H === "")
         return;
-      const N = document.createElement("meta");
-      N.setAttribute("property", R), N.setAttribute("content", String(U)), N.setAttribute("data-seo-og-extra", "true"), document.head.appendChild(N);
-    }), v('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image"), v('meta[name="twitter:title"]', { name: "twitter:title" }, u), v('meta[name="twitter:description"]', { name: "twitter:description" }, r), v('meta[name="twitter:image"]', { name: "twitter:image" }, a), v('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, t);
+      const K = document.createElement("meta");
+      K.setAttribute("property", R), K.setAttribute("content", String(H)), K.setAttribute("data-seo-og-extra", "true"), document.head.appendChild(K);
+    }), b('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image"), b('meta[name="twitter:title"]', { name: "twitter:title" }, u), b('meta[name="twitter:description"]', { name: "twitter:description" }, r), b('meta[name="twitter:image"]', { name: "twitter:image" }, a), b('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, t);
     let _ = document.head.querySelector('script[data-seo-jsonld="true"]');
     return d ? (_ || (_ = document.createElement("script"), _.type = "application/ld+json", _.setAttribute("data-seo-jsonld", "true"), document.head.appendChild(_)), _.textContent = JSON.stringify(d)) : _ && _.remove(), () => {
       m('meta[data-seo-og-extra="true"]');
     };
   }, [u, r, g, s, a, n, t, d, h]), null;
 };
-we.propTypes = {
+ke.propTypes = {
   title: $.string.isRequired,
   description: $.string.isRequired,
   canonicalPath: $.string.isRequired,
@@ -732,7 +732,7 @@ we.propTypes = {
   ]),
   keywords: $.arrayOf($.string)
 };
-const _r = () => ({
+const jr = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ElevenID LLC",
@@ -748,7 +748,7 @@ const _r = () => ({
     contactType: "Sales",
     email: "sales@elevenidllc.com"
   }
-}), Rr = ({
+}), Br = ({
   name: t,
   description: r,
   applicationCategory: i = "SecurityApplication",
@@ -772,7 +772,7 @@ const _r = () => ({
     "@type": "Offer",
     ...s
   }), n;
-}, $t = ({
+}, Yt = ({
   headline: t,
   description: r,
   datePublished: i = null,
@@ -806,7 +806,7 @@ const _r = () => ({
     }
   };
   return i && (u.datePublished = i), (a || i) && (u.dateModified = a || i), h && (u.image = h), u;
-}, Qa = ({
+}, ei = ({
   name: t,
   description: r,
   url: i,
@@ -849,7 +849,7 @@ const _r = () => ({
       name: n.name
     }))
   }), s;
-}, Za = [
+}, ti = [
   ["ΓÇÖ", "'"],
   ["ΓÇÿ", "'"],
   ["ΓÇ£", '"'],
@@ -868,27 +868,27 @@ const _r = () => ({
   ["â€¦", "..."],
   ["Â·", "|"]
 ];
-function Yt(t) {
+function Xt(t) {
   if (typeof t != "string")
     return t;
   let r = t;
-  for (const [i, a] of Za)
+  for (const [i, a] of ti)
     r = r.split(i).join(a);
   return r;
 }
-function Z(t) {
-  return typeof t == "string" ? Yt(t) : Array.isArray(t) ? t.map((r) => Z(r)) : t && typeof t == "object" ? Object.fromEntries(
-    Object.entries(t).map(([r, i]) => [r, Z(i)])
+function ee(t) {
+  return typeof t == "string" ? Xt(t) : Array.isArray(t) ? t.map((r) => ee(r)) : t && typeof t == "object" ? Object.fromEntries(
+    Object.entries(t).map(([r, i]) => [r, ee(i)])
   ) : t;
 }
-function be(t, r) {
-  const i = Yt(t || "");
+function Te(t, r) {
+  const i = Xt(t || "");
   if (i.length <= r)
     return i;
   const a = i.slice(0, r + 1), s = a.lastIndexOf(" "), n = s > Math.floor(r * 0.6) ? s : r;
   return `${a.slice(0, n).trim()}...`;
 }
-const fe = Z({
+const be = ee({
   "aiko-tanaka": {
     archetype: "Standards Cartographer",
     coreQuestion: "What do the actual standards and regulations require, and what do those requirements mean for system design?",
@@ -1113,7 +1113,7 @@ const fe = Z({
     commercialFunction: "Makes Marty feel safer, more modern, and better aligned with buyer privacy obligations.",
     useWhen: "Use Nora when the reader needs minimum-disclosure logic, privacy framing, or a holder-control perspective."
   }
-}), De = Z({
+}), We = ee({
   "aiko-tanaka": {
     name: "Aiko Tanaka",
     title: "Standards Analyst",
@@ -1123,7 +1123,7 @@ const fe = Z({
     avatarImage: "/images/authors/aiko-tanaka.png",
     bio: "Aiko analyzes international identity standards and their practical implementation in digital systems. Her work focuses on ICAO Doc 9303, ISO 18013-5 mobile driving licenses, and emerging global digital identity interoperability frameworks.",
     expertise: ["ICAO 9303", "ISO 18013-5 mDoc", "EUDI Wallet Architecture", "Trust Registries", "Cross-Border Trust Frameworks"],
-    characterProfile: fe["aiko-tanaka"],
+    characterProfile: be["aiko-tanaka"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "marcus-vale": {
@@ -1135,7 +1135,7 @@ const fe = Z({
     avatarImage: "/images/authors/marcus-vale.png",
     bio: "Marcus studies cryptographic trust systems used to issue and verify credentials. His work centers on X.509 infrastructure, revocation models, and how cryptography enables privacy-preserving identity.",
     expertise: ["PKI Architecture", "Certificate Chains", "CRL & OCSP", "Selective Disclosure", "Revocation Strategies"],
-    characterProfile: fe["marcus-vale"],
+    characterProfile: be["marcus-vale"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "elena-kovacs": {
@@ -1147,7 +1147,7 @@ const fe = Z({
     avatarImage: "/images/authors/elena-kovacs.png",
     bio: "Elena focuses on the governance layer of identity systems: how organizations define rules, permissions, and trust policies for credential ecosystems.",
     expertise: ["RBAC & ABAC", "Policy Engines", "Identity Governance", "Enterprise Identity Frameworks", "Trust Registries"],
-    characterProfile: fe["elena-kovacs"],
+    characterProfile: be["elena-kovacs"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "daniel-ortega": {
@@ -1159,7 +1159,7 @@ const fe = Z({
     avatarImage: "/images/authors/daniel-ortega.png",
     bio: "Daniel studies the design of identity protocols and how systems exchange verifiable claims between issuers, holders, and verifiers. His work explains the underlying mechanics of decentralized identity protocols.",
     expertise: ["OID4VCI Issuance", "OID4VP Presentation", "Protocol Architecture", "Interoperability Design", "Protocol Flows"],
-    characterProfile: fe["daniel-ortega"],
+    characterProfile: be["daniel-ortega"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "sofia-rahman": {
@@ -1171,7 +1171,7 @@ const fe = Z({
     avatarImage: "/images/authors/sofia-rahman.png",
     bio: "Sofia studies wallet technology and how users interact with credentials stored on devices. Her research focuses on mobile wallets, device security, and user-controlled identity.",
     expertise: ["Wallet Architecture", "Credential Storage", "Device Binding", "Mobile Credential UX", "Selective Disclosure"],
-    characterProfile: fe["sofia-rahman"],
+    characterProfile: be["sofia-rahman"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "victor-leclerc": {
@@ -1183,7 +1183,7 @@ const fe = Z({
     avatarImage: "/images/authors/victor-leclerc.png",
     bio: "Victor analyzes large-scale trust infrastructures used by governments and enterprises. His work focuses on trust registries, federation models, and the infrastructure required to verify credentials across organizations.",
     expertise: ["Trust Registries", "Federation Models", "EUDI Trust Frameworks", "Credential Ecosystems", "Verifier Infrastructure"],
-    characterProfile: fe["victor-leclerc"],
+    characterProfile: be["victor-leclerc"],
     disclosure: "AI research persona representing curated protocol analysis."
   },
   "nora-patel": {
@@ -1195,10 +1195,10 @@ const fe = Z({
     avatarImage: "/images/authors/nora-patel.png",
     bio: "Nora researches privacy-preserving identity systems and how selective disclosure allows individuals to prove facts about themselves without revealing unnecessary information.",
     expertise: ["Selective Disclosure", "Privacy-Preserving Credentials", "Data Minimization", "Anonymous Credentials", "Regulatory Implications"],
-    characterProfile: fe["nora-patel"],
+    characterProfile: be["nora-patel"],
     disclosure: "AI research persona representing curated protocol analysis."
   }
-}), ei = [
+}), ai = [
   // Publication Arc 1: Foundations
   {
     slug: "why-identity-needs-a-protocol",
@@ -2059,7 +2059,7 @@ pytest -m openid4vp`
       { type: "paragraph", text: "This is where many architecture explanations go flat. They define trust. They define templates. They define policies. Then they leave the reader staring at a shelf full of well-labeled boxes. Useful, perhaps, but not alive. Marty cannot stop there, because the user never experiences a shelf. The user experiences a journey." },
       { type: "paragraph", text: 'A traveler submits data for pre-boarding clearance. An employee requests access to an HR portal. A customer scans a QR code at a self-checkout kiosk. In each case, the visible product is not "a trust profile" or "a credential template." The visible product is a sequence: apply, approve, issue, present, verify.' },
       { type: "paragraph", text: "The Flow primitive takes the other objects and makes them interact at the right moments. During approval, the system knows which Credential Template governs the resulting credential. During issuance, it knows which trust and compliance assumptions are relevant to the issuer. During presentation, it knows which Presentation Policy narrows disclosure to the decision at hand. During verification, it knows which Deployment Profile determines whether the check runs in a cloud API, a local VPC, or an intermittently connected lane device." },
-      { type: "paragraph", text: "This is why the canonical picture places Issuance Flows in the middle. Motion is what turns structure into a working system. The credential is not useful because it exists. It is useful because a flow got it from one governed state to another." },
+      { type: "paragraph", text: "This is why the canonical picture places Flows in the middle. Motion is what turns structure into a working system. The credential is not useful because it exists. It is useful because a flow got it from one governed state to another." },
       { type: "paragraph", text: "In a travel scenario, a clearance credential may be issued after document checks and policy approval, then later presented at a boarding gate running with pre-cached trust material and strict freshness windows. In a retail age-verification scenario, a holder scans a request, the wallet satisfies a policy that asks only for age_over_21 == true, and the kiosk verifies locally without ever handling name, address, or birth date. Different stakes, different runtime realities, same flow logic." },
       { type: "paragraph", text: "Flows let the system repeat a pattern without repeating custom architecture." },
       { type: "paragraph", text: 'They also keep us honest about the code vs configuration tension. When flows are missing as first-class objects, orchestration leaks everywhere: frontend wizards, backend queues, webhook glue, environment flags, exception handlers, and unreviewable business logic. Teams say they are implementing "the same process" across products, but what they actually have is a family of cousins who no longer speak to one another. Flow is the primitive that prevents that drift.' },
@@ -4722,12 +4722,12 @@ principal.department == "HR"
       { type: "paragraph", text: "If you want the shortest adjacent reading path, go back one step to credential-portability-across-wallets, then follow compliance-profiles-bridging-regulation to see how regulated ecosystems become governable configuration instead of application sprawl." }
     ]
   }
-], ti = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], ai = (t) => {
-  if (!t.updatedDate || t.updatedDate <= ti)
+], ii = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], ri = (t) => {
+  if (!t.updatedDate || t.updatedDate <= ii)
     return t;
   const { updatedDate: r, ...i } = t;
   return i;
-}, ie = ei.map(ai).map((t) => Z(t)), ii = Z([
+}, ae = ai.map(ri).map((t) => ee(t)), si = ee([
   {
     phase: 1,
     title: "Foundations",
@@ -4824,7 +4824,7 @@ principal.department == "HR"
       { order: 40, slug: "how-everything-works-together", title: "How Everything Works Together", authorId: "daniel-ortega", category: "Technical", topic: "Protocol Synthesis" }
     ]
   }
-]), jr = {
+]), Lr = {
   "aiko-tanaka": "Professional portrait illustration of a Japanese female identity standards researcher in her early 40s, calm and analytical expression, short black hair, wearing a modern research lab blazer. Subtle background elements referencing passports, ICAO document seals, and global travel lines. Style: semi-realistic digital illustration, soft lighting, neutral academic background, professional LinkedIn style headshot, minimal color palette navy blue and gold.",
   "marcus-vale": "Professional portrait illustration of a cryptography researcher, male in his late 30s, slightly rugged academic look, dark hair, thoughtful expression, wearing a dark sweater and glasses. Background subtly features mathematical diagrams, public key cryptography symbols, and certificate chains. Style: semi-realistic academic portrait, cool lighting, modern research institute aesthetic.",
   "elena-kovacs": "Professional portrait illustration of a female policy and governance specialist, Eastern European appearance, early 40s, confident and composed expression. Wearing a professional blazer. Background subtly includes organizational diagrams, policy flow charts, and governance networks. Clean academic illustration style, neutral color palette, professional headshot.",
@@ -4832,7 +4832,7 @@ principal.department == "HR"
   "sofia-rahman": "Professional portrait illustration of a female mobile security researcher, South Asian appearance, early 30s, approachable and intelligent expression. Background includes subtle smartphone wallet icons, device security symbols, and credential cards. Modern digital illustration style, warm lighting.",
   "victor-leclerc": "Portrait illustration of a European infrastructure researcher, male early 40s, thoughtful expression, wearing a research institute sweater and glasses. Background includes subtle global trust networks, PKI certificate trees, and federation diagrams. Semi-realistic illustration style with muted colors.",
   "nora-patel": "Professional portrait illustration of a female privacy researcher, South Asian appearance mid-30s, calm thoughtful expression. Background subtly includes zero knowledge proof diagrams, privacy icons, and shield symbols. Soft lighting, academic digital illustration style."
-}, ve = Z([
+}, we = ee([
   {
     part: "I",
     title: "Foundations",
@@ -4930,10 +4930,10 @@ principal.department == "HR"
       "eudi-wallet-model-explained"
     ]
   }
-]), Je = ve.flatMap((t) => t.slugs), ri = (() => {
+]), Je = we.flatMap((t) => t.slugs), ni = (() => {
   const t = Je.length, r = {};
   let i = 0;
-  return ve.forEach((a, s) => {
+  return we.forEach((a, s) => {
     a.slugs.forEach((n, d) => {
       i += 1, r[n] = {
         slug: n,
@@ -4949,22 +4949,22 @@ principal.department == "HR"
     });
   }), r;
 })();
-function Xt(t) {
-  const r = ri[t];
+function Qt(t) {
+  const r = ni[t];
   return r ? {
     ...r,
     prevSlug: r.globalIndex > 0 ? Je[r.globalIndex - 1] : null,
     nextSlug: r.globalIndex < Je.length - 1 ? Je[r.globalIndex + 1] : null
   } : null;
 }
-const ue = Z([
+const ue = ee([
   { id: 1, slug: "foundations", title: "Foundations", color: "#1565c0", icon: "School" },
   { id: 2, slug: "core-objects", title: "Core Objects", color: "#7b1fa2", icon: "Category" },
   { id: 3, slug: "trust-governance", title: "Trust & Governance", color: "#2e7d32", icon: "Security" },
   { id: 4, slug: "flows", title: "Flows", color: "#e65100", icon: "AccountTree" },
   { id: 5, slug: "deployments", title: "Deployments", color: "#00695c", icon: "CloudUpload" },
   { id: 6, slug: "implementations", title: "Implementations", color: "#c62828", icon: "Code" }
-]), Pe = Z([
+]), Ce = ee([
   // Chapter 1: Foundations
   {
     slug: "foundations-identity",
@@ -5563,8 +5563,8 @@ permit(
     slug: "issuance-flows",
     chapterId: 4,
     order: 1,
-    title: "Issuance Flows",
-    summary: "An issuance flow orchestrates the journey from credential application through approval to delivery. MIP's Flow primitive ties Trust Profile, Template, Policy, and Deployment together.",
+    title: "Flows",
+    summary: "A flow orchestrates the credential journey across application, approval, issuance, presentation, and verification. MIP's Flow primitive ties Trust Profile, Template, Policy, and Deployment together.",
     readTime: "8 min read",
     conceptTags: ["flow", "issuance"],
     content: [
@@ -6214,14 +6214,14 @@ Type 3 (Hardware-Bound):
       }
     ]
   }
-]), Ge = Pe.map((t) => t.slug), Ae = Object.fromEntries(
-  Pe.map((t) => [t.slug, t])
+]), Ge = Ce.map((t) => t.slug), De = Object.fromEntries(
+  Ce.map((t) => [t.slug, t])
 ), $e = Object.fromEntries(
   ue.map((t) => [
     t.id,
-    Pe.filter((r) => r.chapterId === t.id).sort((r, i) => r.order - i.order)
+    Ce.filter((r) => r.chapterId === t.id).sort((r, i) => r.order - i.order)
   ])
-), Qt = {
+), Zt = {
   "why-identity-needs-a-protocol": ["foundation", "business"],
   "trust-profiles-explained": ["core-object", "trust-profile"],
   "business-case-for-credential-portability": ["business", "deployment"],
@@ -6305,7 +6305,7 @@ Type 3 (Hardware-Bound):
   "presentation-policies-explained-deep": ["presentation-policy", "core-object", "implementation"],
   "deployment-profiles-explained-deep": ["deployment-profile", "core-object", "deployment"],
   "how-everything-works-together": ["protocol-overview", "five-primitives", "flow"]
-}, gt = {
+}, ft = {
   "impl-oid4vci": ["OID4VCI"],
   "impl-oid4vp": ["OID4VP"],
   "sd-jwt-selective-disclosure-deep-dive": ["SD-JWT"],
@@ -6372,7 +6372,7 @@ Type 3 (Hardware-Bound):
   "deployment-profiles-explained-deep": ["OID4VP", "ICAO 9303"],
   "how-everything-works-together": ["OID4VCI", "OID4VP", "W3C VC"],
   "credential-portability-across-wallets": ["OID4VCI", "OID4VP"]
-}, ft = Z([
+}, vt = ee([
   {
     id: "foundations",
     title: "Foundations",
@@ -6467,9 +6467,9 @@ Type 3 (Hardware-Bound):
       "eudi-wallet-model-explained"
     ]
   }
-]), Be = (() => {
+]), je = (() => {
   const t = {};
-  for (const r of ft)
+  for (const r of vt)
     r.slugs.forEach((i, a) => {
       t[i] = {
         seriesId: r.id,
@@ -6480,9 +6480,9 @@ Type 3 (Hardware-Bound):
       };
     });
   return t;
-})(), Br = Object.fromEntries(
-  ft.map((t) => [t.id, t])
-), vt = {
+})(), Vr = Object.fromEntries(
+  vt.map((t) => [t.id, t])
+), bt = {
   // Featured (manually pinned flagship posts)
   "why-identity-needs-a-protocol": "featured",
   "five-primitives-in-one-picture": "featured",
@@ -6580,7 +6580,7 @@ Type 3 (Hardware-Bound):
   "five-primitives-in-one-picture",
   "the-marty-identity-model",
   "flows-orchestrating-identity-lifecycle"
-], si = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], ni = [
+], oi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], li = [
   "impl-oid4vci",
   "impl-oid4vp",
   "compliance-profiles-in-practice",
@@ -6590,17 +6590,17 @@ Type 3 (Hardware-Bound):
   "deploy-enterprise-access",
   "deploy-age-verification",
   "deploy-membership-credentials"
-], oi = ["selective-disclosure-explained"], li = new Set(ni), ci = new Set(oi);
-function Zt(t) {
-  return li.has(t);
+], ci = ["selective-disclosure-explained"], hi = new Set(li), di = new Set(ci);
+function ea(t) {
+  return hi.has(t);
 }
 function tt(t) {
-  return !ci.has(t) && !Zt(t);
+  return !di.has(t) && !ea(t);
 }
-function Se(t) {
-  return t.filter((r) => r.date <= si && tt(r.slug));
+function Oe(t) {
+  return t.filter((r) => r.date <= oi && tt(r.slug));
 }
-const ea = {
+const ta = {
   Foundations: "Foundations",
   Trust: "Trust",
   Issue: "Issuance",
@@ -7141,7 +7141,7 @@ const ea = {
     difficulty: "Advanced",
     related: ["the-marty-identity-model", "five-primitives-in-one-picture", "flows-orchestrating-identity-lifecycle"]
   }
-}, ta = {
+}, aa = {
   Foundations: "#546e7a",
   Trust: "#1565c0",
   Issue: "#7b1fa2",
@@ -7149,20 +7149,20 @@ const ea = {
   Deploy: "#e65100",
   Execute: "#00695c",
   Govern: "#4a148c"
-}, hi = {
+}, pi = {
   Beginner: "success",
   Intermediate: "info",
   Advanced: "warning"
 };
-function di(t) {
+function ui(t) {
   var r;
   return ((r = ze[t]) == null ? void 0 : r.canonicalSlug) || t;
 }
-function pi(t) {
+function mi(t) {
   const r = ze[t];
   return (r == null ? void 0 : r.status) === "legacy" ? r : null;
 }
-const ui = JSON.parse(String.raw`
+const yi = JSON.parse(String.raw`
 [
   {
     "slug": "why-identity-needs-a-protocol",
@@ -7973,31 +7973,31 @@ const ui = JSON.parse(String.raw`
     "readTime": "7 min read"
   }
 ]
-`), mi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], yi = (t) => {
-  if (!t.updatedDate || t.updatedDate <= mi)
+`), gi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], fi = (t) => {
+  if (!t.updatedDate || t.updatedDate <= gi)
     return t;
   const { updatedDate: r, ...i } = t;
   return i;
-}, me = ui.map(yi).map((t) => Z(t)), pt = "https://elevenidllc.com", Ie = "/images/social", gi = `${Ie}/elevenid-blog-default.png`, aa = Object.fromEntries(
-  me.map((t) => [t.slug, `${Ie}/${t.slug}.png`])
+}, me = yi.map(fi).map((t) => ee(t)), pt = "https://elevenidllc.com", Ae = "/images/social", vi = `${Ae}/elevenid-blog-default.png`, ia = Object.fromEntries(
+  me.map((t) => [t.slug, `${Ae}/${t.slug}.png`])
 );
-function fi(t = pt) {
+function bi(t = pt) {
   return String(t || pt).replace(/\/+$/, "");
 }
-function ia(t) {
+function ra(t) {
   return String(t || "").trim();
 }
-function vi(t) {
-  return Object.prototype.hasOwnProperty.call(aa, ia(t));
+function wi(t) {
+  return Object.prototype.hasOwnProperty.call(ia, ra(t));
 }
-function bi(t, r = "linkedin") {
-  const i = String(r || "linkedin").trim().toLowerCase(), a = ia(t);
-  return vi(a) ? i === "linkedin" ? aa[a] : i === "master" ? `${Ie}/master/${a}-master.png` : `${Ie}/platforms/${a}-${i}.png` : i === "linkedin" ? gi : i === "master" ? `${Ie}/master/elevenid-blog-default-master.png` : `${Ie}/platforms/elevenid-blog-default-${i}.png`;
+function xi(t, r = "linkedin") {
+  const i = String(r || "linkedin").trim().toLowerCase(), a = ra(t);
+  return wi(a) ? i === "linkedin" ? ia[a] : i === "master" ? `${Ae}/master/${a}-master.png` : `${Ae}/platforms/${a}-${i}.png` : i === "linkedin" ? vi : i === "master" ? `${Ae}/master/elevenid-blog-default-master.png` : `${Ae}/platforms/elevenid-blog-default-${i}.png`;
 }
-function wi(t, r = pt, i = "linkedin") {
-  return `${fi(r)}${bi(t, i)}`;
+function Ti(t, r = pt, i = "linkedin") {
+  return `${bi(r)}${xi(t, i)}`;
 }
-const xi = JSON.parse(String.raw`{
+const ki = JSON.parse(String.raw`{
   "what-is-digital-identity": "Foundations",
   "verifiable-credentials-explained": "Foundations",
   "four-actors-of-identity-systems": "Foundations",
@@ -8080,7 +8080,7 @@ const xi = JSON.parse(String.raw`{
   "presentation-policies-explained-deep": "Core Protocol",
   "deployment-profiles-explained-deep": "Core Protocol",
   "how-everything-works-together": "Protocol Overview"
-}`), Ti = JSON.parse(String.raw`{
+}`), Ii = JSON.parse(String.raw`{
   "trust-profiles-explained": "Trust Profiles",
   "credential-templates-designing-what-gets-issued": "Credential Templates",
   "presentation-policies-minimum-disclosure": "Presentation Policies",
@@ -8094,30 +8094,37 @@ const xi = JSON.parse(String.raw`{
   "presentation-policies-explained-deep": "Presentation Policies",
   "deployment-profiles-explained-deep": "Deployment Profiles"
 }`);
-function re(t) {
+function ie(t) {
   return (t == null ? void 0 : t.trim().toLowerCase()) || "";
 }
-function We(t) {
-  const r = re(t);
-  return r ? `/blog/tag/${encodeURIComponent(r)}` : "/blog";
+function ut(t) {
+  return ie(t).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/\+/g, " plus ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
-function ki(t) {
+function Ve(t) {
+  const r = ut(t);
+  return r ? `/blog/tag/${r}` : "/blog";
+}
+function Pi(t) {
   if (!t)
     return "";
   try {
-    return re(decodeURIComponent(t));
+    return ie(decodeURIComponent(t));
   } catch {
-    return re(t);
+    return ie(t);
   }
 }
-function Ii(t, r) {
-  const i = re(t);
-  return r.find((a) => re(a) === i) || "";
+function sa(t, r) {
+  const i = ie(t), a = ut(t);
+  return r.find((s) => ie(s) === i || ut(s) === a) || "";
 }
-function Pi() {
-  const t = Se(me).length, i = (/* @__PURE__ */ new Date()).toLocaleDateString("en-US", { month: "short", year: "numeric" });
+function Ai(t, r = []) {
+  const i = sa(t, r);
+  return Ve(i || t);
+}
+function Ci() {
+  const t = Oe(me).length, i = (/* @__PURE__ */ new Date()).toLocaleDateString("en-US", { month: "short", year: "numeric" });
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       elevation: 0,
       sx: {
@@ -8187,7 +8194,7 @@ function Pi() {
             {
               variant: "contained",
               size: "large",
-              startIcon: /* @__PURE__ */ e(ut, {}),
+              startIcon: /* @__PURE__ */ e(mt, {}),
               component: "a",
               href: "#start-here",
               sx: { bgcolor: "primary.main", fontWeight: 700, px: 3 },
@@ -8199,7 +8206,7 @@ function Pi() {
             {
               variant: "outlined",
               size: "large",
-              startIcon: /* @__PURE__ */ e(Gt, {}),
+              startIcon: /* @__PURE__ */ e(Nt, {}),
               component: "a",
               href: "#implementation",
               sx: {
@@ -8217,7 +8224,7 @@ function Pi() {
             {
               variant: "outlined",
               size: "large",
-              startIcon: /* @__PURE__ */ e(Ve, {}),
+              startIcon: /* @__PURE__ */ e(Le, {}),
               component: k,
               to: "/blog/foundations",
               sx: {
@@ -8235,14 +8242,14 @@ function Pi() {
     }
   );
 }
-function Ai() {
+function Di() {
   const t = pe.map((i) => me.find((a) => a.slug === i)).filter(Boolean), r = t.reduce((i, a) => {
     var n;
     const s = (n = a.readTime) == null ? void 0 : n.match(/(\d+)/);
     return i + (s ? parseInt(s[1], 10) : 0);
   }, 0);
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       id: "start-here",
       elevation: 0,
@@ -8271,7 +8278,7 @@ function Ai() {
           }
         ),
         /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
-          /* @__PURE__ */ e(Wa, { color: "primary", sx: { fontSize: 28 } }),
+          /* @__PURE__ */ e(Ma, { color: "primary", sx: { fontSize: 28 } }),
           /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 800, color: "primary.dark", children: "Start Here" }),
           /* @__PURE__ */ o(
             l,
@@ -8297,8 +8304,8 @@ function Ai() {
           )
         ] }),
         /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, ml: 5.5 }, children: "New to digital identity? Follow this path to build a solid foundation." }),
-        /* @__PURE__ */ e(va, { disablePadding: !0, children: t.map((i, a) => /* @__PURE__ */ e(ba, { disablePadding: !0, sx: { mb: 0.5 }, children: /* @__PURE__ */ o(
-          Ft,
+        /* @__PURE__ */ e(wa, { disablePadding: !0, children: t.map((i, a) => /* @__PURE__ */ e(xa, { disablePadding: !0, sx: { mb: 0.5 }, children: /* @__PURE__ */ o(
+          Ut,
           {
             component: k,
             to: `/blog/${i.slug}`,
@@ -8308,7 +8315,7 @@ function Ai() {
               "&:hover": { bgcolor: "primary.100" }
             },
             children: [
-              /* @__PURE__ */ e(wa, { sx: { minWidth: 40 }, children: /* @__PURE__ */ e(
+              /* @__PURE__ */ e(Ta, { sx: { minWidth: 40 }, children: /* @__PURE__ */ e(
                 l,
                 {
                   variant: "h6",
@@ -8319,11 +8326,11 @@ function Ai() {
                 }
               ) }),
               /* @__PURE__ */ e(
-                Ut,
+                Ht,
                 {
                   primary: i.title,
-                  secondary: /* @__PURE__ */ o(Le, { children: [
-                    be(i.summary, 220),
+                  secondary: /* @__PURE__ */ o(Be, { children: [
+                    Te(i.summary, 220),
                     /* @__PURE__ */ o(l, { component: "span", variant: "caption", sx: { display: "block", mt: 0.5, fontWeight: 600, color: "text.secondary" }, children: [
                       "Step ",
                       a + 1,
@@ -8339,7 +8346,7 @@ function Ai() {
               ),
               /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 2, color: "primary.main", flexShrink: 0 }, children: [
                 /* @__PURE__ */ e(l, { variant: "caption", sx: { fontWeight: 800, letterSpacing: 0.2 }, children: "Read article" }),
-                /* @__PURE__ */ e(Q, { sx: { fontSize: 16 } })
+                /* @__PURE__ */ e(Z, { sx: { fontSize: 16 } })
               ] })
             ]
           }
@@ -8350,44 +8357,44 @@ function Ai() {
 }
 const Ne = [
   {
-    icon: Oa,
+    icon: qa,
     title: "Trust Profiles",
     description: "Who is trusted",
     verb: "Trust",
     color: "#1565c0"
   },
   {
-    icon: Ma,
+    icon: Ea,
     title: "Credential Templates",
     description: "What is issued",
     verb: "Issue",
     color: "#7b1fa2"
   },
   {
-    icon: qa,
+    icon: za,
     title: "Presentation Policies",
     description: "What must be shown",
     verb: "Present",
     color: "#2e7d32"
   },
   {
-    icon: Ea,
+    icon: _a,
     title: "Deployment Profiles",
     description: "Where it runs",
     verb: "Deploy",
     color: "#e65100"
   },
   {
-    icon: Nt,
+    icon: Kt,
     title: "Flows",
     description: "How journeys are orchestrated",
     verb: "Flows",
     color: "#00695c"
   }
 ];
-function Ci() {
+function Si() {
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       id: "protocol-diagram",
       elevation: 0,
@@ -8508,7 +8515,7 @@ function Ci() {
     }
   );
 }
-const qt = [
+const Et = [
   { id: "overview", label: "Overview" },
   { id: "start-here", label: "Start Here" },
   { id: "five-primitives", label: "Five Primitives" },
@@ -8518,9 +8525,9 @@ const qt = [
   { id: "governance", label: "Governance & Trust Infrastructure" },
   { id: "latest", label: "Latest" }
 ];
-function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabled: a = !0 }) {
-  const [s, n] = ce("overview"), [d, h] = ce(!1);
-  return Oe(() => {
+function Wi({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabled: a = !0 }) {
+  const [s, n] = le("overview"), [d, h] = le(!1);
+  return xe(() => {
     if (!a) {
       n("overview");
       return;
@@ -8532,7 +8539,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
       },
       { rootMargin: "-60px 0px -75% 0px" }
     ), u = setTimeout(() => {
-      qt.forEach(({ id: g }) => {
+      Et.forEach(({ id: g }) => {
         const m = document.getElementById(g);
         m && p.observe(m);
       });
@@ -8566,7 +8573,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
               "&::-webkit-scrollbar": { display: "none" },
               scrollbarWidth: "none"
             },
-            children: a ? qt.map((p) => /* @__PURE__ */ e(
+            children: a ? Et.map((p) => /* @__PURE__ */ e(
               z,
               {
                 size: "small",
@@ -8599,7 +8606,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
         ),
         /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, ml: 1, flexShrink: 0 }, children: [
           d ? /* @__PURE__ */ e(
-            xa,
+            ka,
             {
               size: "small",
               autoFocus: !0,
@@ -8608,15 +8615,15 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
               onChange: (p) => r(p.target.value),
               sx: { width: { xs: 200, md: 320 } },
               InputProps: {
-                startAdornment: /* @__PURE__ */ e(wt, { position: "start", children: /* @__PURE__ */ e(kt, { fontSize: "small" }) }),
-                endAdornment: /* @__PURE__ */ e(wt, { position: "end", children: /* @__PURE__ */ e(
+                startAdornment: /* @__PURE__ */ e(xt, { position: "start", children: /* @__PURE__ */ e(It, { fontSize: "small" }) }),
+                endAdornment: /* @__PURE__ */ e(xt, { position: "end", children: /* @__PURE__ */ e(
                   Ue,
                   {
                     size: "small",
                     onClick: () => {
                       h(!1), r("");
                     },
-                    children: /* @__PURE__ */ e(za, { fontSize: "small" })
+                    children: /* @__PURE__ */ e(Ra, { fontSize: "small" })
                   }
                 ) })
               }
@@ -8628,7 +8635,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
               onClick: () => h(!0),
               sx: { color: "text.secondary" },
               "aria-label": "Search articles",
-              children: /* @__PURE__ */ e(kt, { fontSize: "small" })
+              children: /* @__PURE__ */ e(It, { fontSize: "small" })
             }
           ),
           /* @__PURE__ */ e(
@@ -8638,7 +8645,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
               onClick: i,
               sx: { color: "text.secondary" },
               "aria-label": "Authors",
-              children: /* @__PURE__ */ e(Ra, { fontSize: "small" })
+              children: /* @__PURE__ */ e(Ba, { fontSize: "small" })
             }
           ),
           /* @__PURE__ */ e(
@@ -8649,7 +8656,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
               href: "/blog/rss.xml",
               sx: { color: "text.secondary" },
               "aria-label": "RSS feed",
-              children: /* @__PURE__ */ e(_a, { fontSize: "small" })
+              children: /* @__PURE__ */ e(ja, { fontSize: "small" })
             }
           )
         ] })
@@ -8657,7 +8664,7 @@ function Di({ searchValue: t, onSearch: r, onNavigateAuthors: i, sectionNavEnabl
     }
   );
 }
-const lt = Z([
+const lt = ee([
   {
     label: "Foundations",
     color: "#546e7a",
@@ -8728,8 +8735,8 @@ const lt = Z([
     ]
   }
 ]);
-function Si() {
-  const t = Xe(), r = Qe(t.breakpoints.down("md")), [i, a] = ce({}), s = (n) => {
+function Oi() {
+  const t = Xe(), r = Qe(t.breakpoints.down("md")), [i, a] = le({}), s = (n) => {
     a((d) => ({ ...d, [n]: !d[n] }));
   };
   return /* @__PURE__ */ o(c, { sx: { mb: 2 }, children: [
@@ -8834,7 +8841,7 @@ function Si() {
                             children: n.label
                           }
                         ),
-                        r && (h ? /* @__PURE__ */ e(mt, { sx: { fontSize: 18, color: "text.secondary" } }) : /* @__PURE__ */ e(ja, { sx: { fontSize: 18, color: "text.secondary" } }))
+                        r && (h ? /* @__PURE__ */ e(yt, { sx: { fontSize: 18, color: "text.secondary" } }) : /* @__PURE__ */ e(La, { sx: { fontSize: 18, color: "text.secondary" } }))
                       ] }),
                       /* @__PURE__ */ e(
                         l,
@@ -8847,7 +8854,7 @@ function Si() {
                     ]
                   }
                 ),
-                /* @__PURE__ */ e(Ht, { in: !h, timeout: 200, children: /* @__PURE__ */ e(c, { sx: { display: "flex", flexDirection: "column", gap: 0 }, children: n.nodes.map((p, u) => /* @__PURE__ */ o(
+                /* @__PURE__ */ e(Gt, { in: !h, timeout: 200, children: /* @__PURE__ */ e(c, { sx: { display: "flex", flexDirection: "column", gap: 0 }, children: n.nodes.map((p, u) => /* @__PURE__ */ o(
                   c,
                   {
                     sx: { display: "flex", alignItems: "stretch" },
@@ -8881,7 +8888,7 @@ function Si() {
                         }
                       ),
                       /* @__PURE__ */ e(
-                        Ta,
+                        Ia,
                         {
                           title: p.tip,
                           placement: "right",
@@ -8922,12 +8929,12 @@ function Si() {
     )
   ] });
 }
-const Wi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], de = { scrollMarginTop: "56px" }, ye = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
-function Oi(t, r, i) {
+const Mi = (/* @__PURE__ */ new Date()).toISOString().split("T")[0], de = { scrollMarginTop: "56px" }, fe = { pt: { xs: 8, md: 12 }, pb: { xs: 8, md: 12 } };
+function qi(t, r, i) {
   const a = r[t], s = i[t];
   return a === "core-protocol" || (s == null ? void 0 : s.seriesId) === "five-primitives" ? "Core Primitive" : a === "implementation" || (s == null ? void 0 : s.seriesId) === "implementations" ? "Guide" : a === "start-learning" ? "Concept" : (s == null ? void 0 : s.seriesId) === "deployments" || (s == null ? void 0 : s.seriesId) === "pki-for-identity" || (s == null ? void 0 : s.seriesId) === "privacy-and-disclosure" || (s == null ? void 0 : s.seriesId) === "governance" || (s == null ? void 0 : s.seriesId) === "wallets" ? "Guide" : null;
 }
-const Mi = {
+const Ei = {
   "Core Primitive": {
     borderLeft: "4px solid",
     borderLeftColor: "#1565c0",
@@ -8947,31 +8954,31 @@ const Mi = {
     chipColor: "success"
   }
 };
-function ra(t) {
+function na(t) {
   return t.reduce((r, i) => {
     var s;
     const a = (s = i.readTime) == null ? void 0 : s.match(/(\d+)/);
     return r + (a ? parseInt(a[1], 10) : 0);
   }, 0);
 }
-function Et(t, r) {
+function zt(t, r) {
   return r.some((i) => i == null ? void 0 : i.toLowerCase().includes(t));
 }
-function sa(t, r) {
-  const i = re(t);
-  return r.some((a) => re(a) === i);
+function oa(t, r) {
+  const i = ie(t);
+  return r.some((a) => ie(a) === i);
 }
-function na(t) {
-  const r = xi[t.slug];
+function la(t) {
+  const r = ki[t.slug];
   return [
     .../* @__PURE__ */ new Set([
-      ...gt[t.slug] || [],
-      ...Qt[t.slug] || [],
+      ...ft[t.slug] || [],
+      ...Zt[t.slug] || [],
       ...r ? [r] : []
     ])
   ];
 }
-function oa(t, r) {
+function ca(t, r) {
   var a;
   const i = ((a = r[t.chapterId]) == null ? void 0 : a.title) || null;
   return [
@@ -8981,21 +8988,21 @@ function oa(t, r) {
     ])
   ];
 }
-function la(t, r) {
-  return sa(r, na(t));
+function ha(t, r) {
+  return oa(r, la(t));
 }
-function ca(t, r, i) {
-  return sa(i, oa(t, r));
+function da(t, r, i) {
+  return oa(i, ca(t, r));
 }
-function qi(t, r, i, a) {
+function zi(t, r, i, a) {
   if (!t.trim()) return null;
-  const s = t.toLowerCase(), n = Object.fromEntries(a.map((u) => [u.id, u])), d = r.filter((u) => Et(s, [u.title, u.summary, u.category])).map((u) => ({
+  const s = t.toLowerCase(), n = Object.fromEntries(a.map((u) => [u.id, u])), d = r.filter((u) => zt(s, [u.title, u.summary, u.category])).map((u) => ({
     kind: "post",
     slug: u.slug,
     item: u
   })), h = new Set(d.map((u) => u.slug)), p = i.filter((u) => !h.has(u.slug)).filter((u) => {
     const g = n[u.chapterId];
-    return Et(s, [
+    return zt(s, [
       u.title,
       u.summary,
       g == null ? void 0 : g.title,
@@ -9012,13 +9019,13 @@ function qi(t, r, i, a) {
   });
   return [...d, ...p];
 }
-function Ei(t, r, i, a) {
+function _i(t, r, i, a) {
   if (!t.trim()) return null;
-  const s = Object.fromEntries(a.map((p) => [p.id, p])), n = r.filter((p) => la(p, t)).map((p) => ({
+  const s = Object.fromEntries(a.map((p) => [p.id, p])), n = r.filter((p) => ha(p, t)).map((p) => ({
     kind: "post",
     slug: p.slug,
     item: p
-  })), d = new Set(n.map((p) => p.slug)), h = i.filter((p) => !d.has(p.slug)).filter((p) => ca(p, s, t)).map((p) => {
+  })), d = new Set(n.map((p) => p.slug)), h = i.filter((p) => !d.has(p.slug)).filter((p) => da(p, s, t)).map((p) => {
     var u;
     return {
       kind: "guide",
@@ -9029,20 +9036,20 @@ function Ei(t, r, i, a) {
   });
   return [...n, ...h];
 }
-function zi(t, r, i) {
+function Ri(t, r, i) {
   const a = Object.fromEntries(i.map((d) => [d.id, d])), s = /* @__PURE__ */ new Map(), n = (d) => {
     d && s.set(d, (s.get(d) || 0) + 1);
   };
   return t.forEach((d) => {
-    na(d).forEach(n);
+    la(d).forEach(n);
   }), r.forEach((d) => {
-    oa(d, a).forEach(n);
+    ca(d, a).forEach(n);
   }), [...s.entries()].map(([d, h]) => ({ tag: d, count: h })).sort((d, h) => h.count - d.count || d.tag.localeCompare(h.tag));
 }
-function _i(t, r, i) {
-  return t.kind === "post" ? la(t.item, r) : ca(t.item, i, r);
+function ji(t, r, i) {
+  return t.kind === "post" ? ha(t.item, r) : da(t.item, i, r);
 }
-const ha = [
+const pa = [
   { id: "start-here", verb: "Learn", label: "Start Here" },
   { id: "system-map", verb: "Map", label: "System Map" },
   { id: "five-primitives", verb: "Protocol", label: "Five Primitives" },
@@ -9051,14 +9058,14 @@ const ha = [
   { id: "deployment", verb: "Deploy", label: "Deployment Patterns" },
   { id: "governance", verb: "Govern", label: "Governance" },
   { id: "latest", verb: "Archive", label: "Latest" }
-], Te = {
+], Ie = {
   "five-primitives": ["five-primitives"],
   implementation: ["implementations"],
   "trust-pki": ["pki-for-identity"],
   "privacy-disclosure": ["privacy-and-disclosure"],
   deployment: ["deployments"],
   governance: ["governance", "wallets"]
-}, zt = [
+}, _t = [
   { verb: "Learn", label: "Start Here", target: "start-here" },
   { verb: "Map", label: "System Map", target: "system-map" },
   { verb: "Understand", label: "Five Primitives", target: "five-primitives" },
@@ -9066,14 +9073,14 @@ const ha = [
   { verb: "Secure", label: "PKI & Trust", target: "trust-pki" },
   { verb: "Deploy", label: "Deployment Patterns", target: "deployment" },
   { verb: "Govern", label: "Governance", target: "governance" }
-], Ri = {
+], Bi = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function ji({ article: t }) {
+function Li({ article: t }) {
   return /* @__PURE__ */ e(
     Me,
     {
@@ -9109,7 +9116,7 @@ function ji({ article: t }) {
     }
   );
 }
-function Bi({ article: t, chapterTitle: r }) {
+function Vi({ article: t, chapterTitle: r }) {
   return /* @__PURE__ */ e(
     Me,
     {
@@ -9146,9 +9153,9 @@ function Bi({ article: t, chapterTitle: r }) {
     }
   );
 }
-function Li({ availableTags: t, activeTag: r }) {
+function Fi({ availableTags: t, activeTag: r }) {
   if (!t.length && !r) return null;
-  const i = re(r), a = i && !t.some(({ tag: s }) => re(s) === i) ? [{ tag: r, count: 0 }, ...t] : t;
+  const i = ie(r), a = i && !t.some(({ tag: s }) => ie(s) === i) ? [{ tag: r, count: 0 }, ...t] : t;
   return /* @__PURE__ */ o(
     c,
     {
@@ -9192,9 +9199,9 @@ function Li({ availableTags: t, activeTag: r }) {
               label: n ? `${s} (${n})` : s,
               clickable: !0,
               component: k,
-              to: We(s),
-              color: re(s) === i ? "primary" : "default",
-              variant: re(s) === i ? "filled" : "outlined",
+              to: Ve(s),
+              color: ie(s) === i ? "primary" : "default",
+              variant: ie(s) === i ? "filled" : "outlined",
               sx: { fontWeight: 600 }
             },
             s
@@ -9204,8 +9211,8 @@ function Li({ availableTags: t, activeTag: r }) {
     }
   );
 }
-function Vi() {
-  const [t, r] = ce(1), i = $e[t] || [];
+function Ui() {
+  const [t, r] = le(1), i = $e[t] || [];
   return /* @__PURE__ */ o(
     c,
     {
@@ -9219,7 +9226,7 @@ function Vi() {
       },
       children: [
         /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 1 }, children: [
-          /* @__PURE__ */ e(ut, { color: "primary" }),
+          /* @__PURE__ */ e(mt, { color: "primary" }),
           /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, color: "primary.dark", children: "Structured Guide" })
         ] }),
         /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 3, ml: 4.5 }, children: "Six chapters of progressive learning - pick up where your series knowledge leaves off." }),
@@ -9238,13 +9245,13 @@ function Vi() {
           },
           a.id
         )) }),
-        /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: i.map((a) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 3, children: /* @__PURE__ */ e(ji, { article: a }) }, a.slug)) })
+        /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: i.map((a) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 3, children: /* @__PURE__ */ e(Li, { article: a }) }, a.slug)) })
       ]
     }
   );
 }
 function Ye({ post: t, featured: r = !1 }) {
-  const i = De[t.authorId] || {}, a = t.date > Wi, s = new Date(t.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), n = t.updatedDate ? new Date(t.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : null, d = Be[t.slug], h = gt[t.slug] || [], p = Oi(t.slug, vt, Be), u = p ? Mi[p] : null;
+  const i = We[t.authorId] || {}, a = t.date > Mi, s = new Date(t.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), n = t.updatedDate ? new Date(t.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : null, d = je[t.slug], h = ft[t.slug] || [], p = qi(t.slug, bt, je), u = p ? Ei[p] : null;
   return r ? /* @__PURE__ */ o(
     c,
     {
@@ -9307,7 +9314,7 @@ function Ye({ post: t, featured: r = !1 }) {
         ),
         /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }, children: [
           /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5 }, children: [
-            /* @__PURE__ */ e(Ce, { src: i.avatarImage, sx: { width: 36, height: 36, bgcolor: "primary.light", fontSize: "0.8rem" }, children: i.avatar }),
+            /* @__PURE__ */ e(Se, { src: i.avatarImage, sx: { width: 36, height: 36, bgcolor: "primary.light", fontSize: "0.8rem" }, children: i.avatar }),
             /* @__PURE__ */ o(c, { children: [
               /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, sx: { color: "common.white" }, children: i.name }),
               /* @__PURE__ */ o(l, { variant: "caption", sx: { color: "rgba(255,255,255,0.5)" }, children: [
@@ -9335,7 +9342,7 @@ function Ye({ post: t, featured: r = !1 }) {
               },
               children: [
                 /* @__PURE__ */ e(l, { component: "span", variant: "body2", sx: { color: "inherit", fontWeight: 700 }, children: "Read article" }),
-                /* @__PURE__ */ e(Q, { sx: { fontSize: "1rem" } })
+                /* @__PURE__ */ e(Z, { sx: { fontSize: "1rem" } })
               ]
             }
           )
@@ -9378,17 +9385,17 @@ function Ye({ post: t, featured: r = !1 }) {
                   sx: { fontWeight: 700, fontSize: "0.68rem" }
                 }
               ),
-              /* @__PURE__ */ e(T, { label: t.category, size: "small", color: Ri[t.category] || "default", variant: "outlined", sx: { fontWeight: 600 } }),
+              /* @__PURE__ */ e(T, { label: t.category, size: "small", color: Bi[t.category] || "default", variant: "outlined", sx: { fontWeight: 600 } }),
               d && /* @__PURE__ */ e(T, { label: d.seriesTitle, size: "small", variant: "outlined", sx: { fontSize: "0.7rem", fontWeight: 600 } }),
               h.map((g) => /* @__PURE__ */ e(T, { label: g, size: "small", variant: "outlined", sx: { fontFamily: "monospace", fontSize: "0.65rem", fontWeight: 600, borderColor: "info.main", color: "info.main" } }, g)),
               a && /* @__PURE__ */ e(T, { label: "Update Pending", size: "small", sx: { bgcolor: "warning.50", color: "warning.dark", fontWeight: 600, fontSize: "0.68rem" } })
             ] }),
             /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35, fontSize: "1.15rem" }, children: t.title }),
             /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2.5, lineHeight: 1.65, fontSize: "0.875rem" }, children: t.summary }),
-            /* @__PURE__ */ e(se, { sx: { mb: 2 } }),
+            /* @__PURE__ */ e(re, { sx: { mb: 2 } }),
             /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
               /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-                /* @__PURE__ */ e(Ce, { src: i.avatarImage, sx: { width: 26, height: 26, fontSize: "0.7rem", bgcolor: "primary.main" }, children: i.avatar || "?" }),
+                /* @__PURE__ */ e(Se, { src: i.avatarImage, sx: { width: 26, height: 26, fontSize: "0.7rem", bgcolor: "primary.main" }, children: i.avatar || "?" }),
                 /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", noWrap: !0, sx: { fontSize: "0.75rem" }, children: [
                   i.name || t.authorId,
                   " | ",
@@ -9404,9 +9411,9 @@ function Ye({ post: t, featured: r = !1 }) {
     }
   );
 }
-function ke({ title: t, description: r, posts: i }) {
+function Pe({ title: t, description: r, posts: i }) {
   if (!i.length) return null;
-  const a = ra(i);
+  const a = na(i);
   return /* @__PURE__ */ o(c, { sx: { mb: 5 }, children: [
     t && /* @__PURE__ */ o(c, { sx: { mb: 3 }, children: [
       /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
@@ -9434,8 +9441,8 @@ function ke({ title: t, description: r, posts: i }) {
     /* @__PURE__ */ e(G, { container: !0, spacing: 2.5, children: i.map((s) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(Ye, { post: s }) }, s.slug)) })
   ] });
 }
-function Fi({ articles: t }) {
-  const [r, i] = ce(9);
+function Hi({ articles: t }) {
+  const [r, i] = le(9);
   return /* @__PURE__ */ o(c, { sx: { mb: 6 }, children: [
     /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, mb: 1 }, children: [
       /* @__PURE__ */ e(l, { variant: "h4", fontWeight: 800, sx: { fontSize: { xs: "1.5rem", md: "1.85rem" } }, children: "Latest" }),
@@ -9454,7 +9461,7 @@ function Fi({ articles: t }) {
     t.length > r && /* @__PURE__ */ e(c, { sx: { textAlign: "center", mt: 5 }, children: /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => i((a) => a + 9), children: "Load More" }) })
   ] });
 }
-function Ui({ activeSection: t }) {
+function Gi({ activeSection: t }) {
   return /* @__PURE__ */ e(
     c,
     {
@@ -9469,7 +9476,7 @@ function Ui({ activeSection: t }) {
         flexShrink: 0,
         pr: 3
       },
-      children: ha.map((r) => {
+      children: pa.map((r) => {
         const i = t === r.id;
         return /* @__PURE__ */ o(
           c,
@@ -9527,100 +9534,107 @@ function Ui({ activeSection: t }) {
     }
   );
 }
-function Lr() {
-  const t = Ze(), { tag: r } = et(), [i] = Sa(), [a, s] = ce(""), [n, d] = ce("start-here"), h = Xe(), p = Qe(h.breakpoints.up("lg")), u = ki(r) || re(i.get("tag") || ""), g = J(
-    () => Object.fromEntries(ue.map((P) => [P.id, P])),
+function Fr() {
+  const t = Ze(), { tag: r } = et(), [i] = Oa(), [a, s] = le(""), [n, d] = le("start-here"), h = Xe(), p = Qe(h.breakpoints.up("lg")), u = Pi(r) || ie(i.get("tag") || ""), g = N(
+    () => Object.fromEntries(ue.map((I) => [I.id, I])),
     []
   );
-  Oe(() => {
-    const P = new IntersectionObserver(
-      (oe) => {
-        for (const y of oe)
-          y.isIntersecting && d(y.target.id);
+  xe(() => {
+    const I = new IntersectionObserver(
+      (y) => {
+        for (const f of y)
+          f.isIntersecting && d(f.target.id);
       },
       { rootMargin: "-80px 0px -70% 0px" }
-    ), ae = setTimeout(() => {
-      ha.forEach(({ id: oe }) => {
-        const y = document.getElementById(oe);
-        y && P.observe(y);
+    ), se = setTimeout(() => {
+      pa.forEach(({ id: y }) => {
+        const f = document.getElementById(y);
+        f && I.observe(f);
       });
     }, 200);
     return () => {
-      clearTimeout(ae), P.disconnect();
+      clearTimeout(se), I.disconnect();
     };
   }, []);
-  const m = ya((P) => P.flatMap((ae) => {
-    const oe = ft.find((y) => y.id === ae);
-    return oe ? oe.slugs.map((y) => me.find((w) => w.slug === y)).filter((y) => y && tt(y.slug)) : [];
-  }), []), v = J(
-    () => Se(me).find((P) => vt[P.slug] === "featured"),
+  const m = fa((I) => I.flatMap((se) => {
+    const y = vt.find((f) => f.id === se);
+    return y ? y.slugs.map((f) => me.find((C) => C.slug === f)).filter((f) => f && tt(f.slug)) : [];
+  }), []), b = N(
+    () => Oe(me).find((I) => bt[I.slug] === "featured"),
     []
-  ), O = J(() => m(Te["five-primitives"]), [m]), _ = J(() => m(Te.implementation), [m]), x = J(() => m(Te["trust-pki"]), [m]), R = J(() => m(Te["privacy-disclosure"]), [m]), U = J(() => m(Te.deployment), [m]), N = J(() => m(Te.governance), [m]), I = J(
-    () => [...Se(me)].sort((P, ae) => new Date(ae.date) - new Date(P.date)),
+  ), O = N(() => m(Ie["five-primitives"]), [m]), _ = N(() => m(Ie.implementation), [m]), x = N(() => m(Ie["trust-pki"]), [m]), R = N(() => m(Ie["privacy-disclosure"]), [m]), H = N(() => m(Ie.deployment), [m]), K = N(() => m(Ie.governance), [m]), P = N(
+    () => [...Oe(me)].sort((I, se) => new Date(se.date) - new Date(I.date)),
     []
-  ), j = J(() => qi(a, I, Pe, ue), [a, I]), f = J(() => u ? Ei(u, I, Pe, ue) : null, [u, I]), ee = J(() => zi(I, Pe, ue), [I]), _e = J(() => ee.slice(0, 14), [ee]), H = J(() => Ii(u, ee.map(({ tag: P }) => P)) || u, [ee, u]), K = J(() => j ? H ? j.filter((P) => _i(P, H, g)) : j : f, [H, g, j, f]), ge = _, xe = ra(ge), he = !!j, Re = !he && H ? `${H} Articles - Marty Identity Protocol Blog` : "Blog - Marty Identity Protocol", ne = !he && H ? `${(K == null ? void 0 : K.length) || 0} Marty Identity Protocol articles and guide chapters tagged ${H}.` : "Concepts, standards, and implementation guides for verifiable identity systems.", je = !he && H ? We(H) : "/blog", te = J(() => dt(!he && H ? {
-    name: `${H} Articles`,
-    description: ne,
-    url: `https://elevenidllc.com${We(H)}`,
-    items: (K || []).slice(0, 24).map((P) => ({
-      name: P.item.title,
-      url: `https://elevenidllc.com/blog/${P.slug}`
+  ), j = N(() => zi(a, P, Ce, ue), [a, P]), v = N(() => u ? _i(u, P, Ce, ue) : null, [u, P]), Y = N(() => Ri(P, Ce, ue), [P]), _e = N(() => Y.slice(0, 14), [Y]), F = N(() => sa(u, Y.map(({ tag: I }) => I)) || u, [Y, u]), ne = N(() => F ? Ai(F, Y.map(({ tag: I }) => I)) : "/blog", [F, Y]);
+  xe(() => {
+    if (!r || !F)
+      return;
+    const I = ne.replace("/blog/tag/", "");
+    r !== I && t(ne, { replace: !0 });
+  }, [F, ne, t, r]);
+  const J = N(() => j ? F ? j.filter((I) => ji(I, F, g)) : j : v, [F, g, j, v]), ye = _, Re = na(ye), ce = !!j, ge = !ce && F ? `${F} Articles - Marty Identity Protocol Blog` : "Blog - Marty Identity Protocol", ve = !ce && F ? `${(J == null ? void 0 : J.length) || 0} Marty Identity Protocol articles and guide chapters tagged ${F}.` : "Concepts, standards, and implementation guides for verifiable identity systems.", te = !ce && F ? ne : "/blog", he = N(() => dt(!ce && F ? {
+    name: `${F} Articles`,
+    description: ve,
+    url: `https://elevenidllc.com${ne}`,
+    items: (J || []).slice(0, 24).map((I) => ({
+      name: I.item.title,
+      url: `https://elevenidllc.com/blog/${I.slug}`
     }))
   } : {
     name: "Marty Identity Protocol Blog",
     description: "Concepts, standards, and implementation guides for verifiable identity systems.",
     url: "https://elevenidllc.com/blog",
-    items: I.slice(0, 24).map((P) => ({
-      name: P.title,
-      url: `https://elevenidllc.com/blog/${P.slug}`
+    items: P.slice(0, 24).map((I) => ({
+      name: I.title,
+      url: `https://elevenidllc.com/blog/${I.slug}`
     }))
-  }), [H, K, he, I, ne]);
+  }), [F, ne, J, ce, P, ve]);
   return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
-        title: Re,
-        description: ne,
-        canonicalPath: je,
-        keywords: H ? ["MIP blog", H, "identity protocol", "verifiable credentials"] : ["MIP blog", "identity protocol", "open standard", "verifiable credentials", "digital identity"],
-        structuredData: te
+        title: ge,
+        description: ve,
+        canonicalPath: te,
+        keywords: F ? ["MIP blog", F, "identity protocol", "verifiable credentials"] : ["MIP blog", "identity protocol", "open standard", "verifiable credentials", "digital identity"],
+        structuredData: he
       }
     ),
     /* @__PURE__ */ e(
-      Di,
+      Wi,
       {
         searchValue: a,
         onSearch: s,
         onNavigateAuthors: () => t("/authors"),
-        sectionNavEnabled: !K
+        sectionNavEnabled: !J
       }
     ),
     /* @__PURE__ */ e(
-      Li,
+      Fi,
       {
         availableTags: _e,
-        activeTag: H
+        activeTag: F
       }
     ),
-    K ? /* @__PURE__ */ o(c, { sx: { mb: 4 }, children: [
+    J ? /* @__PURE__ */ o(c, { sx: { mb: 4 }, children: [
       /* @__PURE__ */ e(l, { variant: "overline", sx: { display: "block", mb: 0.5, fontWeight: 800, letterSpacing: 1.5, fontSize: "0.65rem", color: "text.disabled" }, children: j ? "Search results" : "Filtered archive" }),
-      /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, sx: { mb: 0.75 }, children: j ? `${K.length} result${K.length !== 1 ? "s" : ""} for "${a}"${H ? ` in ${H}` : ""}` : `Results for "${H}"` }),
+      /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, sx: { mb: 0.75 }, children: j ? `${J.length} result${J.length !== 1 ? "s" : ""} for "${a}"${F ? ` in ${F}` : ""}` : `Results for "${F}"` }),
       !j && /* @__PURE__ */ o(l, { variant: "body2", color: "text.secondary", sx: { mb: 2 }, children: [
-        K.length,
+        J.length,
         " published article",
-        K.length !== 1 ? "s and guide chapters" : "",
+        J.length !== 1 ? "s and guide chapters" : "",
         " currently match this tag."
       ] }),
-      K.length > 0 ? /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: K.map((P) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: P.kind === "guide" ? /* @__PURE__ */ e(
-        Bi,
+      J.length > 0 ? /* @__PURE__ */ e(G, { container: !0, spacing: 2, children: J.map((I) => /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: I.kind === "guide" ? /* @__PURE__ */ e(
+        Vi,
         {
-          article: P.item,
-          chapterTitle: P.chapterTitle
+          article: I.item,
+          chapterTitle: I.chapterTitle
         }
-      ) : /* @__PURE__ */ e(Ye, { post: P.item }) }, `${P.kind}:${P.slug}`)) }) : /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { textAlign: "center", py: 6 }, children: j ? 'No articles or guide chapters match the current search and tag filter. Try "trust profiles", "OID4VCI", or "deployment".' : `No published articles or guide chapters match the "${H}" tag yet.` })
-    ] }) : /* @__PURE__ */ o(Le, { children: [
+      ) : /* @__PURE__ */ e(Ye, { post: I.item }) }, `${I.kind}:${I.slug}`)) }) : /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { textAlign: "center", py: 6 }, children: j ? 'No articles or guide chapters match the current search and tag filter. Try "trust profiles", "OID4VCI", or "deployment".' : `No published articles or guide chapters match the "${F}" tag yet.` })
+    ] }) : /* @__PURE__ */ o(Be, { children: [
       /* @__PURE__ */ o(c, { id: "overview", sx: de, children: [
-        /* @__PURE__ */ e(Pi, {}),
+        /* @__PURE__ */ e(Ci, {}),
         /* @__PURE__ */ e(
           c,
           {
@@ -9637,11 +9651,11 @@ function Lr() {
               border: "1px solid",
               borderColor: "grey.200"
             },
-            children: zt.map((P, ae) => /* @__PURE__ */ o(
+            children: _t.map((I, se) => /* @__PURE__ */ o(
               c,
               {
                 component: "a",
-                href: `#${P.target}`,
+                href: `#${I.target}`,
                 sx: {
                   display: "flex",
                   alignItems: "center",
@@ -9659,7 +9673,7 @@ function Lr() {
                       fontWeight: 800,
                       color: "primary.main",
                       sx: { textTransform: "uppercase", fontSize: "0.7rem" },
-                      children: P.verb
+                      children: I.verb
                     }
                   ),
                   /* @__PURE__ */ e(
@@ -9669,29 +9683,29 @@ function Lr() {
                       variant: "caption",
                       color: "text.secondary",
                       sx: { fontWeight: 600, fontSize: "0.75rem", transition: "color 0.15s" },
-                      children: P.label
+                      children: I.label
                     }
                   ),
-                  ae < zt.length - 1 && /* @__PURE__ */ e(l, { variant: "caption", color: "grey.400", sx: { ml: { xs: 0.5, md: 1 } }, children: "->" })
+                  se < _t.length - 1 && /* @__PURE__ */ e(l, { variant: "caption", color: "grey.400", sx: { ml: { xs: 0.5, md: 1 } }, children: "->" })
                 ]
               },
-              P.target
+              I.target
             ))
           }
         )
       ] }),
       /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0 }, children: [
-        p && /* @__PURE__ */ e(Ui, { activeSection: n }),
+        p && /* @__PURE__ */ e(Gi, { activeSection: n }),
         /* @__PURE__ */ o(c, { sx: { flexGrow: 1, minWidth: 0 }, children: [
-          /* @__PURE__ */ e(c, { id: "start-here", sx: { ...de, ...ye }, children: /* @__PURE__ */ e(Ai, {}) }),
-          /* @__PURE__ */ o(c, { id: "system-map", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
-            /* @__PURE__ */ e(Si, {}),
-            v && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Ye, { post: v, featured: !0 }) })
+          /* @__PURE__ */ e(c, { id: "start-here", sx: { ...de, ...fe }, children: /* @__PURE__ */ e(Di, {}) }),
+          /* @__PURE__ */ o(c, { id: "system-map", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+            /* @__PURE__ */ e(Oi, {}),
+            b && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Ye, { post: b, featured: !0 }) })
           ] }),
-          /* @__PURE__ */ o(c, { id: "five-primitives", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
-            /* @__PURE__ */ e(Ci, {}),
+          /* @__PURE__ */ o(c, { id: "five-primitives", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+            /* @__PURE__ */ e(Si, {}),
             /* @__PURE__ */ e(
-              ke,
+              Pe,
               {
                 title: "Five Primitives",
                 description: "The protocol layer contains five primitives: Trust Profiles, Credential Templates, Presentation Policies, Deployment Profiles, and Flows.",
@@ -9699,7 +9713,7 @@ function Lr() {
               }
             )
           ] }),
-          /* @__PURE__ */ o(c, { id: "implementation", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+          /* @__PURE__ */ o(c, { id: "implementation", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: [
             /* @__PURE__ */ o(c, { sx: { mb: 4 }, children: [
               /* @__PURE__ */ e(
                 l,
@@ -9712,7 +9726,7 @@ function Lr() {
               ),
               /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Core concepts - digital identity basics, credential models, and verification." })
             ] }),
-            /* @__PURE__ */ e(Vi, {}),
+            /* @__PURE__ */ e(Ui, {}),
             /* @__PURE__ */ o(c, { sx: { mb: 3, mt: 6 }, children: [
               /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "baseline", gap: 2, flexWrap: "wrap" }, children: [
                 /* @__PURE__ */ e(
@@ -9727,7 +9741,7 @@ function Lr() {
                 /* @__PURE__ */ e(
                   T,
                   {
-                    label: `${ge.length} article${ge.length !== 1 ? "s" : ""} | ~${xe} min`,
+                    label: `${ye.length} article${ye.length !== 1 ? "s" : ""} | ~${Re} min`,
                     size: "small",
                     variant: "outlined",
                     sx: { fontWeight: 700, fontSize: "0.72rem", borderColor: "grey.400" }
@@ -9736,11 +9750,11 @@ function Lr() {
               ] }),
               /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mt: 1, maxWidth: 600, lineHeight: 1.7, fontSize: "1rem" }, children: "Transport protocols, schemas, and integration patterns for building systems with Marty." })
             ] }),
-            /* @__PURE__ */ e(ke, { posts: _ })
+            /* @__PURE__ */ e(Pe, { posts: _ })
           ] }),
-          /* @__PURE__ */ o(c, { id: "trust-pki", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: [
+          /* @__PURE__ */ o(c, { id: "trust-pki", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: [
             /* @__PURE__ */ e(
-              ke,
+              Pe,
               {
                 title: "Trust & PKI",
                 description: "Cryptographic foundations of verifiable identity: trust anchors, certificate chains, and validation.",
@@ -9748,7 +9762,7 @@ function Lr() {
               }
             ),
             /* @__PURE__ */ e(
-              ke,
+              Pe,
               {
                 title: "Privacy & Disclosure",
                 description: "Selective disclosure, data minimization, and zero-knowledge proofs.",
@@ -9756,29 +9770,29 @@ function Lr() {
               }
             )
           ] }),
-          /* @__PURE__ */ e(c, { id: "deployment", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
-            ke,
+          /* @__PURE__ */ e(c, { id: "deployment", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
+            Pe,
             {
               title: "Deployment Patterns",
               description: "How verifiable identity runs in real environments: airports, enterprises, kiosks, and edge devices.",
-              posts: U
+              posts: H
             }
           ) }),
-          /* @__PURE__ */ e(c, { id: "governance", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
-            ke,
+          /* @__PURE__ */ e(c, { id: "governance", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(
+            Pe,
             {
               title: "Governance & Trust Infrastructure",
               description: "Compliance frameworks, policy engines, and trust registries.",
-              posts: N
+              posts: K
             }
           ) }),
-          /* @__PURE__ */ e(c, { id: "latest", sx: { ...de, ...ye, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(Fi, { articles: I }) })
+          /* @__PURE__ */ e(c, { id: "latest", sx: { ...de, ...fe, borderTop: "1px solid", borderColor: "grey.100" }, children: /* @__PURE__ */ e(Hi, { articles: P }) })
         ] })
       ] })
     ] })
   ] });
 }
-function _t({ label: t, title: r, subtitle: i, to: a, align: s = "left", direction: n = "forward" }) {
+function Rt({ label: t, title: r, subtitle: i, to: a, align: s = "left", direction: n = "forward" }) {
   const d = n === "forward";
   return /* @__PURE__ */ o(
     c,
@@ -9813,7 +9827,7 @@ function _t({ label: t, title: r, subtitle: i, to: a, align: s = "left", directi
               mb: 0.5
             },
             children: [
-              !d && /* @__PURE__ */ e(X, { sx: { fontSize: 14, color: "text.secondary" } }),
+              !d && /* @__PURE__ */ e(Q, { sx: { fontSize: 14, color: "text.secondary" } }),
               /* @__PURE__ */ e(
                 l,
                 {
@@ -9827,7 +9841,7 @@ function _t({ label: t, title: r, subtitle: i, to: a, align: s = "left", directi
                   children: t
                 }
               ),
-              d && /* @__PURE__ */ e(Q, { sx: { fontSize: 14, color: "text.secondary" } })
+              d && /* @__PURE__ */ e(Z, { sx: { fontSize: 14, color: "text.secondary" } })
             ]
           }
         ),
@@ -9837,23 +9851,23 @@ function _t({ label: t, title: r, subtitle: i, to: a, align: s = "left", directi
     }
   );
 }
-function Hi(t, r, i) {
+function Ni(t, r, i) {
   const a = (i || []).filter(
     (n) => n !== t && n !== r.prevSlug && n !== r.nextSlug
   );
   if (a.length > 0)
     return a.slice(0, 3);
-  const s = ve.find((n) => n.part === r.part);
+  const s = we.find((n) => n.part === r.part);
   return s ? s.slugs.filter(
     (n) => n !== t && n !== r.prevSlug && n !== r.nextSlug
   ).slice(0, 3) : [];
 }
-function da({ slug: t }) {
-  const r = Be[t], i = pe.indexOf(t), a = ze[t], s = Xt(t);
+function ua({ slug: t }) {
+  const r = je[t], i = pe.indexOf(t), a = ze[t], s = Qt(t);
   if (s) {
-    const n = s.prevSlug ? ie.find((p) => p.slug === s.prevSlug) : null, d = s.nextSlug ? ie.find((p) => p.slug === s.nextSlug) : null, h = Hi(t, s, a == null ? void 0 : a.related);
+    const n = s.prevSlug ? ae.find((p) => p.slug === s.prevSlug) : null, d = s.nextSlug ? ae.find((p) => p.slug === s.nextSlug) : null, h = Ni(t, s, a == null ? void 0 : a.related);
     return /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -9866,7 +9880,7 @@ function da({ slug: t }) {
         },
         children: [
           /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, mb: 1 }, children: [
-            /* @__PURE__ */ e(Ve, { fontSize: "small", color: "primary" }),
+            /* @__PURE__ */ e(Le, { fontSize: "small", color: "primary" }),
             /* @__PURE__ */ e(
               l,
               {
@@ -9902,7 +9916,7 @@ function da({ slug: t }) {
               },
               children: [
                 /* @__PURE__ */ e(
-                  _t,
+                  Rt,
                   {
                     label: "Previous in Handbook",
                     title: n ? n.title : "Handbook overview",
@@ -9912,7 +9926,7 @@ function da({ slug: t }) {
                   }
                 ),
                 /* @__PURE__ */ e(
-                  _t,
+                  Rt,
                   {
                     label: "Next in Handbook",
                     title: d ? d.title : "Browse the handbook",
@@ -9930,9 +9944,9 @@ function da({ slug: t }) {
     );
   }
   if (i >= 0) {
-    const n = i < pe.length - 1 ? pe[i + 1] : null, d = n ? ie.find((p) => p.slug === n) : null, h = (i + 1) / pe.length * 100;
+    const n = i < pe.length - 1 ? pe[i + 1] : null, d = n ? ae.find((p) => p.slug === n) : null, h = (i + 1) / pe.length * 100;
     return /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -9955,7 +9969,7 @@ function da({ slug: t }) {
           /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 800, color: "primary.dark", gutterBottom: !0, children: "Continue the Learning Path" }),
           /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
             /* @__PURE__ */ e(
-              xt,
+              Tt,
               {
                 variant: "determinate",
                 value: h,
@@ -9969,9 +9983,9 @@ function da({ slug: t }) {
             ] })
           ] }),
           /* @__PURE__ */ e(c, { sx: { mb: 2.5 }, children: pe.map((p, u) => {
-            const g = ie.find((_) => _.slug === p);
+            const g = ae.find((_) => _.slug === p);
             if (!g) return null;
-            const m = u < i, v = u === i, O = u === i + 1;
+            const m = u < i, b = u === i, O = u === i + 1;
             return /* @__PURE__ */ o(
               c,
               {
@@ -9985,11 +9999,11 @@ function da({ slug: t }) {
                   color: "inherit",
                   textDecoration: "none",
                   cursor: "pointer",
-                  opacity: v || m || O ? 1 : 0.5,
+                  opacity: b || m || O ? 1 : 0.5,
                   "&:hover": { color: "primary.main" }
                 },
                 children: [
-                  m ? /* @__PURE__ */ e(Ba, { sx: { fontSize: 18, color: "success.main" } }) : /* @__PURE__ */ e(
+                  m ? /* @__PURE__ */ e(Va, { sx: { fontSize: 18, color: "success.main" } }) : /* @__PURE__ */ e(
                     l,
                     {
                       variant: "caption",
@@ -10002,9 +10016,9 @@ function da({ slug: t }) {
                         alignItems: "center",
                         justifyContent: "center",
                         fontSize: "0.65rem",
-                        bgcolor: v ? "primary.main" : "transparent",
-                        color: v ? "common.white" : "text.secondary",
-                        border: v ? "none" : "1.5px solid",
+                        bgcolor: b ? "primary.main" : "transparent",
+                        color: b ? "common.white" : "text.secondary",
+                        border: b ? "none" : "1.5px solid",
                         borderColor: "grey.400"
                       },
                       children: u + 1
@@ -10015,13 +10029,13 @@ function da({ slug: t }) {
                     {
                       variant: "body2",
                       sx: {
-                        fontWeight: v ? 700 : O ? 600 : 400,
+                        fontWeight: b ? 700 : O ? 600 : 400,
                         fontSize: "0.82rem",
-                        color: v ? "primary.dark" : O ? "text.primary" : "text.secondary"
+                        color: b ? "primary.dark" : O ? "text.primary" : "text.secondary"
                       },
                       children: [
                         g.title,
-                        v && " (current)",
+                        b && " (current)",
                         O && " ->"
                       ]
                     }
@@ -10037,11 +10051,11 @@ function da({ slug: t }) {
               variant: "contained",
               component: k,
               to: `/blog/${n}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
+              endIcon: /* @__PURE__ */ e(Z, {}),
               sx: { fontWeight: 700 },
               children: [
                 "Next: ",
-                be(d.title, 40)
+                Te(d.title, 40)
               ]
             }
           )
@@ -10050,9 +10064,9 @@ function da({ slug: t }) {
     );
   }
   if (r) {
-    const { seriesTitle: n, order: d, total: h, slugs: p } = r, u = d < h ? p[d] : null, g = u ? ie.find((v) => v.slug === u) : null, m = d / h * 100;
+    const { seriesTitle: n, order: d, total: h, slugs: p } = r, u = d < h ? p[d] : null, g = u ? ae.find((b) => b.slug === u) : null, m = d / h * 100;
     return /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -10082,7 +10096,7 @@ function da({ slug: t }) {
           ] }),
           /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }, children: [
             /* @__PURE__ */ e(
-              xt,
+              Tt,
               {
                 variant: "determinate",
                 value: m,
@@ -10100,11 +10114,11 @@ function da({ slug: t }) {
               variant: "contained",
               component: k,
               to: `/blog/${u}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
+              endIcon: /* @__PURE__ */ e(Z, {}),
               sx: { fontWeight: 700 },
               children: [
                 "Next: ",
-                be(g.title, 40)
+                Te(g.title, 40)
               ]
             }
           ) : /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", fontWeight: 600, children: "You’ve completed this series." }),
@@ -10114,7 +10128,7 @@ function da({ slug: t }) {
     );
   }
   return a != null && a.related && a.related.length > 0 ? /* @__PURE__ */ o(
-    F,
+    U,
     {
       elevation: 0,
       sx: {
@@ -10141,7 +10155,7 @@ function da({ slug: t }) {
   ) : null;
 }
 function ct({ relatedSlugs: t, sx: r = {} }) {
-  const i = t.map((a) => ie.find((s) => s.slug === a)).filter((a) => a && tt(a.slug)).slice(0, 3);
+  const i = t.map((a) => ae.find((s) => s.slug === a)).filter((a) => a && tt(a.slug)).slice(0, 3);
   return i.length === 0 ? null : /* @__PURE__ */ o(c, { sx: r, children: [
     /* @__PURE__ */ e(l, { variant: "caption", color: "text.disabled", sx: { fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, fontSize: "0.65rem" }, children: "Related Topics" }),
     /* @__PURE__ */ e(c, { sx: { mt: 1, display: "flex", flexDirection: "column", gap: 1 }, children: i.map((a) => /* @__PURE__ */ o(
@@ -10171,7 +10185,7 @@ function ct({ relatedSlugs: t, sx: r = {} }) {
     )) })
   ] });
 }
-const Gi = 256, Ni = {
+const Ki = 256, Ji = {
   foundation: "info",
   credential: "info",
   verification: "info",
@@ -10204,10 +10218,10 @@ const Gi = 256, Ni = {
   announcement: "primary",
   business: "success"
 };
-function Ki({ label: t, lang: r, code: i }) {
-  const [a, s] = ce(!1);
+function $i({ label: t, lang: r, code: i }) {
+  const [a, s] = le(!1);
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       variant: "outlined",
       sx: { my: 3, borderRadius: 2, overflow: "hidden", borderColor: "grey.300" },
@@ -10232,7 +10246,7 @@ function Ki({ label: t, lang: r, code: i }) {
             },
             children: [
               /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-                /* @__PURE__ */ e(Gt, { fontSize: "small", color: "action" }),
+                /* @__PURE__ */ e(Nt, { fontSize: "small", color: "action" }),
                 /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, color: "text.secondary", children: t }),
                 /* @__PURE__ */ e(
                   T,
@@ -10244,7 +10258,7 @@ function Ki({ label: t, lang: r, code: i }) {
                 )
               ] }),
               /* @__PURE__ */ e(
-                mt,
+                yt,
                 {
                   fontSize: "small",
                   color: "action",
@@ -10257,7 +10271,7 @@ function Ki({ label: t, lang: r, code: i }) {
             ]
           }
         ),
-        /* @__PURE__ */ e(Ht, { in: a, children: /* @__PURE__ */ e(
+        /* @__PURE__ */ e(Gt, { in: a, children: /* @__PURE__ */ e(
           c,
           {
             component: "pre",
@@ -10279,13 +10293,13 @@ function Ki({ label: t, lang: r, code: i }) {
     }
   );
 }
-function Ji({ block: t }) {
-  return t.type === "heading" ? /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 700, sx: { mt: 4.5, mb: 1.5, scrollMarginTop: 80 }, children: t.text }) : t.type === "code" ? /* @__PURE__ */ e(Ki, { label: t.label, lang: t.lang, code: t.code }) : /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: t.text });
+function Yi({ block: t }) {
+  return t.type === "heading" ? /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 700, sx: { mt: 4.5, mb: 1.5, scrollMarginTop: 80 }, children: t.text }) : t.type === "code" ? /* @__PURE__ */ e($i, { label: t.label, lang: t.lang, code: t.code }) : /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: t.text });
 }
-function Rt({ currentSlug: t }) {
+function jt({ currentSlug: t }) {
   return /* @__PURE__ */ o(c, { sx: { pt: 2, pb: 4 }, children: [
     /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, px: 2, mb: 2 }, children: [
-      /* @__PURE__ */ e(Ve, { color: "primary", fontSize: "small" }),
+      /* @__PURE__ */ e(Le, { color: "primary", fontSize: "small" }),
       /* @__PURE__ */ e(
         l,
         {
@@ -10323,7 +10337,7 @@ function Rt({ currentSlug: t }) {
       ($e[r.id] || []).map((i) => {
         const a = i.slug === t;
         return /* @__PURE__ */ e(
-          Ft,
+          Ut,
           {
             selected: a,
             component: k,
@@ -10340,7 +10354,7 @@ function Rt({ currentSlug: t }) {
               }
             },
             children: /* @__PURE__ */ e(
-              Ut,
+              Ht,
               {
                 primary: i.title,
                 primaryTypographyProps: {
@@ -10358,8 +10372,8 @@ function Rt({ currentSlug: t }) {
     ] }, r.id))
   ] });
 }
-function $i() {
-  const { slug: t } = et(), r = Xe(), i = Qe(r.breakpoints.up("md")), a = Ae[t], s = Ge.indexOf(t), n = Xt(t), d = s > 0 ? Ae[Ge[s - 1]] : null, h = s < Ge.length - 1 ? Ae[Ge[s + 1]] : null;
+function Xi() {
+  const { slug: t } = et(), r = Xe(), i = Qe(r.breakpoints.up("md")), a = De[t], s = Ge.indexOf(t), n = Qt(t), d = s > 0 ? De[Ge[s - 1]] : null, h = s < Ge.length - 1 ? De[Ge[s + 1]] : null;
   if (!a)
     return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
       /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Guide article not found" }),
@@ -10369,7 +10383,7 @@ function $i() {
           variant: "outlined",
           component: k,
           to: "/blog",
-          startIcon: /* @__PURE__ */ e(X, {}),
+          startIcon: /* @__PURE__ */ e(Q, {}),
           children: "Back to Blog"
         }
       )
@@ -10377,7 +10391,7 @@ function $i() {
   const p = ue.find((g) => g.id === a.chapterId), u = $e[a.chapterId] || [];
   return /* @__PURE__ */ o(c, { sx: { display: "flex", gap: { md: 4 }, alignItems: "flex-start" }, children: [
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
         title: `${a.title} - Marty Protocol Guide`,
         description: a.summary,
@@ -10387,7 +10401,7 @@ function $i() {
         ogMeta: {
           "article:section": `Chapter ${a.chapterId}: ${p == null ? void 0 : p.title}`
         },
-        structuredData: $t({
+        structuredData: Yt({
           headline: a.title,
           description: a.summary,
           authorName: "The MIP Authors",
@@ -10400,7 +10414,7 @@ function $i() {
       c,
       {
         sx: {
-          width: Gi,
+          width: Ki,
           flexShrink: 0,
           position: "sticky",
           top: 24,
@@ -10411,14 +10425,14 @@ function $i() {
           borderRadius: 2,
           bgcolor: "background.paper"
         },
-        children: /* @__PURE__ */ e(Rt, { currentSlug: t })
+        children: /* @__PURE__ */ e(jt, { currentSlug: t })
       }
     ),
     /* @__PURE__ */ o(c, { sx: { flexGrow: 1, minWidth: 0 }, children: [
       /* @__PURE__ */ e(
         z,
         {
-          startIcon: /* @__PURE__ */ e(X, {}),
+          startIcon: /* @__PURE__ */ e(Q, {}),
           component: k,
           to: "/blog",
           sx: { mb: 2, color: "text.secondary" },
@@ -10427,7 +10441,7 @@ function $i() {
         }
       ),
       /* @__PURE__ */ o(
-        F,
+        U,
         {
           elevation: 0,
           sx: {
@@ -10440,7 +10454,7 @@ function $i() {
           },
           children: [
             /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1, mb: 1.5 }, children: [
-              /* @__PURE__ */ e(ut, { color: "primary", sx: { fontSize: 18 } }),
+              /* @__PURE__ */ e(mt, { color: "primary", sx: { fontSize: 18 } }),
               /* @__PURE__ */ e(
                 l,
                 {
@@ -10453,7 +10467,7 @@ function $i() {
               )
             ] }),
             /* @__PURE__ */ e(
-              ka,
+              Pa,
               {
                 activeStep: a.chapterId - 1,
                 alternativeLabel: !0,
@@ -10462,12 +10476,12 @@ function $i() {
                   "& .MuiStepConnector-line": { borderTopWidth: 2 }
                 },
                 children: ue.map((g) => {
-                  var v;
-                  const m = (v = $e[g.id]) == null ? void 0 : v[0];
+                  var b;
+                  const m = (b = $e[g.id]) == null ? void 0 : b[0];
                   return /* @__PURE__ */ e(
-                    Ia,
+                    Aa,
                     {
-                      children: m ? /* @__PURE__ */ e(Pa, { component: k, to: `/blog/${m.slug}`, children: /* @__PURE__ */ e(Tt, { children: g.title }) }) : /* @__PURE__ */ e(Tt, { children: g.title })
+                      children: m ? /* @__PURE__ */ e(Ca, { component: k, to: `/blog/${m.slug}`, children: /* @__PURE__ */ e(kt, { children: g.title }) }) : /* @__PURE__ */ e(kt, { children: g.title })
                     },
                     g.id
                   );
@@ -10478,7 +10492,7 @@ function $i() {
         }
       ),
       /* @__PURE__ */ o(
-        F,
+        U,
         {
           elevation: 0,
           sx: { p: { xs: 3, md: 4 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 },
@@ -10521,10 +10535,10 @@ function $i() {
                 label: g,
                 size: "small",
                 variant: "outlined",
-                color: Ni[g] || "default",
+                color: Ji[g] || "default",
                 clickable: !0,
                 component: k,
-                to: We(g),
+                to: Ve(g),
                 sx: { fontFamily: "monospace", fontSize: "0.75rem" }
               },
               g
@@ -10532,17 +10546,17 @@ function $i() {
           ]
         }
       ),
-      /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
-      /* @__PURE__ */ e(c, { sx: { maxWidth: 780 }, children: a.content.map((g, m) => /* @__PURE__ */ e(Ji, { block: g }, m)) }),
-      !i && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ o(Aa, { variant: "outlined", sx: { borderRadius: "8px !important" }, children: [
-        /* @__PURE__ */ e(Ca, { expandIcon: /* @__PURE__ */ e(mt, {}), children: /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
-          /* @__PURE__ */ e(Ve, { fontSize: "small", color: "primary" }),
+      /* @__PURE__ */ e(re, { sx: { mb: 4 } }),
+      /* @__PURE__ */ e(c, { sx: { maxWidth: 780 }, children: a.content.map((g, m) => /* @__PURE__ */ e(Yi, { block: g }, m)) }),
+      !i && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ o(Da, { variant: "outlined", sx: { borderRadius: "8px !important" }, children: [
+        /* @__PURE__ */ e(Sa, { expandIcon: /* @__PURE__ */ e(yt, {}), children: /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1 }, children: [
+          /* @__PURE__ */ e(Le, { fontSize: "small", color: "primary" }),
           /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, children: "Browse All Guide Articles" })
         ] }) }),
-        /* @__PURE__ */ e(Da, { sx: { p: 0 }, children: /* @__PURE__ */ e(Rt, { currentSlug: t }) })
+        /* @__PURE__ */ e(Wa, { sx: { p: 0 }, children: /* @__PURE__ */ e(jt, { currentSlug: t }) })
       ] }) }),
-      n ? /* @__PURE__ */ e(da, { slug: t }) : /* @__PURE__ */ o(Le, { children: [
-        /* @__PURE__ */ e(se, { sx: { mt: 6, mb: 3 } }),
+      n ? /* @__PURE__ */ e(ua, { slug: t }) : /* @__PURE__ */ o(Be, { children: [
+        /* @__PURE__ */ e(re, { sx: { mt: 6, mb: 3 } }),
         /* @__PURE__ */ o(
           c,
           {
@@ -10570,7 +10584,7 @@ function $i() {
                   },
                   children: [
                     /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
-                      /* @__PURE__ */ e(X, { sx: { fontSize: 14 } }),
+                      /* @__PURE__ */ e(Q, { sx: { fontSize: 14 } }),
                       /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", children: "Previous" })
                     ] }),
                     /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: d.title })
@@ -10596,7 +10610,7 @@ function $i() {
                   children: [
                     /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, mb: 0.25 }, children: [
                       /* @__PURE__ */ e(l, { variant: "caption", sx: { color: "rgba(255,255,255,0.8)" }, children: "Next" }),
-                      /* @__PURE__ */ e(Q, { sx: { fontSize: 14 } })
+                      /* @__PURE__ */ e(Z, { sx: { fontSize: 14 } })
                     ] }),
                     /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 700, sx: { whiteSpace: "normal" }, children: h.title })
                   ]
@@ -10606,7 +10620,7 @@ function $i() {
           }
         )
       ] }),
-      /* @__PURE__ */ e(se, { sx: { my: 4 } }),
+      /* @__PURE__ */ e(re, { sx: { my: 4 } }),
       /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ e(
           z,
@@ -10614,7 +10628,7 @@ function $i() {
             variant: "outlined",
             component: k,
             to: "/blog",
-            startIcon: /* @__PURE__ */ e(X, {}),
+            startIcon: /* @__PURE__ */ e(Q, {}),
             children: "All Posts"
           }
         ),
@@ -10622,7 +10636,7 @@ function $i() {
           z,
           {
             variant: "outlined",
-            startIcon: /* @__PURE__ */ e(Nt, {}),
+            startIcon: /* @__PURE__ */ e(Kt, {}),
             component: k,
             to: `/protocol#${a.slug}`,
             children: "View in Protocol Map"
@@ -10632,7 +10646,7 @@ function $i() {
           z,
           {
             variant: "outlined",
-            endIcon: /* @__PURE__ */ e(Q, {}),
+            endIcon: /* @__PURE__ */ e(Z, {}),
             component: k,
             to: "/protocol",
             children: "Explore the Protocol"
@@ -10642,11 +10656,11 @@ function $i() {
     ] })
   ] });
 }
-function jt({ seriesInfo: t }) {
+function Bt({ seriesInfo: t }) {
   if (!t) return null;
-  const { seriesTitle: r, order: i, total: a, slugs: s } = t, n = i > 1 ? s[i - 2] : null, d = i < a ? s[i] : null, h = n ? ie.find((u) => u.slug === n) : null, p = d ? ie.find((u) => u.slug === d) : null;
+  const { seriesTitle: r, order: i, total: a, slugs: s } = t, n = i > 1 ? s[i - 2] : null, d = i < a ? s[i] : null, h = n ? ae.find((u) => u.slug === n) : null, p = d ? ae.find((u) => u.slug === d) : null;
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       variant: "outlined",
       sx: {
@@ -10683,9 +10697,9 @@ function jt({ seriesInfo: t }) {
               size: "small",
               component: k,
               to: `/blog/${n}`,
-              startIcon: /* @__PURE__ */ e(X, {}),
+              startIcon: /* @__PURE__ */ e(Q, {}),
               sx: { textTransform: "none", fontSize: "0.78rem" },
-              children: be(h.title, 35)
+              children: Te(h.title, 35)
             }
           ),
           p && /* @__PURE__ */ e(
@@ -10695,9 +10709,9 @@ function jt({ seriesInfo: t }) {
               variant: "contained",
               component: k,
               to: `/blog/${d}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
+              endIcon: /* @__PURE__ */ e(Z, {}),
               sx: { textTransform: "none", fontSize: "0.78rem" },
-              children: be(p.title, 35)
+              children: Te(p.title, 35)
             }
           )
         ] })
@@ -10705,10 +10719,10 @@ function jt({ seriesInfo: t }) {
     }
   );
 }
-function Yi({ slug: t }) {
-  const r = ze[t], i = Be[t], a = pe.indexOf(t);
+function Qi({ slug: t }) {
+  const r = ze[t], i = je[t], a = pe.indexOf(t);
   if (!r) return null;
-  const s = ta[r.layer] || "#546e7a", n = ea[r.layer] || r.layer, d = (r.related || []).map((h) => ie.find((p) => p.slug === h)).filter((h) => h && tt(h.slug)).slice(0, 3);
+  const s = aa[r.layer] || "#546e7a", n = ta[r.layer] || r.layer, d = (r.related || []).map((h) => ae.find((p) => p.slug === h)).filter((h) => h && tt(h.slug)).slice(0, 3);
   return /* @__PURE__ */ o(
     c,
     {
@@ -10772,7 +10786,7 @@ function Yi({ slug: t }) {
                   {
                     label: r.difficulty,
                     size: "small",
-                    color: hi[r.difficulty] || "default",
+                    color: pi[r.difficulty] || "default",
                     sx: { fontWeight: 700, fontSize: "0.72rem", height: 22 }
                   }
                 ) })
@@ -10785,7 +10799,7 @@ function Yi({ slug: t }) {
           /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mt: 0.5 }, children: d.map((h) => /* @__PURE__ */ e(
             T,
             {
-              label: be(h.title, 40),
+              label: Te(h.title, 40),
               size: "small",
               variant: "outlined",
               clickable: !0,
@@ -10806,18 +10820,18 @@ function Ke({ label: t, value: r }) {
     /* @__PURE__ */ e(l, { variant: "body2", fontWeight: 600, sx: { fontSize: "0.85rem", mt: 0.25 }, children: r })
   ] });
 }
-function pa(t) {
+function ma(t) {
   return t.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").slice(0, 60);
 }
-function Xi({ content: t }) {
-  const r = J(
+function Zi({ content: t }) {
+  const r = N(
     () => (t || []).filter((s) => s.type === "heading").map((s) => ({
       text: s.text,
-      id: pa(s.text)
+      id: ma(s.text)
     })),
     [t]
-  ), [i, a] = ce("");
-  return Oe(() => {
+  ), [i, a] = le("");
+  return xe(() => {
     if (r.length === 0) return;
     const s = new IntersectionObserver(
       (d) => {
@@ -10896,7 +10910,7 @@ function Xi({ content: t }) {
     }
   );
 }
-const ua = [
+const ya = [
   { term: "Presentation Policies", slug: "presentation-policies-minimum-disclosure" },
   { term: "Credential Templates", slug: "credential-templates-designing-what-gets-issued" },
   { term: "Deployment Profiles", slug: "deployment-profiles-from-design-to-production" },
@@ -10920,24 +10934,24 @@ const ua = [
   { term: "Trust Registry", slug: "building-trust-registries-at-scale" },
   { term: "Zero-Knowledge Predicates", slug: "zero-knowledge-predicates-identity" },
   { term: "SD-JWT", slug: "sd-jwt-selective-disclosure-deep-dive" }
-], Bt = new RegExp(
-  `(${ua.map((t) => t.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+], Lt = new RegExp(
+  `(${ya.map((t) => t.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
   "g"
 );
-function Qi(t, r) {
+function er(t, r) {
   const i = /* @__PURE__ */ new Set(), a = [];
   let s = 0;
-  Bt.lastIndex = 0;
+  Lt.lastIndex = 0;
   let n;
-  for (; (n = Bt.exec(t)) !== null; ) {
-    const d = n[1], h = ua.find((p) => p.term === d);
+  for (; (n = Lt.exec(t)) !== null; ) {
+    const d = n[1], h = ya.find((p) => p.term === d);
     !h || h.slug === r || i.has(h.slug) || (n.index > s && a.push(t.slice(s, n.index)), a.push({ term: d, slug: h.slug }), i.add(h.slug), s = n.index + d.length);
   }
   return s < t.length && a.push(t.slice(s)), a.length > 0 ? a : [t];
 }
-function Zi({ text: t, currentSlug: r }) {
-  const i = Qi(t, r);
-  return /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: i.map((a, s) => typeof a == "string" ? /* @__PURE__ */ e(ga, { children: a }, s) : /* @__PURE__ */ e(
+function tr({ text: t, currentSlug: r }) {
+  const i = er(t, r);
+  return /* @__PURE__ */ e(l, { variant: "body1", paragraph: !0, sx: { lineHeight: 1.85, fontSize: "1.05rem" }, children: i.map((a, s) => typeof a == "string" ? /* @__PURE__ */ e(va, { children: a }, s) : /* @__PURE__ */ e(
     c,
     {
       component: k,
@@ -10957,9 +10971,9 @@ function Zi({ text: t, currentSlug: r }) {
     s
   )) });
 }
-function er({ block: t }) {
+function ar({ block: t }) {
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       elevation: 0,
       sx: {
@@ -11025,9 +11039,9 @@ function er({ block: t }) {
     }
   );
 }
-function tr({ block: t }) {
+function ir({ block: t }) {
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       elevation: 0,
       sx: {
@@ -11074,19 +11088,19 @@ function tr({ block: t }) {
     }
   );
 }
-function ar({ content: t, currentSlug: r }) {
-  return /* @__PURE__ */ e(Le, { children: t.map((i, a) => i.type === "heading" ? /* @__PURE__ */ e(
+function rr({ content: t, currentSlug: r }) {
+  return /* @__PURE__ */ e(Be, { children: t.map((i, a) => i.type === "heading" ? /* @__PURE__ */ e(
     l,
     {
-      id: pa(i.text),
+      id: ma(i.text),
       variant: "h5",
       fontWeight: 700,
       sx: { mt: 4, mb: 2, scrollMarginTop: "80px" },
       children: i.text
     },
     a
-  ) : i.type === "code" ? /* @__PURE__ */ e(er, { block: i }, a) : i.type === "resources" ? /* @__PURE__ */ e(tr, { block: i }, a) : /* @__PURE__ */ e(
-    Zi,
+  ) : i.type === "code" ? /* @__PURE__ */ e(ar, { block: i }, a) : i.type === "resources" ? /* @__PURE__ */ e(ir, { block: i }, a) : /* @__PURE__ */ e(
+    tr,
     {
       text: i.text,
       currentSlug: r
@@ -11094,14 +11108,14 @@ function ar({ content: t, currentSlug: r }) {
     a
   )) });
 }
-const ir = {
+const sr = {
   featured: "Featured",
   "start-learning": "Start Here",
   "core-protocol": "Five Primitives",
   implementation: "Implementation",
   cryptography: "Trust & PKI",
   business: "Governance & Industry"
-}, rr = {
+}, nr = {
   featured: "overview",
   "start-learning": "start-here",
   "core-protocol": "five-primitives",
@@ -11109,28 +11123,28 @@ const ir = {
   cryptography: "trust-pki",
   business: "governance"
 };
-function sr({ slug: t, title: r }) {
-  const i = vt[t], a = ze[t], s = (a == null ? void 0 : a.topic) || null, n = s || ir[i] || (a ? ea[a.layer] || a.layer : null), d = rr[i] || null, h = s ? We(s) : d ? `/blog#${d}` : "/blog", p = [
+function or({ slug: t, title: r }) {
+  const i = bt[t], a = ze[t], s = (a == null ? void 0 : a.topic) || null, n = s || sr[i] || (a ? ta[a.layer] || a.layer : null), d = nr[i] || null, h = s ? Ve(s) : d ? `/blog#${d}` : "/blog", p = [
     { label: "Blog", path: "/blog" }
   ];
   return n && p.push({
     label: n,
     path: h
-  }), p.push({ label: r, path: null }), Oe(() => {
+  }), p.push({ label: r, path: null }), xe(() => {
     const u = "https://elevenidllc.com", g = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: p.map((v, O) => ({
+      itemListElement: p.map((b, O) => ({
         "@type": "ListItem",
         position: O + 1,
-        name: v.label,
-        ...v.path ? { item: `${u}${v.path}` } : {}
+        name: b.label,
+        ...b.path ? { item: `${u}${b.path}` } : {}
       }))
     };
     let m = document.head.querySelector('script[data-seo-breadcrumb="true"]');
     return m || (m = document.createElement("script"), m.type = "application/ld+json", m.setAttribute("data-seo-breadcrumb", "true"), document.head.appendChild(m)), m.textContent = JSON.stringify(g), () => {
-      const v = document.head.querySelector('script[data-seo-breadcrumb="true"]');
-      v && v.remove();
+      const b = document.head.querySelector('script[data-seo-breadcrumb="true"]');
+      b && b.remove();
     };
   }), /* @__PURE__ */ e(
     c,
@@ -11147,7 +11161,7 @@ function sr({ slug: t, title: r }) {
       children: p.map((u, g) => {
         const m = g === p.length - 1;
         return /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5 }, children: [
-          g > 0 && /* @__PURE__ */ e(La, { sx: { fontSize: 14, color: "text.disabled" } }),
+          g > 0 && /* @__PURE__ */ e(Fa, { sx: { fontSize: 14, color: "text.disabled" } }),
           /* @__PURE__ */ e(
             l,
             {
@@ -11174,9 +11188,9 @@ function sr({ slug: t, title: r }) {
     }
   );
 }
-function nr({ color: t = "primary.main" }) {
-  const [r, i] = ce(0), a = fa(null);
-  return Oe(() => {
+function lr({ color: t = "primary.main" }) {
+  const [r, i] = le(0), a = ba(null);
+  return xe(() => {
     const s = () => {
       const d = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
       h > 0 && i(Math.min(d / h * 100, 100));
@@ -11212,7 +11226,7 @@ function nr({ color: t = "primary.main" }) {
     }
   );
 }
-function or() {
+function cr() {
   return /* @__PURE__ */ o(
     c,
     {
@@ -11230,13 +11244,13 @@ function or() {
         borderColor: "grey.200"
       },
       children: [
-        /* @__PURE__ */ e(Va, { sx: { fontSize: 18, color: "text.disabled", mt: 0.25, flexShrink: 0 } }),
+        /* @__PURE__ */ e(Ua, { sx: { fontSize: 18, color: "text.disabled", mt: 0.25, flexShrink: 0 } }),
         /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontSize: "0.72rem", lineHeight: 1.55 }, children: "This article was produced by an AI research persona and reviewed by the ElevenID editorial team. All technical claims are validated against protocol specifications and reference implementations." })
       ]
     }
   );
 }
-const lr = Z({
+const hr = ee({
   Foundations: {
     headline: "See it in action",
     body: "Explore the Marty platform to see how these concepts become real credential operations.",
@@ -11279,16 +11293,16 @@ const lr = Z({
     primary: { label: "Explore Governance", path: "/protocol#governance" },
     secondary: { label: "View Compliance Profiles", path: "/protocol#compliance-profiles" }
   }
-}), cr = Z({
+}), dr = ee({
   headline: "Ready to build?",
   body: "Explore the Marty platform - from credential issuance to verification APIs and deployment guides.",
   primary: { label: "Try the Verification API", path: "/verification" },
   secondary: { label: "Explore Issuance", path: "/issuance" }
 });
-function hr({ slug: t }) {
-  const r = ze[t], i = r && lr[r.layer] || cr;
+function pr({ slug: t }) {
+  const r = ze[t], i = r && hr[r.layer] || dr;
   return /* @__PURE__ */ o(
-    F,
+    U,
     {
       elevation: 0,
       sx: {
@@ -11311,7 +11325,7 @@ function hr({ slug: t }) {
               size: "small",
               component: k,
               to: i.primary.path,
-              endIcon: /* @__PURE__ */ e(Q, {}),
+              endIcon: /* @__PURE__ */ e(Z, {}),
               children: i.primary.label
             }
           ),
@@ -11331,30 +11345,30 @@ function hr({ slug: t }) {
   );
 }
 (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
-const Lt = {
+const Vt = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function Vr() {
+function Ur() {
   const { slug: t } = et(), r = Xe(), i = Qe(r.breakpoints.up("lg"));
-  if (Ae[t])
-    return /* @__PURE__ */ e($i, {});
-  const a = ie.find((x) => x.slug === t), s = pi(t), n = di(t), d = n !== t ? ie.find((x) => x.slug === n) : null, h = a ? De[a.authorId] || {} : {}, p = Qt[t] || [], u = gt[t] || [], g = Be[t] || null, m = a ? Se(ie).filter(
+  if (De[t])
+    return /* @__PURE__ */ e(Xi, {});
+  const a = ae.find((x) => x.slug === t), s = mi(t), n = ui(t), d = n !== t ? ae.find((x) => x.slug === n) : null, h = a ? We[a.authorId] || {} : {}, p = Zt[t] || [], u = ft[t] || [], g = je[t] || null, m = a ? Oe(ae).filter(
     (x) => x.slug !== a.slug && x.category === a.category
   ).sort((x, R) => new Date(R.date) - new Date(x.date)).slice(0, 3) : [];
   if (!a)
     return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
       /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Post not found" }),
-      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" })
+      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(Q, {}), children: "Back to Blog" })
     ] });
-  const v = new Date(a.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), O = a.updatedDate ? new Date(a.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : null, _ = wi(n);
+  const b = new Date(a.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }), O = a.updatedDate ? new Date(a.updatedDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : null, _ = Ti(n);
   return /* @__PURE__ */ o(c, { children: [
-    /* @__PURE__ */ e(nr, {}),
+    /* @__PURE__ */ e(lr, {}),
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
         title: a.title,
         description: a.summary,
@@ -11369,7 +11383,7 @@ function Vr() {
           "og:image:width": 1200,
           "og:image:height": 627
         },
-        structuredData: $t({
+        structuredData: Yt({
           headline: a.title,
           description: a.summary,
           datePublished: a.date,
@@ -11381,10 +11395,10 @@ function Vr() {
         })
       }
     ),
-    /* @__PURE__ */ e(z, { component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), sx: { mb: 1 }, children: "All Posts" }),
-    /* @__PURE__ */ e(sr, { slug: t, title: a.title }),
+    /* @__PURE__ */ e(z, { component: k, to: "/blog", startIcon: /* @__PURE__ */ e(Q, {}), sx: { mb: 1 }, children: "All Posts" }),
+    /* @__PURE__ */ e(or, { slug: t, title: a.title }),
     s && d && /* @__PURE__ */ o(
-      F,
+      U,
       {
         variant: "outlined",
         sx: {
@@ -11417,7 +11431,7 @@ function Vr() {
               color: "warning",
               component: k,
               to: `/blog/${n}`,
-              endIcon: /* @__PURE__ */ e(Q, {}),
+              endIcon: /* @__PURE__ */ e(Z, {}),
               sx: { fontWeight: 700 },
               children: [
                 "Read ",
@@ -11428,9 +11442,9 @@ function Vr() {
         ]
       }
     ),
-    /* @__PURE__ */ o(F, { elevation: 0, sx: { p: { xs: 3, md: 5 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 }, children: [
+    /* @__PURE__ */ o(U, { elevation: 0, sx: { p: { xs: 3, md: 5 }, mb: 4, bgcolor: "grey.50", borderRadius: 2 }, children: [
       /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 1, mb: 2, flexWrap: "wrap" }, children: [
-        /* @__PURE__ */ e(T, { label: a.category, size: "small", color: Lt[a.category] || "primary", sx: { fontWeight: 600 } }),
+        /* @__PURE__ */ e(T, { label: a.category, size: "small", color: Vt[a.category] || "primary", sx: { fontWeight: 600 } }),
         /* @__PURE__ */ e(T, { label: a.readTime, size: "small", variant: "outlined" }),
         u.map((x) => /* @__PURE__ */ e(
           T,
@@ -11451,7 +11465,7 @@ function Vr() {
             color: "default",
             clickable: !0,
             component: k,
-            to: We(x),
+            to: Ve(x),
             sx: { fontFamily: "monospace", fontSize: "0.75rem" }
           },
           x
@@ -11461,7 +11475,7 @@ function Vr() {
       /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", sx: { mb: 3 }, children: a.summary }),
       /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "flex-start", gap: 1.5 }, children: [
         /* @__PURE__ */ e(
-          Ce,
+          Se,
           {
             component: k,
             to: `/authors/${a.authorId}`,
@@ -11487,7 +11501,7 @@ function Vr() {
             }
           ),
           /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
-            v,
+            b,
             O && ` | Updated ${O}`,
             " | ",
             a.readTime,
@@ -11498,18 +11512,18 @@ function Vr() {
         ] })
       ] })
     ] }),
-    g && /* @__PURE__ */ e(c, { sx: { mb: 3 }, children: /* @__PURE__ */ e(jt, { seriesInfo: g }) }),
-    /* @__PURE__ */ e(Yi, { slug: t }),
-    /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
+    g && /* @__PURE__ */ e(c, { sx: { mb: 3 }, children: /* @__PURE__ */ e(Bt, { seriesInfo: g }) }),
+    /* @__PURE__ */ e(Qi, { slug: t }),
+    /* @__PURE__ */ e(re, { sx: { mb: 4 } }),
     /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 0 }, children: [
-      /* @__PURE__ */ e(c, { sx: { maxWidth: 780, flexGrow: 1, minWidth: 0 }, children: /* @__PURE__ */ e(ar, { content: a.content, currentSlug: t }) }),
-      i && /* @__PURE__ */ e(Xi, { content: a.content })
+      /* @__PURE__ */ e(c, { sx: { maxWidth: 780, flexGrow: 1, minWidth: 0 }, children: /* @__PURE__ */ e(rr, { content: a.content, currentSlug: t }) }),
+      i && /* @__PURE__ */ e(Zi, { content: a.content })
     ] }),
-    /* @__PURE__ */ e(or, {}),
-    /* @__PURE__ */ e(da, { slug: t }),
-    h.bio && /* @__PURE__ */ e(F, { variant: "outlined", sx: { p: 3, mt: 6, borderRadius: 2 }, children: /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, alignItems: "flex-start" }, children: [
+    /* @__PURE__ */ e(cr, {}),
+    /* @__PURE__ */ e(ua, { slug: t }),
+    h.bio && /* @__PURE__ */ e(U, { variant: "outlined", sx: { p: 3, mt: 6, borderRadius: 2 }, children: /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 2, alignItems: "flex-start" }, children: [
       /* @__PURE__ */ e(
-        Ce,
+        Se,
         {
           component: k,
           to: `/authors/${a.authorId}`,
@@ -11539,12 +11553,12 @@ function Vr() {
         h.disclosure && /* @__PURE__ */ e(l, { variant: "caption", color: "text.secondary", sx: { fontStyle: "italic" }, children: h.disclosure })
       ] })
     ] }) }),
-    g && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(jt, { seriesInfo: g }) }),
+    g && /* @__PURE__ */ e(c, { sx: { mt: 6 }, children: /* @__PURE__ */ e(Bt, { seriesInfo: g }) }),
     m.length > 0 && /* @__PURE__ */ o(c, { sx: { mt: 8 }, children: [
-      /* @__PURE__ */ e(se, { sx: { mb: 4 } }),
+      /* @__PURE__ */ e(re, { sx: { mb: 4 } }),
       /* @__PURE__ */ e(l, { variant: "h5", fontWeight: 700, gutterBottom: !0, children: "Related Articles" }),
       /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: m.map((x) => {
-        const R = De[x.authorId] || {};
+        const R = We[x.authorId] || {};
         return /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
           Me,
           {
@@ -11567,7 +11581,7 @@ function Vr() {
                     {
                       label: x.category,
                       size: "small",
-                      color: Lt[x.category] || "default",
+                      color: Vt[x.category] || "default",
                       sx: { mb: 1.5, fontWeight: 600 }
                     }
                   ),
@@ -11585,25 +11599,25 @@ function Vr() {
         ) }, x.slug);
       }) })
     ] }),
-    /* @__PURE__ */ e(hr, { slug: t }),
-    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
+    /* @__PURE__ */ e(pr, { slug: t }),
+    /* @__PURE__ */ e(re, { sx: { my: 6 } }),
     /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
-      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(X, {}), children: "All Posts" }),
-      /* @__PURE__ */ e(z, { variant: "contained", component: k, to: "/protocol", endIcon: /* @__PURE__ */ e(Q, {}), children: "Explore the Protocol" })
+      /* @__PURE__ */ e(z, { variant: "outlined", component: k, to: "/blog", startIcon: /* @__PURE__ */ e(Q, {}), children: "All Posts" }),
+      /* @__PURE__ */ e(z, { variant: "contained", component: k, to: "/protocol", endIcon: /* @__PURE__ */ e(Z, {}), children: "Explore the Protocol" })
     ] })
   ] });
 }
-function Fr() {
-  const t = Ze(), r = Object.entries(De), i = {};
-  ii.forEach((s) => {
+function Hr() {
+  const t = Ze(), r = Object.entries(We), i = {};
+  si.forEach((s) => {
     s.posts.forEach((n) => {
       i[n.authorId] = (i[n.authorId] || 0) + 1;
     });
   });
-  const a = Se(me).reduce((s, n) => (s[n.authorId] = (s[n.authorId] || 0) + 1, s), {});
+  const a = Oe(me).reduce((s, n) => (s[n.authorId] = (s[n.authorId] || 0) + 1, s), {});
   return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
         title: "Research Authors - Marty Identity Protocol",
         description: "Meet the AI research personas analyzing verifiable identity standards, cryptography, governance, and protocol design.",
@@ -11632,7 +11646,7 @@ function Fr() {
       /* @__PURE__ */ e(l, { variant: "h3", component: "h1", fontWeight: 900, gutterBottom: !0, children: "Research Authors" })
     ] }),
     /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -11649,7 +11663,7 @@ function Fr() {
       }
     ),
     /* @__PURE__ */ e(
-      F,
+      U,
       {
         variant: "outlined",
         sx: {
@@ -11691,7 +11705,7 @@ function Fr() {
               children: /* @__PURE__ */ o(Ee, { sx: { flexGrow: 1, p: 3 }, children: [
                 /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 2, mb: 2 }, children: [
                   /* @__PURE__ */ e(
-                    Ce,
+                    Se,
                     {
                       src: n.avatarImage,
                       sx: {
@@ -11754,7 +11768,7 @@ function Fr() {
                     }
                   )
                 ] }),
-                /* @__PURE__ */ e(se, { sx: { mb: 1.5 } }),
+                /* @__PURE__ */ e(re, { sx: { mb: 1.5 } }),
                 /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "space-between", alignItems: "center" }, children: [
                   /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
                     d,
@@ -11764,7 +11778,7 @@ function Fr() {
                   ] }),
                   /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 0.5, color: "primary.main" }, children: [
                     /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "primary", children: "View profile" }),
-                    /* @__PURE__ */ e(Q, { sx: { fontSize: 13 } })
+                    /* @__PURE__ */ e(Z, { sx: { fontSize: 13 } })
                   ] })
                 ] })
               ] })
@@ -11773,39 +11787,39 @@ function Fr() {
         }
       ) }, s);
     }) }),
-    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
-    /* @__PURE__ */ e(c, { sx: { display: "flex", justifyContent: "center", gap: 2 }, children: /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => t("/blog"), startIcon: /* @__PURE__ */ e(X, {}), children: "Back to Blog" }) })
+    /* @__PURE__ */ e(re, { sx: { my: 6 } }),
+    /* @__PURE__ */ e(c, { sx: { display: "flex", justifyContent: "center", gap: 2 }, children: /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => t("/blog"), startIcon: /* @__PURE__ */ e(Q, {}), children: "Back to Blog" }) })
   ] });
 }
-const dr = {
+const ur = {
   Announcement: "primary",
   Technical: "info",
   Business: "success",
   Cryptography: "warning",
   Guide: "secondary"
 };
-function Ur() {
+function Gr() {
   var d, h, p, u, g;
-  const { authorId: t } = et(), r = Ze(), i = De[t];
+  const { authorId: t } = et(), r = Ze(), i = We[t];
   if (!i)
     return /* @__PURE__ */ o(c, { sx: { textAlign: "center", py: 10 }, children: [
       /* @__PURE__ */ e(l, { variant: "h4", gutterBottom: !0, children: "Author not found" }),
-      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" })
+      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(Q, {}), children: "All Authors" })
     ] });
-  const a = Se(me).filter((m) => m.authorId === t).sort((m, v) => new Date(v.date) - new Date(m.date)), s = i.characterProfile, n = ((s == null ? void 0 : s.handoffAuthors) || []).filter((m) => m !== t).map((m) => {
-    var v;
-    return { id: m, name: ((v = De[m]) == null ? void 0 : v.name) || m };
+  const a = Oe(me).filter((m) => m.authorId === t).sort((m, b) => new Date(b.date) - new Date(m.date)), s = i.characterProfile, n = ((s == null ? void 0 : s.handoffAuthors) || []).filter((m) => m !== t).map((m) => {
+    var b;
+    return { id: m, name: ((b = We[m]) == null ? void 0 : b.name) || m };
   });
   return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
         title: `${i.name} - ${i.title}`,
         description: i.bio,
         canonicalPath: `/authors/${t}`,
         keywords: [i.name, i.title, "MIP", "identity protocol"],
         ogType: "profile",
-        structuredData: Qa({
+        structuredData: ei({
           name: i.name,
           description: i.bio,
           url: `https://elevenidllc.com/authors/${t}`,
@@ -11815,9 +11829,9 @@ function Ur() {
         })
       }
     ),
-    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => r("/authors"), sx: { mb: 3 }, children: "All Authors" }),
+    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(Q, {}), onClick: () => r("/authors"), sx: { mb: 3 }, children: "All Authors" }),
     /* @__PURE__ */ e(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -11830,7 +11844,7 @@ function Ur() {
         },
         children: /* @__PURE__ */ o(c, { sx: { display: "flex", gap: 3, alignItems: "flex-start", flexDirection: { xs: "column", sm: "row" } }, children: [
           /* @__PURE__ */ e(
-            Ce,
+            Se,
             {
               src: i.avatarImage,
               sx: {
@@ -11874,7 +11888,7 @@ function Ur() {
       }
     ),
     s && /* @__PURE__ */ o(G, { container: !0, spacing: 3, sx: { mb: 5 }, children: [
-      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 7, children: /* @__PURE__ */ o(F, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 7, children: /* @__PURE__ */ o(U, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
         /* @__PURE__ */ e(
           l,
           {
@@ -11903,17 +11917,17 @@ function Ur() {
           s.useWhen
         ] })
       ] }) }),
-      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 5, children: /* @__PURE__ */ o(F, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, md: 5, children: /* @__PURE__ */ o(U, { variant: "outlined", sx: { p: 3, borderRadius: 3, height: "100%" }, children: [
         /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "What this voice notices first" }),
         /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (d = s.noticesFirst) == null ? void 0 : d.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", variant: "outlined" }, m)) }),
         /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Voice traits" }),
         /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap", mb: 2.5 }, children: (h = s.voiceTraits) == null ? void 0 : h.map((m) => /* @__PURE__ */ e(T, { label: m, size: "small", color: "primary", variant: "outlined" }, m)) }),
-        n.length > 0 && /* @__PURE__ */ o(Le, { children: [
+        n.length > 0 && /* @__PURE__ */ o(Be, { children: [
           /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Best handoffs" }),
-          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: n.map(({ id: m, name: v }) => /* @__PURE__ */ e(
+          /* @__PURE__ */ e(c, { sx: { display: "flex", gap: 0.75, flexWrap: "wrap" }, children: n.map(({ id: m, name: b }) => /* @__PURE__ */ e(
             T,
             {
-              label: v,
+              label: b,
               size: "small",
               clickable: !0,
               onClick: () => r(`/authors/${m}`)
@@ -11922,7 +11936,7 @@ function Ur() {
           )) })
         ] })
       ] }) }),
-      /* @__PURE__ */ e(G, { item: !0, xs: 12, children: /* @__PURE__ */ e(F, { variant: "outlined", sx: { p: 3, borderRadius: 3 }, children: /* @__PURE__ */ o(G, { container: !0, spacing: 3, children: [
+      /* @__PURE__ */ e(G, { item: !0, xs: 12, children: /* @__PURE__ */ e(U, { variant: "outlined", sx: { p: 3, borderRadius: 3 }, children: /* @__PURE__ */ o(G, { container: !0, spacing: 3, children: [
         /* @__PURE__ */ o(G, { item: !0, xs: 12, md: 6, children: [
           /* @__PURE__ */ e(l, { variant: "caption", fontWeight: 700, color: "text.secondary", sx: { display: "block", mb: 1, textTransform: "uppercase", letterSpacing: 1 }, children: "Signature moves" }),
           /* @__PURE__ */ e(c, { component: "ul", sx: { pl: 2.5, my: 0 }, children: (p = s.signatureMoves) == null ? void 0 : p.map((m) => /* @__PURE__ */ e(l, { component: "li", variant: "body2", color: "text.secondary", sx: { mb: 1, lineHeight: 1.75 }, children: m }, m)) })
@@ -11947,8 +11961,8 @@ function Ur() {
       a.length !== 1 ? "s" : "",
       " published"
     ] }),
-    a.length === 0 ? /* @__PURE__ */ e(F, { elevation: 0, sx: { p: 4, textAlign: "center", bgcolor: "grey.50", borderRadius: 2 }, children: /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", children: "No published articles yet. Check back soon." }) }) : /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: a.map((m) => {
-      const v = new Date(m.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    a.length === 0 ? /* @__PURE__ */ e(U, { elevation: 0, sx: { p: 4, textAlign: "center", bgcolor: "grey.50", borderRadius: 2 }, children: /* @__PURE__ */ e(l, { variant: "body1", color: "text.secondary", children: "No published articles yet. Check back soon." }) }) : /* @__PURE__ */ e(G, { container: !0, spacing: 3, children: a.map((m) => {
+      const b = new Date(m.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
       return /* @__PURE__ */ e(G, { item: !0, xs: 12, sm: 6, md: 4, children: /* @__PURE__ */ e(
         Me,
         {
@@ -11972,15 +11986,15 @@ function Ur() {
                   {
                     label: m.category,
                     size: "small",
-                    color: dr[m.category] || "default",
+                    color: ur[m.category] || "default",
                     sx: { fontWeight: 600 }
                   }
                 ) }),
                 /* @__PURE__ */ e(l, { variant: "h6", fontWeight: 700, gutterBottom: !0, sx: { lineHeight: 1.35 }, children: m.title }),
                 /* @__PURE__ */ e(l, { variant: "body2", color: "text.secondary", sx: { mb: 2, lineHeight: 1.65 }, children: m.summary }),
-                /* @__PURE__ */ e(se, { sx: { mb: 1.5 } }),
+                /* @__PURE__ */ e(re, { sx: { mb: 1.5 } }),
                 /* @__PURE__ */ o(l, { variant: "caption", color: "text.secondary", children: [
-                  v,
+                  b,
                   " | ",
                   m.readTime
                 ] })
@@ -11990,29 +12004,29 @@ function Ur() {
         }
       ) }, m.slug);
     }) }),
-    /* @__PURE__ */ e(se, { sx: { my: 6 } }),
+    /* @__PURE__ */ e(re, { sx: { my: 6 } }),
     /* @__PURE__ */ o(c, { sx: { display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }, children: [
-      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(X, {}), children: "All Authors" }),
-      /* @__PURE__ */ e(z, { variant: "contained", endIcon: /* @__PURE__ */ e(Q, {}), onClick: () => r("/blog"), children: "Browse All Posts" })
+      /* @__PURE__ */ e(z, { variant: "outlined", onClick: () => r("/authors"), startIcon: /* @__PURE__ */ e(Q, {}), children: "All Authors" }),
+      /* @__PURE__ */ e(z, { variant: "contained", endIcon: /* @__PURE__ */ e(Z, {}), onClick: () => r("/blog"), children: "Browse All Posts" })
     ] })
   ] });
 }
-function Vt(t) {
+function Ft(t) {
   return t.reduce((r, i) => {
     var n;
-    const a = ma(i), s = (n = a == null ? void 0 : a.readTime) == null ? void 0 : n.match(/(\d+)/);
+    const a = ga(i), s = (n = a == null ? void 0 : a.readTime) == null ? void 0 : n.match(/(\d+)/);
     return r + (s ? parseInt(s[1], 10) : 0);
   }, 0);
 }
-function ma(t) {
-  return Zt(t) && Ae[t] ? Ae[t] : me.find((r) => r.slug === t);
+function ga(t) {
+  return ea(t) && De[t] ? De[t] : me.find((r) => r.slug === t);
 }
-function Hr() {
-  const t = Ze(), r = ve.reduce((s, n) => s + n.slugs.length, 0), i = ve.reduce((s, n) => s + Vt(n.slugs), 0);
+function Nr() {
+  const t = Ze(), r = we.reduce((s, n) => s + n.slugs.length, 0), i = we.reduce((s, n) => s + Ft(n.slugs), 0);
   let a = 0;
   return /* @__PURE__ */ o(c, { children: [
     /* @__PURE__ */ e(
-      we,
+      ke,
       {
         title: "Identity Infrastructure Foundations - Marty Identity Protocol",
         description: "A structured introduction to verifiable identity infrastructure. Foundations, protocols, cryptography, deployment patterns, and governance.",
@@ -12020,9 +12034,9 @@ function Hr() {
         keywords: ["digital identity", "verifiable credentials", "identity infrastructure", "PKI", "OID4VCI", "selective disclosure", "trust profiles"]
       }
     ),
-    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(X, {}), onClick: () => t("/blog"), sx: { mb: 3 }, children: "Blog" }),
+    /* @__PURE__ */ e(z, { startIcon: /* @__PURE__ */ e(Q, {}), onClick: () => t("/blog"), sx: { mb: 3 }, children: "Blog" }),
     /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -12034,7 +12048,7 @@ function Hr() {
         },
         children: [
           /* @__PURE__ */ o(c, { sx: { display: "flex", alignItems: "center", gap: 1.5, mb: 2 }, children: [
-            /* @__PURE__ */ e(Ve, { sx: { fontSize: 28, opacity: 0.7 } }),
+            /* @__PURE__ */ e(Le, { sx: { fontSize: 28, opacity: 0.7 } }),
             /* @__PURE__ */ e(
               l,
               {
@@ -12095,8 +12109,8 @@ function Hr() {
         ]
       }
     ),
-    ve.map((s, n) => {
-      const d = ta[s.layer] || "#546e7a", h = Vt(s.slugs);
+    we.map((s, n) => {
+      const d = aa[s.layer] || "#546e7a", h = Ft(s.slugs);
       return /* @__PURE__ */ o(c, { sx: { mb: { xs: 6, md: 8 } }, children: [
         /* @__PURE__ */ o(
           c,
@@ -12169,7 +12183,7 @@ function Hr() {
             },
             children: s.slugs.map((p) => {
               a++;
-              const u = ma(p), g = Ti[p];
+              const u = ga(p), g = Ii[p];
               return u ? /* @__PURE__ */ o(
                 c,
                 {
@@ -12226,7 +12240,7 @@ function Hr() {
                           variant: "body2",
                           color: "text.secondary",
                           sx: { fontSize: "0.8rem", lineHeight: 1.5, mt: 0.25 },
-                          children: be(u.summary, 120)
+                          children: Te(u.summary, 120)
                         }
                       )
                     ] }),
@@ -12257,11 +12271,11 @@ function Hr() {
             })
           }
         ),
-        n < ve.length - 1 && /* @__PURE__ */ e(se, { sx: { mt: { xs: 5, md: 7 } } })
+        n < we.length - 1 && /* @__PURE__ */ e(re, { sx: { mt: { xs: 5, md: 7 } } })
       ] }, s.part);
     }),
     /* @__PURE__ */ o(
-      F,
+      U,
       {
         elevation: 0,
         sx: {
@@ -12281,7 +12295,7 @@ function Hr() {
               z,
               {
                 variant: "contained",
-                endIcon: /* @__PURE__ */ e(Q, {}),
+                endIcon: /* @__PURE__ */ e(Z, {}),
                 onClick: () => t("/blog/what-is-digital-identity"),
                 children: "Start with Article 1"
               }
@@ -12301,39 +12315,39 @@ function Hr() {
   ] });
 }
 export {
-  or as AIDisclosureBanner,
+  cr as AIDisclosureBanner,
   ze as ARTICLE_META,
-  jr as AUTHOR_AVATAR_PROMPTS,
-  Ur as AuthorPage,
-  Fr as AuthorsPage,
-  De as BLOG_AUTHORS,
-  ie as BLOG_POSTS,
-  Qt as BLOG_POST_CONCEPT_TAGS,
-  gt as BLOG_POST_STANDARDS_TAGS,
-  ii as BLOG_ROADMAP,
-  ft as BLOG_SERIES,
-  Lr as BlogPage,
-  Vr as BlogPostPage,
-  sr as Breadcrumbs,
-  hi as DIFFICULTY_COLORS,
-  Hr as FoundationsPage,
-  Pe as GUIDE_ARTICLES,
+  Lr as AUTHOR_AVATAR_PROMPTS,
+  Gr as AuthorPage,
+  Hr as AuthorsPage,
+  We as BLOG_AUTHORS,
+  ae as BLOG_POSTS,
+  Zt as BLOG_POST_CONCEPT_TAGS,
+  ft as BLOG_POST_STANDARDS_TAGS,
+  si as BLOG_ROADMAP,
+  vt as BLOG_SERIES,
+  Fr as BlogPage,
+  Ur as BlogPostPage,
+  or as Breadcrumbs,
+  pi as DIFFICULTY_COLORS,
+  Nr as FoundationsPage,
+  Ce as GUIDE_ARTICLES,
   $e as GUIDE_ARTICLES_BY_CHAPTER,
-  Ae as GUIDE_ARTICLE_MAP,
+  De as GUIDE_ARTICLE_MAP,
   Ge as GUIDE_ARTICLE_SLUGS,
   ue as GUIDE_CHAPTERS,
-  ta as LAYER_COLORS,
-  hr as ProductBridgeCTA,
-  $i as ProtocolGuidePage,
-  nr as ReadingProgressBar,
-  vt as SECTION_BY_SLUG,
-  we as SEOHead,
-  Br as SERIES_BY_ID,
-  Be as SERIES_BY_POST_SLUG,
+  aa as LAYER_COLORS,
+  pr as ProductBridgeCTA,
+  Xi as ProtocolGuidePage,
+  lr as ReadingProgressBar,
+  bt as SECTION_BY_SLUG,
+  ke as SEOHead,
+  Vr as SERIES_BY_ID,
+  je as SERIES_BY_POST_SLUG,
   pe as START_HERE_SLUGS,
-  $t as articleSchema,
+  Yt as articleSchema,
   dt as collectionPageSchema,
-  _r as organizationSchema,
-  Qa as personSchema,
-  Rr as softwareApplicationSchema
+  jr as organizationSchema,
+  ei as personSchema,
+  Br as softwareApplicationSchema
 };

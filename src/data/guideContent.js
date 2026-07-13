@@ -630,9 +630,9 @@ permit(
     slug: 'issuance-flows',
     chapterId: 4,
     order: 1,
-    title: 'Issuance Flows',
+    title: 'Flows',
     summary:
-      'An issuance flow orchestrates the journey from credential application through approval to delivery. MIP\'s Flow primitive ties Trust Profile, Template, Policy, and Deployment together.',
+      'A flow orchestrates the credential journey across application, approval, issuance, presentation, and verification. MIP\'s Flow primitive ties Trust Profile, Template, Policy, and Deployment together.',
     readTime: '8 min read',
     conceptTags: ['flow', 'issuance'],
     content: [

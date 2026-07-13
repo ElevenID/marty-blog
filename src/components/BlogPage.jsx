@@ -38,6 +38,7 @@ import {
 import { ARTICLE_BROWSE_TOPICS_BY_SLUG } from '../data/articleBrowseContext';
 import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta';
 import {
+  buildCanonicalBlogTagPath,
   buildBlogTagPath,
   decodeBlogTagParam,
   findMatchingTagLabel,
@@ -887,6 +888,20 @@ function BlogPage() {
   const activeTag = useMemo(() => {
     return findMatchingTagLabel(rawActiveTag, allTagOptions.map(({ tag }) => tag)) || rawActiveTag;
   }, [allTagOptions, rawActiveTag]);
+  const canonicalTagPath = useMemo(() => {
+    return activeTag ? buildCanonicalBlogTagPath(activeTag, allTagOptions.map(({ tag }) => tag)) : '/blog';
+  }, [activeTag, allTagOptions]);
+
+  useEffect(() => {
+    if (!tagParam || !activeTag) {
+      return;
+    }
+
+    const canonicalParam = canonicalTagPath.replace('/blog/tag/', '');
+    if (tagParam !== canonicalParam) {
+      navigate(canonicalTagPath, { replace: true });
+    }
+  }, [activeTag, canonicalTagPath, navigate, tagParam]);
 
   const flatResults = useMemo(() => {
     if (searchResults) {
@@ -908,13 +923,13 @@ function BlogPage() {
   const seoDescription = !isSearchMode && activeTag
     ? `${flatResults?.length || 0} Marty Identity Protocol articles and guide chapters tagged ${activeTag}.`
     : 'Concepts, standards, and implementation guides for verifiable identity systems.';
-  const seoCanonicalPath = !isSearchMode && activeTag ? buildBlogTagPath(activeTag) : '/blog';
+  const seoCanonicalPath = !isSearchMode && activeTag ? canonicalTagPath : '/blog';
   const seoStructuredData = useMemo(() => {
     if (!isSearchMode && activeTag) {
       return collectionPageSchema({
         name: `${activeTag} Articles`,
         description: seoDescription,
-        url: `https://elevenidllc.com${buildBlogTagPath(activeTag)}`,
+        url: `https://elevenidllc.com${canonicalTagPath}`,
         items: (flatResults || []).slice(0, 24).map((result) => ({
           name: result.item.title,
           url: `https://elevenidllc.com/blog/${result.slug}`,
@@ -931,7 +946,7 @@ function BlogPage() {
         url: `https://elevenidllc.com/blog/${post.slug}`,
       })),
     });
-  }, [activeTag, flatResults, isSearchMode, latestArticles, seoDescription]);
+  }, [activeTag, canonicalTagPath, flatResults, isSearchMode, latestArticles, seoDescription]);
 
   return (
     <Box>
