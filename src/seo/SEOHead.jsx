@@ -92,6 +92,7 @@ const SEOHead = ({
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title' }, fullTitle);
     upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description' }, description);
     upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image' }, ogImage);
+    upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt' }, title);
 
     let scriptEl = document.head.querySelector('script[data-seo-jsonld="true"]');
     if (structuredData) {

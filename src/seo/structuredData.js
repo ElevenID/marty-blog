@@ -71,6 +71,7 @@ export const articleSchema = ({
   authorName = 'ElevenID LLC',
   authorType = null,
   url,
+  image = null,
 }) => {
   const resolvedAuthorType = authorType || (authorName === 'ElevenID LLC' ? 'Organization' : 'Person');
   const schema = {
@@ -103,6 +104,10 @@ export const articleSchema = ({
 
   if (dateModified || datePublished) {
     schema.dateModified = dateModified || datePublished;
+  }
+
+  if (image) {
+    schema.image = image;
   }
 
   return schema;

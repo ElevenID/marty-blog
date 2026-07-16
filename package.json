@@ -39,6 +39,9 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
+    "export:social-manifest": "node scripts/export-social-manifest.mjs",
+    "export:social-image-manifest": "node scripts/export-social-image-manifest.mjs",
+    "export:grammar-review": "node scripts/export-grammar-review-manifest.mjs",
     "lint": "eslint src --ext .js,.jsx",
     "test": "vitest run",
     "test:watch": "vitest"

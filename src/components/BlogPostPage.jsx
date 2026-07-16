@@ -15,6 +15,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
 import { GUIDE_ARTICLE_MAP, BLOG_POST_CONCEPT_TAGS, BLOG_POST_STANDARDS_TAGS } from '../data';
 import { SERIES_BY_POST_SLUG } from '../data';
+import { getBlogSocialImageUrl } from '../data/blogSocialImages';
 import ProtocolGuidePage from './ProtocolGuidePage';
 import SeriesNav from './SeriesNav';
 import ProtocolContextHeader from './ProtocolContextHeader';
@@ -83,6 +84,7 @@ function BlogPostPage() {
   const updatedStr = post.updatedDate
     ? new Date(post.updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
     : null;
+  const socialImageUrl = getBlogSocialImageUrl(canonicalSlug);
 
   return (
     <Box>
@@ -91,12 +93,15 @@ function BlogPostPage() {
         title={post.title}
         description={post.summary}
         canonicalPath={`/blog/${canonicalSlug}`}
+        ogImage={socialImageUrl}
         keywords={['MIP', 'identity protocol', post.category.toLowerCase(), 'verifiable credentials']}
         ogType="article"
         ogMeta={{
           'article:published_time': post.date,
           'article:author': author.name || 'The MIP Authors',
           'article:section': post.category,
+          'og:image:width': 1200,
+          'og:image:height': 627,
         }}
         structuredData={articleSchema({
           headline: post.title,
@@ -106,6 +111,7 @@ function BlogPostPage() {
           authorName: author.name || 'The MIP Authors',
           authorType: author.name ? 'Person' : 'Organization',
           url: `https://elevenidllc.com/blog/${canonicalSlug}`,
+          image: socialImageUrl,
         })}
       />
 

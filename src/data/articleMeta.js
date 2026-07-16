@@ -3,7 +3,7 @@ export {
   LEGACY_ARTICLE_SLUGS,
   getBrowseVisiblePosts,
   isBrowseVisibleArticleSlug,
-} from './articleBrowseVisibility';
+} from './articleBrowseVisibility.js';
 
 /**
  * Article Metadata

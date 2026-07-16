@@ -630,9 +630,9 @@ permit(
     slug: 'issuance-flows',
     chapterId: 4,
     order: 1,
-    title: 'Issuance Flows',
+    title: 'Flows',
     summary:
-      'An issuance flow orchestrates the journey from credential application through approval to delivery. MIP\'s Flow primitive ties Trust Profile, Template, Policy, and Deployment together.',
+      'A flow orchestrates the credential journey across application, approval, issuance, presentation, and verification. MIP\'s Flow primitive ties Trust Profile, Template, Policy, and Deployment together.',
     readTime: '8 min read',
     conceptTags: ['flow', 'issuance'],
     content: [
@@ -750,7 +750,7 @@ permit(
       { type: 'heading', text: 'Choosing a Strategy in MIP' },
       {
         type: 'paragraph',
-        text: 'Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support high-privacy offline verification at a border crossing and real-time online checking at a web portal - using the same credential type.',
+        text: 'Trust Profiles specify which revocation strategies they accept for incoming credentials. Credential Templates specify which strategy was used at issuance. Deployment Profiles configure cache TTLs and refresh intervals for offline operation. This layered approach lets a single ecosystem simultaneously support privacy-aware offline verification at a border crossing and real-time online checking at a web portal - using the same credential type.',
       },
     ],
   },
@@ -837,13 +837,13 @@ Presentation = [compact-sd-jwt]
     order: 2,
     title: 'Offline Verification',
     summary:
-      'Designing for offline verification requires careful thought about cache freshness, revocation strategies, and failure modes. MIP\'s architecture handles these by design.',
+      'Designing for offline verification requires careful thought about cache freshness, revocation strategies, and failure modes. MIP\'s architecture makes those choices explicit instead of treating offline mode as a free security guarantee.',
     readTime: '7 min read',
     conceptTags: ['deployment', 'offline'],
     content: [
       {
         type: 'paragraph',
-        text: 'Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require that verification work offline for hours or days at a time - with no degradation in security posture.',
+        text: 'Many high-security identity verification scenarios occur in environments with limited or no connectivity: border crossings, aircraft, maritime vessels, remote facilities, underground transport hubs, and field operations. These use cases require offline verification for hours or days at a time, with assurance bounded by cached trust material, status freshness, and configured failure behavior.',
       },
       { type: 'heading', text: 'What Must Be Pre-Cached' },
       {
