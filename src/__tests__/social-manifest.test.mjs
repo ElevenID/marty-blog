@@ -85,6 +85,10 @@ describe('social manifest exporter', () => {
     expect(url).toBe('https://example.test/blog/why-identity-needs-a-protocol');
     expect(sourceHashForPost(post, url)).toBe(sourceHashForPost({ ...post }, url));
     expect(sourceHashForPost({ ...post, summary: 'Changed.' }, url)).not.toBe(sourceHashForPost(post, url));
+    expect(sourceHashForPost({ ...post, updatedDate: '2026-07-13' }, url)).not.toBe(sourceHashForPost(post, url));
+    expect(
+      sourceHashForPost({ ...post, content: [{ type: 'paragraph', text: 'Changed body.' }] }, url),
+    ).not.toBe(sourceHashForPost(post, url));
 
     const [manifestPost] = buildSocialManifest([post], { baseUrl: 'https://example.test/' });
     expect(manifestPost.socialImagePath).toBe('/images/social/why-identity-needs-a-protocol.png');

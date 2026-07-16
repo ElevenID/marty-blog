@@ -19,7 +19,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Before you can verify a credential, you need to decide who to trust. Trust Profiles formalize that decision as configuration, not code.",
     "authorId": "victor-leclerc",
     "date": "2025-01-12",
-    "updatedDate": "2026-04-11",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "4 min read"
   },
@@ -39,17 +39,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "X.509 chains, CSCA/DS certificates, and DID documents are cryptographic foundations that help make verifiable credentials actually verifiable.",
     "authorId": "marcus-vale",
     "date": "2025-01-23",
-    "updatedDate": "2026-04-22",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
   {
     "slug": "credential-templates-designing-what-gets-issued",
     "title": "Credential Templates: Designing What Gets Issued",
-    "summary": "A credential is more than a signed JSON blob. Credential Templates define the schema, claims, validity, and disclosure rules that make credentials meaningful.",
+    "summary": "Credential Templates define credential type, compliance profile, claims, validity, issuer configuration, and disclosure posture without absorbing application intake or verifier policy.",
     "authorId": "daniel-ortega",
     "date": "2025-01-29",
-    "updatedDate": "2026-04-28",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "4 min read"
   },
@@ -66,10 +66,10 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "eudi-wallet-readiness",
     "title": "EUDI Wallet Readiness: What the Regulation Actually Requires",
-    "summary": "The EU Digital Identity Wallet rollout is moving toward the end-of-2026 deadline. What it means for identity infrastructure and protocol-first design.",
+    "summary": "EU member states are expected to provide EUDI Wallets by the end of 2026. Readiness also requires relying-party registration, declared data requests, trust, policy, and operations.",
     "authorId": "aiko-tanaka",
     "date": "2025-02-10",
-    "updatedDate": "2026-05-10",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "4 min read"
   },
@@ -79,7 +79,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Trust Profiles and Presentation Policies are design-time. Deployment Profiles are how they get to devices, kiosks, and APIs in the real world.",
     "authorId": "sofia-rahman",
     "date": "2025-02-16",
-    "updatedDate": "2026-05-15",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "4 min read"
   },
@@ -89,37 +89,37 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Proving you're over 21 without revealing your birthday. MIP's predicate-aware policies keep identity verification focused on the bounded question.",
     "authorId": "nora-patel",
     "date": "2025-02-21",
-    "updatedDate": "2026-05-21",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
   {
     "slug": "flows-orchestrating-identity-lifecycle",
     "title": "Flows: Orchestrating the Identity Lifecycle",
-    "summary": "Apply -> Approve -> Issue -> Present -> Verify. Flows are MIP's fifth primitive: the user-visible lifecycle that ties trust, credential, presentation, and deployment rules together.",
+    "summary": "MIP Flows select governed protocol sequences for issuance, presentation, renewal, revocation, and other identity operations while keeping referenced policy and runtime objects explicit.",
     "authorId": "daniel-ortega",
     "date": "2025-02-27",
-    "updatedDate": "2026-05-27",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "4 min read"
   },
   {
     "slug": "compliance-profiles-bridging-regulation",
     "title": "Compliance Profiles: Bridging Standards and Regulation",
-    "summary": "ICAO, AAMVA, EUDI, Open Badges - every framework brings its own rules. Compliance Profiles map those requirements to MIP primitives so teams can review, configure, and update them deliberately.",
+    "summary": "Compliance Profiles turn standards-oriented format, issuer-artifact, trust-compatibility, API, and verification-policy requirements into governed MIP configuration without claiming certification.",
     "authorId": "elena-kovacs",
     "date": "2025-03-05",
-    "updatedDate": "2026-06-02",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "4 min read"
   },
   {
     "slug": "sd-jwt-selective-disclosure-deep-dive",
     "title": "SD-JWT Selective Disclosure: A Deep Dive",
-    "summary": "How SD-JWT enables selective disclosure without zero-knowledge proofs - and where MIP uses it across Credential Templates and Presentation Policies.",
+    "summary": "RFC 9901 standardizes selective disclosure for JWTs. Applying it to verifiable credentials still requires a pinned SD-JWT VC profile, holder binding, and disciplined presentation policy.",
     "authorId": "nora-patel",
     "date": "2025-03-11",
-    "updatedDate": "2026-06-08",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
@@ -131,7 +131,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "date": "2025-03-17",
     "updatedDate": "2026-06-13",
     "category": "Technical",
-    "readTime": "4 min read"
+    "readTime": "3 min read"
   },
   {
     "slug": "introducing-mip",
@@ -146,30 +146,30 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "mip-json-schemas-walkthrough",
     "title": "MIP JSON Schemas: A Walkthrough for Implementers",
-    "summary": "MIP currently includes 36 JSON Schemas covering every protocol entity. Here's how to use them for validation, code generation, and API contracts.",
+    "summary": "MIP publishes Draft 2020-12 JSON Schemas for its core primitives and supporting entities. This walkthrough shows how to validate payloads, generate typed bindings, and keep implementation contracts aligned.",
     "authorId": "daniel-ortega",
     "date": "2025-03-28",
-    "updatedDate": "2026-06-25",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
   {
     "slug": "post-quantum-readiness-in-identity",
     "title": "Post-Quantum Readiness in Identity Protocols",
-    "summary": "Quantum computers will break RSA and ECDSA. MIP's algorithm-agnostic Trust Profiles are designed for the transition - here's how.",
+    "summary": "NIST has standardized post-quantum key establishment and digital signatures. MIP does not yet authorize those algorithms, but its explicit contracts expose the migration work.",
     "authorId": "marcus-vale",
     "date": "2025-04-03",
-    "updatedDate": "2026-07-01",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
   {
     "slug": "building-trust-registries-at-scale",
     "title": "Building Trust Registries at Scale",
-    "summary": "Who is authorized to issue which credentials? Trust registries answer this question - and MIP provides a framework for building them.",
+    "summary": "Trust registries make authority discoverable. MIP separates issuer governance, verifier trust policy, and trust-anchor synchronization so each decision can be explained.",
     "authorId": "victor-leclerc",
     "date": "2025-04-09",
-    "updatedDate": "2026-07-07",
+    "updatedDate": "2026-07-15",
     "category": "Business",
     "readTime": "4 min read"
   },
@@ -179,17 +179,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Airports, border crossings, and field operations can't always reach the cloud. MIP's offline patterns make cache freshness, revocation posture, and failure behavior explicit when connectivity drops.",
     "authorId": "sofia-rahman",
     "date": "2025-04-15",
-    "updatedDate": "2026-07-12",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "4 min read"
   },
   {
     "slug": "holder-binding-beyond-biometrics",
     "title": "Holder Binding: Beyond Biometrics",
-    "summary": "How do you prove the person presenting a credential is the person it was issued to? MIP supports cryptographic, biometric, and knowledge-based binding.",
+    "summary": "Holder binding proves control or legitimate possession of a credential; it does not automatically identify a human. MIP keeps presentation binding explicit without treating biometrics as the default.",
     "authorId": "sofia-rahman",
     "date": "2025-04-20",
-    "updatedDate": "2026-07-18",
+    "updatedDate": "2026-07-15",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
@@ -199,7 +199,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Open Badges 3.0 meets MIP - how the protocol brings trust governance to education and workforce credentials.",
     "authorId": "aiko-tanaka",
     "date": "2025-04-26",
-    "updatedDate": "2026-07-24",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "4 min read"
   },
@@ -209,17 +209,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "MIP ships a conformance test suite with valid and invalid fixtures. Here's how to use it to validate your implementation.",
     "authorId": "daniel-ortega",
     "date": "2025-05-02",
-    "updatedDate": "2026-07-30",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "5 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "revocation-strategies-compared",
     "title": "Revocation Strategies Compared: OCSP, CRL, and Status Lists",
-    "summary": "Credentials get revoked. MIP's revocation model supports five standardized methods with different privacy, latency, and offline trade-offs.",
+    "summary": "Revocation mechanisms and check timing solve different problems. MIP's Revocation Profile makes that choice explicit while implementations pin the actual W3C, IETF, or PKI profile used.",
     "authorId": "marcus-vale",
     "date": "2025-05-08",
-    "updatedDate": "2026-08-04",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
@@ -229,7 +229,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "If digital identity still looks like an acronym graveyard, this is the picture that turns it back into a system.",
     "authorId": "daniel-ortega",
     "date": "2025-05-13",
-    "updatedDate": "2026-08-10",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "8 min read"
   },
@@ -239,7 +239,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Privacy fails first at the request boundary, which is why disclosure has to be governed as policy rather than left to verifier habit.",
     "authorId": "nora-patel",
     "date": "2025-05-19",
-    "updatedDate": "2026-08-16",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "7 min read"
   },
@@ -249,7 +249,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "The trust judgment should not have to change every time the runtime does. Marty keeps the verification model stable and uses Deployment Profiles to absorb the operational differences between cloud, self-hosted, and edge environments.",
     "authorId": "sofia-rahman",
     "date": "2025-05-25",
-    "updatedDate": "2026-08-22",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "6 min read"
   },
@@ -259,9 +259,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "The identity market does not lack standards. It lacks a stable way to operationalize them together. Marty treats ecosystem variation as profile data, not as a reason to rebuild the architecture every time the acronym changes.",
     "authorId": "aiko-tanaka",
     "date": "2025-05-31",
-    "updatedDate": "2026-08-28",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "6 min read"
+    "readTime": "7 min read"
   },
   {
     "slug": "why-marty-is-ready-for-evaluation",
@@ -269,19 +269,19 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Serious teams do not evaluate identity ideas because they are elegant. They evaluate them because there is enough inspectable surface-specification, schemas, conformance, policy, and deployment choices-to decide whether the architecture deserves a real design review.",
     "authorId": "daniel-ortega",
     "date": "2025-06-06",
-    "updatedDate": "2026-09-02",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "8 min read"
+    "readTime": "7 min read"
   },
   {
     "slug": "infrastructure-economics-migration",
     "title": "The Infrastructure Economics Migration",
-    "summary": "When identity is bought as a metered lookup service, growth makes the bill worse. When it is run as protocol infrastructure, growth turns into a deployment and governance question instead of a recurring extraction model.",
+    "summary": "Identity economics change when verification becomes a repeated operating capability. Compare metered services and managed or self-operated infrastructure using measured workload, resilience, governance, and ownership costs.",
     "authorId": "daniel-ortega",
     "date": "2025-06-11",
-    "updatedDate": "2026-09-08",
+    "updatedDate": "2026-07-13",
     "category": "Business",
-    "readTime": "7 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "deployment-profiles-in-practice",
@@ -289,9 +289,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Choose the runtime that matches your environment without rewriting the trust logic underneath it. Hosted, self-hosted, and edge deployments should differ operationally, not conceptually.",
     "authorId": "sofia-rahman",
     "date": "2025-06-17",
-    "updatedDate": "2026-09-14",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "6 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "offline-verification-guide",
@@ -299,7 +299,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Offline verification is not a magic trick. It is the discipline of deciding what trust material must already be on the device, how long it remains credible, and what the operator should do when freshness expires before the queue does.",
     "authorId": "sofia-rahman",
     "date": "2025-06-23",
-    "updatedDate": "2026-09-20",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "7 min read"
   },
@@ -309,9 +309,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Compliance only looks like paperwork from a distance. In production, it is the question of whether changing a rule means updating governed configuration or reopening application code in every regulated surface you own.",
     "authorId": "daniel-ortega",
     "date": "2025-06-29",
-    "updatedDate": "2026-09-25",
+    "updatedDate": "2026-07-13",
     "category": "Business",
-    "readTime": "7 min read"
+    "readTime": "6 min read"
   },
   {
     "slug": "deploy-airline-boarding",
@@ -319,7 +319,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "At a boarding gate, identity architecture is judged in seconds: can the lane keep moving, can the verifier stay trustworthy when the network wobbles, and can operations tighten policy without rebuilding the device fleet?",
     "authorId": "daniel-ortega",
     "date": "2025-07-05",
-    "updatedDate": "2026-10-01",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "7 min read"
   },
@@ -329,7 +329,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Enterprise access gets brittle when badges, network gateways, and internal applications all ask the same identity question through different systems. Marty turns that sprawl into one governed corporate credential, many bounded checks, and a policy surface security teams can actually inspect.",
     "authorId": "daniel-ortega",
     "date": "2025-07-10",
-    "updatedDate": "2026-10-07",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "6 min read"
   },
@@ -339,7 +339,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Selective disclosure is not a magic privacy label. It is the discipline of revealing only what a decision requires, then choosing the lightest mechanism that can enforce that boundary.",
     "authorId": "daniel-ortega",
     "date": "2025-07-16",
-    "updatedDate": "2026-10-13",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "5 min read"
   },
@@ -349,17 +349,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "At a grocery self-checkout kiosk, privacy is not an abstract principle. It is the difference between asking one yes-or-no question and quietly collecting a customer’s identity record because the lane was built for scanner convenience instead of disclosure discipline.",
     "authorId": "daniel-ortega",
     "date": "2025-07-28",
-    "updatedDate": "2026-10-24",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
   {
     "slug": "deploy-membership-credentials",
     "title": "Deploying Marty for Membership Credentials",
-    "summary": "Membership credentials are where identity architecture stops getting a free pass from government authority. If a partner verifier still has to phone the issuer every time, you may have a portable credential format, but you do not yet have portable trust.",
+    "summary": "Membership credentials test whether a non-government ecosystem can govern issuers, trust material, status, disclosure, and local verification without turning every relying party into a custom bilateral integration.",
     "authorId": "daniel-ortega",
     "date": "2025-08-03",
-    "updatedDate": "2026-10-30",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "5 min read"
   },
@@ -369,7 +369,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "OID4VCI is the transport that gets a credential offer, token exchange, and credential response across the wire. Marty is the object model that decides what is being issued, how that issuance is orchestrated, and which evidence remains once the transport step is over.",
     "authorId": "daniel-ortega",
     "date": "2025-08-08",
-    "updatedDate": "2026-11-05",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "6 min read"
   },
@@ -379,7 +379,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "OID4VP carries the presentation request and response. Marty is the part that decides what the verifier actually needs, which issuers are trusted, and how the same exchange behaves in a browser, API, or constrained deployment without turning each runtime into a different system.",
     "authorId": "daniel-ortega",
     "date": "2025-08-14",
-    "updatedDate": "2026-11-11",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -449,7 +449,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Trust anchors are the root certificates and public keys that ground all credential verification. This post explains how they work and why they matter.",
     "authorId": "marcus-vale",
     "date": "2025-09-24",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
@@ -459,7 +459,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Certificate chain validation is how systems verify that a credential traces back to a trusted authority. This post walks through the process step by step.",
     "authorId": "marcus-vale",
     "date": "2025-09-30",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
     "readTime": "4 min read"
   },
@@ -469,7 +469,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Every e-passport contains a signed chip. This post explains the PKI infrastructure - from CSCA to Document Signer certificates - that makes passport verification possible.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-05",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -489,7 +489,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "ICAO Doc 9303 is the international standard for machine-readable travel documents. This post breaks down what it actually requires - and what it leaves to implementers.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-17",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -499,7 +499,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "ISO 18013-5 defines how a driving licence can live on a phone without turning a government credential into a glorified screenshot. This post explains mDoc, proximity exchange, holder binding, and the trust model that makes mobile driving licences operationally credible.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-23",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "7 min read"
   },
@@ -559,6 +559,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "A digital identity wallet is not just a place to store cards. It is the holder-side control point for receiving, holding, and presenting credentials under local control.",
     "authorId": "sofia-rahman",
     "date": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -568,6 +569,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Device binding is the security choice that ties a credential to the holder’s device context instead of treating it like a copyable file.",
     "authorId": "sofia-rahman",
     "date": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -577,6 +579,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Selective disclosure becomes real in a wallet when a verifier request is translated into a holder-readable choice about which claims to share.",
     "authorId": "sofia-rahman",
     "date": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -586,6 +589,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Identity-wallet UX succeeds when it makes requester intent, privacy boundaries, and recovery paths understandable before the holder is asked to share anything.",
     "authorId": "sofia-rahman",
     "date": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "5 min read"
   },
@@ -595,7 +599,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Identity verification is inherently privacy-invasive. This post explains why privacy must be a design principle - not a feature - in identity systems.",
     "authorId": "nora-patel",
     "date": "2025-12-20",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "5 min read"
   },
@@ -625,9 +629,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Regulations require both privacy protection and data availability. This post explores the tension between privacy and compliance - and how protocol design can resolve it.",
     "authorId": "nora-patel",
     "date": "2026-01-06",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Business",
-    "readTime": "4 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "identity-governance-models",
@@ -635,8 +639,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Identity governance is the question of who decides which issuers, rules, and operating boundaries count once credentials have to work beyond one team or one application.",
     "authorId": "elena-kovacs",
     "date": "2026-04-03",
+    "updatedDate": "2026-07-13",
     "category": "Business",
-    "readTime": "7 min read"
+    "readTime": "6 min read"
   },
   {
     "slug": "rbac-vs-abac",
@@ -662,6 +667,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Credential ecosystems become trustworthy only when the network agrees who belongs, what obligations apply, and how those decisions change over time. Trust infrastructure comes later. Governance comes first.",
     "authorId": "elena-kovacs",
     "date": "2026-04-06",
+    "updatedDate": "2026-07-13",
     "category": "Business",
     "readTime": "6 min read"
   },
@@ -721,9 +727,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Marty turns digital identity from a pile of standards, integrations, and policy exceptions into a governable system with stable objects: who is trusted, what gets issued, what must be shown, where verification runs, and how the journey moves.",
     "authorId": "daniel-ortega",
     "date": "2026-03-05",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "4 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "trust-profile-evaluation-and-failure-handling",
@@ -731,7 +737,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Trust Profiles are MIP's first primitive. This post walks through how trust sources, freshness rules, evaluation order, and fail-closed behavior turn a Trust Profile into a governed runtime decision boundary.",
     "authorId": "daniel-ortega",
     "date": "2026-03-11",
-    "updatedDate": "2026-04-10",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "7 min read"
   },
@@ -741,9 +747,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Credential Templates define what gets issued. This post provides a complete technical walkthrough of how schema, compliance, cryptographic artifacts, validity, privacy posture, and lifecycle state combine into one reusable issuance contract.",
     "authorId": "daniel-ortega",
     "date": "2026-03-17",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "6 min read"
   },
   {
     "slug": "presentation-policies-explained-deep",
@@ -761,7 +767,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Deployment Profiles package trust, templates, and policies for runtime execution. This post provides a complete technical walkthrough of how network mode, lanes, devices, cache windows, and update behavior turn abstract identity rules into real endpoints.",
     "authorId": "daniel-ortega",
     "date": "2026-03-28",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
     "readTime": "6 min read"
   },
@@ -781,8 +787,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "How mobile credential wallets work - from platform secure elements to cloud backup, and what matters for interoperability.",
     "authorId": "aiko-tanaka",
     "date": "2026-04-07",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "6 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "secure-enclave-credential-storage",
@@ -790,8 +797,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Understanding how hardware-backed key storage protects credential holder binding - secure enclaves, StrongBox, and attestation.",
     "authorId": "marcus-vale",
     "date": "2026-04-08",
+    "updatedDate": "2026-07-13",
     "category": "Cryptography",
-    "readTime": "5 min read"
+    "readTime": "4 min read"
   },
   {
     "slug": "credential-portability-across-wallets",
@@ -808,8 +816,9 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "How the EU Digital Identity Wallet architecture works - PID issuance, QEAA, trust lists, and what implementers need to know.",
     "authorId": "aiko-tanaka",
     "date": "2026-04-10",
+    "updatedDate": "2026-07-13",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "5 min read"
   }
 ]
 `);

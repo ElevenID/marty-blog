@@ -29,7 +29,10 @@ export function sourceHashForPost(post, canonicalUrl = canonicalBlogUrl(post.slu
     summary: post.summary,
     authorId: post.authorId,
     date: post.date,
+    updatedDate: post.updatedDate || '',
     category: post.category,
+    readTime: post.readTime || '',
+    content: post.content || [],
     canonicalUrl,
     socialImagePath: getBlogSocialImagePath(canonicalSlug),
   };
