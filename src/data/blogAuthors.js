@@ -1,4 +1,4 @@
-import { normalizeBlogData } from '../utils/blogText';
+import { normalizeBlogData } from '../utils/blogText.js';
 
 /**
  * Blog Authors

@@ -4,13 +4,13 @@ This ledger tracks public ElevenID LLC comments on external LinkedIn identity-in
 
 ## Engagement Counter
 
-Last updated: 2026-07-14
+Last updated: 2026-07-16
 
-- External comment opportunities tracked: 159
-- Posted as ElevenID LLC: 157
+- External comment opportunities tracked: 184
+- Posted as ElevenID LLC: 182
 - Drafted and pending approval: 0
 - Blocked or retry-needed: 0
-- Engagement provided: 157 public external comments
+- Engagement provided: 182 public external comments
 - Engagement queued for approval: 0 drafted external comments
 - Public reply drafts tracked: 0
 - Public replies posted as ElevenID LLC: 32
@@ -4211,3 +4211,388 @@ Selection posture: answer direct questions with useful company context. Do not e
 Draft:
 
 > RiskHelm, ElevenID LLC would use an authorization check immediately before the tool call or transaction. LLM-derived intent can help assess risk, but it should not grant permission. Policy should make the final decision using verified identity, delegated authority, the requested action, and current system state. If the evidence is incomplete, deny the action or require human approval.
+
+## 2026-07-16-positive-engagement Candidate Outreach Batch
+
+Approval state: pending. Do not post until approved handle entries below have `Status: approved` and a non-empty `Approval:` line.
+
+Selection posture: prioritize current LinkedIn conversations where ElevenID can add standards-aware, practical identity-infrastructure context without bashing a product, standard, vendor, or person.
+
+### 200. Designing continuous trust as an experience
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-01`
+- Target: Paola Roccuzzo post, From KYC to continuous trust: designing for the digital wallet era
+- Reference: https://www.linkedin.com/search/results/content/?keywords=verifiable%20credentials%20digital%20identity%20wallet&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-inspect-verifiable-credentials
+- Topic: Verifiable credentials, wallet-era experience, continuous trust
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-01-designing-542be4fb63.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The experience gap matters because a wallet interaction is not a one-time KYC screen moved to a phone. People need to understand who is asking, which claim is needed, what decision it supports, and what happens when a credential changes or is rejected. Designing those explanations and recovery paths alongside the trust protocol is how continuous trust can remain legible across channels. Which recovery moment has proved hardest to make intuitive?
+
+### 201. Making interoperability local enough to work
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-02`
+- Target: Roel Crooijmans post on cross-border digital trade, Peppol, wallets, and verifiable credentials
+- Reference: https://www.linkedin.com/search/results/content/?keywords=verifiable%20credentials%20digital%20identity%20wallet&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-inspect-verifiable-credentials
+- Topic: Cross-border digital trade, interoperability, local trust requirements
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-02-making-int-110fe9e917.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Listening first is especially important when trust systems must interoperate. Shared formats can move a message or credential, but each deployment still brings its own issuer authority, operating meaning, assurance expectations, and exception process. Interoperability becomes practical when those differences are expressed as explicit profiles rather than hidden assumptions. The upcoming field lessons should add valuable operational texture to that discussion.
+
+### 202. Proving age without normalizing identification
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-03`
+- Target: Elena Yndurain post, Coming of Age Online: Verifying Age Without Sacrificing Privacy
+- Reference: https://www.linkedin.com/search/results/content/?keywords=verifiable%20credentials%20digital%20identity%20wallet&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-inspect-verifiable-credentials
+- Topic: Age assurance, privacy-preserving credentials, data minimization
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-03-proving-ag-b005c20564.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Age assurance is a revealing test for digital identity: the service often needs an eligibility result, not a reusable identity dossier. Privacy-preserving credentials can keep that boundary clear when purpose limitation, minimal disclosure, status checking, and a non-biometric fallback are designed together. The trade-off is not simply accuracy versus privacy; it also includes accessibility, correction, and recourse for the person being assessed.
+
+### 203. Rewarding evidence from real trust deployments
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-04`
+- Target: DIDAS post launching the Global Digital Trust Awards 2026
+- Reference: https://www.linkedin.com/search/results/content/?keywords=verifiable%20credentials%20digital%20identity%20wallet&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Target company: DIDAS - Digital Identity & Data Sovereignty Association
+- Discovery search handle: discovery-inspect-verifiable-credentials
+- Topic: Digital trust awards, implementation evidence, interoperability
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-04-rewarding-1087346f43.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Recognizing real implementations can move the digital-trust conversation beyond feature lists. The most instructive cases will show how issuer onboarding, trust updates, credential status, interoperability failures, user recourse, and operator accountability worked after launch. Sharing the constraints and corrections alongside the outcome would make these awards a useful evidence base for the wider standards community.
+
+### 204. Connecting governed execution to inspectable decisions
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-05`
+- Target: Denis O. post on Seed IQ and governed execution
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Denis%20O%20Seed%20IQ%20governed%20execution&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-03-ai-agent-identity-governance
+- Topic: Governed execution, cybernetics, multi-agent systems
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-05-connecting-a2c5822260.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Treating governance as feedback and adaptation captures something static control lists miss. For an operating system, that loop becomes accountable when each adjustment still produces an inspectable decision: observed state, objective, delegated authority, policy used, action taken, and resulting state. That record lets local autonomy evolve without making coherence or human responsibility impossible to reconstruct.
+
+### 205. Turning cross-agent boundaries into durable controls
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-06`
+- Target: Niran Evenchen post on governing a cross-agent home lab
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Niran%20Evenchen%20Claude%20Hermes%20agentic&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-03-ai-agent-identity-governance
+- Topic: Cross-agent governance, segregation of duties, approvals
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-06-turning-cr-5fab03bd1f.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> That home-lab example makes the platform requirement tangible. Cross-agent governance needs more than separate credentials: the handoff should carry the originating principal, task scope, permitted data, expiry, and approval conditions, while the receiving agent gets no broader authority than the handoff grants. A useful next test would be whether the complete delegation chain survives an agent restart or tool substitution without becoming a shared secret or a guess.
+
+### 206. Verifying the action rather than only the actor
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-07`
+- Target: Jennifer Toscano post on runtime identity for AI agents
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Jennifer%20Toscano%20runtime%20identity%20AI%20agents&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-03-ai-agent-identity-governance
+- Topic: Agent identity, delegated authority, runtime verification
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-07-verifying-da307854ff.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Runtime verification is where identity becomes operational governance. The decision should bind the agent to a principal, a specific requested action, current context, purpose, and a time-bounded mandate; authenticating the agent alone cannot establish all of that. Capturing the same inputs in a portable decision record also gives reviewers evidence that the authority was valid when the action occurred, not merely when the session began.
+
+### 207. Giving non-human identities an accountable lifecycle
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-08`
+- Target: Amir Babu Bhatta post, The Future of IAM
+- Reference: https://www.linkedin.com/search/results/content/?keywords=non-human%20machine%20identity&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-04-non-human-machine-identity
+- Topic: IAM, non-human identities, autonomous systems
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-08-giving-non-dbf518a78e.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The scale shift is real, but the more important change may be semantic: a machine identity needs an accountable owner, declared purpose, bounded capabilities, issuance basis, expiry, and revocation trigger. Counting identities without preserving those relationships creates a larger inventory, not stronger governance. Which lifecycle event is proving hardest to automate across workloads and agents: ownership changes, scope review, or termination?
+
+### 208. Making ownership and offboarding machine-readable
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-09`
+- Target: Bernardo Meireles Correa post on the OWASP Non-Human Identity Top 10
+- Reference: https://www.linkedin.com/search/results/content/?keywords=non-human%20machine%20identity&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-04-non-human-machine-identity
+- Topic: Non-human identity risk, ownership, expiry, offboarding
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-09-making-own-d222d1682c.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The shared pattern is well identified: machine identities often have credentials but no governed lifecycle. Ownership, purpose, scope, expiry, rotation, and decommissioning need to be machine-readable relationships, not notes attached during an annual review. Human use of a service identity is especially revealing because it breaks attribution at the exact moment an investigation needs a dependable chain of action.
+
+### 209. Preserving authority across distributed agent boundaries
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-10`
+- Target: Leonid Lukyanov post on agent governance as a distributed systems authorization problem
+- Reference: https://www.linkedin.com/search/results/content/?keywords=delegated%20authority%20agents&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-05-delegated-authority-agents
+- Topic: Distributed agent authorization, context propagation, reconstruction
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-10-preserving-f79739a97a.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The distributed-systems lens is exactly where authorization becomes difficult. Every hop can preserve a valid technical identity while losing the principal's intent, purpose, constraints, or remaining authority. A task-bound delegation envelope that narrows at each hop and produces linked decision evidence would make the final action explainable without turning one bearer token into permission for the whole workflow.
+
+### 210. Binding agent payments to intent and limits
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-11`
+- Target: Azim Chowdhury post on agentic AI in payments
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Azim%20Chowdhury%20Agentic%20AI%20payments&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-05-delegated-authority-agents
+- Topic: Agentic payments, identity, intent, delegated authority
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-11-binding-ag-94c2455339.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Delegate-to-pay changes the evidence needed around a transaction. The payment should remain linked to who established the mandate, the goods or outcome permitted, amount and counterparty limits, expiry, exceptions, and the agent instance that exercised it. That chain can support both real-time policy and later dispute handling. The interesting design question is how much of the mandate each participant must see versus merely verify.
+
+### 211. Separating authenticated access from valid authority
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-12`
+- Target: Larry Perkins Jr post, Who Authorized the AI Agent?
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Larry%20Perkins%20WHO%20AUTHORIZED%20THE%20AI%20AGENT&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-05-delegated-authority-agents
+- Topic: Agent authorization, delegated intent, action validity
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-12-separating-330644f424.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The supplier example cleanly separates access from authority. An authenticated inbox agent may read the request, yet changing payment instructions should require a mandate that covers that action, trusted evidence about the counterparty and destination, and an escalation path when context changes. Preserving why the action was allowed or held is as important as recording which identity attempted it.
+
+### 212. Starting agent delegation with live human authority
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-13`
+- Target: Aptly post on digitizing human delegation of authority before governing AI agents
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Aptly%20govern%20humans%20Delegation%20of%20Authority&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Target company: Aptly
+- Discovery search handle: discovery-search-05-delegated-authority-agents
+- Topic: Delegation of authority, human governance, agent mandates
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-13-starting-a-cb86f4f369.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The sequence is persuasive: an agent mandate cannot be more reliable than the human authority it derives from. Live delegation records also need effective dates, scope, substitution rules, revocation, and provenance so an action can be evaluated against the organization as it existed at that moment. That creates a trustworthy bridge from board-level authority to a narrowly bounded machine action.
+
+### 213. Keeping verifiable voting claims appropriately bounded
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-14`
+- Target: Mario Medina Nussbaum post on an open-source verifiable voting design
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Mario%20Medina%20Nussbaum%20elections%20trust%20open%20source&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-06-trust-registry-credentials
+- Topic: Verifiable voting, anonymous credentials, independent auditability
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-14-keeping-ve-3a4265b459.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Starting with a bounded condominium use case is a responsible way to expose the real design constraints. Independent verifiability can reduce how much must be trusted, while credential eligibility, coercion resistance, ballot secrecy, replacement semantics, recovery, and governance of the election definition still need explicit treatment. Publishing threat assumptions and test vectors beside the architecture would make outside review much more productive.
+
+### 214. Carrying human rules into verified interactions
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-15`
+- Target: Adriana Leon post diagramming human governance through machine-readable governance and trust registries
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Adriana%20Leon%20machine-readable%20governance%20trust%20registry&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-06-trust-registry-credentials
+- Topic: Machine-readable governance, trust registries, verified interactions
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-15-carrying-h-dcca9b57ac.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> This progression captures the right dependency: verification is meaningful only when it can trace back to human authority and agreed rules. The bridge needs versioned policy, jurisdiction and purpose, effective dates, issuer status, and a route for exceptions or appeal. A trust registry can answer who is recognized under which conditions; the decision record should preserve which version of those conditions governed a particular interaction.
+
+### 215. Using management standards without inventing mappings
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-16`
+- Target: NKEMAKOLAM NNADI post connecting ISO 42001 to an agent identity lifecycle
+- Reference: https://www.linkedin.com/search/results/content/?keywords=NKEMAKOLAM%20NNADI%20ISO%2042001%20agent%20identity%20lifecycle&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-07-credential-revocation-lifecycle
+- Topic: ISO 42001, agent identity lifecycle, operational evidence
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-16-using-mana-93b595f2c6.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Reading a management-system standard as an architectural prompt can help teams connect governance to operations. The valuable next artifact would be a transparent crosswalk that distinguishes the standard's actual requirements from implementation choices such as token lifetime, continuous validation, or intent-based policy. That separation preserves the flexibility of ISO 42001 while still producing testable lifecycle controls and evidence.
+
+### 216. Treating revocation as a distributed propagation problem
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-17`
+- Target: Camran Shahvali post on MCP session revocation and continuous authentication
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Camran%20Shahvali%20MCP%20session%20revocation&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-07-credential-revocation-lifecycle
+- Topic: MCP security, session integrity, revocation propagation
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-17-treating-r-afe50e88c3.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Immediate revocation is difficult because it is a distributed-state problem as much as an authentication problem. A practical design needs a defined freshness window, session binding, policy re-evaluation before consequential tools, revocation propagation, and a fail-safe response when status cannot be checked. The evolving-state research idea is interesting; comparing it against those operational properties could clarify which failure modes it improves.
+
+### 217. Proving operational behavior beyond standards conformance
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-18`
+- Target: Manoj Kumar Panda post, "Five evidence layers are required"
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Five%20evidence%20layers%20are%20required%20SOVD&origin=GLOBAL_SEARCH_HEADER
+- Discovery search handle: discovery-search-07-credential-revocation-lifecycle
+- Topic: Standards conformance, end-to-end validation, evidence
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-18-proving-op-2c6e1e4f01.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The distinction between a conformant interface and a dependable service deserves emphasis far beyond vehicle systems. Standards define shared expectations, while deployment evidence must still cover stale state, authorization context, consent, latency, rollback, degraded operation, and traceability across every boundary. Linking each test result to the exact requirement, configuration, component version, and decision owner would make the evidence durable through vehicle variants and updates.
+
+### 218. Separating uniqueness from unnecessary identification
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-19`
+- Target: Costin Oarda post introducing Optimal Identity for DAO governance
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Costin%20Oarda%20Optimal%20Identity&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-08-privacy-preserving-verification
+- Topic: Proof of unique personhood, privacy, governance
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-19-separating-3811f6d9f8.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Separating unique participation from routine identification is a worthwhile governance goal. The difficult layer is lifecycle: enrollment errors, duplicate resolution, issuer disagreement, status changes, recovery, and appeal all need handling without turning the verifier into a permanent identity repository. Publishing the trust assumptions and privacy boundaries for cross-source resolution would help the community assess where uniqueness is proved and where correlation risk remains.
+
+### 219. Keeping sensitive verification purpose-bound
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-20`
+- Target: Hasitha A. post presenting the SOBA Network biometric verification platform
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Hasitha%20SOBA%20Network&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-08-privacy-preserving-verification
+- Topic: Biometric verification, privacy, vulnerable communities
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-20-keeping-se-1d2d73bd5d.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Designing verification so a person can prove eligibility without exposing a broader identity record is especially important in sensitive services. The governance around the biometric matters as much as the disclosure protocol: informed consent, template custody, revocation, false-match handling, non-biometric alternatives, and recourse should remain visible to the person. Keeping the proof purpose-bound can prevent a protective interaction from becoming a reusable tracking signal.
+
+### 220. Treating a national wallet as governed infrastructure
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-21`
+- Target: Suraphel Beyene post on Ethiopia's Fayda Digital Credential Wallet
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Suraphel%20Beyene%20Fayda%20Digital%20Credential%20Wallet&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-09-digital-public-infrastructure
+- Topic: Digital public infrastructure, credential wallets, service access
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-21-treating-a-bef2295982.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The infrastructure shift is consequential because reuse can remove repeated paperwork without requiring every service to collect the same identity record. Its durability will depend on issuer governance, selective disclosure, offline freshness rules, correction and recovery, verifier accountability, and usable alternatives when a wallet is unavailable. Those operating details determine whether reuse expands agency or simply centralizes friction in a new layer.
+
+### 221. Connecting threat intelligence to recovery evidence
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-22`
+- Target: Ernest Adjei post on cyber resilience of digital public infrastructure
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Ernest%20Adjei%20cyber%20resilience%20Digital%20Public%20Infrastructure&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-09-digital-public-infrastructure
+- Topic: Digital public infrastructure, threat intelligence, resilience
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-22-connecting-68b40d6723.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Connecting threat intelligence to targeted DPI risk assessment is valuable because these systems fail socially as well as technically. A resilient identity service needs tested continuity modes, trusted status and key updates, bounded offline operation, recovery priorities, public communication, and evidence that restored components rejoined the trust system correctly. Research that links observed threats to those specific recovery controls could give operators a much more actionable resilience model.
+
+### 222. Taking mDLs from conformance to dependable operations
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-23`
+- Target: Security on Screen post on HID's mobile driver's license resources
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Security%20on%20Screen%20mobile%20driver%20licenses%20HID&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Target company: Security on Screen
+- Discovery search handle: discovery-search-10-mobile-driver-license
+- Topic: Mobile driver's licenses, standards, operational verification
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-23-taking-mdl-6aef06f0b9.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Moving mDLs into everyday operations requires the standards work and the service workflow to mature together. Beyond authenticating the credential, verifiers need a defined purpose, minimal data request, reader trust, status and freshness policy, consent that is understandable in context, and a fallback when a device or network fails. Measuring unnecessary attribute requests and exception outcomes would reveal whether deployment is reducing friction without expanding data collection.
+
+### 223. Making agent context a governed dependency
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-24`
+- Target: Raintree Technology post, "At Raintree Technology, we're building the infrastructure that makes AI agents reproducible, current, usable, and governed."
+- Reference: https://www.linkedin.com/search/results/content/?keywords=DocPull%20v6.1.0%20PolicyStrata%20v1.0.5&origin=GLOBAL_SEARCH_HEADER
+- Target company: Raintree Technology
+- Discovery search handle: discovery-search-12-agent-audit-authorization
+- Topic: Agent context provenance, reproducibility, policy regression testing
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-24-making-age-c39f178c47.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> Treating context as a governed dependency is an important step toward reproducible agent behavior. A lockfile can preserve source version and extraction state; the decision record can then connect that exact context to the policy version, granted capabilities, model or runtime, action, and result. That chain makes a later review much more useful than a prompt transcript whose sources and enforcement conditions have already changed.
+
+### 224. Giving agents evidence without ambient production authority
+
+- Opportunity handle: `LI-COM-2026-07-16-positive-engagement-25`
+- Target: Kanishka Nambiar post on an evidence-first MCP operations harness
+- Reference: https://www.linkedin.com/search/results/content/?keywords=Kanishka%20Nambiar%20production%20access%20evidence&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22&datePosted=%22past-24h%22
+- Discovery search handle: discovery-search-12-agent-audit-authorization
+- Topic: MCP security, read-only evidence, gated writes, human approval
+- Status: posted
+- Comment reference: posted on target as ElevenID LLC; LinkedIn did not expose a stable comment permalink.
+- Evidence: `Ai-employees/data/linkedin-engagement/runs/2026-07-16-positive-engagement/evidence/external-comment-li-com-2026-07-16-positive-engagement-25-giving-age-86af854e03.txt`
+- Approval: approved by President on 2026-07-16
+Draft:
+
+> The read-evidence/write-gated split is a practical trust boundary. Staging through existing service methods preserves application controls, while a blast-radius preview gives the approver something concrete to evaluate. The remaining evidence chain should bind the approved preview to the exact write, authority, policy version, tool inputs, and resulting state so a changed request cannot ride on an earlier approval. How is that approval binding represented across retries?

@@ -1,0 +1,7 @@
+﻿# Exact reviewed false positives from the pre-publication full-history audit.
+# Each entry binds one finding to its commit, path, rule, and line; new findings still fail.
+
+4b3eb97d24dbdbfd1809a8c43e9b243307579737:dist/index.js:generic-api-key:5525
+4b3eb97d24dbdbfd1809a8c43e9b243307579737:dist/index.js:generic-api-key:5560
+5db4c1b52607e22d0dee7ab91f8c0c4718a0132f:src/data/guideContent.js:generic-api-key:1083
+5db4c1b52607e22d0dee7ab91f8c0c4718a0132f:src/data/guideContent.js:generic-api-key:1120
