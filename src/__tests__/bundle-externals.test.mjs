@@ -1,7 +1,7 @@
 /**
  * Bundle externals regression test
  *
- * Verifies that the built dist/index.js correctly externalizes all peer
+ * Verifies that the built dist JavaScript correctly externalizes all peer
  * dependencies (react, react-dom, react-router-dom, @mui/*) instead of
  * bundling them inline.
  *
@@ -19,13 +19,14 @@
  * IMPORTS these packages and never inlines their source.
  */
 
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { describe, it, expect, beforeAll } from 'vitest';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DIST = resolve(__dirname, '../../dist/index.js');
+const DIST_DIR = resolve(__dirname, '../../dist');
+const DIST_ENTRY = resolve(DIST_DIR, 'index.js');
 
 // Known internal symbols from each peer dep that would appear if bundled inline.
 // These strings do NOT appear in error-message template literals in the blog's
@@ -55,16 +56,19 @@ let dist;
 
 describe('@marty/blog dist externals', () => {
   beforeAll(() => {
-    if (!existsSync(DIST)) {
+    if (!existsSync(DIST_ENTRY)) {
       throw new Error(
         `dist/index.js not found. Run 'npm run build' in marty-blog before running tests.`
       );
     }
-    dist = readFileSync(DIST, 'utf-8');
+    dist = readdirSync(DIST_DIR)
+      .filter((file) => file.endsWith('.js'))
+      .map((file) => readFileSync(resolve(DIST_DIR, file), 'utf-8'))
+      .join('\n');
   });
 
   it('dist/index.js exists', () => {
-    expect(existsSync(DIST)).toBe(true);
+    expect(existsSync(DIST_ENTRY)).toBe(true);
   });
 
   it('does NOT bundle react-router-dom source inline', () => {
@@ -85,19 +89,20 @@ describe('@marty/blog dist externals', () => {
     expect(dist).not.toContain(BUNDLED_INTERNALS['@mui/icons-material']);
   });
 
-  it('imports react-router-dom as an external (single import statement)', () => {
-    // The dist should have exactly one ES import line for react-router-dom.
+  it('imports react-router-dom without namespace bundling', () => {
     const lines = dist.split('\n');
     const routerImports = lines.filter(
       l => l.startsWith('import') && l.includes('react-router-dom')
     );
-    expect(routerImports).toHaveLength(1);
-    // It should import named hooks, not the entire namespace (* as X)
-    expect(routerImports[0]).toMatch(/^\s*import\s*\{/);
+    expect(routerImports.length).toBeGreaterThan(0);
+    // Shared chunks may emit a side-effect import, but should never pull an
+    // entire duplicate router namespace into the package.
+    routerImports.forEach((line) => expect(line).not.toMatch(/import\s+\*\s+as/));
   });
 
   it.each(EXPECTED_IMPORTS)('imports %s as an external', (pkg) => {
-    expect(dist).toContain(`from "${pkg}"`);
+    const resolvedPkg = pkg.startsWith('@mui/icons-material/') ? `${pkg}.js` : pkg;
+    expect(dist).toContain(`from "${resolvedPkg}"`);
   });
 
   it('lists react-router-dom in peerDependencies, not in dependencies', async () => {

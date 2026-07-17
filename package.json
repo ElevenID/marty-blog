@@ -1,6 +1,6 @@
 {
   "name": "@elevenid/marty-blog",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Marty Identity Protocol blog - posts, authors, and protocol guide",
   "license": "AGPL-3.0-only",
   "repository": {
@@ -15,40 +15,40 @@
     "node": ">=22.14.0"
   },
   "type": "module",
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "default": "./src/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./blog-page": {
-      "import": "./src/components/BlogPage.jsx",
-      "default": "./src/components/BlogPage.jsx"
+      "import": "./dist/blog-page.js",
+      "default": "./dist/blog-page.js"
     },
     "./blog-post-page": {
-      "import": "./src/components/BlogPostPage.jsx",
-      "default": "./src/components/BlogPostPage.jsx"
+      "import": "./dist/blog-post-page.js",
+      "default": "./dist/blog-post-page.js"
     },
     "./authors-page": {
-      "import": "./src/components/AuthorsPage.jsx",
-      "default": "./src/components/AuthorsPage.jsx"
+      "import": "./dist/authors-page.js",
+      "default": "./dist/authors-page.js"
     },
     "./author-page": {
-      "import": "./src/components/AuthorPage.jsx",
-      "default": "./src/components/AuthorPage.jsx"
+      "import": "./dist/author-page.js",
+      "default": "./dist/author-page.js"
     },
     "./foundations-page": {
-      "import": "./src/components/FoundationsPage.jsx",
-      "default": "./src/components/FoundationsPage.jsx"
+      "import": "./dist/foundations-page.js",
+      "default": "./dist/foundations-page.js"
     },
     "./prerender-data": {
-      "import": "./src/prerenderData.js",
-      "default": "./src/prerenderData.js"
+      "import": "./dist/prerender-data.js",
+      "default": "./dist/prerender-data.js"
     }
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "vite build",
