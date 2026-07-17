@@ -7,27 +7,27 @@
  */
 
 import { Box, Typography, Paper, Chip, Button, Divider, Avatar, Grid, Card, CardContent, CardActionArea, useMediaQuery, useTheme } from '@mui/material';
-import { SEOHead } from '../seo';
-import { articleSchema } from '../seo/structuredData';
+import { SEOHead } from '../seo/index.js';
+import { articleSchema } from '../seo/structuredData.js';
 import { Link, useParams } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { BLOG_POSTS, BLOG_AUTHORS } from '../data';
-import { GUIDE_ARTICLE_MAP, BLOG_POST_CONCEPT_TAGS, BLOG_POST_STANDARDS_TAGS } from '../data';
-import { SERIES_BY_POST_SLUG } from '../data';
-import { getBlogSocialImageUrl } from '../data/blogSocialImages';
-import ProtocolGuidePage from './ProtocolGuidePage';
-import SeriesNav from './SeriesNav';
-import ProtocolContextHeader from './ProtocolContextHeader';
-import ArticleTableOfContents from './ArticleTableOfContents';
-import ContinueLearning from './ContinueLearning';
-import ArticleContent from './ArticleContent';
-import Breadcrumbs from './Breadcrumbs';
-import ReadingProgressBar from './ReadingProgressBar';
-import AIDisclosureBanner from './AIDisclosureBanner';
-import ProductBridgeCTA from './ProductBridgeCTA';
-import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta';
-import { buildBlogTagPath } from '../utils/blogTagRoutes';
+import { BLOG_POSTS, BLOG_AUTHORS } from '../data/index.js';
+import { GUIDE_ARTICLE_MAP, BLOG_POST_CONCEPT_TAGS, BLOG_POST_STANDARDS_TAGS } from '../data/index.js';
+import { SERIES_BY_POST_SLUG } from '../data/index.js';
+import { getBlogSocialImageUrl } from '../data/blogSocialImages.js';
+import ProtocolGuidePage from './ProtocolGuidePage.jsx';
+import SeriesNav from './SeriesNav.jsx';
+import ProtocolContextHeader from './ProtocolContextHeader.jsx';
+import ArticleTableOfContents from './ArticleTableOfContents.jsx';
+import ContinueLearning from './ContinueLearning.jsx';
+import ArticleContent from './ArticleContent.jsx';
+import Breadcrumbs from './Breadcrumbs.jsx';
+import ReadingProgressBar from './ReadingProgressBar.jsx';
+import AIDisclosureBanner from './AIDisclosureBanner.jsx';
+import ProductBridgeCTA from './ProductBridgeCTA.jsx';
+import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta.js';
+import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
 
 const TODAY = new Date().toISOString().split('T')[0];
 

@@ -15,7 +15,7 @@
 import { Fragment } from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { headingToId } from './ArticleTableOfContents';
+import { headingToId } from './ArticleTableOfContents.jsx';
 
 /**
  * Protocol terms -> canonical article slugs.

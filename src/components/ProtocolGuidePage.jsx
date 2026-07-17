@@ -43,10 +43,10 @@ import CodeIcon from '@mui/icons-material/Code';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SchoolIcon from '@mui/icons-material/School';
-import { SEOHead } from '../seo';
-import { articleSchema } from '../seo/structuredData';
-import { buildBlogTagPath } from '../utils/blogTagRoutes';
-import ContinueLearning from './ContinueLearning';
+import { SEOHead } from '../seo/index.js';
+import { articleSchema } from '../seo/structuredData.js';
+import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
+import ContinueLearning from './ContinueLearning.jsx';
 import {
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES,
@@ -54,7 +54,7 @@ import {
   GUIDE_ARTICLE_SLUGS,
   GUIDE_ARTICLES_BY_CHAPTER,
   getHandbookArticleNavigation,
-} from '../data';
+} from '../data/index.js';
 
 const SIDEBAR_WIDTH = 256;
 

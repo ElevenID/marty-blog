@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import { buildSearchResults, buildTagResults } from '../components/BlogPage';
-import { BLOG_POSTS } from '../data/blogPosts';
-import { GUIDE_ARTICLES, GUIDE_CHAPTERS } from '../data/guideContent';
-import { getBrowseVisiblePosts } from '../data/articleMeta';
+import { buildSearchResults, buildTagResults } from '../components/BlogPage.jsx';
+import { BLOG_POSTS } from '../data/blogPosts.js';
+import { GUIDE_ARTICLES, GUIDE_CHAPTERS } from '../data/guideContent.js';
+import { getBrowseVisiblePosts } from '../data/articleMeta.js';
 
 const browseVisiblePosts = [...getBrowseVisiblePosts(BLOG_POSTS)].sort(
   (a, b) => new Date(b.date) - new Date(a.date),

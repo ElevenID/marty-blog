@@ -17,15 +17,15 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { Link } from 'react-router-dom';
-import { BLOG_POSTS } from '../data';
+import { BLOG_POSTS } from '../data/index.js';
 import {
   SERIES_BY_POST_SLUG,
   START_HERE_SLUGS,
   HANDBOOK_PARTS,
   getHandbookArticleNavigation,
-} from '../data';
-import { ARTICLE_META, isBrowseVisibleArticleSlug } from '../data/articleMeta';
-import { truncateAtWord } from '../utils/blogText';
+} from '../data/index.js';
+import { ARTICLE_META, isBrowseVisibleArticleSlug } from '../data/articleMeta.js';
+import { truncateAtWord } from '../utils/blogText.js';
 
 function ArticleNavCard({ label, title, subtitle, to, align = 'left', direction = 'forward' }) {
   const isForward = direction === 'forward';

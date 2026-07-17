@@ -10,8 +10,8 @@ import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { Link } from 'react-router-dom';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
 
 function HeroSection() {
   const articleCount = getBrowseVisiblePosts(BLOG_POST_SUMMARIES).length;

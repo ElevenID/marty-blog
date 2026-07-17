@@ -4,7 +4,7 @@ import {
   HANDBOOK_ARTICLE_SLUGS,
   getHandbookArticleNavigation,
   isHandbookArticleSlug,
-} from '../data/handbookContent';
+} from '../data/handbookContent.js';
 
 describe('handbook navigation metadata', () => {
   it('keeps the handbook article order stable', () => {

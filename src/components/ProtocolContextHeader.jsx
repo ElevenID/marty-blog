@@ -8,10 +8,10 @@
 
 import { Box, Typography, Chip } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { BLOG_POSTS } from '../data';
-import { ARTICLE_META, LAYER_COLORS, LAYER_LABELS, DIFFICULTY_COLORS, isBrowseVisibleArticleSlug } from '../data/articleMeta';
-import { SERIES_BY_POST_SLUG, START_HERE_SLUGS } from '../data';
-import { truncateAtWord } from '../utils/blogText';
+import { BLOG_POSTS } from '../data/index.js';
+import { ARTICLE_META, LAYER_COLORS, LAYER_LABELS, DIFFICULTY_COLORS, isBrowseVisibleArticleSlug } from '../data/articleMeta.js';
+import { SERIES_BY_POST_SLUG, START_HERE_SLUGS } from '../data/index.js';
+import { truncateAtWord } from '../utils/blogText.js';
 
 function ProtocolContextHeader({ slug }) {
   const meta = ARTICLE_META[slug];

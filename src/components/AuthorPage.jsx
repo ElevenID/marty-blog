@@ -9,11 +9,11 @@ import { Box, Typography, Avatar, Chip, Paper, Grid, Card, CardContent, CardActi
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useParams, useNavigate } from 'react-router-dom';
-import { SEOHead } from '../seo';
-import { personSchema } from '../seo/structuredData';
-import { BLOG_AUTHORS } from '../data/blogAuthors';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
+import { SEOHead } from '../seo/index.js';
+import { personSchema } from '../seo/structuredData.js';
+import { BLOG_AUTHORS } from '../data/blogAuthors.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
 
 const CATEGORY_COLORS = {
   Announcement: 'primary',

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
-import { BLOG_AUTHORS } from '../data/blogAuthors';
-import { GUIDE_ARTICLES } from '../data/guideContent';
-import { BLOG_POSTS } from '../data/blogPosts';
-import { BLOG_ROADMAP } from '../data/blogRoadmap';
-import { BLOG_SERIES } from '../data/blogSeries';
-import { normalizeBlogText } from '../utils/blogText';
+import { BLOG_AUTHORS } from '../data/blogAuthors.js';
+import { GUIDE_ARTICLES } from '../data/guideContent.js';
+import { BLOG_POSTS } from '../data/blogPosts.js';
+import { BLOG_ROADMAP } from '../data/blogRoadmap.js';
+import { BLOG_SERIES } from '../data/blogSeries.js';
+import { normalizeBlogText } from '../utils/blogText.js';
 
 describe('blog content normalization', () => {
   it('repairs common mojibake sequences', () => {

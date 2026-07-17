@@ -12,14 +12,14 @@ import { Box, Typography, Paper, Chip, Divider, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { SEOHead } from '../seo';
+import { SEOHead } from '../seo/index.js';
 import { useNavigate } from 'react-router-dom';
-import { GUIDE_ARTICLE_MAP, HANDBOOK_PARTS } from '../data';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { ARTICLE_BROWSE_PRIMITIVES_BY_SLUG } from '../data/articleBrowseContext';
-import { LAYER_COLORS } from '../data/articleMeta';
-import { isBrowseHiddenArticleSlug } from '../data/articleBrowseVisibility';
-import { truncateAtWord } from '../utils/blogText';
+import { GUIDE_ARTICLE_MAP, HANDBOOK_PARTS } from '../data/index.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { ARTICLE_BROWSE_PRIMITIVES_BY_SLUG } from '../data/articleBrowseContext.js';
+import { LAYER_COLORS } from '../data/articleMeta.js';
+import { isBrowseHiddenArticleSlug } from '../data/articleBrowseVisibility.js';
+import { truncateAtWord } from '../utils/blogText.js';
 
 function computePartTime(slugs) {
   return slugs.reduce((sum, slug) => {

@@ -7,10 +7,10 @@
 
 import { Box, Typography, Card, CardActionArea, CardContent, Chip, IconButton } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { BLOG_AUTHORS } from '../data/blogAuthors';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { isBrowseVisibleArticleSlug } from '../data/articleBrowseVisibility';
-import { truncateAtWord } from '../utils/blogText';
+import { BLOG_AUTHORS } from '../data/blogAuthors.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { isBrowseVisibleArticleSlug } from '../data/articleBrowseVisibility.js';
+import { truncateAtWord } from '../utils/blogText.js';
 
 const TODAY = new Date().toISOString().split('T')[0];
 

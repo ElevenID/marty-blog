@@ -11,7 +11,7 @@ import { Box, Typography, Tooltip, Collapse, useMediaQuery, useTheme } from '@mu
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { Link } from 'react-router-dom';
-import { normalizeBlogData } from '../utils/blogText';
+import { normalizeBlogData } from '../utils/blogText.js';
 
 const LAYERS = normalizeBlogData([
   {

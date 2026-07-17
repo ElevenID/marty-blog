@@ -9,9 +9,9 @@ import { Box, Typography, Paper, List, ListItem, ListItemIcon, ListItemText, Lis
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
-import { START_HERE_SLUGS } from '../data';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { truncateAtWord } from '../utils/blogText';
+import { START_HERE_SLUGS } from '../data/index.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { truncateAtWord } from '../utils/blogText.js';
 
 function StartHereSection() {
   const posts = START_HERE_SLUGS

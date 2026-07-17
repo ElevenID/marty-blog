@@ -9,9 +9,9 @@ import { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { Link } from 'react-router-dom';
-import { ARTICLE_META, LAYER_LABELS } from '../data/articleMeta';
-import { SECTION_BY_SLUG } from '../data';
-import { buildBlogTagPath } from '../utils/blogTagRoutes';
+import { ARTICLE_META, LAYER_LABELS } from '../data/articleMeta.js';
+import { SECTION_BY_SLUG } from '../data/index.js';
+import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
 
 const SECTION_LABELS = {
   featured: 'Featured',

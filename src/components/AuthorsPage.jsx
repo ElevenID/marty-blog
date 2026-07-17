@@ -9,12 +9,12 @@ import { Box, Typography, Card, CardContent, CardActionArea, Grid, Chip, Avatar,
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useNavigate } from 'react-router-dom';
-import { SEOHead } from '../seo';
-import { collectionPageSchema } from '../seo/structuredData';
-import { BLOG_AUTHORS } from '../data/blogAuthors';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { BLOG_ROADMAP } from '../data/blogRoadmap';
-import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
+import { SEOHead } from '../seo/index.js';
+import { collectionPageSchema } from '../seo/structuredData.js';
+import { BLOG_AUTHORS } from '../data/blogAuthors.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { BLOG_ROADMAP } from '../data/blogRoadmap.js';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
 
 function AuthorsPage() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { BLOG_POSTS } from '../data/blogPosts';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { BLOG_POSTS } from '../data/blogPosts.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 
 describe('blog post summaries', () => {
   it('stay aligned with full post card fields', () => {

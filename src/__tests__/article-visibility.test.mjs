@@ -1,21 +1,21 @@
 import { describe, expect, it } from 'vitest';
 
-import { BLOG_POSTS } from '../data/blogPosts';
+import { BLOG_POSTS } from '../data/blogPosts.js';
 import {
   ARTICLE_META,
   getBrowseVisiblePosts,
   getCanonicalArticleSlug,
   getLegacyArticleMeta,
   isBrowseVisibleArticleSlug,
-} from '../data/articleMeta';
+} from '../data/articleMeta.js';
 import {
   ARTICLE_BROWSE_PRIMITIVES_BY_SLUG,
   ARTICLE_BROWSE_TOPICS_BY_SLUG,
-} from '../data/articleBrowseContext';
+} from '../data/articleBrowseContext.js';
 import {
   BROWSE_HIDDEN_ARTICLE_SLUGS,
   LEGACY_ARTICLE_SLUGS,
-} from '../data/articleBrowseVisibility';
+} from '../data/articleBrowseVisibility.js';
 
 const TODAY_ISO = new Date().toISOString().split('T')[0];
 

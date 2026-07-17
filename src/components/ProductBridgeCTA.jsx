@@ -9,8 +9,8 @@
 import { Box, Typography, Button, Paper } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
-import { ARTICLE_META } from '../data/articleMeta';
-import { normalizeBlogData } from '../utils/blogText';
+import { ARTICLE_META } from '../data/articleMeta.js';
+import { normalizeBlogData } from '../utils/blogText.js';
 
 /**
  * CTA options keyed by layer. Each article’s layer maps to the most

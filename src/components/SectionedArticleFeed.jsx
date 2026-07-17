@@ -10,10 +10,10 @@ import {
   Box, Typography, Grid, Chip, Button, Divider,
 } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
-import { BLOG_SERIES, SECTION_BY_SLUG } from '../data';
-import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility';
-import SeriesBlock from './SeriesBlock';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
+import { BLOG_SERIES, SECTION_BY_SLUG } from '../data/index.js';
+import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
+import SeriesBlock from './SeriesBlock.jsx';
 
 const TODAY = new Date().toISOString().split('T')[0];
 

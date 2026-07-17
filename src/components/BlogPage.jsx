@@ -18,37 +18,37 @@ import {
 } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { SEOHead } from '../seo';
-import { collectionPageSchema } from '../seo/structuredData';
+import { SEOHead } from '../seo/index.js';
+import { collectionPageSchema } from '../seo/structuredData.js';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { BLOG_AUTHORS } from '../data';
-import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries';
+import { BLOG_AUTHORS } from '../data/index.js';
+import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import {
   GUIDE_ARTICLES,
   GUIDE_CHAPTERS,
   GUIDE_ARTICLES_BY_CHAPTER,
-} from '../data';
+} from '../data/index.js';
 import {
   BLOG_POST_CONCEPT_TAGS,
   BLOG_POST_STANDARDS_TAGS,
   SERIES_BY_POST_SLUG,
   BLOG_SERIES,
   SECTION_BY_SLUG,
-} from '../data';
-import { ARTICLE_BROWSE_TOPICS_BY_SLUG } from '../data/articleBrowseContext';
-import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta';
+} from '../data/index.js';
+import { ARTICLE_BROWSE_TOPICS_BY_SLUG } from '../data/articleBrowseContext.js';
+import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta.js';
 import {
   buildCanonicalBlogTagPath,
   buildBlogTagPath,
   decodeBlogTagParam,
   findMatchingTagLabel,
   normalizeTag,
-} from '../utils/blogTagRoutes';
-import HeroSection from './HeroSection';
-import StartHereSection from './StartHereSection';
-import ProtocolDiagramSection from './ProtocolDiagramSection';
-import BlogSubNav from './BlogSubNav';
-import SystemMap from './SystemMap';
+} from '../utils/blogTagRoutes.js';
+import HeroSection from './HeroSection.jsx';
+import StartHereSection from './StartHereSection.jsx';
+import ProtocolDiagramSection from './ProtocolDiagramSection.jsx';
+import BlogSubNav from './BlogSubNav.jsx';
+import SystemMap from './SystemMap.jsx';
 
 const TODAY = new Date().toISOString().split('T')[0];
 const SCROLL_MT = { scrollMarginTop: '56px' };

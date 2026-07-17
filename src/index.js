@@ -10,18 +10,18 @@
  */
 
 // Page components
-export { default as BlogPage } from './components/BlogPage';
-export { default as BlogPostPage } from './components/BlogPostPage';
-export { default as AuthorsPage } from './components/AuthorsPage';
-export { default as AuthorPage } from './components/AuthorPage';
-export { default as ProtocolGuidePage } from './components/ProtocolGuidePage';
-export { default as FoundationsPage } from './components/FoundationsPage';
+export { default as BlogPage } from './components/BlogPage.jsx';
+export { default as BlogPostPage } from './components/BlogPostPage.jsx';
+export { default as AuthorsPage } from './components/AuthorsPage.jsx';
+export { default as AuthorPage } from './components/AuthorPage.jsx';
+export { default as ProtocolGuidePage } from './components/ProtocolGuidePage.jsx';
+export { default as FoundationsPage } from './components/FoundationsPage.jsx';
 
 // Shared components
-export { default as Breadcrumbs } from './components/Breadcrumbs';
-export { default as ReadingProgressBar } from './components/ReadingProgressBar';
-export { default as AIDisclosureBanner } from './components/AIDisclosureBanner';
-export { default as ProductBridgeCTA } from './components/ProductBridgeCTA';
+export { default as Breadcrumbs } from './components/Breadcrumbs.jsx';
+export { default as ReadingProgressBar } from './components/ReadingProgressBar.jsx';
+export { default as AIDisclosureBanner } from './components/AIDisclosureBanner.jsx';
+export { default as ProductBridgeCTA } from './components/ProductBridgeCTA.jsx';
 
 // Data
 export {
@@ -44,14 +44,14 @@ export {
   ARTICLE_META,
   LAYER_COLORS,
   DIFFICULTY_COLORS,
-} from './data';
+} from './data/index.js';
 
 // SEO utilities (available for the host app if needed)
-export { default as SEOHead } from './seo/SEOHead';
+export { default as SEOHead } from './seo/SEOHead.jsx';
 export {
   articleSchema,
   collectionPageSchema,
   organizationSchema,
   personSchema,
   softwareApplicationSchema,
-} from './seo/structuredData';
+} from './seo/structuredData.js';

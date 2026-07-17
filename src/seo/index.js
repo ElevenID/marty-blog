@@ -1,4 +1,4 @@
-export { default as SEOHead } from './SEOHead';
+export { default as SEOHead } from './SEOHead.jsx';
 export {
 	organizationSchema,
 	softwareApplicationSchema,
@@ -6,4 +6,4 @@ export {
 	collectionPageSchema,
 	personSchema,
 	protocolSchema,
-} from './structuredData';
+} from './structuredData.js';
