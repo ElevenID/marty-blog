@@ -33,6 +33,17 @@ export default defineConfig({
   // content. Do not duplicate the full social-image catalog in the package.
   publicDir: false,
   plugins: [react()],
+  test: {
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.{js,jsx}'],
+      exclude: ['src/**/__tests__/**'],
+      thresholds: {
+        lines: 90,
+        branches: 80,
+      },
+    },
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,

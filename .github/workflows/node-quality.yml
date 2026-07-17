@@ -1,0 +1,23 @@
+name: Node Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: node-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  node-quality:
+    uses: ElevenID/.github/.github/workflows/quality-node.yml@8b1f2cacaf235b41f3cb45a7180ea306d3a398b8
+    with:
+      node-version: "22"
+      type-command: ""
+      test-command: npm run test:coverage

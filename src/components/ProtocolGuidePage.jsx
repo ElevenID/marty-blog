@@ -49,7 +49,6 @@ import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
 import ContinueLearning from './ContinueLearning.jsx';
 import {
   GUIDE_CHAPTERS,
-  GUIDE_ARTICLES,
   GUIDE_ARTICLE_MAP,
   GUIDE_ARTICLE_SLUGS,
   GUIDE_ARTICLES_BY_CHAPTER,

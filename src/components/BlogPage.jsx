@@ -839,7 +839,7 @@ function BlogPage() {
       clearTimeout(timer);
       observer.disconnect();
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   // Resolve series slugs -> post objects
   const getSeriesArticles = useCallback((seriesIds) => {

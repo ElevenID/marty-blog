@@ -830,7 +830,7 @@ const stripFutureUpdatedDate = (post) => {
     return post;
   }
 
-  const { updatedDate, ...rest } = post;
+  const { updatedDate: _updatedDate, ...rest } = post;
   return rest;
 };
 

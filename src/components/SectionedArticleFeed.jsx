@@ -15,8 +15,6 @@ import { BLOG_SERIES, SECTION_BY_SLUG } from '../data/index.js';
 import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
 import SeriesBlock from './SeriesBlock.jsx';
 
-const TODAY = new Date().toISOString().split('T')[0];
-
 const INITIAL_RECENT_COUNT = 9;
 const LOAD_MORE_INCREMENT = 9;
 
@@ -77,6 +75,9 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
   // --- Filtered mode: flat grid ---
   const filteredPosts = useMemo(() => {
     let posts = allPosts;
+    if (categoryFilter && categoryFilter !== 'All') {
+      posts = posts.filter((post) => post.category === categoryFilter);
+    }
     // Topic filter
     if (topicFilter && topicFilter !== 'All' && TOPIC_MATCHERS[topicFilter]) {
       posts = posts.filter(TOPIC_MATCHERS[topicFilter]);
@@ -92,7 +93,7 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
       );
     }
     return posts;
-  }, [allPosts, topicFilter, searchFilter]);
+  }, [allPosts, categoryFilter, topicFilter, searchFilter]);
 
   if (isFiltered) {
     return (

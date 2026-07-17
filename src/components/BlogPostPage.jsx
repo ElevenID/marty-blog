@@ -29,8 +29,6 @@ import ProductBridgeCTA from './ProductBridgeCTA.jsx';
 import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta.js';
 import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
 
-const TODAY = new Date().toISOString().split('T')[0];
-
 const CATEGORY_COLORS = {
   Announcement: 'primary',
   Technical: 'info',

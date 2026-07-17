@@ -33,7 +33,6 @@ function BlogSubNav({ searchValue, onSearch, onNavigateAuthors, sectionNavEnable
   // Scroll-spy: highlight the nav item whose section is near the viewport top
   useEffect(() => {
     if (!sectionNavEnabled) {
-      setActiveSection('overview');
       return undefined;
     }
 
