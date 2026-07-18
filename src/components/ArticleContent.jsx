@@ -100,7 +100,7 @@ function LinkedParagraph({ text, currentSlug }) {
   const parts = splitWithLinks(text, currentSlug);
 
   return (
-    <Typography variant="body1" paragraph sx={{ lineHeight: 1.85, fontSize: '1.05rem' }}>
+    <Typography component="p" variant="body1" sx={{ mb: 2, lineHeight: 1.85, fontSize: '1.05rem' }}>
       {parts.map((part, i) => {
         if (typeof part === 'string') {
           return <Fragment key={i}>{part}</Fragment>;
@@ -230,7 +230,7 @@ function ResourceList({ block }) {
       )}
       <Box sx={{ display: 'grid', gap: 1.5 }}>
         {block.items.map((item) => (
-          <Box key={item.href}>
+          <Box key={item.href ?? item.label}>
             <Typography
               component="a"
               href={item.href}

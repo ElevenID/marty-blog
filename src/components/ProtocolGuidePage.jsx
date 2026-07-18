@@ -173,7 +173,7 @@ function ContentBlock({ block }) {
     return <CodeBlock label={block.label} lang={block.lang} code={block.code} />;
   }
   return (
-    <Typography variant="body1" paragraph sx={{ lineHeight: 1.85, fontSize: '1.05rem' }}>
+    <Typography component="p" variant="body1" sx={{ mb: 2, lineHeight: 1.85, fontSize: '1.05rem' }}>
       {block.text}
     </Typography>
   );

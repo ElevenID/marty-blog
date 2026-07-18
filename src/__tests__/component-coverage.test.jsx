@@ -141,19 +141,23 @@ describe('published pages', () => {
     expect(document.body.textContent).toMatch(/foundation/i);
   });
 
-  it('renders every author and representative article variants', () => {
+  it('renders every author', () => {
     for (const authorId of Object.keys(BLOG_AUTHORS)) {
       renderRoute(`/authors/${authorId}`, '/authors/:authorId', <AuthorPage />);
       expect(document.body.textContent).toContain(BLOG_AUTHORS[authorId].name);
       cleanup();
     }
+  });
 
+  it('renders representative blog article variants', () => {
     for (const post of BLOG_POSTS.slice(0, 12)) {
       renderRoute(`/blog/${post.slug}`, '/blog/:slug', <BlogPostPage />);
       expect(document.body.textContent).toContain(post.title);
       cleanup();
     }
+  });
 
+  it('renders representative guide article variants', () => {
     for (const article of GUIDE_ARTICLES.slice(0, 8)) {
       renderRoute(`/guide/${article.slug}`, '/guide/:slug', <ProtocolGuidePage />);
       expect(document.body.textContent).toContain(article.title);
@@ -172,8 +176,8 @@ describe('shared components', () => {
         type: 'resources',
         title: 'References',
         items: [
-          { label: 'Protocol', url: 'https://example.com/protocol', note: 'Normative reference' },
-          { label: 'Local guide', url: '/guide/foundations-identity' },
+          { label: 'Protocol', href: 'https://example.com/protocol', note: 'Normative reference' },
+          { label: 'Local guide', href: '/guide/foundations-identity' },
         ],
       },
     ];
