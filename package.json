@@ -12,7 +12,7 @@
     "provenance": true
   },
   "engines": {
-    "node": ">=22.14.0"
+    "node": ">=24"
   },
   "type": "module",
   "main": "./dist/index.js",
@@ -57,6 +57,7 @@
     "export:social-image-manifest": "node scripts/export-social-image-manifest.mjs",
     "export:grammar-review": "node scripts/export-grammar-review-manifest.mjs",
     "lint": "eslint src --ext .js,.jsx",
+    "pretest": "npm run build",
     "test": "vitest run",
     "test:coverage": "npm run build && vitest run --coverage",
     "test:watch": "vitest"

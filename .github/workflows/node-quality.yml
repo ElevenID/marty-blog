@@ -16,8 +16,8 @@ concurrency:
 
 jobs:
   node-quality:
-    uses: ElevenID/.github/.github/workflows/quality-node.yml@8b1f2cacaf235b41f3cb45a7180ea306d3a398b8
+    uses: ElevenID/.github/.github/workflows/quality-node.yml@9b6141e294da5c0f9254cfaa60c8934df95ec68b
     with:
-      node-version: "22"
+      node-version: "24"
       type-command: ""
       test-command: npm run test:coverage
