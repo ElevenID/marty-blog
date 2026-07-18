@@ -471,7 +471,7 @@ function ProtocolGuideSection() {
       {/* Guide article cards for selected chapter */}
       <Grid container spacing={2}>
         {chapterArticles.map((article) => (
-          <Grid item xs={12} sm={6} md={3} key={article.slug}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={article.slug}>
             <GuideArticleCard article={article} />
           </Grid>
         ))}
@@ -684,7 +684,7 @@ function SectionArticleGrid({ title, description, posts }) {
       )}
       <Grid container spacing={2.5}>
         {posts.map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.slug}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
             <PostCard post={post} />
           </Grid>
         ))}
@@ -716,7 +716,7 @@ function LatestFeed({ articles }) {
       </Typography>
       <Grid container spacing={2.5}>
         {articles.slice(0, count).map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.slug}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
             <PostCard post={post} />
           </Grid>
         ))}
@@ -839,7 +839,7 @@ function BlogPage() {
       clearTimeout(timer);
       observer.disconnect();
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   // Resolve series slugs -> post objects
   const getSeriesArticles = useCallback((seriesIds) => {
@@ -991,7 +991,7 @@ function BlogPage() {
           {flatResults.length > 0 ? (
             <Grid container spacing={2}>
               {flatResults.map((result) => (
-                <Grid item xs={12} sm={6} md={4} key={`${result.kind}:${result.slug}`}>
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={`${result.kind}:${result.slug}`}>
                   {result.kind === 'guide' ? (
                     <GuideSearchCard
                       article={result.item}

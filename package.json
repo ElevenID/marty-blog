@@ -58,6 +58,7 @@
     "export:grammar-review": "node scripts/export-grammar-review-manifest.mjs",
     "lint": "eslint src --ext .js,.jsx",
     "test": "vitest run",
+    "test:coverage": "npm run build && vitest run --coverage",
     "test:watch": "vitest"
   },
   "peerDependencies": {
@@ -73,9 +74,18 @@
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@eslint/js": "^9.39.5",
     "@mui/icons-material": "^9.2.0",
     "@mui/material": "^9.2.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0",
+    "jsdom": "^29.1.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1",

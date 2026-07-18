@@ -147,7 +147,7 @@ function AuthorPage() {
 
       {characterProfile && (
         <Grid container spacing={3} sx={{ mb: 5 }}>
-          <Grid item xs={12} md={7}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Paper variant="outlined" sx={{ p: 3, borderRadius: 3, height: '100%' }}>
               <Typography
                 variant="overline"
@@ -175,7 +175,7 @@ function AuthorPage() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <Paper variant="outlined" sx={{ p: 3, borderRadius: 3, height: '100%' }}>
               <Typography variant="caption" fontWeight={700} color="text.secondary" sx={{ display: 'block', mb: 1, textTransform: 'uppercase', letterSpacing: 1 }}>
                 What this voice notices first
@@ -216,10 +216,10 @@ function AuthorPage() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Paper variant="outlined" sx={{ p: 3, borderRadius: 3 }}>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="caption" fontWeight={700} color="text.secondary" sx={{ display: 'block', mb: 1, textTransform: 'uppercase', letterSpacing: 1 }}>
                     Signature moves
                   </Typography>
@@ -232,7 +232,7 @@ function AuthorPage() {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <Typography variant="caption" fontWeight={700} color="text.secondary" sx={{ display: 'block', mb: 1, textTransform: 'uppercase', letterSpacing: 1 }}>
                     Best used for
                   </Typography>
@@ -283,7 +283,7 @@ function AuthorPage() {
           {authorPosts.map((post) => {
             const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             return (
-              <Grid item xs={12} sm={6} md={4} key={post.slug}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
                 <Card
                   elevation={1}
                   sx={{

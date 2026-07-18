@@ -49,7 +49,6 @@ import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
 import ContinueLearning from './ContinueLearning.jsx';
 import {
   GUIDE_CHAPTERS,
-  GUIDE_ARTICLES,
   GUIDE_ARTICLE_MAP,
   GUIDE_ARTICLE_SLUGS,
   GUIDE_ARTICLES_BY_CHAPTER,
@@ -174,7 +173,7 @@ function ContentBlock({ block }) {
     return <CodeBlock label={block.label} lang={block.lang} code={block.code} />;
   }
   return (
-    <Typography variant="body1" paragraph sx={{ lineHeight: 1.85, fontSize: '1.05rem' }}>
+    <Typography component="p" variant="body1" sx={{ mb: 2, lineHeight: 1.85, fontSize: '1.05rem' }}>
       {block.text}
     </Typography>
   );
@@ -237,11 +236,13 @@ function GuideSidebar({ currentSlug }) {
               >
                 <ListItemText
                   primary={article.title}
-                  primaryTypographyProps={{
-                    variant: 'body2',
-                    fontWeight: isActive ? 700 : 400,
-                    color: isActive ? 'primary.main' : 'text.primary',
-                    sx: { lineHeight: 1.4, fontSize: '0.84rem' },
+                  slotProps={{
+                    primary: {
+                      variant: 'body2',
+                      fontWeight: isActive ? 700 : 400,
+                      color: isActive ? 'primary.main' : 'text.primary',
+                      sx: { lineHeight: 1.4, fontSize: '0.84rem' },
+                    },
                   }}
                 />
               </ListItemButton>

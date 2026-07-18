@@ -121,8 +121,6 @@ function FoundationsPage() {
       {HANDBOOK_PARTS.map((part, partIdx) => {
         const layerColor = LAYER_COLORS[part.layer] || '#546e7a';
         const partMinutes = computePartTime(part.slugs);
-        const partStartNum = articleCounter + 1;
-
         return (
           <Box key={part.part} sx={{ mb: { xs: 6, md: 8 } }}>
             {/* Part header */}

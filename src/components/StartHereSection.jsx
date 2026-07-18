@@ -107,8 +107,10 @@ function StartHereSection() {
                     </Typography>
                   </>
                 }
-                primaryTypographyProps={{ fontWeight: 700, fontSize: '0.95rem' }}
-                secondaryTypographyProps={{ component: 'div', fontSize: '0.8rem', lineHeight: 1.5 }}
+                slotProps={{
+                  primary: { fontWeight: 700, fontSize: '0.95rem' },
+                  secondary: { component: 'div', fontSize: '0.8rem', lineHeight: 1.5 },
+                }}
               />
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ml: 2, color: 'primary.main', flexShrink: 0 }}>
                 <Typography variant="caption" sx={{ fontWeight: 800, letterSpacing: 0.2 }}>
