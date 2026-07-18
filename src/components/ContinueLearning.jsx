@@ -5,22 +5,18 @@
  * Continue Learning
  *
  * Bottom-of-article component that guides readers to the next step.
- * Three modes:
- *   1. Series - shows series progress with next article
- *   2. Start Here - shows learning path progress
- *   3. Related - shows recommended articles from article metadata
+ * Handbook articles use the canonical handbook navigation. Other articles use
+ * series progress or metadata-driven recommendations.
  */
 
 import { Box, Typography, Button, Chip, Paper, LinearProgress } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../data/index.js';
 import {
   SERIES_BY_POST_SLUG,
-  START_HERE_SLUGS,
   HANDBOOK_PARTS,
   getHandbookArticleNavigation,
 } from '../data/index.js';
@@ -116,7 +112,6 @@ function resolveHandbookRelatedSlugs(slug, handbookInfo, relatedSlugs) {
 
 function ContinueLearning({ slug }) {
   const seriesInfo = SERIES_BY_POST_SLUG[slug];
-  const startHereIdx = START_HERE_SLUGS.indexOf(slug);
   const meta = ARTICLE_META[slug];
   const handbookInfo = getHandbookArticleNavigation(slug);
 
@@ -190,126 +185,7 @@ function ContinueLearning({ slug }) {
     );
   }
 
-  // Mode 1: Start Here learning path
-  if (startHereIdx >= 0) {
-    const nextSlug = startHereIdx < START_HERE_SLUGS.length - 1 ? START_HERE_SLUGS[startHereIdx + 1] : null;
-    const nextPost = nextSlug ? BLOG_POSTS.find((p) => p.slug === nextSlug) : null;
-    const progress = ((startHereIdx + 1) / START_HERE_SLUGS.length) * 100;
-
-    return (
-      <Paper
-        elevation={0}
-        sx={{
-          mt: 6,
-          p: { xs: 3, md: 4 },
-          borderRadius: 3,
-          border: '2px solid',
-          borderColor: 'primary.main',
-          bgcolor: 'primary.50',
-        }}
-      >
-        <Typography
-          variant="overline"
-          sx={{ display: 'block', fontWeight: 800, letterSpacing: 1.5, fontSize: '0.6rem', color: 'primary.main', mb: 1 }}
-        >
-          Learning Path
-        </Typography>
-        <Typography variant="h6" fontWeight={800} color="primary.dark" gutterBottom>
-          Continue the Learning Path
-        </Typography>
-
-        {/* Progress bar */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2.5 }}>
-          <LinearProgress
-            variant="determinate"
-            value={progress}
-            sx={{ flexGrow: 1, height: 6, borderRadius: 1 }}
-          />
-          <Typography variant="caption" fontWeight={700} color="primary.main">
-            {startHereIdx + 1}/{START_HERE_SLUGS.length}
-          </Typography>
-        </Box>
-
-        {/* Step list */}
-        <Box sx={{ mb: 2.5 }}>
-          {START_HERE_SLUGS.map((s, idx) => {
-            const p = BLOG_POSTS.find((post) => post.slug === s);
-            if (!p) return null;
-            const isCompleted = idx < startHereIdx;
-            const isCurrent = idx === startHereIdx;
-            const isNext = idx === startHereIdx + 1;
-            return (
-              <Box
-                key={s}
-                component={Link}
-                to={`/blog/${s}`}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  py: 0.75,
-                  color: 'inherit',
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  opacity: isCurrent || isCompleted || isNext ? 1 : 0.5,
-                  '&:hover': { color: 'primary.main' },
-                }}
-              >
-                {isCompleted ? (
-                  <CheckCircleIcon sx={{ fontSize: 18, color: 'success.main' }} />
-                ) : (
-                  <Typography
-                    variant="caption"
-                    fontWeight={800}
-                    sx={{
-                      width: 18,
-                      height: 18,
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '0.65rem',
-                      bgcolor: isCurrent ? 'primary.main' : 'transparent',
-                      color: isCurrent ? 'common.white' : 'text.secondary',
-                      border: isCurrent ? 'none' : '1.5px solid',
-                      borderColor: 'grey.400',
-                    }}
-                  >
-                    {idx + 1}
-                  </Typography>
-                )}
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: isCurrent ? 700 : isNext ? 600 : 400,
-                    fontSize: '0.82rem',
-                    color: isCurrent ? 'primary.dark' : isNext ? 'text.primary' : 'text.secondary',
-                  }}
-                >
-                  {p.title}
-                  {isCurrent && ' (current)'}
-                  {isNext && ' ->'}
-                </Typography>
-              </Box>
-            );
-          })}
-        </Box>
-
-        {nextPost && (
-          <Button
-            variant="contained"
-            component={Link}
-            to={`/blog/${nextSlug}`}
-            endIcon={<ArrowForwardIcon />}
-            sx={{ fontWeight: 700 }}
-          >
-            Next: {truncateAtWord(nextPost.title, 40)}
-          </Button>
-        )}
-      </Paper>
-    );
-  }
-  // Mode 2: Series navigation
+  // Series navigation
   if (seriesInfo) {
     const { seriesTitle, order, total, slugs: seriesSlugs } = seriesInfo;
     const nextSlug = order < total ? seriesSlugs[order] : null;
@@ -376,7 +252,7 @@ function ContinueLearning({ slug }) {
       </Paper>
     );
   }
-  // Mode 3: Related articles only
+  // Related articles only
   if (meta?.related && meta.related.length > 0) {
     return (
       <Paper

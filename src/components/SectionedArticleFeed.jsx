@@ -100,7 +100,7 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
       <Box>
         <Grid container spacing={3}>
           {filteredPosts.slice(0, recentCount).map((post) => (
-            <Grid item xs={12} sm={6} md={4} key={post.slug}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
               <PostCard
                 post={post}
                 onClick={() => navigate(`/blog/${post.slug}`)}
@@ -184,7 +184,7 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
 
       <Grid container spacing={3}>
         {recentPosts.slice(0, recentCount).map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.slug}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
             <PostCard
               post={post}
               onClick={() => navigate(`/blog/${post.slug}`)}
@@ -232,7 +232,7 @@ function SectionedArticleFeed({ navigate, PostCard, FeaturedCard, categoryFilter
             </Typography>
             <Grid container spacing={2}>
               {sectionPosts.slice(0, 3).map((post) => (
-                <Grid item xs={12} sm={6} md={4} key={post.slug}>
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
                   <PostCard
                     post={post}
                     onClick={() => navigate(`/blog/${post.slug}`)}

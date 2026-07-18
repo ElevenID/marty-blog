@@ -59,7 +59,7 @@ function ChooseYourPathSection({ onPathClick }) {
         {PATHS.map((path) => {
           const Icon = path.icon;
           return (
-            <Grid item xs={12} sm={6} md={3} key={path.title}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={path.title}>
               <Paper
                 elevation={1}
                 onClick={() => onPathClick(path.action)}

@@ -236,11 +236,13 @@ function GuideSidebar({ currentSlug }) {
               >
                 <ListItemText
                   primary={article.title}
-                  primaryTypographyProps={{
-                    variant: 'body2',
-                    fontWeight: isActive ? 700 : 400,
-                    color: isActive ? 'primary.main' : 'text.primary',
-                    sx: { lineHeight: 1.4, fontSize: '0.84rem' },
+                  slotProps={{
+                    primary: {
+                      variant: 'body2',
+                      fontWeight: isActive ? 700 : 400,
+                      color: isActive ? 'primary.main' : 'text.primary',
+                      sx: { lineHeight: 1.4, fontSize: '0.84rem' },
+                    },
                   }}
                 />
               </ListItemButton>

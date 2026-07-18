@@ -317,7 +317,7 @@ function BlogPostPage() {
             {relatedPosts.map((related) => {
               const relatedAuthor = BLOG_AUTHORS[related.authorId] || {};
               return (
-                <Grid item xs={12} sm={6} md={4} key={related.slug}>
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={related.slug}>
                   <Card
                     elevation={1}
                     sx={{
