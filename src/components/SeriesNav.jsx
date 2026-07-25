@@ -8,7 +8,7 @@
 import { Box, Typography, Button, Chip, Paper } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { BLOG_POSTS } from '../data/index.js';
 import { truncateAtWord } from '../utils/blogText.js';
 

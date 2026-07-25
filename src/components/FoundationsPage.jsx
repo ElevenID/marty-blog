@@ -13,7 +13,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { SEOHead } from '../seo/index.js';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { GUIDE_ARTICLE_MAP, HANDBOOK_PARTS } from '../data/index.js';
 import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import { ARTICLE_BROWSE_PRIMITIVES_BY_SLUG } from '../data/articleBrowseContext.js';

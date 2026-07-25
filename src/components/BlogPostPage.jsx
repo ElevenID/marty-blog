@@ -9,7 +9,7 @@
 import { Box, Typography, Paper, Chip, Button, Divider, Avatar, Grid, Card, CardContent, CardActionArea, useMediaQuery, useTheme } from '@mui/material';
 import { SEOHead } from '../seo/index.js';
 import { articleSchema } from '../seo/structuredData.js';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { BLOG_POSTS, BLOG_AUTHORS } from '../data/index.js';

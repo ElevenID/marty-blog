@@ -7,7 +7,7 @@
  */
 
 import { Box, Typography, Chip } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { BLOG_POSTS } from '../data/index.js';
 import { ARTICLE_META, LAYER_COLORS, LAYER_LABELS, DIFFICULTY_COLORS, isBrowseVisibleArticleSlug } from '../data/articleMeta.js';
 import { SERIES_BY_POST_SLUG, START_HERE_SLUGS } from '../data/index.js';

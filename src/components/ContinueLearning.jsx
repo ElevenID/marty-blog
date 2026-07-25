@@ -13,7 +13,7 @@ import { Box, Typography, Button, Chip, Paper, LinearProgress } from '@mui/mater
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { BLOG_POSTS } from '../data/index.js';
 import {
   SERIES_BY_POST_SLUG,

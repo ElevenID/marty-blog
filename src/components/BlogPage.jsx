@@ -20,7 +20,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { SEOHead } from '../seo/index.js';
 import { collectionPageSchema } from '../seo/structuredData.js';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { BLOG_AUTHORS } from '../data/index.js';
 import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import {

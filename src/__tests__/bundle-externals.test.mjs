@@ -2,12 +2,12 @@
  * Bundle externals regression test
  *
  * Verifies that the built dist JavaScript correctly externalizes all peer
- * dependencies (react, react-dom, react-router-dom, @mui/*) instead of
+ * dependencies (react, react-dom, react-router, @mui/*) instead of
  * bundling them inline.
  *
  * Background: when @marty/blog is used as a symlinked local package in a
  * Vite host app (marty-ui), the blog's own node_modules/ contains a copy
- * of react-router-dom (installed as a devDependency). If react-router-dom
+ * of react-router (installed as a devDependency). If react-router
  * is not properly excluded from optimizeDeps in the host, Vite pre-bundles
  * the blog WITH that local copy, creating a second RouterContext instance.
  * The host's <BrowserRouter> then cannot be seen by blog components that
@@ -33,8 +33,6 @@ const DIST_ENTRY = resolve(DIST_DIR, 'index.js');
 // own source, so a match means the library source was inlined rather than kept
 // as an external import.
 const BUNDLED_INTERNALS = {
-  // react-router-dom internal: storage key used only inside its scroll-restoration code
-  'react-router-dom': 'SCROLL_RESTORATION_STORAGE_KEY',
   // react-router internal: history factory that only lives inside the package
   'react-router':     'createBrowserHistory',
   // @mui/material internal: palette utility that only exists inside its source
@@ -45,7 +43,7 @@ const BUNDLED_INTERNALS = {
 
 // ES import statements that must appear in the dist (peer deps externalized):
 const EXPECTED_IMPORTS = [
-  'react-router-dom',
+  'react-router',
   'react/jsx-runtime',
   '@mui/material',
   '@mui/icons-material/ArrowBack',   // sub-path icon import ΓÇö must be external not inlined
@@ -71,12 +69,6 @@ describe('@marty/blog dist externals', () => {
     expect(existsSync(DIST_ENTRY)).toBe(true);
   });
 
-  it('does NOT bundle react-router-dom source inline', () => {
-    // If react-router-dom is bundled, its SCROLL_RESTORATION_STORAGE_KEY
-    // constant will appear in the output.
-    expect(dist).not.toContain(BUNDLED_INTERNALS['react-router-dom']);
-  });
-
   it('does NOT bundle react-router source inline', () => {
     expect(dist).not.toContain(BUNDLED_INTERNALS['react-router']);
   });
@@ -89,10 +81,10 @@ describe('@marty/blog dist externals', () => {
     expect(dist).not.toContain(BUNDLED_INTERNALS['@mui/icons-material']);
   });
 
-  it('imports react-router-dom without namespace bundling', () => {
+  it('imports react-router without namespace bundling', () => {
     const lines = dist.split('\n');
     const routerImports = lines.filter(
-      l => l.startsWith('import') && l.includes('react-router-dom')
+      l => l.startsWith('import') && l.includes('react-router')
     );
     expect(routerImports.length).toBeGreaterThan(0);
     // Shared chunks may emit a side-effect import, but should never pull an
@@ -105,11 +97,11 @@ describe('@marty/blog dist externals', () => {
     expect(dist).toContain(`from "${resolvedPkg}"`);
   });
 
-  it('lists react-router-dom in peerDependencies, not in dependencies', async () => {
+  it('lists react-router in peerDependencies, not in dependencies', async () => {
     const pkg = JSON.parse(
       readFileSync(resolve(__dirname, '../../package.json'), 'utf-8')
     );
-    expect(pkg.peerDependencies?.['react-router-dom']).toBeDefined();
-    expect(pkg.dependencies?.['react-router-dom']).toBeUndefined();
+    expect(pkg.peerDependencies?.['react-router']).toBeDefined();
+    expect(pkg.dependencies?.['react-router']).toBeUndefined();
   });
 });

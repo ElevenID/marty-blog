@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { Box, Typography, Tooltip, Collapse, useMediaQuery, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { normalizeBlogData } from '../utils/blogText.js';
 
 const LAYERS = normalizeBlogData([

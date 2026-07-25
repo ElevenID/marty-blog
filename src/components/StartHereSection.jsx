@@ -8,7 +8,7 @@
 import { Box, Typography, Paper, List, ListItem, ListItemIcon, ListItemText, ListItemButton } from '@mui/material';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { START_HERE_SLUGS } from '../data/index.js';
 import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import { truncateAtWord } from '../utils/blogText.js';
