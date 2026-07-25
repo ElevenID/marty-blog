@@ -8,7 +8,7 @@
 import { Box, Typography, Avatar, Chip, Paper, Grid, Card, CardContent, CardActionArea, Divider, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router';
 import { SEOHead } from '../seo/index.js';
 import { personSchema } from '../seo/structuredData.js';
 import { BLOG_AUTHORS } from '../data/blogAuthors.js';

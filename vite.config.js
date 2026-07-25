@@ -17,7 +17,6 @@ const EXTERNAL_PACKAGES = [
   'react',
   'react-dom',
   'react-router',
-  'react-router-dom',
   '@mui/material',
   '@mui/icons-material',
   '@emotion/react',

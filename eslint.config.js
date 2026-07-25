@@ -1,5 +1,5 @@
 import js from '@eslint/js';
-import react from 'eslint-plugin-react';
+import reactX from 'eslint-plugin-react-x';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
@@ -13,7 +13,7 @@ export default [
     },
   },
   js.configs.recommended,
-  react.configs.flat.recommended,
+  reactX.configs.recommended,
   reactHooks.configs.flat.recommended,
   {
     files: ['src/**/*.{js,jsx}'],
@@ -31,9 +31,7 @@ export default [
     rules: {
       // This JavaScript package validates its exported component APIs. Requiring
       // runtime declarations for every private render helper adds no boundary safety.
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'off',
+      'react-x/no-unescaped-entities': 'off',
       'no-useless-escape': 'off',
       'no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
     },

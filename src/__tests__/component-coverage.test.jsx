@@ -1,9 +1,8 @@
 // @vitest-environment jsdom
 
-import React from 'react';
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router';
 
 import AIDisclosureBanner from '../components/AIDisclosureBanner.jsx';
 import ArticleContent from '../components/ArticleContent.jsx';

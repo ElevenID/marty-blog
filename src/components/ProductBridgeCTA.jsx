@@ -8,7 +8,7 @@
 
 import { Box, Typography, Button, Paper } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { ARTICLE_META } from '../data/articleMeta.js';
 import { normalizeBlogData } from '../utils/blogText.js';
 

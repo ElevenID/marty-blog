@@ -9,14 +9,17 @@ import { Box, Typography, Button, Paper } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
 
+const CURRENT_MONTH_YEAR = new Date().toLocaleDateString('en-US', {
+  month: 'short',
+  year: 'numeric',
+});
+
 function HeroSection() {
   const articleCount = getBrowseVisiblePosts(BLOG_POST_SUMMARIES).length;
-  const now = new Date();
-  const monthYear = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
   return (
     <Paper
@@ -68,7 +71,7 @@ function HeroSection() {
           letterSpacing: 0.3,
         }}
       >
-        {articleCount} articles across foundations, PKI, deployment, and governance | Updated {monthYear}
+        {articleCount} articles across foundations, PKI, deployment, and governance | Updated {CURRENT_MONTH_YEAR}
       </Typography>
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
         <Button

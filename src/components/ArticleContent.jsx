@@ -14,7 +14,7 @@
 
 import { Fragment } from 'react';
 import { Box, Typography, Paper } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { headingToId } from './ArticleTableOfContents.jsx';
 
 /**
