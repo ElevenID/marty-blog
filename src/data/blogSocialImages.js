@@ -45,8 +45,17 @@ export const SOCIAL_IMAGE_PLATFORM_SPECS = {
 
 export const DEFAULT_BLOG_SOCIAL_IMAGE_PATH = `${SOCIAL_IMAGE_BASE_PATH}/elevenid-blog-default.png`;
 
+const BLOG_SOCIAL_IMAGE_BASENAME_BY_SLUG = {
+  'understanding-csca-certificates': 'understanding-csca-certificates-v2',
+};
+
+function socialImageBasename(slug) {
+  const cleanPostSlug = cleanSlug(slug);
+  return BLOG_SOCIAL_IMAGE_BASENAME_BY_SLUG[cleanPostSlug] || cleanPostSlug;
+}
+
 export const BLOG_SOCIAL_IMAGE_BY_SLUG = Object.fromEntries(
-  BLOG_POST_SUMMARIES.map((post) => [post.slug, `${SOCIAL_IMAGE_BASE_PATH}/${post.slug}.png`]),
+  BLOG_POST_SUMMARIES.map((post) => [post.slug, `${SOCIAL_IMAGE_BASE_PATH}/${socialImageBasename(post.slug)}.png`]),
 );
 
 function cleanBaseUrl(baseUrl = SITE_URL) {
@@ -73,13 +82,14 @@ export function getBlogSocialImagePath(slug, platform = 'linkedin') {
     }
     return `${SOCIAL_IMAGE_BASE_PATH}/platforms/elevenid-blog-default-${cleanPlatform}.png`;
   }
+  const imageBasename = socialImageBasename(cleanPostSlug);
   if (cleanPlatform === 'linkedin') {
     return BLOG_SOCIAL_IMAGE_BY_SLUG[cleanPostSlug];
   }
   if (cleanPlatform === 'master') {
-    return `${SOCIAL_IMAGE_BASE_PATH}/master/${cleanPostSlug}-master.png`;
+    return `${SOCIAL_IMAGE_BASE_PATH}/master/${imageBasename}-master.png`;
   }
-  return `${SOCIAL_IMAGE_BASE_PATH}/platforms/${cleanPostSlug}-${cleanPlatform}.png`;
+  return `${SOCIAL_IMAGE_BASE_PATH}/platforms/${imageBasename}-${cleanPlatform}.png`;
 }
 
 export function getBlogSocialImageUrl(slug, baseUrl = SITE_URL, platform = 'linkedin') {

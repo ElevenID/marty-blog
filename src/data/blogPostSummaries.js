@@ -196,22 +196,22 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "mip-and-open-badges-education-credentials",
     "title": "MIP and Open Badges: Verifiable Education Credentials",
-    "summary": "Open Badges 3.0 meets MIP - how the protocol brings trust governance to education and workforce credentials.",
+    "summary": "Open Badges 3.0 defines portable achievement credentials. MIP makes the surrounding issuer trust, evidence, status, disclosure, and deployment decisions explicit.",
     "authorId": "aiko-tanaka",
     "date": "2025-04-26",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-07-17",
     "category": "Business",
-    "readTime": "4 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "conformance-testing-for-implementers",
     "title": "Conformance Testing: Proving Your MIP Implementation Works",
-    "summary": "MIP ships a conformance test suite with valid and invalid fixtures. Here's how to use it to validate your implementation.",
+    "summary": "MIP conformance is a layered claim. Schema fixtures test document behavior; normative, API, implementation-class, and protocol-target evidence establish the rest.",
     "authorId": "daniel-ortega",
     "date": "2025-05-02",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-07-21",
     "category": "Technical",
-    "readTime": "4 min read"
+    "readTime": "6 min read"
   },
   {
     "slug": "revocation-strategies-compared",
@@ -219,27 +219,27 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Revocation mechanisms and check timing solve different problems. MIP's Revocation Profile makes that choice explicit while implementations pin the actual W3C, IETF, or PKI profile used.",
     "authorId": "marcus-vale",
     "date": "2025-05-08",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-07-22",
     "category": "Cryptography",
-    "readTime": "4 min read"
+    "readTime": "5 min read"
   },
   {
     "slug": "five-primitives-in-one-picture",
     "title": "The Five Primitives in One Picture",
-    "summary": "If digital identity still looks like an acronym graveyard, this is the picture that turns it back into a system.",
+    "summary": "Trust, credential meaning, disclosure, runtime configuration, and flows are the five MIP primitives that keep identity decisions explicit.",
     "authorId": "daniel-ortega",
     "date": "2025-05-13",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-07-23",
     "category": "Technical",
     "readTime": "8 min read"
   },
   {
     "slug": "minimum-disclosure-is-a-policy-problem",
     "title": "Minimum Disclosure Is a Policy Problem",
-    "summary": "Privacy fails first at the request boundary, which is why disclosure has to be governed as policy rather than left to verifier habit.",
+    "summary": "Privacy can fail at the request boundary, which is why disclosure should be governed as policy rather than left to verifier habit.",
     "authorId": "nora-patel",
     "date": "2025-05-19",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-07-27",
     "category": "Cryptography",
     "readTime": "7 min read"
   },
@@ -476,12 +476,12 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "understanding-csca-certificates",
     "title": "Understanding CSCA Certificates",
-    "summary": "CSCA certificates are the trust anchors of passport PKI. This post explains what they contain, how they're distributed, and why they're critical to travel document verification.",
+    "summary": "CSCA certificates anchor ePassport PKI. This post explains their contents, authenticated distribution, rollover, and role in passive authentication.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-11",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-07-29",
     "category": "Technical",
-    "readTime": "5 min read"
+    "readTime": "7 min read"
   },
   {
     "slug": "what-icao-9303-specifies",
