@@ -1,0 +1,6 @@
+schema_version: "1.0"
+governance_repository: ElevenID/business-governance
+governance_release: v0.1.0
+consumption_profile: public
+required_domains: [public_claims]
+public_profile_path: governance/public-claims-profile.yaml

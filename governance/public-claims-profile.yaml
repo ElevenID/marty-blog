@@ -1,0 +1,8 @@
+schema_version: "1.0"
+id: public-claims-profile
+governance_release: v0.1.0
+safe_rules:
+  - Use evidence-backed, non-confidential public claims.
+  - Do not publish price, legal, security, compliance, customer, or competitor claims without recorded review.
+  - Do not include personal data, correspondence, contracts, or credentials.
+  - Preserve a source reference and approval state for every publishable asset.
