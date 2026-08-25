@@ -4,7 +4,8 @@ This directory stores public communication ledgers for ElevenID LLC social activ
 
 ## Current Ledger
 
-- `linkedin-comment-ledger.md`: source of truth for external LinkedIn comments and follow-up replies made as ElevenID LLC.
+- `linkedin-comment-ledger.md`: active exact-approval queue and outcome record for bounded unattended comment and reply sessions.
+- `linkedin-reaction-ledger.md`: active exact-approval queue and outcome record for bounded unattended Like and Insightful sessions.
 
 ## Ownership
 

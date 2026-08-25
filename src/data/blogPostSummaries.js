@@ -9,7 +9,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Identity is still being sold as a platform problem. Cryptography proves facts, but protocol placement determines whether verified state can move across implementations instead of staying trapped inside one vendor boundary.",
     "authorId": "daniel-ortega",
     "date": "2025-01-06",
-    "updatedDate": "2026-06-28",
+    "updatedDate": "2026-07-30",
     "category": "Business",
     "readTime": "7 min read"
   },
@@ -229,7 +229,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Trust, credential meaning, disclosure, runtime configuration, and flows are the five MIP primitives that keep identity decisions explicit.",
     "authorId": "daniel-ortega",
     "date": "2025-05-13",
-    "updatedDate": "2026-07-23",
+    "updatedDate": "2026-07-30",
     "category": "Technical",
     "readTime": "8 min read"
   },
@@ -239,17 +239,17 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Privacy can fail at the request boundary, which is why disclosure should be governed as policy rather than left to verifier habit.",
     "authorId": "nora-patel",
     "date": "2025-05-19",
-    "updatedDate": "2026-07-27",
+    "updatedDate": "2026-07-30",
     "category": "Cryptography",
     "readTime": "7 min read"
   },
   {
     "slug": "same-trust-model-different-runtime",
     "title": "Same Trust Model, Different Runtime",
-    "summary": "The trust judgment should not have to change every time the runtime does. Marty keeps the verification model stable and uses Deployment Profiles to absorb the operational differences between cloud, self-hosted, and edge environments.",
+    "summary": "The trust judgment should not have to change every time the runtime does. The current MIP draft uses Deployment Profiles to express operational differences between hosted, self-hosted, and edge environments without inventing a separate trust model for each one.",
     "authorId": "sofia-rahman",
     "date": "2025-05-25",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-08-13",
     "category": "Technical",
     "readTime": "6 min read"
   },
@@ -479,7 +479,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "CSCA certificates anchor ePassport PKI. This post explains their contents, authenticated distribution, rollover, and role in passive authentication.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-11",
-    "updatedDate": "2026-07-29",
+    "updatedDate": "2026-07-30",
     "category": "Technical",
     "readTime": "7 min read"
   },
@@ -489,39 +489,39 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "ICAO Doc 9303 is the international standard for machine-readable travel documents. This post breaks down what it actually requires - and what it leaves to implementers.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-17",
-    "updatedDate": "2026-07-13",
-    "category": "Technical",
-    "readTime": "5 min read"
-  },
-  {
-    "slug": "mobile-driving-licenses-iso-18013-5",
-    "title": "Mobile Driving Licenses and ISO 18013-5",
-    "summary": "ISO 18013-5 defines how a driving licence can live on a phone without turning a government credential into a glorified screenshot. This post explains mDoc, proximity exchange, holder binding, and the trust model that makes mobile driving licences operationally credible.",
-    "authorId": "aiko-tanaka",
-    "date": "2025-10-23",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-08-01",
     "category": "Technical",
     "readTime": "7 min read"
   },
   {
+    "slug": "mobile-driving-licenses-iso-18013-5",
+    "title": "Mobile Driving Licenses and ISO 18013-5",
+    "summary": "ISO/IEC 18013-5 defines the mDL data model and reader interfaces that let a driving licence work as a verifiable mobile credential. This post separates the mdoc format, device retrieval, cryptographic authentication, OpenID transport, and operational trust.",
+    "authorId": "aiko-tanaka",
+    "date": "2025-10-23",
+    "updatedDate": "2026-08-06",
+    "category": "Technical",
+    "readTime": "9 min read"
+  },
+  {
     "slug": "how-governments-build-identity-pki",
     "title": "How Governments Build Identity PKI",
-    "summary": "Government identity PKI is the infrastructure that lets passports, mobile licences, and other official credentials be trusted beyond the issuing agency. This post explains how sovereign roots, delegated signers, trust-list distribution, and refresh discipline make that possible in the real world.",
+    "summary": "Government identity PKI makes issuer authority verifiable beyond one agency. This post compares ePassport, mDL, and EUDI trust distribution while separating certificate validation, verifier policy, and offline operations.",
     "authorId": "aiko-tanaka",
     "date": "2025-10-29",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-08-07",
     "category": "Business",
     "readTime": "7 min read"
   },
   {
     "slug": "how-credential-issuance-works",
     "title": "How Credential Issuance Works",
-    "summary": "Credential issuance is the process of creating, approving, signing, and delivering a verifiable credential to a holder. This post explains the real mechanics of issuance without mistaking OID4VCI transport for the whole architecture.",
+    "summary": "Credential issuance begins with governed decisions about claims, authority, evidence, format, and lifecycle. OID4VCI then standardizes the OAuth-protected exchange a wallet uses to request a credential, including immediate and deferred responses.",
     "authorId": "daniel-ortega",
     "date": "2025-11-03",
-    "updatedDate": "2026-04-09",
+    "updatedDate": "2026-08-10",
     "category": "Technical",
-    "readTime": "6 min read"
+    "readTime": "7 min read"
   },
   {
     "slug": "verifiable-credentials-explained",
@@ -787,7 +787,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "How mobile credential wallets work - from platform secure elements to cloud backup, and what matters for interoperability.",
     "authorId": "aiko-tanaka",
     "date": "2026-04-07",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-08-01",
     "category": "Technical",
     "readTime": "5 min read"
   },
@@ -807,6 +807,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Can a credential issued to one wallet be moved to another? The technical and policy boundaries of credential portability.",
     "authorId": "elena-kovacs",
     "date": "2026-04-09",
+    "updatedDate": "2026-08-01",
     "category": "Technical",
     "readTime": "6 min read"
   },
