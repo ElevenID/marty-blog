@@ -246,10 +246,10 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "same-trust-model-different-runtime",
     "title": "Same Trust Model, Different Runtime",
-    "summary": "The trust judgment should not have to change every time the runtime does. The current MIP draft uses Deployment Profiles to express operational differences between hosted, self-hosted, and edge environments without inventing a separate trust model for each one.",
+    "summary": "The trust judgment should not have to change every time the runtime does. The MIP 0.5.0 draft uses Deployment Profiles to express operational differences between hosted, self-hosted, and edge environments without inventing a separate trust model for each one.",
     "authorId": "sofia-rahman",
     "date": "2025-05-25",
-    "updatedDate": "2026-08-13",
+    "updatedDate": "2026-08-25",
     "category": "Technical",
     "readTime": "6 min read"
   },
