@@ -20,7 +20,7 @@ const RAW_BLOG_POST_DRAFTS = [
     content: [
       { type: 'paragraph', text: 'A cinema can receive a digital movie days before its first authorized showing. The encrypted package can sit on local storage, move through systems operated by exhibitors and vendors, and remain unusable without the right keys.' },
       { type: 'paragraph', text: 'That is a useful security property. The distributor does not have to pretend the theater network is secret. The theater does not need a separately encrypted copy of the entire movie for every auditorium. Possession of the encrypted asset and authority to use it are different things.' },
-      { type: 'paragraph', text: 'Digital identity systems often blur that distinction.' },
+      { type: 'paragraph', text: 'Digital identity systems can blur that distinction.' },
       { type: 'paragraph', text: 'A wallet contains a credential, so an application treats the wallet as authorized to disclose it anywhere. A device has a certificate, so a service assumes the device is healthy. A policy engine returns "permit," so the surrounding system assumes the sensitive operation happened correctly. Each leap skips a boundary that cinema security has spent years making explicit.' },
       { type: 'paragraph', text: 'The lesson from Hollywood is not that identity should copy digital rights management. It is that strong systems separate five questions: What object is present? Which identity and key are requesting its use? What operation is authorized, for whom, and for how long? Where will sensitive key use and processing occur? What evidence will exist afterward?' },
       { type: 'paragraph', text: 'That separation is valuable far beyond movies.' },
@@ -60,7 +60,7 @@ Projector and protected output path      Presentation and disclosure channel
 Security and playback logs              Transaction evidence`,
       },
       { type: 'paragraph', text: 'Even this mapping is only an analogy.' },
-      { type: 'paragraph', text: 'The EUDI Wallet Architecture and Reference Framework 2.8.0 makes the wallet side more precise. It distinguishes the Wallet Instance, a Wallet Secure Cryptographic Application, and a Wallet Secure Cryptographic Device. That cryptographic device might be local secure hardware, a smart card, an embedded secure element, or a remote HSM. There is no single physical "wallet projector."' },
+      { type: 'paragraph', text: 'The EUDI Wallet Architecture and Reference Framework 2.9.0 makes the wallet side more precise. It distinguishes the Wallet Instance, a Wallet Secure Cryptographic Application, and a Wallet Secure Cryptographic Device. That cryptographic device might be local secure hardware, a smart card, an embedded secure element, or a remote HSM. There is no single physical "wallet projector."' },
       { type: 'paragraph', text: 'The goals differ too. Cinema security primarily protects a rights holder\'s content from unauthorized use. A personal wallet must protect the holder\'s agency and privacy while giving a relying party enough evidence to make a decision. Selective disclosure, meaningful user approval, unlinkability, and data minimization are therefore central to wallet design in a way that does not map to movie playback.' },
       { type: 'paragraph', text: 'The useful comparison is not about identical machinery. It is about boundaries.' },
 
@@ -111,7 +111,7 @@ Can plaintext escape through an unprotected path?`,
                 -> support an investigation`,
       },
       { type: 'paragraph', text: 'That is evidence, not omniscience.' },
-      { type: 'paragraph', text: 'It also illustrates why authorization evidence and execution evidence should not be conflated. A KDM can show that equipment had key authorization for an interval. A log can claim that a playback event occurred. A recovered forensic mark can associate captured output with a showing context. None of those artifacts alone proves the entire story.' },
+      { type: 'paragraph', text: 'It also illustrates why authorization evidence and execution evidence should not be conflated. A KDM can establish that content keys were issued for specified equipment and a permitted interval. A log can claim that a playback event occurred. A recovered forensic mark can associate captured output with a showing context. None of those artifacts alone proves the entire story.' },
       { type: 'paragraph', text: 'Current-version details matter. DCSS 1.5.0 removed the former mandate for the Screen Management System to collect post-show Media Block playout reports within 24 hours. It would therefore be inaccurate to describe the modern architecture as producing one centrally collected proof package for every showing.' },
       { type: 'paragraph', text: 'The broader principle survives: design consequential operations so that later investigation has independent, appropriately scoped evidence.' },
 
@@ -202,8 +202,8 @@ Signed authorization receipt             Attribution and investigation`,
             note: 'Operational support material for equipment certificates, encrypted test content, and KDMs.',
           },
           {
-            label: 'EUDI Wallet Architecture and Reference Framework 2.8.0',
-            href: 'https://eudi.dev/2.8.0/architecture-and-reference-framework-main/',
+            label: 'EUDI Wallet Architecture and Reference Framework 2.9.0',
+            href: 'https://eudi.dev/2.9.0/architecture-and-reference-framework-main/',
             note: 'Wallet Instance, WSCA, WSCD, binding, lifecycle, and privacy architecture.',
           },
           {

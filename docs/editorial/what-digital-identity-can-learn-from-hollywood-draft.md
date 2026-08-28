@@ -2,15 +2,17 @@
 
 ## Possession Is Not Authorization
 
-**Status:** Complete editorial draft; converted to the non-production site-format module [`src/data/blogPostDrafts.js`](../../src/data/blogPostDrafts.js)
+**Status:** Complete editorial draft; second-pass reviewed 2026-08-25; converted to the non-production site-format module [`src/data/blogPostDrafts.js`](../../src/data/blogPostDrafts.js)
+
 **Audience:** Identity architects, security engineers, infrastructure teams, and technical decision-makers
+
 **Estimated reading time:** 10 minutes
 
 A cinema can receive a digital movie days before its first authorized showing. The encrypted package can sit on local storage, move through systems operated by exhibitors and vendors, and remain unusable without the right keys.
 
 That is a useful security property. The distributor does not have to pretend the theater's network is secret. The theater does not need a separately encrypted copy of the entire movie for every auditorium. Possession of the encrypted asset and authority to use it are different things.
 
-Digital identity systems often blur that distinction.
+Digital identity systems can blur that distinction.
 
 A wallet contains a credential, so an application treats the wallet as authorized to disclose it anywhere. A device has a certificate, so a service assumes the device is healthy. A policy engine returns “permit,” so the surrounding system assumes the sensitive operation happened correctly. Each leap skips a boundary that cinema security has spent years making explicit.
 
@@ -68,7 +70,7 @@ The better analogy is layered:
 
 Even this mapping is only an analogy.
 
-The [EUDI Wallet Architecture and Reference Framework 2.8.0](https://eudi.dev/2.8.0/architecture-and-reference-framework-main/) makes the wallet side more precise. It distinguishes the Wallet Instance, a Wallet Secure Cryptographic Application, and a Wallet Secure Cryptographic Device. That cryptographic device might be local secure hardware, a smart card, an embedded secure element, or even a remote HSM. There is no single physical “wallet projector.”
+The [EUDI Wallet Architecture and Reference Framework 2.9.0](https://eudi.dev/2.9.0/architecture-and-reference-framework-main/) makes the wallet side more precise. It distinguishes the Wallet Instance, a Wallet Secure Cryptographic Application, and a Wallet Secure Cryptographic Device. That cryptographic device might be local secure hardware, a smart card, an embedded secure element, or even a remote HSM. There is no single physical “wallet projector.”
 
 The goals differ too. Cinema security primarily protects a rights holder's content from unauthorized use. A personal wallet must protect the holder's agency and privacy while giving a relying party enough evidence to make a decision. Selective disclosure, meaningful user approval, unlinkability, and data minimization are therefore central to wallet design in a way that does not map to movie playback.
 
@@ -141,7 +143,7 @@ recovered recording
 
 That is evidence, not omniscience.
 
-It also illustrates why authorization evidence and execution evidence should not be conflated. A KDM can show that equipment had key authorization for an interval. A log can claim that a playback event occurred. A recovered forensic mark can associate captured output with a showing context. None of those artifacts alone proves the entire story.
+It also illustrates why authorization evidence and execution evidence should not be conflated. A KDM can establish that content keys were issued for specified equipment and a permitted interval. A log can claim that a playback event occurred. A recovered forensic mark can associate captured output with a showing context. None of those artifacts alone proves the entire story.
 
 Current-version details matter here. [DCSS 1.5.0](https://www.dcimovies.com/announcements/) removed the former mandate for the Screen Management System to collect post-show Media Block playout reports within 24 hours. It would therefore be inaccurate to describe the modern architecture as producing one centrally collected proof package for every showing.
 
@@ -250,7 +252,7 @@ That is what digital identity should learn from Hollywood.
 * [SMPTE current standards listing, including ST 430-1:2023](https://www.smpte.org/standards/recently-updated-documents)
 * [Christie IMB-S4 User Guide, March 2026](https://www.christiedigital.com/globalassets/resources/public/020-103873-04-Christie-LIT-MAN-USR-IMB-S4.pdf)
 * [Dolby cinema playback support](https://professional.dolby.com/support/cinema-playback/)
-* [EUDI Wallet Architecture and Reference Framework 2.8.0](https://eudi.dev/2.8.0/architecture-and-reference-framework-main/)
+* [EUDI Wallet Architecture and Reference Framework 2.9.0](https://eudi.dev/2.9.0/architecture-and-reference-framework-main/)
 * [OpenID for Verifiable Credential Issuance 1.0](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 * [OpenID for Verifiable Presentations 1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
 * [RFC 9334: Remote ATtestation procedureS Architecture](https://www.rfc-editor.org/rfc/rfc9334.html)
