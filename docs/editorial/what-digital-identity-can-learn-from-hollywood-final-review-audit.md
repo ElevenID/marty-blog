@@ -1,9 +1,29 @@
 # Final-Review Audit: What Digital Identity Can Learn from Hollywood
 
-**Audit date:** 2026-07-28
+**Initial audit:** 2026-07-28
+
+**Second-pass review:** 2026-08-25
+
 **Editorial source:** [`what-digital-identity-can-learn-from-hollywood-draft.md`](what-digital-identity-can-learn-from-hollywood-draft.md)
+
 **Site-format source:** [`../../src/data/blogPostDrafts.js`](../../src/data/blogPostDrafts.js)
+
 **Verdict:** Ready for human final review. No known factual or protocol-boundary blocker remains.
+
+## August second-pass result
+
+The second pass rechecked all time-sensitive references on 2026-08-25 and reread the article for argument quality, overstatement, conversion drift, and publication fit.
+
+* DCSS 1.5.0 remains the current DCI specification.
+* SMPTE ST 430-1:2023 remains the current listed KDM revision.
+* EUDI ARF 2.9.0 replaced 2.8.0 and is now cited throughout.
+* The April 2026 Christie IMB-S4 documentation remains current on Christie's product page.
+* OpenID4VCI 1.0, OpenID4VP 1.0, and RFC 9334 still support the article's binding and attestation claims.
+* “Digital identity systems often blur” was softened to “can blur” to avoid a universal claim.
+* The KDM evidence sentence was narrowed: a KDM establishes issued authorization parameters; it does not prove equipment actually possessed or used the keys.
+* Markdown and site-format copies remain aligned on every substantive claim.
+
+No additional section, protocol proposal, or cinema-domain model is recommended. The article is stronger at its current length and scope.
 
 ## Scope
 
@@ -17,7 +37,7 @@ This audit covered:
 
 ## Corrections made during the audit
 
-1. Updated the EUDI Wallet reference from ARF 1.5 to the current ARF 2.8.0.
+1. Updated the EUDI Wallet reference from ARF 1.5 to ARF 2.8.0 during the initial audit, then to the current ARF 2.9.0 during the August second pass.
 2. Updated the Christie IMB-S4 guide from the September 2024 revision to the March 2026 revision.
 3. Replaced the unsupported implication that an “exhibitor” performs the certificate step with the neutral “operator.”
 4. Changed “log certificate used to sign log files” to the guide's exact “Log Signer certificate” terminology.
@@ -37,7 +57,7 @@ This audit covered:
 | Media Block analogy | The article correctly treats the Media Block security boundary, not the projector alone, as the closer trusted-runtime analogue. | Supported |
 | Forensic marking | The article describes offline association with playback time/location and explicitly rejects claims of real-time camera detection or personal identification. | Supported and properly qualified |
 | Logging | The article says logs contribute context rather than prove the whole event. It correctly notes that DCSS 1.5.0 removed the 24-hour SMS collection mandate. | Supported |
-| Wallet architecture | EUDI ARF 2.8.0 continues to distinguish Wallet Instance, WSCA, and WSCD and supports local, external, native, remote, and hybrid secure-component arrangements. | Supported |
+| Wallet architecture | EUDI ARF 2.9.0 continues to distinguish Wallet Instance, WSCA, and WSCD and supports local, external, native, remote, and hybrid secure-component arrangements. | Supported |
 | Wallet privacy | The warning that stable device identifiers can create linkability is consistent with the current EUDI privacy discussion. | Supported |
 | OID4VCI | The final 1.0 specification supports cryptographic holder binding, proof of possession, and key attestation. | Supported |
 | OID4VP | The final 1.0 specification requires presentation binding to the verifier/client and transaction nonce. | Supported |
@@ -119,8 +139,9 @@ The live post files already contain unrelated local edits. Publication integrati
 
 * Site-draft syntax and import validation: passed
 * Supported block and resource validation: passed
+* All nine external source URLs: HTTP 200 on 2026-08-25
 * Markdown fence and whitespace checks: passed
-* Marty targeted machine-identity tests: 7 passed
-* Blog test suite: 39 passed during this audit
-* Blog production build: passed during this audit
-* ESLint: unavailable because the repository declares a lint script but does not install ESLint as a dependency
+* Marty targeted machine-identity tests: 15 passed in an isolated project environment
+* Blog test suite: 57 passed during the second pass
+* Blog production build: passed during the second pass
+* ESLint: passed with 0 errors and 9 existing component-level warnings unrelated to this draft

@@ -19,7 +19,7 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
     "summary": "Before you can verify a credential, you need to decide who to trust. Trust Profiles formalize that decision as configuration, not code.",
     "authorId": "victor-leclerc",
     "date": "2025-01-12",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-08-27",
     "category": "Technical",
     "readTime": "4 min read"
   },

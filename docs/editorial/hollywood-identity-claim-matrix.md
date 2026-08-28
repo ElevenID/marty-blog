@@ -1,7 +1,7 @@
 # Hollywood and Digital Identity: Research Claim Matrix
 
 **Status:** Editorial research
-**Checked:** 2026-07-28
+**Checked:** 2026-08-25
 **Purpose:** Separate sourced cinema and identity facts from analogy, inference, and Marty design choices before drafting the article.
 
 ## Editorial rules
@@ -29,7 +29,7 @@
 | DCI-08 | Security and playback logs can contribute evidence about presentation activity. | Cinema operations | DCSS secure logging requirements and DCI CTP tests. | Say logs “can contribute evidence.” Do not say they prove every showing occurred correctly. | Supported with qualification |
 | DCI-09 | Current DCI rules require the SMS to collect every post-show Media Block report within 24 hours. | Former requirement | DCI's DCSS 1.5.0 changelog explicitly deletes this mandate. | Do not make this claim in the article. It is useful only as an example of why version checks matter. | Rejected |
 | DCI-10 | Current cinema conformance is established by a specification and compliance-testing ecosystem, not by identity credentials alone. | Governance / assurance | DCSS 1.5.0 and CTP 1.5.0 announcements. | Certification, implementation assurance, and operational controls remain outside Marty. | Supported |
-| ID-01 | A digital wallet is more than a file store: it coordinates presentation while protected components can hold keys and perform cryptographic operations. | Wallet architecture | EUDI Wallet ARF 2.8.0 describes Wallet Instance, WSCA, and WSCD components. | Not every wallet or device provides equivalent hardware isolation. | Supported |
+| ID-01 | A digital wallet is more than a file store: it coordinates presentation while protected components can hold keys and perform cryptographic operations. | Wallet architecture | EUDI Wallet ARF 2.9.0 describes Wallet Instance, WSCA, and WSCD components. | Not every wallet or device provides equivalent hardware isolation. | Supported |
 | ID-02 | Credential issuance can bind a credential to a holder-controlled cryptographic key. | Identity protocol | OpenID4VCI 1.0 proof and cryptographic binding mechanisms. | Distinguish holder binding from stable physical-device identification. | Supported |
 | ID-03 | A presentation can be bound to an intended verifier and fresh transaction challenge. | Identity protocol | OpenID4VP 1.0 audience/client binding and nonce processing. | Use this to explain replay resistance and transaction binding, not hardware trust. | Supported |
 | ID-04 | Attestation evidence and the relying party's authorization decision are separate artifacts and policy steps. | Attestation architecture | RFC 9334: Attester produces Evidence, Verifier produces Attestation Results, Relying Party applies its policy. | This separation directly supports Marty's boundary. | Supported |
@@ -54,7 +54,7 @@ Primary sources used for the matrix:
 * [SMPTE ST 430-1:2006 public PDF](https://pub.smpte.org/doc/st430-1/20061003-pub/st0430-1-2006.pdf) — architectural background only, not authority for current field-level claims.
 * [OpenID for Verifiable Credential Issuance 1.0](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html).
 * [OpenID for Verifiable Presentations 1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
-* [EUDI Wallet Architecture and Reference Framework 2.8.0](https://eudi.dev/2.8.0/architecture-and-reference-framework-main/).
+* [EUDI Wallet Architecture and Reference Framework 2.9.0](https://eudi.dev/2.9.0/architecture-and-reference-framework-main/).
 * [RFC 9334: RATS Architecture](https://www.rfc-editor.org/rfc/rfc9334.html).
 * [RFC 9711: Entity Attestation Token](https://www.rfc-editor.org/rfc/rfc9711.html).
 * [Christie IMB-S4 User Guide, revision 1 (March 2026)](https://www.christiedigital.com/globalassets/resources/public/020-103873-04-Christie-LIT-MAN-USR-IMB-S4.pdf) — operational confirmation that the Security Manager certificate is used to request KDM keys and that a separate Log Signer certificate is available.
@@ -65,7 +65,7 @@ Primary sources used for the matrix:
 1. **KDM depth:** Resolved. Keep the article at the architecture level supported by DCSS 1.5.0 and current equipment documentation. Do not enumerate ST 430-1:2023 fields.
 2. **DCSS version:** Resolved. Core MB, SPB, SM, forensic-marking, and logging claims were checked against current DCI material and the 1.5.0 changelog.
 3. **Cinema practice check:** Completed as a published-material review using current Christie documentation and Dolby support material. A named practitioner review remains desirable before final publication but does not block the draft.
-4. **Wallet practice check:** Completed as a published-architecture review using EUDI ARF 2.8.0 and OpenID4VCI 1.0. The draft explicitly accounts for local secure elements, remote HSMs, heterogeneous devices, and correlation risk.
+4. **Wallet practice check:** Completed as a published-architecture review using EUDI ARF 2.9.0 and OpenID4VCI 1.0. The draft explicitly accounts for local secure elements, remote HSMs, heterogeneous devices, and correlation risk.
 5. **Recording scenario:** Camera capture. Explain offline recovery of time/location marking combined with logs, without implying camera detection or personal identification.
 6. **Marty depth:** Vendor-neutral main narrative with a clearly labeled Marty technical sidebar.
 7. **Superseded proposals:** Exclude `ExecutionObligation`, `ControlResult`, `RuntimeRegistration`, and cinema-domain schemas from the publishable draft. Preserve them only in the working-idea archive.
