@@ -266,12 +266,12 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "why-marty-is-ready-for-evaluation",
     "title": "Why Marty Is Ready for Evaluation",
-    "summary": "Serious teams do not evaluate identity ideas because they are elegant. They evaluate them because there is enough inspectable surface-specification, schemas, conformance, policy, and deployment choices-to decide whether the architecture deserves a real design review.",
+    "summary": "Serious teams do not evaluate identity ideas because they are elegant. They evaluate them when there is enough inspectable surface: specification, schemas, conformance fixtures, policy, and deployment contracts. That is the point at which an architecture can earn a real design review.",
     "authorId": "daniel-ortega",
     "date": "2025-06-06",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-08-30",
     "category": "Technical",
-    "readTime": "7 min read"
+    "readTime": "8 min read"
   },
   {
     "slug": "infrastructure-economics-migration",
