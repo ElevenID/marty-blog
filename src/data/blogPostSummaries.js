@@ -276,12 +276,12 @@ const RAW_BLOG_POST_SUMMARIES = JSON.parse(String.raw`
   {
     "slug": "infrastructure-economics-migration",
     "title": "The Infrastructure Economics Migration",
-    "summary": "Identity economics change when verification becomes a repeated operating capability. Compare metered services and managed or self-operated infrastructure using measured workload, resilience, governance, and ownership costs.",
+    "summary": "Identity economics change when verification becomes a repeated operating capability. Compare metered, managed, self-operated, and edge options over the same workload and time horizon using measured performance and fully scoped lifecycle costs.",
     "authorId": "daniel-ortega",
     "date": "2025-06-11",
-    "updatedDate": "2026-07-13",
+    "updatedDate": "2026-09-04",
     "category": "Business",
-    "readTime": "5 min read"
+    "readTime": "8 min read"
   },
   {
     "slug": "deployment-profiles-in-practice",
