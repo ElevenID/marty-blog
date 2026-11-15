@@ -37,6 +37,7 @@ import {
 } from '../data/index.js';
 import { ARTICLE_BROWSE_TOPICS_BY_SLUG } from '../data/articleBrowseContext.js';
 import { getBrowseVisiblePosts, isBrowseVisibleArticleSlug } from '../data/articleMeta.js';
+import { formatBlogDate } from '../utils/blogDate.js';
 import {
   buildCanonicalBlogTagPath,
   buildBlogTagPath,
@@ -485,9 +486,9 @@ function ProtocolGuideSection() {
 function PostCard({ post, featured = false }) {
   const author = BLOG_AUTHORS[post.authorId] || {};
   const isFuture = post.date > TODAY;
-  const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const dateStr = formatBlogDate(post.date);
   const updatedStr = post.updatedDate
-    ? new Date(post.updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+    ? formatBlogDate(post.updatedDate, 'short')
     : null;
   const seriesInfo = SERIES_BY_POST_SLUG[post.slug];
   const standardsTags = BLOG_POST_STANDARDS_TAGS[post.slug] || [];
