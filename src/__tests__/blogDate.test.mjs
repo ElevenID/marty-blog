@@ -1,4 +1,6 @@
 import { execFileSync } from 'node:child_process';
+import process from 'node:process';
+import { URL } from 'node:url';
 import { describe, expect, it } from 'vitest';
 
 import { formatBlogDate } from '../utils/blogDate.js';
