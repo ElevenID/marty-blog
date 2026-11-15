@@ -28,6 +28,7 @@ import AIDisclosureBanner from './AIDisclosureBanner.jsx';
 import ProductBridgeCTA from './ProductBridgeCTA.jsx';
 import { getBrowseVisiblePosts, getCanonicalArticleSlug, getLegacyArticleMeta } from '../data/articleMeta.js';
 import { buildBlogTagPath } from '../utils/blogTagRoutes.js';
+import { formatBlogDate } from '../utils/blogDate.js';
 
 const CATEGORY_COLORS = {
   Announcement: 'primary',
@@ -78,9 +79,9 @@ function BlogPostPage() {
     );
   }
 
-  const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const dateStr = formatBlogDate(post.date);
   const updatedStr = post.updatedDate
-    ? new Date(post.updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+    ? formatBlogDate(post.updatedDate)
     : null;
   const socialImageUrl = getBlogSocialImageUrl(canonicalSlug);
 

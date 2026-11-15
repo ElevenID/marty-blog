@@ -14,6 +14,7 @@ import { personSchema } from '../seo/structuredData.js';
 import { BLOG_AUTHORS } from '../data/blogAuthors.js';
 import { BLOG_POST_SUMMARIES } from '../data/blogPostSummaries.js';
 import { getBrowseVisiblePosts } from '../data/articleBrowseVisibility.js';
+import { formatBlogDate } from '../utils/blogDate.js';
 
 const CATEGORY_COLORS = {
   Announcement: 'primary',
@@ -281,7 +282,7 @@ function AuthorPage() {
       ) : (
         <Grid container spacing={3}>
           {authorPosts.map((post) => {
-            const dateStr = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            const dateStr = formatBlogDate(post.date);
             return (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.slug}>
                 <Card
